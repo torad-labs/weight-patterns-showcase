@@ -1,0 +1,105 @@
+{
+  "predictions": {
+    "original": {
+      "capped": 0.00029245995972935026,
+      "standard": 0.00029245703627089436,
+      "site": {
+        "current_rows": [
+          312
+        ],
+        "projections": [
+          0.393291497485534
+        ],
+        "excess": [
+          0.013111039516526923
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.39329286887467246
+        ],
+        "limit": 0.38018045796900707
+      }
+    },
+    "finite": {
+      "capped": 0.00029170850825650286,
+      "standard": 0.0002917055275979449,
+      "site": {
+        "current_rows": [
+          312
+        ],
+        "projections": [
+          0.393419140804111
+        ],
+        "excess": [
+          0.013238682835103932
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.3934212080728583
+        ],
+        "limit": 0.38018045796900707
+      }
+    },
+    "rounded_jvp": {
+      "objective": 0.00029245995972935026,
+      "slope": -8.254737043396565e-07,
+      "curvature": 1.1072498373145391e-07,
+      "length": 3.7275855751837974,
+      "predicted_objective": 0.00029092144779285523,
+      "status": "proposal"
+    },
+    "anchor_only_original_all_105_merges_bitwise": true,
+    "target_projection_change": {
+      "jvp": -4.9259623940206e-06,
+      "finite": 0.00012764331857700872
+    },
+    "site_terms_jvp": {
+      "incoming": {
+        "coordinate": -0.06906000965614884,
+        "jvp": 4.291063213103996e-05
+      },
+      "merged": {
+        "coordinate": 0.07969927578419127,
+        "jvp": 3.798466973701936e-05
+      },
+      "projection_jvp": -4.9259623940206e-06
+    },
+    "endpoint_displacement": {
+      "changed_native_values": 31552,
+      "changed_tensors": 415,
+      "displacement_squared": 4.2410924154725674e-09
+    },
+    "events": 578,
+    "pairs": 584,
+    "merges": 105,
+    "native_k_producers": 15
+  },
+  "comparison": {
+    "native_projection_change": 0.00011039465292017603,
+    "native_cap_loss": 0.00029169578198691215,
+    "native_standard_loss": 0.00029169280909028807,
+    "old_anchored_finite_projection": -7.431784436351396e-05,
+    "old_rounded_jvp_projection": -4.913654217805863e-06,
+    "old_anchored_finite_cap_loss": 0.0002916668827424572,
+    "new_anchored_finite_projection_error": 1.7248665656832696e-05,
+    "new_rounded_jvp_projection_error": 0.00011532061531419662,
+    "old_anchored_finite_projection_error": 0.00018471249728369,
+    "old_rounded_jvp_projection_error": 0.00011530830713798189,
+    "native_original_capture": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+      "sha256": "6f258a0cdab83dd088848b647fca8e59277de6e1fcd87a2082cb9ff91299e6d5"
+    },
+    "native_projected_capture": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/capture.json",
+      "sha256": "9384a3c14dfb0ca576b35bea60fc7a778b0c7b214bdbd7aedb99a196079e77d5"
+    },
+    "native_endpoints_unchanged": true
+  },
+  "producer_capture": {
+    "record": "studies/04-round-2-overlap/runs/directional-intervention-original-producer-keys/result.json",
+    "sha256": "afe0efe881ae8c5c3ea56eca6a16412e42653c36fb078767c9ee4b19a0a2e1a3"
+  },
+  "prediction_vs_result": "Compare the old graph, original-only K anchored graph, and unchanged observed native endpoint at identical held computations and exact endpoint weights.",
+  "failures_only": "All fifteen producer anchors are original-only. This finite test evaluates one historical projected endpoint. No edited native K, new gradient, generation, optimization or model installation supplied any forecast.",
+  "what_this_changes": "Qualifies whether the actual shared key wrapper improves full-path rounded and finite projections while preserving exact original native agreement."
+}

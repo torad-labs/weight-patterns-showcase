@@ -1,0 +1,530 @@
+[
+  {
+    "source": "apps/decode-machine/EVIDENCE-ONTOLOGY.md",
+    "line": 52,
+    "heading": "The visual story",
+    "markdown": "| Question | Representation | Interaction |\n| --- | --- | --- |\n| Where am I? | Recording \u2192 layer \u2192 operation \u2192 selected worker; an enclosing-operation branch for nested stamps | Keep selection synchronized with the machinery |\n| What occupied this worker? | Chronological strip of resolved work, wait, mixed and unassigned spans; the selected observation outlined | Select a span to seek; use the existing clock |\n| What comes before and after? | Connected operation nodes; solid lines for recorded order, enclosing bracket for nesting, dashed missing-producer branch | Follow a node without moving time |\n| Do workers arrive together? | One selectable dot per valid observation, positioned by exit time; first/median/last landmarks | Select a worker; explicitly seek to the last exit |\n| Does this appear in both recordings? | Aligned median-to-last ranges for the same source record in both captures | Inspect either capture; do not label this A/B |\n| What is measured and what is missing? | Connected architecture areas with measured, derived and unavailable evidence states | Select an area to reveal the distinguishing measurement |\n| What should we do next? | Observation \u2192 alternative explanations \u2192 required evidence \u2192 conditional experiment \u2192 validation | Choose an architecture area; export the same investigation |"
+  },
+  {
+    "source": "apps/decode-machine/EVIDENCE-ONTOLOGY.md",
+    "line": 68,
+    "heading": "Entities and identity",
+    "markdown": "| Entity table | Identity and purpose |\n| --- | --- |\n| runs | One capture; token position, clock domain, tape/table hashes, bounds and original stamp semantics |\n| layers | A captured layer in one run; kind, dimensions and K/V owner index |\n| operations | A source record in one run; role, taps, kind, description and anomalies |\n| workers | A logical block in one run, never implicitly a physical SM |\n| observations | One raw tuple linked to its operation and worker, including invalid/zero tuples with validity marked |\n| segments | Resolved, clipped intervals used for the selected worker's totals, linked back to source observations |\n| areas | Architectural domains: host, coordination, memory, transfer, execution, resources, numerical correctness |\n| sources | Local NVIDIA reference chapters and official documentation with scope and provenance |\n| checkpoints | Conceptual stages to investigate in an architecture area; their event timings are not captured |\n| measurements | Derived values with units, method, input references, scope and validity |\n| hypotheses | Competing explanations; unproven unless additional evidence discriminates them |\n| requirements | The observation needed to distinguish a hypothesis, tool, scope and availability |\n| experiments | Conditional changes, predicted direction, companion metrics and refutation criteria |"
+  },
+  {
+    "source": "apps/decode-machine/EVIDENCE-ONTOLOGY.md",
+    "line": 125,
+    "heading": "Architectural domains and discriminating evidence",
+    "markdown": "| Area | Visible clue, not diagnosis | Evidence to acquire | Conditional action and refutation |\n| --- | --- | --- | --- |\n| Host and submission | Gaps in whole-request progress; current layer-only capture cannot see them | Nsight Systems CPU/CUDA/NVTX timeline, launch/queue/execution split and request boundaries | If host round trips dominate, change host scheduling or graph preparation. Refuted if wall time does not improve or the gap is GPU queueing |\n| Coordination and assignment | Long software waits or separated worker exits | Producer/consumer IDs, readiness generation, equal-work grouping, all barrier arrivals, aligned phase clocks | If unequal assigned work delays a required producer, change assignment in policy. Refuted if critical completion is unchanged or another group slows |\n| Memory and reuse | Long weight-consuming region | Phase-local DRAM/L2 bytes and throughput, demand-only hit rate, sectors, working set, traffic class and clock | If redundant demand traffic is proven, change reuse/layout. If bandwidth is saturated, remove bytes. Refuted if bytes fall but wall time does not or read amplification rises |\n| TMA and staging | Waits near a transfer-consuming region | Issued transfer ID, descriptor/box, bytes, completion generation, consumer acquire, release and slot reuse | If exposed delivery latency is proven, change overlap/depth in policy. Refuted by more occupancy pressure, later completion, incorrect slot reuse or increased wall time |\n| Warp issue and execution | Long arithmetic or mixed region | SchedulerStats, SourceCounters, WarpStateStats, per-pipe throughput, PC/SASS correlation and assigned work | If missed issue slots dominate, investigate the producer of the stalled operand. If a pipe is saturated, remove work on that pipe. Refuted if only samples move while duration does not |\n| Registers and shared memory | Uneven progress or inability to keep independent work ready | Launch limits, compiled register/SMEM use, actual spills and bank-conflict wavefronts, eligible/issued warps | If resource pressure is limiting, shorten live ranges or change staging/geometry. Refuted by extra spills, lower issue, or slower completion |\n| Numerical correctness | A faster candidate changes the emitted answer or state | Existing exact cases, equation invariants, deterministic replay and the production coherence gate | Keep the approved low-precision carrier and megakernel path. A correctness regression rejects the optimization; wider recompute is not the oracle |"
+  },
+  {
+    "source": "apps/decode-machine/GHOST-INSTRUMENTATION.md",
+    "line": 37,
+    "heading": "Relational artifact: `qgre.ghost-observations.v1`",
+    "markdown": "| Table | Identity and joins | What it establishes |\n| --- | --- | --- |\n| `captures` | Original `id`, reply and token correspondence | Which saved execution was sampled; the original correspondence caveats remain |\n| `observations` | `id`, `captureId`, `groupId`, `activationId` | A measured state of one group, and exact byte ranges for inspecting it |\n| `groups` | `id`, `matrixId`, half-open `coordinateRange` | A fixed identity across captures, with activity/state counts and coverage |\n| `shortlists` | `layer`, `matrixId`, ordered `groupIds` | Which groups to inspect first under one explicit observational ordering |\n| `activations` | Original `id`, code/scale paths, SHA-256, offsets | Recoverable raw recorded values, interpreted relative to the input study directory |\n| `matrices` | Original `id`, `tensorIds`, input/output | The expected architectural relationship, not a measured physical transfer |\n| `tensors`, `sources` | Original identities | Named parameter storage and the inherited evidence inventory |\n| `relations` | `from`, `to`, `kind`, `basis` | Explicit architectural group-to-matrix edges |"
+  },
+  {
+    "source": "apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md",
+    "line": 23,
+    "heading": "The candidate and its counterfactuals",
+    "markdown": "| Head | Halved by half edit | Removed at the scale floor | Already zero | Removed by zero edit |\n|---|---:|---:|---:|---:|\n| H7 candidate | 711,471 | 90 | 74,871 | 711,561 |\n| H6 control | 709,530 | 216 | 76,686 | 709,746 |\n| H3 control | 705,399 | 120 | 80,913 | 705,519 |\n| H2 control | 710,654 | 182 | 75,596 | 710,836 |"
+  },
+  {
+    "source": "apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md",
+    "line": 46,
+    "heading": "Behavioral results",
+    "markdown": "| Checkpoint / intervention | Discovery / 12 | Confirmation / 24 | Unrelated controls / 12 |\n|---|---:|---:|---:|\n| Original | 9 | 24 | 12 |\n| Unchanged republished checkpoint | 9 | 24 | 12 |\n| H7 candidate, quantized half-scale | 6 | 17 | 12 |\n| H7 candidate, zero | 2 | 3 | 10 |\n| H6 control, quantized half-scale | 11 | 24 | 12 |\n| H6 control, zero | 4 | 18 | 12 |\n| H3 control, quantized half-scale | 6 | 22 | 12 |\n| H3 control, zero | 2 | 20 | 12 |\n| H2 control, quantized half-scale | 4 | 22 | 12 |\n| H2 control, zero | 5 | 19 | 11 |"
+  },
+  {
+    "source": "apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md",
+    "line": 71,
+    "heading": "How the edit propagates",
+    "markdown": "| Recorded stage (zero-based layer) | Half/full change length | Direction agreement |\n|---|---:|---:|\n| Layer 9 output projection | 0.5055 | 0.9811 |\n| Layer 9 post-attention | 0.5290 | 0.9377 |\n| Layer 9 output | 0.6025 | 0.8179 |\n| Layer 12 output | 0.5138 | 0.3143 |\n| Layer 20 output | 0.8250 | 0.4371 |\n| Layer 32 output | 0.9218 | 0.7071 |\n| Layer 34 output | 0.9698 | 0.9365 |\n| Final normalized state | 0.8915 | 0.8072 |"
+  },
+  {
+    "source": "apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md",
+    "line": 27,
+    "heading": "Individual quantized weight editing",
+    "markdown": "| Requested fraction of original | Changed codes | Unchanged codes | Nonzero values rounded to zero | Changed scales |\n| --- | ---: | ---: | ---: | ---: |\n| 3/4 | 107,702 | 69,894 | 0 | 0 |\n| 5/8 | 140,952 | 36,644 | 0 | 0 |\n| 1/2 | 177,596 | 0 | 36,644 | 0 |"
+  },
+  {
+    "source": "apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md",
+    "line": 39,
+    "heading": "Individual quantized weight editing",
+    "markdown": "| Model / requested fraction | Target answer (wanted `blue`) | Correct / 66 | Original-correct preserved / 56 | Newly correct | Regressed | Decision |\n| --- | --- | ---: | ---: | ---: | ---: | --- |\n| Original | `2` | 56 | 56 | \u2014 | \u2014 | Retained |\n| 3/4 | `blue` | 54 | 49 | 5 | 7 | Rejected |\n| 5/8 | `green` | 51 | 49 | 2 | 7 | Rejected |\n| 1/2 | `2` | 54 | 49 | 5 | 7 | Rejected |"
+  },
+  {
+    "source": "apps/decode-machine/INTERNAL-EQUIPMENT.md",
+    "line": 29,
+    "heading": "Coverage",
+    "markdown": "| Operation | Physical equipment and behavior |\n| --- | --- |\n| Gather and layout | Forks and rollers gather a carrier into the next machine's lanes. |\n| Weight read | Amber balls remain in their bins; read copies feed the press. |\n| Matrix multiplication | Crossing operand beds and a descending platen combine input and weights; the receiving fork gathers output. |\n| Normalization | Balance pans and a gain mechanism represent measuring magnitude and rescaling. |\n| Position rotation | Paired turntables rotate pairs together using position settings. |\n| Attention score | A comb compares the query with retained key material. |\n| Probability and value mix | A maximum selector, exponential cam, parallel value press and sum beam feed a final gathering mechanism. |\n| GEGLU | Cubic, coefficient, tanh and half-gain mechanisms shape the gate. The up branch bypasses GELU and joins at multiplication. |\n| Residual addition | Two arriving carriers meet at a combining beam. |\n| Cache | Retained racks store owner-layer context; shared layers use owner couplings and read forks. |\n| Dependency | A counter mechanism holds a latch until its recorded dependency completes. |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-BF16.md",
+    "line": 22,
+    "heading": "What the model did",
+    "markdown": "| Observation across the same questions | Q4_K_M | BF16 |\n| --- | ---: | ---: |\n| Correct explicit final verdict, all cases | 8/24 | 13/24 |\n| Complete correct arithmetic calculation and verdict | 1/6 | 4/6 |\n| Complete correct physical numerical chain and verdict, including paraphrases | 0/18 | 2/18 |\n| Physically consistent completed explanation | 0/18 | 0/18 |\n| Responses reaching the 768-token cap | 10/24 | 8/24 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-BF16.md",
+    "line": 64,
+    "heading": "A correct partial calculation with a controlled comparison",
+    "markdown": "| Observable calculation moment | Decision, zero-based | FF14 relative ratio | FF15 relative ratio |\n| --- | ---: | ---: | ---: |\n| Adds downhill gain: 54 + 30 | 166 | 0.493 | 1.471 |\n| Produces 84 J | 177 | 0.546 | 1.425 |\n| Subtracts friction: 84 \u2212 24 | 222 | 0.527 | 1.425 |\n| Produces 60 J | 233 | 0.583 | 1.281 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-BF16.md",
+    "line": 95,
+    "heading": "How broadly the earlier progression persists",
+    "markdown": "| Pair | Q4 progression / eligible | BF16 progression / eligible | BF16 median FF14 ratio | BF16 median FF15 ratio |\n| --- | ---: | ---: | ---: | ---: |\n| cart | 94/94 | 297/297 | 0.510 | 1.537 |\n| sled | 104/104 | 306/306 | 0.502 | 1.519 |\n| bead | 4/4 | 20/20 | 0.482 | 1.530 |\n| coaster | 223/223 | 270/270 | 0.502 | 1.547 |\n| block | 4/4 | 253/254 | 0.526 | 1.492 |\n| trolley | 251/251 | 307/307 | 0.503 | 1.489 |\n| cart-paraphrase | 17/17 | 35/35 | 0.510 | 1.613 |\n| coaster-paraphrase | 16/16 | 50/50 | 0.497 | 1.606 |\n| block-paraphrase | 40/40 | 47/47 | 0.515 | 1.565 |\n| cart-arithmetic | 25/25 | 72/72 | 0.541 | 1.682 |\n| coaster-arithmetic | 34/34 | 25/25 | 0.563 | 1.714 |\n| block-arithmetic | 34/34 | 25/25 | 0.585 | 1.657 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md",
+    "line": 44,
+    "heading": "The connected progression",
+    "markdown": "| Pair | Kind | Predicted sequence / eligible | Median FF14 ratio | Median FF15 ratio |\n| --- | --- | ---: | ---: | ---: |\n| cart | physics | 94/94 | 0.559 | 1.506 |\n| sled | physics | 104/104 | 0.567 | 1.515 |\n| bead | physics | 4/4 | 0.506 | 1.510 |\n| coaster | physics | 223/223 | 0.556 | 1.497 |\n| block | physics | 4/4 | 0.493 | 1.405 |\n| trolley | physics | 251/251 | 0.574 | 1.513 |\n| cart-paraphrase | paraphrase | 17/17 | 0.535 | 1.504 |\n| coaster-paraphrase | paraphrase | 16/16 | 0.552 | 1.530 |\n| block-paraphrase | paraphrase | 40/40 | 0.545 | 1.531 |\n| cart-arithmetic | arithmetic | 25/25 | 0.563 | 1.625 |\n| coaster-arithmetic | arithmetic | 34/34 | 0.556 | 1.690 |\n| block-arithmetic | arithmetic | 34/34 | 0.568 | 1.682 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md",
+    "line": 76,
+    "heading": "The connected progression",
+    "markdown": "| Layer | Absolute separation ratio | State-length growth | Update alignment cosine | Before/after difference cosine |\n| --- | ---: | ---: | ---: | ---: |\n| 14 | 1.721\u20131.942 | 3.284\u20133.387 | -0.067\u20130.029 | 0.514\u20130.552 |\n| 15 | 3.508\u20134.041 | 2.382\u20132.547 | -0.041\u20130.090 | 0.232\u20130.360 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md",
+    "line": 93,
+    "heading": "What the model actually did",
+    "markdown": "| Kind | Cases | Correct explicit verdicts | Complete correct solutions | Capped |\n| --- | ---: | ---: | ---: | ---: |\n| physics | 12 | 3 | 0 | 7 |\n| paraphrase | 6 | 2 | 0 | 3 |\n| arithmetic | 6 | 3 | 1 | 0 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md",
+    "line": 125,
+    "heading": "Connecting concrete calculation moments",
+    "markdown": "| Execution | Observable progression | Recorded decision indices (zero-based) |\n| --- | --- | --- |\n| sled-base | Adds downhill gain; obtains 90 J; rejects 50\u221240; later uses the rejected 10 J | 272, 283, 331, 538 |\n| cart-paraphrase-changed | States addition of downhill gain; later substitutes subtraction | 387, 466 |\n| cart-arithmetic-base | Calculates 60 and 40 correctly; answers NO incorrectly | 120 |\n| cart-arithmetic-changed | Calculates 60 and 80 correctly; answers NO correctly | 79 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md",
+    "line": 30,
+    "heading": "The observable target",
+    "markdown": "| Recipient | Correct available / required / verdict | Recorded baseline |\n| --- | --- | --- |\n| 1 m climb, `block-base` | 60 J / 30 J / YES | Correct numerical chain and final triple; top/bottom prose labels are reversed |\n| 3 m climb, `block-changed` | 60 J / 90 J / NO | 60 J / **120 J** / NO; it incorrectly adds the earlier descent to the final climb |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md",
+    "line": 61,
+    "heading": "The additional numerical variants",
+    "markdown": "| Pair | Correct available energy | Required energy, base / changed | Shared generated prefix | Observation |\n| --- | ---: | ---: | ---: | --- |\n| 2 kg, speed 6 m/s, loss 16 J | 40 J | 20 / 60 J | 18 tokens | Base gets initial kinetic energy wrong, later has 2 J, and hits the token cap; changed has the correct final triple but inconsistent descent accounting |\n| 4 kg, speed 4 m/s, loss 12 J | 60 J | 40 / 80 J | 88 tokens | Both final triples are correct; changed nevertheless makes an extra 40 J subtraction and derives an incorrect speed |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md",
+    "line": 75,
+    "heading": "What the swaps changed",
+    "markdown": "| Recipient | Swap time | Difference in substituted branch, relative to recipient branch | Changed vocabulary-score decisions | Final answer |\n| --- | --- | ---: | ---: | --- |\n| Correct 1 m case | After 60 J, prediction 235 | 1.777% | Exactly 235 | Unchanged: 60 / 30 / YES |\n| Correct 1 m case | First prediction, 0 | 2.939% | Exactly 0 | Unchanged: 60 / 30 / YES |\n| Failing 3 m case | After 60 J, prediction 235 | 1.776% | Exactly 235 | Unchanged: 60 / 120 / NO |\n| Failing 3 m case | First prediction, 0 | 2.940% | Exactly 0 | Unchanged: 60 / 120 / NO |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md",
+    "line": 91,
+    "heading": "What the swaps changed",
+    "markdown": "| Recorded boundary | Difference from the unmodified recipient, relative L2 |\n| --- | ---: |\n| Layer 15 exit, preceding residual | Exactly zero |\n| Substituted normalized attention branch 16 | 1.7761% |\n| Native attention addition 16 | 0.5605% |\n| Layer 16 exit | 0.6164% |\n| Layer 17 exit | 0.5449% |\n| Layer 34 exit | 0.0471% |\n| Final normalized state | 0.1038% |\n| Each retained boundary at prediction 236 | Byte-identical to baseline |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-PILOT.md",
+    "line": 26,
+    "heading": "What we asked",
+    "markdown": "| Server pilot format | Correct YES/NO verdict | Reached output limit | Interpretation |\n| --- | ---: | ---: | --- |\n| Verdict first; 256-token cap | 9/18 | 18/18 | Every answer begins NO; no completed solutions |\n| Calculation before verdict; 768-token cap | 11/18 | 1/18 | Most responses omit the requested numerical calculation |\n| Explicit numerical calculation; 768-token cap | 6/18 | 10/18 | One complete correct calculation; one correct quantitative progression cut off before verdict |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md",
+    "line": 70,
+    "heading": "Native representation and checkpoint integrity",
+    "markdown": "| Measurement | Result |\n| --- | ---: |\n| Values in the selected matrix | 3,145,728 |\n| Values whose stored representation changed | 200,965 (6.3885% of this matrix) |\n| Changed bytes | 204,565 |\n| Intended change / original matrix norm | 0.036654% |\n| Rounded change / original matrix norm | 0.029656% |\n| Intended versus realized matrix-change cosine | 0.702831 |\n| Remaining distance to donor projection at the fixed source input, CPU equation diagnostic | 44.4103% of the original distance |\n| Zero-update BF16 decode/re-encode | Every value byte-identical |\n| Bytes compared across the complete original and edited GGUF | 9,311,304,896 |\n| Bytes changed outside the selected matrix | **0** |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md",
+    "line": 102,
+    "heading": "All 28 behavioral comparisons",
+    "markdown": "| Measure | Original | Edited |\n| --- | ---: | ---: |\n| Complete correct numerical calculation | 7 / 28 | **9 / 28** |\n| Correct explicit YES/NO verdict | 16 / 28 | **16 / 28** |\n| Reached the 768-token cap | 9 / 28 | 9 / 28 |\n| Token-for-token identical to original | \u2014 | 18 / 28 |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md",
+    "line": 115,
+    "heading": "All 28 behavioral comparisons",
+    "markdown": "| Case | Original available / required / verdict | Edited | Interpretation |\n| --- | --- | --- | --- |\n| Original 3 kg block, 3 m climb | 60 / **120** / NO | 60 / **90** / NO | Targeted numerical error repaired; the earlier 1 m descent is no longer added to the 3 m climb |\n| Paired 3 kg block, 1 m climb | 60 / 30 / YES | Identical response | Existing numerical success preserved |\n| Sled, 1 m climb | **0** / 40 / **NO** | **80** / 40 / **YES** | Correctly adds the 40 J downhill gain, then subtracts the 10 J loss |\n| 4 kg block, 2 m climb | 60 / 80 / NO | 60 / **40** / **YES** | New failure: subtracts the earlier 1 m descent from the destination height |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md",
+    "line": 151,
+    "heading": "Following the effect",
+    "markdown": "| Boundary | Difference from original, relative L2 |\n| --- | ---: |\n| Input to the edited projection | Exactly zero |\n| Raw projection output | 0.9191% |\n| Normalized attention contribution | 1.0273% |\n| Layer 16 exit | 0.3570% |\n| Layer 34 exit | 0.02357% |\n| Final normalized state | 0.05797% |"
+  },
+  {
+    "source": "apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md",
+    "line": 167,
+    "heading": "Following the effect",
+    "markdown": "| Candidate token | Original logit | Edited logit |\n| --- | ---: | ---: |\n| ` reached` | **16.181353** | 16.177919 |\n| ` gained` | 16.174959 | **16.186314** |"
+  },
+  {
+    "source": "apps/decode-machine/PROFILING-LENSES.md",
+    "line": 68,
+    "heading": "What each producer must establish",
+    "markdown": "| Lens | Required relationship | Do not infer |\n| --- | --- | --- |\n| Dependencies | Producer task \u2192 generation-specific readiness event \u2192 consumer task; explicit common clock | A global critical path or recoverable latency from the last observed input |\n| Instruction supply | Compiled location and instruction/fetch evidence \u2192 task \u2192 instrument/pass | Instruction-cache misses from a long task interval alone |\n| Useful work | Valid work and issued work in the same counting unit; requested and transferred bytes at a named boundary | Padding cost from matrix shape alone, or DRAM traffic from logical weight bytes |\n| Buffer lifetime | One allocation generation, capacity, request, ready, first use, last use and release/observation end | An actual release when an object is retained, or saved time from byte-nanoseconds |\n| Supply/activity | Metric, units and observation interval \u2192 collection pass | Simultaneity between separate replays, or zero activity in unsampled gaps |\n| Values | Named boundary, shared bin edges, bin counts, zero and saturation counts | A speedup from sparsity without an execution path that exploits it |\n| Tokens | Position, sequence, interval, context and batch \u2192 instrument; clocks/power/limits when captured | Continuity between independently recorded positions or causality from correlation |\n| Instruments | Every row \u2192 method, source, pass, cache treatment, clock treatment, sampling width and binary identity where known | Production timing from a diagnostic replay |"
+  },
+  {
+    "source": "references/history/pre-organization-RESIDUAL-TRACE-THEORY.md",
+    "line": 162,
+    "heading": "The other analogies",
+    "markdown": "| Analogy | Concept it conveys |\n|---|---|\n| Physics as the trace | A learned capability is recognizable through coherent transformations across changing situations; the correct numerical answer alone is only an endpoint. |\n| Dotted line or jigsaw | Enough surrounding functional context can make a missing or defective continuation understandable. |\n| Sine-wave approximation and the golden ratio | The organization of changes can reveal a pattern that individual numbers do not make evident. These are explanatory examples, not claims about a Transformer's training algorithm. |\n| Neurons, electricity, conductors, and bits | Distinguish the physical/numerical substrate from the information-bearing operation distributed through it. No literal binary-bit traversal or biological storage mechanism is asserted by the analogy. |\n| Gravity, cylinders, roads, and geometry | Express influence, coordination, and coupled effects. No sphere, rigidity law, metric, dimensionality, or guaranteed safe propagation rule has been established. |\n| Observation or quantum collapse | A request conditions which effects become expressed and observable. It does not invoke quantum hardware or require one predetermined continuation. |"
+  },
+  {
+    "source": "references/history/pre-organization-RESIDUAL-TRACE-THEORY.md",
+    "line": 350,
+    "heading": "7. Misunderstandings to avoid",
+    "markdown": "| Misreading | Meaning to retain |\n|---|---|\n| Find values that contain a capability, then connect similar values. | Observe connected transformations during relevant executions; seek recurring portions of their influence. |\n| Recover a full signature uniquely belonging to one capability first. | Partial, shared, context-dependent residue can already be useful. |\n| The path is defined to exclude the inference trace. | The present target is recognizable residual pattern in how information unfolds; do not restore the earlier frozen-pattern-only requirement. |\n| All examples must use identical weights, states, or directions. | What recurs may be how changes develop together through varying circumstances. |\n| Any common activation or architectural route is the pattern. | Common machinery is a starting observation; it does not explain how the capability contributes. |\n| More arbitrary prompts will reveal it automatically. | Shape requests so the relevant capability contributes strongly and repeatedly. |\n| An edit must reconstruct or improve the whole capability. | It may be useful to alter a tendency toward an unproductive branch while much else continues to work. |\n| The analogies specify literal physics or a training algorithm. | They communicate distributed influence, continuity, and partial observability. |\n| The same reward means equal numerical gradients. | Marcos explicitly rejects that as a description of his argument. |\n| A polished visualization or a changed answer completes the research. | The intended result is meaningful recognition of the unfolding influence; representation and intervention serve that purpose. |"
+  },
+  {
+    "source": "apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md",
+    "line": 5,
+    "heading": "Targeted key/value lookup edit",
+    "markdown": "| Run | Target answer | Discovery correct / 12 | Controls correct / 18 | Losses among 26 original-correct discovery/controls |\n| --- | --- | ---: | ---: | ---: |\n| Original | `2` | 9 | 17 | \u2014 |\n| Earlier whole-head half-scale control | `blue` | 11 | 17 | 1 |\n| Candidate 1: first 32 columns | `Blue` | 7 | 14 | 6 |\n| Candidate 2: first 384 columns | `2` | 10 | 17 | 1 |\n| Candidate 3: last 128 columns | `blue` | 12 | 17 | 0 |"
+  },
+  {
+    "source": "apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md",
+    "line": 62,
+    "heading": "Targeted key/value lookup edit",
+    "markdown": "| Recorded location | Target: changed / total | Protected red case: changed / total |\n| --- | ---: | ---: |\n| Layer 9 output projection | 792 / 1536 | 796 / 1536 |\n| Layer 9 post-attention | 620 / 1536 | 623 / 1536 |\n| Layer 9 layer output | 1234 / 1536 | 1185 / 1536 |\n| Final normalization | 1461 / 1536 | 1466 / 1536 |\n| Answer | `2`\u2192`blue` | `red`\u2192`red` |"
+  },
+  {
+    "source": "apps/decode-machine/WEIGHT-SPACE-ORIENTATION.md",
+    "line": 62,
+    "heading": "Observations and the first test",
+    "markdown": "| Pair | Expected | Original wording | Color wording |\n| --- | --- | --- | --- |\n| 01 | blue | 2 | green |\n| 03 | blue | 3 | blue |\n| 10 | blue | explanatory text, cap reached | blue |\n| 00 | red | red | red |\n| 02 | green | green | green |\n| 08 | blue | blue | green |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/ANALYSIS.md",
+    "line": 13,
+    "heading": "Workload and what actually ran",
+    "markdown": "| Measured scope | Result | Denominator / qualification |\n|---|---:|---|\n| New tokens | 30,000 | Includes first output tokens produced by prefill and emitted end-of-turn tokens |\n| Requests | 187 | One sequential, retained conversation |\n| Sum of request wall times | 2,442.492 s | Excludes gaps between requests and initial server startup |\n| Persistent decode GPU time | 1,673.372 s | 29,813 decode-loop tokens; one output token per request belongs to prefill |\n| Prefill GPU time | 724.745 s | 9,758 rows processed across initial and continuation prompts |\n| Other time within requests | 44.375 s | Wall time minus reported prefill and decode GPU time; not a per-cause attribution |\n| Mean decode-loop time | 56.129 ms/token | Weighted by the measured decode-loop token population |\n| First reply mean decode time | 10.516 ms/token | 2,098 decode-loop tokens |\n| Last reply mean decode time | 114.385 ms/token | 77 decode-loop tokens |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/ANALYSIS.md",
+    "line": 58,
+    "heading": "What the early Nsight Compute capture adds",
+    "markdown": "| Counter observation | Recorded result | Implication to test |\n|---|---:|---|\n| Cycles with no eligible warp | 89.35% | Separate dependency readiness, load latency and intentional sleeping before changing scheduling |\n| Active / eligible warps per scheduler | 2.00 / 0.12 | Resident work often cannot issue its next instruction |\n| Sleeping stall contribution | 8.55 of 18.78 cycles per issued instruction, about 45.5% | Find which producer each sleeping consumer awaits; removing sleeps could merely replace waiting with polling |\n| Long-scoreboard stall contribution | 3.12 cycles per issued instruction | Memory dependencies also matter; this is not the same as saturated bandwidth |\n| Register count / rounded allocation | 242 / 248 per thread | Register allocation limits residency to one block per SM |\n| Dynamic / static / driver shared memory | 51,200 / 44,032 / 1,024 bytes per block | Total allocation is 96,256 bytes; shared memory independently limits residency to one block |\n| Theoretical / achieved occupancy | 16.67% / 16.71% | The kernel reaches its low resource-limited resident-warp budget |\n| DRAM read / write bytes | 1,304,050,688 / 949,760 | Whole-launch traffic, not a byte map to individual weights or buffers |\n| DRAM throughput | 23.70% of peak sustained elapsed | The early fixture is not saturating aggregate DRAM bandwidth |\n| L2 sector hit rate | 14.04% | Aggregate cache behavior; it does not identify which object missed |\n| Tensor / TMA instruction activity | 1.87% / 0.38% of their reported active-cycle peaks | Distinct metric denominators; neither measures useful-operation coverage |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/ANALYSIS.md",
+    "line": 82,
+    "heading": "Action order from the inspection ontology",
+    "markdown": "| Priority and architecture area | Evidence and hypothesis | Smallest next experiment | What would refute it |\n|---|---|---|---|\n| 0. Capture integrity | The later tape uses 2.73 GHz as a cycle upper bound, although the saved device report permits 3.135 GHz | Make the capture writer record a proven upper bound with its device provenance, or use an unambiguous clock representation; preserve the ordering checks and recapture the affected slice | A nominal or sampled frequency is still treated as a guaranteed maximum, or the old receipt is inflated merely to pass admission |\n| 1. Coordination / work distribution | Production growth and full-history attention tail growth agree; one position slice leaves the long operation concentrated in eight observed workers | Build a known-revision baseline, then vary position slicing as a policy bundle with distinct owned work. Measure the context slope, early cost, and dependent completion; run the existing coherence gate | The slope does not fall, dependent completion does not advance, or overhead merely moves to another group |\n| 2. Warp execution / local resources | Low eligibility, sleep and scoreboard samples, and two independent one-block residency limits | Bind the captured hot PCs to logical operations and readiness events. Test useful independent work and resource lifetime changes together where the data supports them | Occupancy or stall counters improve but the same production workload does not finish earlier, or spills / other regions regress |\n| 3. Continuation prefill | 724.745 s of GPU prefill across the conversation, including 5.750 s for the final 52 fresh rows | Profile the real cached-prefix M-row continuation path separately, retaining its large history and row count | A short standalone prefill improves while actual continuation request time is unchanged |\n| 4. Memory capacity and reuse | 2 GiB pinned lot survives the first decode; allocated size alone says nothing about occupied capacity | Add occupied-capacity and first/last-use events for this existing buffer, then assess allocation timing or reuse | Most capacity is needed, or smaller/later allocation adds transfer or request latency |\n| 5. Output utility | Late replies reuse most eight-token phrases from earlier replies | Add a task-specific progress criterion alongside throughput and retain the actual text / token IDs | A faster configuration reduces useful task progress or required correctness, even if raw token rate rises |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md",
+    "line": 7,
+    "heading": "Desktop, 3840x2050: mean 6.7",
+    "markdown": "| # | Criterion | Score | Reason |\n|---|---|---|---|\n| 1 | Room and width | 6 | Content runs edge to edge (about x 40 to 3800) and nothing leaves its box. The \"Busy versus productive\" column ends about 40% down its pane, so the lower ~58% of that pane is empty. |\n| 2 | Show, don't tell | 8 | The bars, the dotted line chart, the activity meters, the reuse bar and the slice chips with mini bars are all drawn. \"Connected evidence\" is a key/value text table. |\n| 3 | Rich components | 7 | Charts, the reply card and the chips have their own shapes. Layer, Operation and Worker are plain native selects, and \"Connected evidence\" is plain rows. |\n| 4 | Navigating the data | 8 | The page scrolls once. Detail opens in place behind disclosure triangles, the chip list is bounded, and the side list marks the active item. Nothing sorts by what hurts. |\n| 5 | States as shapes | 6 | \"Zeros / saturated: 0 / Unknown\" is a word where a shape belongs. The big \"What happens to the values?\" panel shows only a sentence (\"Same bins. Same count scale.\") and a clipped bar. |\n| 6 | Hierarchy and type | 4 | Chart labels are about 23 px, larger than the pane titles (about 19 px) and about twice the neighbouring HTML text. Many labels are about 9 to 11 px, which is tiny at 3840. |\n| 7 | Spacing and rhythm | 7 | The three columns sit on one grid, with shared left edges at x 31, 761 and 1491 (display px). Meter values end on one right edge. Chart insets differ from the pane edges, and there are large empty blocks. |\n| 8 | Prose economy | 8 | Lines are short. \"Population\" runs 16 words and \"Next useful question\" about 11. |\n| 9 | Its people's words | 7 | The jargon fits GPU analysts. A raw tensor name, \"Stored attn_out, layer 5\", sits in plain view. |\n| 10 | Colour roles | 6 | The sage green means \"decode time\" in the bars and \"sliding window\" in the line, while the legend calls the line teal. Amber means \"full history\" in the line chart and also fills the value-distribution bar. |\n| 11 | The project's own look | 7 | Pale paper, dark green ink and restrained brass read well. The native selects fall out of the look, and no mechanical scene is visible. |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md",
+    "line": 23,
+    "heading": "Laptop, 1440x900: mean 7.5",
+    "markdown": "| # | Criterion | Score | Reason |\n|---|---|---|---|\n| 1 | Room and width | 9 | Content fills about 96% of the width (x 28 to 1411), nothing runs out of a box, and both chart panes are filled. |\n| 2 | Show, don't tell | 8 | Bars, the dotted line chart, the progress bar and the reuse bar are drawn. The Reply 45 figures are big numbers with a bar only for reuse. |\n| 3 | Rich components | 7 | The reply card with its accent edge and the charts have their own shapes. The selects are native. |\n| 4 | Navigating the data | 8 | Detail opens in place (\"Timing scope\", \"What this interval means\") and the page scrolls once. |\n| 5 | States as shapes | 7 | The unselected state is said as a sentence under the chart: \"Select a dot to open its recorded attention machinery.\" |\n| 6 | Hierarchy and type | 5 | Each part has a clear focal. Labels sit at about 11 px, and the bar numbers 1 to 16 are about 8 px. |\n| 7 | Spacing and rhythm | 8 | Content shares one left edge, and label baselines match across the two charts (y 473 and y 672). Select gutters are about 20 px against 26 px between the columns. |\n| 8 | Prose economy | 9 | Every line is 12 words or fewer. |\n| 9 | Its people's words | 8 | \"Layer 5 \u00b7 Full context\", \"Worker 16\" and \"Reply 45\" are plain. \"864 \u00b5s tail\" and \"seconds, request\" are a bit cryptic. |\n| 10 | Colour roles | 6 | The sage green is shared by the decode bars and the sliding-window line, and the legend calls the line teal. Amber is used only for full history. |\n| 11 | The project's own look | 7 | The paper, ink and teal look reads. The native selects fall out of it, and no mechanical scene is in the crop. |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md",
+    "line": 41,
+    "heading": "Phone, 390x844: mean 7.5 over 10 criteria",
+    "markdown": "| # | Criterion | Score | Reason |\n|---|---|---|---|\n| 1 | Room and width | 9 | It is one column with nothing past the right edge (card x 14 to 376). Padding is doubled, so the content is about 86% of the width. |\n| 2 | Show, don't tell | 8 | The decode-time bars, the progress bar and the reuse bar are drawn. |\n| 3 | Rich components | 7 | The reply card and chart have shapes. The selects are native. |\n| 4 | Navigating the data | 8 | The disclosure (\"Timing scope\") opens in place and the page scrolls once. |\n| 6 | Hierarchy and type | 5 | There is a clear focal (\"E2B \u00b7 a conversation growing to 30k\", and the 17 px Reply figures). The unit labels and \"RECORDED CONVERSATION\" are about 11 px. |\n| 7 | Spacing and rhythm | 7 | Three left edges coexist: body text at x 27, reply card text at 43, chart at 49. |\n| 8 | Prose economy | 9 | Lines are short. The subtitle wraps to two lines at 12 words. |\n| 9 | Its people's words | 8 | The names are plain. \"seconds, request\" is a little odd. |\n| 10 | Colour roles | 7 | Sage for data, dark green for ink and progress, teal for reuse. The legend conflict is not visible at this size. |\n| 11 | The project's own look | 7 | The paper and green ink read. The native selects fall out of the look. |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/RESULTS.md",
+    "line": 9,
+    "heading": "Actual outputs",
+    "markdown": "| Case | Requested value | Requested row | Actual text | Short-run classification |\n|---|---|---:|---|---|\n| known-01 | blue | 2 | 2 | numeric-substitution |\n| known-03 | blue | 2 | 3 | numeric-substitution |\n| probe-03 | mango | 1 | Mango | correct-value |\n| probe-04 | mango | 2 | Mango | correct-value |\n| probe-05 | mango | 3 | Mango | correct-value |\n| probe-06 | falcon | 1 | Panda | wrong-listed-value |\n| probe-07 | falcon | 2 | 3 | numeric-substitution |\n| probe-08 | falcon | 3 | The question asks for the value of \" | incomplete-at-cap |\n| probe-09 | violin | 1 | Please provide the table you are referring to | incomplete-at-cap |\n| probe-10 | violin | 2 | 3 | numeric-substitution |\n| probe-11 | violin | 3 | 3 | numeric-substitution |\n| probe-12 | silver | 1 | Copper | wrong-listed-value |\n| probe-13 | silver | 2 | 24 | numeric-substitution |\n| probe-14 | silver | 3 | Silver | correct-value |\n| probe-15 | oslo | 1 | Tokyo | wrong-listed-value |\n| probe-16 | oslo | 2 | The question asks for the value of \" | incomplete-at-cap |\n| probe-17 | oslo | 3 | Lima | wrong-listed-value |\n| probe-18 | train | 1 | Train | correct-value |\n| probe-19 | train | 2 | 1 | numeric-substitution |\n| probe-20 | train | 3 | 1 | numeric-substitution |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/RESULTS.md",
+    "line": 75,
+    "heading": "Follow-up observations completed",
+    "markdown": "| Case | Longer observation | Classification |\n|---|---|---|\n| probe-08 | Explicitly states that Sop's value is Falcon, continues explaining, reaches 128-token cap | Correct association reached; verbose and unfinished |\n| probe-09 | \"Please provide the table you are referring to. I need the table to answer the question.\" Stops naturally after 19 tokens | Fails to use the supplied table; distinct from numeric substitution |\n| probe-16 | Explicitly states Zef is associated with Oslo, continues reconsidering the question, reaches 128-token cap | Correct association reached; verbose and unfinished |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/RESULTS.md",
+    "line": 5,
+    "heading": "The local llama.cpp fork answers all twenty association questions correctly",
+    "markdown": "| Case | Requested value | QGRE short answer | llama.cpp answer |\n|---|---|---|---|\n| known-01 | blue | 2 | blue |\n| known-03 | blue | 3 | blue |\n| probe-03 | mango | Mango | Mango |\n| probe-04 | mango | Mango | Mango |\n| probe-05 | mango | Mango | Mango |\n| probe-06 | falcon | Panda | Falcon |\n| probe-07 | falcon | 3 | Falcon |\n| probe-08 | falcon | The question asks for the value of \" | Falcon |\n| probe-09 | violin | Please provide the table you are referring to | Violin |\n| probe-10 | violin | 3 | Violin |\n| probe-11 | violin | 3 | Violin |\n| probe-12 | silver | Copper | Silver |\n| probe-13 | silver | 24 | Silver |\n| probe-14 | silver | Silver | Silver |\n| probe-15 | oslo | Tokyo | Oslo |\n| probe-16 | oslo | The question asks for the value of \" | Oslo |\n| probe-17 | oslo | Lima | Oslo |\n| probe-18 | train | Train | Train |\n| probe-19 | train | 1 | Train |\n| probe-20 | train | 1 | Train |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md",
+    "line": 31,
+    "heading": "Ordinary-server evaluation",
+    "markdown": "| Measurement | Original | Alpha 1 | Selected alpha 2 |\n|---|---:|---:|---:|\n| Discovery: first value only | 5/16 | 7/16 | 10/16 |\n| Discovery: last value only | 6/16 | 4/16 | 1/16 |\n| Discovery: both values | 5/16 | 5/16 | 5/16 |\n| Discovery: explicit first correct | 14/16 | 14/16 | 14/16 |\n| Discovery: explicit last correct | 16/16 | 16/16 | 16/16 |\n| Discovery: unique-key correct | 20/20 | 20/20 | 20/20 |\n| Withheld: first value only | 7/16 | Not evaluated | 10/16 |\n| Withheld: last value only | 5/16 | Not evaluated | 2/16 |\n| Withheld: both values | 4/16 | Not evaluated | 4/16 |\n| Withheld: explicit first correct | 15/16 | Not evaluated | 15/16 |\n| Withheld: explicit last correct | 15/16 | Not evaluated | 15/16 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md",
+    "line": 49,
+    "heading": "Ordinary-server evaluation",
+    "markdown": "| Case | First value | Last value | Original answer | Edited answer |\n|---|---|---|---|---|\n| confirmation-1-1-default | Ruby | Opal | Opal | Ruby |\n| confirmation-4-1-default | Tennis | Golf | Golf | Tennis |\n| confirmation-6-1-default | Circle | Square | Square | Circle |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md",
+    "line": 61,
+    "heading": "Reversed-direction control",
+    "markdown": "| Discovery default answer | Reverse, \u22122 | Original | Toward first, +1 | Toward first, +2 |\n|---|---:|---:|---:|---:|\n| First value only | 2/16 | 5/16 | 7/16 | 10/16 |\n| Last value only | 12/16 | 6/16 | 4/16 | 1/16 |\n| Both values | 2/16 | 5/16 | 5/16 | 5/16 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md",
+    "line": 77,
+    "heading": "Internal propagation",
+    "markdown": "| Diagnostic | Original | Edited |\n|---|---:|---:|\n| First value's share of the two candidates' affinity | 59.09% | 88.66% |\n| Absolute affinity mass on first value | 50.39% | 62.86% |\n| Absolute affinity mass on last value | 32.45% | 7.48% |\n| Total affinity mass on either value | 82.84% | 70.34% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md",
+    "line": 15,
+    "heading": "What ran",
+    "markdown": "| Condition | Discovery correct / total | Confirmation correct / total | Three-way exact answer-token agreement, total |\n|---|---:|---:|---:|\n| Assigned value | 16 / 16 | 8 / 8 | 24 / 24 |\n| Position | 16 / 16 | 8 / 8 | 24 / 24 |\n| Different queried key | 4 / 4 | 2 / 2 | 6 / 6 |\n| Literal copy | 4 / 4 | 2 / 2 | 6 / 6 |\n| **Total** | **40 / 40** | **20 / 20** | **60 / 60** |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md",
+    "line": 33,
+    "heading": "Observable contrast and held-aside confirmation",
+    "markdown": "| Inspection location, zero-based | Ask for value, n=8 | Ask for position, n=8 | Ask about alternate key, n=2 | Literal copy, n=2 |\n|---|---:|---:|---:|---:|\n| Layer 29, head 5 | 86.94% | 0.80% | 93.34% | 43.61% |\n| Layer 27, head 7 | 64.99% | 0.33% | 64.93% | 19.49% |\n| Layer 24, head 3 | 55.26% | 2.75% | 52.87% | 8.50% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md",
+    "line": 47,
+    "heading": "What was inspected in the actual weights",
+    "markdown": "| Query tensor | Actual stored type | Inspected output rows, zero-based | Input width |\n|---|---|---|---:|\n| `blk.29.attn_q.weight` | Q4_K | 2560\u20133071 | 1536 |\n| `blk.27.attn_q.weight` | Q6_K | 1792\u20132047 | 1536 |\n| `blk.24.attn_q.weight` | Q6_K | 768\u20131023 | 1536 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md",
+    "line": 57,
+    "heading": "What was inspected in the actual weights",
+    "markdown": "| Comparison | Pair count | L29 H5 | L27 H7 | L24 H3 |\n|---|---:|---:|---:|---:|\n| Same value task, different vocabulary family | 4 | 0.659 | 0.650 | 0.750 |\n| Same assignments, value versus position | 8 | 0.456 | 0.515 | 0.573 |\n| Same assignments, value versus literal copy | 2 | 0.824 | 0.783 | 0.641 |\n| Same assignments, different queried key | 2 | 0.735 | 0.661 | 0.775 |\n| Same assignments, table versus prose | 4 | 0.930 | 0.920 | 0.883 |\n| Same assignments, changed row order | 4 | 0.888 | 0.829 | 0.828 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md",
+    "line": 72,
+    "heading": "Why this is still short of identifying the intended path",
+    "markdown": "| Captured input at layer | Same value task, different family | Same assignments, value versus position |\n|---|---:|---:|\n| 29 | 0.664 | 0.497 |\n| 27 | 0.708 | 0.506 |\n| 24 | 0.889 | 0.769 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md",
+    "line": 92,
+    "heading": "Instrumentation changes numerical scores",
+    "markdown": "| Split | Mean per-case RMS logit difference | Range of per-case RMS differences | Largest absolute logit difference |\n|---|---:|---:|---:|\n| Discovery, n=40 | 0.4102 | 0.0144\u20131.7005 | 3.8499 |\n| Confirmation, n=20 | 0.4546 | 0.0340\u20131.4319 | 4.0916 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md",
+    "line": 67,
+    "heading": "2. Vocabulary and intended meaning",
+    "markdown": "| Term | Meaning in this framework |\n|---|---|\n| **Weights / conductors / rails** | The persistent numerical substrate. An isolated value does not independently identify the knowledge or capability expressed by a distributed whole. |\n| **Parts / bits of weights** | Marcos's description of portions of the numerical encoding jointly participating across many weights. This does not assign one meaning to a particular bit or claim that a literal binary-bit decomposition has already been discovered. |\n| **Horizontal / distributed** | The pattern spans portions of many weights, potentially much of the model, and can overlap with other patterns. This has the same meaning in all five examples. It is not a single layer or a memory layout. |\n| **Path** | The proposed frozen, distributed encoded pattern constituting information or a capability. It is not a list of layers, an activation trace, or the downstream footprint of an edit. |\n| **Journey / execution** | A particular expression of the model's learned organization during inference. Earlier writing sometimes conflated this with \u201cpath\u201d; this reference now distinguishes them. |\n| **Gravitational pull / strength** | Relative influence of learned patterns under a context, and their reinforcement across training examples. It is not a semantic quantity deposited into individual words. |\n| **Geometry** | The proposed organization of the overlapping distributed paths, supporting their stability, distinguishability, and use. No specific shape, dimensionality, or metric has been established. |\n| **Ghost** | The input-dependent expression of the frozen organization. It changes during inference while the stored parameters remain fixed. |\n| **Observation** | A context and its resulting behavior/internal activity that may expose an aspect of the encoded pattern. The question is processed during prefill before answer generation. |\n| **Cylinder / rigid connection** | An earlier analogy for coupled effects within shared organization. It does not require an actual rod, a sparse chain, or a guaranteed uniform propagation law. |\n| **Dotted line / missing jigsaw piece** | A missing or defective functional relationship that prevents a task from being completed correctly. In the physics example, it refers to the control behavior needed to complete the task. |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md",
+    "line": 151,
+    "heading": "The connection across all five",
+    "markdown": "| Setting | What recurs across changing examples | Why that matters to the theory |\n|---|---|---|\n| CPT | A factual relationship | Training repeatedly reinforces access to the relationship. |\n| RL | A useful procedure or relationship contributing to success | Training can reinforce and combine reusable computations. |\n| Small specialized network | A constrained task organization | Limited overlap can make the organization easier to recognize. |\n| Physics/control repair | The behavior needed for a successful task trajectory | A constrained failure can expose a specific functional repair. |\n| Qwen looping | A failure process across different completions | Varied observations can help isolate a recurring mechanism. |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md",
+    "line": 169,
+    "heading": "Saved Gemma 4 E2B CPT evaluations",
+    "markdown": "| Saved run | Base | After CPT | Recorded setup |\n|---|---:|---:|---|\n| Pok\u00e9mon lore, Kanto v1 | 89/300, 29.7% | 206/300, 68.7% | Gemma 4 E2B; FP4; forced-choice evaluation labeled `augmentation_holdout`; result `PASS`. |\n| Pok\u00e9mon lore, Kanto anneal | 21/77, 27.3% | 54/77, 70.1% | Gemma 4 E2B; FP4; forced-choice evaluation labeled `augmentation_holdout`; result `PASS`. |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/path-inspection-2026-11-06/REPORT.md",
+    "line": 65,
+    "heading": "A concrete before/after example: the repeated key Kiv",
+    "markdown": "| Layer | Change relative to the original layer-output norm |\n|---|---:|\n| 29 | 14.30% |\n| 30 | 13.26% |\n| 31 | 12.73% |\n| 32 | 12.60% |\n| 33 | 11.41% |\n| 34 | 4.93% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/path-inspection-2026-11-06/REPORT.md",
+    "line": 86,
+    "heading": "Where the change is carried and transformed",
+    "markdown": "| Layer | Incoming residual | Attention branch | Feed-forward branch | Per-layer embedding branch |\n|---|---:|---:|---:|---:|\n| 29 | 0.00% | 76.76% | 23.31% | \u22120.07% |\n| 30 | 83.11% | 0.69% | 16.16% | 0.04% |\n| 31 | 88.82% | 0.08% | 11.16% | \u22120.07% |\n| 32 | 82.42% | 0.60% | 16.81% | 0.16% |\n| 33 | 69.87% | 1.71% | 26.42% | 1.99% |\n| 34 | 18.55% | 0.92% | 80.27% | 0.26% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/REPORT.md",
+    "line": 26,
+    "heading": "What we asked",
+    "markdown": "| Server pilot format | Correct YES/NO verdict | Reached output limit | Interpretation |\n| --- | ---: | ---: | --- |\n| Verdict first; 256-token cap | 9/18 | 18/18 | Every answer begins NO; no completed solutions |\n| Calculation before verdict; 768-token cap | 11/18 | 1/18 | Most responses omit the requested numerical calculation |\n| Explicit numerical calculation; 768-token cap | 6/18 | 10/18 | One complete correct calculation; one correct quantitative progression cut off before verdict |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REPORT.md",
+    "line": 44,
+    "heading": "The connected progression",
+    "markdown": "| Pair | Kind | Predicted sequence / eligible | Median FF14 ratio | Median FF15 ratio |\n| --- | --- | ---: | ---: | ---: |\n| cart | physics | 94/94 | 0.559 | 1.506 |\n| sled | physics | 104/104 | 0.567 | 1.515 |\n| bead | physics | 4/4 | 0.506 | 1.510 |\n| coaster | physics | 223/223 | 0.556 | 1.497 |\n| block | physics | 4/4 | 0.493 | 1.405 |\n| trolley | physics | 251/251 | 0.574 | 1.513 |\n| cart-paraphrase | paraphrase | 17/17 | 0.535 | 1.504 |\n| coaster-paraphrase | paraphrase | 16/16 | 0.552 | 1.530 |\n| block-paraphrase | paraphrase | 40/40 | 0.545 | 1.531 |\n| cart-arithmetic | arithmetic | 25/25 | 0.563 | 1.625 |\n| coaster-arithmetic | arithmetic | 34/34 | 0.556 | 1.690 |\n| block-arithmetic | arithmetic | 34/34 | 0.568 | 1.682 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REPORT.md",
+    "line": 76,
+    "heading": "The connected progression",
+    "markdown": "| Layer | Absolute separation ratio | State-length growth | Update alignment cosine | Before/after difference cosine |\n| --- | ---: | ---: | ---: | ---: |\n| 14 | 1.721\u20131.942 | 3.284\u20133.387 | -0.067\u20130.029 | 0.514\u20130.552 |\n| 15 | 3.508\u20134.041 | 2.382\u20132.547 | -0.041\u20130.090 | 0.232\u20130.360 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REPORT.md",
+    "line": 93,
+    "heading": "What the model actually did",
+    "markdown": "| Kind | Cases | Correct explicit verdicts | Complete correct solutions | Capped |\n| --- | ---: | ---: | ---: | ---: |\n| physics | 12 | 3 | 0 | 7 |\n| paraphrase | 6 | 2 | 0 | 3 |\n| arithmetic | 6 | 3 | 1 | 0 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REPORT.md",
+    "line": 125,
+    "heading": "Connecting concrete calculation moments",
+    "markdown": "| Execution | Observable progression | Recorded decision indices (zero-based) |\n| --- | --- | --- |\n| sled-base | Adds downhill gain; obtains 90 J; rejects 50\u221240; later uses the rejected 10 J | 272, 283, 331, 538 |\n| cart-paraphrase-changed | States addition of downhill gain; later substitutes subtraction | 387, 466 |\n| cart-arithmetic-base | Calculates 60 and 40 correctly; answers NO incorrectly | 120 |\n| cart-arithmetic-changed | Calculates 60 and 80 correctly; answers NO correctly | 79 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/CALCULATION-ANCHORS.md",
+    "line": 7,
+    "heading": "Calculation anchors",
+    "markdown": "| Case | Moment | Decision (zero-based) | Input position | Pair history still matched? |\n| --- | --- | ---: | ---: | --- |\n| block-base | descent-addition | 166 | 338 | yes |\n| block-base | descent-result | 177 | 349 | yes |\n| block-base | loss-subtraction | 222 | 394 | yes |\n| block-base | available-result | 233 | 405 | yes |\n| block-changed | descent-addition | 166 | 338 | yes |\n| block-changed | descent-result | 177 | 349 | yes |\n| block-changed | loss-subtraction | 222 | 394 | yes |\n| block-changed | available-result | 233 | 405 | yes |\n| block-changed | wrong-required-height | 290 | 462 | no |\n| bead-base | descent-result | 299 | 470 | no |\n| bead-base | available-result | 341 | 512 | no |\n| bead-base | extra-subtraction | 401 | 572 | no |\n| bead-base | incorrect-zero | 412 | 583 | no |\n| cart-paraphrase | descent-result | 326 | 505 | no |\n| cart-paraphrase | loss-subtraction | 406 | 585 | no |\n| cart-paraphrase | available-result | 425 | 604 | no |\n| coaster-paraphrase-changed | descent-result | 567 | 749 | no |\n| coaster-paraphrase-changed | loss-subtraction | 614 | 796 | no |\n| coaster-paraphrase-changed | available-result | 625 | 807 | no |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/REPORT.md",
+    "line": 22,
+    "heading": "What the model did",
+    "markdown": "| Observation across the same questions | Q4_K_M | BF16 |\n| --- | ---: | ---: |\n| Correct explicit final verdict, all cases | 8/24 | 13/24 |\n| Complete correct arithmetic calculation and verdict | 1/6 | 4/6 |\n| Complete correct physical numerical chain and verdict, including paraphrases | 0/18 | 2/18 |\n| Physically consistent completed explanation | 0/18 | 0/18 |\n| Responses reaching the 768-token cap | 10/24 | 8/24 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/REPORT.md",
+    "line": 64,
+    "heading": "A correct partial calculation with a controlled comparison",
+    "markdown": "| Observable calculation moment | Decision, zero-based | FF14 relative ratio | FF15 relative ratio |\n| --- | ---: | ---: | ---: |\n| Adds downhill gain: 54 + 30 | 166 | 0.493 | 1.471 |\n| Produces 84 J | 177 | 0.546 | 1.425 |\n| Subtracts friction: 84 \u2212 24 | 222 | 0.527 | 1.425 |\n| Produces 60 J | 233 | 0.583 | 1.281 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/REPORT.md",
+    "line": 95,
+    "heading": "How broadly the earlier progression persists",
+    "markdown": "| Pair | Q4 progression / eligible | BF16 progression / eligible | BF16 median FF14 ratio | BF16 median FF15 ratio |\n| --- | ---: | ---: | ---: | ---: |\n| cart | 94/94 | 297/297 | 0.510 | 1.537 |\n| sled | 104/104 | 306/306 | 0.502 | 1.519 |\n| bead | 4/4 | 20/20 | 0.482 | 1.530 |\n| coaster | 223/223 | 270/270 | 0.502 | 1.547 |\n| block | 4/4 | 253/254 | 0.526 | 1.492 |\n| trolley | 251/251 | 307/307 | 0.503 | 1.489 |\n| cart-paraphrase | 17/17 | 35/35 | 0.510 | 1.613 |\n| coaster-paraphrase | 16/16 | 50/50 | 0.497 | 1.606 |\n| block-paraphrase | 40/40 | 47/47 | 0.515 | 1.565 |\n| cart-arithmetic | 25/25 | 72/72 | 0.541 | 1.682 |\n| coaster-arithmetic | 34/34 | 25/25 | 0.563 | 1.714 |\n| block-arithmetic | 34/34 | 25/25 | 0.585 | 1.657 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/COMMANDS.md",
+    "line": 43,
+    "heading": "Only after qualification validation exited0:",
+    "markdown": "| Command | Outcome |\n| --- | --- |\n| `prepare.mjs` | exit 0; sources and arms from declared eligibility, no inference |\n| `validate-baselines.mjs` | exit 0; four ordinary/capture matches, 2555 decisions |\n| `validate.mjs qualification` | exit 0; six exact controls, 2790 decisions |\n| `validate.mjs donors` | exit 0; four exact interventions with before/after/consumer and provenance checks |\n| `summarize.mjs` | exit 0; all four complete token sequences unchanged, exactly one score-hash difference per run |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/REPORT.md",
+    "line": 30,
+    "heading": "The observable target",
+    "markdown": "| Recipient | Correct available / required / verdict | Recorded baseline |\n| --- | --- | --- |\n| 1 m climb, `block-base` | 60 J / 30 J / YES | Correct numerical chain and final triple; top/bottom prose labels are reversed |\n| 3 m climb, `block-changed` | 60 J / 90 J / NO | 60 J / **120 J** / NO; it incorrectly adds the earlier descent to the final climb |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/REPORT.md",
+    "line": 61,
+    "heading": "The additional numerical variants",
+    "markdown": "| Pair | Correct available energy | Required energy, base / changed | Shared generated prefix | Observation |\n| --- | ---: | ---: | ---: | --- |\n| 2 kg, speed 6 m/s, loss 16 J | 40 J | 20 / 60 J | 18 tokens | Base gets initial kinetic energy wrong, later has 2 J, and hits the token cap; changed has the correct final triple but inconsistent descent accounting |\n| 4 kg, speed 4 m/s, loss 12 J | 60 J | 40 / 80 J | 88 tokens | Both final triples are correct; changed nevertheless makes an extra 40 J subtraction and derives an incorrect speed |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/REPORT.md",
+    "line": 75,
+    "heading": "What the swaps changed",
+    "markdown": "| Recipient | Swap time | Difference in substituted branch, relative to recipient branch | Changed vocabulary-score decisions | Final answer |\n| --- | --- | ---: | ---: | --- |\n| Correct 1 m case | After 60 J, prediction 235 | 1.777% | Exactly 235 | Unchanged: 60 / 30 / YES |\n| Correct 1 m case | First prediction, 0 | 2.939% | Exactly 0 | Unchanged: 60 / 30 / YES |\n| Failing 3 m case | After 60 J, prediction 235 | 1.776% | Exactly 235 | Unchanged: 60 / 120 / NO |\n| Failing 3 m case | First prediction, 0 | 2.940% | Exactly 0 | Unchanged: 60 / 120 / NO |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/REPORT.md",
+    "line": 91,
+    "heading": "What the swaps changed",
+    "markdown": "| Recorded boundary | Difference from the unmodified recipient, relative L2 |\n| --- | ---: |\n| Layer 15 exit, preceding residual | Exactly zero |\n| Substituted normalized attention branch 16 | 1.7761% |\n| Native attention addition 16 | 0.5605% |\n| Layer 16 exit | 0.6164% |\n| Layer 17 exit | 0.5449% |\n| Layer 34 exit | 0.0471% |\n| Final normalized state | 0.1038% |\n| Each retained boundary at prediction 236 | Byte-identical to baseline |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REPORT.md",
+    "line": 22,
+    "heading": "A: four connected outcomes",
+    "markdown": "| Case | Original \u2192 A: available / required / verdict | Shared tokens | Eligible matched predictions |\n| --- | --- | ---: | ---: |\n| Target block | 60 / 120 / NO \u2192 60 / 90 / NO | 269 | 270 |\n| Sled | 0 / 40 / NO \u2192 80 / 40 / YES | 33 | 34 |\n| Preserved block | 60 / 30 / YES \u2192 identical continuation | 450 | 450 |\n| 4 kg block | 60 / 80 / NO \u2192 60 / 40 / YES | 438 | 439 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REPORT.md",
+    "line": 39,
+    "heading": "A: fresh family results",
+    "markdown": "| Measure | Original | A |\n| --- | ---: | ---: |\n| Correct numerical chain and conclusion, physics | 1 / 24 | 1 / 24 |\n| Correct literal YES/NO, physics | 4 / 24 | 5 / 24 |\n| Physics responses hitting 768-token cap | 17 / 24 | 17 / 24 |\n| Correct arithmetic controls | 4 / 4 | 4 / 4 |\n| Correct language controls | 4 / 4 | 4 / 4 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REPORT.md",
+    "line": 65,
+    "heading": "B: a persistent edit with protected contexts",
+    "markdown": "| Declared requirement | Observed B result | Result |\n| --- | --- | --- |\n| Keep target repair: 60 / 90 / NO | 60 / 120 / NO, all 480 tokens identical to original failure | Failed |\n| Restore 4 kg final triple: 60 / 80 / NO | All 665 tokens identical to original | Passed for final triple; old calculation errors remain |\n| Preserve all seven previously correct numerical chains | All seven token-identical to original | Passed |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REPORT.md",
+    "line": 73,
+    "heading": "B: a persistent edit with protected contexts",
+    "markdown": "| Population | Numerical chain + conclusion: original \u2192 B | Correct literal verdict: original \u2192 B | Caps: original \u2192 B |\n| --- | --- | --- | --- |\n| Previous 28, including six arithmetic controls | 7 \u2192 7 | 16 \u2192 16 | 9 \u2192 9 |\n| Eight new confirmation cases | 3 \u2192 4 | 3 \u2192 4 | 4 \u2192 3 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REPORT.md",
+    "line": 86,
+    "heading": "What the native traces add",
+    "markdown": "| Matched observation | A: projection change | B: projection change | A: final-normalization change | B: final-normalization change |\n| --- | ---: | ---: | ---: | ---: |\n| Target design anchor, prediction 235 | 0.9191% | 0.9548% | 0.0580% | 0.0587% |\n| Target at A's first changed token, prediction 269 | 0.7212% | 0.06969% | 0.1522% | 0.01264% |\n| 4 kg at A's first changed token, prediction 438 | 0.8609% | 0.08501% | 0.6315% | 0.04206% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+    "line": 13,
+    "heading": "What was predicted and what happened",
+    "markdown": "| Declared condition | Result under C | Outcome |\n| --- | --- | --- |\n| Keep target numerical repair | 54+30\u221224=60 J available; 90 J required; NO. All 413 tokens identical to A | Passed |\n| Keep sled numerical repair | 50+40\u221210=80 J available; 40 J required; YES. All 533 tokens identical to A | Passed |\n| Restore protected 4 kg final triple | 60/80/NO. All 665 tokens identical to original | Passed |\n| Keep all 7 originally correct numerical chains | All 7 remain correct, with complete continuations token-identical to original | Passed |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+    "line": 34,
+    "heading": "The saved change",
+    "markdown": "| Stored matrix measurement | C |\n| --- | ---: |\n| Tensor | blk.16.attn_output.weight |\n| Shape | 2,048 inputs \u00d7 1,536 outputs |\n| Changed stored values | 523,778 / 3,145,728 |\n| Changed bytes | 533,239 |\n| Realized change norm / original matrix norm | 0.0948835% |\n| Declared ceiling | 4\u00d7A's realized norm, about 0.118624% |\n| Original checkpoint bytes compared | 9,311,304,896 |\n| Changed bytes outside selected tensor | 0 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+    "line": 49,
+    "heading": "Every population, without pooling incompatible scores",
+    "markdown": "| Population | Numerical chains + conclusion, original\u2192C | Correct literal verdict, original\u2192C | Caps, original\u2192C | Whole continuations identical |\n| --- | --- | --- | --- | --- |\n| Old 28, including 6 arithmetic cases | 7/28\u21929/28 | 16/28\u219217/28 | 9\u21929 | 19/28 |\n| Previous 8 confirmation questions, now development | 3/8\u21924/8 | 3/8\u21924/8 | 4\u21923 | 5/8 |\n| Earlier controls: 4 arithmetic + 4 language | Arithmetic 4/4\u21924/4; language 4/4\u21924/4 | Arithmetic 4/4\u21924/4 | 0\u21920 | 8/8 |\n| Fresh 8: 4 physics + 2 arithmetic + 2 language | Physics 1/4\u21921/4; arithmetic 2/2\u21922/2; language 2/2\u21922/2 | Physics 3/4\u21923/4; arithmetic 2/2\u21922/2 | 1\u21921 | 7/8 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+    "line": 66,
+    "heading": "Connected native capture",
+    "markdown": "| Case | Original/A eligible decisions | Original/C eligible decisions | A/C eligible decisions |\n| --- | ---: | ---: | ---: |\n| Target block | 270 | 270 | 413 |\n| Sled | 34 | 34 | 533 |\n| Preserved paired block | 450 | 450 | 450 |\n| Protected 4 kg block | 439 | 665 | 439 |\n| Total for each pairing | 1,193 | 1,419 | 1,835 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+    "line": 76,
+    "heading": "Connected native capture",
+    "markdown": "| Native observation | A projection change | C projection change | A final-state change | C final-state change |\n| --- | ---: | ---: | ---: | ---: |\n| Target design input 235 | 0.9191% | 0.8858% | 0.0580% | 0.0574% |\n| Target first changed output 269 | 0.7212% | 0.6623% | 0.1522% | 0.1379% |\n| Sled first changed output 33 | 0.8620% | 0.8115% | 0.1807% | 0.1722% |\n| Protected 4 kg, A's changed output 438 | 0.8609% | 0.2132% | 0.6315% | 0.1088% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+    "line": 87,
+    "heading": "Connected native capture",
+    "markdown": "| Shared-history decision; first token minus second | Original | A | B | C |\n| --- | ---: | ---: | ---: | ---: |\n| Target 269: gained \u2212 reached | \u22120.006393 | +0.008394 | \u22120.006218 | +0.008017 |\n| Sled 33: math opener \u2212 newline | \u22120.000462 | +0.003975 | \u22120.001232 | +0.004982 |\n| Protected 438: energy \u2212 total | +0.022707 | \u22120.007727 | +0.021198 | +0.015263 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/REPORT.md",
+    "line": 7,
+    "heading": "Question and result of the background check",
+    "markdown": "| Measurement | A | B | C |\n| --- | ---: | ---: | ---: |\n| Intended read-key cosine with calibration mean | 0.423637 | 0.146152 | No single read key |\n| Mean component / total squared action, eight calibration requests | 93.1599% | 78.1742% | 91.9102% |\n| Same fraction, token-weighted sensitivity | 93.1130% | 77.9040% | 91.9185% |\n| Squared action remaining after analytical subtraction of calibration mean, four held-out requests | 11.3931% | 30.9511% | 13.9278% |\n| Range of per-request median native projection changes, six arithmetic controls | 0.5009\u20130.5376% | 0.4018\u20130.4290% | 0.4977\u20130.5213% |\n| Same range, six language controls | 0.2364\u20130.5646% | 0.0613\u20130.2934% | 0.3776\u20130.5328% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/REPORT.md",
+    "line": 48,
+    "heading": "Stored candidate D: quieter background, preserved repairs",
+    "markdown": "| Stored edit measurement | Result |\n| --- | ---: |\n| Changed BF16 values | 331,670 / 3,145,728 |\n| Realized edit norm / original matrix norm | 0.0452194% |\n| Size relative to A | 1.5248\u00d7 |\n| Size relative to C | 0.4766\u00d7 |\n| Remaining donor distance at the design input | 47.6960% (A: 44.4103%) |\n| Original-input projection change at design decision 235 | 0.91851% (A: 0.91914%) |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/REPORT.md",
+    "line": 59,
+    "heading": "Actual rounded footprint",
+    "markdown": "| Population | D's RMS absolute projection action relative to A | Reduction |\n| --- | ---: | ---: |\n| Four held-out background requests | 0.14497\u00d7 | 85.50% |\n| Six language controls | 0.30348\u00d7 | 69.65% |\n| Six arithmetic controls | 0.65523\u00d7 | 34.48% |\n| Four complete original physics traces | 0.76460\u00d7 | 23.54% |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/REPORT.md",
+    "line": 72,
+    "heading": "Native behavioral outcomes",
+    "markdown": "| Evaluation population | Original \u2192 D | Comparison with C |\n| --- | --- | --- |\n| Original 28 | Numerical chains 7\u21929; explicit verdicts 16\u219217; caps 9\u21929 | Same aggregate correctness as C; 20/28 original continuations retained |\n| Previous eight confirmation questions | Numerical chains 3\u21924; verdicts 3\u21924; caps 4\u21923 | Same aggregate correctness as C |\n| Four physics questions introduced with C, excluded from D's fit | Numerical chains 1/4\u21921/4; verdicts 3/4\u21923/4 | No gain |\n| Twelve additional arithmetic/language controls | All correct; all original continuations retained | Same as C |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/FAILURE-CLASSIFICATION.md",
+    "line": 5,
+    "heading": "First incorrect calculations in the earlier fresh questions",
+    "markdown": "| Question | Correct calculation | First incorrect step | Class / subtype | Relationship to old repairs |\n|---|---|---|---|---|\n| new-trolley-4 | 25 + 60 \u2212 15 = 70 J; 2\u00d710\u00d74 = 80 J; NO | After correctly deriving both quantities, redefines required energy as 80 \u2212 70 = 10 J and uses that deficit in the requested final field | Wrong formula/quantity definition: shortfall substituted for required energy | Different from both old first errors; arithmetic and verdict are correct |\n| new-sledge-1 | 40 + 50 \u2212 20 = 70 J; 5\u00d710\u00d71 = 50 J; YES | Energy after descent = initial kinetic \u2212 mgh = 40 \u2212 50 = \u221210 J | Wrong formula: descent gain subtracted | Same first numerical error as old sled-changed. Both original and D then hit their 768-token caps; no complete verdict is available |\n| new-sledge-2 | 40 + 50 \u2212 20 = 70 J; 5\u00d710\u00d72 = 100 J; NO | Treats energy at foot as initial kinetic alone: \u00bdmv\u00b2 + 0 = 40 J. It later adds the already traversed rough-section loss to required energy | Wrong formula: descent omitted / energy reference misplaced | Different from old sled sign error and block extra-height error. Arithmetic and final NO are correct for its incorrect comparison |\n| block-changed (old) | 54 + 30 \u2212 24 = 60 J; 3\u00d710\u00d73 = 90 J; NO | Adds the earlier 1 m descent to the stated 3 m climb: final height = 4 m | Wrong formula: descent double-counted in final height | A/C/D repaired the final numerical chain; explanatory labels remained inconsistent |\n| sled-changed (old) | 50 + 40 \u2212 10 = 80 J; 4\u00d710\u00d71 = 40 J; YES | Kinetic after descent = initial kinetic \u2212 potential lost = 50 \u2212 40 = 10 J | Wrong formula: descent gain subtracted | Same selected subtype as new-sledge-1 |"
+  },
+  {
+    "source": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/FRESH-RESULTS.md",
+    "line": 5,
+    "heading": "Fresh procedure-availability result",
+    "markdown": "| Criterion | Greedy | Sampled pass@1 | pass@2 | pass@4 |\n|---|---:|---:|---:|---:|\n| Correct requested calculation and conclusion |10.0%|18.75%|33.33%|52.5%|\n| Also coherent physical explanation |5.0%|5.0%|10.0%|20.0%|\n| Correct final triple only |12.5%|20.0%|35.0%|55.0%|"
+  }
+]

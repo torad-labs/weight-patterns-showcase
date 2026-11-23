@@ -1,0 +1,124 @@
+{
+  "figures": [
+    {
+      "study": "physics-trace-2026-11-06",
+      "source": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/counterfactual-default.svg",
+      "export": "figures/exports/physics-trace-2026-11-06--counterfactual-default.svg",
+      "sha256": "d6b82933581ad0797282312b2ebde8c73c52f684d7c7f397c3328a42b454ef76",
+      "caption": "Pilot: default capture path. Historical recorder limitations are part of this comparison; consult the pilot report before interpreting it."
+    },
+    {
+      "study": "physics-trace-2026-11-06",
+      "source": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/counterfactual-unfused.svg",
+      "export": "figures/exports/physics-trace-2026-11-06--counterfactual-unfused.svg",
+      "sha256": "edff5cd9325089d4408a732d50036fcdcfec54eab983e1bb3cb9ae5fb97d30d0",
+      "caption": "Pilot: unfused recorded counterpart. Keep this alongside the default-path figure, not as an interchangeable measurement."
+    },
+    {
+      "study": "physics-trace-2026-11-06",
+      "source": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/local-segment.svg",
+      "export": "figures/exports/physics-trace-2026-11-06--local-segment.svg",
+      "sha256": "4ca76cdbec9d79f560456ce915088a1a48ea87405b280be44a6cea31b8b6d138",
+      "caption": "Pilot: selected connected local segment; not a complete per-weight causal decomposition."
+    },
+    {
+      "study": "physics-trace-bf16-2026-11-06",
+      "source": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/block-calculation-trails.svg",
+      "export": "figures/exports/physics-trace-bf16-2026-11-06--block-calculation-trails.svg",
+      "sha256": "5354dcb749445e685b4a1915cfddcf1f90daf51df762dd37d15405f0d045873c",
+      "caption": "BF16: traces at selected calculation anchors in the block example, before the later persistent weight edit."
+    },
+    {
+      "study": "physics-trace-bf16-2026-11-06",
+      "source": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/connected-followup.svg",
+      "export": "figures/exports/physics-trace-bf16-2026-11-06--connected-followup.svg",
+      "sha256": "b4b51d8d413846bda6a9faeba481722e517f19d4715584dee930e397c39cda04",
+      "caption": "BF16 follow-up: connected transformations using the same question family; retain its own eligibility counts."
+    },
+    {
+      "study": "physics-trace-bf16-2026-11-06",
+      "source": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/precision-comparison.svg",
+      "export": "figures/exports/physics-trace-bf16-2026-11-06--precision-comparison.svg",
+      "sha256": "ae8b332d4374ad8bc89699f9d66cba9c111bafaa32675598f8e524e60190ce10",
+      "caption": "Q4/BF16 first-decision comparison. This is a different population from the 1,708-decision BF16 recurrence."
+    },
+    {
+      "study": "physics-trace-followup-2026-11-06",
+      "source": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/connected-followup.svg",
+      "export": "figures/exports/physics-trace-followup-2026-11-06--connected-followup.svg",
+      "sha256": "0938e638848a03f5d02c5f6e1410af39f98e6991855fdd49ca21de1ad4251c9d",
+      "caption": "Q4 follow-up: connected paired transformations and relative separation across the selected region."
+    },
+    {
+      "study": "physics-edit-footprint-2026-11-07",
+      "source": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-traces.json",
+      "companionSource": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/connected-traces.json",
+      "export": "figures/exports/physics-edit-footprint-2026-11-07--two-edits.svg",
+      "png": "figures/exports/physics-edit-footprint-2026-11-07--two-edits.png",
+      "sha256": "42b4069d5b72c304d13c045fc8caae537618b97de04c5963d2a42c6cd547428e",
+      "caption": "Two actual stored-weight edits across matched histories. Similar anchor corrections produce different later effects. Vector changes are not latent geometry or probability."
+    },
+    {
+      "study": "physics-connected-edit-2026-11-07",
+      "source": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/connected-traces.json",
+      "companionSource": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-traces.json",
+      "export": "figures/exports/physics-connected-edit-2026-11-07--three-edits.svg",
+      "png": "figures/exports/physics-connected-edit-2026-11-07--three-edits.png",
+      "sha256": "f861b116b4283715e4110c088c2a7fcb6cd95031a20586728fb75e2a12f9a8ac",
+      "caption": "Three actual saved edits on pair-specific shared histories. C keeps the known repair continuations while restoring the known damaged response. Boundary changes are not latent geometry."
+    },
+    {
+      "study": "physics-background-sensitivity-2026-11-07",
+      "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/controls-index.json",
+      "export": "figures/exports/physics-background-sensitivity-2026-11-07--twelve-controls.svg",
+      "png": "figures/exports/physics-background-sensitivity-2026-11-07--twelve-controls.png",
+      "sha256": "a55b7c391860f88779efcf191f4abcceda8ab5e5ca28883bd21ea7342acf3208",
+      "caption": "All twelve qualified native A/B/C controls, each actual common-history length."
+    },
+    {
+      "study": "physics-background-sensitivity-2026-11-07",
+      "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-analysis.json",
+      "export": "figures/exports/physics-background-sensitivity-2026-11-07--background-direction.svg",
+      "png": "figures/exports/physics-background-sensitivity-2026-11-07--background-direction.png",
+      "sha256": "22ab3bd5468ea248166b9b3bc506b5ffadda058d010c991aa76a5c530d9f8d52",
+      "caption": "Background key alignment, centered action and actual stored-matrix effects on held-out original inputs."
+    },
+    {
+      "study": "physics-background-sensitivity-2026-11-07",
+      "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-analysis.json",
+      "export": "figures/exports/physics-background-sensitivity-2026-11-07--same-input-physics.svg",
+      "png": "figures/exports/physics-background-sensitivity-2026-11-07--same-input-physics.png",
+      "sha256": "f48014a2ddcf40112a503dec69871129400bbe3b5cde749ffbd63b22e34d9e22",
+      "caption": "Full-original-input comparison of actual saved A/B/C matrix action; not edited trajectories."
+    },
+    {
+      "study": "physics-background-sensitivity-2026-11-07",
+      "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-analysis-with-D.json",
+      "export": "figures/exports/physics-background-sensitivity-2026-11-07--candidate-D.svg",
+      "png": "figures/exports/physics-background-sensitivity-2026-11-07--candidate-D.png",
+      "sha256": "50430a83377a1fe537055f7781954c5898b7d869a3ac5d175fc9459ec93b14dc",
+      "caption": "D reduces generic background action while retaining measured repair/preservation. No gain on four excluded physics questions."
+    },
+    {
+      "study": "physics-background-sensitivity-2026-11-07",
+      "source": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-index.json",
+      "export": "figures/exports/physics-background-sensitivity-2026-11-07--four-edit-controls.svg",
+      "png": "figures/exports/physics-background-sensitivity-2026-11-07--four-edit-controls.png",
+      "sha256": "4b1e57af10f34dd42b6b26eac6f02293e87c09b049cc21768550262174d29e91",
+      "caption": "Qualified native controls including D; no activation substitution."
+    }
+  ],
+  "screens": [
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-counters-desktop.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-counters-laptop.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-counters-phone.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-desktop-r2.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-desktop-verified.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-desktop.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-final-desktop.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-laptop-r2.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-laptop-verified.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-phone-r2.png",
+    "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-phone-verified.png"
+  ]
+}

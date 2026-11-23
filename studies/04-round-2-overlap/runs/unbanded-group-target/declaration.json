@@ -1,0 +1,92 @@
+{
+  "method_step": 4,
+  "operation": "unbanded-group-target",
+  "why_this_direction": "Previously unseen motion on a tracked operation must influence the next weight gradient. Fit a two-sided contrast that is insensitive to variations observed among correct executions.",
+  "repeating_pattern_check": "A single reference previously ranked valid operations behind errors. A one-sided cutoff also hid adverse movement. Cross-fit the contrast, preserve full-vector shared friction components, and keep donor fitting separate from the fresh native read.",
+  "what_went_wrong_before": "Downhill and friction both use signs and same-domain equations. Use computational correspondence only. The frozen original operator annotations establish donor operation membership and identify positive friction examples for supervised preservation. Never read a new answer to decide its target or matches.",
+  "hypothesis": "When valid group variability is removed, recurring differences in full-turn trajectories give a trainable downhill signal while permitting different correct executions.",
+  "prediction": "At least one source and merge separates both held donor halves. The positive group agrees along that fitted coordinate. Verified donor friction events provide an affine geometry for subsequent preservation.",
+  "would_weaken_it": "No reproducible held-fold separation, absent coverage on naturally generated operations, a disappearing signal before the chosen sign, or fresh damage to a valid operation.",
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/unbanded-group-target/freeze.py",
+    "sha256": "9d69430835ef65a15f02d7a0b7df9f1c4c702643d92d66e186f7e91145331da4"
+  },
+  "registrations": {
+    "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/registrations.json",
+    "sha256": "6381cc8911c7741814740d23bf2ea060ca2704ee21d52787e186a9710c2ee51d"
+  },
+  "witnesses": {
+    "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/original-witnesses.json",
+    "sha256": "6758040c344068d37fd24e24301f6be117be2de2b86cbc53a625f39bdf394b12"
+  },
+  "sources": [
+    {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-target/freeze.py",
+      "sha256": "9d69430835ef65a15f02d7a0b7df9f1c4c702643d92d66e186f7e91145331da4"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/registrations.json",
+      "sha256": "6381cc8911c7741814740d23bf2ea060ca2704ee21d52787e186a9710c2ee51d"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/original-witnesses.json",
+      "sha256": "6758040c344068d37fd24e24301f6be117be2de2b86cbc53a625f39bdf394b12"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/declaration.json",
+      "sha256": "ad27e0491aada6afd3aa48d2850721b7f8f130a80df33d2eed6bb2385010bb4a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    }
+  ],
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/unbanded-group-target/freeze.py",
+        "sha256": "9d69430835ef65a15f02d7a0b7df9f1c4c702643d92d66e186f7e91145331da4"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/registrations.json",
+        "sha256": "6381cc8911c7741814740d23bf2ea060ca2704ee21d52787e186a9710c2ee51d"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/original-witnesses.json",
+        "sha256": "6758040c344068d37fd24e24301f6be117be2de2b86cbc53a625f39bdf394b12"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/declaration.json",
+        "sha256": "ad27e0491aada6afd3aa48d2850721b7f8f130a80df33d2eed6bb2385010bb4a"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      }
+    ],
+    "entrypoint": "studies/04-round-2-overlap/runs/unbanded-group-target/freeze.py",
+    "operations": [
+      "trace.group_freeze"
+    ],
+    "local_events": "studies/04-round-2-overlap/runs/unbanded-group-target/observability/events.jsonl"
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/unbanded-group-overlap/registrations.json",
+    "studies/04-round-2-overlap/runs/unbanded-group-overlap/original-witnesses.json",
+    "studies/04-round-2-overlap/runs/unbanded-group-overlap/declaration.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/unbanded-group-target/frozen.npz",
+    "studies/04-round-2-overlap/runs/unbanded-group-target/group.json",
+    "studies/04-round-2-overlap/runs/unbanded-group-target/support.json"
+  ],
+  "rule": "At each computationally registered source and merge, split positive and negative donor IDs into two deterministic stratified folds. Fit a direction perpendicular to correct-only variability on one half, and require correct-side classification of every held donor against the midpoint in both directions. Refit on all development donors with the complete positive visit span. For valid friction, preserve the orthogonal complement of observed correct variation wherever a majority of donors register their audited operation interval. Two weight updates are the minimum needed to feed a fresh bleed into a later gradient. Roundoff only determines numerical rank.",
+  "anchor": "expanded-004-h1",
+  "fit": "discovery-05-channel-h1",
+  "development_check": "discovery-10-channel-h1",
+  "registrar": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+    "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+  }
+}

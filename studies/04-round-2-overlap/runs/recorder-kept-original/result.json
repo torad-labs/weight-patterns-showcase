@@ -1,0 +1,67 @@
+{
+ "status": "finished: run.sh compare, started 7:32:13 AM CT November 15, 2026 and waited for card 0 until the comparison itself began at 7:39:43; exited 0 at 7:57:14 AM CT (logs/compare.log); admitted by Astra in revision 1 (357a1f3e, 7:29 AM CT). Every stream was the same bytes on both sides, so none is kept; the calls' records, cases and logs are.",
+ "written_by": "weight-research-perfomance, from the run's own records: compare/kept.json, compare/call-0.json, call-1.json, call-2.json, launches.json and the processes' logs under compare/installed and compare/kept; the card's utilization and memory beside it from logs/card0-samples.txt (nvidia-smi once a second from 7:40:32, read by this seat's session while the run ran, not by the run)",
+ "prediction_vs_result": {
+  "1_bytes": {
+   "predicted": "30 of 30 answers' four files the same sha256 on both sides, and 10 of 10 in the timed pair; held with less confidence than recorder-deferred-original's",
+   "result": "30 of 30 (stream.f32, stream.jsonl, result.json and case.json of each of the thirty fitting answers; 10 of 10 in each of the three calls) and 10 of 10 in the timed pair. Each process ran the library its side names: the installed side mapped dependencies/engine-f089c9c-sm120/libggml-base.so.0.21.0 (1dbfd54200c1...) and the kept side dependencies/engine-f089c9c-sm120-kept/libggml-base.so.0.21.0 (de163ac07215...), each held to the declaration's sha256 before and after its call and to the hashed file by its inode; the scheduler's line is in every kept log and in no installed one.",
+   "held": "yes"
+  },
+  "2_time": {
+   "predicted": "installed about 14.0 ms a step; kept between 9.3 and 13.4 ms a step",
+   "result": "installed 24.653 ms a step and kept 18.631, over the 27 answers that have seconds on both sides (13,320 steps): kept is 0.756 of installed. By call (nine answers each): 20.583 and 13.869; 22.212 and 20.239; 32.450 and 22.629. An answer's kept seconds over its installed seconds: median 0.7878, least 0.4272, most 1.6368; 25 of 27 answers faster kept. Whole calls: installed 116.99, 109.70 and 169.48 s; kept 76.01, 103.00 and 104.16 s. The timed pair, whose seconds enter none of the above: 19.270 and 12.769 ms a step (111.77 and 68.91 s).",
+   "held": "not as stated: both sides ran far above the milliseconds predicted, so the kept side's range (9.3 to 13.4) was missed in its numbers. The machine stood at a load average of 21 to 28 through the run (5.9 to 12.3 during recorder-deferred-original, where the installed side read 13.972), and during the third call's installed side card 0 held up to 12.7 GB where a recorder holds 5.05: another process was on the card (logs/card0-samples.txt; not identified). What held is the direction, in every call and in the timed pair. What the kept side takes on a quiet machine is not measured."
+  },
+  "3_counts": {
+   "predicted": "the kept scheduler: no split not marked, ranges a split near one; the launch counter kept: about one launch a generated step; installed: about 212 a step or few, not predicted which",
+   "result": "the kept scheduler, the four kept calls together: 40,084 splits computed in 40,084 ranges (one range a split in every call), 4,950,374 outputs read back, no split not marked, the copies staged in CUDA_Host (pinned) memory in every process. The engine's launch counter over the timed pair's ten answers (5,250 generated steps, 10,600 splits, two a compute): installed 1,309,504 launches at a mean 3.6 microseconds of host time, 4.7 s in all; kept 5,248 launches at a mean 20.8 microseconds, 0.11 s (each count is the engine's last printed line, so up to 63 launches follow it). The installed path launches about 247 graphs a compute, so each range is replayed as a graph of its own; the kept path launches one.",
+   "held": "yes; and the installed side is the many-launches case"
+  }
+ },
+ "failures_only": [
+  "The time was predicted in milliseconds for a machine as it stood an hour before and was measured on one at a load average of 21 to 28: neither side is near its predicted number, and the three calls' ratios differ (0.674, 0.911, 0.697 of installed's milliseconds a step; 0.663 in the timed pair). The second call's kept side was itself slow (20.2 ms a step). A recorder's time moves with the machine's load by more than the difference between calls, so the gain is known as a ratio under load, not as milliseconds on a quiet machine.",
+  "During the third call's installed side another process held card 0 beside the recorder (12.7 GB on the card at its most): that call's installed 32.45 ms a step is not the recorder alone, and its ratio flatters the kept side. Without that call the two others give 21.37 and 16.95 ms a step, 0.793.",
+  "The launch calls themselves are 0.9 ms of an installed step (4.7 s over 5,250 steps), and the kept side saved 6.5 ms a step in that same pair. So the launches' host duration is not where the saving is either: it is in what the scheduler and the backend do around each of the 247 ranges (and under load, in giving the processor up 247 times a compute), which this run measures only jointly with the change of allocation. The hypothesis of recorder-deferred-original's record (about 4 ms for the 212 ranges) was the right place and the wrong size under this load.",
+  "The kept side holds more of the card: 5.6 to 6.1 GB at its most in the samples against 5.05 GB installed, since no node's memory is given to a later node. A recorder beside another job on a card needs that room."
+ ],
+ "what_this_changes": [
+  "A split computed as one graph, with every node kept from reuse and the 212 wanted outputs copied to pinned host memory after it and waited for once, is the same computation as the installed stop at each output on this card, engine and model: 30 of 30 answers' files are the same bytes, and 10 of 10 again with the engine's timer on. The card's backend computes the same bytes from one graph as from 247 ranges.",
+  "It is faster wherever it was measured: 0.756 of the installed milliseconds a step over the run, 25 of 27 answers, every call. On the measured ratio a capture's generation of 204 s would be about 154 s; that is arithmetic on a ratio taken under load, and the quiet-machine time is not measured. It also removes 247 waits a compute at which the recorder gives up the processor, which is what a loaded machine makes expensive.",
+  "Using it in a capture is a separate acceptance and is proposed to Astra, not done here: own_text.py's recorder call with the kept engine folder ahead of the recorder's library folder and GGML_SCHED_EVAL_KEPT=1, the engine's identity naming both folders, and a reader protocol made again (the kept library's sha256 beside the installed engine's). No instrument, capture or protocol is changed by this run: controlled-bf16-7 and the installed engine stay.",
+  "The card is still idle much of the time on both sides (utilization in the samples: median 37 to 44 on the installed side of the undisturbed calls, 43 to 60 on the kept side), so what bounds a kept token is still on the processor side. The next variant, several recorder contexts as threads of one process, is built and declared separately (recorder-workers-original)."
+ ],
+ "provenance": {
+  "declaration": "studies/04-round-2-overlap/runs/recorder-kept-original/declaration.json (revision 1, Astra's admission; sha256 25a45a73bc9da3697c6761890f1f1f93a7665d76f81ef8b8db494855771a58e2)",
+  "run_sh_sha256": "7b56b02274494f33edb4bb19d8c67ca94c123da4c664e94716e4c44d878b3ffb",
+  "recorder_kept_py_sha256": "3beb364c84693989a8813e3481aad5df1e933f334476f771f9a7a40d25c8cabc",
+  "patch_sha256": "bc8aeb704e8e2670d251b039eb4dabc28c69584fed75d75528260b98a0ac97e2",
+  "kept_library_sha256": "de163ac072154fd89c4a19ec8db00c6df711570c09ba442a8ca2d9c19dd6b47d",
+  "installed_library_sha256": "1dbfd54200c1d3d4cffc72da14693bc413f1e4eaecdded8ce01a9f489c80172b",
+  "recorder_sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "card": "card 0 (CUDA_VISIBLE_DEVICES=0), under its lock for the whole comparison (after-the-others.sh 0); within each call the installed side ran first and the kept side second",
+  "wait_for_the_card": "7:32:13 to 7:39:43 AM CT: card 0 held 11.8 GB of another job of this repository at 7:31 (nvidia-smi) and the recorder alone at 7:40",
+  "load_average": "23.33 22.63 20.82 at 7:49:21 AM CT, 27.90 24.18 21.61 at 7:51:39, 22.41 24.22 22.11 at 7:54:18, 15.80 19.54 20.64 at 7:57:51 (/proc/loadavg and uptime, read by this seat's session): other projects' builds and browsers on the machine",
+  "card_samples": "logs/card0-samples.txt: time, utilization percent, MiB used on card 0, once a second from 7:40:32 to 7:57:13 AM CT (949 lines), written by this seat's session beside the run. By side, from 12 s after a call's start to 2 s before its end: installed medians 39, 37, 16.5 and 44 (calls 0, 1, 2 and the timed one), kept 50.5, 43.5, 33 and 60; memory at most 5,054 MiB installed (12,710 during call 2) and 5,634 to 6,080 kept",
+  "per_call_milliseconds_a_step": {
+   "call-0": [
+    20.583,
+    13.869
+   ],
+   "call-1": [
+    22.212,
+    20.239
+   ],
+   "call-2": [
+    32.45,
+    22.629
+   ],
+   "launches": [
+    19.27,
+    12.769
+   ]
+  },
+  "streams_kept": [],
+  "comparison_started": "2026-11-15 07:39:43 CST"
+ }
+}

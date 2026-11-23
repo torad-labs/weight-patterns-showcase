@@ -1,0 +1,2114 @@
+{
+  "dateCT": "2026-11-07",
+  "scope": "22 indexed historical studies. Supporting directories include the original long-context capture and the incomplete replacement recorder qualification; neither adds a completed hypothesis test. Prior file totals retain saved snapshots. The withdrawn second round is excluded.",
+  "studies": [
+    {
+      "id": "decode-observatory-30k-2026-11-05",
+      "stage": "Recorded workload and visual observatory",
+      "description": "30,000 new tokens across 187 continuing-conversation turns; replay and profiling evidence.",
+      "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05",
+      "entry": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/ANALYSIS.md",
+      "files": 1338,
+      "bytes": 2012771780,
+      "reports": [
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/ANALYSIS.md",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review-final.md",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/plan.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/capture-failures.json",
+          "bytes": 966
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review-final.json",
+          "bytes": 5200
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/inspection-evidence.json",
+          "bytes": 7999635
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/instruction-sites.json",
+          "bytes": 19018
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/ncu-early.csv",
+          "bytes": 27247
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/phase-86.json",
+          "bytes": 12110746
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/production-gpu.csv",
+          "bytes": 12462
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-1023.json",
+          "bytes": 543861
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-1024.json",
+          "bytes": 543848
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-1085.json",
+          "bytes": 543822
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-2183.json",
+          "bytes": 543841
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-22279.json",
+          "bytes": 543818
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-511.json",
+          "bytes": 543872
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-512.json",
+          "bytes": 543833
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/range-86.json",
+          "bytes": 543836
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-evidence.json",
+          "bytes": 1487138
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-production.sh",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-late-trace.sh",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/one-request.sh",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-conversation.sh",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-nsys.sh",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-ncu.sh",
+        "runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-late-tapes.sh"
+      ]
+    },
+    {
+      "id": "ghost-inspection-2026-11-05",
+      "stage": "Early weight instrumentation",
+      "description": "Historical weight/activation inspection; does not by itself establish a residual trace.",
+      "path": "runs/legs/gemma4-e2b/ghost-inspection-2026-11-05",
+      "entry": "runs/legs/gemma4-e2b/ghost-inspection-2026-11-05/analysis.md",
+      "files": 2,
+      "bytes": 17752446,
+      "reports": [
+        "runs/legs/gemma4-e2b/ghost-inspection-2026-11-05/analysis.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-inspection-2026-11-05/observations.json",
+          "bytes": 17749025
+        }
+      ],
+      "code": []
+    },
+    {
+      "id": "ghost-retrieval-2026-11-05",
+      "stage": "Early intervention experiment",
+      "description": "Original plan, prediction, amendment, captures and outcomes; predates the clarified trace direction.",
+      "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05",
+      "entry": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/PLAN.md",
+      "files": 2361,
+      "bytes": 96511191,
+      "reports": [
+        "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/AMENDMENT-1.md",
+        "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/PLAN.md",
+        "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/PREDICTION.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/attention-effective-weights.json",
+          "bytes": 573796
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/attention-weights.json",
+          "bytes": 573711
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/baseline-boundary.json",
+          "bytes": 279416
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/cases-badges.json",
+          "bytes": 16557
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/cases.json",
+          "bytes": 14697
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/h7-half-boundary.json",
+          "bytes": 280062
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/h7-zero-boundary.json",
+          "bytes": 280074
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/paired-evidence.json",
+          "bytes": 431185
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/ghost-retrieval-2026-11-05/propagation-summary.json",
+          "bytes": 82977
+        }
+      ],
+      "code": []
+    },
+    {
+      "id": "individual-edit-2026-11-06",
+      "stage": "Early individual-edit investigation",
+      "description": "Historical candidate and measurement artifacts; keep separate from the later connected-trace study.",
+      "path": "runs/legs/gemma4-e2b/individual-edit-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/individual-edit-2026-11-06/PLAN.md",
+      "files": 1109,
+      "bytes": 336269216,
+      "reports": [
+        "runs/legs/gemma4-e2b/individual-edit-2026-11-06/PLAN.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/individual-edit-2026-11-06/cases.json",
+          "bytes": 35869
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/individual-edit-2026-11-06/development-after-first.json",
+          "bytes": 107134
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/individual-edit-2026-11-06/development-after-second.json",
+          "bytes": 165075
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/individual-edit-2026-11-06/development-evidence.json",
+          "bytes": 223010
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/individual-edit-2026-11-06/experiment.json",
+          "bytes": 21423
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/individual-edit-2026-11-06/qualify-and-round.sh",
+        "runs/legs/gemma4-e2b/individual-edit-2026-11-06/publish-candidates.sh",
+        "runs/legs/gemma4-e2b/individual-edit-2026-11-06/native/weight-requantize.ptx"
+      ]
+    },
+    {
+      "id": "targeted-lookup-2026-11-06",
+      "stage": "Targeted lookup attempts",
+      "description": "Selection and three predictions with native-edit records; historical approach, not the final trace method.",
+      "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/PLAN.md",
+      "files": 2073,
+      "bytes": 631632265,
+      "reports": [
+        "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/AMENDMENT-1.md",
+        "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/PREDICTION-1.md",
+        "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/PREDICTION-2.md",
+        "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/PREDICTION-3.md",
+        "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/SELECTION.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/candidate-1-evidence.json",
+          "bytes": 51039
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/candidate-2-evidence.json",
+          "bytes": 50988
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/cases.json",
+          "bytes": 20746
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/confirmation-evidence.json",
+          "bytes": 60400
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/discovery-evidence.json",
+          "bytes": 132862
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/experiment.json",
+          "bytes": 5477
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/positive-control-evidence.json",
+          "bytes": 50925
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/propagation.json",
+          "bytes": 101220
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/score-binding.json",
+          "bytes": 7481
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/tail-conditional-evidence.json",
+          "bytes": 50977
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/target-blocks.json",
+          "bytes": 89678
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/targeted-lookup-2026-11-06/run-confirmation.sh"
+      ]
+    },
+    {
+      "id": "mechanism-study-2026-11-06",
+      "stage": "Lookup mechanism investigation",
+      "description": "Mechanism and color probes before the engine comparison and capability-focused physics studies.",
+      "path": "runs/legs/gemma4-e2b/mechanism-study-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/COLOR-PROBE.md",
+      "files": 4563,
+      "bytes": 814188208,
+      "reports": [
+        "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/COLOR-PROBE.md",
+        "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/PLAN.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/capture-join.json",
+          "bytes": 7739
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/cases.json",
+          "bytes": 4180
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/color-cases.json",
+          "bytes": 2519
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/color-results.json",
+          "bytes": 4630
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/orientation.json",
+          "bytes": 117932
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/capture-original.sh",
+        "runs/legs/gemma4-e2b/mechanism-study-2026-11-06/capture-color.sh"
+      ]
+    },
+    {
+      "id": "lookup-failure-family-2026-11-06",
+      "stage": "Repeated lookup failure family",
+      "description": "Question-family observations and full completion examination, including limits of the initially assumed pattern.",
+      "path": "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/RESULTS.md",
+      "files": 574,
+      "bytes": 57599768,
+      "reports": [
+        "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/FINISH-OBSERVATIONS.md",
+        "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/RESULTS.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/cases.json",
+          "bytes": 8085
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/evidence.json",
+          "bytes": 34329
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/lookup-failure-family-2026-11-06/finish-observations.sh"
+      ]
+    },
+    {
+      "id": "behavior-pattern-20-2026-11-06",
+      "stage": "Twenty-question observation plan",
+      "description": "Retains questions and the stopped-run account; do not count planned work as completed.",
+      "path": "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06/STOPPED.md",
+      "files": 18,
+      "bytes": 42648,
+      "reports": [
+        "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06/QUESTIONS.md",
+        "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06/STOPPED.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06/cases.json",
+          "bytes": 3807
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06/identity.json",
+          "bytes": 1254
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/behavior-pattern-20-2026-11-06/run-original.sh"
+      ]
+    },
+    {
+      "id": "llamacpp-lookup-comparison-2026-11-06",
+      "stage": "Inference-path comparison",
+      "description": "Same lookup questions on the llama.cpp fork; pipeline and checkpoint distinctions retained.",
+      "path": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/RESULTS.md",
+      "files": 162,
+      "bytes": 221185,
+      "reports": [
+        "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/RESULTS.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/cases.json",
+          "bytes": 8085
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/comparison.json",
+          "bytes": 27145
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/gpus.csv",
+          "bytes": 207
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/health.json",
+          "bytes": 15
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/model-source.json",
+          "bytes": 21731
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/props.json",
+          "bytes": 21009
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/run.sh"
+      ]
+    },
+    {
+      "id": "llamacpp-preference-edit-2026-11-06",
+      "stage": "Native Q4_K preference edit",
+      "description": "Actual fixed-scale Q4 edits and discovery/withheld/control outcomes; predates the current trace method.",
+      "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md",
+      "files": 138906,
+      "bytes": 2308512848,
+      "reports": [
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/all-discovery-cases.json",
+          "bytes": 83698
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/attention-relationships.json",
+          "bytes": 4071248
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/baseline-summary.json",
+          "bytes": 94575
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/baseline-validation.stdout.jsonl",
+          "bytes": 11776
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/candidate-design.json",
+          "bytes": 7904
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/capture-cases.json",
+          "bytes": 61532
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/capture-unique-cases.json",
+          "bytes": 12843
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/capture-unique.stdout.jsonl",
+          "bytes": 21701
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/capture-validation.json",
+          "bytes": 223
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/capture.stdout.jsonl",
+          "bytes": 58597
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/captures-alpha-2.stdout.jsonl",
+          "bytes": 58545
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/cases.json",
+          "bytes": 53882
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/confirmation-alpha-2.stdout.jsonl",
+          "bytes": 4983
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/discovery-alpha-1.stdout.jsonl",
+          "bytes": 6791
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/discovery-alpha-2.stdout.jsonl",
+          "bytes": 6789
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/discovery-reverse.stdout.jsonl",
+          "bytes": 6725
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/experiment-results.json",
+          "bytes": 91516
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/model-provenance.json",
+          "bytes": 924
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/native-plain.stdout.jsonl",
+          "bytes": 80258
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/native-validation.json",
+          "bytes": 1019
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/propagation-baseline.json",
+          "bytes": 55723
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/propagation.json",
+          "bytes": 62405
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/selection.json",
+          "bytes": 890
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/verify-models.mjs",
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/quantized-effect.mjs",
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/evaluate.sh",
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/propagation.mjs",
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/assemble-results.mjs",
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/summarize.mjs",
+        "runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/baseline.sh"
+      ]
+    },
+    {
+      "id": "lookup-pattern-observation-2026-11-06",
+      "stage": "Lookup observation and weight products",
+      "description": "Historical observation record and predictions. It is not automatically evidence for the later residual-trace definition.",
+      "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md",
+      "files": 65096,
+      "bytes": 1127093588,
+      "reports": [
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/PREDICTIONS.md",
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/cases.json",
+          "bytes": 42460
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation-evaluation.json",
+          "bytes": 15957
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation-summary.json",
+          "bytes": 8780
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation.capture.stdout.jsonl",
+          "bytes": 24281
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation.health.json",
+          "bytes": 15
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation.plain.stdout.jsonl",
+          "bytes": 24229
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation.props.json",
+          "bytes": 21009
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/discovery-summary.json",
+          "bytes": 8809
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/discovery.capture.stdout.jsonl",
+          "bytes": 48657
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/discovery.health.json",
+          "bytes": 15
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/discovery.plain.stdout.jsonl",
+          "bytes": 48663
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/discovery.props.json",
+          "bytes": 21009
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/gpus.csv",
+          "bytes": 201
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/selection.json",
+          "bytes": 617
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/request.mjs",
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/scan.mjs",
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/compare-products.mjs",
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/prepare.mjs",
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/run.sh",
+        "runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/evaluate.mjs"
+      ]
+    },
+    {
+      "id": "distributed-pathways-reference-2026-11-06",
+      "stage": "Earlier theory reference",
+      "description": "Contains supersession notices. Current meaning is in the full residual-trace theory and November 7 clarification.",
+      "path": "runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md",
+      "files": 4,
+      "bytes": 81817,
+      "reports": [
+        "runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/MODEL-HANDOFF.md",
+        "runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md"
+      ],
+      "figures": [],
+      "top_level_data": [],
+      "code": []
+    },
+    {
+      "id": "path-inspection-2026-11-06",
+      "stage": "Superseded interpretation",
+      "description": "The frozen-pattern-only interpretation excluding inference traces is superseded. Original measurements are preserved as history.",
+      "path": "runs/legs/gemma4-e2b/path-inspection-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/path-inspection-2026-11-06/REPORT.md",
+      "files": 5,
+      "bytes": 569017,
+      "reports": [
+        "runs/legs/gemma4-e2b/path-inspection-2026-11-06/REPORT.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/path-inspection-2026-11-06/inspection-output.json",
+          "bytes": 28280
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/path-inspection-2026-11-06/observations.json",
+          "bytes": 515028
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/path-inspection-2026-11-06/recurrence-controls.json",
+          "bytes": 3902
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/path-inspection-2026-11-06/inspect.mjs"
+      ]
+    },
+    {
+      "id": "physics-trace-2026-11-06",
+      "stage": "Physics pilot and recorder qualification",
+      "description": "Six situations in three forms; prompt-format and capture-method amendments are part of the record.",
+      "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/REPORT.md",
+      "files": 439,
+      "bytes": 46484896019,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/AMENDMENT-1.md",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/AMENDMENT-2.md",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/AMENDMENT-3.md",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/CAPTURE-SELECTION.md",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/REPORT.md",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/REVIEW.md"
+      ],
+      "figures": [
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/counterfactual-default.svg",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/counterfactual-unfused.svg",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/local-segment.svg"
+      ],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/after-calculation.health.json",
+          "bytes": 15
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/after-calculation.props.json",
+          "bytes": 21009
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/after-calculation.stdout.jsonl",
+          "bytes": 28103
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/behavior-assessment.json",
+          "bytes": 30080
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/boundary-trace-analysis.stderr.jsonl",
+          "bytes": 433
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/cases.after-calculation.json",
+          "bytes": 21212
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/cases.json",
+          "bytes": 20450
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/cases.numeric-calculation.json",
+          "bytes": 22437
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/connected-observations-boundary.json",
+          "bytes": 331067
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/connected-observations.json",
+          "bytes": 997830
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-boundary-comparison.json",
+          "bytes": 354593
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-cases.json",
+          "bytes": 13845
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-default-boundary-capture.stdout.jsonl",
+          "bytes": 26977
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-default-boundary-plain.stdout.jsonl",
+          "bytes": 26929
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-unfused-comparison.json",
+          "bytes": 318665
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-unfused-plain.stdout.jsonl",
+          "bytes": 0
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-v2-unfused-capture.stdout.jsonl",
+          "bytes": 23948
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/deep-v2-unfused-plain.stdout.jsonl",
+          "bytes": 23892
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/local-recurrence.json",
+          "bytes": 59387
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/numeric-calculation.health.json",
+          "bytes": 15
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/numeric-calculation.props.json",
+          "bytes": 21009
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/numeric-calculation.stdout.jsonl",
+          "bytes": 114353
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/pilot.health.json",
+          "bytes": 15
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/pilot.props.json",
+          "bytes": 21009
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/pilot.stdout.jsonl",
+          "bytes": 44614
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/preparation.json",
+          "bytes": 3359
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-boundary-capture.stdout.jsonl",
+          "bytes": 875
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-boundary-comparison.json",
+          "bytes": 16270
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-boundary-plain.stdout.jsonl",
+          "bytes": 855
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-boundary-sham.stdout.jsonl",
+          "bytes": 861
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-cases.json",
+          "bytes": 5709
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-connected-observations.json",
+          "bytes": 164306
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-default-comparison.json",
+          "bytes": 18658
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-fusion-disabled-0-plain.stdout.jsonl",
+          "bytes": 1634
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-unfused-comparison.json",
+          "bytes": 26773
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-v2-fusion-disabled-0-capture.stdout.jsonl",
+          "bytes": 881
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-v2-fusion-disabled-0-plain.stdout.jsonl",
+          "bytes": 855
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-v2-fusion-disabled-0-sham.stdout.jsonl",
+          "bytes": 863
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-v2-fusion-disabled-1-capture.stdout.jsonl",
+          "bytes": 881
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-v2-fusion-disabled-1-plain.stdout.jsonl",
+          "bytes": 855
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/qualification-v2-fusion-disabled-1-sham.stdout.jsonl",
+          "bytes": 863
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/server-native-comparison.json",
+          "bytes": 2045
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-2026-11-06/trace-analysis.stderr.jsonl",
+          "bytes": 441
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/pilot/sources/request.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/pilot/sources/run-pilot.sh",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/pilot/sources/prepare.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/request.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/recurrence.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/figure.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/observe.cpp",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/run-boundary-deep.sh",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/run-qualification.sh",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/assess.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/trace.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/run-pilot.sh",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/prepare.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/compare.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/run-deep.sh",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/run-boundary.sh",
+        "runs/legs/gemma4-e2b/physics-trace-2026-11-06/instrumentation-v2/segment-figure.mjs"
+      ]
+    },
+    {
+      "id": "physics-trace-followup-2026-11-06",
+      "stage": "Q4 connected-trace follow-up",
+      "description": "24 questions, 12 pairs, 846 eligible decisions; relative FF14/FF15 progression and behavioral limits.",
+      "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REPORT.md",
+      "files": 266,
+      "bytes": 9080139346,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/CALCULATION-ANCHORS.md",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/EARLY-OBSERVATION.md",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REPORT.md",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REVIEW.md"
+      ],
+      "figures": [
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/connected-followup.svg"
+      ],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/analysis.json",
+          "bytes": 203881
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/analysis.stdout.jsonl",
+          "bytes": 3321
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/behavior-assessment.json",
+          "bytes": 18815
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/cases.json",
+          "bytes": 59961
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/connected-contrasts.jsonl",
+          "bytes": 35678841
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/milestone-trails.json",
+          "bytes": 133716
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/milestones.json",
+          "bytes": 3752
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/original-coaster-analysis.json",
+          "bytes": 18003
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/original-coaster-analysis.stdout.jsonl",
+          "bytes": 240
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/original-coaster-connected-contrasts.jsonl",
+          "bytes": 9527102
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-bead-analysis.json",
+          "bytes": 18281
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-bead-connected-contrasts.jsonl",
+          "bytes": 166966
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-block-analysis.json",
+          "bytes": 18674
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-block-arithmetic-analysis.json",
+          "bytes": 14270
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-block-arithmetic-connected-contrasts.jsonl",
+          "bytes": 1422451
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-block-connected-contrasts.jsonl",
+          "bytes": 166933
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-block-paraphrase-analysis.json",
+          "bytes": 18079
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-block-paraphrase-connected-contrasts.jsonl",
+          "bytes": 1679500
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-cart-analysis.json",
+          "bytes": 17989
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-cart-arithmetic-analysis.json",
+          "bytes": 14263
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-cart-arithmetic-connected-contrasts.jsonl",
+          "bytes": 1044844
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-cart-connected-contrasts.jsonl",
+          "bytes": 3951665
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-cart-paraphrase-analysis.json",
+          "bytes": 18997
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-cart-paraphrase-connected-contrasts.jsonl",
+          "bytes": 711650
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-coaster-analysis.json",
+          "bytes": 18730
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-coaster-arithmetic-analysis.json",
+          "bytes": 14241
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-coaster-arithmetic-connected-contrasts.jsonl",
+          "bytes": 1422396
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-coaster-connected-contrasts.jsonl",
+          "bytes": 9436354
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-coaster-paraphrase-analysis.json",
+          "bytes": 18560
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-coaster-paraphrase-connected-contrasts.jsonl",
+          "bytes": 670215
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-sled-analysis.json",
+          "bytes": 18527
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-sled-connected-contrasts.jsonl",
+          "bytes": 4373558
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-trolley-analysis.json",
+          "bytes": 18396
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/pair-trolley-connected-contrasts.jsonl",
+          "bytes": 10632309
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/provenance.json",
+          "bytes": 902
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/qualification-capture.stdout.jsonl",
+          "bytes": 865
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/qualification-cases.json",
+          "bytes": 4661
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/qualification-comparison.json",
+          "bytes": 1041
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/qualification-plain.stdout.jsonl",
+          "bytes": 843
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/qualification-sham.stdout.jsonl",
+          "bytes": 851
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/study-capture.stdout.jsonl",
+          "bytes": 117111
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/study-comparison.json",
+          "bytes": 5227
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/study-plain.stdout.jsonl",
+          "bytes": 116811
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/observe.cpp",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/report.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/figure.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/observe.cpp",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/analyze.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/follow.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/compare.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/milestones.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/instrumentation/run.sh"
+      ]
+    },
+    {
+      "id": "physics-trace-bf16-2026-11-06",
+      "stage": "BF16 connected-trace follow-up",
+      "description": "24 questions, 1,708 eligible decisions, matched comparisons and calculation anchors. Completed November 7 CT.",
+      "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06",
+      "entry": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/REPORT.md",
+      "files": 311,
+      "bytes": 6545664421,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/CALCULATION-ANCHORS.md",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/COMMANDS.md",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/REPORT.md",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/REVIEW.md"
+      ],
+      "figures": [
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/block-calculation-trails.svg",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/connected-followup.svg",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/precision-comparison.svg"
+      ],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/analysis.json",
+          "bytes": 204420
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/analysis.stdout.jsonl",
+          "bytes": 3348
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/behavior-assessment.json",
+          "bytes": 20157
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/behavior-notes.json",
+          "bytes": 3809
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/capture-space.json",
+          "bytes": 130
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/cases.json",
+          "bytes": 27582
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/connected-contrasts.jsonl",
+          "bytes": 72971132
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/cross-precision-analysis.json",
+          "bytes": 415149
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/cross-precision-connected-contrasts.jsonl",
+          "bytes": 17288075
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/four-way-matched-comparison.json",
+          "bytes": 691031
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/metadata-comparison.json",
+          "bytes": 294
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/milestone-trails.json",
+          "bytes": 320648
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/milestones.json",
+          "bytes": 11525
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-bead-analysis.json",
+          "bytes": 18840
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-bead-connected-contrasts.jsonl",
+          "bytes": 847200
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-block-analysis.json",
+          "bytes": 17030
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-block-arithmetic-analysis.json",
+          "bytes": 14575
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-block-arithmetic-connected-contrasts.jsonl",
+          "bytes": 1054078
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-block-connected-contrasts.jsonl",
+          "bytes": 10852401
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-block-paraphrase-analysis.json",
+          "bytes": 18645
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-block-paraphrase-connected-contrasts.jsonl",
+          "bytes": 1991451
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-cart-analysis.json",
+          "bytes": 19703
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-cart-arithmetic-analysis.json",
+          "bytes": 14514
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-cart-arithmetic-connected-contrasts.jsonl",
+          "bytes": 3042894
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-cart-connected-contrasts.jsonl",
+          "bytes": 12703430
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-cart-paraphrase-analysis.json",
+          "bytes": 18580
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-cart-paraphrase-connected-contrasts.jsonl",
+          "bytes": 1481860
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-coaster-analysis.json",
+          "bytes": 19502
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-coaster-arithmetic-analysis.json",
+          "bytes": 14558
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-coaster-arithmetic-connected-contrasts.jsonl",
+          "bytes": 1054066
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-coaster-connected-contrasts.jsonl",
+          "bytes": 11555452
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-coaster-paraphrase-analysis.json",
+          "bytes": 19311
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-coaster-paraphrase-connected-contrasts.jsonl",
+          "bytes": 2120890
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-sled-analysis.json",
+          "bytes": 17232
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-sled-connected-contrasts.jsonl",
+          "bytes": 13099070
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-trolley-analysis.json",
+          "bytes": 17056
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/pair-trolley-connected-contrasts.jsonl",
+          "bytes": 13168340
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/posthoc-ff16-comparison.json",
+          "bytes": 285561
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/posthoc-layer16-comparison.json",
+          "bytes": 656424
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/provenance.json",
+          "bytes": 1348
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/publisher-metadata.json",
+          "bytes": 29230
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/qualification-capture.stdout.jsonl",
+          "bytes": 867
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/qualification-cases.json",
+          "bytes": 2511
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/qualification-comparison.json",
+          "bytes": 1183
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/qualification-plain.stdout.jsonl",
+          "bytes": 845
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/qualification-sham.stdout.jsonl",
+          "bytes": 853
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/study-capture.stdout.jsonl",
+          "bytes": 105387
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/study-comparison.json",
+          "bytes": 6186
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/study-plain.stdout.jsonl",
+          "bytes": 105087
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/summary.json",
+          "bytes": 19277
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/finish.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/plot.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/report.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/figure.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/observe.cpp",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/analyze.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/compare-figure.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/select-milestones.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/archive-records.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/summarize.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/follow.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/compare.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/posthoc-layer16.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/block-figure.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/milestones.mjs",
+        "runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/instrumentation/run.sh"
+      ]
+    },
+    {
+      "id": "physics-intervention-2026-11-07",
+      "stage": "One-time activation substitution",
+      "description": "Changed one contribution once. No emitted tokens changed. This was not an actual weight edit.",
+      "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07",
+      "entry": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/REPORT.md",
+      "files": 190,
+      "bytes": 1978569571,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/COMMANDS.md",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/REPORT.md",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/REVIEW.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/arms.json",
+          "bytes": 31241
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/baseline-behavior.json",
+          "bytes": 2442
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/baseline-capture.stdout.jsonl",
+          "bytes": 21946
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/baseline-cases.json",
+          "bytes": 4793
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/baseline-plain.stdout.jsonl",
+          "bytes": 21894
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/baseline-validation.json",
+          "bytes": 697
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/cache-dependencies.json",
+          "bytes": 4262
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/donor-cases.json",
+          "bytes": 16115
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/donors-validation.json",
+          "bytes": 15940
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/donors-validation.stdout.jsonl",
+          "bytes": 1771
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/donors.stdout.jsonl",
+          "bytes": 16044
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/eligibility.json",
+          "bytes": 2171
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/original-cases.json",
+          "bytes": 2535
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/provenance.json",
+          "bytes": 3057
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/qualification-cases.json",
+          "bytes": 22426
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/qualification-validation.json",
+          "bytes": 23580
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/qualification-validation.stdout.jsonl",
+          "bytes": 2524
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/qualification.stdout.jsonl",
+          "bytes": 24043
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/sources.json",
+          "bytes": 5631
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/summary.json",
+          "bytes": 73011
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/intervene.cpp",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/engine-llama-hparams.cpp",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/summarize.mjs",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/validate.mjs",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/run-baselines.sh",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/prepare.mjs",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/validate-baselines.mjs",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/engine-gemma4.cpp",
+        "runs/legs/gemma4-e2b/physics-intervention-2026-11-07/instrumentation/run-interventions.sh"
+      ]
+    },
+    {
+      "id": "physics-weight-edit-2026-11-07",
+      "stage": "Persistent native BF16 weight edit",
+      "description": "Actual edited checkpoint; 28 comparisons, two numerical repairs, one verdict regression, and downstream traces.",
+      "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07",
+      "entry": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/EVIDENCE-INDEX.md",
+      "files": 218,
+      "bytes": 3089989359,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/REVIEW.md"
+      ],
+      "figures": [],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/capture-cases.json",
+          "bytes": 21196
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/cases.json",
+          "bytes": 91021
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/commands.json",
+          "bytes": 3996
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/comparison.json",
+          "bytes": 113428
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/conditioning.json",
+          "bytes": 8336
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/edit-applied.json",
+          "bytes": 1892
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/edit-dry.json",
+          "bytes": 1554
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/edited-assessment-notes.json",
+          "bytes": 3152
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/edited-assessment.json",
+          "bytes": 28959
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/edited-capture.stdout.jsonl",
+          "bytes": 29105
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/edited-plain.stdout.jsonl",
+          "bytes": 126273
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/first-divergence.json",
+          "bytes": 3033
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/original-assessment.json",
+          "bytes": 21049
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/original-plain.stdout.jsonl",
+          "bytes": 126981
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/paired-trace.jsonl",
+          "bytes": 40357790
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/provenance.json",
+          "bytes": 4416
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/source-capture.stdout.jsonl",
+          "bytes": 7999
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/source-cases.json",
+          "bytes": 7148
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/trace-summary.json",
+          "bytes": 419742
+        }
+      ],
+      "code": [
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/instrumentation/summarize-trace.mjs",
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/instrumentation/observe.cpp",
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/instrumentation/analyze.mjs",
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/instrumentation/extract.mjs",
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/instrumentation/run.sh",
+        "runs/legs/gemma4-e2b/physics-weight-edit-2026-11-07/instrumentation/edit.cpp"
+      ]
+    },
+    {
+      "id": "physics-edit-footprint-2026-11-07",
+      "stage": "Connected footprint and selective saved edit",
+      "description": "A on32 fresh prompts; B on28 previous+8 confirmation. Selective prediction failed; connected native traces and one confirmation numerical repair.",
+      "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07",
+      "entry": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REPORT.md",
+      "files": 299,
+      "bytes": 2042655770,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/CANDIDATE-RESPONSES.md",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/COMMANDS.md",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REPORT.md",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/RESPONSES.md",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/REVIEW.md",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/SELECTIVE-PLAN.md"
+      ],
+      "figures": [
+        "figures/exports/physics-edit-footprint-2026-11-07--two-edits.svg"
+      ],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-assessment.json",
+          "bytes": 49323
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-capture-cases.json",
+          "bytes": 7095
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-capture.stdout.jsonl",
+          "bytes": 9715
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-cases.json",
+          "bytes": 99311
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-comparison.json",
+          "bytes": 27646
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-plain.stdout.jsonl",
+          "bytes": 175389
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/candidate-traces.json",
+          "bytes": 4519829
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/cases.json",
+          "bytes": 32176
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/confirmation-cases.json",
+          "bytes": 8293
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/confirmation-original.stdout.jsonl",
+          "bytes": 48662
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/connected-traces.json",
+          "bytes": 8192666
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/design.json",
+          "bytes": 602
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/edited-capture-cases.json",
+          "bytes": 3478
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/edited-capture.stdout.jsonl",
+          "bytes": 4651
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/edited-plain.stdout.jsonl",
+          "bytes": 162597
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/editor-compatibility.json",
+          "bytes": 1702
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/family-assessment.json",
+          "bytes": 41654
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/family-comparison.json",
+          "bytes": 15591
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/original-capture-cases.json",
+          "bytes": 6993
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/original-capture.stdout.jsonl",
+          "bytes": 9603
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/original-plain.stdout.jsonl",
+          "bytes": 161892
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/provenance.json",
+          "bytes": 5454
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/selective-applied.json",
+          "bytes": 2030
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/selective-conditioning.json",
+          "bytes": 4628
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/selective-dry.json",
+          "bytes": 1689
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/stored-protection.json",
+          "bytes": 3233
+        }
+      ],
+      "source_files": [
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/instrumentation/edit.cpp",
+        "runs/legs/gemma4-e2b/physics-edit-footprint-2026-11-07/instrumentation/observe.cpp"
+      ]
+    },
+    {
+      "id": "physics-connected-edit-2026-11-07",
+      "stage": "Connected preservation in persistent edit C",
+      "description": "Declared selective repair passes: two repairs retained, protected response restored, seven prior correct chains preserved.52 C cases and8 fresh baselines; no gain on four fresh physics cases.",
+      "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07",
+      "entry": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+      "files": 178,
+      "bytes": 1518621187,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/COMMANDS.md",
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/PRE-RUN-REVIEW.md",
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REPORT.md",
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/RESPONSES.md",
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/REVIEW.md"
+      ],
+      "figures": [
+        "figures/exports/physics-connected-edit-2026-11-07--three-edits.svg"
+      ],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/assessment.json",
+          "bytes": 87474
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/candidate-cases.json",
+          "bytes": 105874
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/capture-cases.json",
+          "bytes": 14138
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/comparison.json",
+          "bytes": 58203
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/connected-traces.json",
+          "bytes": 17250215
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/constraints.json",
+          "bytes": 18029884
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/decision-margins.json",
+          "bytes": 7751
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/default-compatibility.json",
+          "bytes": 1702
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/default-compatibility.stdout.json",
+          "bytes": 1578
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/design.json",
+          "bytes": 809
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/fresh-cases.json",
+          "bytes": 4275
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/native-applied.json",
+          "bytes": 169216
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/native-applied.stdout.json",
+          "bytes": 126171
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/native-dry.json",
+          "bytes": 168875
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/native-dry.stdout.json",
+          "bytes": 125846
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/provenance.json",
+          "bytes": 3195
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/response-judgments.json",
+          "bytes": 8106
+        }
+      ],
+      "source_files": [
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/instrumentation/edit.cpp",
+        "runs/legs/gemma4-e2b/physics-connected-edit-2026-11-07/instrumentation/observe.cpp"
+      ]
+    },
+    {
+      "id": "physics-background-sensitivity-2026-11-07",
+      "stage": "Background sensitivity and stored read adjustment D",
+      "description": "A/C mean action dominates generic traces. One inverse-second-moment BF16 edit reduces held-out background RMS action85.5% versus A while preserving known repairs and controls.52 evaluated cases; no gain on four excluded physics questions.76 new qualified captures across both stages.",
+      "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07",
+      "entry": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/REPORT.md",
+      "files": 626,
+      "bytes": 10549986742,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/BACKGROUND-RESPONSES.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/CANDIDATE-PLAN.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/CANDIDATE-RESPONSES.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/CANDIDATE-REVIEW.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/COMMANDS.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/PRE-RUN-REVIEW.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/REPORT.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/REVIEW.md",
+        "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/SOURCES.md"
+      ],
+      "figures": [
+        "figures/exports/physics-background-sensitivity-2026-11-07--background-direction.svg",
+        "figures/exports/physics-background-sensitivity-2026-11-07--candidate-D.svg",
+        "figures/exports/physics-background-sensitivity-2026-11-07--four-edit-controls.svg",
+        "figures/exports/physics-background-sensitivity-2026-11-07--same-input-physics.svg",
+        "figures/exports/physics-background-sensitivity-2026-11-07--twelve-controls.svg"
+      ],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/A-new-cases.json",
+          "bytes": 1122
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-analysis-with-D.json",
+          "bytes": 3729632
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-analysis.json",
+          "bytes": 2653613
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-cases.json",
+          "bytes": 3971
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-index.json",
+          "bytes": 1601265
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-inputs.f32",
+          "bytes": 32776192
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-moments.npz",
+          "bytes": 33587990
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/background-outputs.f32",
+          "bytes": 24582144
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-action-ratios.json",
+          "bytes": 536
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-assessment.json",
+          "bytes": 92879
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-capture-cases.json",
+          "bytes": 17548
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-cases.json",
+          "bytes": 105874
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-design.json",
+          "bytes": 1046
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-index.json",
+          "bytes": 31240882
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-inputs.f32",
+          "bytes": 31735808
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-native-summary.json",
+          "bytes": 4694
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/candidate-outputs.f32",
+          "bytes": 23801856
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/control-cases.json",
+          "bytes": 3413
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/control-summary.json",
+          "bytes": 21326
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/controls-index.json",
+          "bytes": 50671126
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/controls-inputs.f32",
+          "bytes": 14819328
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/controls-outputs.f32",
+          "bytes": 11114496
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/design.json",
+          "bytes": 371
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/models.json",
+          "bytes": 511
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/native-applied.json",
+          "bytes": 2037
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/native-applied.stdout.json",
+          "bytes": 1897
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/native-dry.json",
+          "bytes": 1695
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/ordinary-sources.json",
+          "bytes": 5278
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/physics-index.json",
+          "bytes": 787075
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/physics-inputs.f32",
+          "bytes": 16916480
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/physics-outputs.f32",
+          "bytes": 12687360
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/provenance.json",
+          "bytes": 1913
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/response-judgments.json",
+          "bytes": 463
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/whitened-key.f32",
+          "bytes": 8192
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-background-sensitivity-2026-11-07/whitening-design.json",
+          "bytes": 452
+        }
+      ],
+      "code": [
+        "code/physics-background-sensitivity-2026-11-07/analyze.py",
+        "code/physics-background-sensitivity-2026-11-07/background.py",
+        "code/physics-background-sensitivity-2026-11-07/candidate_summary.py",
+        "code/physics-background-sensitivity-2026-11-07/compare_candidate.py",
+        "code/physics-background-sensitivity-2026-11-07/control_summary.py",
+        "code/physics-background-sensitivity-2026-11-07/extract.mjs",
+        "code/physics-background-sensitivity-2026-11-07/plot.py",
+        "code/physics-background-sensitivity-2026-11-07/plot_candidate.py",
+        "code/physics-background-sensitivity-2026-11-07/prepare.mjs",
+        "code/physics-background-sensitivity-2026-11-07/run-candidate.sh",
+        "code/physics-background-sensitivity-2026-11-07/run.sh",
+        "code/physics-background-sensitivity-2026-11-07/test_background.py"
+      ]
+    },
+    {
+      "id": "physics-multitrace-2026-11-07",
+      "stage": "Retained D observations; E withdrawn",
+      "description": "D discovery and classifications, raw captures with limited coverage, 40 greedy plus 160 sampled completions. E constructor, checkpoint, derived claims and candidate results removed from active evidence.",
+      "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07",
+      "entry": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/REPORT.md",
+      "files": 1001,
+      "bytes": 9997066408,
+      "reports": [
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/CLASSIFICATION-1-NOTES.md",
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/COMMANDS.md",
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/EVIDENCE-INDEX.md",
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/FAILURE-CLASSIFICATION.md",
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/FRESH-JUDGMENT-NOTES.md",
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/FRESH-RESULTS.md",
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/PLAN.md",
+        "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/REPORT.md"
+      ],
+      "figures": [
+        "figures/exports/physics-multitrace-2026-11-07--fresh.png",
+        "figures/exports/physics-multitrace-2026-11-07--fresh.svg"
+      ],
+      "top_level_data": [
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/acquisition-plan.json",
+          "bytes": 1800
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/acquisition-tools.json",
+          "bytes": 955
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/classification-0.json",
+          "bytes": 19478
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/classification-1.json",
+          "bytes": 23197
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/connected-instrument.json",
+          "bytes": 535
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/connected-qualification-cases.json",
+          "bytes": 7569
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/connected-qualification.json",
+          "bytes": 361
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/discovery-0.json",
+          "bytes": 45543
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/discovery-1.json",
+          "bytes": 45501
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/discovery-2.json",
+          "bytes": 45547
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/discovery-cases.json",
+          "bytes": 136585
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/fresh-cases.json",
+          "bytes": 45201
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/fresh-judgments.json",
+          "bytes": 214845
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/fresh-metrics.json",
+          "bytes": 30764
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/fresh-sampling.json",
+          "bytes": 200155
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/matched-branch-annotations.json",
+          "bytes": 2030
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/matched-branch-assessment.json",
+          "bytes": 5285
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/matched-branch-cases.json",
+          "bytes": 38097
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/observer-qualification.json",
+          "bytes": 152
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/paired-extension-cases.json",
+          "bytes": 30596
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/paired-trace-cases.json",
+          "bytes": 182421
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/prefix-qualification-cases.json",
+          "bytes": 4012
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/prefix-qualification.json",
+          "bytes": 78
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/qualification-cases.json",
+          "bytes": 14837
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-annotations-extended.json",
+          "bytes": 21059
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-annotations.json",
+          "bytes": 17746
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-preview-annotations-v2.json",
+          "bytes": 6618
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-preview-annotations-v3.json",
+          "bytes": 9125
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-preview-annotations.json",
+          "bytes": 6618
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-preview-v2.json",
+          "bytes": 55304
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-preview-v3.json",
+          "bytes": 55330
+        },
+        {
+          "path": "runs/legs/gemma4-e2b/physics-multitrace-2026-11-07/teacher-preview.json",
+          "bytes": 55373
+        }
+      ],
+      "code": [
+        "code/physics-multitrace-2026-11-07/capture_read.py",
+        "code/physics-multitrace-2026-11-07/check_observer.py",
+        "code/physics-multitrace-2026-11-07/figures.py",
+        "code/physics-multitrace-2026-11-07/fresh_metrics.py",
+        "code/physics-multitrace-2026-11-07/prepare.py",
+        "code/physics-multitrace-2026-11-07/run.sh",
+        "code/physics-multitrace-2026-11-07/sampling.py"
+      ]
+    }
+  ],
+  "supporting_run_directories": [
+    "runs/legs/gemma4-e2b/long-context-capture-7263027c5-gpu1-2",
+    "runs/legs/gemma4-e2b/signal-trace-repair-2026-11-07"
+  ]
+}

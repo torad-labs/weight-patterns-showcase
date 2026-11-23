@@ -1,0 +1,118 @@
+{
+ "declaration_sha256": "9cb87a3f18d78a7dd38ec175032fc534857936d2d10cebe3b7da387a9eada30f",
+ "prediction_vs_result": "The anchor's check held: on the original's own texts the anchored forward read 0.05266 (the engine's 0.05266). The first step's length was of the plain loop's order in shares of its unit (2^-1.670 against 2^-1.971), and on the texts held it read 0.874 of its start where the plain loop's read 0.926. What was predicted of the own trace failed at the first step: written again, the answers read 0.9906 (17.1 times the start) where the plain loop's read 0.0916 (1.58 times); 30 of 30 answers were rewritten against 30; the correct answers' part stood at 0.5093 against 0.0428, 11.9 times as large. At every step read after it the own trace and the correct answers' part stayed over the plain loop's at the same step (step 2: 0.9906 against 0.0916, the correct answers' part 0.5093 against 0.0428; step 3: 0.2947 against 0.1828, the correct answers' part 0.1498 against 0.0876; step 4: 0.3103 against 0.1141, the correct answers' part 0.1608 against 0.0646). The damping stood at the low end of what single precision reads for 70 of 70 matrices, as predicted. It was not predicted that the loss reaches nothing, and it did not.",
+ "failures_only": "What the declaration said would weaken the hypothesis happened at the first step: a first rise larger than the plain loop's, as many answers rewritten, and a correct answers' part larger, not smaller. The first step moved 37,396,346 stored weights where the plain loop's moved 5,425,946. The loop was stopped by this seat after its step 4 (its log's last line 7:39:18 AM CT), on that declared condition and to give card 0 to the kind that reads its lengths on answers written again: it did not stall and it reached no closure. Its own trace stood at 0.3103 when its last recorded step began, 5.3 times its start. No answer was read; these are torch's arithmetic, not the engine's trace.",
+ "what_this_changes": "The weighing protects the inputs it was computed from, which are the positions inside their tolerance on the text the step started on, and leaves the update free wherever those inputs carry little; with the damping at the low end of what single precision reads, that freedom is large. The answers written again leave the step's text within their first tokens, so the stepped model stands on inputs the weighing never held. A balance against what one token's update does to the others has to be read on the trace the stepped model has, not on the text before the step (Marcos's point relayed at 7:21 AM CT November 15: the loss is measured on the trace the model has after the update). This closes the weighing as built here, with its damping read on the old text; it does not establish that a weighing with its damping read on answers written again, or more of it, does no better, and it says nothing against regenerating and correcting again, which the plain loop does at the same steps.",
+ "steps": {
+  "balanced": [
+   {
+    "step": 1,
+    "own_trace": 0.05804647168662863,
+    "wrong": 0.05743094003992155,
+    "correct": 0.0006155316467070808,
+    "written_as_the_step_before": 21,
+    "distance_wrong": 0.9144372854498215,
+    "distance_correct": 0.5117778302983425,
+    "length_power": -1.6695444748604629,
+    "on_the_texts_held_over_the_start": 0.8738533412634442,
+    "weights_moved": 37396346
+   },
+   {
+    "step": 2,
+    "own_trace": 0.9905959581956267,
+    "wrong": 0.48132458236068487,
+    "correct": 0.5092713758349419,
+    "written_as_the_step_before": 0,
+    "distance_wrong": 1.7860650478396565,
+    "distance_correct": 1.6635108992923051,
+    "length_power": -2.439781587391205,
+    "on_the_texts_held_over_the_start": 0.9294439553487162,
+    "weights_moved": 38529744
+   },
+   {
+    "step": 3,
+    "own_trace": 0.29470104072242975,
+    "wrong": 0.1448869933374226,
+    "correct": 0.14981404738500714,
+    "written_as_the_step_before": 0,
+    "distance_wrong": 1.1380761966574937,
+    "distance_correct": 1.0245344857685268,
+    "length_power": -3.0865762594821065,
+    "on_the_texts_held_over_the_start": 0.9523335067445419,
+    "weights_moved": 38613385
+   },
+   {
+    "step": 4,
+    "own_trace": 0.31034348253160715,
+    "wrong": 0.14951113844290376,
+    "correct": 0.1608323440887034,
+    "written_as_the_step_before": 0,
+    "distance_wrong": 1.2681262239348143,
+    "distance_correct": 1.1727880508406088,
+    "length_power": -4.7942012333117905,
+    "on_the_texts_held_over_the_start": 0.9829700512330002,
+    "weights_moved": 38736468
+   }
+  ],
+  "plain_at_the_same_steps": [
+   {
+    "step": 1,
+    "own_trace": 0.058046461772407215,
+    "wrong": 0.05743093037744984,
+    "correct": 0.0006155313949573769,
+    "written_as_the_step_before": 21,
+    "distance_wrong": 0.9144373100134544,
+    "distance_correct": 0.5117778640801589,
+    "length_power": -1.971453058487487,
+    "on_the_texts_held_over_the_start": 0.9261298279423715,
+    "weights_moved": 5425946
+   },
+   {
+    "step": 2,
+    "own_trace": 0.09164043085183948,
+    "wrong": 0.0488789506489411,
+    "correct": 0.04276148020289838,
+    "written_as_the_step_before": 0,
+    "distance_wrong": 0.8373551300901454,
+    "distance_correct": 0.6831127428740729,
+    "length_power": -2.979606415246157,
+    "on_the_texts_held_over_the_start": 0.9685983693671762,
+    "weights_moved": 6808769
+   },
+   {
+    "step": 3,
+    "own_trace": 0.18282670457847416,
+    "wrong": 0.09523382526822388,
+    "correct": 0.08759287931025028,
+    "written_as_the_step_before": 0,
+    "distance_wrong": 1.0072582836728543,
+    "distance_correct": 0.911802142218221,
+    "length_power": -2.3833420722275114,
+    "on_the_texts_held_over_the_start": 0.9610086139377865,
+    "weights_moved": 9004556
+   },
+   {
+    "step": 4,
+    "own_trace": 0.11414758962928317,
+    "wrong": 0.049552742624655366,
+    "correct": 0.06459484700462781,
+    "written_as_the_step_before": 0,
+    "distance_wrong": 0.8445815165177919,
+    "distance_correct": 0.7615931383625139,
+    "length_power": -3.82424608088405,
+    "on_the_texts_held_over_the_start": 0.9753533213015498,
+    "weights_moved": 9641576
+   }
+  ]
+ },
+ "records": {
+  "loop": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/loop.json",
+  "plain": "studies/04-round-2-overlap/runs/envelope-loop-plain-torch/loop.json",
+  "anchor": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/anchor-read.json",
+  "kept": "loop/step-<n>.npz (every answer's record of pairs and every original row's loss; in the bucket)"
+ },
+ "composed": {
+  "by": "records/development/2026-11-15-relation-reading/close_balanced_loop.py",
+  "made": "2026-11-15 07:40:39 CT"
+ }
+}

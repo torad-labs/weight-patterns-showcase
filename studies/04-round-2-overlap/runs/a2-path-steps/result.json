@@ -1,0 +1,8861 @@
+{
+ "run": "a2-path-steps",
+ "what_was_read": "a2-path's edit at 0.268, 0.579 and 0.786 of its size: each of its 18 matrices set to the original plus that fraction of a2-path's stored change, rounded to BF16. Each model answered the 60 questions of the overlap and round one's 28 on its own, greedy, on GPU0, and was judged as every rung is. The three models were not kept: each is exactly the original, a2-path's model and the fraction. No fit, no traces.",
+ "curves": {
+  "meaning": "Per fraction and group. 0 is the original model (wrong: none complete, all 30 subtract the descent; correct: all complete) and 1 is a2-path itself.",
+  "0.268": {
+   "overlap, were wrong": {
+    "answers": 30,
+    "complete": 7,
+    "subtract_the_descent": 13,
+    "state_the_right_available_energy": 9,
+    "stopped_at_limit": 4,
+    "same_text_as_the_original": {
+     "answers": 1,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 13,
+     "complete": 5,
+     "state_the_right_available_energy": 7,
+     "subtract_the_descent": 2
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 16,
+     "complete": 2,
+     "state_the_right_available_energy": 2,
+     "subtract_the_descent": 10
+    }
+   },
+   "overlap, were correct": {
+    "answers": 30,
+    "complete": 15,
+    "subtract_the_descent": 0,
+    "state_the_right_available_energy": 20,
+    "stopped_at_limit": 4,
+    "same_text_as_the_original": {
+     "answers": 4,
+     "complete": 4
+    },
+    "first_apart_before_step_20": {
+     "answers": 14,
+     "complete": 5,
+     "state_the_right_available_energy": 8,
+     "subtract_the_descent": 0
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 12,
+     "complete": 6,
+     "state_the_right_available_energy": 8,
+     "subtract_the_descent": 0
+    }
+   },
+   "round one, were wrong": {
+    "answers": 21,
+    "complete": 2,
+    "subtract_the_descent": 3,
+    "state_the_right_available_energy": 4,
+    "stopped_at_limit": 12,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 3,
+     "complete": 1,
+     "state_the_right_available_energy": 2,
+     "subtract_the_descent": 0
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 18,
+     "complete": 1,
+     "state_the_right_available_energy": 2,
+     "subtract_the_descent": 3
+    }
+   },
+   "round one, were correct": {
+    "answers": 7,
+    "complete": 4,
+    "subtract_the_descent": 0,
+    "state_the_right_available_energy": 5,
+    "stopped_at_limit": 3,
+    "same_text_as_the_original": {
+     "answers": 2,
+     "complete": 2
+    },
+    "first_apart_before_step_20": {
+     "answers": 2,
+     "complete": 0,
+     "state_the_right_available_energy": 0,
+     "subtract_the_descent": 0
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 3,
+     "complete": 2,
+     "state_the_right_available_energy": 3,
+     "subtract_the_descent": 0
+    }
+   },
+   "first_step_apart_overlap": {
+    "3": 15,
+    "11": 12,
+    "26": 2,
+    "42": 1,
+    "69": 1,
+    "72": 1,
+    "73": 2,
+    "76": 2,
+    "82": 1,
+    "83": 1,
+    "92": 2,
+    "128": 1,
+    "143": 1,
+    "146": 1,
+    "178": 1,
+    "180": 1,
+    "230": 1,
+    "254": 1,
+    "275": 1,
+    "289": 1,
+    "294": 1,
+    "337": 1,
+    "388": 1,
+    "432": 1,
+    "434": 1,
+    "517": 1,
+    "None": 5
+   }
+  },
+  "0.579": {
+   "overlap, were wrong": {
+    "answers": 30,
+    "complete": 5,
+    "subtract_the_descent": 2,
+    "state_the_right_available_energy": 9,
+    "stopped_at_limit": 11,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 26,
+     "complete": 5,
+     "state_the_right_available_energy": 8,
+     "subtract_the_descent": 2
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 4,
+     "complete": 0,
+     "state_the_right_available_energy": 1,
+     "subtract_the_descent": 0
+    }
+   },
+   "overlap, were correct": {
+    "answers": 30,
+    "complete": 8,
+    "subtract_the_descent": 2,
+    "state_the_right_available_energy": 13,
+    "stopped_at_limit": 8,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 23,
+     "complete": 3,
+     "state_the_right_available_energy": 8,
+     "subtract_the_descent": 2
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 7,
+     "complete": 5,
+     "state_the_right_available_energy": 5,
+     "subtract_the_descent": 0
+    }
+   },
+   "round one, were wrong": {
+    "answers": 21,
+    "complete": 2,
+    "subtract_the_descent": 4,
+    "state_the_right_available_energy": 2,
+    "stopped_at_limit": 6,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 8,
+     "complete": 1,
+     "state_the_right_available_energy": 1,
+     "subtract_the_descent": 0
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 13,
+     "complete": 1,
+     "state_the_right_available_energy": 1,
+     "subtract_the_descent": 4
+    }
+   },
+   "round one, were correct": {
+    "answers": 7,
+    "complete": 0,
+    "subtract_the_descent": 1,
+    "state_the_right_available_energy": 0,
+    "stopped_at_limit": 3,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 5,
+     "complete": 0,
+     "state_the_right_available_energy": 0,
+     "subtract_the_descent": 1
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 2,
+     "complete": 0,
+     "state_the_right_available_energy": 0,
+     "subtract_the_descent": 0
+    }
+   },
+   "first_step_apart_overlap": {
+    "3": 33,
+    "11": 8,
+    "15": 2,
+    "18": 6,
+    "25": 1,
+    "73": 1,
+    "82": 1,
+    "93": 2,
+    "142": 1,
+    "143": 1,
+    "178": 1,
+    "275": 1,
+    "351": 1,
+    "353": 1
+   }
+  },
+  "0.786": {
+   "overlap, were wrong": {
+    "answers": 30,
+    "complete": 8,
+    "subtract_the_descent": 2,
+    "state_the_right_available_energy": 13,
+    "stopped_at_limit": 8,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 27,
+     "complete": 8,
+     "state_the_right_available_energy": 12,
+     "subtract_the_descent": 1
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 3,
+     "complete": 0,
+     "state_the_right_available_energy": 1,
+     "subtract_the_descent": 1
+    }
+   },
+   "overlap, were correct": {
+    "answers": 30,
+    "complete": 9,
+    "subtract_the_descent": 1,
+    "state_the_right_available_energy": 13,
+    "stopped_at_limit": 9,
+    "same_text_as_the_original": {
+     "answers": 1,
+     "complete": 1
+    },
+    "first_apart_before_step_20": {
+     "answers": 24,
+     "complete": 4,
+     "state_the_right_available_energy": 8,
+     "subtract_the_descent": 1
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 5,
+     "complete": 4,
+     "state_the_right_available_energy": 4,
+     "subtract_the_descent": 0
+    }
+   },
+   "round one, were wrong": {
+    "answers": 21,
+    "complete": 3,
+    "subtract_the_descent": 2,
+    "state_the_right_available_energy": 3,
+    "stopped_at_limit": 8,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 11,
+     "complete": 3,
+     "state_the_right_available_energy": 3,
+     "subtract_the_descent": 0
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 10,
+     "complete": 0,
+     "state_the_right_available_energy": 0,
+     "subtract_the_descent": 2
+    }
+   },
+   "round one, were correct": {
+    "answers": 7,
+    "complete": 0,
+    "subtract_the_descent": 0,
+    "state_the_right_available_energy": 0,
+    "stopped_at_limit": 4,
+    "same_text_as_the_original": {
+     "answers": 0,
+     "complete": 0
+    },
+    "first_apart_before_step_20": {
+     "answers": 5,
+     "complete": 0,
+     "state_the_right_available_energy": 0,
+     "subtract_the_descent": 0
+    },
+    "first_apart_at_step_20_or_later": {
+     "answers": 2,
+     "complete": 0,
+     "state_the_right_available_energy": 0,
+     "subtract_the_descent": 0
+    }
+   },
+   "first_step_apart_overlap": {
+    "3": 37,
+    "11": 5,
+    "15": 5,
+    "18": 4,
+    "73": 1,
+    "74": 1,
+    "83": 1,
+    "93": 2,
+    "141": 1,
+    "275": 1,
+    "351": 1,
+    "None": 1
+   }
+  },
+  "1 (a2-path itself)": {
+   "overlap, were wrong": {
+    "answers": 30,
+    "complete": 17,
+    "subtract_the_descent": 1,
+    "state_the_right_available_energy": 17
+   },
+   "overlap, were correct": {
+    "answers": 30,
+    "complete": 18,
+    "subtract_the_descent": 0,
+    "state_the_right_available_energy": 18
+   },
+   "round one, were wrong": {
+    "answers": 21,
+    "complete": 7,
+    "subtract_the_descent": 0,
+    "state_the_right_available_energy": 7
+   },
+   "round one, were correct": {
+    "answers": 7,
+    "complete": 3,
+    "subtract_the_descent": 0,
+    "state_the_right_available_energy": 3
+   }
+  }
+ },
+ "the_same_answers_across_sizes": {
+  "correct_answers_broken": {
+   "at_each_size": {
+    "0.268": 15,
+    "0.579": 22,
+    "0.786": 21,
+    "1": 12
+   },
+   "at_every_size": 6,
+   "at_no_size": 3
+  },
+  "wrong_answers_complete": {
+   "at_each_size": {
+    "0.268": 7,
+    "0.579": 5,
+    "0.786": 8,
+    "1": 17
+   },
+   "at_every_size": 1,
+   "at_no_size": 7
+  }
+ },
+ "prediction_vs_result": {
+  "leaving_the_opening": "Not as computed. 27, 49 and 51 of the 60 answers of the overlap write another token than the original within their first 20 steps at 0.268, 0.579 and 0.786, not a quarter, a half and three quarters (54 at the whole edit). The crossing computed at one token underestimates it: at 0.268, 12 answers leave at step 11, a second close choice.",
+  "correct_answers": "Not as predicted, and in the other direction. 15, 22 and 21 of the 30 correct answers break at the three fractions, against 12 at the whole edit. Correct answers that keep their original opening do not all stay complete either: 10 of 16 at 0.268, 5 of 7 at 0.579, 5 of 6 at 0.786.",
+  "wrong_answers": "The reading that was left open. The subtraction of the descent falls with the size of the edit: 30, 13, 2, 2, 1 of the 30 still subtract it at 0, 0.268, 0.579, 0.786 and 1. Complete answers do not follow the size: 0, 7, 5, 8, then 17 at the whole edit.",
+  "would_weaken_it": "Both construction readings occurred. Correct answers break at least as often at 0.268 as at the whole edit, and they break while keeping their original opening, so the damage is not a matter of size in the way this run supposed. And no fraction repairs more than it breaks (7 complete against 15 broken, 5 against 22, 8 against 21; the whole edit: 17 against 12), so a smaller step of this edit is not a way to stabilize it. By the declaration, what separates repair from damage is then the direction of the change, which is C2's and D2's question. Neither weighs on the hypothesis."
+ },
+ "failures_only": {
+  "note": "Every answer at every fraction: its fields before and after, the first step at which it writes another token than the original, and its length.",
+  "answers": [
+   {
+    "fraction": 0.268,
+    "id": "discovery-05-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 128.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 698
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-05-channel-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 91.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 578
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-10-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 55.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 92,
+    "steps": 468
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-11-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 21.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 433
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-17-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 31.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 512
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-001-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 178,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-001-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 180,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-014-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 56.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -24.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 98.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 751
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-020-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-022-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-034-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 432,
+    "steps": 621
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-040-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 114.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 54.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 114.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 92,
+    "steps": 468
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-042-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 106.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 46.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 46.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 517,
+    "steps": 628
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-044-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 90.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 30.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 76,
+    "steps": 616
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-045-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 140.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 140.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 478
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-046-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 30.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 433
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-046-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 136.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 480
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-058-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 120.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 434,
+    "steps": 628
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-068-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 196.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 69,
+    "steps": 463
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-069-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 192.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 32.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 32.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 128,
+    "steps": 437
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-070-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 337,
+    "steps": 529
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-070-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 92.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 188.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 417
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-087-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 166.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -34.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 266.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 82,
+    "steps": 743
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-089-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 194.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 94.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 94.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 696
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-092-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 248.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 48.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 48.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 485
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-093-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 244.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 44.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 44.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 73,
+    "steps": 465
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-094-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 73,
+    "steps": 411
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-094-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 419
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-095-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 289,
+    "steps": 525
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-095-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 136.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 83,
+    "steps": 570
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-01-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 43.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 72,
+    "steps": 597
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-021-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 88.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 619
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-06-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 409
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-07-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 69.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 69.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 69.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 484
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-15-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 135.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 254,
+    "steps": 462
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-003-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 12.0,
+     "requiredJ": 20,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 32.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 582
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-00-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 27.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 27.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 27.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 230,
+    "steps": 668
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-006-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 712
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-004-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 44.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 636
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-018-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 26,
+    "steps": 651
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-08-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 73.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 73.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": 47.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 76,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-024-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 42.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 42.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 42.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 388,
+    "steps": 433
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-10-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 618
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-028-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 72.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 72.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-029-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 448
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-022-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 84.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-11-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 143,
+    "steps": 428
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-010-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 26,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-064-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 156.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 156.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 116.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 649
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-065-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 152.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 112.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 645
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-071-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 184.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 275,
+    "steps": 418
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-17-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 551
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-039-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 90.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 414
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-017-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 42,
+    "steps": 563
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-076-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 128.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 554
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-077-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 124.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 124.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 484
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-078-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 120.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 146,
+    "steps": 518
+   },
+   {
+    "fraction": 0.268,
+    "id": "discovery-23-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 241.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 294,
+    "steps": 419
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-023-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 80.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 144.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 504
+   },
+   {
+    "fraction": 0.268,
+    "id": "expanded-047-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 132.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 565
+   },
+   {
+    "fraction": 0.268,
+    "id": "cart-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 222,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "cart-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": 100.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 140,
+    "steps": 637
+   },
+   {
+    "fraction": 0.268,
+    "id": "sled-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 120.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 33,
+    "steps": 577
+   },
+   {
+    "fraction": 0.268,
+    "id": "sled-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 33,
+    "steps": 435
+   },
+   {
+    "fraction": 0.268,
+    "id": "bead-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 30.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 19,
+    "steps": 581
+   },
+   {
+    "fraction": 0.268,
+    "id": "bead-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 320,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "coaster-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 516,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "coaster-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 100,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 270,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "block-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 450
+   },
+   {
+    "fraction": 0.268,
+    "id": "block-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 564
+   },
+   {
+    "fraction": 0.268,
+    "id": "trolley-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 108,
+    "steps": 424
+   },
+   {
+    "fraction": 0.268,
+    "id": "trolley-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 120,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "block-m2-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 2.0,
+      "required": 20.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 180,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "block-m2-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 40.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 40.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 467,
+    "steps": 581
+   },
+   {
+    "fraction": 0.268,
+    "id": "block-m4-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 92,
+    "steps": 409
+   },
+   {
+    "fraction": 0.268,
+    "id": "block-m4-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-parcel-1",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 10,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 10.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 10.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 677
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-parcel-4",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 30.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 440,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-carriage-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1248.0,
+      "required": 36.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 26,
+    "steps": 546
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-carriage-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 180,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 258,
+    "steps": 574
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-disc-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 253,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-disc-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 227,
+    "steps": 761
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-runner-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 660.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 660.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 505,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "confirm-runner-5",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 189,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "new-trolley-3",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "new-trolley-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 70.0,
+      "required": 10.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -50.0,
+      "required": 130.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 164,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "new-sledge-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 538,
+    "steps": 768
+   },
+   {
+    "fraction": 0.268,
+    "id": "new-sledge-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 100,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 16,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-05-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-05-channel-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 191.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 613
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-10-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 55.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 25.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 564
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-11-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 21.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-17-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 31.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 649
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-001-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 178,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-001-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 20.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 575
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-014-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 56.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -24.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 38.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 653
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-020-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-022-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 108.0,
+      "required": 100.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 653
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-034-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-040-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 114.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 54.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 559
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-042-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 106.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 46.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-044-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 90.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 144.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 25,
+    "steps": 724
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-045-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 140.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 140.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 766
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-046-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 136.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 702
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-046-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 136.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 625
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-058-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 52.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-068-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 196.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-069-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 192.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 32.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 669
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-070-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 686
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-070-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 92.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-087-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 166.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -34.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 266.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 82,
+    "steps": 714
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-089-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 194.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 94.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-092-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 248.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 48.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 48.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 656
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-093-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 244.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 44.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 244.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 462
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-094-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 90.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 743
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-094-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 465
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-095-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": 150.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 73,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-095-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 236.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 651
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-01-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 629
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-021-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 88.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 92.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 534
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-06-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-07-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 69.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 69.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 69.0,
+      "required": 21.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 689
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-15-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 135.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 63.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 142,
+    "steps": 559
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-003-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 12.0,
+     "requiredJ": 20,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -28.0,
+      "required": 20.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 658
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-00-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 27.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 27.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 27.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 679
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-006-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 96.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 741
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-004-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 44.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 631
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-018-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 531
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-08-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 73.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 73.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-024-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 42.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 42.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 42.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 585
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-10-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-028-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 72.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 72.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 18.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 689
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-029-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 663
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-022-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 84.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-11-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 21.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 675
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-010-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-064-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 156.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 156.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 116.0,
+      "required": 40.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-065-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 152.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 112.0,
+      "required": 80.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-071-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 184.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 275,
+    "steps": 418
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-17-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "steps": 419
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-039-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 90.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 353,
+    "steps": 421
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-017-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 609
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-076-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 128.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 128.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 444
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-077-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 124.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 124.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-078-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 120.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 80.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 143,
+    "steps": 477
+   },
+   {
+    "fraction": 0.579,
+    "id": "discovery-23-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 241.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "steps": 432
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-023-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 80.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 538
+   },
+   {
+    "fraction": 0.579,
+    "id": "expanded-047-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 132.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 351,
+    "steps": 469
+   },
+   {
+    "fraction": 0.579,
+    "id": "cart-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": 40.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 38,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "cart-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 122.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 535
+   },
+   {
+    "fraction": 0.579,
+    "id": "sled-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 120.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 33,
+    "steps": 555
+   },
+   {
+    "fraction": 0.579,
+    "id": "sled-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 33,
+    "steps": 443
+   },
+   {
+    "fraction": 0.579,
+    "id": "bead-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 40,
+    "steps": 695
+   },
+   {
+    "fraction": 0.579,
+    "id": "bead-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 196,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "coaster-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 313,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "coaster-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 100,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 125.0,
+      "required": 100.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 121,
+    "steps": 644
+   },
+   {
+    "fraction": 0.579,
+    "id": "block-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 30.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 766
+   },
+   {
+    "fraction": 0.579,
+    "id": "block-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 524
+   },
+   {
+    "fraction": 0.579,
+    "id": "trolley-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 730
+   },
+   {
+    "fraction": 0.579,
+    "id": "trolley-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 760
+   },
+   {
+    "fraction": 0.579,
+    "id": "block-m2-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 2.0,
+      "required": 20.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 478
+   },
+   {
+    "fraction": 0.579,
+    "id": "block-m2-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 40.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 515
+   },
+   {
+    "fraction": 0.579,
+    "id": "block-m4-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 140.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 753
+   },
+   {
+    "fraction": 0.579,
+    "id": "block-m4-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-parcel-1",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 10,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 10.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 50.0,
+      "required": 10.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 440,
+    "steps": 747
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-parcel-4",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 440,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-carriage-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1248.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 26,
+    "steps": 712
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-carriage-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 180,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 258,
+    "steps": 574
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-disc-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 112,
+    "steps": 678
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-disc-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "steps": 736
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-runner-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 660.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 660.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 16,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "confirm-runner-5",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 16,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "new-trolley-3",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 10.0,
+      "required": 60.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "steps": 768
+   },
+   {
+    "fraction": 0.579,
+    "id": "new-trolley-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 70.0,
+      "required": 10.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -50.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 147,
+    "steps": 731
+   },
+   {
+    "fraction": 0.579,
+    "id": "new-sledge-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 75,
+    "steps": 693
+   },
+   {
+    "fraction": 0.579,
+    "id": "new-sledge-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 100,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 16,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-05-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 91.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 536
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-05-channel-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 91.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-10-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 55.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-11-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 21.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 672
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-17-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 31.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 479
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-001-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 557
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-001-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 20.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 563
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-014-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 56.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -24.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 38.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 525
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-020-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-022-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 562
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-034-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 34.0,
+      "required": 86.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 718
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-040-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 114.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 54.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 608
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-042-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 106.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 46.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 76.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 748
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-044-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 90.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 144.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 672
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-045-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 140.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 140.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 744
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-046-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 136.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 760
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-046-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-058-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-068-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 196.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-069-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 192.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 32.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-070-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 228.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 722
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-070-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 92.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 200.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 654
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-087-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 166.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -34.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 166.0,
+      "required": 250.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 83,
+    "steps": 471
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-089-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 194.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 94.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 194.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 562
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-092-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 248.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 48.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 248.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 462
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-093-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 244.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 44.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-094-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 570
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-094-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 444
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-095-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 136.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 73,
+    "steps": 582
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-095-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 74,
+    "steps": 561
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-01-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 540
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-021-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 88.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 188.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 680
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-06-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 103.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 667
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-07-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 69.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 69.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 69.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 742
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-15-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 135.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 141,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-003-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 12.0,
+     "requiredJ": 20,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 541
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-00-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 27.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 27.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 18,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-006-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 648
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-004-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 44.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-018-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 188.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 536
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-08-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 73.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 73.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-024-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 42.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 42.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-10-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-028-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 72.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 72.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 18.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-029-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 720
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-022-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 84.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 148.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 563
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-11-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 21.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 716
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-010-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 18.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 605
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-064-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 156.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 156.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 116.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 767
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-065-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 152.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 112.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 758
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-071-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 184.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 275,
+    "steps": 418
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-17-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "steps": 419
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-039-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 90.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": null,
+    "steps": 414
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-017-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 535
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-076-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 128.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 128.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 443
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-077-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 124.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 124.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-078-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 120.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "discovery-23-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 241.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "steps": 485
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-023-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 80.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 534
+   },
+   {
+    "fraction": 0.786,
+    "id": "expanded-047-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 132.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 351,
+    "steps": 469
+   },
+   {
+    "fraction": 0.786,
+    "id": "cart-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": -38.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 537
+   },
+   {
+    "fraction": 0.786,
+    "id": "cart-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 122.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 535
+   },
+   {
+    "fraction": 0.786,
+    "id": "sled-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 120.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 523
+   },
+   {
+    "fraction": 0.786,
+    "id": "sled-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 33,
+    "steps": 454
+   },
+   {
+    "fraction": 0.786,
+    "id": "bead-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 40,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "bead-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 126,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "coaster-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 121,
+    "steps": 617
+   },
+   {
+    "fraction": 0.786,
+    "id": "coaster-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 100,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 121,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "block-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 30.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 534
+   },
+   {
+    "fraction": 0.786,
+    "id": "block-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 524
+   },
+   {
+    "fraction": 0.786,
+    "id": "trolley-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 727
+   },
+   {
+    "fraction": 0.786,
+    "id": "trolley-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 656
+   },
+   {
+    "fraction": 0.786,
+    "id": "block-m2-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 2.0,
+      "required": 20.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 536
+   },
+   {
+    "fraction": 0.786,
+    "id": "block-m2-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 40.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "steps": 570
+   },
+   {
+    "fraction": 0.786,
+    "id": "block-m4-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 140.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 747
+   },
+   {
+    "fraction": 0.786,
+    "id": "block-m4-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-parcel-1",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 10,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 10.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 247,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-parcel-4",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 158,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-carriage-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 11,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-carriage-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 180,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 258,
+    "steps": 574
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-disc-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 111,
+    "steps": 615
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-disc-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "steps": 650
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-runner-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 660.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "confirm-runner-5",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "new-trolley-3",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "new-trolley-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 70.0,
+      "required": 10.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 12,
+    "steps": 694
+   },
+   {
+    "fraction": 0.786,
+    "id": "new-sledge-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 75,
+    "steps": 768
+   },
+   {
+    "fraction": 0.786,
+    "id": "new-sledge-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 100,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -30.0,
+      "required": 100.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 75,
+    "steps": 768
+   }
+  ]
+ },
+ "what_this_changes": [
+  "A fraction of a2-path is not a gentler a2-path. Complete answers of the overlap, wrong then correct, at 0, 0.268, 0.579, 0.786 and 1 of its size: 0 and 30, 7 and 15, 5 and 8, 8 and 9, 17 and 18. The whole edit is far better than 0.786 of it in both groups.",
+  "The calculation the edit aims at responds to its size in a graded way (30, 13, 2, 2, 1 answers still subtract the descent). Whole-answer completeness does not, and which answers break or are repaired changes from one size to the next: 6 correct answers break at every size and 3 at none; 1 wrong answer is complete at every size and 7 at none. The count of complete answers of one edited model is one draw of something that moves a great deal between neighbouring models; a difference between two rungs in that count needs to be read with that in mind.",
+  "Leaving the original text early does not decide the damage: at 0.268, 6 of the 12 correct answers that kept their opening and left their text later broke (Astra's reading of the same file).",
+  "A likely reason a fraction does worse, not tested here: a2-path's matrices were fitted in path order, each on what the ones before it left at full size, so at a fraction every later matrix meets inputs it was not fitted for. If so, a rate of change for this construction has to sit inside the build, each matrix fitted on what the scaled earlier ones leave, and cannot be applied to a finished edit. That is a question for the next round (Marcos, November 10: find the right rate, optimizer and solver in the redo)."
+ ]
+}

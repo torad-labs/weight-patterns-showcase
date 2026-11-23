@@ -1,0 +1,178 @@
+{
+ "method_step": 3,
+ "operation": "recipient-prefix-targets",
+ "run_by": "weight-research-fable (this declaration, the compiler and its execution), weight-research-astra (the specification, the base field, the objective and the assessment), weight-research-perfomance (the sign reading and the cached reading of the original)",
+ "status": "Declared on November 14, 2026 at 7:58 PM CT, before any command of this run. Nothing of the field has been written: three of its 105 merges were read through the assignment and left no file but records/development/2026-11-14-whole-gap-solver/recipient-prefix-dry/three-merges.json.",
+ "kind": "One source-only compilation: the matched field with each wrong fitting answer's question rows and its answer rows before its recorded wrong sign given that answer's own original feature, and the original's control score under the new field from the cached reading. No model is changed or run, and no sweep is part of this run.",
+ "authority": "Astra, the owner of the objective and the targets, specified and admitted this one assignment (records/retrospectives/2026-11-14-recipient-prefix-target-astra.md, commit cee90850) after assessing both whole-gap sweeps (records/retrospectives/2026-11-14-whole-gap-native-assessment-astra.md) and assigned its implementation to this seat. It stands under the direction of November 14 (journal/2026-11-14-whole-gap-restart.md): the correction is of the gap between the wrong and the correct answers' computation along the whole path, not of a few layers or rows.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "objective": "studies/04-round-2-overlap/runs/recipient-prefix-target-original/specification.md",
+ "specification_of_record": {
+  "record": "records/retrospectives/2026-11-14-recipient-prefix-target-astra.md",
+  "sha256": "b14e70f49c894878c3230805b436247349470e542b4fc0d8263715519c5a402e"
+ },
+ "base_target_sha256": "b09153baf5b6fe665b1cb990acccd7bddc7e5e131bb1a3491c2d765078c7cd20",
+ "sources": {
+  "specification": "studies/04-round-2-overlap/runs/recipient-prefix-target-original/specification.md",
+  "base": "studies/04-round-2-overlap/runs/whole-context-targets-original/mates",
+  "base_factory": "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+  "base_observation_schema": "studies/04-round-2-overlap/runs/whole-context-targets-original/observation-schema.json",
+  "base_slices": "studies/04-round-2-overlap/runs/whole-context-targets-original/source-slices",
+  "base_score": "studies/04-round-2-overlap/runs/whole-context-score-original/mates-score.json",
+  "baseline": "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+  "terminal": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+  "tensors": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "sign_rows": "studies/04-round-2-overlap/runs/sign-route-whole-gap-mates/sign-rows.json",
+  "recorded_rows": "studies/04-round-2-overlap/runs/same-line-sign-original/rows/index.json",
+  "reading": "studies/04-round-2-overlap/runs/whole-states-original/reading"
+ },
+ "implementation": [
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/recipient_prefix.py",
+   "sha256": "edc52db48d0746be10e1fc414bb866fa0daa10ebf61b1c558ac27e9e8d256c37"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/compile_recipient_prefix.py",
+   "sha256": "dc92dc7326f94a493d05a0862eecb4140b48360909dec50623a898fd253a785f"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+   "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/compile_context_targets.py",
+   "sha256": "3f239d5b4e9419bfc07cbd08db9e24ef45ebc911a71ca271372f1763752eb693"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+   "sha256": "7fd1f1d4c5542841a25d587107ecbd6136a9375e4b2870f570321417f2e977b5"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/whole_context_score.py",
+   "sha256": "6ff608a936d698ee5caa7a14fad36c400298ab66a7c64f2eed2b6aa0e4515aab"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/context_score.py",
+   "sha256": "d429d3c52acdb5dc5954dee9a1afc5b58474c4e85ae88bedaaa5f5d7d3a00579"
+  },
+  {
+   "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+   "sha256": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d"
+  },
+  {
+   "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+   "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+  },
+  {
+   "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+   "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+  }
+ ],
+ "compiler_commit": "1a9b68b3",
+ "command": "cd code/signal-trace && env OMP_NUM_THREADS=4 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. CUDA_VISIBLE_DEVICES= uv run -q --with torch --with numpy --with pyyaml --with tqdm python -u -m pipeline.weight_edit.compile_recipient_prefix ../../studies/04-round-2-overlap/runs/recipient-prefix-target-original   # the research verifier runs first inside it (check_native_run); processor only, no memory ceiling of its own",
+ "seen_before_declaring": {
+  "record": "records/development/2026-11-14-whole-gap-solver/recipient-prefix-dry/three-merges.json",
+  "sha256": "b02324e9a62c827b5b06cfdeabc073ebf148f539efe4dafa8eca8c01597ac612"
+ },
+ "hypothesis": "Marcos's, for round two: a capability leaves a recurring difference between the traces of correct and wrong answers, and editing the weights where that recurring difference lives repairs the capability. This field's own, as Astra states it, is a counterfactual about one part of the target: asking a wrong answer's question and its rows before the wrong sign for its own original state, in place of another question's, removes the pressure to copy a success's legitimate quantities and wording, while the request from the sign's row on keeps the useful correction. It is an assumption put to the test. It is no finding that the state before the sign is right, or that the gap begins at the sign.",
+ "why_this_direction": "Step 3 of the method is the discrepancy between the overlaps along the whole path, and step 5 edits on it. The matched-context sweep (studies/04-round-2-overlap/runs/whole-gap-mates-original) is the first whole-path correction read on the model's own answers: the recorded failure is gone in all 15 wrong answers, 7 of them are whole and right, and its complete sum rose. Its records say where the field asked for something that is not the gap. Before the sweep every one of the 15 wrong answers stated its own initial kinetic energy; after it 4 write a kinetic energy that is not their own, and 4 answers write the gain twice at a formula whose equals sign is written again (14 such places in 8 answers where the original's thirty hold 0). A wrong answer now shares 0.65 of its lines with a success its target was made of, where it shared 0.27 (studies/04-round-2-overlap/runs/whole-gap-mates-original/text-pairs.json, stated-numbers.json). The kinetic energy and the line of the gain stand before the row that writes the sign: there the field asked every row of a wrong answer, the rows the original had right among them, for another question's state. The sign reading (studies/04-round-2-overlap/runs/sign-route-whole-gap-mates/result.json) found the swept weights favour the plus at 12 of 15 wrong rows on the recorded wording, so at those 12 the corrected sign does not rest on the earlier rows being rewritten. From that evidence Astra specified one variant: each wrong answer keeps its own original state through its question and up to the row that wrote the minus, and keeps the matched counterpart from that row to its end. This run compiles that field from the bound sources; the sweep that tests it is declared apart.",
+ "repeating_pattern_check": "What has happened more than once, why, and what this run does about it. (1) A target that asks for more than the gap. Both whole-gap fields asked every row of a wrong answer for a successful counterpart: the affine sweep left 10 of 30 answers running to the length limit, and the matched one copied a success's numbers and wording into rows the original had right. The old A2, the one construction that carried to answers no fit used, asked its counterpart on the erroneous passages only (records/retrospectives/2026-11-13-parallel-constructions-astra.md). Why: a counterpart made of other questions differs from the recipient in what is rightly its own, its numbers and its wording, and a request on every row cannot tell that from the defect. Here the rows before the wrong sign ask for the recipient's own state. (2) A request narrowed until it no longer covers the path. The constructions of November 12 to 14 asked 14 to 52 rows at a sign and edited at most six matrices, and none repaired the wrong group (STATE.md). Here nothing is cropped: all 19,751 rows and all 105 merges stay, every coefficient is the base's, each wrong answer keeps its counterpart from the sign's row to its end, and a kept row is a request (that the state stay where the original's stood, read again after every earlier write), not a row left out. (3) Doing the next thing because a total was bad. This variant is not taken because the matched sweep's sum rose: it is one stated assumption about which rows' counterpart was wrong, drawn from what the answers wrote, fixed before any value of the new field is computed, with what would weaken it named. (4) A number made up on the way. None enters: the boundary is a recorded row read from two records and held to the token history, the counts are derived and held to the specification's, and the expression of an original feature is the base compiler's, held to the base's bytes.",
+ "what_went_wrong_before": "The first attempt at round two was deleted because it never built on the overlap. The two whole-gap sweeps of November 14 asked every row of a wrong answer for a successful counterpart. The affine one left 10 of 30 answers running to the length limit. The matched-context one took the recorded failure away and left 7 wrong answers whole and right, and it also wrote 4 wrong answers a kinetic energy that is not their own, broke the line of the gain in 4 answers and moved each wrong answer onto its matched success's text. Neither lowered its complete sum on the model's own answers (records/retrospectives/2026-11-14-whole-gap-native-assessment-astra.md).",
+ "rule": {
+  "base": "The matched field (studies/04-round-2-overlap/runs/whole-context-targets-original/mates, manifest b09153baf5b6fe665b1cb990acccd7bddc7e5e131bb1a3491c2d765078c7cd20), unchanged: its row map, its fitting answers and folds, its 105 merges and their observable spaces, its terminal normalization, its coefficients and its status. Nothing of it is built again.",
+  "boundary": "parameters.sign_row. The sign's row is the step of the original answer whose prediction wrote the minus: not the row after it, which reads that minus, and not a row of any answer written since.",
+  "assignment": [
+   "A correct fitting answer, every row: the base's target, which is its own original state.",
+   "A wrong fitting answer, every question row: that answer's own original feature.",
+   "A wrong fitting answer, an answer row before the sign's row: that answer's own original feature.",
+   "A wrong fitting answer, the sign's row and every row after it: the base's matched target, unchanged."
+  ],
+  "original_feature": "parameters.original_feature. Edited states, raw last-merge states and anything inferred from logits are not used.",
+  "what_is_not_done": "No row is made unknown, no coefficient is changed and nothing is weighed again; no suffix is dropped or given its erroneous original; no second assignment is compiled; no matrix, ridge or candidate is selected; no model is run or written; no answer outside the fitting thirty is read.",
+  "control": "The cached direct-state reading of the original (studies/04-round-2-overlap/runs/whole-states-original/reading) is scored against the new field with pipeline.weight_edit.whole_context_score.score, the judge's own arithmetic, and written as original-score.json: the new field's control. No pass is made.",
+  "ends": "The run ends when the field's target.json, the assignment and factory records, the readings, the control score and result.json stand, or when the compiler refuses. A refusal is reported as it is; partial files are kept and nothing is forced past one.",
+  "storage": "The field is 105 merges of four arrays, the base's size (23.8 GiB); it stays in the run for the declared sweep and leaves this disk only through the declared-input archive."
+ },
+ "parameters": {
+  "sign_row": {
+   "kind": "identity",
+   "value": "the original prediction row that wrote the wrong minus, one a wrong fitting answer",
+   "measured_from": "studies/04-round-2-overlap/runs/sign-route-whole-gap-mates/sign-rows.json",
+   "derivation": "answers[id].recordings.step of the sign reading's record for each of the 15 wrong fitting answers, the same step and the minus in the recorded rows that reading was made at (studies/04-round-2-overlap/runs/same-line-sign-original/rows/index.json), on the token history of the cached original reading held to the row map's text_sha256; one token at all 15 rows, 0 <= step < the answer's steps. It is a recorded row, not a position chosen for the experiment, and a boundary that does not resolve stops the compilation.",
+   "scales_with": "The cohort's wrong answers and where each one's recording writes the sign."
+  },
+  "rows_kept": {
+   "kind": "identity",
+   "value": 4907,
+   "measured_from": "records/retrospectives/2026-11-14-recipient-prefix-target-astra.md",
+   "derivation": "2,580 question rows of the wrong answers and 2,327 of their answer rows before the sign's row take the recipient's original feature; 5,589 rows from the sign on and 9,255 rows of the correct answers keep the base's target: 19,751 rows. Counts derived from the boundaries and the row map and held to the specification's own; none is a cap or a share chosen for the experiment.",
+   "scales_with": "The row map and the sign rows."
+  },
+  "original_feature": {
+   "kind": "identity",
+   "value": "the base compiler's own expression of an original feature",
+   "measured_from": "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline/index.json",
+   "derivation": "compile_context_targets.read_selected of the base factory's selected spans from the baseline's state and size files, context_targets.terminal_features at the model's last merge (the output norm's learned scale, the last layer's output scale and the norm's epsilon of the original reference), then context_targets.features. Held at every merge to the base's own slice record by the selected rows' sha256, and to the base's correct-answer targets bit for bit. No tolerance is used.",
+   "scales_with": "The original's stored computation and the base's fitting rows."
+  },
+  "coefficients": {
+   "kind": "identity",
+   "value": "the base's, unchanged",
+   "measured_from": "studies/04-round-2-overlap/runs/whole-context-targets-original/mates/target.json",
+   "derivation": "Every row's two coefficients and its status are the matched field's: 1 over (outcome groups x answers of the row's group x the answer's rows x merges), as its compiler wrote them. The compilation requires each of the 105 coefficient files and status files it writes to hold the base's bytes.",
+   "scales_with": "The base field."
+  },
+  "precision": {
+   "kind": "representation",
+   "value": "float64 targets and coefficients, int32 status",
+   "measured_from": "records/retrospectives/2026-11-14-contextual-targets-astra.md",
+   "derivation": "As the base: derived features in float64 from the native float32 rows, the status int32. The kept rows' targets are copied from the same float64 expression the base holds for a correct answer.",
+   "scales_with": "The native source representation and the field's dimensions."
+  },
+  "disk_floor": {
+   "value_bytes": 40000000000,
+   "measured_from": "STATE.md",
+   "derivation": "The machine's standing requirement of 40 GB free, in bytes. The field's bytes are counted from the base's shapes and NumPy's header sizes before anything is written, and the room for one merge is asked again before each merge.",
+   "scales_with": "The machine's floor; the field's storage scales with rows, width and merges."
+  }
+ },
+ "prediction": "Stated before any value of the field is written. (1) The 15 sign rows and the four counts derived from the bound records are the specification's: 4,907 rows kept for the original (2,580 question rows and 2,327 answer rows before the sign), 5,589 rows from the sign on and 9,255 rows of correct answers left the base's. (2) The field holds the base's whole inventory, 19,751 rows at 105 merges with no unknown channel; its row map and every coefficient and status file are the base's bytes; every correct answer's target and every wrong answer's target from its sign's row on are the base's values. (3) The original scores nothing at a kept row but what the representation leaves, so its control total under the new field is below the matched field's 0.067494 by what that field asked at the kept rows. On the three merges read before this declaration that is the smaller part of a merge's request (0.136 at merge 0, 0.127 at merge 52, 0.131 at merge 104): most of what the matched field asks of a wrong answer lies at the sign and after it, and this field keeps all of that.",
+ "would_weaken_it": "Of the compilation: a boundary that does not resolve or is not the specification's, a kept row unknown in the base or undefined in the original, or a correct answer's target that is not the original's own expression. Any of these stops the compilation and is reported as it is. Of the field: it is an assumption, and this run cannot weaken or support it. The declared sweep can: it is weakened if the copying of quantities and wording before the sign persists, if keeping the rows before the sign removes the useful correction, if another answer's number or a broken formula persists after the sign, or if the matrices' held readings fall again and the complete native sum does not. The original state before the sign may hold part of the defect, and a field that asks to keep it can obstruct the repair.",
+ "limits": [
+  "The field is an experimental objective and no validated capability target: a lower control total is the request made smaller, not the model made better.",
+  "The boundary is the one recorded row that wrote the minus; no finer assignment of passages is made, and the question rows are kept as part of the same assumption, not because a question is right.",
+  "The rows from the sign on keep a matched counterpart of a history the changed model may never write.",
+  "Both the base and the boundaries are made from the fitting thirty: nothing here is a test on answers no fit used, and none is read."
+ ],
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/mates",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/observation-schema.json",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/source-slices",
+  "studies/04-round-2-overlap/runs/whole-context-score-original/mates-score.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+  "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/sign-route-whole-gap-mates/sign-rows.json",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/rows/index.json",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "studies/04-round-2-overlap/runs/recipient-prefix-target-original/specification.md"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/recipient-prefix-target-original/"
+ ],
+ "revisions": [
+  {
+   "date_ct": "2026-11-14 20:00 CST",
+   "made_by": "weight-research-fable",
+   "authority": "This seat, reading its own declared command before making it.",
+   "what": "command corrected: the run's folder is given as ../../<run>, since the command is made from code/signal-trace. As declared it named the folder from the repository's root, which the compiler refuses from there (the folder it resolves to is under no runs root).",
+   "why": "A declaration states the command that is made. Nothing else of the command changes: the program, its environment and its one argument's target are the same.",
+   "preserved": "Everything else: every binding, the rule, the parameters, the prediction and what would weaken it.",
+   "seen_before_this_revision": "Nothing of this run: no command had run and no output existed.",
+   "was": "cd code/signal-trace && env OMP_NUM_THREADS=4 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. CUDA_VISIBLE_DEVICES= uv run -q --with torch --with numpy --with pyyaml --with tqdm python -u -m pipeline.weight_edit.compile_recipient_prefix studies/04-round-2-overlap/runs/recipient-prefix-target-original   # the research verifier runs first inside it (check_native_run); processor only, no memory ceiling of its own"
+  }
+ ]
+}

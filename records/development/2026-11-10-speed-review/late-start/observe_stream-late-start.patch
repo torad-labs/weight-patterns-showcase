@@ -1,0 +1,219 @@
+--- code/signal-trace/recorder/observe_stream.cpp	2026-11-11 08:26:43.287134759 -0600
++++ /tmp/claude-1000/-home-marcos-Documents-dev-research-weight-patterns/fd0687fe-97c6-4325-999a-91a831f8d090/scratchpad/late/observe_stream.late.cpp	2026-11-14 10:16:47.883913960 -0600
+@@ -68,6 +68,129 @@
+  // outputs in order; every later compute of that shape must write the same labels in the same order, and stops after the last of them.
+  bool stop_early=false,stopped=false,recording=false;size_t seen=0;uint64_t computes=0,stops=0,after_stop=0;
+  std::map<std::pair<int64_t,bool>,std::vector<std::string>> shapes;std::vector<std::string> *reference=nullptr;
++
++ // Opt-in per case (late_start, with stop_after_last_label): a decode compute starts where its seeds are, not at layer 0. A seed is one recorded
++ // output (its label) whose value at every input position of the case is supplied from a file of float32 rows: the engine's own stored output of the
++ // same state, read by an earlier pass. The case's prefill runs as it always did. Its first single-token compute runs whole as well: every node it
++ // asks is listed in order with its sources, the cache leaf it reads or writes and its own compute flag, and each seed's node is compared with the
++ // seed's row, byte for byte, or the recorder throws. From that list: the nodes the wanted outputs are computed from, a walk back from them that ends
++ // at the seeds, that takes every writer of a cache leaf a needed node reads (the engine orders a cache write before its read without an edge between
++ // them) and that follows a copy leaf the scheduler made for another backend back to the node it copies. In every later single-token compute of the
++ // case a node outside that set, from layer 0's first node on, has its compute flag cleared when it is asked (the backends skip such a node), a
++ // seed's node is skipped too and written from the seed's row before anything reads it, and every other node gets back the flag it was built with.
++ // A compute that asks another node at some place than the listed one throws. When a late compute's decode returns, every flag it cleared is put back.
++ struct late_seed{std::string label,path;size_t width=0,first_row=0;std::ifstream file;std::vector<float> row,held;int node=-1;uint64_t checked=0,written=0;int in_compute=0;bool used=false;
++  void read(int position){
++   file.clear();file.seekg(std::streamoff((first_row+size_t(position))*width*sizeof(float)));row.resize(width);
++   file.read(reinterpret_cast<char*>(row.data()),std::streamsize(width*sizeof(float)));
++   if(!file)throw std::runtime_error("late_start: the seed file is short at position "+std::to_string(position)+": "+path);
++  }
++ };
++ struct late_node{int op=0;std::string name,label;int32_t flags=0;std::vector<int> sources;std::vector<const void*> cache;std::vector<std::string> copies;const void *writes=nullptr;bool keep=false;char act=0;int seed=-1;};
++ bool late=false;int late_mode=0;   // 0: as always; 1: the case's first single-token compute, whole, listed and checked; 2: started late
++ size_t late_at=0;late_seed *late_pending=nullptr;const ggml_tensor *late_pending_node=nullptr;
++ std::vector<late_seed> late_seeds;std::unordered_map<std::string,int> late_by_label;
++ std::vector<late_node> late_nodes;std::unordered_map<const ggml_tensor*,int> late_index;
++ std::vector<std::pair<int,std::string>> late_signature;std::vector<int32_t> late_flags;   // of the first listed compute of the process: every later list must be the same nodes
++ std::vector<std::pair<ggml_tensor*,int32_t>> late_cleared;uint64_t late_restored=0;
++ void late_restore(){   // after a late compute's decode returns: every node it left without its compute flag has the flag it was built with again
++  for(auto &[t,flags]:late_cleared)t->flags=(t->flags&~GGML_TENSOR_FLAG_COMPUTE)|(flags&GGML_TENSOR_FLAG_COMPUTE);
++  late_restored+=late_cleared.size();late_cleared.clear();
++ }
++ uint64_t late_decodes=0,late_skips=0;int late_first=-1;size_t late_skipped=0,late_seeded=0,late_needed=0;bool late_planned=false;
++ static const ggml_tensor *base_of(const ggml_tensor *t){while(t->view_src)t=t->view_src;return t;}
++ static bool is_cache(const ggml_tensor *t){return !std::strncmp(t->name,"cache_k_l",9)||!std::strncmp(t->name,"cache_v_l",9);}
++ void late_learn(ggml_tensor *t,const std::string &label,bool keep){
++  const size_t i=late_at++;
++  if(i<late_signature.size()){
++   if(late_signature[i].first!=int(t->op)||late_signature[i].second!=t->name)throw std::runtime_error("late_start: a single-token compute lists other nodes than the first one of this process did, at "+std::to_string(i)+": "+t->name);
++   t->flags=(t->flags&~GGML_TENSOR_FLAG_COMPUTE)|(late_flags[i]&GGML_TENSOR_FLAG_COMPUTE);
++  }else{late_signature.emplace_back(int(t->op),t->name);late_flags.push_back(t->flags);}
++  late_node n;n.op=t->op;n.name=t->name;n.label=label;n.flags=t->flags;n.keep=keep;
++  const auto source=[&](const ggml_tensor *x){
++   if(!x)return;
++   if(auto it=late_index.find(x);it!=late_index.end()){n.sources.push_back(it->second);return;}
++   const ggml_tensor *b=base_of(x);
++   if(b!=x)if(auto it=late_index.find(b);it!=late_index.end()){n.sources.push_back(it->second);return;}
++   if(is_cache(b)){n.cache.push_back(b);return;}
++   const std::string leaf=x->name;const auto first=leaf.find('#'),last=leaf.rfind('#');
++   if(first!=std::string::npos&&last>first)n.copies.push_back(leaf.substr(first+1,last-first-1));
++  };
++  for(auto *x:t->src)source(x);
++  source(t->view_src);
++  if(t->view_src&&(t->op==GGML_OP_SET_ROWS||t->op==GGML_OP_CPY)){const ggml_tensor *b=base_of(t);if(is_cache(b))n.writes=b;}
++  late_index[t]=int(i);late_nodes.push_back(std::move(n));
++ }
++ void late_plan(){
++  const int n=late_nodes.size();std::vector<char> needed(n,0);std::vector<int> stack;
++  std::unordered_map<const void*,std::vector<int>> writers;std::unordered_map<std::string,std::vector<int>> named;
++  late_first=-1;
++  for(int i=0;i<n;i++){
++   auto &x=late_nodes[i];x.act=0;x.seed=-1;
++   if(x.writes)writers[x.writes].push_back(i);
++   named[x.name].push_back(i);
++   if(x.keep)stack.push_back(i);
++   if(late_first<0&&x.label=="attn_norm-0")late_first=i;
++  }
++  if(late_first<0)throw std::runtime_error("late_start: the compute has no attn_norm-0, the first node a late start may skip");
++  if(stack.empty())throw std::runtime_error("late_start: the listed compute holds none of the wanted outputs");
++  for(auto &seed:late_seeds)seed.node=-1;
++  for(int i=0;i<n;i++)if(auto it=late_by_label.find(late_nodes[i].label);it!=late_by_label.end()){
++   auto &seed=late_seeds[it->second];
++   if(seed.node>=0)throw std::runtime_error("late_start: two nodes of a compute carry a seed's label: "+seed.label);
++   seed.node=i;late_nodes[i].seed=it->second;
++  }
++  for(auto &seed:late_seeds)if(seed.node<0)throw std::runtime_error("late_start: a seed's label is no node of the compute: "+seed.label);
++  while(!stack.empty()){
++   const int i=stack.back();stack.pop_back();if(needed[i])continue;needed[i]=1;const auto &x=late_nodes[i];
++   if(x.seed>=0)continue;   // its value is supplied: nothing is computed for its sake
++   for(int j:x.sources)stack.push_back(j);
++   for(auto *leaf:x.cache){
++    const auto w=writers.find(leaf);
++    if(w==writers.end())throw std::runtime_error("late_start: a needed node reads a cache leaf no node of the compute writes: "+x.name);
++    for(int j:w->second)stack.push_back(j);
++   }
++   for(const auto &copied:x.copies)if(auto m=named.find(copied);m!=named.end())for(int j:m->second)if(j<i)stack.push_back(j);
++  }
++  late_skipped=late_seeded=late_needed=0;
++  for(int i=0;i<n;i++){
++   auto &x=late_nodes[i];
++   if(needed[i])++late_needed;
++   if(needed[i]&&x.seed>=0){x.act=2;++late_seeded;}
++   else if(!needed[i]&&i>=late_first){x.act=1;++late_skipped;}
++  }
++  for(auto &seed:late_seeds)seed.used=needed[seed.node];   // a seed no wanted output is computed from is compared in the whole compute and written nowhere
++  late_planned=true;
++ }
++ void late_settle(){   // the compute before this point has ended
++  if(late_pending)throw std::runtime_error("late_start: a compute ended before its seed was written: "+late_pending->label);
++  if(late_mode==1){
++   for(auto &seed:late_seeds)if(seed.in_compute!=1)throw std::runtime_error("late_start: the whole compute did not hold this seed's node once: "+seed.label);
++   late_plan();
++  }
++  if(late_mode==2)for(auto &seed:late_seeds)if(seed.in_compute!=(seed.used?1:0))throw std::runtime_error("late_start: a late compute did not write this seed once: "+seed.label);
++  for(auto &seed:late_seeds)seed.in_compute=0;
++ }
++ void late_begin(){   // before every single-token decode of a late_start case
++  if(!late)return;
++  late_settle();
++  late_mode=late_decodes==0?1:2;++late_decodes;late_at=0;
++  if(late_mode==1){late_nodes.clear();late_index.clear();late_planned=false;}
++ }
++ void late_check(ggml_tensor *t,late_seed &seed){
++  if(t->type!=GGML_TYPE_F32||size_t(ggml_nelements(t))!=seed.width||!ggml_is_contiguous(t))throw std::runtime_error("late_start: a seed's node has another layout than its rows: "+seed.label);
++  seed.read(position);seed.held.resize(seed.width);ggml_backend_tensor_get(t,seed.held.data(),0,seed.width*sizeof(float));
++  if(std::memcmp(seed.held.data(),seed.row.data(),seed.width*sizeof(float))){
++   size_t at=0;while(at<seed.width&&!std::memcmp(&seed.held[at],&seed.row[at],sizeof(float)))++at;
++   throw std::runtime_error("late_start: the seed is not this state's output at position "+std::to_string(position)+": "+seed.label+", first at "+std::to_string(at)+": computed "+std::to_string(seed.held[at])+", seed "+std::to_string(seed.row[at]));
++  }
++  ++seed.checked;++seed.in_compute;
++ }
++ void late_write(ggml_tensor *t,late_seed &seed){
++  if(t->type!=GGML_TYPE_F32||size_t(ggml_nelements(t))!=seed.width||!ggml_is_contiguous(t))throw std::runtime_error("late_start: a seed's node has another layout than its rows: "+seed.label);
++  seed.read(position);ggml_backend_tensor_set(t,seed.row.data(),0,seed.width*sizeof(float));
++  ++seed.written;++seed.in_compute;
++ }
+  void end_compute(){   // at the start of the next compute and at the end of the case
+   if(!reference)return;
+   if(recording&&reference->empty())throw std::runtime_error("stop_after_last_label: a compute holds none of the wanted outputs");
+@@ -154,7 +277,21 @@
+  f.read(reinterpret_cast<char*>(v.data()),width*sizeof(float));if(!f)throw std::runtime_error("patch vector file is short: "+path);return v;
+ }
+ static bool callback(ggml_tensor *t,bool ask,void *opaque){
+- auto &s=*static_cast<observation*>(opaque);std::string name=t->name;
++ auto &s=*static_cast<observation*>(opaque);
++ if(s.late_mode==2){   // a compute started late: the place of this node in the listed compute says what becomes of it
++  if(ask){
++   if(s.late_at>=s.late_nodes.size())throw std::runtime_error("late_start: a compute asks more nodes than the listed one");
++   const auto &n=s.late_nodes[s.late_at++];
++   if(int(t->op)!=n.op||n.name!=t->name)throw std::runtime_error("late_start: a compute asks another node than the listed one at "+std::to_string(s.late_at-1)+": "+t->name);
++   if(n.act==1){t->flags&=~GGML_TENSOR_FLAG_COMPUTE;s.late_cleared.emplace_back(t,n.flags);++s.late_skips;return false;}
++   if(n.act==2){t->flags&=~GGML_TENSOR_FLAG_COMPUTE;s.late_cleared.emplace_back(t,n.flags);s.late_pending=&s.late_seeds[n.seed];s.late_pending_node=t;return true;}
++   t->flags=(t->flags&~GGML_TENSOR_FLAG_COMPUTE)|(n.flags&GGML_TENSOR_FLAG_COMPUTE);
++  }else if(s.late_pending){
++   if(t!=s.late_pending_node)throw std::runtime_error("late_start: another node than the seed's came back from the scheduler");
++   s.late_write(t,*s.late_pending);s.late_pending=nullptr;s.late_pending_node=nullptr;return true;
++  }
++ }
++ std::string name=t->name;
+  if(s.retention=="stream"){
+   if(ask && name=="embd" && t->op==GGML_OP_GET_ROWS){
+    ++s.micro;s.micro_count=t->ne[1];s.micro_start=s.phase=="prefill"?s.prefill_next:s.position;
+@@ -179,6 +316,14 @@
+   const bool traced=!s.trace_input_positions.empty() && std::binary_search(s.trace_input_positions.begin(),s.trace_input_positions.end(),s.position);
+   if(!s.stream_positions.empty() && !traced && !(s.phase=="decode" && std::binary_search(s.stream_positions.begin(),s.stream_positions.end(),s.position)))return !ask;
+   std::string label;const bool keep=s.streamed(t,label);
++  if(s.late_mode==1){   // the case's first single-token compute: whole, every node listed, every seed compared
++   if(ask)s.late_learn(t,label,keep);
++   if(const auto seed=s.late_by_label.find(label);seed!=s.late_by_label.end()){
++    if(keep)throw std::runtime_error("late_start: a seed is one of the wanted outputs: "+label);
++    if(!ask)s.late_check(t,s.late_seeds[seed->second]);
++    return true;
++   }
++  }
+   if(traced){
+    const bool r=s.trace.observe(t,ask,s.call,s.phase,s.position);
+    if(!ask&&keep)write_stream(s,t,label);
+@@ -347,6 +492,22 @@
+   }
+   const int max_tokens=forced?int(teacher.size()):c.value("max_tokens",256);if(max_tokens<1 || ids.size()+max_tokens>cp.n_ctx)throw std::runtime_error("context budget");
+   if(prefix&&max_tokens<=int(teacher.size()))throw std::runtime_error("teacher prefix must leave an unforced continuation budget");
++  state.late=c.contains("late_start");state.late_mode=0;state.late_at=0;state.late_pending=nullptr;state.late_pending_node=nullptr;state.late_seeds.clear();state.late_by_label.clear();
++  state.late_nodes.clear();state.late_index.clear();state.late_decodes=state.late_skips=state.late_restored=0;state.late_planned=false;state.late_cleared.clear();
++  if(state.late){
++   if(!state.stop_early)throw std::runtime_error("late_start is for a case read under stop_after_last_label");
++   const size_t positions=ids.size()+size_t(max_tokens)-1;   // the last supplied token is never an input
++   for(const auto &given:c.at("late_start").at("seeds")){
++    state.late_seeds.emplace_back();auto &seed=state.late_seeds.back();
++    seed.label=given.at("label").get<std::string>();seed.path=given.at("vectors").get<std::string>();seed.width=given.at("width").get<size_t>();seed.first_row=given.value("first_row",size_t(0));
++    if(!seed.width)throw std::runtime_error("late_start: a seed without a width: "+seed.label);
++    if(state.wanted(seed.label))throw std::runtime_error("late_start: a seed is one of the wanted outputs: "+seed.label);
++    if(!state.late_by_label.emplace(seed.label,int(state.late_seeds.size())-1).second)throw std::runtime_error("late_start: a seed named twice: "+seed.label);
++    if(fs::file_size(seed.path)<(seed.first_row+positions)*seed.width*sizeof(float))throw std::runtime_error("late_start: the seed file holds fewer rows than the case has input positions: "+seed.path);
++    seed.file.open(seed.path,std::ios::binary);if(!seed.file)throw std::runtime_error("late_start: cannot open "+seed.path);
++   }
++   if(state.late_seeds.empty())throw std::runtime_error("late_start needs at least one seed");
++  }
+   llama_memory_clear(llama_get_memory(ctx),true);state.phase="prefill";state.position=ids.size()-1;
+   auto prompt=ids;
+   for(size_t begin=0;begin<prompt.size();begin+=cp.n_batch){
+@@ -362,7 +523,7 @@
+     llama_token next=teacher[step];
+     steps.push_back({{"step",step},{"input_position",state.position},{"selected",next},{"piece",piece(vocab,next)},{"piece_bytes_hex",hex(piece(vocab,next))},{"selection","teacher"}});
+     generated.push_back(next);if(llama_vocab_is_eog(vocab,next)){ended=true;break;}content+=piece(vocab,next);
+-    if(step+1<max_tokens){++state.call;state.phase="decode";state.position=ids.size()+step;state.micro=-1;state.pointers.clear();if(llama_decode(ctx,llama_batch_get_one(&next,1)))throw std::runtime_error("decode");}
++    if(step+1<max_tokens){++state.call;state.phase="decode";state.position=ids.size()+step;state.micro=-1;state.pointers.clear();state.late_begin();if(llama_decode(ctx,llama_batch_get_one(&next,1)))throw std::runtime_error("decode");state.late_restore();}
+     continue;
+    }
+    const float *logits=llama_get_logits_ith(ctx,-1);const llama_token greedy=std::max_element(logits,logits+nv)-logits;
+@@ -408,6 +569,16 @@
+   json result={{"id",id},{"mode",mode},{"scope",state.scope},{"fusion_disabled",std::getenv("GGML_CUDA_DISABLE_FUSION")?std::getenv("GGML_CUDA_DISABLE_FUSION"):"0"},
+    {"tokens",generated},{"content",content},{"content_bytes_hex",hex(content)},{"text_encoding","UTF-8 display replaces incomplete token-byte fragments; *_bytes_hex preserves exact original bytes"},{"ended",ended},{"stopped_limit",!ended&&int(generated.size())==max_tokens},{"prompt_tokens",ids.size()},{"vocabulary_size",nv},
+    {"score_storage","SHA256 of all native float32 logits per decision, plus top eight; all logits checked finite"},{"retained_scope","All layer exits and final norm, input-scaled, attention/feed-forward addition operands/results and per-layer embedding at layers 12-16; callback boundaries remain full"},{"capture_events",state.events},{"tensor_bytes",state.bytes},{"counts",state.counts},{"steps",steps}};
++  if(state.late){
++   state.late_settle();state.late_mode=0;
++   json seeds=json::array();
++   for(const auto &seed:state.late_seeds)seeds.push_back({{"label",seed.label},{"width",seed.width},{"first_row",seed.first_row},{"vectors",seed.path},{"node",seed.node},{"used",seed.used},
++    {"compared_in_the_whole_compute",seed.checked},{"written",seed.written}});
++   result["late_start"]={{"seeds",seeds},{"single_token_computes",state.late_decodes},{"whole_and_listed",state.late_decodes?1:0},{"started_late",state.late_decodes?state.late_decodes-1:0},
++    {"nodes_listed",state.late_nodes.size()},{"first_node_a_late_start_may_skip",state.late_first},{"needed_nodes",state.late_needed},{"skipped_a_late_compute",state.late_skipped},
++    {"seeded_a_late_compute",state.late_seeded},{"nodes_skipped_in_all",state.late_skips},{"compute_flags_put_back_in_all",state.late_restored},
++    {"what","the prefill and the first single-token compute ran whole; in that compute every seed's node was compared with its row byte for byte; every later single-token compute skipped the listed nodes no wanted output is computed from and wrote each seed's node from its row"}};
++  }
+   if(state.stop_early){
+    state.end_compute();
+    if(state.computes==0||state.stops!=state.computes-state.shapes.size())throw std::runtime_error("stop_after_last_label: a compute after the first of its shape did not stop");

@@ -1,0 +1,47 @@
+{
+  "status": "finished: run.sh capture beside:2 beside:3 reading check, started 5:43:10 AM CT November 15, 2026 and exited 0 at 5:57:41 AM CT (logs/); admitted by Astra in revision 2 (d4f6f95b). The reading's arrays were removed at 6:09 AM CT as the rule says (bit for bit the control's, made again by `run.sh reading`); reading/reading.json and row-map.json are kept.",
+  "written_by": "weight-research-perfomance, from the run's own records: own/text.json, logs/capture.log, beside/beside-2.json, beside/beside-3.json, qualification/against-the-original-control.json",
+  "prediction_vs_result": {
+    "1_capture": {
+      "predicted": "30 of 30 answers the recordings' tokens, 29 ending by themselves, every one registered by the identity; the three recorder calls about 226 s together, the machine's load and the lock's wait included",
+      "result": "30 of 30 registered by the identity of their inputs with the reference history: every answer's steps are its recorded steps (14,592 answer steps), no step leaves the recording, none exported or laid; 29 ended by themselves. The three calls took 410.5 s, not about 226: 259.8 s for the first ten answers (5,250 steps), 78.3 s for the next ten (4,939) and 72.4 s for the last ten (4,403), i.e. 15.9 and 16.4 ms a step for the second and third calls with a model load in each. The first call's nine answers with their own seconds on record took 75.5 s together; the rest of its 259.8 s is its model load and its wait for card 0's lock, which was held by a solver job when looked at, 5:44:52 AM CT.",
+      "held": "the tokens and registrations: yes; the time: no (the lock's wait was larger than the prediction allowed)"
+    },
+    "2_reading": {
+      "predicted": "the reading from the kept streams holds the bits of whole-states-original/reading at all 19,751 rows of all 105 merges and in both terminal arrays",
+      "result": "the_same_bits_everywhere true: 19,751 rows (14,592 answer rows, 5,159 question rows) at 105 merges with no merge having a row that is not the same bits; l_out 0 of 19,751 rows apart, result_norm 0 of 14,592, largest difference 0.0; 30 of 30 answers compared through their last step",
+      "held": "yes"
+    },
+    "3_bytes_side_by_side": {
+      "predicted": "10 of 10 and 10 of 10 answers' four files the solo's sha256",
+      "result": "two processes: 10 of 10; three processes: 10 of 10 (stream.f32, stream.jsonl, result.json, case.json each by sha256 against the solo's; no stream kept, since none differed). Three were started on a measured room: 3 x 4,990 MiB = 14,970 MiB needed, 16,301 MiB free.",
+      "held": "yes"
+    },
+    "4_time_side_by_side": {
+      "predicted": "unknown before measured; 1.4 to 2.0 times the answers a second by arithmetic, or at or under 1 if the driver's switching between processes is the limit; three no better than two unless the card is the limit at two",
+      "result": "gain 0.7166 with two processes and 0.7167 with three (gain = processes / the median of each answer's seconds side by side over its seconds alone). With two, each answer took 2.60 to 2.91 times its seconds alone (median 2.79; 8 answers have both seconds); with three, 4.19 at the median and 4.59 at most (the least, 0.95, is expanded-068-h1, which ran after the other two processes had finished). The same ten answers took 117.55 s of wall time with two and 117.09 s with three; their nine own seconds alone sum to 75.5 s.",
+      "held": "the case the prediction named as possible: a gain under 1. Side by side writes about 0.72 of the answers a second one process writes, with two or with three."
+    }
+  },
+  "failures_only": [
+    "Side by side on card 0 is slower than one process: 0.72 of one process's answers a second with two processes and the same with three. The lever is closed with this number (would_weaken_it 4).",
+    "The capture took 410.5 s where about 226 s was predicted: the first recorder call's 259.8 s holds 75.5 s of answers on record, and the rest is its model load and the wait for card 0's lock behind a solver job. The prediction's allowance for the wait was wrong; the second and third calls ran at 15.9 and 16.4 ms a step."
+  ],
+  "what_this_changes": [
+    "The capture and reading as bound by controlled-bf16-7 (its 19 instruments held to their sha256 after the run, unchanged since the protocol's commit 864f4c16), run on the original on card 0 under its lock, give the original's own recorded computation again bit for bit: 30 of 30 answers by identity and 19,751 rows at 105 merges the control's bits. A loop step's capture of the original under this protocol is the control.",
+    "A recorder process's files did not depend on one or two other recorder processes running on the same card at once: 20 of 20 answers' four files were the solo's bytes.",
+    "Running recorders side by side on one card does not shorten a step: two or three processes write about 0.72 of one process's answers a second. No concurrent capture is proposed for own_text.py, no new protocol follows from this run, and controlled-bf16-7 stays as it is.",
+    "The record does not separate the card's switching between processes from contention on the six processor threads the processes shared; that three did exactly as well as two (117.09 s against 117.55 s for the same ten answers) points to the card, as an inference. What is left under a step's generation is the engine's own work at each token (its decode and its stop and read-back at each of the 212 kept outputs): a lever there is a change of the engine build, or of how the card is shared, which is machine policy and not this seat's; neither is proposed here.",
+    "Nothing here bears on the hypothesis; no model was changed and no answer's content was compared or judged."
+  ],
+  "provenance": {
+    "declaration": "studies/04-round-2-overlap/runs/recorders-beside-original/declaration.json (revision 2, Astra's admission)",
+    "run_sh_sha256": "556c9cd208756ce29c1fae720b3b07dae2bc939721f9577d6b57017501500018",
+    "recorders_beside_py_sha256": "db1a060afbfdb10e068fb610ab41c366ee82677721eeddd53fb68921ba8f99ad",
+    "reader_protocol": "records/development/2026-11-12-path-forward/reader-protocol/controlled-bf16-7.json (87a2f2f45d5ec4ddad36377cece93bb0f5d553af9cabc234763f18fa570c7d6e)",
+    "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+    "recorder_sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+    "control_reading_sha256": "dc72e7eb90110291d20c85a01fed55cca657879a5e1b211cddd5d6809b38f33a",
+    "card": "NVIDIA GeForce RTX 5080 (card 0), driver 615.71.10"
+  }
+}

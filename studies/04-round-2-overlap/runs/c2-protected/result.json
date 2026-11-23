@@ -1,0 +1,6786 @@
+{
+ "run": "c2-protected",
+ "model": "model/c2-protected.gguf",
+ "model_sha256": "767d8f71a01d06dbed2d095efa5c65baf9a4d5d001aa3e85b2a9c0eb0901ed4c",
+ "starts_from": "studies/04-round-2-overlap/runs/a2-path/model/a2-path.gguf",
+ "repaired_rows": "read",
+ "what_was_built": "A reading beside c2-path, not the C rung: the same build with the 12 answers a2-path broke alone in the fit (104 rows, each answer through the first token a2-path's own answer changes, asked for the state they had in the original model). The 17 repaired answers' same contexts are read, not fitted. All 18 corrections were written. Each is 2.1% to 9.1% of a2-path's change of that matrix.",
+ "answers_on_its_own": {
+  "how": "The corrected model answers the 60 questions of the overlap and round one's 28 on its own, greedy, on GPU0. The same judge reads the original, a2-path's and this model's answer.",
+  "groups": {
+   "overlap, were wrong, complete after a2-path": {
+    "answers": 17,
+    "complete_before": 0,
+    "complete_after_a2_path": 17,
+    "complete_after": 7,
+    "available_after": {
+     "correct": 11,
+     "other": 5,
+     "missing": 1
+    },
+    "available_after_a2_path": {
+     "correct": 17
+    },
+    "stopped_at_limit_after": 1,
+    "stopped_at_limit_after_a2_path": 0,
+    "same_text_as_a2_paths_answer": 1,
+    "same_text_as_the_original": 0,
+    "first_step_apart_from_the_original": {
+     "3": 7,
+     "11": 5,
+     "15": 2,
+     "25": 1,
+     "68": 1,
+     "69": 1
+    },
+    "first_step_apart_from_the_original_under_a2_path": {
+     "3": 10,
+     "11": 3,
+     "15": 1,
+     "18": 1,
+     "69": 1,
+     "83": 1
+    },
+    "first_step_apart_from_a2_paths_answer": {
+     "3": 3,
+     "15": 5,
+     "68": 1,
+     "207": 1,
+     "262": 1,
+     "303": 1,
+     "340": 1,
+     "434": 1,
+     "501": 1,
+     "600": 1,
+     "never": 1
+    },
+    "leaves_the_original_later_than_under_a2_path": 3,
+    "leaves_the_original_earlier_than_under_a2_path": 2,
+    "steps_median": 539,
+    "steps_median_under_a2_path": 618,
+    "own_trace_between_the_patterns_places_142_313_states": {
+     "least": 0.74,
+     "median": 0.99,
+     "most": 1.25
+    }
+   },
+   "overlap, were wrong, not complete after a2-path": {
+    "answers": 13,
+    "complete_before": 0,
+    "complete_after_a2_path": 0,
+    "complete_after": 4,
+    "available_after": {
+     "correct": 5,
+     "other": 6,
+     "descent subtracted": 2
+    },
+    "available_after_a2_path": {
+     "descent omitted": 3,
+     "other": 9,
+     "descent subtracted": 1
+    },
+    "stopped_at_limit_after": 1,
+    "stopped_at_limit_after_a2_path": 1,
+    "same_text_as_a2_paths_answer": 0,
+    "same_text_as_the_original": 0,
+    "first_step_apart_from_the_original": {
+     "3": 8,
+     "11": 1,
+     "15": 3,
+     "92": 1
+    },
+    "first_step_apart_from_the_original_under_a2_path": {
+     "3": 10,
+     "15": 2,
+     "18": 1
+    },
+    "first_step_apart_from_a2_paths_answer": {
+     "3": 2,
+     "15": 1,
+     "58": 2,
+     "242": 2,
+     "363": 1,
+     "370": 1,
+     "387": 1,
+     "458": 1,
+     "483": 1,
+     "491": 1
+    },
+    "leaves_the_original_later_than_under_a2_path": 2,
+    "leaves_the_original_earlier_than_under_a2_path": 1,
+    "steps_median": 570,
+    "steps_median_under_a2_path": 572,
+    "own_trace_between_the_patterns_places_142_313_states": {
+     "least": 0.63,
+     "median": 0.87,
+     "most": 1.41
+    }
+   },
+   "overlap, were correct, broken by a2-path": {
+    "answers": 12,
+    "complete_before": 12,
+    "complete_after_a2_path": 0,
+    "complete_after": 3,
+    "available_after": {
+     "correct": 4,
+     "other": 5,
+     "missing": 1,
+     "descent subtracted": 2
+    },
+    "available_after_a2_path": {
+     "missing": 3,
+     "other": 9
+    },
+    "stopped_at_limit_after": 3,
+    "stopped_at_limit_after_a2_path": 3,
+    "same_text_as_a2_paths_answer": 1,
+    "same_text_as_the_original": 0,
+    "first_step_apart_from_the_original": {
+     "3": 4,
+     "11": 1,
+     "15": 4,
+     "93": 1,
+     "107": 1,
+     "305": 1
+    },
+    "first_step_apart_from_the_original_under_a2_path": {
+     "3": 7,
+     "11": 1,
+     "15": 4
+    },
+    "first_step_apart_from_a2_paths_answer": {
+     "3": 3,
+     "58": 1,
+     "251": 1,
+     "282": 1,
+     "315": 2,
+     "334": 1,
+     "415": 1,
+     "603": 1,
+     "never": 1
+    },
+    "leaves_the_original_later_than_under_a2_path": 3,
+    "leaves_the_original_earlier_than_under_a2_path": 0,
+    "steps_median": 615.5,
+    "steps_median_under_a2_path": 564.0,
+    "own_trace_between_the_patterns_places_142_313_states": {
+     "least": 0.47,
+     "median": 0.89,
+     "most": 1.26
+    }
+   },
+   "overlap, were correct, complete after a2-path": {
+    "answers": 18,
+    "complete_before": 18,
+    "complete_after_a2_path": 18,
+    "complete_after": 11,
+    "available_after": {
+     "correct": 13,
+     "other": 3,
+     "descent subtracted": 1,
+     "descent omitted": 1
+    },
+    "available_after_a2_path": {
+     "correct": 18
+    },
+    "stopped_at_limit_after": 0,
+    "stopped_at_limit_after_a2_path": 0,
+    "same_text_as_a2_paths_answer": 2,
+    "same_text_as_the_original": 0,
+    "first_step_apart_from_the_original": {
+     "3": 12,
+     "11": 1,
+     "71": 2,
+     "93": 1,
+     "103": 2
+    },
+    "first_step_apart_from_the_original_under_a2_path": {
+     "3": 13,
+     "11": 1,
+     "71": 1,
+     "93": 1,
+     "103": 1,
+     "128": 1
+    },
+    "first_step_apart_from_a2_paths_answer": {
+     "3": 1,
+     "15": 2,
+     "58": 1,
+     "71": 2,
+     "242": 1,
+     "260": 1,
+     "262": 1,
+     "340": 1,
+     "350": 2,
+     "386": 1,
+     "411": 1,
+     "506": 1,
+     "526": 1,
+     "never": 2
+    },
+    "leaves_the_original_later_than_under_a2_path": 1,
+    "leaves_the_original_earlier_than_under_a2_path": 1,
+    "steps_median": 559.5,
+    "steps_median_under_a2_path": 533.5,
+    "own_trace_between_the_patterns_places_142_313_states": {
+     "least": 0.46,
+     "median": 0.87,
+     "most": 1.25
+    }
+   },
+   "round one, were wrong": {
+    "answers": 21,
+    "complete_before": 0,
+    "complete_after_a2_path": 7,
+    "complete_after": 4,
+    "available_after": {
+     "other": 10,
+     "correct": 4,
+     "missing": 6,
+     "descent omitted": 1
+    },
+    "available_after_a2_path": {
+     "other": 10,
+     "correct": 7,
+     "missing": 3,
+     "descent omitted": 1
+    },
+    "stopped_at_limit_after": 4,
+    "stopped_at_limit_after_a2_path": 4,
+    "same_text_as_a2_paths_answer": 3,
+    "same_text_as_the_original": 0,
+    "first_step_apart_from_the_original": {
+     "3": 2,
+     "11": 1,
+     "12": 3,
+     "15": 7,
+     "75": 2,
+     "93": 1,
+     "108": 1,
+     "111": 1,
+     "121": 2,
+     "178": 1
+    },
+    "first_step_apart_from_the_original_under_a2_path": {
+     "3": 3,
+     "11": 1,
+     "12": 3,
+     "15": 5,
+     "40": 1,
+     "75": 2,
+     "93": 1,
+     "111": 1,
+     "121": 2,
+     "126": 1,
+     "178": 1
+    },
+    "first_step_apart_from_a2_paths_answer": {
+     "3": 1,
+     "15": 2,
+     "30": 1,
+     "58": 1,
+     "124": 1,
+     "135": 1,
+     "145": 1,
+     "200": 1,
+     "218": 1,
+     "235": 1,
+     "270": 1,
+     "298": 2,
+     "305": 1,
+     "317": 1,
+     "319": 1,
+     "563": 1,
+     "never": 3
+    },
+    "leaves_the_original_later_than_under_a2_path": 1,
+    "leaves_the_original_earlier_than_under_a2_path": 2,
+    "steps_median": 644,
+    "steps_median_under_a2_path": 611
+   },
+   "round one, were correct": {
+    "answers": 7,
+    "complete_before": 7,
+    "complete_after_a2_path": 3,
+    "complete_after": 3,
+    "available_after": {
+     "correct": 3,
+     "other": 1,
+     "descent subtracted": 2,
+     "missing": 1
+    },
+    "available_after_a2_path": {
+     "descent omitted": 2,
+     "other": 1,
+     "correct": 3,
+     "missing": 1
+    },
+    "stopped_at_limit_after": 2,
+    "stopped_at_limit_after_a2_path": 1,
+    "same_text_as_a2_paths_answer": 0,
+    "same_text_as_the_original": 0,
+    "first_step_apart_from_the_original": {
+     "3": 3,
+     "12": 1,
+     "15": 1,
+     "98": 1,
+     "158": 1
+    },
+    "first_step_apart_from_the_original_under_a2_path": {
+     "3": 3,
+     "12": 1,
+     "15": 1,
+     "98": 1,
+     "158": 1
+    },
+    "first_step_apart_from_a2_paths_answer": {
+     "58": 1,
+     "146": 1,
+     "166": 1,
+     "242": 1,
+     "362": 1,
+     "366": 1,
+     "406": 1
+    },
+    "leaves_the_original_later_than_under_a2_path": 0,
+    "leaves_the_original_earlier_than_under_a2_path": 0,
+    "steps_median": 552,
+    "steps_median_under_a2_path": 569
+   }
+  },
+  "complete_answers": "Complete answers, this run beside a2-path: of the 12 correct answers a2-path broke, 3 (a2-path 0); of the 17 wrong answers it repaired, 7 (17); of the 13 wrong answers it did not repair, 4 (0); of the 18 correct answers it kept, 11 (18). In all 11 of the 30 that were wrong and 14 of the 30 that were correct (a2-path 17 and 18). Round one, outside the fit: 4 of its 21 failures and 3 of its 7 correct answers (a2-path 7 and 3).",
+  "the_calculation_the_edit_aimed_at": "By the judge's field for the available energy, of the 30 answers that subtracted the descent: still subtracting it 2, leaving it out 0, stating the right available energy 16 (a2-path 1, 3 and 17). Of the 30 that were correct: with the field 'descent subtracted' 3, stating the right energy 17 (a2-path 0 and 18). The field reads the stated number only: under a2-path Astra's reading of the text found four correct answers whose first error was the descent subtracted where the field says 'other' or 'missing', so the field undercounts and the two models are compared on the field alone. These answers have not been read one by one.",
+  "texts": "4 of the 60 answers of the overlap are a2-path's answer token for token. 17 leave a2-path's answer within their first 20 steps; the others leave it later. Against a2-path, 21 of the 88 answers went from complete to not complete and 8 the other way.",
+  "the_fourth_token": "At the fourth token, where every answer still has the original's whole history, this model prefers ' calculation' over ' compact' by 0.21 to 0.37 of a score more than the original (median 0.28); a2-path by 0.24 to 0.45 (median 0.34). The shift is smaller than a2-path's in 58 of the 60 answers and about the same in the four groups (medians 0.27, 0.28, 0.27, 0.3). 31 answers leave the original's text at that token (a2-path 40; 31 of them under both).",
+  "first_changed_step_under_a2_path": {
+   "discovery-06-channel-h1": 3,
+   "discovery-00-channel-h3": 15,
+   "expanded-018-h3": 15,
+   "expanded-024-h1": 3,
+   "expanded-028-h1": 11,
+   "expanded-029-h1": 3,
+   "expanded-022-h1": 3,
+   "expanded-010-h3": 15,
+   "expanded-071-h1": 3,
+   "discovery-17-channel-h3": 3,
+   "expanded-017-h3": 15,
+   "expanded-077-h1": 3,
+   "discovery-05-channel-h1": 3,
+   "discovery-05-channel-h3": 3,
+   "discovery-11-channel-h1": 3,
+   "discovery-17-channel-h1": 11,
+   "expanded-034-h3": 18,
+   "expanded-042-h3": 15,
+   "expanded-044-h1": 3,
+   "expanded-046-h1": 3,
+   "expanded-068-h1": 3,
+   "expanded-069-h1": 3,
+   "expanded-070-h1": 3,
+   "expanded-087-h3": 83,
+   "expanded-092-h1": 11,
+   "expanded-094-h1": 3,
+   "expanded-094-h3": 3,
+   "expanded-095-h1": 69,
+   "expanded-095-h3": 11
+  },
+  "changed_against_a2_path": {
+   "complete_after_a2_path_and_not_after": [
+    "bead-base",
+    "discovery-05-channel-h3",
+    "discovery-07-channel-h1",
+    "discovery-08-channel-h3",
+    "discovery-10-channel-h3",
+    "discovery-11-channel-h1",
+    "discovery-11-channel-h3",
+    "discovery-17-channel-h1",
+    "discovery-23-channel-h3",
+    "expanded-044-h1",
+    "expanded-046-h1",
+    "expanded-064-h1",
+    "expanded-068-h1",
+    "expanded-070-h1",
+    "expanded-076-h1",
+    "expanded-092-h1",
+    "expanded-094-h1",
+    "expanded-094-h3",
+    "new-trolley-3",
+    "new-trolley-4",
+    "sled-changed"
+   ],
+   "not_complete_after_a2_path_and_complete_after": [
+    "block-base",
+    "discovery-06-channel-h1",
+    "discovery-10-channel-h1",
+    "discovery-17-channel-h3",
+    "expanded-001-h1",
+    "expanded-020-h1",
+    "expanded-058-h3",
+    "expanded-071-h1"
+   ]
+  }
+ },
+ "own_traces": {
+  "how": "As a2-path: each of the 60 answers of this model recorded with the turns of its own computation, laid on the axis by the computation alone, read against the original correct and wrong patterns as turns and as states. 0 is the wrong pattern, 1 the correct one; sideways and travelled are in gaps.",
+  "sections": {
+   "turns": {
+    "whole path": {
+     "wrong_towards_the_correct_pattern": 0.85,
+     "wrong_sideways_in_gaps": 1.36,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.49,
+     "correct_travelled_in_gaps": 1.46,
+     "gap_between_the_groups_after_over_before": 0.55
+    },
+    "before 142": {
+     "wrong_towards_the_correct_pattern": 1.04,
+     "wrong_sideways_in_gaps": 2.69,
+     "wrong_left_to_the_original_correct_pattern_over_before": 2.96,
+     "correct_travelled_in_gaps": 2.92,
+     "gap_between_the_groups_after_over_before": 0.75
+    },
+    "places 142-313": {
+     "wrong_towards_the_correct_pattern": 0.92,
+     "wrong_sideways_in_gaps": 1.13,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.21,
+     "correct_travelled_in_gaps": 1.22,
+     "gap_between_the_groups_after_over_before": 0.42
+    },
+    "places 314-456": {
+     "wrong_towards_the_correct_pattern": 0.4,
+     "wrong_sideways_in_gaps": 1.16,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.35,
+     "correct_travelled_in_gaps": 1.23,
+     "gap_between_the_groups_after_over_before": 0.74
+    },
+    "places 457-479": {
+     "wrong_towards_the_correct_pattern": 0.54,
+     "wrong_sideways_in_gaps": 1.06,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.24,
+     "correct_travelled_in_gaps": 0.96,
+     "gap_between_the_groups_after_over_before": 0.56
+    }
+   },
+   "states": {
+    "whole path": {
+     "wrong_towards_the_correct_pattern": 0.87,
+     "wrong_sideways_in_gaps": 1.38,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.51,
+     "correct_travelled_in_gaps": 1.48,
+     "gap_between_the_groups_after_over_before": 0.55
+    },
+    "before 142": {
+     "wrong_towards_the_correct_pattern": 1.04,
+     "wrong_sideways_in_gaps": 2.85,
+     "wrong_left_to_the_original_correct_pattern_over_before": 3.12,
+     "correct_travelled_in_gaps": 3.09,
+     "gap_between_the_groups_after_over_before": 0.77
+    },
+    "places 142-313": {
+     "wrong_towards_the_correct_pattern": 0.95,
+     "wrong_sideways_in_gaps": 1.16,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.23,
+     "correct_travelled_in_gaps": 1.24,
+     "gap_between_the_groups_after_over_before": 0.42
+    },
+    "places 314-456": {
+     "wrong_towards_the_correct_pattern": 0.41,
+     "wrong_sideways_in_gaps": 1.17,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.35,
+     "correct_travelled_in_gaps": 1.23,
+     "gap_between_the_groups_after_over_before": 0.74
+    },
+    "places 457-479": {
+     "wrong_towards_the_correct_pattern": 0.57,
+     "wrong_sideways_in_gaps": 1.05,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.21,
+     "correct_travelled_in_gaps": 0.94,
+     "gap_between_the_groups_after_over_before": 0.55
+    }
+   }
+  },
+  "beside_a2_path": "Over places 142 to 313 the answers that were wrong lie 0.95 of the way to the correct pattern (states; a2-path 0.79) and 1.16 gaps to the side (1.04); the correct answers travelled 1.24 gaps (1.27); the two groups are 0.42 as far apart as before (0.54). By group, where each answer's own trace lies (median): the 17 repaired 0.99, the 13 not repaired 0.87, the 12 damaged 0.89, the 18 kept 0.87."
+ },
+ "construction_readings": {
+  "note": "Readings of the build on the given text, against the state of the same rows in a2-path's model read once before any correction. They are not a test.",
+  "what_the_fit_did": "On the given text the damaged answers' rows returned most of the way at every matrix: along a2-path's action they keep 0.01 to 0.05 of it, and in distance they end 0.08 to 0.22 of that action away from their original state (0.07 to 0.21 as far as a2-path left them). The repaired answers' same opening steps went with them, keeping 0.07 to 0.14: their inputs are the same (the part of a damaged row outside what the repaired rows span is 0.0% to 0.8% per matrix at the median, at most 4.4%). The repaired answers' later steps (125 rows, of the three answers whose first change comes after step 15) keep 0.98 to 1.01.",
+  "distance_to_a2_paths_state": "apart_from_a2_paths_state_after_rms = sqrt(apart_from_original_after_rms^2 + a2_paths_action_rms^2 (1 - 2 a2_paths_action_kept_after)), Astra's formula, per set and matrix.",
+  "matrices": [
+   {
+    "layer": 0,
+    "kind": "attention",
+    "tensor": "blk.0.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 1.7971470387731314e-05,
+    "other_half_left_over_asked": 0.116,
+    "a2_paths_change_over_matrix": 0.0636,
+    "correction_over_a2_paths_change": 0.0334,
+    "intended_correction_over_a2_paths_change": 0.0332,
+    "a2_paths_change_kept": 0.9985,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 6.558156523878615e-08,
+     "median": 3.6857951781526446e-05,
+     "most": 0.011478045968249527
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0041,
+      "apart_from_original_before_rms": 0.0041,
+      "apart_from_original_after_rms": 0.0005,
+      "a2_paths_action_kept_before": 1.0,
+      "a2_paths_action_kept_after": 0.022,
+      "apart_from_a2_paths_state_after_rms": 0.0041,
+      "apart_from_a2_paths_state_after_over_its_action": 0.984
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0033,
+      "apart_from_original_before_rms": 0.0033,
+      "apart_from_original_after_rms": 0.0014,
+      "a2_paths_action_kept_before": 1.0,
+      "a2_paths_action_kept_after": 0.124,
+      "apart_from_a2_paths_state_after_rms": 0.0032,
+      "apart_from_a2_paths_state_after_over_its_action": 0.959
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.008,
+      "apart_from_original_before_rms": 0.008,
+      "apart_from_original_after_rms": 0.0086,
+      "a2_paths_action_kept_before": 1.0,
+      "a2_paths_action_kept_after": 0.998,
+      "apart_from_a2_paths_state_after_rms": 0.0031,
+      "apart_from_a2_paths_state_after_over_its_action": 0.388
+     }
+    },
+    "fit": {
+     "steps": 31,
+     "shortened": 4,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 25.5
+   },
+   {
+    "layer": 0,
+    "kind": "feedforward",
+    "tensor": "blk.0.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.0001437717631018505,
+    "other_half_left_over_asked": 0.0844,
+    "a2_paths_change_over_matrix": 0.098,
+    "correction_over_a2_paths_change": 0.0311,
+    "intended_correction_over_a2_paths_change": 0.0311,
+    "a2_paths_change_kept": 0.9989,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.00016870661971512624,
+     "median": 0.0005506981475752314,
+     "most": 0.012976851357428036
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0062,
+      "apart_from_original_before_rms": 0.0067,
+      "apart_from_original_after_rms": 0.0005,
+      "a2_paths_action_kept_before": 0.763,
+      "a2_paths_action_kept_after": 0.028,
+      "apart_from_a2_paths_state_after_rms": 0.0061,
+      "apart_from_a2_paths_state_after_over_its_action": 0.975
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0046,
+      "apart_from_original_before_rms": 0.0054,
+      "apart_from_original_after_rms": 0.0021,
+      "a2_paths_action_kept_before": 0.775,
+      "a2_paths_action_kept_after": 0.143,
+      "apart_from_a2_paths_state_after_rms": 0.0044,
+      "apart_from_a2_paths_state_after_over_its_action": 0.965
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0138,
+      "apart_from_original_before_rms": 0.0142,
+      "apart_from_original_after_rms": 0.0146,
+      "a2_paths_action_kept_before": 0.999,
+      "a2_paths_action_kept_after": 1.009,
+      "apart_from_a2_paths_state_after_rms": 0.0041,
+      "apart_from_a2_paths_state_after_over_its_action": 0.299
+     }
+    },
+    "fit": {
+     "steps": 78,
+     "shortened": 5,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 60.2
+   },
+   {
+    "layer": 1,
+    "kind": "attention",
+    "tensor": "blk.1.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 1.52587890625e-05,
+    "other_half_left_over_asked": 0.0998,
+    "a2_paths_change_over_matrix": 0.0531,
+    "correction_over_a2_paths_change": 0.0417,
+    "intended_correction_over_a2_paths_change": 0.0413,
+    "a2_paths_change_kept": 0.9978,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0007744127780950302,
+     "median": 0.0016634892735609718,
+     "most": 0.016264924453443252
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0056,
+      "apart_from_original_before_rms": 0.0059,
+      "apart_from_original_after_rms": 0.0007,
+      "a2_paths_action_kept_before": 0.786,
+      "a2_paths_action_kept_after": 0.024,
+      "apart_from_a2_paths_state_after_rms": 0.0056,
+      "apart_from_a2_paths_state_after_over_its_action": 0.985
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0044,
+      "apart_from_original_before_rms": 0.0052,
+      "apart_from_original_after_rms": 0.0019,
+      "a2_paths_action_kept_before": 0.827,
+      "a2_paths_action_kept_after": 0.107,
+      "apart_from_a2_paths_state_after_rms": 0.0044,
+      "apart_from_a2_paths_state_after_over_its_action": 0.991
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0097,
+      "apart_from_original_before_rms": 0.0101,
+      "apart_from_original_after_rms": 0.0104,
+      "a2_paths_action_kept_before": 1.001,
+      "a2_paths_action_kept_after": 0.992,
+      "apart_from_a2_paths_state_after_rms": 0.0039,
+      "apart_from_a2_paths_state_after_over_its_action": 0.406
+     }
+    },
+    "fit": {
+     "steps": 43,
+     "shortened": 7,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 14.7
+   },
+   {
+    "layer": 1,
+    "kind": "feedforward",
+    "tensor": "blk.1.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 6.103515625e-05,
+    "other_half_left_over_asked": 0.085,
+    "a2_paths_change_over_matrix": 0.0855,
+    "correction_over_a2_paths_change": 0.0286,
+    "intended_correction_over_a2_paths_change": 0.0285,
+    "a2_paths_change_kept": 0.9991,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0006755942569679544,
+     "median": 0.0022584940713294976,
+     "most": 0.019606897790396222
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0064,
+      "apart_from_original_before_rms": 0.0076,
+      "apart_from_original_after_rms": 0.0008,
+      "a2_paths_action_kept_before": 0.667,
+      "a2_paths_action_kept_after": 0.026,
+      "apart_from_a2_paths_state_after_rms": 0.0063,
+      "apart_from_a2_paths_state_after_over_its_action": 0.981
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0044,
+      "apart_from_original_before_rms": 0.0061,
+      "apart_from_original_after_rms": 0.0022,
+      "a2_paths_action_kept_before": 0.683,
+      "a2_paths_action_kept_after": 0.106,
+      "apart_from_a2_paths_state_after_rms": 0.0044,
+      "apart_from_a2_paths_state_after_over_its_action": 1.018
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0144,
+      "apart_from_original_before_rms": 0.015,
+      "apart_from_original_after_rms": 0.015,
+      "a2_paths_action_kept_before": 1.001,
+      "a2_paths_action_kept_after": 0.999,
+      "apart_from_a2_paths_state_after_rms": 0.0045,
+      "apart_from_a2_paths_state_after_over_its_action": 0.312
+     }
+    },
+    "fit": {
+     "steps": 66,
+     "shortened": 2,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 56.1
+   },
+   {
+    "layer": 2,
+    "kind": "attention",
+    "tensor": "blk.2.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 5.1822280232076604e-05,
+    "other_half_left_over_asked": 0.0824,
+    "a2_paths_change_over_matrix": 0.1178,
+    "correction_over_a2_paths_change": 0.0456,
+    "intended_correction_over_a2_paths_change": 0.0448,
+    "a2_paths_change_kept": 0.9977,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0008617026036512529,
+     "median": 0.0017900071193845976,
+     "most": 0.012788363391576312
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0092,
+      "apart_from_original_before_rms": 0.0083,
+      "apart_from_original_after_rms": 0.0009,
+      "a2_paths_action_kept_before": 0.606,
+      "a2_paths_action_kept_after": 0.014,
+      "apart_from_a2_paths_state_after_rms": 0.0091,
+      "apart_from_a2_paths_state_after_over_its_action": 0.991
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0067,
+      "apart_from_original_before_rms": 0.0067,
+      "apart_from_original_after_rms": 0.0027,
+      "a2_paths_action_kept_before": 0.674,
+      "a2_paths_action_kept_after": 0.074,
+      "apart_from_a2_paths_state_after_rms": 0.0068,
+      "apart_from_a2_paths_state_after_over_its_action": 1.009
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0211,
+      "apart_from_original_before_rms": 0.0217,
+      "apart_from_original_after_rms": 0.022,
+      "a2_paths_action_kept_before": 0.997,
+      "a2_paths_action_kept_after": 0.993,
+      "apart_from_a2_paths_state_after_rms": 0.0065,
+      "apart_from_a2_paths_state_after_over_its_action": 0.308
+     }
+    },
+    "fit": {
+     "steps": 79,
+     "shortened": 2,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 14.7
+   },
+   {
+    "layer": 2,
+    "kind": "feedforward",
+    "tensor": "blk.2.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00020728912092830642,
+    "other_half_left_over_asked": 0.0815,
+    "a2_paths_change_over_matrix": 0.0827,
+    "correction_over_a2_paths_change": 0.0229,
+    "intended_correction_over_a2_paths_change": 0.0229,
+    "a2_paths_change_kept": 0.9994,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.00031053660611289006,
+     "median": 0.0022879976697284363,
+     "most": 0.025414279077877206
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0146,
+      "apart_from_original_before_rms": 0.0163,
+      "apart_from_original_after_rms": 0.0018,
+      "a2_paths_action_kept_before": 0.656,
+      "a2_paths_action_kept_after": 0.036,
+      "apart_from_a2_paths_state_after_rms": 0.0142,
+      "apart_from_a2_paths_state_after_over_its_action": 0.972
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0096,
+      "apart_from_original_before_rms": 0.0127,
+      "apart_from_original_after_rms": 0.0042,
+      "a2_paths_action_kept_before": 0.66,
+      "a2_paths_action_kept_after": 0.094,
+      "apart_from_a2_paths_state_after_rms": 0.0096,
+      "apart_from_a2_paths_state_after_over_its_action": 1.0
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0381,
+      "apart_from_original_before_rms": 0.039,
+      "apart_from_original_after_rms": 0.0389,
+      "a2_paths_action_kept_before": 0.994,
+      "a2_paths_action_kept_after": 0.993,
+      "apart_from_a2_paths_state_after_rms": 0.0089,
+      "apart_from_a2_paths_state_after_over_its_action": 0.233
+     }
+    },
+    "fit": {
+     "steps": 60,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 56.7
+   },
+   {
+    "layer": 3,
+    "kind": "attention",
+    "tensor": "blk.3.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 5.1822280232076604e-05,
+    "other_half_left_over_asked": 0.0888,
+    "a2_paths_change_over_matrix": 0.0862,
+    "correction_over_a2_paths_change": 0.0565,
+    "intended_correction_over_a2_paths_change": 0.0558,
+    "a2_paths_change_kept": 0.9967,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0008141819452556986,
+     "median": 0.0020652623636614564,
+     "most": 0.014610495750521197
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0092,
+      "apart_from_original_before_rms": 0.0089,
+      "apart_from_original_after_rms": 0.0009,
+      "a2_paths_action_kept_before": 0.707,
+      "a2_paths_action_kept_after": 0.016,
+      "apart_from_a2_paths_state_after_rms": 0.0091,
+      "apart_from_a2_paths_state_after_over_its_action": 0.989
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.007,
+      "apart_from_original_before_rms": 0.0072,
+      "apart_from_original_after_rms": 0.0026,
+      "a2_paths_action_kept_before": 0.773,
+      "a2_paths_action_kept_after": 0.086,
+      "apart_from_a2_paths_state_after_rms": 0.0069,
+      "apart_from_a2_paths_state_after_over_its_action": 0.986
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0186,
+      "apart_from_original_before_rms": 0.019,
+      "apart_from_original_after_rms": 0.0192,
+      "a2_paths_action_kept_before": 0.994,
+      "a2_paths_action_kept_after": 0.986,
+      "apart_from_a2_paths_state_after_rms": 0.0058,
+      "apart_from_a2_paths_state_after_over_its_action": 0.31
+     }
+    },
+    "fit": {
+     "steps": 35,
+     "shortened": 4,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 13.8
+   },
+   {
+    "layer": 3,
+    "kind": "feedforward",
+    "tensor": "blk.3.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 5.1822280232076604e-05,
+    "other_half_left_over_asked": 0.0763,
+    "a2_paths_change_over_matrix": 0.1035,
+    "correction_over_a2_paths_change": 0.021,
+    "intended_correction_over_a2_paths_change": 0.0209,
+    "a2_paths_change_kept": 0.9994,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0007808200861769025,
+     "median": 0.002688197008481196,
+     "most": 0.014705330265964876
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0096,
+      "apart_from_original_before_rms": 0.011,
+      "apart_from_original_after_rms": 0.0014,
+      "a2_paths_action_kept_before": 0.678,
+      "a2_paths_action_kept_after": 0.04,
+      "apart_from_a2_paths_state_after_rms": 0.0093,
+      "apart_from_a2_paths_state_after_over_its_action": 0.97
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0065,
+      "apart_from_original_before_rms": 0.0086,
+      "apart_from_original_after_rms": 0.0026,
+      "a2_paths_action_kept_before": 0.684,
+      "a2_paths_action_kept_after": 0.097,
+      "apart_from_a2_paths_state_after_rms": 0.0064,
+      "apart_from_a2_paths_state_after_over_its_action": 0.984
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0239,
+      "apart_from_original_before_rms": 0.0243,
+      "apart_from_original_after_rms": 0.0242,
+      "a2_paths_action_kept_before": 0.988,
+      "a2_paths_action_kept_after": 0.986,
+      "apart_from_a2_paths_state_after_rms": 0.0057,
+      "apart_from_a2_paths_state_after_over_its_action": 0.24
+     }
+    },
+    "fit": {
+     "steps": 32,
+     "shortened": 3,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 64.1
+   },
+   {
+    "layer": 4,
+    "kind": "attention",
+    "tensor": "blk.4.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.0001220703125,
+    "other_half_left_over_asked": 0.0825,
+    "a2_paths_change_over_matrix": 0.1022,
+    "correction_over_a2_paths_change": 0.0373,
+    "intended_correction_over_a2_paths_change": 0.0365,
+    "a2_paths_change_kept": 0.9984,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0005230563450221334,
+     "median": 0.0029802203255446533,
+     "most": 0.03200619482183885
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0067,
+      "apart_from_original_before_rms": 0.0064,
+      "apart_from_original_after_rms": 0.0009,
+      "a2_paths_action_kept_before": 0.599,
+      "a2_paths_action_kept_after": 0.037,
+      "apart_from_a2_paths_state_after_rms": 0.0065,
+      "apart_from_a2_paths_state_after_over_its_action": 0.972
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.005,
+      "apart_from_original_before_rms": 0.0054,
+      "apart_from_original_after_rms": 0.0019,
+      "a2_paths_action_kept_before": 0.682,
+      "a2_paths_action_kept_after": 0.112,
+      "apart_from_a2_paths_state_after_rms": 0.0048,
+      "apart_from_a2_paths_state_after_over_its_action": 0.958
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0126,
+      "apart_from_original_before_rms": 0.0128,
+      "apart_from_original_after_rms": 0.0129,
+      "a2_paths_action_kept_before": 0.988,
+      "a2_paths_action_kept_after": 0.98,
+      "apart_from_a2_paths_state_after_rms": 0.0038,
+      "apart_from_a2_paths_state_after_over_its_action": 0.304
+     }
+    },
+    "fit": {
+     "steps": 26,
+     "shortened": 3,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 22.4
+   },
+   {
+    "layer": 4,
+    "kind": "feedforward",
+    "tensor": "blk.4.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.0001437717631018505,
+    "other_half_left_over_asked": 0.0783,
+    "a2_paths_change_over_matrix": 0.1152,
+    "correction_over_a2_paths_change": 0.0256,
+    "intended_correction_over_a2_paths_change": 0.0255,
+    "a2_paths_change_kept": 0.9991,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0010839741538621543,
+     "median": 0.003768607346901188,
+     "most": 0.03432859953712463
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0088,
+      "apart_from_original_before_rms": 0.0092,
+      "apart_from_original_after_rms": 0.0011,
+      "a2_paths_action_kept_before": 0.665,
+      "a2_paths_action_kept_after": 0.021,
+      "apart_from_a2_paths_state_after_rms": 0.0086,
+      "apart_from_a2_paths_state_after_over_its_action": 0.986
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0062,
+      "apart_from_original_before_rms": 0.0076,
+      "apart_from_original_after_rms": 0.0024,
+      "a2_paths_action_kept_before": 0.708,
+      "a2_paths_action_kept_after": 0.103,
+      "apart_from_a2_paths_state_after_rms": 0.006,
+      "apart_from_a2_paths_state_after_over_its_action": 0.975
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0172,
+      "apart_from_original_before_rms": 0.0176,
+      "apart_from_original_after_rms": 0.0177,
+      "a2_paths_action_kept_before": 0.987,
+      "a2_paths_action_kept_after": 0.982,
+      "apart_from_a2_paths_state_after_rms": 0.0053,
+      "apart_from_a2_paths_state_after_over_its_action": 0.31
+     }
+    },
+    "fit": {
+     "steps": 98,
+     "shortened": 4,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 62.2
+   },
+   {
+    "layer": 5,
+    "kind": "attention",
+    "tensor": "blk.5.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00010364456046415321,
+    "other_half_left_over_asked": 0.0983,
+    "a2_paths_change_over_matrix": 0.0695,
+    "correction_over_a2_paths_change": 0.0911,
+    "intended_correction_over_a2_paths_change": 0.0898,
+    "a2_paths_change_kept": 0.9933,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0008939571702406986,
+     "median": 0.005225308071403907,
+     "most": 0.024774998269788746
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.008,
+      "apart_from_original_before_rms": 0.0052,
+      "apart_from_original_after_rms": 0.001,
+      "a2_paths_action_kept_before": 0.229,
+      "a2_paths_action_kept_after": 0.015,
+      "apart_from_a2_paths_state_after_rms": 0.008,
+      "apart_from_a2_paths_state_after_over_its_action": 0.992
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.006,
+      "apart_from_original_before_rms": 0.0049,
+      "apart_from_original_after_rms": 0.0023,
+      "a2_paths_action_kept_before": 0.369,
+      "a2_paths_action_kept_after": 0.095,
+      "apart_from_a2_paths_state_after_rms": 0.0059,
+      "apart_from_a2_paths_state_after_over_its_action": 0.98
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0152,
+      "apart_from_original_before_rms": 0.0157,
+      "apart_from_original_after_rms": 0.0158,
+      "a2_paths_action_kept_before": 0.979,
+      "a2_paths_action_kept_after": 0.979,
+      "apart_from_a2_paths_state_after_rms": 0.0054,
+      "apart_from_a2_paths_state_after_over_its_action": 0.358
+     }
+    },
+    "fit": {
+     "steps": 47,
+     "shortened": 3,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 13.6
+   },
+   {
+    "layer": 5,
+    "kind": "feedforward",
+    "tensor": "blk.5.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00020728912092830642,
+    "other_half_left_over_asked": 0.0846,
+    "a2_paths_change_over_matrix": 0.0974,
+    "correction_over_a2_paths_change": 0.0293,
+    "intended_correction_over_a2_paths_change": 0.0291,
+    "a2_paths_change_kept": 0.999,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0022638185719847494,
+     "median": 0.006100592472560433,
+     "most": 0.03599062465048223
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0088,
+      "apart_from_original_before_rms": 0.0107,
+      "apart_from_original_after_rms": 0.0015,
+      "a2_paths_action_kept_before": 0.388,
+      "a2_paths_action_kept_after": 0.033,
+      "apart_from_a2_paths_state_after_rms": 0.0087,
+      "apart_from_a2_paths_state_after_over_its_action": 0.98
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0063,
+      "apart_from_original_before_rms": 0.0096,
+      "apart_from_original_after_rms": 0.003,
+      "a2_paths_action_kept_before": 0.431,
+      "a2_paths_action_kept_after": 0.114,
+      "apart_from_a2_paths_state_after_rms": 0.0063,
+      "apart_from_a2_paths_state_after_over_its_action": 1.001
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0174,
+      "apart_from_original_before_rms": 0.0182,
+      "apart_from_original_after_rms": 0.0185,
+      "a2_paths_action_kept_before": 0.986,
+      "a2_paths_action_kept_after": 0.982,
+      "apart_from_a2_paths_state_after_rms": 0.0072,
+      "apart_from_a2_paths_state_after_over_its_action": 0.413
+     }
+    },
+    "fit": {
+     "steps": 71,
+     "shortened": 4,
+     "restarts": 2,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 54.2
+   },
+   {
+    "layer": 6,
+    "kind": "attention",
+    "tensor": "blk.6.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 7.188588155092526e-05,
+    "other_half_left_over_asked": 0.1413,
+    "a2_paths_change_over_matrix": 0.0726,
+    "correction_over_a2_paths_change": 0.0706,
+    "intended_correction_over_a2_paths_change": 0.0692,
+    "a2_paths_change_kept": 0.995,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0007535588581542792,
+     "median": 0.002162526292297545,
+     "most": 0.011168133916305776
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0073,
+      "apart_from_original_before_rms": 0.0052,
+      "apart_from_original_after_rms": 0.0011,
+      "a2_paths_action_kept_before": 0.343,
+      "a2_paths_action_kept_after": 0.023,
+      "apart_from_a2_paths_state_after_rms": 0.0073,
+      "apart_from_a2_paths_state_after_over_its_action": 0.988
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0056,
+      "apart_from_original_before_rms": 0.0048,
+      "apart_from_original_after_rms": 0.0027,
+      "a2_paths_action_kept_before": 0.488,
+      "a2_paths_action_kept_after": 0.115,
+      "apart_from_a2_paths_state_after_rms": 0.0056,
+      "apart_from_a2_paths_state_after_over_its_action": 0.997
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0139,
+      "apart_from_original_before_rms": 0.0148,
+      "apart_from_original_after_rms": 0.015,
+      "a2_paths_action_kept_before": 0.987,
+      "a2_paths_action_kept_after": 0.984,
+      "apart_from_a2_paths_state_after_rms": 0.0061,
+      "apart_from_a2_paths_state_after_over_its_action": 0.439
+     }
+    },
+    "fit": {
+     "steps": 29,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 13.5
+   },
+   {
+    "layer": 6,
+    "kind": "feedforward",
+    "tensor": "blk.6.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00010364456046415321,
+    "other_half_left_over_asked": 0.0916,
+    "a2_paths_change_over_matrix": 0.1031,
+    "correction_over_a2_paths_change": 0.0271,
+    "intended_correction_over_a2_paths_change": 0.0269,
+    "a2_paths_change_kept": 0.9992,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0020313187461776148,
+     "median": 0.006122225680103035,
+     "most": 0.028332977394004873
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0086,
+      "apart_from_original_before_rms": 0.0106,
+      "apart_from_original_after_rms": 0.0018,
+      "a2_paths_action_kept_before": 0.474,
+      "a2_paths_action_kept_after": 0.049,
+      "apart_from_a2_paths_state_after_rms": 0.0083,
+      "apart_from_a2_paths_state_after_over_its_action": 0.973
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0062,
+      "apart_from_original_before_rms": 0.0091,
+      "apart_from_original_after_rms": 0.0038,
+      "a2_paths_action_kept_before": 0.511,
+      "a2_paths_action_kept_after": 0.139,
+      "apart_from_a2_paths_state_after_rms": 0.0064,
+      "apart_from_a2_paths_state_after_over_its_action": 1.046
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0189,
+      "apart_from_original_before_rms": 0.0204,
+      "apart_from_original_after_rms": 0.0207,
+      "a2_paths_action_kept_before": 0.992,
+      "a2_paths_action_kept_after": 0.988,
+      "apart_from_a2_paths_state_after_rms": 0.0089,
+      "apart_from_a2_paths_state_after_over_its_action": 0.471
+     }
+    },
+    "fit": {
+     "steps": 107,
+     "shortened": 3,
+     "restarts": 2,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 58.3
+   },
+   {
+    "layer": 7,
+    "kind": "attention",
+    "tensor": "blk.7.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 7.188588155092526e-05,
+    "other_half_left_over_asked": 0.1042,
+    "a2_paths_change_over_matrix": 0.0958,
+    "correction_over_a2_paths_change": 0.0755,
+    "intended_correction_over_a2_paths_change": 0.0743,
+    "a2_paths_change_kept": 0.9944,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0010636045836797568,
+     "median": 0.004207025468064715,
+     "most": 0.01806688560793031
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0113,
+      "apart_from_original_before_rms": 0.0097,
+      "apart_from_original_after_rms": 0.0018,
+      "a2_paths_action_kept_before": 0.569,
+      "a2_paths_action_kept_after": 0.027,
+      "apart_from_a2_paths_state_after_rms": 0.0111,
+      "apart_from_a2_paths_state_after_over_its_action": 0.986
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0091,
+      "apart_from_original_before_rms": 0.009,
+      "apart_from_original_after_rms": 0.004,
+      "a2_paths_action_kept_before": 0.689,
+      "a2_paths_action_kept_after": 0.09,
+      "apart_from_a2_paths_state_after_rms": 0.0091,
+      "apart_from_a2_paths_state_after_over_its_action": 1.01
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0202,
+      "apart_from_original_before_rms": 0.0221,
+      "apart_from_original_after_rms": 0.0228,
+      "a2_paths_action_kept_before": 0.997,
+      "a2_paths_action_kept_after": 0.978,
+      "apart_from_a2_paths_state_after_rms": 0.0115,
+      "apart_from_a2_paths_state_after_over_its_action": 0.573
+     }
+    },
+    "fit": {
+     "steps": 65,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 14.3
+   },
+   {
+    "layer": 7,
+    "kind": "feedforward",
+    "tensor": "blk.7.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00020728912092830642,
+    "other_half_left_over_asked": 0.0899,
+    "a2_paths_change_over_matrix": 0.0962,
+    "correction_over_a2_paths_change": 0.0303,
+    "intended_correction_over_a2_paths_change": 0.03,
+    "a2_paths_change_kept": 0.999,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.002792537002455699,
+     "median": 0.007627796951949822,
+     "most": 0.025818032663387988
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0119,
+      "apart_from_original_before_rms": 0.0146,
+      "apart_from_original_after_rms": 0.0026,
+      "a2_paths_action_kept_before": 0.437,
+      "a2_paths_action_kept_after": 0.052,
+      "apart_from_a2_paths_state_after_rms": 0.0116,
+      "apart_from_a2_paths_state_after_over_its_action": 0.973
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0086,
+      "apart_from_original_before_rms": 0.0129,
+      "apart_from_original_after_rms": 0.0049,
+      "a2_paths_action_kept_before": 0.482,
+      "a2_paths_action_kept_after": 0.122,
+      "apart_from_a2_paths_state_after_rms": 0.009,
+      "apart_from_a2_paths_state_after_over_its_action": 1.041
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0259,
+      "apart_from_original_before_rms": 0.029,
+      "apart_from_original_after_rms": 0.0294,
+      "a2_paths_action_kept_before": 0.991,
+      "a2_paths_action_kept_after": 0.993,
+      "apart_from_a2_paths_state_after_rms": 0.0142,
+      "apart_from_a2_paths_state_after_over_its_action": 0.55
+     }
+    },
+    "fit": {
+     "steps": 77,
+     "shortened": 1,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 55.6
+   },
+   {
+    "layer": 8,
+    "kind": "attention",
+    "tensor": "blk.8.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.000287543526203701,
+    "other_half_left_over_asked": 0.1343,
+    "a2_paths_change_over_matrix": 0.1218,
+    "correction_over_a2_paths_change": 0.0596,
+    "intended_correction_over_a2_paths_change": 0.0586,
+    "a2_paths_change_kept": 0.9959,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.0015104357585073622,
+     "median": 0.005298499833671073,
+     "most": 0.03344034159493554
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0184,
+      "apart_from_original_before_rms": 0.0166,
+      "apart_from_original_after_rms": 0.0032,
+      "a2_paths_action_kept_before": 0.549,
+      "a2_paths_action_kept_after": 0.042,
+      "apart_from_a2_paths_state_after_rms": 0.0179,
+      "apart_from_a2_paths_state_after_over_its_action": 0.973
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0141,
+      "apart_from_original_before_rms": 0.0152,
+      "apart_from_original_after_rms": 0.0062,
+      "a2_paths_action_kept_before": 0.682,
+      "a2_paths_action_kept_after": 0.105,
+      "apart_from_a2_paths_state_after_rms": 0.014,
+      "apart_from_a2_paths_state_after_over_its_action": 0.99
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0327,
+      "apart_from_original_before_rms": 0.0361,
+      "apart_from_original_after_rms": 0.0381,
+      "a2_paths_action_kept_before": 0.993,
+      "a2_paths_action_kept_after": 0.987,
+      "apart_from_a2_paths_state_after_rms": 0.0203,
+      "apart_from_a2_paths_state_after_over_its_action": 0.621
+     }
+    },
+    "fit": {
+     "steps": 29,
+     "shortened": 3,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 13.5
+   },
+   {
+    "layer": 8,
+    "kind": "feedforward",
+    "tensor": "blk.8.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00020728912092830642,
+    "other_half_left_over_asked": 0.113,
+    "a2_paths_change_over_matrix": 0.0621,
+    "correction_over_a2_paths_change": 0.0689,
+    "intended_correction_over_a2_paths_change": 0.0678,
+    "a2_paths_change_kept": 0.9993,
+    "protected_input_outside_the_repaired_answers_span": {
+     "least": 0.003428287618864633,
+     "median": 0.008239948586613106,
+     "most": 0.04439616999827822
+    },
+    "sets": {
+     "protected: the damaged answers through their first changed token": {
+      "rows": 104,
+      "a2_paths_action_rms": 0.0176,
+      "apart_from_original_before_rms": 0.0163,
+      "apart_from_original_after_rms": 0.0031,
+      "a2_paths_action_kept_before": 0.377,
+      "a2_paths_action_kept_after": 0.037,
+      "apart_from_a2_paths_state_after_rms": 0.0173,
+      "apart_from_a2_paths_state_after_over_its_action": 0.978
+     },
+     "the repaired answers, the same steps of the opening": {
+      "rows": 140,
+      "a2_paths_action_rms": 0.0128,
+      "apart_from_original_before_rms": 0.014,
+      "apart_from_original_after_rms": 0.006,
+      "a2_paths_action_kept_before": 0.465,
+      "a2_paths_action_kept_after": 0.108,
+      "apart_from_a2_paths_state_after_rms": 0.0128,
+      "apart_from_a2_paths_state_after_over_its_action": 1.003
+     },
+     "the repaired answers, later steps before their own first changed token": {
+      "rows": 125,
+      "a2_paths_action_rms": 0.0329,
+      "apart_from_original_before_rms": 0.0373,
+      "apart_from_original_after_rms": 0.0376,
+      "a2_paths_action_kept_before": 0.987,
+      "a2_paths_action_kept_after": 0.983,
+      "apart_from_a2_paths_state_after_rms": 0.0192,
+      "apart_from_a2_paths_state_after_over_its_action": 0.584
+     }
+    },
+    "fit": {
+     "steps": 102,
+     "shortened": 5,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state"
+    },
+    "seconds": 54.3
+   }
+  ]
+ },
+ "prediction_vs_result": {
+  "building": "As predicted. The protected rows end nearer their original state at every matrix and most of a2-path's action on them is gone (0.01 to 0.05 left). On the repaired answers' same steps it is gone to about the same degree (0.07 to 0.14 left), and on their later steps it is kept (0.98 to 1.01). The declaration named two answers for the later steps; the reading includes three rows of a third, whose first change is at step 18.",
+  "fourth_token": "As predicted in direction, far less in size than the build suggested. The preference moves less than under a2-path in 58 of the 60 answers (median 0.28 against 0.34) and 31 answers leave their text there against a2-path's 40. The rows ended 0.08 to 0.22 of a2-path's action from their original state; the preference moved back much less than that.",
+  "damaged_answers": "Not as predicted. 3 of the 12 damaged answers are complete, not most of them, and 14 of all 30 correct answers against a2-path's 18. Their first step apart from the original: [3, 3, 3, 3, 11, 15, 15, 15, 15, 93, 107, 305] (under a2-path [3, 3, 3, 3, 3, 3, 3, 11, 15, 15, 15, 15]).",
+  "wrong_answers": "As predicted. 28 of 30 no longer subtract the descent on the judge's field, and 11 are complete, more than b2-path's 4 and fewer than a2-path's 17: 7 of the 17 a2-path repaired and 4 of the 13 it had not.",
+  "traces": "The answers that were wrong lie 0.95 of the way along the gap over places 142 to 313 (predicted: more than half; a2-path 0.79); the correct answers travelled 1.24 gaps (predicted: less than a2-path's 1.27).",
+  "round_one": "Not as predicted. 4 of round one's 7 correct answers are broken, against a2-path's 4.",
+  "would_weaken_it": "The hypothesis's weakening result did not occur. The added assumption's did not occur in the form declared: none of the 17 repaired answers has the field 'descent subtracted', though 10 are no longer complete and 6 no longer state the right available energy. The first construction result occurred in part: the protected rows returned most of the way at all 18 matrices and 9 of the 12 damaged answers still leave their text by step 15 (4 at the fourth token, where a2-path had 7). The declaration read that outcome as the action reaching the opening through the question's positions. That reading is not established (Astra's review): the rows did not return entirely, only the directions of the states were compared, and a preference between two tokens is not proportional to how far rows moved. The second did not: 0.993 to 0.999 of a2-path's change of each matrix is kept."
+ },
+ "failures_only": {
+  "note": "Every answer with its fields in the original model, after a2-path and after this run; its role by a2-path's record; the first step at which it writes another token than the original, under a2-path and under this run, and than a2-path's own answer; its fourth token; and for the 60 of the overlap where its own trace lies between the two patterns over places 142 to 313.",
+  "answers": [
+   {
+    "id": "discovery-05-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 91.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 91.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 434,
+    "steps": 563,
+    "steps_under_a2_path": 632,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0921,
+      0.2558,
+      0.1869
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.03,
+      "edited": 0.75
+     },
+     "turns": {
+      "original": 0.02,
+      "edited": 0.73
+     }
+    }
+   },
+   {
+    "id": "discovery-05-channel-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 91.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 31.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 501,
+    "steps": 671,
+    "steps_under_a2_path": 746,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1024,
+      0.276,
+      0.2097
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.18,
+      "edited": 0.74
+     },
+     "turns": {
+      "original": 0.2,
+      "edited": 0.71
+     }
+    }
+   },
+   {
+    "id": "discovery-10-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 55.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 85.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 92,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 527,
+    "steps_under_a2_path": 620,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.2383,
+      0.0596,
+      -0.0178
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.3,
+      "edited": 1.41
+     },
+     "turns": {
+      "original": 0.31,
+      "edited": 1.4
+     }
+    }
+   },
+   {
+    "id": "discovery-11-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 21.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 111.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 564,
+    "steps_under_a2_path": 580,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2481,
+      0.1629,
+      0.0421
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.05,
+      "edited": 1.03
+     },
+     "turns": {
+      "original": -0.07,
+      "edited": 0.98
+     }
+    }
+   },
+   {
+    "id": "discovery-17-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 31.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 11,
+    "first_step_apart_from_a2_paths_answer": 600,
+    "steps": 768,
+    "steps_under_a2_path": 766,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3756,
+      -0.0019,
+      -0.0743
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.01,
+      "edited": 1.09
+     },
+     "turns": {
+      "original": -0.01,
+      "edited": 1.09
+     }
+    }
+   },
+   {
+    "id": "expanded-001-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 20.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 242,
+    "steps": 705,
+    "steps_under_a2_path": 560,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.1323,
+      0.4834,
+      0.4032
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.13,
+      "edited": 0.88
+     },
+     "turns": {
+      "original": -0.09,
+      "edited": 0.84
+     }
+    }
+   },
+   {
+    "id": "expanded-001-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 80.0,
+      "required": 0.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 80.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 370,
+    "steps": 548,
+    "steps_under_a2_path": 546,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.1949,
+      0.5194,
+      0.4958
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.11,
+      "edited": 0.87
+     },
+     "turns": {
+      "original": -0.08,
+      "edited": 0.82
+     }
+    }
+   },
+   {
+    "id": "expanded-014-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 56.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -24.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 38.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 38.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 242,
+    "steps": 515,
+    "steps_under_a2_path": 508,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0248,
+      0.3045,
+      0.2635
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.24,
+      "edited": 0.88
+     },
+     "turns": {
+      "original": -0.21,
+      "edited": 0.84
+     }
+    }
+   },
+   {
+    "id": "expanded-020-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 136.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 92.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 58,
+    "steps": 626,
+    "steps_under_a2_path": 554,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.035,
+      0.2796,
+      0.2564
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.03,
+      "edited": 0.77
+     },
+     "turns": {
+      "original": -0.03,
+      "edited": 0.74
+     }
+    }
+   },
+   {
+    "id": "expanded-022-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 483,
+    "steps": 600,
+    "steps_under_a2_path": 599,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0057,
+      0.3427,
+      0.3303
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.09,
+      "edited": 0.75
+     },
+     "turns": {
+      "original": -0.09,
+      "edited": 0.72
+     }
+    }
+   },
+   {
+    "id": "expanded-034-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 18,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 530,
+    "steps_under_a2_path": 742,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.0807,
+      0.3404,
+      0.2962
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.16,
+      "edited": 0.97
+     },
+     "turns": {
+      "original": -0.16,
+      "edited": 0.93
+     }
+    }
+   },
+   {
+    "id": "expanded-040-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 114.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 54.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 54.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 58,
+    "steps": 706,
+    "steps_under_a2_path": 619,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1306,
+      0.1865,
+      0.1532
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.29,
+      "edited": 0.63
+     },
+     "turns": {
+      "original": 0.3,
+      "edited": 0.63
+     }
+    }
+   },
+   {
+    "id": "expanded-042-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 106.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 46.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 106.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 106.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": null,
+    "steps": 535,
+    "steps_under_a2_path": 535,
+    "same_text_as_a2_paths_answer": true,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.1085,
+      0.4165,
+      0.3559
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.1,
+      "edited": 0.99
+     },
+     "turns": {
+      "original": -0.11,
+      "edited": 0.94
+     }
+    }
+   },
+   {
+    "id": "expanded-044-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 144.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 90.0
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 144.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 144.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 25,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 641,
+    "steps_under_a2_path": 637,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3061,
+      0.0636,
+      -0.0132
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.16,
+      "edited": 1.25
+     },
+     "turns": {
+      "original": 0.17,
+      "edited": 1.25
+     }
+    }
+   },
+   {
+    "id": "expanded-045-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 140.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 110.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 110.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 387,
+    "steps": 564,
+    "steps_under_a2_path": 576,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2264,
+      0.164,
+      0.0529
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.02,
+      "edited": 1.02
+     },
+     "turns": {
+      "original": -0.03,
+      "edited": 0.97
+     }
+    }
+   },
+   {
+    "id": "expanded-046-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 136.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 166.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 631,
+    "steps_under_a2_path": 562,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2309,
+      0.1166,
+      0.0657
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.05,
+      "edited": 0.88
+     },
+     "turns": {
+      "original": -0.07,
+      "edited": 0.84
+     }
+    }
+   },
+   {
+    "id": "expanded-046-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 363,
+    "steps": 570,
+    "steps_under_a2_path": 604,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2047,
+      0.1442,
+      0.0438
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.07,
+      "edited": 0.63
+     },
+     "turns": {
+      "original": -0.08,
+      "edited": 0.61
+     }
+    }
+   },
+   {
+    "id": "expanded-058-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 132.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 92.0,
+      "required": 120.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 18,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 519,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.0465,
+      0.3569,
+      0.2899
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.15,
+      "edited": 0.96
+     },
+     "turns": {
+      "original": -0.15,
+      "edited": 0.91
+     }
+    }
+   },
+   {
+    "id": "expanded-068-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 196.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 196.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 196.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 462,
+    "steps_under_a2_path": 618,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3051,
+      0.0532,
+      -0.0171
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.07,
+      "edited": 1.24
+     },
+     "turns": {
+      "original": 0.07,
+      "edited": 1.23
+     }
+    }
+   },
+   {
+    "id": "expanded-069-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 192.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 32.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 192.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 192.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 340,
+    "steps": 539,
+    "steps_under_a2_path": 555,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1983,
+      0.144,
+      0.0763
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.01,
+      "edited": 0.87
+     },
+     "turns": {
+      "original": -0.02,
+      "edited": 0.84
+     }
+    }
+   },
+   {
+    "id": "expanded-070-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 188.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 148.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 569,
+    "steps_under_a2_path": 684,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2478,
+      0.0914,
+      0.0253
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.03,
+      "edited": 0.86
+     },
+     "turns": {
+      "original": 0.01,
+      "edited": 0.82
+     }
+    }
+   },
+   {
+    "id": "expanded-070-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 92.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 120.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 188.0,
+      "required": 12.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 768,
+    "steps_under_a2_path": 548,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.2657,
+      0.0472,
+      -0.0124
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.05,
+      "edited": 1.11
+     },
+     "turns": {
+      "original": -0.06,
+      "edited": 1.11
+     }
+    }
+   },
+   {
+    "id": "expanded-087-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 166.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -34.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 166.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 166.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 68,
+    "first_step_apart_from_the_original_under_a2_path": 83,
+    "first_step_apart_from_a2_paths_answer": 68,
+    "steps": 420,
+    "steps_under_a2_path": 469,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.497,
+      -0.1706,
+      -0.2309
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.21,
+      "edited": 0.99
+     },
+     "turns": {
+      "original": -0.18,
+      "edited": 0.98
+     }
+    }
+   },
+   {
+    "id": "expanded-089-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 194.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 94.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 344.0,
+      "required": 0.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 344.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 458,
+    "steps": 551,
+    "steps_under_a2_path": 572,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0476,
+      0.3453,
+      0.228
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.27,
+      "edited": 0.76
+     },
+     "turns": {
+      "original": 0.28,
+      "edited": 0.73
+     }
+    }
+   },
+   {
+    "id": "expanded-092-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 248.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 48.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 248.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 248.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 11,
+    "first_step_apart_from_a2_paths_answer": 262,
+    "steps": 464,
+    "steps_under_a2_path": 552,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3225,
+      -0.0177,
+      -0.0564
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.13,
+      "edited": 1.21
+     },
+     "turns": {
+      "original": 0.11,
+      "edited": 1.21
+     }
+    }
+   },
+   {
+    "id": "expanded-093-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, not complete after a2-path",
+    "expected": {
+     "availableJ": 244.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 44.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 294.0,
+      "required": 0.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 294.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 491,
+    "steps": 613,
+    "steps_under_a2_path": 566,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2631,
+      0.0621,
+      0.0368
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.11,
+      "edited": 0.75
+     },
+     "turns": {
+      "original": 0.1,
+      "edited": 0.73
+     }
+    }
+   },
+   {
+    "id": "expanded-094-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 290.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 564,
+    "steps_under_a2_path": 654,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2847,
+      0.0588,
+      0.0172
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.07,
+      "edited": 0.75
+     },
+     "turns": {
+      "original": -0.09,
+      "edited": 0.72
+     }
+    }
+   },
+   {
+    "id": "expanded-094-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 240.0,
+      "required": 250.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 532,
+    "steps_under_a2_path": 651,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3193,
+      0.0337,
+      -0.0783
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.16,
+      "edited": 1.21
+     },
+     "turns": {
+      "original": -0.17,
+      "edited": 1.2
+     }
+    }
+   },
+   {
+    "id": "expanded-095-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 236.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 236.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 69,
+    "first_step_apart_from_the_original_under_a2_path": 69,
+    "first_step_apart_from_a2_paths_answer": 207,
+    "steps": 531,
+    "steps_under_a2_path": 466,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.4279,
+      -0.0889,
+      -0.1634
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.01,
+      "edited": 0.93
+     },
+     "turns": {
+      "original": -0.03,
+      "edited": 0.92
+     }
+    }
+   },
+   {
+    "id": "expanded-095-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "role": "overlap, were wrong, complete after a2-path",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 236.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 236.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 11,
+    "first_step_apart_from_a2_paths_answer": 303,
+    "steps": 473,
+    "steps_under_a2_path": 446,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.4425,
+      -0.1394,
+      -0.175
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.16,
+      "edited": 1.24
+     },
+     "turns": {
+      "original": 0.16,
+      "edited": 1.23
+     }
+    }
+   },
+   {
+    "id": "discovery-01-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 506,
+    "steps": 598,
+    "steps_under_a2_path": 603,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0785,
+      0.2176,
+      0.1691
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.21,
+      "edited": 0.74
+     },
+     "turns": {
+      "original": 1.22,
+      "edited": 0.71
+     }
+    }
+   },
+   {
+    "id": "expanded-021-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 88.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": null,
+    "steps": 532,
+    "steps_under_a2_path": 532,
+    "same_text_as_a2_paths_answer": true,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0029,
+      0.4269,
+      0.3243
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.97,
+      "edited": 0.76
+     },
+     "turns": {
+      "original": 0.93,
+      "edited": 0.73
+     }
+    }
+   },
+   {
+    "id": "discovery-06-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 305,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 659,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.2996,
+      0.0323,
+      -0.0089
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.34,
+      "edited": 1.11
+     },
+     "turns": {
+      "original": 1.34,
+      "edited": 1.12
+     }
+    }
+   },
+   {
+    "id": "discovery-07-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 69.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 69.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 69.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 39.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 643,
+    "steps_under_a2_path": 558,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.3218,
+      0.0112,
+      0.0452
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.38,
+      "edited": 0.6
+     },
+     "turns": {
+      "original": 0.39,
+      "edited": 0.58
+     }
+    }
+   },
+   {
+    "id": "discovery-15-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 135.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 71,
+    "first_step_apart_from_the_original_under_a2_path": 71,
+    "first_step_apart_from_a2_paths_answer": 71,
+    "steps": 421,
+    "steps_under_a2_path": 545,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.4104,
+      -0.0007,
+      -0.0655
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.8,
+      "edited": 1.0
+     },
+     "turns": {
+      "original": 0.8,
+      "edited": 0.99
+     }
+    }
+   },
+   {
+    "id": "expanded-003-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 12.0,
+     "requiredJ": 20,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 526,
+    "steps": 537,
+    "steps_under_a2_path": 531,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0389,
+      0.3366,
+      0.2637
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.3,
+      "edited": 0.86
+     },
+     "turns": {
+      "original": 1.29,
+      "edited": 0.83
+     }
+    }
+   },
+   {
+    "id": "discovery-00-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 27.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 27.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 87.0,
+      "required": 0.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 87.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": null,
+    "steps": 543,
+    "steps_under_a2_path": 543,
+    "same_text_as_a2_paths_answer": true,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.3164,
+      0.6513,
+      0.5534
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.97,
+      "edited": 0.88
+     },
+     "turns": {
+      "original": 0.97,
+      "edited": 0.83
+     }
+    }
+   },
+   {
+    "id": "expanded-006-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 242,
+    "steps": 565,
+    "steps_under_a2_path": 514,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1142,
+      0.2457,
+      0.2079
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.99,
+      "edited": 0.88
+     },
+     "turns": {
+      "original": 0.96,
+      "edited": 0.84
+     }
+    }
+   },
+   {
+    "id": "expanded-004-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 44.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 386,
+    "steps": 598,
+    "steps_under_a2_path": 546,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0528,
+      0.2266,
+      0.2028
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.21,
+      "edited": 0.74
+     },
+     "turns": {
+      "original": 1.22,
+      "edited": 0.7
+     }
+    }
+   },
+   {
+    "id": "expanded-018-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 0.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 188.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 315,
+    "steps": 613,
+    "steps_under_a2_path": 532,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.2609,
+      0.5983,
+      0.4956
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.03,
+      "edited": 0.82
+     },
+     "turns": {
+      "original": 1.03,
+      "edited": 0.79
+     }
+    }
+   },
+   {
+    "id": "discovery-08-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 73.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 73.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 73.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 13.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 58,
+    "steps": 603,
+    "steps_under_a2_path": 528,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0908,
+      0.1455,
+      0.1483
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.25,
+      "edited": 0.6
+     },
+     "turns": {
+      "original": 1.27,
+      "edited": 0.59
+     }
+    }
+   },
+   {
+    "id": "expanded-024-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 42.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 42.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 415,
+    "steps": 768,
+    "steps_under_a2_path": 729,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1583,
+      0.1353,
+      0.0491
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.34,
+      "edited": 0.47
+     },
+     "turns": {
+      "original": 1.33,
+      "edited": 0.45
+     }
+    }
+   },
+   {
+    "id": "discovery-10-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 25.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 411,
+    "steps": 564,
+    "steps_under_a2_path": 535,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1158,
+      0.2189,
+      0.2063
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.26,
+      "edited": 1.0
+     },
+     "turns": {
+      "original": 1.27,
+      "edited": 0.95
+     }
+    }
+   },
+   {
+    "id": "expanded-028-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 72.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 72.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": 18.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 18.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 11,
+    "first_step_apart_from_a2_paths_answer": 603,
+    "steps": 768,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3039,
+      -0.0043,
+      -0.0451
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.46,
+      "edited": 1.26
+     },
+     "turns": {
+      "original": 0.47,
+      "edited": 1.26
+     }
+    }
+   },
+   {
+    "id": "expanded-029-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -52.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 282,
+    "steps": 768,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2687,
+      0.1244,
+      0.0657
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.38,
+      "edited": 0.6
+     },
+     "turns": {
+      "original": 0.39,
+      "edited": 0.58
+     }
+    }
+   },
+   {
+    "id": "expanded-022-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 84.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 148.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 148.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 334,
+    "steps": 618,
+    "steps_under_a2_path": 581,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0091,
+      0.412,
+      0.2432
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.11,
+      "edited": 0.9
+     },
+     "turns": {
+      "original": 1.11,
+      "edited": 0.87
+     }
+    }
+   },
+   {
+    "id": "discovery-11-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 111.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 574,
+    "steps_under_a2_path": 583,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.279,
+      0.1599,
+      0.0195
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.17,
+      "edited": 0.56
+     },
+     "turns": {
+      "original": 1.16,
+      "edited": 0.55
+     }
+    }
+   },
+   {
+    "id": "expanded-010-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 18.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 18.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 58,
+    "steps": 547,
+    "steps_under_a2_path": 494,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.255,
+      0.5384,
+      0.527
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.02,
+      "edited": 0.66
+     },
+     "turns": {
+      "original": 1.02,
+      "edited": 0.62
+     }
+    }
+   },
+   {
+    "id": "expanded-064-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 156.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 156.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 156.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 116.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 350,
+    "steps": 551,
+    "steps_under_a2_path": 561,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1046,
+      0.1382,
+      0.1052
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.35,
+      "edited": 0.99
+     },
+     "turns": {
+      "original": 1.34,
+      "edited": 0.95
+     }
+    }
+   },
+   {
+    "id": "expanded-065-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 152.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 350,
+    "steps": 555,
+    "steps_under_a2_path": 561,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.0411,
+      0.2969,
+      0.2151
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.08,
+      "edited": 0.99
+     },
+     "turns": {
+      "original": 1.09,
+      "edited": 0.95
+     }
+    }
+   },
+   {
+    "id": "expanded-071-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 184.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 144.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 107,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 535,
+    "steps_under_a2_path": 547,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3797,
+      0.0339,
+      -0.1233
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.98,
+      "edited": 0.95
+     },
+     "turns": {
+      "original": 0.98,
+      "edited": 0.94
+     }
+    }
+   },
+   {
+    "id": "discovery-17-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 71.0,
+      "required": 120.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 452,
+    "steps_under_a2_path": 581,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3934,
+      0.0569,
+      -0.0908
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.29,
+      "edited": 1.26
+     },
+     "turns": {
+      "original": 1.31,
+      "edited": 1.25
+     }
+    }
+   },
+   {
+    "id": "expanded-039-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 90.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 103,
+    "first_step_apart_from_the_original_under_a2_path": 103,
+    "first_step_apart_from_a2_paths_answer": null,
+    "steps": 412,
+    "steps_under_a2_path": 412,
+    "same_text_as_a2_paths_answer": true,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3681,
+      -0.0827,
+      -0.1401
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.92,
+      "edited": 0.98
+     },
+     "turns": {
+      "original": 0.9,
+      "edited": 0.96
+     }
+    }
+   },
+   {
+    "id": "expanded-017-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 0.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 132.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 315,
+    "steps": 512,
+    "steps_under_a2_path": 535,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " calculation",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      0.2256,
+      0.6329,
+      0.5269
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.02,
+      "edited": 0.94
+     },
+     "turns": {
+      "original": 1.02,
+      "edited": 0.9
+     }
+    }
+   },
+   {
+    "id": "expanded-076-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 128.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 128.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 11,
+    "first_step_apart_from_a2_paths_answer": 260,
+    "steps": 445,
+    "steps_under_a2_path": 407,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3522,
+      -0.0331,
+      -0.1161
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.66,
+      "edited": 1.25
+     },
+     "turns": {
+      "original": 0.67,
+      "edited": 1.25
+     }
+    }
+   },
+   {
+    "id": "expanded-077-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, broken by a2-path",
+    "expected": {
+     "availableJ": 124.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 124.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 100.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -76.0,
+      "required": 50.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 251,
+    "steps": 730,
+    "steps_under_a2_path": 532,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.2761,
+      0.0927,
+      0.0065
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.66,
+      "edited": 0.51
+     },
+     "turns": {
+      "original": 0.67,
+      "edited": 0.49
+     }
+    }
+   },
+   {
+    "id": "expanded-078-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 120.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 71,
+    "first_step_apart_from_the_original_under_a2_path": 128,
+    "first_step_apart_from_a2_paths_answer": 71,
+    "steps": 566,
+    "steps_under_a2_path": 434,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.3546,
+      -0.0028,
+      -0.045
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.52,
+      "edited": 0.46
+     },
+     "turns": {
+      "original": 0.54,
+      "edited": 0.48
+     }
+    }
+   },
+   {
+    "id": "discovery-23-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 241.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 241.0,
+      "required": 250.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "first_step_apart_from_the_original_under_a2_path": 93,
+    "first_step_apart_from_a2_paths_answer": 262,
+    "steps": 530,
+    "steps_under_a2_path": 443,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " compact",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.4347,
+      -0.0257,
+      -0.0783
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.27,
+      "edited": 1.22
+     },
+     "turns": {
+      "original": 1.29,
+      "edited": 1.21
+     }
+    }
+   },
+   {
+    "id": "expanded-023-h1",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 80.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 340,
+    "steps": 579,
+    "steps_under_a2_path": 532,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " calculation",
+     "calculation_over_compact": [
+      -0.1594,
+      0.1826,
+      0.1309
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.11,
+      "edited": 0.79
+     },
+     "turns": {
+      "original": 1.11,
+      "edited": 0.76
+     }
+    }
+   },
+   {
+    "id": "expanded-047-h3",
+    "set": "overlap",
+    "group": "correct",
+    "role": "overlap, were correct, complete after a2-path",
+    "expected": {
+     "availableJ": 132.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 103,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 422,
+    "steps_under_a2_path": 564,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false,
+    "fourth_token": {
+     "original_writes": " compact",
+     "a2_path_writes": " calculation",
+     "writes": " compact",
+     "calculation_over_compact": [
+      -0.4003,
+      0.0487,
+      -0.0706
+     ]
+    },
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.93,
+      "edited": 1.0
+     },
+     "turns": {
+      "original": 0.93,
+      "edited": 0.98
+     }
+    }
+   },
+   {
+    "id": "cart-base",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": -38.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 122.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 124,
+    "steps": 678,
+    "steps_under_a2_path": 518,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "cart-changed",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": -38.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": -38.0,
+      "required": 118.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 235,
+    "steps": 699,
+    "steps_under_a2_path": 573,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "sled-base",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 120.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 145,
+    "steps": 484,
+    "steps_under_a2_path": 528,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "sled-changed",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 120.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 298,
+    "steps": 644,
+    "steps_under_a2_path": 478,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "bead-base",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 40,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 768,
+    "steps_under_a2_path": 613,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "bead-changed",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 126,
+    "first_step_apart_from_a2_paths_answer": 15,
+    "steps": 721,
+    "steps_under_a2_path": 611,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "coaster-base",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 125.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 125.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 121,
+    "first_step_apart_from_the_original_under_a2_path": 121,
+    "first_step_apart_from_a2_paths_answer": null,
+    "steps": 523,
+    "steps_under_a2_path": 523,
+    "same_text_as_a2_paths_answer": true,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "coaster-changed",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 100,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 125.0,
+      "required": 100.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 125.0,
+      "required": 100.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 121,
+    "first_step_apart_from_the_original_under_a2_path": 121,
+    "first_step_apart_from_a2_paths_answer": null,
+    "steps": 532,
+    "steps_under_a2_path": 532,
+    "same_text_as_a2_paths_answer": true,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "block-base",
+    "set": "round one",
+    "group": "correct",
+    "role": "round one, were correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 30.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 362,
+    "steps": 552,
+    "steps_under_a2_path": 557,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "block-changed",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 58,
+    "steps": 612,
+    "steps_under_a2_path": 530,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "trolley-base",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 80.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 317,
+    "steps": 531,
+    "steps_under_a2_path": 515,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "trolley-changed",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 108,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 3,
+    "steps": 561,
+    "steps_under_a2_path": 478,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "block-m2-base",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 2.0,
+      "required": 20.0
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 319,
+    "steps": 532,
+    "steps_under_a2_path": 541,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "block-m2-changed",
+    "set": "round one",
+    "group": "correct",
+    "role": "round one, were correct",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 40.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 15,
+    "first_step_apart_from_the_original_under_a2_path": 15,
+    "first_step_apart_from_a2_paths_answer": 242,
+    "steps": 516,
+    "steps_under_a2_path": 569,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "block-m4-base",
+    "set": "round one",
+    "group": "correct",
+    "role": "round one, were correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 58,
+    "steps": 668,
+    "steps_under_a2_path": 573,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "block-m4-changed",
+    "set": "round one",
+    "group": "correct",
+    "role": "round one, were correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 3,
+    "first_step_apart_from_the_original_under_a2_path": 3,
+    "first_step_apart_from_a2_paths_answer": 366,
+    "steps": 540,
+    "steps_under_a2_path": 553,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-parcel-1",
+    "set": "round one",
+    "group": "correct",
+    "role": "round one, were correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 10,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 10.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 158,
+    "first_step_apart_from_the_original_under_a2_path": 158,
+    "first_step_apart_from_a2_paths_answer": 166,
+    "steps": 768,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-parcel-4",
+    "set": "round one",
+    "group": "correct",
+    "role": "round one, were correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 98,
+    "first_step_apart_from_the_original_under_a2_path": 98,
+    "first_step_apart_from_a2_paths_answer": 406,
+    "steps": 495,
+    "steps_under_a2_path": 490,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-carriage-1",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 60.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 11,
+    "first_step_apart_from_the_original_under_a2_path": 11,
+    "first_step_apart_from_a2_paths_answer": 30,
+    "steps": 581,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-carriage-3",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 180,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 744.0,
+      "required": 180.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 744.0,
+      "required": 180.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 178,
+    "first_step_apart_from_the_original_under_a2_path": 178,
+    "first_step_apart_from_a2_paths_answer": null,
+    "steps": 664,
+    "steps_under_a2_path": 664,
+    "same_text_as_a2_paths_answer": true,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-disc-2",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 111,
+    "first_step_apart_from_the_original_under_a2_path": 111,
+    "first_step_apart_from_a2_paths_answer": 563,
+    "steps": 671,
+    "steps_under_a2_path": 665,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-disc-4",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 93,
+    "first_step_apart_from_the_original_under_a2_path": 93,
+    "first_step_apart_from_a2_paths_answer": 200,
+    "steps": 705,
+    "steps_under_a2_path": 708,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-runner-3",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 660.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "first_step_apart_from_the_original_under_a2_path": 12,
+    "first_step_apart_from_a2_paths_answer": 218,
+    "steps": 768,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "confirm-runner-5",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "first_step_apart_from_the_original_under_a2_path": 12,
+    "first_step_apart_from_a2_paths_answer": 298,
+    "steps": 768,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "new-trolley-3",
+    "set": "round one",
+    "group": "correct",
+    "role": "round one, were correct",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -50.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 12,
+    "first_step_apart_from_the_original_under_a2_path": 12,
+    "first_step_apart_from_a2_paths_answer": 146,
+    "steps": 768,
+    "steps_under_a2_path": 745,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "new-trolley-4",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 70.0,
+      "required": 10.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 12,
+    "first_step_apart_from_the_original_under_a2_path": 12,
+    "first_step_apart_from_a2_paths_answer": 305,
+    "steps": 585,
+    "steps_under_a2_path": 764,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "new-sledge-1",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "after_a2_path": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "first_step_apart_from_the_original": 75,
+    "first_step_apart_from_the_original_under_a2_path": 75,
+    "first_step_apart_from_a2_paths_answer": 270,
+    "steps": 768,
+    "steps_under_a2_path": 768,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   },
+   {
+    "id": "new-sledge-2",
+    "set": "round one",
+    "group": "wrong",
+    "role": "round one, were wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 100,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "after_a2_path": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 100.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "first_step_apart_from_the_original": 75,
+    "first_step_apart_from_the_original_under_a2_path": 75,
+    "first_step_apart_from_a2_paths_answer": 135,
+    "steps": 556,
+    "steps_under_a2_path": 646,
+    "same_text_as_a2_paths_answer": false,
+    "same_text_as_the_original": false
+   }
+  ]
+ },
+ "what_this_changes": [
+  "Returning the opening rows most of the way did not return the opening. With the damaged answers' rows brought back to 0.08 to 0.22 of a2-path's action from their original state at all 18 matrices on the given text, the fourth-token preference still moves 0.28 of a score at the median against a2-path's 0.34, and 31 answers leave their text there against 40. What carries the rest is not shown. The question's positions, which every run asked to keep and none kept, are a plausible route; so are what is left of the movement on these rows and the size of the state, which no target holds. A run that returns the question's positions would say.",
+  "Cancelling a2-path's action at the opening did not restore the answers it had broken (3 of 12) and cost repairs (7 of 17 stay complete), with a correction of 2.1% to 9.1% of a2-path's change. 29 of 88 answers changed completeness against a2-path and 4 of 60 texts are the same. Five models close to a2-path have now been read (three fractions of it and the two corrections); every one completes fewer answers than a2-path in both groups, and from 0.58 of its size on every one keeps the calculation repaired in at least 27 of the 30 answers on the judge's field. The count of complete answers separates a2-path from its neighbours; it does not yet separate one construction from another.",
+  "Protection by asking rows for their state has now failed three ways: the rows asked to stay in a2-path and b2-path moved, c2-path's two asks met on the same inputs, and the rows returned here did not bring the answers back. For the next round, what is kept has to include the question's positions and has to be kept by something stronger than an ask among other asks. D2 tries a measure of the change instead of an ask.",
+  "The reading along the gap does not go with complete answers. Over places 142 to 313 the answers that were wrong lie 0.95 of the way to the correct pattern here, with 11 of them complete; c2-path 0.87 with 12; a2-path 0.79 with 17; b2-path 0.63 with 4. It goes with the calculation the edit aims at, which is repaired in 27 to 30 of the 30 in all four. A trace that lies on the correct pattern where the two patterns diverge is what the edit asks for and what it gets; it has not been enough for the whole answer to be right.",
+  "By Astra's limit, this run does not show that a2-path's repair lives in the opening: the correction acts through the weights beyond its 104 rows, and the repairs it lost went with texts that changed."
+ ]
+}

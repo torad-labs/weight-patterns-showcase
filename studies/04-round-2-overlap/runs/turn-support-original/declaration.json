@@ -1,0 +1,154 @@
+{
+  "method_step": 3,
+  "operation": "single-original-turn-support",
+  "status": "admitted_original_only_diagnostic; no native correction",
+  "declared_at": "2026-11-15T20:59:04.199209-06:00",
+  "basis": {
+    "record": "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+    "sha256": "1be12cf319a120c009917218f3567a2fbed1fa48b5fc7dc1f90b1dbc3c5cc80d"
+  },
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/__init__.py",
+      "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/paths.py",
+      "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+      "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+      "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_layout.py",
+      "sha256": "f411405196a3be873be6fe63b755d6880e030c65f51688d0073ebebd887a9250"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reading.py",
+      "sha256": "d2a3a3c4840ef78c03dfd2ab3b8fe4f15855d87b226fd998c6ce1fd7a2446f8e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reference.py",
+      "sha256": "ca4b2a5a2d61b355ef000668f92344cce7a3dfa8b081236aabfc3ac02d5602ed"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference.py",
+      "sha256": "886ed110f646d966fb287afc1eb4f468161a7551ed8d12263db8ae1ed68b04a0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_support.py",
+      "sha256": "ca34598b1e671bf381183e82ca01cb56db6dbee9d40509a97c3d242785d9613d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_support_run.py",
+      "sha256": "00928ea8e1aae5bdd7ea4fe9d709b5c59bfba8b94ec79f4f18d0ef832d226a74"
+    }
+  ],
+  "inputs": [
+    "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/correspondence.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-01-channel-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-06-channel-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-15-channel-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-00-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-08-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-10-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-029-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-11-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-064-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-071-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-039-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-076-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-078-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-023-h1.npy"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/turn-support-original"
+  ],
+  "why_this_direction": "The completed original-only RMS calibration leaves every nonself original successful trace outside, at 8246 of 8695 distinct events. RMS measured typical variation, not observed support. The next diagnostic tests the exact signed support of the same original turns, keeping the observed reference and every path fixed; it does not react to a changed model or wrong-trace result.",
+  "repeating_pattern_check": "Earlier loss calibrations mistook a mathematical scale or self-inclusive coverage for demonstrated shared correct computation. This revision reports containment as construction and prospectively tests complete leave-one-witness-out coverage. If that supplies no complete covered witness, this component-box form is not admitted as stopping; it is not widened by a fitted multiplier.",
+  "hypothesis": "The observed signed support of all mapped nonself original computation supplies an agreement interval relative to one fixed original trace, without a symmetric opposite-sign expansion or a target ensemble.",
+  "what_went_wrong_before": "The RMS component box was too strict for every observed nonself original trace. The observable T and its derivatives are unchanged, and no prompt-similarity-selected reference, state target, Taylor rule, output judge or prior stopped loop is reinstated.",
+  "rule": "Load the hash-bound original turn arrays and complete paths from turn-reference-original; do not read its RMS tolerance. Keep expanded-004-h1 as the fixed observed reference. At each reference event/merge/component take lower=min(0, every mapped nonself signed departure), upper=max(0, every mapped nonself signed departure). Every mapped event is included, never averaged into a synthetic departure. Report full and leave-one-witness-out component/cell/event coverage and objective with original-event mass. Reference selection and paths remain exposed to all originals, so leave-out is not independent validation. No wrong trace, generation or weight update.",
+  "prediction": "All original calibration events lie inside their exact support interval by construction, and the leave-one-witness-out reading supplies at least one complete inside trace. The latter is a structural existence prediction, not sufficient evidence for native admission.",
+  "would_weaken_it": "If none of the fourteen nonself witnesses has a complete trace inside its leave-out interval, do not admit this component-box form as the stopping boundary. A positive instance alone is not adequacy or repair. Missing/nonfinite originals or incomplete paths leave compilation incomplete. Flawed successful operations can widen support, and independent coordinate limits can admit combinations no original exhibited.",
+  "parameters": {
+    "reference": {
+      "measured_from": "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+      "derivation": "Keep the already selected observed reference expanded-004-h1 and its complete chronological paths unchanged. No new selection is performed.",
+      "scales_with": "The fixed original reference artifact and original-success inventory."
+    },
+    "support": {
+      "measured_from": "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+      "derivation": "For each original reference event, merge and coordinate, lower=min(0,min over all nonself mapped events of T_witness-T_reference); upper=max(0,max over the same complete population). The origin is the fixed reference's zero departure; no multiplier, quantile or probability model.",
+      "scales_with": "Complete original turn observations and the fixed correspondence."
+    },
+    "multiplicity": {
+      "measured_from": "records/retrospectives/2026-11-15-turn-tolerance-revision-astra.md",
+      "derivation": "All mapped events define support. Duplicating an identical event changes nothing; a new distinct event may widen the observed range. Objective mass remains 1/(reference_events*merges*mapped_events_for_this_witness_and_reference_event).",
+      "scales_with": "The full mapped event population; no sampling or averaged witness representative."
+    },
+    "leave_one_out": {
+      "measured_from": "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+      "derivation": "For each witness, recompute signed extrema excluding all of that witness's mapped events but retaining zero. Reference and paths stay fixed. Count exact outside coordinates, merge-cells and unique current events; record complete traces with no outside event.",
+      "scales_with": "The number and observed support of the remaining original witnesses."
+    },
+    "weakening": {
+      "measured_from": "studies/04-round-2-overlap/runs/turn-reference-original/original-coverage.json",
+      "derivation": "The prior RMS reading has no complete covered nonself witness. Repetition of that structural absence in leave-one-witness-out support weakens this boundary form and holds it out of training. No guessed pass fraction and no automatic admission from a positive instance.",
+      "scales_with": "The complete nonself original-success inventory, currently fourteen witnesses."
+    },
+    "precision": {
+      "measured_from": "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+      "derivation": "Use the stored float64 turns unchanged. Signed differences/extrema and objective reductions remain float64 on CPU. No model, cache, native engine or new path calculation is run.",
+      "scales_with": "The bound original arrays' dtype and shape."
+    }
+  },
+  "independent_assessment": "Eli accepts signed support as the correct kind of statistic for an agreement boundary and accepts retaining all mapped events once declared; the empirical whole-trace coverage and adequacy remain unresolved. The exact review and choices are recorded in records/retrospectives/2026-11-15-turn-tolerance-revision-astra.md.",
+  "commands": {
+    "compile": "uv run -q --directory code/signal-trace --with torch --with numpy python -m pipeline.weight_edit.turn_support_run ../../studies/04-round-2-overlap/runs/turn-support-original"
+  }
+}

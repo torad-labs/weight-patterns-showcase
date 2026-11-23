@@ -8,7 +8,7 @@ This is a concrete advance in controlling the observed edit. It does not establi
 
 ## What was predicted and what happened
 
-[The plan](PLAN.md) and the new questions were frozen before C generation; one candidate was constructed, without a post-outcome parameter sweep.
+The plan and the new questions were frozen before C generation; one candidate was constructed, without a post-outcome parameter sweep.
 
 | Declared condition | Result under C | Outcome |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ Let W be original and D=A−W the actual rounded BF16 matrix difference from the
 
 We constructed the smallest matrix correction E satisfying EX=0 on those 304 positive inputs and EZ=DZ on the nine protected inputs, before rounding. C is native BF16_RNE(A−E). Thus the design retains A's action along the observed positive passages while subtracting its action on the protected contexts. It is an analytical weight calculation using recorded transformations, not a gradient-training run.
 
-All 304 positive columns are independent under the declared tolerance. Protected directions remain independent after projection outside their span; residual fractions range 0.03870–0.21020. Dual-constraint residuals are below 1e-14. [Construction](constraints.json), [conditioning](design.json), [pre-run review](PRE-RUN-REVIEW.md).
+All 304 positive columns are independent under the declared tolerance. Protected directions remain independent after projection outside their span; residual fractions range 0.03870–0.21020. Dual-constraint residuals are below 1e-14. Construction, conditioning, pre-run review.
 
 Native storage makes the constraints approximate. Across the 304 positive fixed inputs, C's action differs from A by 6.53%–18.98%, median 9.85%. The nine protected fixed inputs retain 24.41%–27.08% of A's action norm. These are CPU equation diagnostics on actual rounded matrix bytes; ordinary native inference separately determines the behavior.
 
@@ -42,7 +42,7 @@ Native storage makes the constraints approximate. Across the 304 positive fixed 
 | Original checkpoint bytes compared | 9,311,304,896 |
 | Changed bytes outside selected tensor | 0 |
 
-C's matrix change is about 3.2×A's. The successful tradeoff therefore does not show equal-sized edits or a minimum behavioral edit. The stored-value count is not a count of neurons with exclusive physics meaning. Original, A and B remain separate and unchanged. C model SHA256: `c62cec0e716d573400947704bfd837034b9eda755637526c152a33fc54e561ec`. [Applied edit](native-applied.json).
+C's matrix change is about 3.2×A's. The successful tradeoff therefore does not show equal-sized edits or a minimum behavioral edit. The stored-value count is not a count of neurons with exclusive physics meaning. Original, A and B remain separate and unchanged. C model SHA256: `c62cec0e716d573400947704bfd837034b9eda755637526c152a33fc54e561ec`. Applied edit.
 
 ## Every population, without pooling incompatible scores
 
@@ -55,7 +55,7 @@ C's matrix change is about 3.2×A's. The successful tradeoff therefore does not 
 
 Total: 52 candidate generations plus 8 new original baselines. Earlier original baselines are retained by source and verified content hash. C has 39/52 token-identical continuations and 13 caps. The fresh changed response is new-sledge-1; it still subtracts the downhill energy and caps. New-trolley-4 correctly compares 70 J with 80 J, but ends by incorrectly labeling the 10 J deficit as required-from-foot energy; it is not counted as a complete correct calculation. No completion beyond any cap is presumed.
 
-The disc2 numerical chain reaches a correct verbal conclusion before its cap; this counts as a numerical-chain conclusion but not a literal YES. Disc4 now correctly computes 64−24+20=60 J, compares 80 J, explicitly answers NO and finishes. Its preceding generic equation and unexplained datum switch remain wrong. All changed responses and fresh originals were read in full. [Judgments](response-judgments.json), [assessment](assessment.json), [all responses](RESPONSES.md).
+The disc2 numerical chain reaches a correct verbal conclusion before its cap; this counts as a numerical-chain conclusion but not a literal YES. Disc4 now correctly computes 64−24+20=60 J, compares 80 J, explicitly answers NO and finishes. Its preceding generic equation and unexplained datum switch remain wrong. All changed responses and fresh originals were read in full. Judgments, assessment, all responses.
 
 Ordinary comparisons have 20326 eligible matched predictions; every corresponding complete-vocabulary score hash changed. Matching emitted text therefore does not imply unchanged computation. These repeated decisions are not independent capability tests.
 
@@ -92,7 +92,7 @@ The native score margins give another view of the same decisions. These are logi
 
 C keeps the repaired branches' selections and restores the protected branch's original selection. These near-tie decisions also limit robustness claims: the result is under fixed greedy settings, not a sampling or phrasing stability result. The words mark the first visible divergence; the experiment does not isolate them as the mechanism or treat their identity as the edit target.
 
-[Full connected traces](connected-traces.json), [decision sources](decision-margins.json), [SVG](../../../../publications/figures/exports/physics-connected-edit-2026-11-07--three-edits.svg), [PNG](../../../../publications/figures/exports/physics-connected-edit-2026-11-07--three-edits.png).
+Full connected traces, decision sources, [SVG](../../../../publications/figures/exports/physics-connected-edit-2026-11-07--three-edits.svg), [PNG](../../../../publications/figures/exports/physics-connected-edit-2026-11-07--three-edits.png).
 
 ![Three stored edits across recorded boundaries](../../../../publications/figures/exports/physics-connected-edit-2026-11-07--three-edits.png)
 
@@ -108,4 +108,4 @@ Marcos's possible connection to faster or more effective RL remains a future hyp
 
 ## Reproduction and review
 
-[Commands](COMMANDS.md), [binary/source identities](provenance.json), [evidence map](EVIDENCE-INDEX.md). Constraint tests passed 3/3; native editor compiled successfully. Its unchanged default mode reproduced A's stored tensor hash. Ordinary C run completed with exit 0. Capture run, connected qualification, response comparison, assessment and figure generation completed with exit 0. The independent response review found no material errors; it verified all 104 response bodies, 52 prompt/budget pairs, 44 reused baseline hashes and judgments, and all declared outcomes. Final trace review is recorded in [REVIEW.md](REVIEW.md).
+Commands, binary/source identities, evidence map. Constraint tests passed 3/3; native editor compiled successfully. Its unchanged default mode reproduced A's stored tensor hash. Ordinary C run completed with exit 0. Capture run, connected qualification, response comparison, assessment and figure generation completed with exit 0. The independent response review found no material errors; it verified all 104 response bodies, 52 prompt/budget pairs, 44 reused baseline hashes and judgments, and all declared outcomes. Final trace review is recorded in REVIEW.md.

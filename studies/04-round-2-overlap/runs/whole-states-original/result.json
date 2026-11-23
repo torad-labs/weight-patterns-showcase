@@ -1,0 +1,46 @@
+{
+ "run": "whole-states-original",
+ "status": "complete: the reading made on card 0 from 11:06:32 to 11:10:37 AM CT November 14, 2026 (235.7 s, the recorder 225.1 s of it, the machine's load 8 to 10), the comparison with the sources from 11:10:43 to 11:11:58 AM CT (60 s of work). Original model only; no model was changed, no target, score or selection was made, no answer no fit uses was read.",
+ "what_exists": {
+  "reading": "reading/ (format whole-gap-reading/1): reading.json (the manifest), row-map.json, nodes/<0..104>/state.npy (float32 [19751, 1536] each: the engine's own output of that merge's ADD at every answer step, then every question position, of the thirty fitting answers), terminal/l_out.npy (float32 [19751, 1536], l_out-34), terminal/result_norm.npy (float32 [14592, 1536], the engine's output norm at the answer rows), answers/<id>/answer.json. 141 files, 12,954,152,517 bytes.",
+  "reading_json_sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf",
+  "row_map_sha256": "effb71113117aa4063f25e7d30ea30ea187343545e176b2ddd0243fdc499bf1b",
+  "qualification": "qualification/record.json",
+  "qualification_record_sha256": "1f771d6155bd5b1a4d24e906bb38d547e564ba6363b03a14525014fdedbccc1d",
+  "bound": {
+   "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+   "recorder_sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+   "libraries_sha256": "06ffecec44d083a66efdf4b7b2d97567a5c262de5acddc85150a60890fec8df5",
+   "card": "NVIDIA GeForce RTX 5080",
+   "driver": "615.71.10",
+   "fusion_disabled": "1",
+   "recorder_arguments": [
+    "capture",
+    "residual",
+    "stream"
+   ],
+   "declaration_sha256": "a0a84dfa73adc427f77bd9d6dbe4b11bb16e90d953d026c318c641e0fc1696af"
+  }
+ },
+ "prediction_vs_result": {
+  "1_every_token_the_models_own": "Held. In 30 of 30 answers every supplied token is the model's own first choice on card 0 (0 steps not its own); 29 end on the engine's end token, itself the model's choice, and one (expanded-001-h3) stops at its recorded limit of 768 tokens. All thirty recordings are this model's own whole answers under this recorder, engine and card.",
+  "2_the_add_made_again": "Held. At every one of the 19,751 rows of every one of the 105 merges (2,073,855 rows of 1,536 values) the engine's ADD made again from its two recorded operands gives the kept row bit for bit; the reader would have stopped at the first row that did not.",
+  "3_raw_rows_against_input_overlap": "Held. The 35 attention merges are input-overlap's stored rows bit for bit: 510,720 of 510,720 answer rows and 180,565 of 180,565 question rows.",
+  "4_features_against_the_baseline": "Held. tube.unit_and_log in float32 on card 0 applied to the kept rows gives the baseline's direction and log size bit for bit at all 105 merges: 1,532,160 of 1,532,160 answer rows and 541,695 of 541,695 question rows, for the direction and for the log size alike; the last merge's question rows are also the baseline's second reading of the prompts alone, 5,159 of 5,159 for both.",
+  "beside_the_predictions": "For a consumer that derives its features in float64 from the raw rows: x / |x| in float64 lies at most 2.59e-07 in a coordinate from the baseline's float32 direction of the same row (the median row's largest coordinate difference is 2.7e-08 at the median merge), and ln |x| at most 4.51e-07 from the baseline's float32 log size. These describe two representations of one engine output; nothing was held to them."
+ },
+ "failures_only": [
+  "The first pass (11:03:20 to 11:04:55 AM CT) was stopped by this seat with no answer kept: the reader's own check required the engine's output norm at the answer steps and nowhere else, and the engine also writes it at one prompt position (127, the last of the prefill's first call) in every one of the thirty answers. The check was wrong, not the reading; the declaration's revision records it, logs/reading-1-stopped.log is its log, and its folder (16 GB of raw streams and partly written arrays) was removed whole.",
+  "The engine's output norm exists at the answer rows only (and at that one prompt position, which is not kept): there is no native output-normalized state at the question rows. A comparison in output-norm space at question rows has to compose the normalization from the raw last merge or from l_out-34, both kept at every row; the reading cannot hold that composition to the engine there.",
+  "Qualified on the original only, on card 0, with this recorder, engine build and driver. That the same reader reads a changed model identically rests on the reader running the same command on another file; no changed model was read here, by the declaration's rule.",
+  "The raw source (input-overlap) holds only the attention merges' outputs raw; the feed-forward's and the layer's last merges are held to the baseline through its float32 derivation, bit for bit, and to the engine's own ADD, not to a second raw recording.",
+  "The reading takes 12.95 GB for one state (105 arrays of 19,751 by 1,536 float32, and the two terminal ones). With 53 GB free when it ended, 13 above the 40 GiB margin, this disk holds one more state at a time: a sweep that reads many states keeps each only as long as its scorer needs it, or sends it to the bucket first."
+ ],
+ "what_this_changes": "The whole-history scorer's native dependency (SCORING.md, 'Remaining native reader dependency') has its reader and its original reference in one form: the engine's direct state at every merge, at every answer and prompt row, bound to model, recorder, libraries, card, driver and each answer's ending. The original's reading is the same engine output the target factory's source (the baseline) holds, bit for bit, so a target compiled from the baseline and a model read by states_reading.py are compared on one observable, with the float32-against-float64 difference of the feature arithmetic stated (at most 2.6e-07 and 4.5e-07) instead of assumed. It decides nothing about a target, a rule or a construction: binding it into the scorer, and the terminal normalization's composition, are the objective owner's.",
+ "made_with": {
+  "states_reading.py": "e493e1805b339853043068a08781eb32075c42240784e6bf10e95501720365bb",
+  "whole_reading.py": "1045550c0829522ed2db6d6099bbab78b6e08842692ea0be937078ba13c20509",
+  "reading_identity.py": "650b18d0b39637d310f156fba2f11569da336ce77ed3a3e1613a989eb5ebaa95",
+  "states_reading_check.py": "3f31c43c97d4b48cb865d11af60991631a43d2615068cb648eb92f420afb36e8"
+ }
+}

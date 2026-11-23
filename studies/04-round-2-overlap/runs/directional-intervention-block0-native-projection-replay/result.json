@@ -1,0 +1,189 @@
+{
+  "status": "complete",
+  "common_boundary_checks": {
+    "original": {
+      "inp_scaled": {
+        "same_geometry": true,
+        "same_values_everywhere": true,
+        "same_values_causal_prefix": true
+      },
+      "attn_post_norm-0": {
+        "same_geometry": true,
+        "same_values_everywhere": true,
+        "same_values_causal_prefix": true
+      },
+      "attn_out-0": {
+        "same_geometry": true,
+        "same_values_everywhere": true,
+        "same_values_causal_prefix": true
+      }
+    },
+    "projected": {
+      "inp_scaled": {
+        "same_geometry": true,
+        "same_values_everywhere": true,
+        "same_values_causal_prefix": true
+      },
+      "attn_post_norm-0": {
+        "same_geometry": true,
+        "same_values_everywhere": true,
+        "same_values_causal_prefix": true
+      },
+      "attn_out-0": {
+        "same_geometry": true,
+        "same_values_everywhere": true,
+        "same_values_causal_prefix": true
+      }
+    }
+  },
+  "stages": {
+    "attn_norm-0": {
+      "direct": {
+        "original": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.0,
+          "largest_causal_gap": 9.097540970591889e-05
+        },
+        "projected": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.0,
+          "largest_causal_gap": 9.097540970591889e-05
+        }
+      },
+      "response": {
+        "anchored_motion_norm": 6.041726463520064e-06,
+        "native_motion_norm": 6.041603260790067e-06,
+        "anchored_native_gap_at_target": 0.0,
+        "anchored_native_gap_max_event": 5.820766091346741e-11,
+        "anchored_native_gap_max_causal_prefix": 5.820766091346741e-11,
+        "anchored_native_cosine": 0.9999999999287318
+      }
+    },
+    "Qcur_pos-0": {
+      "direct": {
+        "original": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.0010200251686417396,
+          "largest_causal_gap": 0.0010200251686417396
+        },
+        "projected": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.0010200467510518374,
+          "largest_causal_gap": 0.0010200467510518374
+        }
+      },
+      "response": {
+        "anchored_motion_norm": 2.0937016811675525e-05,
+        "native_motion_norm": 2.022950269104015e-05,
+        "anchored_native_gap_at_target": 4.796229880878652e-07,
+        "anchored_native_gap_max_event": 1.96619472298028e-06,
+        "anchored_native_gap_max_causal_prefix": 1.96619472298028e-06,
+        "anchored_native_cosine": 0.8754759845416628
+      }
+    },
+    "Kcur_pos-0": {
+      "direct": {
+        "original": {
+          "bitwise_equal": false,
+          "gap_at_target": 4.0045750272184665e-05,
+          "largest_causal_gap": 4.368900280134815e-05
+        },
+        "projected": {
+          "bitwise_equal": false,
+          "gap_at_target": 4.0059310567258424e-05,
+          "largest_causal_gap": 4.3690248167982004e-05
+        }
+      },
+      "response": {
+        "anchored_motion_norm": 4.96664834942259e-05,
+        "native_motion_norm": 4.969299297984268e-05,
+        "anchored_native_gap_at_target": 1.1013155560147133e-07,
+        "anchored_native_gap_max_event": 1.8012734750407979e-07,
+        "anchored_native_gap_max_causal_prefix": 1.5823887244711863e-07,
+        "anchored_native_cosine": 0.9987674996540549
+      }
+    },
+    "Vcur_normed-0": {
+      "direct": {
+        "original": {
+          "bitwise_equal": false,
+          "gap_at_target": 1.4563734409735707e-06,
+          "largest_causal_gap": 2.853777227918253e-06
+        },
+        "projected": {
+          "bitwise_equal": false,
+          "gap_at_target": 1.4563734409735707e-06,
+          "largest_causal_gap": 2.853777227918253e-06
+        }
+      },
+      "response": {
+        "anchored_motion_norm": 1.427482074885877e-06,
+        "native_motion_norm": 4.944156148190238e-07,
+        "anchored_native_gap_at_target": 0.0,
+        "anchored_native_gap_max_event": 1.2634316692436573e-06,
+        "anchored_native_gap_max_causal_prefix": 1.2634316692436573e-06,
+        "anchored_native_cosine": 0.0066068839488213375
+      }
+    },
+    "kqv_out-0": {
+      "direct": {
+        "original": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.0007708377913203383,
+          "largest_causal_gap": 0.016444405973748806
+        },
+        "projected": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.0008485490103263201,
+          "largest_causal_gap": 0.02343338720117251
+        }
+      },
+      "response": {
+        "anchored_motion_norm": 0.031023668079530838,
+        "native_motion_norm": 0.034582100130084996,
+        "anchored_native_gap_at_target": 0.0002600733168958708,
+        "anchored_native_gap_max_event": 0.022326765707462382,
+        "anchored_native_gap_max_causal_prefix": 0.022326765707462382,
+        "anchored_native_cosine": 0.0001126244424662198
+      }
+    },
+    "attn_post_norm-0": {
+      "direct": {
+        "original": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.013592085764536284,
+          "largest_causal_gap": 1.2075980748708794
+        },
+        "projected": {
+          "bitwise_equal": false,
+          "gap_at_target": 0.01571396388344314,
+          "largest_causal_gap": 1.202661540622191
+        }
+      },
+      "response": {
+        "anchored_motion_norm": 0.9189634364762478,
+        "native_motion_norm": 1.1142936538024817,
+        "anchored_native_gap_at_target": 0.0047796115303718805,
+        "anchored_native_gap_max_event": 0.5916542712960173,
+        "anchored_native_gap_max_causal_prefix": 0.5916542712960173,
+        "anchored_native_cosine": -0.005236991402558097
+      }
+    }
+  },
+  "target_event": 312,
+  "events": 578,
+  "captures": {
+    "original": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/original/capture.json",
+      "sha256": "fd82622acecfc31c5a795e754d0564c80415a239ad75388e45479f22ddab7297"
+    },
+    "projected": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/projected/capture.json",
+      "sha256": "bcd551bc3d339fc998afa5e0c45b244fd33bab59466fcd9934566bfc62089170"
+    }
+  },
+  "native_scope": "existing projection stream with exact block-0 label filter",
+  "prediction_vs_result": "The richer forced native projection traces reproduced their original retained block-0 boundaries and supply actual stage values for comparison.",
+  "failures_only": "Raw Q/K/V multiplication outputs, actual cache read/mask and raw O product are absent. Q/K/V normalized-rotated comparisons cannot separately attribute the raw projection, normalization or RoPE.",
+  "what_this_changes": "Limits the earliest discrepancy to the first now-observable native operand or operation and preserves the unresolved internal sub-boundaries."
+}

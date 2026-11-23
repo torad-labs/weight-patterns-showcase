@@ -1,0 +1,40 @@
+{
+ "status": "finished November 12, 2026. Capture 9:43 PM to 9:50 PM CT, in one start; record written 9:51 PM CT. All three predictions met.",
+ "written_by": "weight-research-perfomance",
+ "prediction_vs_result": {
+  "1_reproduction": {
+   "predicted": "in every one of the 19 passes read, every step has the source pass's full scores to the bit",
+   "result": "met: 19 of 19, every step",
+   "counted_from": "record/replay.json, steps_with_the_source_pass_scores_to_the_bit against steps"
+  },
+  "2_unchanged_before_the_first_difference": {
+   "predicted": "in all 19 the positions through the row that writes the first token differing from the own answer hold the own answer's first incoming states and all 105 added parts bit for bit",
+   "result": "met: 19 of 19; those positions (3,765 of the 12,660) are kept once, in the own answers of fed-continuations-replay-original",
+   "counted_from": "record/replay.json, those_positions_hold_the_own_answers_states_bit_for_bit"
+  },
+  "3_the_text_is_the_models_own_under_the_opening": {
+   "predicted": "in all 19 the model's own first choice differs from the text's token only at the forced steps, and the one token the model writes is the text's last",
+   "result": "met: 19 of 19 on both counts",
+   "counted_from": "record/replay.json, the_text_is_the_models_own_under_these_feeds and the_model_wrote_the_texts_last_token_itself"
+  }
+ },
+ "read_after_the_declared_comparisons": {
+  "the_forced_steps": "Read from this run's own scores, as described in the declaration from the source passes: the 19 passes read have 29 forced steps (1 in eleven passes, 2 in seven, 4 in one); at them the model's own first choice led the supplied token by 0.005 to 0.98 logits, median 0.07, and by 0.25 or less at 26 of the 29.",
+  "the_paired_same_history_row": "Described, as declared. At the position whose input is the first supplied token that was not the model's own choice, with every earlier position the same to the bit, the state each merge puts out differs from the own answer's by a median 0.09 of its size at the first merge and 0.34 at the last (0.30 to 0.78 over the 19).",
+  "passes_listed_and_not_read_again": "8 of the 27: 2 whose token stream is the own answer of discovery-10-channel-h1 (the opening forced nothing), 6 whose stream is another pass's of the same question. Each is listed in record/replay.json with its own donor and the case that holds its trace.",
+  "cost": "recorder 333 s and keeping 95 s over 16 questions; 8,895 positions kept, 5.87 GB on disk (5.46 GiB; the declaration derived 5.45); 66 GB free on root before, 60 GB after"
+ },
+ "failures_only": [
+  "None in the run: no refusal, no failed check, no departure. Every incoming, added and merged state and every layer exit of the 12,660 positions equalled the raw stream bit for bit before the raw stream was removed.",
+  "A gap, as declared: the sign feed's 14 passes are not in it."
+ ],
+ "what_this_changes": "Each of 16 fitting questions now has, on one card and lossless, the trace of its own answer and of the answer it writes after one to four near-tie tokens of its opening were supplied instead of its own (13 wrong answers, 9 of which then write 'Total' by themselves; 6 correct answers as reverse controls): two histories of one question that are bit for bit the same up to the near tie. With fed-continuations-replay-original this completes the material the owner's construction names for candidate (b), the comparison of one question under two histories. It decides no site and makes no target. The paired row says how small the difference starts (0.09 of the state's size at the first merge after one changed token) and that it is what the model computes next, not anything before it.",
+ "provenance": {
+  "declaration": "declaration.json (declared 9:11 PM CT)",
+  "record": "record/replay.json",
+  "kept": "kept/ (bulk, not in git)",
+  "own_answers": "studies/04-round-2-overlap/runs/fed-continuations-replay-original/kept",
+  "code": "code/signal-trace/pipeline/overlap/opening_replay.py with fed_replay.py",
+  "logs": "logs/"
+ }
+}

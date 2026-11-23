@@ -191,7 +191,7 @@ repeated training reinforces the computations that make the fact accessible
 through those different contexts. The common influence may later be observable
 through how the computation develops when that knowledge is used.
 
-The [local CPT working report](../../../projects/kandi-cpt/kandi-cpt-main/docs/cpt_installation_best_practices.md)
+The local CPT working report
 records better installation with varied wording than with a small set of
 repeated templates. It also records a stage-retrieval decline from 0.711 to 0.506
 after downsampling to equalize coverage. These are surviving report entries,
@@ -367,7 +367,7 @@ in the conversation on November 6, 2026. Sources linked above were inspected in
 that discussion. No new training, inference, model edit, or reproduction was
 performed to write this document.
 
-The older [REFERENCE.md](../../../../projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md)
+The older REFERENCE.md
 and its source material preserve the development of the idea and historical
 local results. Its distinctions that make the research target exclusively a
 frozen encoded pattern, exclude the trace, or require identification of a full

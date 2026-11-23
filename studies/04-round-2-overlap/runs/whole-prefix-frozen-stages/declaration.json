@@ -1,0 +1,79 @@
+{
+  "operation": "whole-prefix-frozen-stages",
+  "method_step": 3,
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "source": {
+    "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/declaration.json",
+    "sha256": "46b5cdbf97f2ea037284063becc38b9bf8b50b69dd273377191e658548e81021"
+  },
+  "sites": {
+    "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-sites.json",
+    "sha256": "80220ea5b40ded7683d787b1f215b6b0215c0be945e234a90fc8ecf8a4ea91c6"
+  },
+  "reading": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "sha256": "bdcb750aa79e48c5ab34a01b010d31f7722c313e417abd5dccc621cadc9ed30b"
+  },
+  "challenge": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/measurement.json",
+    "sha256": "256803d9fdbeeaf77b5c1990064b22ef22cb4b172850c5c60664b90997ed7666"
+  },
+  "challenge_id": "discovery-02-reordered-h3",
+  "evaluation": {
+    "record": "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+    "sha256": "4172ea30ae1ccc77f11474735af07e3b8a316bc2f20a6a15c5aced613fe92361"
+  },
+  "historical_reference_event": 312,
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+    "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+  },
+  "why_this_direction": "The two-incoming-event registration abstained on every held execution. Hold the previously selected sites and turn distance fixed and test a longer computational context.",
+  "repeating_pattern_check": "Previously class separation selected the already consumed operator. Changing thresholds or choosing the nicest result by hindsight would not diagnose registration. Compare the entire available query prefix to the reference from its first generated turn. Only report chronological correspondence.",
+  "hypothesis": "Accumulating complete computational history through the current event can register the previously frozen reference stages on other responses.",
+  "prediction": "At the originally audited decision, the full-prefix registration reaches the same computation phase. The early frozen candidates register consistently across queries and before the wrong decision. Report exact rows, abstentions, repeated visits, and offsets.",
+  "would_weaken_it": "A matcher forced onto the nearest prefix can drift or jump on an independent wording. Later hits, missed stages, timing disagreements, and repeated visits weaken its utility.",
+  "what_went_wrong_before": "Signed separation after the choice followed the already consumed sign, and a tight local input envelope routinely missed every stage in new cases.",
+  "rule": "For each query prefix minimize summed all-merge cosine turn distance on a DTW grid anchored at the origin. The end is free over all frozen reference prefixes. Retain every exactly tied endpoint and all visits. Existing candidates are read-only; the historical row is a positive control only. Original annotations judge chronology after all mappings are written. No model update or semantic selector.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/discovered-turn-stage/declaration.json",
+    "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-sites.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/measurement.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/result.json",
+    "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/prefix-endpoints.json"
+  ],
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+    "events": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/observability/events.jsonl",
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+        "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+        "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/final_experiment.py",
+        "sha256": "2f810ca16b9e3ce5a28f5b7219a8a9252ee130edb99e74ac68244e7ce6f5a873"
+      }
+    ],
+    "operations": [
+      "trace.prefix_correspondence"
+    ]
+  }
+}

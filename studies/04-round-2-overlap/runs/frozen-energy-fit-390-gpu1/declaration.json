@@ -1,0 +1,102 @@
+{
+ "method_step": 3,
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+ "physical_gpu": 1,
+ "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+ "storage": {
+  "free_floor_bytes": 40000000000,
+  "capture_reserve_bytes": 3606388736,
+  "sizing": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/storage-sizing.json",
+   "sha256": "632e432ea92b1a9bac6576af676aa25bc4cfad2a6ab66b423b114faa1d719214"
+  }
+ },
+ "operation": "frozen-energy-fit-390-gpu1",
+ "why_this_direction": "Put the final fitted objective on the same device as the independent frozen panel and the historical 175 and 189 comparison.",
+ "repeating_pattern_check": "The same weights can generate different histories on another device and the loss changes with the history. Reacquire the full fitted calculation on the evaluation device before interpreting endpoint ordering.",
+ "hypothesis": "The frozen 390 endpoint retains a comparable fitted trace loss under the native evaluation device.",
+ "prediction": "The 390 fitted loss remains between the earlier same-device endpoint values from 175 and 189.",
+ "would_weaken_it": "A different ordering or arithmetic on the evaluation device weakens cross-device checkpoint comparisons.",
+ "what_went_wrong_before": "A small device-dependent generation change changed the reconstructed computational discrepancy in an earlier evaluation.",
+ "rule": "One immutable frozen checkpoint, the previously registered full-context original fitting prompt, native all-merge objective and the same device and engine as the held study.",
+ "program": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/measure.py",
+  "sha256": "1246ca8ea8de6be326b1b3f52dfabea6d818f82d62c58b9e6718a7988f5b20bd"
+ },
+ "evaluation": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/declaration.json",
+  "sha256": "f12383767e85eb78026dbc179ecfdf8c0d9904aee5a39cc2b57a8e89891b77df"
+ },
+ "training_measurement": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/measurement.json",
+  "sha256": "41ba3948bc2dca2e89cc206f76e3898d186376730d643f9b0a0010517f551971"
+ },
+ "case": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free-case.json",
+  "sha256": "6e4e5aea03e2cb8a572714c79cc00d5a477794c05909ee2debc402e1c947b754"
+ },
+ "reading": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+  "sha256": "bdcb750aa79e48c5ab34a01b010d31f7722c313e417abd5dccc621cadc9ed30b"
+ },
+ "reference": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+ },
+ "observability": {
+  "format": "weight-patterns-observability/1",
+  "entrypoint": "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/measure.py",
+  "events": "observability/events.jsonl",
+  "mode": "direct Recorder API",
+  "operations": [
+   "state.restore",
+   "native.capture",
+   "native.measure"
+  ],
+  "sources": [
+   {
+    "record": "code/signal-trace/pipeline/observability/recorder.py",
+    "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+   },
+   {
+    "record": "records/development/2026-11-16-factor-direction/native.py",
+    "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+   },
+   {
+    "record": "records/development/2026-11-17-reference-preservation/profile.py",
+    "sha256": "161cb82a1c26e1bad408d1efd62390efe7c61d9cf6418e0c40b35da86f668a5c"
+   },
+   {
+    "record": "records/development/2026-11-17-reference-preservation/run.py",
+    "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+   },
+   {
+    "record": "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/measure.py",
+    "sha256": "1246ca8ea8de6be326b1b3f52dfabea6d818f82d62c58b9e6718a7988f5b20bd"
+   }
+  ],
+  "context_fields": [
+   "member",
+   "candidate",
+   "candidate_evaluation_index",
+   "historical_update",
+   "checkpoint_sha256",
+   "reference_sha256",
+   "physical_gpu",
+   "gpu_uuid"
+  ]
+ },
+ "inputs": [
+  "studies/04-round-2-overlap/runs/frozen-energy-generalization/declaration.json",
+  "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/measurement.json",
+  "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free-case.json",
+  "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+  "studies/04-round-2-overlap/runs/vector-chance-original/reference.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/result.json",
+  "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/checkpoint390/measurement.json",
+  "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/observability/events.jsonl"
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "method_step": [
+  1,
+  2,
+  3
+ ],
+ "run_by": "Claude",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "hypothesis": "The gap between the correct pattern and the wrong pattern is also there, shared, in what each matrix sends into the signal: its output with the size taken out, which is all the model keeps of it. Read there, the gap is a part of what the matrix already sends, and a weight change can be asked for that part with nothing magnified.",
+ "what_went_wrong_before": "a2-pattern read the gap in the turn of the merged signal and pushed the raw difference back to each matrix by dividing by the learned scale. A move of 15 to 17% of the turn became a change of 64% (attention) and 33% (feed-forward) of the matrix output, two thirds of it on the tenth of outputs with the smallest scale. The edited model garbled the question and both patterns were carried together about five gaps away. Marcos, November 9: the difference cannot be applied as raw values; the computation has to be reversed to the weights as a ratio of what passes through them.",
+ "why_this_direction": "The trace of a merge holds what came in, what the matrix added and what went on. trace-overlap overlapped the last against the first. The edit acts on the middle one, so the gap an edit is asked to close has to be read in the middle one. After each matrix the model keeps only the proportions of its output and multiplies by a fixed scale, so a gap read in what the matrix sends is already a ratio, and the scale cancels. This run repeats steps 1 to 3 on the same 60 answers and the same alignment, changing only the quantity that is overlapped.",
+ "repeating_pattern_check": "What repeats: the edit asks for much more than the gap. In a2 by fitting each answer's own target; in a2-pattern's first build by fitting directions of single places; in a2-pattern by the conversion through the scale. Each time the excess was found after the model broke. Here the size of the gap against what the matrix sends is measured before any edit is built. What also repeats: the trace gets replaced by something easier to point at. Here the members, the alignment and the calculation are trace-overlap's, unchanged; no token, value or answer enters.",
+ "rule": {
+  "members": "The 60 answers of trace-overlap, in its order, with its alignment along the 480 places. No member is added, dropped or re-chosen.",
+  "what_is_overlapped": "For each of the 70 attention-output and feed-forward-down matrices, at every place: the matrix output divided by its own root-mean-square size, as the model's norm does before the learned scale. Recomputed from the recorded matrix inputs and the original weights, the same way for both groups.",
+  "overlap": "trace-overlap's calculation: the mean over the correct members, the mean over the wrong members and their difference, the gap, at every place and matrix.",
+  "recurrence": "trace-overlap's two readings: the gap against what two patterns of one and the same group would differ by, and the agreement of the gap between two halves of each group that share no answer.",
+  "kept_with_it": "The wrong group's average input of every matrix at every place, and the same for two halves of that group, because the inputs of the matrices are part of the trace and the edit needs them."
+ },
+ "prediction": {
+  "expected_observation": "Inside places 150 to 265 the gap in what the matrices send is several times chance and the two halves agree, as for the turns. The shared move is a small part of what a matrix sends, of the order of the 15 to 21% the move is of the turn, in both kinds of matrix.",
+  "failures_only": "Original model only. No edit in this run."
+ },
+ "would_weaken_it": "Where the turns part, the gap in what the matrices send is no larger than chance or the halves do not agree. The gap of the turn would then be carried in by what comes into the merge and not written by the matrices where it shows, and an edit of those matrices could not be read from it.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/trace-overlap",
+  "studies/04-round-2-overlap/runs/wide-overlap",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/sent-overlap"
+ ]
+}

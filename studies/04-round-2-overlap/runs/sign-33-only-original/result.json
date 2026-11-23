@@ -1,0 +1,124 @@
+{
+ "run": "sign-33-only-original",
+ "standing": "bounded fitting-cohort reading complete with explicit correspondence gaps; a local request correction, not an established full-path repair",
+ "model_sha256": "327459b5354ec2e87de4aa7a8198306fd7bbe29380d6093bd6b998e28e76eb13",
+ "native_coverage": {
+  "answers": 30,
+  "prompt_and_answer_positions": 20312,
+  "merges": 105,
+  "registered_places": 480,
+  "same_history_pairs": 30,
+  "new_original_controls": 2,
+  "natural_ends": 29,
+  "limit_hits": [
+   "expanded-001-h3.own"
+  ]
+ },
+ "request_realization": {
+  "requested": 14,
+  "exact_history_read": 13,
+  "unresolved": [
+   "expanded-068-h1"
+  ],
+  "all_read_requests_improved": true,
+  "partial_sum_before": 0.000005779713473863369,
+  "partial_sum_after": 3.4133406018805054e-7,
+  "partial_ratio": 0.05905726325908861,
+  "denominator": 15,
+  "not_a_complete_request_sum": true,
+  "largest_native_baseline_offset_from_frozen_origin": 7.994023346196308e-9
+ },
+ "output_checks_not_the_trace_verdict": {
+  "wrong": {
+   "members": 15,
+   "original_complete": 0,
+   "candidate_complete": 0,
+   "text_changed": 2
+  },
+  "correct": {
+   "members": 15,
+   "original_complete": 15,
+   "candidate_complete": 15,
+   "text_changed": 0
+  }
+ },
+ "same_history_weight_effect": {
+  "first_moving_merge_in_every_answer": [
+   33,
+   "feedforward"
+  ],
+  "sum_of_row_costs_by_original_group": {
+   "wrong": 0.0029606738001266225,
+   "correct": 0.00011189195378779716
+  },
+  "two_changed_first_signs": "The original weights still favour minus on both identical prefixes; the candidate weights cause both flips. Subsequent arithmetic omits the descent gain."
+ },
+ "pooled_original_reference_description": {
+  "L": 0.22136788102190272,
+  "direction": 0.09676624436077177,
+  "size": 0.12460163666113094,
+  "by_group": {
+   "wrong": {
+    "L": 0.2188406705134044,
+    "direction": 0.09669795211244839,
+    "size": 0.12214271840095599
+   },
+   "correct": {
+    "L": 0.0025272105084983396,
+    "direction": 0.00006829224832338059,
+    "size": 0.002458918260174959
+   }
+  },
+  "reference_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+  "last_merge_read_as": "what the output norm passes on (correction.passed_on)",
+  "not_the_acceptance_rule": true,
+  "identity_note": "The legacy L/member export leaves its model/card fields empty; identity comes from the native own-capture index and the linked source export, not invented replacement fields."
+ },
+ "numerical_interpretation": {
+  "source": "records/development/2026-11-12-correction-objective/README.md:825-867",
+  "confirmed_scope": "Rounding cut fold 1's late descent: measured damping rose from 0.245 to 189 units at 2^-3; holding rounding errors keeps 0.238 units and held ratios continue to 0.4195, 0.3946 and 0.3813 at powers -3, -4 and -5, versus about 0.425 in the original path.",
+  "unwalked": "Folds 0 and 2 and the final all-member solve (0.838 damping units) were not re-walked; no blanket claim that the whole solve stalled follows.",
+  "candidate_unchanged": true,
+  "matched_rerun_declared": false
+ },
+ "prediction_vs_result": {
+  "local_request": "The solver held-fold result is retained. On the native own reading, all thirteen exactly corresponding requested rows improve; the fourteenth history is unresolved.",
+  "correct_members": "All fifteen correct outputs and texts are retained. Their nonzero same-history trace movement is recorded, not called zero error.",
+  "whole_path": "Both weight-caused sign flips still omit the descent gain in the following calculation; no full-path repair is established.",
+  "relative_to_chain": "The complete chain readings are now available (2026-11-13-closed-sign-chains-astra.md). The original primary and this single site both flip two first signs without a complete wrong-answer repair. The corrected primary-prefix and six-support chains each produce two complete repairs but retain only fourteen correct outputs, versus this candidate's fifteen. Broad overlap produces ten complete wrong outputs and fourteen correct. The constructions and numerical paths differ; these counts do not isolate site count or establish full-path repair."
+ },
+ "failures_only": [
+  "Both flipped signs substitute a zero loss term for the nonzero descent gain; available energy remains wrong.",
+  "Twelve other originally subtracting answers keep the subtraction.",
+  "expanded-001-h3 is unchanged and ends at its existing 768-token limit without the verdict.",
+  "expanded-068-h1 differs from the fitted history before the declared row; no target is assigned to its new row here."
+ ],
+ "storage": {
+  "native_archive": "own/native-archive.json",
+  "native_archive_sha256": "50db1e2796c6b0a43c9e4f539bce6d904f2588a5f49ece90f6c62b954606ba81",
+  "remote_files_verified": 291,
+  "local_arrays_released": 128,
+  "released_apparent_bytes": 1678588184,
+  "released_unshared_allocated_bytes": 1679310848,
+  "declarations_checked_before_release": 47,
+  "compact_assessment_retained": true
+ },
+ "what_this_changes": "The native reading now establishes local feature-request realization rather than only a changed logit. It does not establish reliable capability repair. No candidate, target, dose, ridge or method is revised from this outcome.",
+ "unresolved": [
+  "Wrong-member computation outside the fourteen declared request rows has no supplied correct target.",
+  "Exact source-history correspondence is absent for one requested member.",
+  "No-fit transfer, broader spillover and reserved evaluation are outside this bounded reading and were not opened."
+ ],
+ "sources": {
+  "studies/04-round-2-overlap/runs/sign-33-only-original/model/written.json": "3cc39f79fe6386139aa00190741f3322a015d18e37fe94c3dee4fd096fd1479b",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/cases/index.json": "67392639bbd6e335d7150d6c1934bb848cc566d302e113779a4b19613b7c126e",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/record/own.json": "6d87545e36d72fb9c168f457d880dcbba121f0892f9eb2ad6673c1bb3665855d",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/paired/paired.json": "b06fc52290a9ced12d99fcfb5af846a3a393fa823813843f15ab439fe1a22841",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/direct/own-direct.json": "0cdab6254d7e7a720f4b56231039fb3af88db8ed24a392de9833187107380f61",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/direct-control/own-direct-control.json": "efea9d434c4845a7a05e3d7d671212aada8e0a1996ebe560b23088079d43f26a",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/request-realization/record.json": "b432e5d2e441a3eba8bf3f2dbd47bb0ddd716d7eeb91056dbecce52612e2eb22",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/whole-model/l.json": "1569af69061a9e040f201ac0542022f7227c4f66ea527ddb35f284f2ebafeb2a",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/members.npz": "f665430cecc43c1c6af639fec4d01cf00f572eeff991b039f19e9628faa25d74",
+  "studies/04-round-2-overlap/runs/sign-33-only-original/own/row-map/beside.json": "3a85eb05c38696e01b2f1eadde361da238d5a0f80d464eee474d41f270939196"
+ }
+}

@@ -1,0 +1,149 @@
+{
+  "native_engine": {
+    "sha256": "27544c96710f23cb2a2d166b6d1d2b65990ea9dd4e618bf299fc4dc2b2e4ddeb",
+    "engine_sha256": "8c8b96aaa287bf890a7fcbc5af91197cf045b379865c69c2df16a962598c4fab"
+  },
+  "storage": {
+    "free_floor_bytes": 40000000000,
+    "capture_reserve_bytes": 29864881,
+    "historical_capture_bytes": 13634601,
+    "historical_capture_positions": 935,
+    "native_context": 2048,
+    "qualification_log": {
+      "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/stderr.log",
+      "sha256": "fd45c03ee2a66fb99ddc815568e1087d0369658ce890955d4c04bdcc6c85065c"
+    }
+  },
+  "physical_gpu": 1,
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "gpu_minimum_free_mib": 4815,
+  "cpu_threads": 1,
+  "method_step": 4,
+  "operation": "joint-fit-paired-evaluation",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "why_this_direction": "Measure both operations on a selected descendant with the full historical and frozen fresh denominators.",
+  "repeating_pattern_check": "Improved verdicts have accompanied wrong operands. Preserve every case and score independently before pairing.",
+  "hypothesis": "One selected stock descendant repairs both fitted operations and preserves valid operations.",
+  "prediction": "Both fitted errors repair, valid operations hold, and some fresh physical configurations improve.",
+  "would_weaken_it": "Persistent fitted errors, correct verdicts from wrong operands, omitted operations, preservation regressions or no freshly repaired chains.",
+  "what_went_wrong_before": "Earlier climb edits corrected the requirement while breaking descent. Downhill edits left or introduced other arithmetic errors.",
+  "rule": "Freeze the learner path and fixed prompts. Bind its clean selected endpoint before any panel generation, then acquire and blind all pairs.",
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-13-channel-h1/discovery-13-channel-h1/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-20-channel-h1/discovery-20-channel-h1/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-22-channel-h1/discovery-22-channel-h1/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-22-channel-h3/discovery-22-channel-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-043-h3/expanded-043-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-064-h3/expanded-064-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-067-h3/expanded-067-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-074-h3/expanded-074-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-088-h3/expanded-088-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-089-h1/expanded-089-h1/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-090-h3/expanded-090-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-091-h1/expanded-091-h1/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/expanded-091-h3/expanded-091-h3/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-00-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/historical-plain/block-changed/case.json",
+    "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/stderr.log",
+    "studies/04-round-2-overlap/runs/joint-pristine-stock-origin/origin.json",
+    "studies/04-round-2-overlap/runs/prefix-direction-generalization/declaration.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/expanded-004-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-05-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-10-channel-h1/case.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/joint-stock-paired-evaluation"
+  ],
+  "parameters": {
+    "decoding": {
+      "measured_from": "studies/04-round-2-overlap/inputs/acquisition/discovery-00-cases.json",
+      "derivation": "Use the qualified 2048-position context and the recorded 768-token public cap on every prompt and both endpoints.",
+      "scales_with": "Qualified native context and recorded output cap."
+    },
+    "capacity": {
+      "measured_from": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/stderr.log",
+      "derivation": "Reserve the measured sparse capture allowance for all remaining cases above the project free floor.",
+      "scales_with": "Number of pending native acquisitions and sparse stream size."
+    }
+  },
+  "program": {
+    "record": "records/development/2026-11-18-joint-evaluation/evaluate.py",
+    "sha256": "e04d657ce3729bdcb93f9054d4540875f0430080d09e67e6b7320c8e20c9df53"
+  },
+  "frozen_panel": {
+    "record": "records/development/2026-11-18-joint-evaluation/frozen-panel.json",
+    "sha256": "f8b29e22464cc01c3564e82fb69bd0bc7b5b7327361eb7729079b2508123c78f"
+  },
+  "historical_roster": {
+    "record": "records/development/2026-11-18-joint-fit-panel/inventory.json",
+    "sha256": "ba296782391355af6ba4267821f442336f45f77468a43523294e60ccba9352ce"
+  },
+  "known_origin": {
+    "record": "studies/04-round-2-overlap/runs/joint-pristine-stock-origin/origin.json",
+    "sha256": "bce46a17f7703d86fae63fc44430c1639c78a418ea9afa672811a9144a49c319"
+  },
+  "selected_learner": "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training",
+  "panel_sha256": "7764683058064df96ac87f9e5bf479f01ed43b93a8668b97c69e15a5ea1e51fd",
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "organization": "research-operations/1",
+    "mode": "direct Recorder API",
+    "entrypoint": "records/development/2026-11-18-joint-evaluation/evaluate.py",
+    "events": "observability/events.jsonl",
+    "operations": [
+      "state.restore",
+      "native.capture"
+    ],
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+        "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+        "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/full_state.py",
+        "sha256": "937736168ebc21f7f2d4f9986441df992b23001b99f86c8bf9d52b8b3731be80"
+      },
+      {
+        "record": "records/development/2026-11-16-factor-direction/native.py",
+        "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+      },
+      {
+        "record": "records/development/2026-11-17-reference-preservation/run.py",
+        "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+      },
+      {
+        "record": "records/development/2026-11-12-path-forward/generation_engine.py",
+        "sha256": "82749a8736e0bc8632ecdc2417a54c350701b776333a7d4e894059e4a3d1cf4e"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/replay.py",
+        "sha256": "3bab1f6fccc57676e2eed0a85dabf4fc8a0be232c32468e3dd99892d235a0092"
+      },
+      {
+        "record": "records/development/2026-11-18-joint-evaluation/evaluate.py",
+        "sha256": "e04d657ce3729bdcb93f9054d4540875f0430080d09e67e6b7320c8e20c9df53"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/audit.py",
+        "sha256": "65f1e84e9b8376ab7fa5fec17f14cd292df6a4a0755adb84cc044bbe1ad5a849"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/audit-protocol.md",
+        "sha256": "5e3d3926c9a9635564f796789bf5b4ab317a7ebea7ffa7e8714452b7ed846d05"
+      },
+      {
+        "record": "records/development/2026-11-18-joint-evaluation/audit-addendum.md",
+        "sha256": "2cc51ce4959860996904f8ad0eed6c6a0739cbb587083527a161307441672d95"
+      }
+    ]
+  }
+}

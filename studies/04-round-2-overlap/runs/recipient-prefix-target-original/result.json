@@ -1,0 +1,210 @@
+{
+  "prediction_vs_result": {
+    "field": {
+      "record": "studies/04-round-2-overlap/runs/recipient-prefix-target-original/field/target.json",
+      "sha256": "6451ca13d327218de140440b7f7cb2839a62e8b8890f49e275a11836d46b417c"
+    },
+    "merges": 105,
+    "rows": 19751,
+    "members": 30,
+    "assignment": {
+      "wrong_question_rows": 2580,
+      "wrong_answer_rows_before_the_sign": 2327,
+      "wrong_rows_at_the_sign_and_after": 5589,
+      "correct_rows": 9255,
+      "rows": 19751
+    },
+    "sign_rows": {
+      "discovery-05-channel-h1": 141,
+      "discovery-10-channel-h1": 152,
+      "discovery-17-channel-h1": 142,
+      "expanded-001-h3": 192,
+      "expanded-020-h1": 154,
+      "expanded-034-h3": 207,
+      "expanded-042-h3": 207,
+      "expanded-045-h1": 141,
+      "expanded-046-h3": 141,
+      "expanded-068-h1": 142,
+      "expanded-070-h1": 142,
+      "expanded-087-h3": 141,
+      "expanded-092-h1": 141,
+      "expanded-094-h1": 142,
+      "expanded-095-h1": 142
+    },
+    "the_token_every_sign_row_wrote": 753,
+    "the_boundaries_and_counts_are_the_specifications": true,
+    "unchanged": {
+      "row_map": true,
+      "observation_schema": true,
+      "coefficient_and_status_files_that_are_the_bases_bytes": 210,
+      "correct_answers_targets": "held bit for bit to the original read here, at every merge",
+      "rows_not_kept": "the base's values, copied"
+    },
+    "kept_rows_whose_target_changed": {
+      "of": 4907,
+      "direction": {
+        "least": 4504,
+        "most": 4760
+      },
+      "size": {
+        "least": 4479,
+        "most": 4492
+      }
+    },
+    "asked_of_the_original_in_the_compilers_expression": {
+      "the_base": {
+        "total": 0.0674937387329422,
+        "groups": {
+          "wrong": {
+            "question": {
+              "rows": 2580,
+              "direction": 8.382033687770937e-05,
+              "size": 1.1439067137836296e-06,
+              "unknown": [
+                0,
+                0
+              ]
+            },
+            "before_the_sign": {
+              "rows": 2327,
+              "direction": 0.009022820041670309,
+              "size": 0.00020351474563603766,
+              "unknown": [
+                0,
+                0
+              ]
+            },
+            "the_sign_and_after": {
+              "rows": 5589,
+              "direction": 0.05643551507781806,
+              "size": 0.0017469246242261909,
+              "unknown": [
+                0,
+                0
+              ]
+            }
+          },
+          "correct": {
+            "question": {
+              "rows": 2579,
+              "direction": 0.0,
+              "size": 0.0,
+              "unknown": [
+                0,
+                0
+              ]
+            },
+            "answer": {
+              "rows": 6676,
+              "direction": 0.0,
+              "size": 0.0,
+              "unknown": [
+                0,
+                0
+              ]
+            }
+          }
+        }
+      },
+      "this_field": {
+        "total": 0.05818243970204436,
+        "groups": {
+          "wrong": {
+            "question": {
+              "rows": 2580,
+              "direction": 0.0,
+              "size": 0.0,
+              "unknown": [
+                0,
+                0
+              ]
+            },
+            "before_the_sign": {
+              "rows": 2327,
+              "direction": 0.0,
+              "size": 0.0,
+              "unknown": [
+                0,
+                0
+              ]
+            },
+            "the_sign_and_after": {
+              "rows": 5589,
+              "direction": 0.05643551507781806,
+              "size": 0.0017469246242261909,
+              "unknown": [
+                0,
+                0
+              ]
+            }
+          },
+          "correct": {
+            "question": {
+              "rows": 2579,
+              "direction": 0.0,
+              "size": 0.0,
+              "unknown": [
+                0,
+                0
+              ]
+            },
+            "answer": {
+              "rows": 6676,
+              "direction": 0.0,
+              "size": 0.0,
+              "unknown": [
+                0,
+                0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "control": {
+      "score": {
+        "record": "studies/04-round-2-overlap/runs/recipient-prefix-target-original/original-score.json",
+        "sha256": "2508f489f2a9e60ed00b3816aef8792985a167cca8ce38044f24b182c8468b5a"
+      },
+      "complete": true,
+      "total": 0.05818243970294092,
+      "groups": {
+        "wrong": 0.0581824397029305,
+        "correct": 1.0414694889847526e-14
+      },
+      "comparisons_per_channel": 2073855,
+      "terminal": {
+        "engine_answer_rows": 14592,
+        "derived_prompt_rows": 5159,
+        "layer_scale_same_rows": 19751,
+        "max_abs_state_difference_from_engine": 3.49127095375934e-05,
+        "prompt_output_norm": "derived from native raw states, not recorded engine output"
+      },
+      "the_matched_fields": {
+        "score": {
+          "record": "studies/04-round-2-overlap/runs/whole-context-score-original/mates-score.json",
+          "sha256": "95ba205af9c00e5c5251eb60e074ea4ec684ebbba5fd45696fe1c13a74bfec00"
+        },
+        "total": 0.06749373873811056,
+        "groups": {
+          "wrong": 0.06749373873810013,
+          "correct": 1.0414694889847526e-14
+        }
+      }
+    },
+    "interpretation": "One constructed field and the original's score under it, not a repair result. What the field asks is an assumption put to the test by the declared sweep; a lower control total is the request made smaller, not the model made better."
+  },
+  "failures_only": {
+    "unknown": [
+      0,
+      0
+    ],
+    "limitations": [
+      "No model was changed and none was read through an engine: whether keeping the rows before the sign removes the copying of quantities and wording, and keeps the correction, is the declared sweep's to show on the model's own answers.",
+      "A kept row's target is the original's own state: where that state already holds part of the defect, the field asks to keep it.",
+      "The rows from the sign on keep a matched counterpart of a history the changed model may never write.",
+      "The boundary is the recorded row that wrote the minus; no finer assignment of passages is made."
+    ]
+  },
+  "what_this_changes": "The recipient-prefix field is explicit, serialized and bound to its sources, with the original's control score under it. It selects no matrix, ridge or candidate and changes no weight."
+}

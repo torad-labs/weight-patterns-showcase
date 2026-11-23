@@ -1,12 +1,12 @@
 # Research Journal (`journal/`)
 
-Chronological laboratory memos recording Marcos's methodological clarifications, objective corrections, scope boundaries, and operational handoffs across Round 1 and Round 2 (November 7–21, 2026). As specified in `AGENTS.md`, where an older experiment note disagrees with a subsequent clarification here, these dated memos hold.
+Chronological laboratory memos recording Marcos's methodological clarifications, objective corrections, scope boundaries, and operational handoffs across Round 1 and Round 2 (November 7–22, 2026). Where an older experiment note disagrees with a subsequent clarification here, these dated memos hold.
 
-All **39 tracked memos** in `journal/` are indexed below in two thematic groups, followed by the November 22 carried-loss / twin-objective follow-up reference.
+All **40 memos** in `journal/` are indexed below in two thematic groups, followed by a glossary of historical lab roles and multi-agent conventions.
 
 ---
 
-## 1. Foundational Method & Objective Clarifications (26 Memos)
+## 1. Foundational Method & Objective Clarifications (27 Memos)
 
 | Date | Memo | Core Methodological Takeaway |
 | --- | --- | --- |
@@ -33,11 +33,12 @@ All **39 tracked memos** in `journal/` are indexed below in two thematic groups,
 | 2026-11-16 | [2026-11-16-active-calculation-experiments.md](2026-11-16-active-calculation-experiments.md) | Directs empirical step-scale and per-merge response experiments from reconstructed checkpoints rather than pausing learning on offline replay discrepancies. |
 | 2026-11-16 | [2026-11-16-empirical-eta-continuation.md](2026-11-16-empirical-eta-continuation.md) | Fixes the empirically calibrated response multiplier ($\eta = 0.269893$) to test sustained multi-step fresh native loss reduction across sequential regenerations. |
 | 2026-11-16 | [2026-11-16-lowest-loss-investigation.md](2026-11-16-lowest-loss-investigation.md) | Extends the fresh-loss descent investigation to diagnose operand-precision mismatch, FP32 rounding remainders, and local curvature bottlenecks limiting lower computational loss. |
-| 2026-11-17 | [2026-11-17-full-weight-training.md](2026-11-17-full-weight-training.md) | Restores full-model backpropagation across all `538` eligible learned tensors after diagnosing that an intermediate conditioning branch had zeroed updates outside the first projection. |
+| 2026-11-17 | [2026-11-17-full-weight-training.md](2026-11-17-full-weight-training.md) | Restores backpropagation across all `70` declared trainable projection matrices after diagnosing that an intermediate conditioning branch had zeroed updates outside `blk.0.attn_output` (subsequently widened later on Nov 17 to all `538` eligible tensors in [`../FINAL-EXPERIMENT.md`](../FINAL-EXPERIMENT.md)). |
 | 2026-11-17 | [2026-11-17-one-pair-scope-correction.md](2026-11-17-one-pair-scope-correction.md) | Reaffirms that the one-pair experiment (`expanded-004-h1` reference vs. `discovery-05` failure) is an intentional mechanism-isolation step grounded in the four research reports before multi-prompt group training. |
-| 2026-11-18 | [2026-11-18-trace-signal-in-the-loop.md](2026-11-18-trace-signal-in-the-loop.md) | Connects manually localized pre-choice trace signals (FFN20 landmark and consecutive-turn phase registration) to an unbanded signed group-field learner across failing and preserved operations. |
+| 2026-11-18 | [2026-11-18-trace-signal-in-the-loop.md](2026-11-18-trace-signal-in-the-loop.md) | Connects localized pre-choice trace signals (FFN20 landmark and consecutive-turn phase registration) to an unbanded signed group-field learner across failing and preserved operations. |
+| 2026-11-22 | [2026-11-22-token-loss-twin.md](2026-11-22-token-loss-twin.md) | Specifies the matched next-token cross-entropy twin control on `discovery-05` (same 538 tensors, BF16 remainder carry, step sizing, and blind 8-formulation panel as `390`; built and awaiting native engine re-qualification after a Nov 21 host library update). |
 
-> **November 22 Objective Follow-up (`token-loss-twin` / Lost-Step Accounting):** As recorded in [2026-11-21-consolidation-takeover.md](2026-11-21-consolidation-takeover.md) and audited in [../records/development/2026-11-22-joint-loss-recheck/README.md](../records/development/2026-11-22-joint-loss-recheck/README.md), charging unmatched ("lost") cells at their last measured discrepancy revealed that sparse operation-only gradients lowered logged loss while raising total carried loss (`+22.6%` after 10 updates)—motivating the next loop's twin objective combining whole-trace reference anchoring with targeted operation residuals.
+> **November 22 Lost-Step Accounting Recheck:** Separately from `2026-11-22-token-loss-twin.md`, [../records/development/2026-11-22-joint-loss-recheck/README.md](../records/development/2026-11-22-joint-loss-recheck/README.md) (extending [2026-11-21-consolidation-takeover.md](2026-11-21-consolidation-takeover.md)) showed that charging unmatched ("lost") cells at their last measured discrepancy turns `joint-stock-prechoice-training`'s logged `-25.7%` decrease into a `+22.6%` carried-loss increase after 10 updates—motivating the next loop's combined whole-trace + carried-cell objective.
 
 ---
 
@@ -55,6 +56,17 @@ All **39 tracked memos** in `journal/` are indexed below in two thematic groups,
 | 2026-11-16 | [2026-11-16-research-priority.md](2026-11-16-research-priority.md) | Prioritizes active native training over background storage maintenance and enforces single-controller systemd ownership for GPU0 runs. |
 | 2026-11-16 | [2026-11-16-single-working-model.md](2026-11-16-single-working-model.md) | Replaces per-step `9.3 GB` GGUF checkpoint duplication with a single in-place working model plus compact tensor/remainder state snapshots. |
 | 2026-11-16 | [2026-11-16-desktop-execution-takeover.md](2026-11-16-desktop-execution-takeover.md) | Transfers sole active run control cleanly with exact bit-level working-state verification after an interrupted acquisition at step `174`. |
-| 2026-11-19 | [2026-11-19-host-memory-and-disk.md](2026-11-19-host-memory-and-disk.md) | Bounds host RAM to streamed per-leaf working buffers (`~15 GB` vs. `63.4 GB` peak) and enforces headless plotting after an X11/OOM interruption during joint training. |
+| 2026-11-19 | [2026-11-19-host-memory-and-disk.md](2026-11-19-host-memory-and-disk.md) | Bounds host RAM to streamed per-leaf working buffers (`~15.6 GB` vs. `63.4 GB` peak) and enforces headless plotting after an X11/OOM interruption during joint training. |
 | 2026-11-21 | [2026-11-21-paper-release-and-loss.md](2026-11-21-paper-release-and-loss.md) | Sets the November 21 release milestone for the first case-study paper and initiates full provenance accounting after the November 19 unlogged disk deletion. |
 | 2026-11-21 | [2026-11-21-consolidation-takeover.md](2026-11-21-consolidation-takeover.md) | Audits three factual claims against primary run/bucket/MLflow records, recovers exact blinded evaluation panel judgments from session logs, and verifies zero-drift repository restoration. |
+
+---
+
+## 3. Lab Roles, Verification Workflow & Multi-Agent Glossary
+
+Throughout these verbatim memos and `declaration.json` provenance fields, frontier models from **Anthropic and OpenAI** were orchestrated under Marcos Damasceno's direction across dedicated implementation, storage, and independent review seats (see [`../JOURNEY.md` § Retrospective](../JOURNEY.md#retrospective-conducting-empirical-research-with-coding-agents)):
+
+- **`Astra`, `Fable`, `Performance`, `peer`, `root`:** Named persistent agent seats (`seat` = an isolated agent session with explicit file/experiment ownership). Prior to November 15, `Astra` owned mathematical specification/review, `Fable` owned solver implementation/execution, and `Performance` owned C++ recorder optimization and R2 disk archival; from November 15 onward ([`2026-11-15-two-peer-team.md`](2026-11-15-two-peer-team.md)), two peer seats shared implementation and cross-review with a single controller (`root` systemd unit) per active GPU run.
+- **`Eli` (`*-eli.md`):** Independent, read-only verification agent spawned fresh with all four primary manuscripts and the live code/JSON artifacts to audit equation-to-code fidelity, rounding semantics, and claim denominators before or after runs.
+- **`QGRE`:** Earlier experimental quantized (`TQ4 E2M1` FP4) CUDA megakernel inference harness used in Phase 01 (`studies/01-early-exploration/`) before moving to native BF16 `llama.cpp` in Phase 02 (`apps/decode-machine` retains `qgre` schema identifiers from that telemetry format).
+- **`R2` (`torad-research`) & `rented box`:** Private Cloudflare R2 bucket storing multi-gigabyte `.f32` trace streams and `.gguf` checkpoints verified by SHA-256 inventories (`studies/04-round-2-overlap/input-archives/`), and ephemeral Vast.ai RTX 5090 nodes used for isolated parallel solves.

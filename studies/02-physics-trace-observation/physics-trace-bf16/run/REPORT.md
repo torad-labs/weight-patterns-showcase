@@ -46,7 +46,7 @@ An independent reader checked all 24 full BF16 texts, verdicts, partial
 successes and truncation classifications. This is a bounded prompt-set result,
 not a general model capability score. Behavior remains mixed in BF16, so
 the earlier failures cannot be attributed exclusively to Q4 from these results.
-The [per-case assessment](behavior-assessment.json) preserves the detail.
+The per-case assessment preserves the detail.
 
 ## A correct partial calculation with a controlled comparison
 
@@ -81,8 +81,8 @@ the later erroneous height addition, and the bead/cart/coaster progressions.
 Eight anchors remain inside the block pair's common history. Eleven are later
 individual observations and are explicitly excluded from prompt-only contrasts.
 The collector verified 190 source-linked additions at those anchors.
-[Anchor selection](CALCULATION-ANCHORS.md) and
-[the recorded trails](milestone-trails.json) retain graph identities,
+Anchor selection and
+the recorded trails retain graph identities,
 tensor-byte offsets, state changes and output candidates.
 
 ## How broadly the earlier progression persists
@@ -150,7 +150,7 @@ universal over the later shared text. The first-prediction ratios range from
 the connected computation, not attribution to individual attention weights or
 an explanation of the behavioral improvement. The full source-linked rows,
 including the other 28 positions, are in
-[the exploratory layer-16 comparison](posthoc-layer16-comparison.json).
+the exploratory layer-16 comparison.
 
 The recurrence across prompt changes, arithmetic controls and checkpoint changes
 supports treating this as a broad participating transformation to investigate.
@@ -209,7 +209,7 @@ server/default-fusion versus standalone discrepancy remains separate.
 
 The [evidence index](EVIDENCE-INDEX.md) connects prompts, responses,
 recorded transformations, comparisons, limitations and preserved analysis
-sources. [Commands](COMMANDS.md) and [independent review](REVIEW.md) are
+sources. Commands and independent review are
 retained. The factory UI has not yet imported this raw research trace format.
 
 This arm gives us recorded correct partial progressions, their later departures,

@@ -1,0 +1,12 @@
+{
+  "reference_events": 407,
+  "prefix_events": 73,
+  "merges": 105,
+  "width": 1536,
+  "supported_cells": 7299,
+  "total_prefix_cells": 7665,
+  "mean_squared_positive_floor": 9.629859659552244e-06,
+  "prediction_vs_result": "The two known donors supported 7,299 out of 7,665 prefix cells under the preregistered rule. This constructs a target; only native continuation and free transfer can test its value.",
+  "failures_only": "366 cells lacked a shared positive target and remain unpenalized. Earlier failed intervention can reduce the auxiliary loss on its original context.",
+  "what_this_changes": "Freeze these targets and train from measured checkpoint 390 using computation-only registration."
+}

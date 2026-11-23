@@ -5,7 +5,7 @@ Purpose: let Marcos and an AI point to the same operation, inspect its relations
 ## Behavioral and weight relationships
 
 The optional `weightInvestigation` member extends the report with the
-`qgre.weight-case.v1` graph, documented in [WEIGHT-INVESTIGATIONS.md](WEIGHT-INVESTIGATIONS.md).
+`qgre.weight-case.v1` graph, documented in WEIGHT-INVESTIGATIONS.md.
 Its reading order starts at a selected output-token span and follows recorded
 reply/request hashes, separate diagnostic token correspondences, activation
 boundaries, named matrices and their checkpoint storage planes, then a proposed
@@ -136,14 +136,14 @@ Requirements are reported as `missing` in this viewer unless that exact evidence
 
 ## What the NVIDIA folder contributes
 
-The source folder is [`.dev/research/nvidia-pro`](../research/nvidia-pro/README.md). It is a historical local reference, originally written against September 2026 tools. Its `[V]`, `[S]`, `[R]`, `[D]`, `[H]` labels are retained in citations, not upgraded to freshly verified facts.
+The source folder is `.dev/research/nvidia-pro`. It is a historical local reference, originally written against September 2026 tools. Its `[V]`, `[S]`, `[R]`, `[D]`, `[H]` labels are retained in citations, not upgraded to freshly verified facts.
 
-- [07 — profiling toolchain](../research/nvidia-pro/07-profiling-toolchain.md), §§1–3: match the instrument to the question; separate application timing from counter collection.
-- [08 — metric cookbook](../research/nvidia-pro/08-ncu-metric-cookbook.md), §§2–9,12: clock and metric scope, sectors and demand traffic, spills, scheduler statistics and source correlation. Query supported metrics on the target installation; names and derived sections can change.
-- [16 — optimization playbook](../research/nvidia-pro/16-optimization-playbook.md), steps 1–6: classify then act, and reclassify after a change. Its 40/80-percent splits are heuristics, not universal boundaries; a large occupancy gap does not uniquely prove load imbalance.
-- [02 — memory hierarchy](../research/nvidia-pro/02-memory-hierarchy.md), §§1–3: scope of storage and the resource cost of latency hiding. Historical capacities/latencies are not assigned to an unidentified captured device.
-- [04 — async movement](../research/nvidia-pro/04-async-movement-tma-clusters.md), §§2–3: distinguish issue, completion and consumption; retain slot generation and dependency identity.
-- [19 — L2 prefetch](../research/nvidia-pro/19-l2-prefetching-on-sm120.md), §§3–4,6: distinguish stale front, insufficient issue, and a gate that competes with demand traffic. Its rig outcomes are conditional, not a directive to enable the issuer. Chapter 16 records production regressions and disabled issuers; those historical observations must not be dropped.
+- 07 — profiling toolchain, §§1–3: match the instrument to the question; separate application timing from counter collection.
+- 08 — metric cookbook, §§2–9,12: clock and metric scope, sectors and demand traffic, spills, scheduler statistics and source correlation. Query supported metrics on the target installation; names and derived sections can change.
+- 16 — optimization playbook, steps 1–6: classify then act, and reclassify after a change. Its 40/80-percent splits are heuristics, not universal boundaries; a large occupancy gap does not uniquely prove load imbalance.
+- 02 — memory hierarchy, §§1–3: scope of storage and the resource cost of latency hiding. Historical capacities/latencies are not assigned to an unidentified captured device.
+- 04 — async movement, §§2–3: distinguish issue, completion and consumption; retain slot generation and dependency identity.
+- 19 — L2 prefetch, §§3–4,6: distinguish stale front, insufficient issue, and a gate that competes with demand traffic. Its rig outcomes are conditional, not a directive to enable the issuer. Chapter 16 records production regressions and disabled issuers; those historical observations must not be dropped.
 
 ## Official cross-checks and conflicts
 

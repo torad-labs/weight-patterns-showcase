@@ -1,0 +1,41 @@
+{
+  "status": "complete_existing_originals",
+  "accepted": true,
+  "run_by": "Astra",
+  "completed_ct": "2026-11-09T13:01:33.193102-06:00",
+  "prediction_vs_result": "All 45 original natural GPU0 responses and all connected exports completed. New questions and screening were cancelled before any such execution.",
+  "failures_only": {
+    "target_failures": 20,
+    "numerical_successes": 25,
+    "other_errors": 0,
+    "caps": 0,
+    "repairs": "not applicable; unchanged model"
+  },
+  "what_this_changes": "Provides one common-arithmetic population for per-failure structural overlap; does not establish recurrence by itself.",
+  "decisions": 21845,
+  "verified_native_add_rows": 2293725,
+  "merges_per_prediction": 105,
+  "layers": 35,
+  "reproduced_gpu0_baselines": 29,
+  "all_score_hashes_and_tokens_equal": 29,
+  "gpu1": {
+    "outside_primary": true,
+    "completed": 14,
+    "incomplete_retained": [
+      "expanded-064-h1"
+    ]
+  },
+  "new_questions_run": 0,
+  "screening_run": false,
+  "bookkeeping_recovery": "Native run completed; wrapper final metadata publish failed on duplicate retention key. Recovered execution.json explicitly records that failure. No inference rerun. Code regression fixed and tested.",
+  "records": [
+    "labels-original-gpu0.json",
+    "gpu0-reproduction.json",
+    "original-gpu0/execution.json",
+    "exported-original-gpu0",
+    "replication-stop.json"
+  ],
+  "reviewed_by": "claude",
+  "acceptance_scope": "Acceptance to use the existing GPU0 originals as the source of per-failure overlap analysis. It does not accept the overlap result or claim the reviewer independently inspected every export. Native export fidelity was separately qualified before this acquisition; the completed counts and checks are the builders recorded verification.",
+  "review_source": "review-original-input-source.json"
+}

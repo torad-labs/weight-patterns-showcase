@@ -1,0 +1,547 @@
+{
+ "method_step": 5,
+ "run_by": "weight-research-astra: declaration, current-history requests, dose objective and acceptance; Fable's existing loop solver; Performance's own-history captures",
+ "status": "Stopped on November 14, 2026 on Marcos's direction (the last revision): interrupted, not converged and not completed, and not started again. Before that: Declared before preparation, a walk or any dose result; exploratory construction, not an accepted repair; revised prospectively after the first visit ended, before any command of step 2 (revisions, the last)",
+ "kind": "Repeated correction at feed-forward 33 and feed-forward 34 in turn from the original, with current-history inputs and fixed original reference (step 1 was made at feed-forward 33 as the one-site construction first declared; from step 2 on the loop goes 34, 33, 34, ...)",
+ "authority": "Marcos, relayed on November 12 at 11:50 PM CT: he asked why several hypotheses were not being tested and several numbers not being gotten, and said the seats can use rig and rent a machine with a 5090, or even 2, if it helps get more answers and test more things, since they do not need to be sitting and waiting; and on November 13 at 12:41 AM CT, typed in the llama.cpp scheduler seat's session and relayed: he asked why the code to run the three more constructions already specified had not been prepared, and why the seats were sitting idle. His direction of November 12 on what is corrected (journal/2026-11-12-correction-not-protection.md) stand as in the primary chain's declaration. Astra's specification of this construction (records/retrospectives/2026-11-13-parallel-constructions-astra.md, 6b97e2d3): 'Declare/launch them BESIDE the primary, not after its results' and 'no further permission from me is needed within them'.",
+ "beside": {
+  "fixed_text": "sign-33-only-original",
+  "meaning": "Not a controlled one-factor comparison: dose objective, stage-end budget, held-fold schedule and refreshed histories differ. The frozen single-site experiment is unchanged."
+ },
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.npz",
+ "objective": "At each fit, the existing feature-increment requests at the visit's own feed-forward merge (33 or 34) plus original-correct member/place/prompt error in the same continuous direction-and-size sum; current text and registration. Dose, from step 2 on: the builder targets at BOTH feed-forward 33 and feed-forward 34, each made from the visit-start state on its current histories before the walk and held fixed for that step, full correct-member answer error at all 105 merges and the local correct prompt error. Step 1's dose read its one site's targets and is not relabelled. Unknown wrong cells are reported, never assigned targets.",
+ "specification": "records/retrospectives/2026-11-13-on-policy-loop-astra.md",
+ "decision_records": [
+  "records/retrospectives/2026-11-13-on-policy-loop-astra.md",
+  "records/retrospectives/2026-11-14-multi-matrix-loop-astra.md",
+  "records/retrospectives/2026-11-14-compact-dose-astra.md"
+ ],
+ "reading_contract": "records/retrospectives/2026-11-13-on-policy-loop-astra.md",
+ "original_observations_from": "controlled-bf16-1",
+ "correction_reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+ "correction_reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+ "correct_members": {
+  "requests": [
+   "correct_places",
+   "correct_prompt"
+  ],
+  "replaces_the_correct_groups_cells": true,
+  "members": [
+   "discovery-01-channel-h1",
+   "discovery-06-channel-h1",
+   "discovery-15-channel-h1",
+   "discovery-00-channel-h3",
+   "expanded-004-h1",
+   "discovery-08-channel-h3",
+   "discovery-10-channel-h3",
+   "expanded-029-h1",
+   "discovery-11-channel-h3",
+   "expanded-064-h1",
+   "expanded-071-h1",
+   "expanded-039-h3",
+   "expanded-076-h1",
+   "expanded-078-h1",
+   "expanded-023-h1"
+  ],
+  "read_by": "loop.problem: exact original prompt anchors; original registered correct-member coordinates at the fitted frames. On reworded text, target transport is the stated construction assumption. Dose reads correct answer places at all 105 merges."
+ },
+ "row_requests": {
+  "target_source_sha256": "c099b76457bfbcf3ad82b498118e1255621e6eab1d261635ddb6b0889f2555a6",
+  "index": "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.json",
+  "index_sha256": "7172033a2f8d66b5d84977ec14d5bfc1a588abfb99fab87902b50870dbcd9640",
+  "answers": [
+   "discovery-05-channel-h1",
+   "discovery-10-channel-h1",
+   "discovery-17-channel-h1",
+   "expanded-020-h1",
+   "expanded-034-h3",
+   "expanded-042-h3",
+   "expanded-045-h1",
+   "expanded-046-h3",
+   "expanded-068-h1",
+   "expanded-070-h1",
+   "expanded-087-h3",
+   "expanded-092-h1",
+   "expanded-094-h1",
+   "expanded-095-h1"
+  ],
+  "supports": [
+   "discovery-15-channel-h1",
+   "discovery-00-channel-h3",
+   "expanded-029-h1",
+   "expanded-071-h1",
+   "expanded-039-h3",
+   "expanded-076-h1",
+   "expanded-078-h1"
+  ],
+  "sign_rows": {
+   "discovery-05-channel-h1": 141,
+   "discovery-10-channel-h1": 152,
+   "discovery-17-channel-h1": 142,
+   "expanded-020-h1": 154,
+   "expanded-034-h3": 207,
+   "expanded-042-h3": 207,
+   "expanded-045-h1": 141,
+   "expanded-046-h3": 141,
+   "expanded-068-h1": 142,
+   "expanded-070-h1": 142,
+   "expanded-087-h3": 141,
+   "expanded-092-h1": 141,
+   "expanded-094-h1": 142,
+   "expanded-095-h1": 142,
+   "discovery-15-channel-h1": 141,
+   "discovery-00-channel-h3": 187,
+   "expanded-029-h1": 141,
+   "expanded-071-h1": 115,
+   "expanded-039-h3": 114,
+   "expanded-076-h1": 142,
+   "expanded-078-h1": 142
+  },
+  "sign_rows_from": "studies/04-round-2-overlap/runs/same-line-sign-original/declaration.json",
+  "place": 168,
+  "forms": [
+   "direction",
+   "size"
+  ],
+  "replaces_the_wrong_groups_cells": true,
+  "construction": "Current registered input features plus the fixed original-support increment, prepared by loop_requests.py separately for each visit.",
+  "site": "The current visit's own feed-forward merge: 33 at step 1 and at the odd steps, 34 at the even ones.",
+  "support_note": "All seven supports stand, discovery-15-channel-h1 among them, as in the primary chain. At this run's one link, feed-forward 33, 12 of the fourteen builders rest mostly on that support in the step-3 reading; it is 8 J under the regime's boundary, and Performance's card-1 direct terms put its feed-forward-33 term at -1.70 beside -2.73 to -5.03 for the other six. Kept as descriptions: no margin and no projected difference becomes a multiplier, an exclusion or a target, and no auxiliary observation becomes a support.",
+  "correspondence": "Incoming means at the CURRENT registration's declared place; nearest mixture of the fixed original seven supports. All current rows in the cell contribute. This is computational correspondence, not a semantic certificate.",
+  "native_execution": "The request same-line-sign-original kept was measured on the registered recordings. Each link's request is made in the reading its solve's rows are in (controlled-bf16-4's passes, as generated, card 0): the builders' incoming states from the link's own rows, the supports' states before and after the merge and every row's origin from the original file's own reading in that same execution (controlled-bf16-1/baseline, which every solve counts from). Link 33's is compared with the recordings' request and the difference recorded; the recordings' file is kept as it is.",
+  "exclusions": "No case has two answers among the builders and supports. discovery-10-channel-h1 (a builder) and discovery-10-channel-h3 (a correct member) answer one question and are kept in one fold.",
+  "unsupported_cells": "Every registered place and prompt position of the fifteen wrong fitting members except the fourteen builders' sign rows: no target is known there and none is invented; they carry no term and are not called agreement. Among them the sign row of expanded-001-h3. All thirty are in the outcome reading.",
+  "read_by": "loop_requests.prepare/load with state, row, reference, axis and capture hashes.",
+  "refresh": "current registration",
+  "read_at": {
+   "matrices": [
+    "blk.33.ffn_down.weight",
+    "blk.34.ffn_down.weight"
+   ],
+   "from_step": 2,
+   "what": "the matrices whose builder request cells every score of a step keeps: the step's own (steps/<n>/asked.npz, the file its solve loads) and the other, made by the same two commands at the same visit-start state and text before the walk (steps/<n>/sites/<matrix>/rows.npz and asked.npz, each bound to its target source, original reading, model, rows, reference, cohort and capture as the step's own is)"
+  }
+ },
+ "solver": {
+  "file": "code/signal-trace/pipeline/weight_edit/loop.py",
+  "sha256": "1d4f2e37f5281f63d2fe6cae63e3c85416ebfa7c0c1e9383946a66f54c08df22",
+  "tube_sha256": "76e08b422bf4c2a42dacc340e1efa364dcff292cd3b9887a365252a83ccbe266",
+  "correction_sha256": "1e644f8b8fcf2c46c10dadb5a698fc2200276b895191e270c3a8f9cb2add7587",
+  "loop_requests_sha256": "b8334b45d84a20e563fab31e28f159f2cbcae30375e3b92a423a81296f324adb",
+  "second_ridge": "measured, the roundings held",
+  "folds": "case families",
+  "from_step": 2,
+  "scorer": {
+   "file": "code/signal-trace/pipeline/weight_edit/compact_dose_score.py",
+   "sha256": "4419c7ad541041700d4d3e4ba334e3f9c34ec799c6d993e8ef3b51cdd27bde8d",
+   "uses": {
+    "code/signal-trace/pipeline/weight_edit/loop_dose.py": "c7bdbf88ffce95df14b14eef6ef75aed2aae5b6c10632adbb10258b214e27fb6",
+    "code/signal-trace/pipeline/weight_edit/compact_dose_fields.py": "460247d39a33646c2047511e8fc92632b628ee8f541126c64147a8d199a0973d",
+    "records/development/2026-11-12-path-forward/dose_compact.py": "1b94b954ec27db1748e77c570937f29c43499a1fe7741eb081ce15fd73bbf764"
+   },
+   "produced_by": {
+    "records/development/2026-11-12-path-forward/dose-stage.sh": "5aec420f114df1a3447e08e0b594f881cb8ceb1a20297b1e4e4b051e9a29575c",
+    "records/development/2026-11-12-path-forward/dose_reading_from.py": "e9629d69e1e222a6c99867d437bd10d0a4b315c08904887b6f405d99f2e7b216"
+   },
+   "held_by_commit": "26077a810dae5135c2aa85c3b9b50245f5f04445",
+   "standing": "named November 14, 2026, 2:48 AM CT: Astra admits the two-site compact scorer after complete native score/archive qualification c32353f6, implementation add9b9e4, fallback repair 074176fa, and safe-boundary producer installation 26077a81; 67 focused tests pass; first-visit stage 2^7 was selected and written under the unchanged rule"
+  },
+  "what_changed_since_step_1": {
+   "correction": "the last feed-forward on a text of the model's own: a stand there counts an answer's steps as the output norm passes them on and its places from where the norm passes on the original's rows (stood_of with passes_on), the question's positions keep the original's rows; every other path is the file step 1's stages were scored with",
+   "loop": "`stepped` and `rows` take another of the loop's matrices at the step's own state and text (steps/<n>/sites/<matrix>/); without that word they are what they were",
+   "loop_requests": "`prepare` takes the same word",
+   "step_1": {
+    "walk": "loop 000ba67a, correction 054864ce, tube 0ed3f5c8 (steps/1/stages/record.json)",
+    "unchanged_start": "dose 82894f6e, loop 7d8224c1, correction 521a73f2, tube 0ed3f5c8 (steps/1/dose-readings/none/score.json)",
+    "changed_stages": "dose c7bdbf88, loop 11f55e95, correction 0927e8f0, tube 76e08b42 (every steps/1/dose-readings/<power>/score.json)"
+   }
+  },
+  "tests": "code/signal-trace/tests: test_correction (the last merge on a text of the model's own: five tests), test_loop (another matrix at the step's own state and text), test_loop_requests, test_loop_dose, as they pass at the commit that brings this revision",
+  "before": {
+   "file": "code/signal-trace/pipeline/weight_edit/loop.py",
+   "sha256": "000ba67afa61d05b8ba303e5d852ee61bc50305f1fdae0484a8a1bf1d13b541c",
+   "tube_sha256": "0ed3f5c8c28a2da5466d8ed192e10837ca783768e4c29fb1da1e7b2507d2540d",
+   "second_ridge": "measured",
+   "folds": "case families",
+   "tests": "31 loop/request CPU tests passed at a18ce27d; dose arithmetic and selection tested separately before use"
+  }
+ },
+ "hypothesis": "Refreshing rows and feature-increment requests on each actual current history, with whole-own-trace member feedback before retaining a stage, permits repeated correction against the original rather than continuing a fit on stale histories.",
+ "why_this_direction": "The agreed on-policy loop fell out of active tracking. A/B showed that held-text local improvement did not establish own-path repair, and crossed readings attributed 0.97\u20131.03 of pooled L's rise to wording. The current bridge and own-history dose instruments now make its smallest site-33 test executable; original full-path measurements, not candidate outcomes, supplied this site and support set.",
+ "repeating_pattern_check": "Earlier constructions optimized a supplied history then read the new one only after the full edit. Pooled means concealed member motion and a radius made a no-cost interior. Here every compared stage gets its own histories, the score is continuous member error, and changed text triggers refresh rather than exclusion. Transport of original correct targets across rewording is explicitly still an experimental assumption.",
+ "what_went_wrong_before": "The loop was omitted from tracking; the new request consumer initially expected own_compare metadata rather than own_text's actual record, and own-text prompt origins would have targeted zero. a18ce27d repairs these interfaces. A score alone still cannot certify correspondence or capability repair.",
+ "rule": {
+  "specification": "records/retrospectives/2026-11-13-on-policy-loop-astra.md",
+  "scope": "A bounded two-site current-history construction at feed-forward 33 and 34, not proof of whole-capability repair and not the whole merged plan (plan v4's answer-level target over more of the path is unfinished work). No no-fit or reserved evaluation. Step 1 is the one-site visit at 33 as it was declared and made.",
+  "requests": "row_requests.refresh=current registration; all current rows at the declared place, equal Layout coefficients, original support increments and original anchors. No target is inferred from generated words. From step 2 on the request is made at the visit's own merge and, for the dose, at the other matrix's merge too: both from the visit-start state on the same current histories, before the walk (row_requests.read_at; steps/<n>/asked.npz and steps/<n>/sites/<matrix>/asked.npz).",
+  "dose": "All distinct BF16 stage ends through the recomputed reference unit, plus unchanged. Read all fitting members on each stage's own text at every merge. Same member score on held fold and full cohort; choose least held score among stages strictly improving both; smaller actual matrix change breaks an exact tie. From step 2 on every score keeps the builders' request cells at both feed-forward 33 and feed-forward 34 at the existing per-cell normalization: no division by the number of sites and no balancing coefficient; the active site's targets are the solve's own asked targets. A missing required correspondence is unresolved. A compact reading follows records/retrospectives/2026-11-14-compact-dose-astra.md; an unqualified or non-equivalent reading takes the full path.",
+  "continuation": "Write the selected stage, refresh the written state's histories, registration, rows and requests, and visit the next matrix. A visit that selects no stage keeps its start, and the loop moves on to the next matrix. A complete pass over the loop's matrices that keeps every start ends this bounded construction. Missing required coverage, an invalid capture, missing provenance or a failed execution ends as unresolved/instrument failure: it is neither convergence nor that stopping condition. Every visit compares its stages with its own unchanged start only; scores of different visits use different requests and starts and are not one error curve. A state met again exactly is recorded as a cycle.",
+  "acceptance": "The score is construction validation, not the capability verdict. Full own trace, every answer, missing targets and correspondence are reported; no complete repair claim while a gap, a new correct discrepancy or an undefined correspondence remains. Answer outputs are descriptions, never the selector.",
+  "reference": "The original correct reference, original support transformations and normalization remain fixed. Original correct target transport after rewording is a hypothesis, not established semantic equivalence.",
+  "order": "Step 1 at blk.33.ffn_down.weight (made). Step 2 at blk.34.ffn_down.weight, step 3 at blk.33.ffn_down.weight, and so on in turn: loop.matrices, step n at the n-th counted round and round. A step starts from the state the steps before it left: the last written state, on the text that state itself writes.",
+  "folds": "The fold held out of a step's walk is (step - 1) modulo the number of case folds, in the existing fold order (parameters.fold_schedule; loop.held_folds writes it out for the driver).",
+  "sources": "From step 2 on a step's commands are made only by the files `solver` names: the step driver holds loop.py, tube.py, correction.py and loop_requests.py to their hashes before the step and before its walk, and the scorer before its visit (visit_outcome.py --sources). A change of one of them is a revision here first."
+ },
+ "dose_execution": {
+  "mode": "all-canonical",
+  "what": "This declaration's first execution, set back by the revision of 2026-11-13 5:25 PM CT: every dose reading on card 0 and the selection by rule.dose, through read_loop_visit.py <run> <step> visit.",
+  "canonical_card": "0",
+  "canonical_directory": "steps/<step>/dose-readings/<power-or-none>",
+  "data": "All tokens and all 105 merges remain recoverable: each finished exported capture is scored locally, uploaded and remote-byte verified before local or remote copies are released. No credentials or home paths go to a rented machine.",
+  "remote_proposal": {
+   "standing": "ended unfinished at the box's stop; its readings are records and enter no ranking and no selection",
+   "ended": "as vast lists it at 5:25:00 PM CT: box 60544516 not listed, the account's credit $0.00",
+   "as_declared": {
+    "mode": "remote-proposal-canonical-confirmation",
+    "box": 60544516,
+    "canonical_card": "0",
+    "remote_directory": "steps/<step>/on-box-60544516/dose-readings/<power-or-none>",
+    "canonical_directory": "steps/<step>/dose-readings/<power-or-none>",
+    "remote_identity": "The actual producer records read_on: box, rented_through, card, driver, the recorder_sha256 actually executed, its local source hash, engine_build, cuBLAS library identity and public_model_sha256. All remote dose scores and unchanged must share the box/card/driver/recorder/engine/cuBLAS/public-model identity; no pooling of boxes or library versions. No GPU UUID is recorded by the initial producer, and none is invented. A recorded UUID, if later present, also participates in identity.",
+    "prompt_term": "The qualified local solver expression on the identical question rows is used for every candidate in both phases. Remote answer traces plus this term are explicitly a proposal instrument, not an all-remote computation or an equivalent canonical score.",
+    "reference": "Original supports, per-step targets, scales, fitting folds and no-fit separation are unchanged. The remote unchanged reading is a comparison, not a new reference or a widened floor.",
+    "canonical_confirmation": "Only unchanged and the one selected remote proposal are required on card 0. Their file hashes must equal the proposal and its starting model. Both held and full fitting sums must strictly improve before write.",
+    "failure": "No remote improvement, a failed canonical improvement or an unfinished remote visit leaves the current state unmodified. Missing coverage/provenance is an instrument/unsupported comparison, not convergence.",
+    "data": "All tokens and all 105 merges remain recoverable: each finished exported capture is scored locally, uploaded and remote-byte verified before local or remote copies are released. No credentials or home paths go to a rented machine.",
+    "resources": "Performance qualified replacement 60544516 with its two original-model passes at 2:37 to 2:41 PM CT November 13 (60523688, named here before, was stopped by vast at 2:25:03 PM CT, the end of its host's listing). Its hard stop by rig is 10:30:54 PM CT and its host's listing runs to December 31; the account's credit may end the readings sooner, near 5:00 PM CT, and what has finished by then is brought home and archived. This declaration makes no rental or extension. The loop's next own text and rows remain card 0's."
+   }
+  },
+  "compact_capture": {
+   "form": "compact/1",
+   "enabled": true,
+   "from_step": 2,
+   "what": "A changed stage is captured from its matrix's own merge on, on the unchanged start's text, and every merge before it is the unchanged start's capture again, held to it at every decision; a stage that fails one of those holds is read whole. Every score still reads all 105 merges of every answer, and the prefix and the suffix stay recoverable from verified archives. The switch is this declaration's and no shell's (read_loop_visit.py takes it from here).",
+   "accepted_by": "weight-research-astra, records/retrospectives/2026-11-14-compact-dose-astra.md, \"Native archive completion and next-visit admission\" (c32353f6; the adapter add9b9e4, the whole-reading fallback 074176fa)",
+   "qualification": "the compact reading of step 1's stage 2^3, scored by the adapter, gives that stage's whole capture's held and full sums exactly (steps/1/compact-qualification/3/score-equivalence.json); its fields and totals are the whole captures' in all thirty answers; the base and the stage were read back from the bucket (steps/1/dose-readings/none/compact-archive.json, steps/1/compact-qualification/3/capture-archive.json). It qualifies the instrument, and no stage or repair.",
+   "producer": {
+    "stage_script": "records/development/2026-11-12-path-forward/dose-stage.sh",
+    "reading": "records/development/2026-11-12-path-forward/dose_reading_from.py",
+    "qualified_as": "records/development/2026-11-12-path-forward/dose-from/README.md (weight-research-perfomance)",
+    "revision": "as installed, held by commit 26077a81: dose-stage.sh 5aec420f114df1a3447e08e0b594f881cb8ceb1a20297b1e4e4b051e9a29575c, dose_reading_from.py e9629d69e1e222a6c99867d437bd10d0a4b315c08904887b6f405d99f2e7b216"
+   }
+  }
+ },
+ "parameters": {
+  "dose_execution": {
+   "measured_from": "records/development/2026-11-13-rented-solve/engine-on-box-60544516.json",
+   "derivation": "Replacement 60544516 repeated all-score hashes at all 14592 supplied-history steps in two original-model passes (113.4 and 108.3 seconds); first choices differ from canonical card 0 at 11 steps in 10 fitting answers. Its original plain pass also matches both earlier boxes bit for bit, but intermediate capture arrays and edited states were not compared across boxes. Thus all proposals and unchanged use 60544516 only, while the exact selected proposal and unchanged are confirmed on the actual next-visit execution, local card 0. No edited-state ranking transfer is inferred; two canonical endpoints follow from the comparison itself, not an arbitrary dose cap.",
+   "scales_with": "The model, native engine, physical card/library identity, changed histories and existing rental window. Cross-card ranking transfer is not assumed.",
+   "standing": "superseded for selection by the revision of 2026-11-13 5:25 PM CT: it is the record of the remote-proposal execution that ended unfinished"
+  },
+  "coordinates_and_weights": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "The frozen reference's scales S_direction 1268.5365669493656 and S_size 28.67797931944294: a form weighs w_f = 0.5/S_f, 3.9415e-04 for the direction and 1.7435e-02 for the size, the same at every merge, place and link. The joint features' size coordinate is the log size times the root of w_size/w_direction (6.6508510517827295).",
+   "scales_with": "The original model, its full original reference and the native terminal transform. Another source needs its own reference."
+  },
+  "request_target": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.json",
+   "derivation": "The step-3 run fixes who is asked and against whom (its fourteen builders, seven supports, each one's sign row) and the construction; its kept request at this merge has lengths 0.062 to 0.195 at feed-forward 33. This run's own request is made by correction.asked from the rows the link reads and the original file's reading, as `rule.request` says, and recorded with its hash and its distance from the kept one. Nothing of it is scaled, capped or rounded.",
+   "scales_with": "The supports, the correspondence at each link's incoming state, the merge, the prefix and the text of the answers."
+  },
+  "request_rows": {
+   "value": 168,
+   "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+   "derivation": "The frozen registration lays each of the fourteen builders' sign rows alone at place 168 (checked again by correction.asked at every link of this run): at that place a builder's mean is its one row, so the request asked of the member there is the row's own.",
+   "scales_with": "The registration and the text."
+  },
+  "request_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "A request weighs the reference's own cell of the wrong group at that merge and place, w_f, over the number of wrong members among the answers summed over: 10 on the two folds a path is solved on, 5 on the fold it is read on, 15 for the last solve (fourteen requests, each at w_f/15). Not rebalanced by margin, support, parameter count or number of rows (Astra).",
+   "scales_with": "The reference's weights and the number of wrong members in each sum."
+  },
+  "correct_member_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "A correct member's squared own error at a place weighs w_f/n_c with n_c the number of correct members among the answers summed over: 11, 9 and 10 on the pairs of folds solved on, 4, 6 and 5 on the folds read, 15 for the last solve. The group's own cell is left out, so this is counted once.",
+   "scales_with": "The reference's weights and the number of correct members in each sum."
+  },
+  "prompt_position_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/separable-at-17-original/summary.json",
+   "derivation": "One prompt position of a correct member weighs what one registered answer place of that member weighs, w_f/n_c: the convention that diagnostic exercised and Astra's specification of the member objective kept. A convention between two units, named as one, and no multiplier to tune.",
+   "scales_with": "The reference's weights, the number of correct members summed over, and each prompt's number of positions."
+  },
+  "ridge_unit": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "Per link, correction.unit_of on the reference's unmodified cells at the matrix the link starts from over all thirty fitting answers' rows that link keeps: the trace of the direction cells' action on the inputs times the mean squared learned scale, plus the size cells' curvature trace over the output width, over the input width. Computed by each link's command and recorded; no value from another matrix or link is used. A scale the search is counted in, not a claim about the sum's curvature.",
+   "scales_with": "The link's rows, the matrix's shape (12288 by 1536), the learned merge scale and the reference's weights."
+  },
+  "first_ridge": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/correction.py",
+   "derivation": "Per link, the largest power of two times the unit not above 2||s||^2/(RESOLVED x E), with E the whole sum on all thirty at the link's start and s the slope of E/2 there (correction.strongest). Computed by each link's command and recorded with its inputs.",
+   "scales_with": "The link's requests, where the prefix has left the correct members, the initial slope, the unit and the arithmetic's resolution."
+  },
+  "ridge_spacing": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/correction.py",
+   "derivation": "The solver halves the ridge from one stage to the next (PATH = 1), each stage starting from the last written state. The search's grain, the same for every matrix; a valley between two powers can be missed, and the record keeps every stage.",
+   "scales_with": "Nothing of the data: a finer grain costs proportionally more stages."
+  },
+  "work_limits": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+   "derivation": "The solver's own constants as each record keeps them (tube.EFFORT: at most 40 accepted rounds a stage, and 400 conjugate-gradient iterations a round's linear solve, as 10 passes of 40 where cells have radii and one run of 400 where none has; RESOLVED, the root of float32's rounding, ends a stage whose round falls by no more than that part of its starting sum). They were set on the solver's calibration at other matrices and are not measured for these: they limit work and do not shape the sum. Whether they bind is recorded per stage; a stage that ends at a limit is work not finished and no statement about what a longer solve would reach.",
+   "scales_with": "The local curvature at each matrix and the ridge."
+  },
+  "second_ridge": {
+   "value": "measured, the roundings held",
+   "measured_from": "records/development/2026-11-12-correction-objective/held-path-sign-chain-29-34-original-33-fold-0.json",
+   "derivation": "No number: at each round the second ridge is (the sum at the solved step, read with every rounding on the way to the layer's last merge holding what it added at the round's matrix, less the first-order model's value there) over the step's squared length, when that difference is more than RESOLVED of the sum, and the step is solved again where it exceeds the one it was solved with; it only rises along a path. Named here from step 2 on, before any walk of it. Step 1's walk was made under 'measured' and stands as made; walked again with the roundings held it is the record's path at every stage its visit scored (records/development/2026-11-12-correction-objective/README.md, \"The loop's step 1 walked again with the roundings held\"). Why this reading: read through the merges themselves, the difference took the engine's BF16 rounding for curvature and froze a path: the primary chain's link 33 kept 0.999970 of its held start and its link 34 0.815 under 'measured', where the same links solved with the roundings held kept 0.497 and 0.353.",
+   "scales_with": "How far the merges depart from their first order at a step with the roundings held, which depends on the matrix, the ridge and the step; and, for what the reading leaves out on purpose, how many rows the engine reads several tokens at once (the question's positions and each answer's first step) and how strongly the per-layer embedding's path reaches the layer's last merge."
+  },
+  "step_acceptance": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/correction.py",
+   "derivation": "Each BF16-written trial is read through the native merge expression on every row and taken only when the whole sum E on the answers solved on is strictly less; otherwise the part of the step is halved down to no written movement. No bound and no held reading vetoes a step; held folds choose the setting only.",
+   "scales_with": "The file's BF16 grid and the proposed change."
+  },
+  "solve_geometry": {
+   "measured_from": "records/development/2026-11-10-speed-review/correction-solves/basis-rank-correction-at-19.json",
+   "derivation": "The eigenbasis that speeds a round's linear solves and the measure a writing is nearest in are made from the reference's unmodified cells on the rows solved on (correction.basis_of). The action is a gram of one row of inputs a cell, so its rank is at most the number of cells of the merges read (1,920 here) whatever the width; Performance measured 1,732 values above what a double factoring resolves, of at most 1,920, at a 6144-wide feed-forward matrix (the record named) and 958 of at most 960 at attention 17, 2,048 wide (the record beside it). The linear solve and the measure use the eigenvectors of the 1,920 largest values and the ridge alone on every other direction: the same operator, not a truncation by size. They change how fast a solve arrives and which BF16 neighbour a writing prefers, not what is solved.",
+   "scales_with": "The rows solved on, the reference's weights and the number of places and merges read."
+  },
+  "dose_and_stopping": {
+   "measured_from": "records/retrospectives/2026-11-13-on-policy-loop-astra.md",
+   "derivation": "Continuous member squared direction/log-size error, summed at the original form weights and divided by each original group's count in the subset. The same fixed per-step targets score all stages. Strictly lower held and full sums are the algebraic improvement condition; no numerical tolerance. Equal held scores choose smaller actual BF16 change.",
+   "scales_with": "The declared coverage, original scales, current histories, and group membership in each existing fitting fold."
+  },
+  "fold_schedule": {
+   "measured_from": "studies/04-round-2-overlap/runs/sign-33-only-original/declaration.json",
+   "derivation": "Use correction.case_folds on the existing source fitting folds; held index=(step-1) modulo the number of those folds. Earlier steps can have trained a later held member, so these are construction data, not independent validation.",
+   "scales_with": "The number and membership of the existing case-family folds."
+  },
+  "last_ridge": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/correction.py",
+   "derivation": "Compute correction.unit_of from current rows and the fixed reference for each visit. Stop the first bounded path when ridge equals that measured unit: power zero, inclusive. This is a declared work boundary for repeated feedback, not an inferred optimum; the older sign paths selected weaker ridges.",
+   "scales_with": "Current input geometry and original reference scales; the boundary is recomputed, not borrowed as a matrix-specific ridge value."
+  },
+  "matrices": {
+   "value": [
+    "blk.33.ffn_down.weight",
+    "blk.34.ffn_down.weight"
+   ],
+   "measured_from": "records/development/2026-11-12-correction-objective/walk-beside-visit-on-policy-33-original-1.json",
+   "derivation": "The decision is records/retrospectives/2026-11-14-multi-matrix-loop-astra.md. What it rests on, from step 1's own records at 18 of 18 stages: the walk's own reading of the cells it is asked at and the whole model's on the stage's own text agree for the wrong group to 4.5e-06 of the start, and all of the difference between the two readings is the correct group's, at merges the fit at 33 does not read; from 2^7 (the least held score, 0.9705) to 2^0 the change of the matrix grows 25.22-fold, that difference 94.4-fold and the builders' gain 11.40-fold. Of the correct members' rise, 0.5238 to 0.9986 lies at layer 34's three merges, after the solver's two (dose_split.py, same folder). Feed-forward 34 is the one matrix whose solve reads every merge its change reaches on a fixed text (its own merge and the model's last, as the output norm passes it on); feed-forward 33 is the site the first visit corrected. Not chosen from any candidate's outcome, and no claim that these are the only sites.",
+   "scales_with": "Which merges lie behind a matrix and outside its solve's reading, and how the cost there grows with the step: one more matrix to the loop where a later visit shows the same."
+  },
+  "sites_read": {
+   "value": {
+    "matrices": [
+     "blk.33.ffn_down.weight",
+     "blk.34.ffn_down.weight"
+    ],
+    "from_step": 2
+   },
+   "measured_from": "records/retrospectives/2026-11-14-multi-matrix-loop-astra.md",
+   "derivation": "The loop's matrices, each one's builder request cells in every score whichever matrix is fit, so that a visit at one site cannot lower its score by giving up what the other site's requests gained. From step 2: the first step made after the decision. Step 1 was scored before it at its one site.",
+   "scales_with": "The loop's matrices: one request set a matrix."
+  }
+ },
+ "prediction": "At least one distinct BF16 stage in a visit reduces the same declared own-history objective on its held fitting fold and the entire fitting cohort; after retaining it, a subsequent visit can be prepared from the written state's own text, fresh rows and original-support request without stale offsets. Whole-trace and per-answer readings are reported regardless.",
+ "would_weaken_it": "No stage lowers both readings within the declared path; refreshed targets have unresolved correspondence; the score falls while an own full-trace discrepancy or new correct-member failure remains; or the next visit cannot be formed from the exact written state. Any such result is retained, not a reason to relabel sign counts or change thresholds.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/reference",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/model/bindings.json",
+  "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/declaration.json",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.npz",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.json",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/read/summary.json",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/passes/rows-blk.33.ffn_down.npz"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/on-policy-33-original/steps",
+  "studies/04-round-2-overlap/runs/on-policy-33-original/model",
+  "studies/04-round-2-overlap/runs/on-policy-33-original/logs",
+  "studies/04-round-2-overlap/runs/on-policy-33-original/result.json"
+ ],
+ "revisions": [
+  {
+   "date_ct": "2026-11-13 04:39 CT",
+   "what": "Correct solver.tube_sha256 from the inherited chain declaration's 8ac9eb127c79c88a4f978ec8a2f0559f83616bdbeb18653c3fce9328b1d51f56 to the actual 0ed3f5c8c28a2da5466d8ed192e10837ca783768e4c29fb1da1e7b2507d2540d, as the walk's made_with records.",
+   "why": "Astra's declaration generator copied the old field although it updated loop.py's hash. Fable's independent solver-contract check found the mismatch; tube.py has this version since 16fe73a5.",
+   "scope": "Provenance correction only. No objective, reference, membership, numerical policy, running command or prior outcome changes. Each command's own made_with remains the source for the code it executed."
+  },
+  {
+   "date_ct": "2026-11-13, before any dose score or selection",
+   "what": "Move proposal answer captures and ranking to one declared rented-card execution, with unchanged and the selected proposal confirmed on local card 0 before take/write.",
+   "why": "Performance measured reproducible but different native execution on box 60458542; all nineteen canonical dose captures would occupy roughly three hours of the shared card for this visit. Same-box ranking can propose a candidate, but it does not establish improvement on the card that supplies the next loop rows.",
+   "preserved": "The completed walk, all eighteen stage matrices, targets, reference, group weights, folds and numerical search path are unchanged. The interrupted canonical unchanged capture is kept, including its completed own text and ten exported answer folders, and can resume.",
+   "changed": "The selected stage need not minimize the unmeasured canonical scores of all eighteen stages. One remote proposal gets a canonical paired check; failed confirmation keeps start and ends this bounded comparison, with no outcome-driven reselection. The common local prompt term is labelled explicitly in both phases.",
+   "authority": "Astra's declared execution/selection construction within the existing research method; no change to the hypothesis or method steps, no new rental, no no-fit/reserved access."
+  },
+  {
+   "date_ct": "2026-11-13, before any remote dose capture or score",
+   "what": "Replace the removed proposal execution 60458542 with 60519990; every proposal and unchanged start use only that one new execution.",
+   "why": "Performance reports rig destroyed the idle old box at 9:49 AM CT. The attempted unchanged send failed before capture. Performance rented one replacement under the standing authorization; its recorder qualification and repeatability reading precede dose capture.",
+   "preserved": "All eighteen already written stage matrices, unchanged start, prompt terms, original reference, per-step targets, folding and exact-winner canonical confirmation remain unchanged. No old-box dose score exists to pool or discard.",
+   "resources": "The replacement is $0.617/hour, hard stop November 13 at 4:27 PM CT. This record does not rent, extend or select any machine or dose based on an outcome.",
+   "authority": "Astra records the machine owner's replacement as a prospective execution identity within the same method. No hypothesis, method step, no-fit role or sealed-set status changes."
+  },
+  {
+   "date_ct": "2026-11-13 10:50 CT",
+   "what": "The machine owner removed 60519990 before any loop payload or cohort was sent; no dose capture is authorized against this removed destination.",
+   "why": "The measured return link was 0.3 MB/s (29 MB in 100 seconds), unsuitable for returning full captures; its replacement is being qualified by Performance.",
+   "preserved": "No reading, score, proposal or selected stage exists on either removed box. All eighteen matrices, targets, prompt terms, data roles and exact-proposal canonical confirmation remain unchanged.",
+   "next_execution": "Record the qualified replacement before any native dose capture, using that one box for all proposals and unchanged. Do not reuse an unmeasured card as if the old repeatability result applied."
+  },
+  {
+   "date_ct": "2026-11-13, before the replacement engine qualification or any dose",
+   "what": "Name replacement 60523688 prospectively; hold every send until Performance reports its completed engine qualification and two original-model check passes.",
+   "why": "The prior replacement had an unsuitable measured return link and subsequent host starts failed. Performance measured 56.3 MB/s return on the new box direct endpoint, versus 14.2 MB/s through its proxy; its driver is 610.57.04, different from the first box.",
+   "resources": "Existing owner-supplied box only, November 13 hard stop 5:07 PM CT; no further rental or extension by this declaration.",
+   "preserved": "Every proposal and unchanged start use this one qualified execution; exact winner/start confirmation remains on card 0. The eighteen stored matrices, all prompt terms, fixed reference, targets, folds and excluded data roles are unchanged. No score exists on any previous box."
+  },
+  {
+   "date_ct": "2026-11-13, after the 11:13 to 11:16 AM CT original-model qualification and before the first dose send",
+   "what": "Release the qualification hold on 60523688; same-box proposal/start and exact-winner canonical confirmation are unchanged.",
+   "evidence": "records/development/2026-11-13-rented-solve/engine-on-box-60523688.json: both all-score hashes agree at all 14592 supplied-history steps; 80.7 and 80.6 seconds. The relocated recorder has the accepted exact second identity.",
+   "limit": "Matching the prior box on the original plain pass does not establish matching intermediate arrays or edited-state execution. No cross-box score pooling or removal of canonical confirmation follows."
+  },
+  {
+   "date_ct": "2026-11-13 2:57 PM CT, before any send to 60544516",
+   "made_by": "weight-research-perfomance, under the President's ruling of November 13, 2026 (about 2:55 PM CT), because weight-research-astra, whose declaration this is, was held by its plan limit until November 17, 8:52 AM CT and could not be heard. Astra may supersede this revision.",
+   "what": "Name replacement 60544516 in place of 60523688; every proposal and the unchanged start are read again on that one box. Nothing else of the dose rule changes.",
+   "why": "vast stopped 60523688 at 2:25:03 PM CT, the end of its host's listing, 2 h 42 min before the hard stop this declaration counted on (records/development/2026-11-10-speed-review/README.md:1695). Seven of its nineteen readings were home and scored (unchanged, 2^17 to 2^13 and 2^11); 2^12 stayed on its disk and 2^10 to 2^0 were never sent.",
+   "evidence": "records/development/2026-11-13-rented-solve/engine-on-box-60544516.json: both all-score hashes agree at all 14592 supplied-history steps (113.4 and 108.3 seconds) and with the kept rented-card pass of the two earlier boxes at every step of all thirty answers; the relocated recorder has the accepted exact second identity.",
+   "preserved": "The seven readings of 60523688 stay where they are (steps/1/on-box-60523688) as records; by this declaration's own rule (no pooling of boxes or library versions; the new box's driver is 615.71.09) they enter no ranking with the new box's. The eighteen stored matrices, all prompt terms, the fixed reference, targets, folds, excluded data roles and exact-winner canonical confirmation on card 0 are unchanged.",
+   "limit": "This revision names the box and carries the readings: the driver for 60544516 (steps/1/remote-execution-2026-11-13-box-60544516.py, Astra's driver with the box, its deadline and its worker count replaced and the proposal and confirmation left out) ends when the unchanged start and the eighteen stages are scored and archived, and makes no proposal itself. By the President's wider ruling of 3:02 PM CT the same day, the rest of this declaration's dose rule (the ranking, the confirmation of unchanged and the one proposed stage on card 0, and the write only if both sums are lower there) is executed as written by weight-research-fable in Astra's absence; assessments and the next declaration wait for Astra. A bit-for-bit comparison of the two boxes' readings of the same stages (records/development/2026-11-12-path-forward/compare_box_readings.py) is recorded as each comes home; whether it lets the old box's readings stand is Astra's to rule.",
+   "resources": "Owner-supplied box only (Performance, under Marcos's standing authorization); rig's hard stop is 10:30:54 PM CT. If the account's credit ends first, what has finished is brought home and archived, and nothing else is rented (the President's ruling)."
+  },
+  {
+   "date_ct": "2026-11-13 5:25 PM CT, after the box's stop and before any canonical reading of a changed stage",
+   "made_by": "weight-research-fable, under the President's ruling of November 13, 2026 (about 4:36 PM CT), made while weight-research-astra, whose declaration this is, was held by its plan limit until November 17, 8:52 AM CT and could not be heard. Astra may supersede this revision.",
+   "what": "The remote-proposal execution ends unfinished, and the dose rule is set back to this declaration's first form (f270b175 and ec35e8d3, before the revision of eb6f33b9): the unchanged start and every distinct stage are read on card 0 by Astra's own all-canonical runner (records/development/2026-11-12-correction-objective/read_loop_visit.py on-policy-33-original 1 visit), ranked by the same member sum, and the least held score among the stages that strictly lower both sums is taken and written. No proposal and no confirmation step remain. rule.dose holds its first words again; dose_execution.mode is all-canonical; the remote execution's fields are kept under dose_execution.remote_proposal as they were declared. The runner is started through steps/1/canonical-visit-2026-11-13.sh, which changes nothing of it: it waits for the room a capture asks for, starts the runner again after a stop for that room or for a failed transfer to the bucket, and ends on any other stop (its log: logs/step-1-canonical-visit.log).",
+   "why": "The rented account ran out before the visit could finish: this seat read its credit at $0.23 at 5:01:42 PM CT and $0.05 at 5:05:26 PM CT, and box 60544516, destroyed at 5:02:11 PM CT with four of its nineteen readings home (Performance, whose driver for it ended at 5:21:59 PM CT with each of the four scored, read back from the bucket and released), is no longer on it (as vast lists it at 5:25:00 PM CT: box 60544516 not listed, the account's credit $0.00). By this declaration an unfinished remote visit selects nothing and leaves the state as it is. The reason the readings were moved to a rented card on November 13 at 5:34 AM CT (the nineteen canonical captures would hold card 0 while chain solves needed it) no longer holds: the chains closed at 3:31 and 3:52 PM CT and card 0 is idle.",
+   "the_remote_visit_as_it_ended": "On box 60544516: scored the unchanged start, 2^8, 2^5, 2^2; 15 of the eighteen stages have no score there. On the box vast stopped at 2:25 PM CT (60523688): the unchanged start and 2^17 to 2^13 and 2^11. All of them stay where they are (steps/1/on-box-60544516, steps/1/on-box-60523688) as records and enter no ranking and no selection.",
+   "seen_before_this_revision": "The seat making this revision read the remote scores that exist on box 60544516 (2^8 held 0.9980 and full 1.000005 of that box's unchanged start; 2^5 held 0.7447 and full 0.999788 of that box's unchanged start; 2^2 held 0.8015 and full 0.999881 of that box's unchanged start; of 2^5 also the member table, where most of the held sum's fall is one held builder whose wording on the box moved back to the recording's), and the six of the stopped box. No canonical reading or score of any changed stage exists: steps/1/dose-readings/<power>/ holds prompt.json alone for all eighteen. The rule set back here reads every stage and takes the least held sum among those lowering both, so nothing seen there can enter what is taken.",
+   "comparability": "The start's score was made on November 13 at 5:31 AM CT by loop_dose.py 82894f6e\u2026 (kept beside it, made-with/), loop.py 7d8224c1\u2026 and correction.py 521a73f2\u2026 (commit 99eca710) and tube.py 0ed3f5c8\u2026 (commit 16fe73a5); the stages are scored by the files as they stand at this revision (loop_dose.py c7bdbf88\u2026, loop.py 11f55e95\u2026, correction.py 0927e8f0\u2026, tube.py 76e08b42\u2026), which do not change until the visit ends. Compared function by function, comments aside, before this revision: the member sum's own functions (registered_means, fields, total, choose) and the selection's (same_execution, dose_folder, candidate_powers, load_score, select) are the morning's, and so is every function `score` reaches in tube.py, correction.py, loop.py, loop_requests.py and ladder.py except tube.declared, which since then also accepts the recorder by its second identity; `score` itself and execution_of differ in provenance checks and the rented transport (execution_of, payload_identity, score, transport_capture_sources), not in the sum. The nineteen prompt terms are the morning's and none is made again: the start's of 4:42 AM CT (correction.py 65f2cdff\u2026, a state of the file no commit holds; its sum over the correct members 1.315e-10, where 2^17's is 1.333e-10), the eighteen stages' made by 6:54 AM CT with correction.py ad5a80d0\u2026 and tube.py a2165ce9\u2026 (commit 3640f366). The reading instruments changed since the start was read in how the card's lock is taken (per recorder pass) and in where the recorded token ids are read from (the cohort's frozen ids); the recorder is the one the start names (0b4ea036\u2026).",
+   "preserved": "The completed walk and its eighteen stage matrices, the nineteen prompt terms, the fixed original reference, targets, weights, folds, excluded data roles, the member sum and its strict-improvement rule are unchanged. The canonical unchanged reading of November 13, 5:25 AM CT is the start (card 0, recorder 0b4ea036\u2026, held 5.326585e-06, full 5.915757e-06); every stage is read on the same card with the same recorder, as loop_dose.same_execution holds them. Every capture is scored here, sent to the bucket and read back before its local copy is released, as before.",
+   "limit": "By the same ruling the step finishes on card 0 even if credit arrives tonight; whether a rented box reads later steps is Astra's. A visit with no stage that lowers both sums ends this bounded construction with its unchanged start; missing or invalid coverage ends it unresolved, never as convergence. The assessments, the objective, the targets, the acceptance and the next declaration wait for Astra.",
+   "resources": "Card 0 under its lock, this machine's processors and disk, and the bucket. No rented machine and no money."
+  },
+  {
+   "date_ct": "November 14, 2026, 2:47 AM CT, after the first visit's runner ended and before any command of step 2",
+   "made_by": "weight-research-fable, who by the decision named owns the prospective declaration and the multi-step driver",
+   "authority": "weight-research-astra, the objective's and the acceptance's owner: records/retrospectives/2026-11-14-multi-matrix-loop-astra.md",
+   "what": "loop.matrices becomes feed-forward 33 and 34 (step 2 at 34, step 3 at 33, in turn) with loop.held_folds written out; row_requests.read_at names both matrices for every score from step 2 on; rule.scope, order, requests, dose, folds, continuation and sources say the same; solver names the files as they stand, with the second ridge read with the roundings held from step 2 on; parameters.second_ridge, matrices and sites_read; `continuation` holds the why, the pattern check, the hypothesis, the prediction and what would weaken it. dose_execution.compact_capture enables the compact reading (compact/1) from step 2 on, as its owner accepted it (records/retrospectives/2026-11-14-compact-dose-astra.md); solver.scorer lists the files a visit is read and scored by, none of them named yet.",
+   "step_1": "unchanged as made: its walk, eighteen stages, nineteen scores, selection, candidate and write. What it selected and wrote: stage 2^7, held 0.970453 and full 0.963840 of the unchanged start's, 565487 weights changed, written as studies/04-round-2-overlap/runs/on-policy-33-original/model/on-policy-33-original.gguf (sha256 40ce40b84056a57b0cd32f38d5b7e4d65206f9515b460e0c46b268af593602dd).",
+   "seed": "the state step 1 selected and wrote; the reference, the supports, the cohort and the original prompt anchors stay the original's",
+   "not_changed": "the objective's construction, the request's construction, the dose rule (every distinct stage against the visit's own unchanged start, least held among those strictly lower in both sums), the fold order, the cohort, the reference, and every record of step 1"
+  },
+  {
+   "date_ct": "November 14, 2026, 2:48 AM CT, before any dose reading of step 2",
+   "made_by": "`revise_33_34.py scorer` (the source guard is weight-research-fable's), run on the word below",
+   "what": "solver.scorer names the files the doses are scored by as they stand, each held by commit 26077a81: compact_dose_score.py 4419c7ad5410, loop_dose.py c7bdbf88ffce, compact_dose_fields.py 460247d39a33, dose_compact.py 1b94b954ec27, dose-stage.sh 5aec420f114d, dose_reading_from.py e9629d69e1e2. compact_dose_score.py is the scorer, which keeps both matrices' request cells in every score from step 2 on; the next three are what it scores with; dose-stage.sh and dose_reading_from.py make the readings it scores (the producer as installed, named in dose_execution.compact_capture too). A visit starts only while every one of them is the file named (visit_outcome.py --sources --scorer).",
+   "on_whose_word": "Astra admits the two-site compact scorer after complete native score/archive qualification c32353f6, implementation add9b9e4, fallback repair 074176fa, and safe-boundary producer installation 26077a81; 67 focused tests pass; first-visit stage 2^7 was selected and written under the unchanged rule"
+  },
+  {
+   "date_ct": "November 14, 2026, 5:46 AM CT, after the run was stopped",
+   "made_by": "weight-research-fable, whose declaration and driver these are",
+   "authority": "Marcos's direction of the morning of November 14, 2026, relayed to the three seats by the research-check session as his direction and passed on by weight-research-astra, the objective's and the acceptance's owner, as a stop of both runs that supersedes its continuation and admission decisions (journal/2026-11-14-whole-gap-restart.md; the relay put the conversation at about 5:35 AM CT, an estimate: the two stops it caused are on the clock at 5:28:18 AM CT and 5:30:33 AM CT): the direction is that the trace of computation that happens in multiple layers cannot be corrected by changing 2 layers, that everything stops and the work goes back to the drawing board, and that the goal is to overlap the trace of computation of the wrong answers and the right answers, identify the gap of divergence (not where it diverges, the gap of divergence) and bring that gap close to what the correct answers have, on the trace of computation.",
+   "what": "The loop is stopped and is not started again. Its runner (loop-run.sh, in this seat's session) was ended at 5:30:33 AM CT on November 14, 2026 by a terminate signal to its own process group: loop-run.sh, loop-step.sh for step 2, read_loop_visit.py and the stage in flight (dose-stage.sh for stage 2^8, in its capture; no transfer to the bucket was in flight). The background command ended with exit 143. No step 3 is made, no closing record is laid, and rule.continuation's sentence that this seat starts loop-run.sh again after a stop no longer holds: nothing starts it.",
+   "what_stands": "Step 1 (feed-forward 33, fold 0 held, eighteen stages each read whole on card 0): 2^7 selected, held 0.970453 and full 0.963840 of the unchanged start's, 565487 weights changed, written (`steps/1/written.json`). Then step 2 at feed-forward 34 (fold 1 held) has its unchanged start scored (held 9.137381e-05, all thirty 6.690054e-05) and 12 of its 21 changed stages (2^20 to 2^9: at 2^9 the held score is 0.886576 of the start's and all thirty's 0.896080), stage 2^8 cut in its capture, no selection and nothing written. Every file of both steps is as it was at the signal; nothing was removed.",
+   "what_the_stages_read": "A description, never a selection: on the 12 stages read the text is the unchanged start's in 30 of 30 answers and merges 0 to 102 are that start's own (each stage's `reading.json`), the request cells at feed-forward 33 keep 1.000000000 of their start, and at feed-forward 34's two merges the walk's reading is the whole model's (at most 4.2e-06 of the start's held score apart for the held wrong members and 1.1e-06 for the held correct ones); the held correct members' part there goes from 6.845e-07 to 1.363e-06 (records/development/2026-11-12-correction-objective/walk-beside-visit-on-policy-33-original-2.txt).",
+   "this_is": "An interruption on the founder's direction. Not a convergence, not the construction's bounded end (a whole pass of kept starts), not a completed visit and not a result: no stage of step 2 was selected and none is.",
+   "why": "On a text that stays the same an edit at a merge changes nothing computed before it (records/KNOWN.md, \"own-trace L, merges before feed-forward 29, late-site candidates\": the largest difference of a member cell before feed-forward 29 is exactly 0 wherever two candidates wrote the same tokens), so steps at the last feed-forwards cannot bring the wrong answers' computation in the layers before them to the correct one; and each of this seat's constructions since November 12 edited at most six matrices, and all but the overlap chain asked only the sign's row or the four rows of one line (14 to 52 keys), where the goal is the gap between the two groups' traces wherever it lies.",
+   "the_predictions": "Declared for step 2 and left unread as a whole: (2), that the visit at 34 selects a stage keeping less of its held start than 0.9705, has no selection to be read by. Of (1) and (3) only what the stages read say, above: on unchanged text the walk's reading and the visit's agree at feed-forward 34's cells; the request cells at 33 did not move, and no stage read reworded an answer, so (3) met no case of a reworded one."
+  },
+  {
+   "date_ct": "November 14, 2026, 11:58 PM CT, with nothing of this run running and before any of these files is removed",
+   "made_by": "weight-research-fable, whose declaration this is",
+   "authority": "Marcos's direction of the evening of November 14, 2026, as relayed to the seats. What this seat understood: progress is measured on the trace of computation alone, and an instrument that measures by tokens, values or words is taken out of the project, because one that is only fenced by a rule gets used again. weight-research-astra, the objective's owner, asked for the stopped dose family to be retired end to end after a dated revision; weight-research-perfomance, who holds the stage readers, asked for this revision before removing them.",
+   "what": "This declaration (the on-policy loop over feed-forward 33 and 34) no longer holds the programs listed under `retired` in the tree. They belong to the readers that measured by margins, first changed steps and text checks, or to the requests and the driver of loops that are stopped and are not started again; from this revision on each may be removed or changed by the seat that holds it. Every hash this declaration binds still names the bytes that ran: they are the blob of that file at the commit named beside it, read and hashed when this revision was made.",
+   "retired": [
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/compact_dose_fields.py",
+     "sha256": "460247d39a33646c2047511e8fc92632b628ee8f541126c64147a8d199a0973d",
+     "held_by_commit": "6952ee8e348181b6a6304128f46d3798158b3244"
+    },
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/compact_dose_score.py",
+     "sha256": "4419c7ad541041700d4d3e4ba334e3f9c34ec799c6d993e8ef3b51cdd27bde8d",
+     "held_by_commit": "add9b9e48dd5b3a118eee37b3a5bf3d0c9c9080d"
+    },
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/loop.py",
+     "sha256": "000ba67afa61d05b8ba303e5d852ee61bc50305f1fdae0484a8a1bf1d13b541c",
+     "held_by_commit": "a18ce27dce3043af88b35ce704e947dfcc55a02d"
+    },
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/loop.py",
+     "sha256": "1d4f2e37f5281f63d2fe6cae63e3c85416ebfa7c0c1e9383946a66f54c08df22",
+     "held_by_commit": "5d561e3315d9e93c698100a82cfe7da5e52fba03"
+    },
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/loop_dose.py",
+     "sha256": "c7bdbf88ffce95df14b14eef6ef75aed2aae5b6c10632adbb10258b214e27fb6",
+     "held_by_commit": "9e5addcaac1bfd1fbbe9a1eda3f61d671abd5bb5"
+    },
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/loop_requests.py",
+     "sha256": "b8334b45d84a20e563fab31e28f159f2cbcae30375e3b92a423a81296f324adb",
+     "held_by_commit": "5d561e3315d9e93c698100a82cfe7da5e52fba03"
+    },
+    {
+     "file": "records/development/2026-11-12-path-forward/dose-stage.sh",
+     "sha256": "5aec420f114df1a3447e08e0b594f881cb8ceb1a20297b1e4e4b051e9a29575c",
+     "held_by_commit": "26077a810dae5135c2aa85c3b9b50245f5f04445"
+    },
+    {
+     "file": "records/development/2026-11-12-path-forward/dose_compact.py",
+     "sha256": "1b94b954ec27db1748e77c570937f29c43499a1fe7741eb081ce15fd73bbf764",
+     "held_by_commit": "d236f1599f7cbc3f2cd8785580435860a8cef07c"
+    },
+    {
+     "file": "records/development/2026-11-12-path-forward/dose_reading_from.py",
+     "sha256": "e9629d69e1e222a6c99867d437bd10d0a4b315c08904887b6f405d99f2e7b216",
+     "held_by_commit": "d236f1599f7cbc3f2cd8785580435860a8cef07c"
+    }
+   ],
+   "what_stands": "Every record of this run stays as it is, and this revision changes no outcome, no number, no status and no other binding. The run's commands cannot be started from the tree once a program they call is gone; nothing of this run is started again. A reader who needs one of these programs takes it from its commit."
+  }
+ ],
+ "loop": {
+  "matrices": [
+   "blk.33.ffn_down.weight",
+   "blk.34.ffn_down.weight"
+  ],
+  "source_run": "controlled-bf16-4",
+  "first_state": {
+   "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+   "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  },
+  "first_rows": {
+   "path": "studies/04-round-2-overlap/runs/sign-request-at-33-original/passes/rows-blk.33.ffn_down.npz",
+   "sha256": "1bccf95c9e86db7b45a646a1812e0c56b59084a549c9ce9754e019ff39b708b8",
+   "read_by": "sign-request-at-33-original's own declared `rows` command on November 13, 2026, 12:24:03 to 12:26:12 AM CT, card 0 under its lock (that run's logs/rows-3.out and logs/run.log); that run makes no candidate and is preserved as it is",
+   "why": "the first link starts from the original, and a pass of the recorded text through the original at this matrix does not depend on the construction: the same rows, read once"
+  },
+  "model": "studies/04-round-2-overlap/runs/on-policy-33-original/model/on-policy-33-original.gguf",
+  "text": "the state's own",
+  "held_folds": [
+   0,
+   1,
+   2
+  ],
+  "revised": "records/retrospectives/2026-11-14-multi-matrix-loop-astra.md: one matrix until step 1 ended; from step 2 on feed-forward 34 and 33 in turn. first_rows are step 1's; every later step reads its own rows."
+ },
+ "continuation": {
+  "from_step": 2,
+  "decided_by": "weight-research-astra (records/retrospectives/2026-11-14-multi-matrix-loop-astra.md)",
+  "declared_by": "weight-research-fable, the solver's seat: this revision and the driver",
+  "why_this_direction": "The plan's loop over several matrices had been run at one matrix only. Step 1 measured why one matrix keeps little: at feed-forward 33 the solver's reading of the asked cells is the model's own, and the dose is cut by the correct answers' error at merges the fit does not read (most of it in layer 34), which grows 94.4-fold where the step grows 25.22-fold and the gain 11.40-fold. The next step of the method is therefore the matrix whose solve reads what its change reaches, 34, from the state step 1 wrote, and then 33 again from what 34 leaves.",
+  "repeating_pattern_check": "Every closed chain was fit on kept rows and read afterwards on a text its candidate had reworded (their own-path readings, ROUND-2.md); the loop reads every stage on its own text before one is kept. At step 1 the walk's own held reading promised more than the whole model kept (0.4702 of its start by the walk at 2^0, 0.9705 at the least stage the visit read): the visit, not the walk, selects, and the next matrix is the one whose solve reads what its change reaches. A solve froze on the engine's rounding (the primary's link 33): the second ridge is read with the roundings held from here on. This declaration named loop.py 000ba67a and tube.py 0ed3f5c8 while step 1's changed stages were scored with 11f55e95 and 76e08b42 (each score.json), and no command noticed: the driver now holds a step to the files named.",
+  "hypothesis": "A correction spread over the two last feed-forwards in small steps, each fit on the current state's own text and kept only where the whole model's reading lowers both sums, keeps more of the builders' requests than the one step at 33 kept, at less cost to the correct answers.",
+  "prediction": [
+   "At feed-forward 34, on the stages that leave every answer's text as it was, the walk's own reading of the held correct members and the visit's differ from their starts by the same amount (no merge lies behind the solver's two there), as they did for the wrong group at 33.",
+   "The visit at 34 selects a stage that keeps less of its held start than the 0.9705 step 1 kept at 33.",
+   "The 33 request cells in a score of the visit at 34 move only where a stage rewords an answer."
+  ],
+  "would_weaken_it": "At 34 the two readings part for the correct group on unchanged text by what they parted at 33 (then the reading of that difference is wrong); no stage at 34 lowers both sums; or the pass 34 then 33 keeps both starts, which ends this construction with step 1's state. Each is recorded as this configuration's result."
+ }
+}

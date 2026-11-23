@@ -2,11 +2,11 @@
 
 > **Research home:** This application lives in `apps/decode-machine` at the repository root. Start with the [repository guide](../../README.md) for the theory, studies, code, figures, and manuscripts.
 
-For the current research direction, start with `STATE.md` at the repository
-root and the method in `studies/04-round-2-overlap/ROUND-2.md`; the journal
+For the current research direction, start with [`JOURNEY.md`](../../JOURNEY.md) at the repository
+root and the method in [`studies/04-round-2-overlap/ROUND-2.md`](../../studies/04-round-2-overlap/ROUND-2.md); the journal
 pages of November 7 and later hold wherever an older page disagrees.
-[The residual-trace handoff](RESIDUAL-TRACE-HANDOFF.md) and
-[the full theory reference](RESIDUAL-TRACE-THEORY.md) record Marcos's
+[The residual-trace handoff](../../hypothesis/RESIDUAL-TRACE-HANDOFF.md) and
+[the full theory reference](../../hypothesis/RESIDUAL-TRACE-THEORY.md) record Marcos's
 November 6 clarification as it was understood then: seek recurring portions of
 the connected changes in computation across capability-focused executions; a
 useful partial trace does not require recovery of the complete mechanism. They
@@ -14,26 +14,26 @@ and the earlier experiment documents here are historical records, not the
 current definition of the research target (this paragraph corrected November
 15, 2026: it had still named the two as the current direction).
 
-[The physics observation pilot](PHYSICS-TRACE-PILOT.md) records the first bounded
+[The physics observation pilot](../../studies/02-physics-trace-observation/physics-trace-pilot/STUDY.md) records the first bounded
 trial under that definition: behavioral results, connected prompt/generation
 captures, and measured limits on observer fidelity.
 
-[The physics trace follow-up](PHYSICS-TRACE-FOLLOWUP.md) extends the connected
+[The physics trace follow-up](../../studies/02-physics-trace-observation/physics-trace-followup/STUDY.md) extends the connected
 comparison to twelve physical, paraphrased and supplied-arithmetic pairs. It
 records all eligible shared-prefix decisions, separates scale from direction,
 and links concrete calculation moments to their actual captured state changes.
 
-[The BF16 comparison](PHYSICS-TRACE-BF16.md) repeats the same 24 questions with
+[The BF16 comparison](../../studies/02-physics-trace-observation/physics-trace-bf16/STUDY.md) repeats the same 24 questions with
 the published BF16 checkpoint. It records correct partial energy calculations,
 preserves the recurring layer progression and its exception, and compares both
 precisions within their actual shared generated histories.
 
-[The contribution-transplant experiment](PHYSICS-TRACE-INTERVENTION.md) tests a
+[The contribution-transplant experiment](../../studies/02-physics-trace-observation/physics-intervention/STUDY.md) tests a
 recorded attention contribution with exact controls. It changes current scores
 but no generated tokens, and identifies why the chosen layer cannot carry this
 one-time change through the model's cache into later predictions.
 
-[The persistent weight-edit experiment](PHYSICS-TRACE-WEIGHT-EDIT.md) repeats the
+[The persistent weight-edit experiment](../../studies/03-round-1-single-pair-edits/A-weight-edit/STUDY.md) repeats the
 comparison with an actual native BF16 projection edit. It repairs the targeted
 calculation and a second case, introduces a new wrong final answer elsewhere,
 and follows the resulting changes through matched internal histories.
@@ -127,7 +127,7 @@ bun install --frozen-lockfile
 bun run dev --port 4318 --strictPort
 ```
 
-Open http://127.0.0.1:4318/. The preview is local to this machine and owned by this chat. Stop it with Ctrl+C in its terminal.
+Open http://127.0.0.1:4318/. Stop the local dev server with Ctrl+C in its terminal.
 
 ```sh
 bun run test

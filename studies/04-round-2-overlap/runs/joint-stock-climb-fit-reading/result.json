@@ -1,0 +1,51 @@
+{
+  "same_historical_output": {
+    "tokens": true,
+    "content_bytes_hex": true,
+    "ended": true,
+    "stopped_limit": true
+  },
+  "verified_acquisition": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/stock/capture.json",
+    "sha256": "61b87d5604259d5a202720825b68dee332a2ca615c478e0446b76b7cb68078b6"
+  },
+  "case": "discovery-13-channel-h1",
+  "common": {
+    "shared_cells": 662,
+    "members": {
+      "discovery-05-channel-h1": {
+        "matched": 712,
+        "mean_squared_error": 0.0005805812508929919,
+        "correct_climb_side": 629,
+        "wrong_climb_side": 33
+      },
+      "discovery-10-channel-h1": {
+        "matched": 691,
+        "mean_squared_error": 0.06921819794922404,
+        "correct_climb_side": 28,
+        "wrong_climb_side": 634
+      },
+      "discovery-11-channel-h1": {
+        "matched": 694,
+        "mean_squared_error": 0.0003770153360871447,
+        "correct_climb_side": 662,
+        "wrong_climb_side": 0
+      },
+      "climb_repaired_descent_still_wrong": {
+        "matched": 670,
+        "mean_squared_error": 0.009091451795600263,
+        "correct_climb_side": 587,
+        "wrong_climb_side": 75
+      },
+      "discovery-13-channel-h1": {
+        "matched": 704,
+        "mean_squared_error": 0.05849207850371314,
+        "correct_climb_side": 46,
+        "wrong_climb_side": 616
+      }
+    }
+  },
+  "prediction_vs_result": "On 662 shared cells, 616 place this fitted trace on the erroneous climb side.",
+  "failures_only": "One fitted question. Operation identity must be audited in the current response if its generation differs from the historical read.",
+  "what_this_changes": "Supplies a native baseline test of whether the conditional climb target can be applied to a fitted failure with an otherwise valid downhill gain."
+}

@@ -1,0 +1,351 @@
+{
+ "made_by": "records/development/2026-11-15-relation-reading/close_reference.py",
+ "declaration_sha256": "5e0a0f3a3e7e9eb54ad926ff0f0e2b07493686ff100db4d57402f17fb8552ddc",
+ "prediction_vs_result": "As predicted, and as the preparation's compile had read: all 30 of 30 recipients have a mate, 0 are without a member of their regime, 0 mates were ties, 2,073,855 cells (19,751 rows, 105 merges) are covered and none is undefined. The original's objective is 0.81871: the wrong answers' mean loss 0.035468, the members' 0.015590, the other successes' 0.026159; a wrong answer stands above a member in 0.82 of pairs and 3 of the fifteen wrong answers stand above every member. The two members that stand highest are expanded-071-h1 (0.0463) and expanded-039-h3 (0.0339). The bytes of the arrays are not the preparation's (a card's sums do not repeat bit for bit, on one card either), and every number above is the preparation's to the digits it was read at.",
+ "failures_only": {
+  "discovery-05-channel-h1": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.019775089720180668,
+    "answer_rows": 0.028028532659835063,
+    "question_rows": 0.0002931255719266606
+   }
+  },
+  "discovery-10-channel-h1": {
+   "mate": "expanded-064-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.02330014364773932,
+    "answer_rows": 0.03146121659921928,
+    "question_rows": 9.802345428756702e-05
+   }
+  },
+  "discovery-17-channel-h1": {
+   "mate": "expanded-071-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.033955039024170935,
+    "answer_rows": 0.04488722753875831,
+    "question_rows": 0.000268644182709845
+   }
+  },
+  "expanded-001-h3": {
+   "mate": "expanded-004-h1",
+   "regime": -1,
+   "loss": {
+    "whole_path": 0.07938835192979646,
+    "answer_rows": 0.09702421500620519,
+    "question_rows": 0.0006421726118784138
+   }
+  },
+  "expanded-020-h1": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.04040630677419444,
+    "answer_rows": 0.051529474893618414,
+    "question_rows": 0.0002464962965066121
+   }
+  },
+  "expanded-034-h3": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.044656034721328314,
+    "answer_rows": 0.05834437970779921,
+    "question_rows": 0.0010443309272233797
+   }
+  },
+  "expanded-042-h3": {
+   "mate": "expanded-071-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.04722547665823694,
+    "answer_rows": 0.060023729046058155,
+    "question_rows": 0.0008690159744426301
+   }
+  },
+  "expanded-045-h1": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.019815349583356585,
+    "answer_rows": 0.027950935873996465,
+    "question_rows": 0.0003277824220564095
+   }
+  },
+  "expanded-046-h3": {
+   "mate": "discovery-11-channel-h3",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.01947309106812675,
+    "answer_rows": 0.02755044874008524,
+    "question_rows": 0.00017196314269101256
+   }
+  },
+  "expanded-068-h1": {
+   "mate": "expanded-064-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.02432513913607276,
+    "answer_rows": 0.03368298564164473,
+    "question_rows": 0.0002776498601261995
+   }
+  },
+  "expanded-070-h1": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.026449186965165246,
+    "answer_rows": 0.03743506170538227,
+    "question_rows": 0.0002619274099967504
+   }
+  },
+  "expanded-087-h3": {
+   "mate": "expanded-004-h1",
+   "regime": -1,
+   "loss": {
+    "whole_path": 0.06856790268172892,
+    "answer_rows": 0.08432780010933073,
+    "question_rows": 0.0007636928187908716
+   }
+  },
+  "expanded-092-h1": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.023057885267148037,
+    "answer_rows": 0.032562667748545736,
+    "question_rows": 0.00045639669219652885
+   }
+  },
+  "expanded-094-h1": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.02833478700312207,
+    "answer_rows": 0.03772769273211197,
+    "question_rows": 0.0003198995672393867
+   }
+  },
+  "expanded-095-h1": {
+   "mate": "expanded-023-h1",
+   "regime": 1,
+   "loss": {
+    "whole_path": 0.03328475957989287,
+    "answer_rows": 0.04287982582937893,
+    "question_rows": 0.0001483098578304747
+   }
+  }
+ },
+ "what_this_changes": "The reference of the first relational construction now exists as frozen bytes: the members, each recipient's mate, the tolerance at every row and merge with each member's part, and the original rows' masses. A model is measured under it by relation_reference.py frozen=, which compiles nothing and holds the tolerance to its recorded sha256; the torch step reads the same folder. It establishes no repair, no closure and nothing about the hypothesis: the wrong answers stand above the members on the original, not above every member, and what an update toward it does to the engine's own trace is for the separately declared and admitted loop to measure.",
+ "reference": {
+  "folder": "studies/04-round-2-overlap/runs/relation-reference-original/reference",
+  "reference_json_sha256": "51184e7fc3b62b1ed2779a87a8b88d30eb879270c0aefb683e04fad076b20d6f",
+  "tolerance_sha256": "6ae1ff5f2391a0ac939332a63bf0d95f9f622aa6894b79d5d51b3ba7f65ca3be",
+  "tolerance_contributions_sha256": "a829cbf829c03740043d1bfb1008a5b00ec258a8cf9635b3ac29fe9089089a8e",
+  "calibration_json_sha256": "f6bfc8482955877f0ded1f35a24bea1a33a0732f45b2f4a6c61b710437ecadfc",
+  "mates": {
+   "discovery-05-channel-h1": "expanded-023-h1",
+   "discovery-10-channel-h1": "expanded-064-h1",
+   "discovery-17-channel-h1": "expanded-071-h1",
+   "expanded-001-h3": "expanded-004-h1",
+   "expanded-020-h1": "expanded-023-h1",
+   "expanded-034-h3": "expanded-023-h1",
+   "expanded-042-h3": "expanded-071-h1",
+   "expanded-045-h1": "expanded-023-h1",
+   "expanded-046-h3": "discovery-11-channel-h3",
+   "expanded-068-h1": "expanded-064-h1",
+   "expanded-070-h1": "expanded-023-h1",
+   "expanded-087-h3": "expanded-004-h1",
+   "expanded-092-h1": "expanded-023-h1",
+   "expanded-094-h1": "expanded-023-h1",
+   "expanded-095-h1": "expanded-023-h1",
+   "discovery-01-channel-h1": "expanded-004-h1",
+   "discovery-06-channel-h1": "discovery-01-channel-h1",
+   "discovery-15-channel-h1": "discovery-01-channel-h1",
+   "discovery-00-channel-h3": "expanded-004-h1",
+   "expanded-004-h1": "discovery-01-channel-h1",
+   "discovery-08-channel-h3": "discovery-10-channel-h3",
+   "discovery-10-channel-h3": "discovery-08-channel-h3",
+   "expanded-029-h1": "expanded-004-h1",
+   "discovery-11-channel-h3": "expanded-064-h1",
+   "expanded-064-h1": "discovery-11-channel-h3",
+   "expanded-071-h1": "expanded-064-h1",
+   "expanded-039-h3": "expanded-004-h1",
+   "expanded-076-h1": "expanded-004-h1",
+   "expanded-078-h1": "expanded-004-h1",
+   "expanded-023-h1": "discovery-11-channel-h3"
+  }
+ },
+ "original": {
+  "objective": 0.8187091375992501,
+  "whole_path": {
+   "wrong": 0.03546763625068402,
+   "members": 0.015589754148126179,
+   "other_successes": 0.02615941047154558,
+   "wrong_least": 0.01947309106812675,
+   "wrong_most": 0.07938835192979646,
+   "members_most": 0.04631915839059098,
+   "told_apart": 0.82,
+   "wrong_over_every_member": 3
+  },
+  "answer_rows": {
+   "wrong": 0.046361079588797975,
+   "members": 0.021455125242402,
+   "other_successes": 0.03525659323475862,
+   "wrong_least": 0.02755044874008524,
+   "wrong_most": 0.09702421500620519,
+   "members_most": 0.06224115372521566,
+   "told_apart": 0.8066666666666666,
+   "wrong_over_every_member": 2
+  },
+  "question_rows": {
+   "wrong": 0.0004126287193268495,
+   "members": 0.0004334021755210517,
+   "other_successes": 0.0003589585573858311,
+   "wrong_least": 9.802345428756702e-05,
+   "wrong_most": 0.0010443309272233797,
+   "members_most": 0.0008716188188760556,
+   "told_apart": 0.5,
+   "wrong_over_every_member": 1
+  },
+  "distance_before_the_tolerance": {
+   "wrong": 0.05765209053774809,
+   "members": 0.02775279658463512,
+   "other_successes": 0.04643790480848429,
+   "wrong_least": 0.03595913135374094,
+   "wrong_most": 0.10761407828771735,
+   "members_most": 0.06909858355081645,
+   "told_apart": 0.86,
+   "wrong_over_every_member": 4
+  },
+  "of_which_the_gain": {
+   "wrong": 0.0008891742948844058,
+   "members": 0.0004178012528752967,
+   "other_successes": 0.0007186692100735781,
+   "wrong_least": 0.0005240958450860589,
+   "wrong_most": 0.0016581609681856268,
+   "members_most": 0.0011126029043132103,
+   "told_apart": 0.84,
+   "wrong_over_every_member": 4
+  },
+  "of_which_the_turn": {
+   "wrong": 0.05676291624286368,
+   "members": 0.027334995331759822,
+   "other_successes": 0.045719235598410714,
+   "wrong_least": 0.03538040436256781,
+   "wrong_most": 0.10595591731953173,
+   "members_most": 0.06798598064650324,
+   "told_apart": 0.86,
+   "wrong_over_every_member": 4
+  },
+  "layers_where_the_wrong_answers_stand_most_over_the_members": [
+   {
+    "layer": 13,
+    "wrong": 0.16670545539449277,
+    "members": 0.06871597610531044
+   },
+   {
+    "layer": 14,
+    "wrong": 0.15879873991828058,
+    "members": 0.06101131764618583
+   },
+   {
+    "layer": 0,
+    "wrong": 0.13016569863015393,
+    "members": 0.054764390626544986
+   },
+   {
+    "layer": 12,
+    "wrong": 0.12408453458864746,
+    "members": 0.0518404139520727
+   },
+   {
+    "layer": 11,
+    "wrong": 0.11948618390384988,
+    "members": 0.050837186837569014
+   }
+  ]
+ },
+ "the_matched_sweep_s_model_on_its_own_answers": {
+  "objective": 0.7052081577759169,
+  "whole_path": {
+   "wrong": 0.027042336710279065,
+   "members": 0.019593440660340286,
+   "other_successes": 0.020727740103665605,
+   "wrong_least": 0.011700059164061421,
+   "wrong_most": 0.05831899971244839,
+   "members_most": 0.03541463361411846,
+   "told_apart": 0.66,
+   "wrong_over_every_member": 4
+  },
+  "reading": "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/loop/1/reading",
+  "pairs": 21138,
+  "note": "historical evidence under this loss: a model made by a state-value construction that was stopped; no start, target or selection"
+ },
+ "members_own_distance_from_their_mates": {
+  "discovery-01-channel-h1": {
+   "mate": "expanded-004-h1",
+   "own_distance_from_its_mate": 0.00037650344893336296,
+   "of_which_the_gain": 2.1254497823974816e-06,
+   "mean_part_at_the_other_answers_rows": 0.00034333186340518296
+  },
+  "expanded-004-h1": {
+   "mate": "discovery-01-channel-h1",
+   "own_distance_from_its_mate": 0.00037650318699888885,
+   "of_which_the_gain": 2.1254388684610603e-06,
+   "mean_part_at_the_other_answers_rows": 0.0003415422688703984
+  },
+  "expanded-023-h1": {
+   "mate": "discovery-11-channel-h3",
+   "own_distance_from_its_mate": 0.03121146559715271,
+   "of_which_the_gain": 0.00047187390737235546,
+   "mean_part_at_the_other_answers_rows": 0.03185705840587616
+  },
+  "discovery-06-channel-h1": {
+   "mate": "discovery-01-channel-h1",
+   "own_distance_from_its_mate": 0.04140472039580345,
+   "of_which_the_gain": 0.0006350358598865569,
+   "mean_part_at_the_other_answers_rows": 0.0457385778427124
+  },
+  "expanded-064-h1": {
+   "mate": "discovery-11-channel-h3",
+   "own_distance_from_its_mate": 0.03471428528428078,
+   "of_which_the_gain": 0.0005249253008514643,
+   "mean_part_at_the_other_answers_rows": 0.029582958668470383
+  },
+  "discovery-11-channel-h3": {
+   "mate": "expanded-064-h1",
+   "own_distance_from_its_mate": 0.023308157920837402,
+   "of_which_the_gain": 0.0002889867464546114,
+   "mean_part_at_the_other_answers_rows": 0.026770148426294327
+  },
+  "discovery-08-channel-h3": {
+   "mate": "discovery-10-channel-h3",
+   "own_distance_from_its_mate": 0.010110743343830109,
+   "of_which_the_gain": 0.00014522185665555298,
+   "mean_part_at_the_other_answers_rows": 0.010363410227000713
+  },
+  "discovery-10-channel-h3": {
+   "mate": "discovery-08-channel-h3",
+   "own_distance_from_its_mate": 0.01603444293141365,
+   "of_which_the_gain": 0.0002568991621956229,
+   "mean_part_at_the_other_answers_rows": 0.013765035197138786
+  },
+  "expanded-071-h1": {
+   "mate": "expanded-064-h1",
+   "own_distance_from_its_mate": 0.0690985843539238,
+   "of_which_the_gain": 0.0011126028839498758,
+   "mean_part_at_the_other_answers_rows": 0.06445281207561493
+  },
+  "expanded-039-h3": {
+   "mate": "expanded-004-h1",
+   "own_distance_from_its_mate": 0.050892557948827744,
+   "of_which_the_gain": 0.0007382158655673265,
+   "mean_part_at_the_other_answers_rows": 0.050059203058481216
+  }
+ },
+ "bucket": "every file of the run is in the bucket under its own path and read back (torad-research traces upload, then verify: 23 files); the local files are kept, the loop reads them"
+}

@@ -1,0 +1,70 @@
+{
+  "status": "incomplete_fresh_acquisition",
+  "closure": false,
+  "recorded_at": "2026-11-16T11:28:51.463052-06:00",
+  "prediction_vs_result": "Ten newly measured complete paths were observed after the retained pilot baseline. Fresh computational loss varied substantially and the best complete observation at update10 improved on the pilot. Update11 was fully installed, but its fresh acquisition reached the existing bound; that partial loss is retained and is not a comparable whole-path result.",
+  "failures_only": [
+    "The update11 fresh acquisition reached the existing acquisition bound, so the loop made no further derivative.",
+    "No exact process exit code or exit timestamp was retained before the transient unit was collected; a clean code return path is evidence, not an observed operating-system exit code."
+  ],
+  "what_this_changes": "Preserve the complete update11 exit checkpoint and all measured observations. Investigate acquisition capacity under the existing model state; no automatic restart, closure or plateau claim follows from this partial capture.",
+  "installed_updates": 11,
+  "complete_fresh_updates": 10,
+  "baseline": {
+    "step": 0,
+    "objective": 0.0002879419773841299,
+    "measurement": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-2/loop/0/measurement.json",
+      "sha256": "16ce94d391ebad87cff911e2bc63bd10ba2d6acb4e1b43dd140893d129f5c30c"
+    }
+  },
+  "best_complete": {
+    "step": 10,
+    "objective": 0.00028607873789714854,
+    "measurement": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-2/loop/10/measurement.json",
+      "sha256": "8e79eedf9ffb20ab819dea9f38172bae9ff001127073594a4c819045a7b3c90b"
+    }
+  },
+  "last_measurement": {
+    "step": 11,
+    "objective": 0.0035864955016763054,
+    "complete": false,
+    "ended": false,
+    "scope": "partial fresh path: original acquisition limit reached",
+    "events": 940,
+    "measurement": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-2/loop/11/measurement.json",
+      "sha256": "fd3efe0b30596e6666b5fca7e63b375792afc44c82a609d31f6acc623ae19906"
+    }
+  },
+  "final_state": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-2/final-state.json",
+    "sha256": "15bf11ab528050cd5889a82be162e0da8d90cb8a92a675d4d18682318cd706e7"
+  },
+  "process": {
+    "status": "ended",
+    "exit_code": null,
+    "exact_end_time": null,
+    "exit_code_observed": false,
+    "end_time_upper_bound": "2026-11-16T11:19:39.199868-06:00",
+    "last_checkpoint_saved_at": "2026-11-16T11:19:36.770541-06:00",
+    "stop_signals": [],
+    "service": "weight-patterns-eta-continuation-2.service",
+    "journal": {
+      "cursor": "s=c8b5dece3d1a4151b38d412493ddaab2;i=95339213;b=c6972f3569ed4f918684e49dde629bc5;m=5cc93d45c2;t=66067fb97ed7c;x=37678968b0e42606",
+      "message": "weight-patterns-eta-continuation-2.service: Consumed 9min 54.541s CPU time, 27.6G memory peak, 8.7G read from disk, 10.8G written to disk.",
+      "realtime_timestamp_us": "1794849579199868"
+    },
+    "evidence": "Bound script exits its loop on incomplete_fresh_acquisition and saves final-state in finally; final state is complete with pending_install null and no signal requests. The terminal log records that checkpoint and no traceback. Unit teardown establishes the upper bound, not an exact exit code."
+  },
+  "implementation": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_v2.py",
+    "sha256": "f2021014e2774822689287446cf9db0ea58b6f371346b9cdeb6ed240320b1a21"
+  },
+  "terminal_log": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-2/launcher.log",
+    "sha256": "ade9558e20ccd3b90c6b01588d1acc00b10419b30fe97489d79e1b22ab8de88c"
+  },
+  "interpretation": "FINISHED describes an ended research attempt. It does not mean a complete final acquisition, exact closure, or successful repair."
+}

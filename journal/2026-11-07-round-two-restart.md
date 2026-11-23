@@ -17,7 +17,7 @@ transformations. The recurring pattern is sought in those ordered changes across
 responses requiring the same capability. “Multiple contributing computations”
 without that specificity is inadequate.
 
-The [replacement protocol](../experiments/signal-trace-repair/PLAN.md) preserves
+The replacement protocol preserves
 this meaning and leaves edit locations undecided. Before an edit it requires the
 overlaid progressions and observed recurring discrepancy; afterwards it requires
 the edited cohort overlaid against both groups. This document records the

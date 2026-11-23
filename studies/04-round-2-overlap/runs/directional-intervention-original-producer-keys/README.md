@@ -1,0 +1,5 @@
+# Native original keys for the held graph
+
+The existing projection recorder captured the original Gemma model's post-RoPE K at all 15 KV-producing layers over all 578 consumed events. It acquired the 14 missing producers. The repeated block 0 K, embedded input, weighted attention branch, and merged attention state reproduced the earlier original records bit for bit with the same callback geometry. The payload occupies 21,307,392 bytes. [Result and bindings](result.json) · Capture receipt
+
+Each producer represents the same 411 calls and covers every consumed event once. The loader checked the original native call and microbatch identifiers, recorded RoPE operation, event positions and physical head dimensions. Layers 4, 9, and 14 have one 512-coordinate key head. The remaining twelve producers have one 256-coordinate key head. The keys are recorded in native FP32 before the existing FP16 cache cast. An original-only capture supplies no edited-state operand. Typed K arrays · [MLflow run](http://127.0.0.1:5000/#/experiments/6/runs/92227db2eb584b4ab3f3a3b2b01a5cd1)

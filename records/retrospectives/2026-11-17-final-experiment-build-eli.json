@@ -1,0 +1,959 @@
+{
+  "format": "eli-final-experiment-build-review/1",
+  "reviewed_at_ct": "2026-11-17T03:58:33.306901-06:00",
+  "reviewer": "independent Eli subagent",
+  "controller": "root",
+  "controller_commit": "21647e1a50d4e59be95217319e14470ee1d13e05",
+  "verdicts": {
+    "core_controller_and_parameter_implementation": "SUPPORTED_SOURCE_REVIEW",
+    "whole_build_instrumentation": "PROSPECTIVE_WORKER_CONTEXT_SOURCE_SUPPORTED_FOCUSED_CUDA_PASS_HISTORICAL_GAP_RETAINED",
+    "actual_size_gpu_qualification": "PASS_RECORDED_HELD_GRAPH_AND_TYPED_PREVIEW_ONLY",
+    "final_research_run_admission": "NO_UNSUPPORTED_POSITIVE_TOLERANCE"
+  },
+  "goal": "One fixed most-correct original trace versus one freshly regenerated originally wrong response; all105 per-position local losses differentiated through538 eligible learned tensors, one native joint update and repeat. General capability repair and transfer remain unproved.",
+  "papers_read_directly": [
+    {
+      "record": "reports/fixing-a-reasoning-mistake-by-editing-the-weights.pdf",
+      "sha256": "a5761c87f7760d13cfe38d754fb8d0921460fc85f2a4b00ffd4bceb33d81e080",
+      "bytes": 1199256
+    },
+    {
+      "record": "reports/how-the-trace-derived-edit-works.pdf",
+      "sha256": "10de7506371d4bc40f0c3dd255d450c60a949891513e5050e58870a9bda91410",
+      "bytes": 1140450
+    },
+    {
+      "record": "reports/how-the-path-edit-works.pdf",
+      "sha256": "fced267c17a61c5da09fe9bb2b0fe4cabb618fbbd2a8542c4c64e38be76aacc2",
+      "bytes": 468736
+    },
+    {
+      "record": "reports/Iterative_Learning_from_Computational_Traces.docx",
+      "sha256": "71cc3dfcfbf386898f706c571ad5539ef2f20629e510abc5710b003d2eb07149",
+      "bytes": 84814
+    }
+  ],
+  "paper_equation_coverage": {
+    "pdfs": "All three PDFs extracted directly and read including equations.",
+    "docx": "Original document text plus all three embedded equation images inspected."
+  },
+  "reviewed_sources": [
+    {
+      "record": "STATE.md",
+      "sha256": "8ccd82eebcf9d0d892e52bf9dac278c35be2a9f5382862439f7642ab87d7b802",
+      "bytes": 101039
+    },
+    {
+      "record": "FINAL-EXPERIMENT.md",
+      "sha256": "979ab9728f7b08c1e5f8091bc5eeaf7fe31589de212d21411b5b755859302b10",
+      "bytes": 51489
+    },
+    {
+      "record": "studies/04-round-2-overlap/round-2-method.json",
+      "sha256": "b691500a8af45ae69f163ac6a85e500bd1d4fccf7985467fc5db425992d49860",
+      "bytes": 17734
+    },
+    {
+      "record": "journal/2026-11-07-clarifications.md",
+      "sha256": "a4cdae9b621a26766170305a9631954460c7aa97cf84b5a218160283c3eb0e7e",
+      "bytes": 11183
+    },
+    {
+      "record": "journal/2026-11-07-multitrace-purpose.md",
+      "sha256": "07e7dec26c6c7855bfbd3cbab9c21c8b6d7fce6bd538e0f9f75de750de906119",
+      "bytes": 2895
+    },
+    {
+      "record": "journal/2026-11-07-round-two-restart.md",
+      "sha256": "7af72c92f813598888321f237bbe8eeb801bcc68b355fdb624b502391b89802b",
+      "bytes": 1961
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/full_parameters.py",
+      "sha256": "c320dac25d60b8d7cba8928b4c6a35c234c52e496f59658e7ee9eb502b962355",
+      "bytes": 17804
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/full_graph.py",
+      "sha256": "30264a2a42c17b192fb3a5280f1f7b46beece4bb62b08ecc709712dc07d185a8",
+      "bytes": 5269
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/full_state.py",
+      "sha256": "20084ac3ef40603b952905704b86c82192b8c30df57262de65d24d7e733dbeb1",
+      "bytes": 36151
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/full_loss_maps.py",
+      "sha256": "654185a85403dff96040d6a8bb7756865838be32f3a1a3a7992aff1de01d60ec",
+      "bytes": 24015
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/model_trace_response.py",
+      "sha256": "7a80485d90c011e605f9a3882ca9d11a4f37065209061f55f061690865b798e2",
+      "bytes": 2690
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/native_graph.py",
+      "sha256": "127de7e16bbdc48e1f3646dcb4f119ea832df80d11d70a799503f0025f838acf",
+      "bytes": 5383
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec",
+      "bytes": 5535
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+      "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c",
+      "bytes": 3875
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_correction.py",
+      "sha256": "e2c302136caeed811acfa9d957efe63b7bd8e52369d38537d81de22a9f8b40a9",
+      "bytes": 4072
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/trace_response.py",
+      "sha256": "3c34c2ac01f61929adfbdb638c5199ebb9c42405ea7c9af888bf614c9fc06226",
+      "bytes": 4377
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/a2.py",
+      "sha256": "6a0f398eceb0224de8075f179c6818c0614b36863a9a1dd54c7282283417798e",
+      "bytes": 1536
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e",
+      "bytes": 45233
+    },
+    {
+      "record": "records/development/2026-11-16-projection-gradient-adapter/adapter.py",
+      "sha256": "1cfe4ec6d3dab02025d9c150c6d34308f57366be1841d1f603a39f6946c30cf3",
+      "bytes": 7204
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/per-merge-response/ffn-native-precision-adapter/adapter.py",
+      "sha256": "c4850aaf892619e6186af1e61e11dad6a136ed21790404187e3e816bdc9bf267",
+      "bytes": 6438
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-held/replay.py",
+      "sha256": "e34b7854894ef4b3eca455f71e17d2736631d0e8a2101148e631b8c47bfd657a",
+      "bytes": 15452
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/replay.py",
+      "sha256": "3bab1f6fccc57676e2eed0a85dabf4fc8a0be232c32468e3dd99892d235a0092",
+      "bytes": 17041
+    },
+    {
+      "record": "records/development/2026-11-17-full-weight-training/run.py",
+      "sha256": "d4fcb3d071322be724484172b9e29c8a3095ea2f9ee1e7045b2099ae30b21a2e",
+      "bytes": 42706
+    },
+    {
+      "record": "records/development/2026-11-17-final-experiment/run.py",
+      "sha256": "029f180e7f9ab2fb5884dca69d6847299c795efdea8c1d825696e947a406a484",
+      "bytes": 35748
+    },
+    {
+      "record": "records/development/2026-11-17-final-experiment/prepare.py",
+      "sha256": "07e598f02ce00fde4d374f5a5ab41b13a84068aa679cb68ce95269d0e8d034e3",
+      "bytes": 10122
+    },
+    {
+      "record": "records/development/2026-11-17-final-experiment/test_run.py",
+      "sha256": "657a13abab388de955fb0932eaa2f0c9f7d64593029c0a83ed911dccc28ce515",
+      "bytes": 7174
+    },
+    {
+      "record": "records/development/2026-11-17-final-experiment/capture.py",
+      "sha256": "a98e5ec0822ce78fc6bf849589267cee35f6be0540b8b7df9632acffd6aa593d",
+      "bytes": 23989
+    },
+    {
+      "record": "code/signal-trace/tests/test_full_graph.py",
+      "sha256": "9429a94f5d7a508ac556c1666e9191d89d2b139736519246d9df85055f45f98b",
+      "bytes": 13800
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+      "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4",
+      "bytes": 8682
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+      "sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48",
+      "bytes": 470528
+    }
+  ],
+  "read_only_numerical_check": {
+    "chance_sha256_matches_binding": true,
+    "shape": [
+      560,
+      105
+    ],
+    "zero_cells": 1365,
+    "all_zero_reference_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "positive_min": 1.317790326434746e-11,
+    "positive_max": 1.9448615573776407,
+    "interpretation": "Identical original observations identify zero empirical variation; no positive harmless-movement radius is determined. No tolerance is invented."
+  },
+  "inventory": {
+    "stored": 601,
+    "eligible": 538,
+    "eligible_bf16": 278,
+    "eligible_f32": 260,
+    "unused_late_kv": 60,
+    "beyond_last_measured_merge": 2,
+    "fixed_generated_rope_buffer": 1
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "status": "RESOLVED",
+      "finding": "Controller lacked actual local reference/current turn-vector overlay; root added overlay and explicit illustration-only selection."
+    },
+    {
+      "id": "R2",
+      "status": "RESOLVED",
+      "finding": "Successor uses current source bindings rather than attempting to re-admit historical executable hashes. Original metadata/model/reference/engine checks remain."
+    },
+    {
+      "id": "R3",
+      "status": "RESOLVED_IN_INSPECTED_SOURCE",
+      "finding": "Capture nonexistent full_state.encode hook replaced by full_state.accumulate."
+    },
+    {
+      "id": "R4",
+      "status": "RESOLVED_IN_INSPECTED_SOURCE",
+      "finding": "Capture bare app-function hooks resolve against the app mapping."
+    },
+    {
+      "id": "R5",
+      "status": "RESOLVED_IN_ADDENDUM_SOURCE",
+      "finding": "Capture accumulate result must label tuple indexes1/2 as stored/remainder, with raw bytes at0."
+    },
+    {
+      "id": "R6",
+      "status": "RESOLVED_IN_ADDENDUM_SOURCE",
+      "finding": "Capture per-instance shared_linear hook retains every ParameterModel in _restored across iterations; avoid strong lifetime retention."
+    },
+    {
+      "id": "S1",
+      "status": "UNRESOLVED_SCIENTIFIC_ADMISSION",
+      "finding": "No supported positive movement allowance for1365 zero-chance cells; retain refusal and historical loss identity."
+    }
+  ],
+  "checks": {
+    "reviewer_launched_training": false,
+    "reviewer_launched_native_or_gpu_qualification": false,
+    "reviewer_reran_tests": false,
+    "root_reported_controller_tests": 3,
+    "root_reported_controller_test_scope": "CPU synthetic538VJP, two105-mergeJVPs, typed preview/install, exact next-model values, plot integration, corrupt candidate rejection and actual physical inventory.",
+    "root_reported_metadata_check": "Actual immutable selected member and105merges.",
+    "limitations": [
+      "Native finite derivative accuracy not qualified.",
+      "Actual GPU peak and memory fit not measured by this review.",
+      "No fresh learning improvement or general capability repair claimed.",
+      "No current MLflow export/readback claim."
+    ]
+  },
+  "addendum": {
+    "reviewed_at_ct": "2026-11-17T04:07:17.546924-06:00",
+    "qualification_source_admission": "YES_EXACT_SOURCE_BINDINGS_AFTER_GUARD_AND_DECLARATION",
+    "scope": "One actual-size read-only held historical317 qualification; one VJP, two JVPs, typed preview, native bytes write-sealed. No training installation/generation/new native measurement.",
+    "sources": [
+      {
+        "record": "records/development/2026-11-17-final-experiment/run.py",
+        "sha256": "ed589efdf7484ae14644a119e264fa951365be291868a2792d7e1c577dd2a19f",
+        "bytes": 36403
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/prepare.py",
+        "sha256": "fdf677f80a3bf8746f34df28554df36240993cdba2265019cd03999ea8b873d9",
+        "bytes": 10908
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/capture.py",
+        "sha256": "35ef0d5fc03779648fe88cda7a65ecc46de641ded16422f33de24ad8d70a79a2",
+        "bytes": 26218
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/archive.py",
+        "sha256": "0ad499355d89167868674073d53c932f1fa6636c2fedac32a64979aca82fdd8d",
+        "bytes": 4534
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/test_capture.py",
+        "sha256": "96b86bae0b58d9d9a1f840e0ff313b00d0a3120dfe29d54a8570f1af24ad3630",
+        "bytes": 8089
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/test_archive.py",
+        "sha256": "6aac6090e03b3274841dc031b79fff9565faf6ae3217de9d9be74cefad6727ee",
+        "bytes": 5588
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/qualify.py",
+        "sha256": "1529532df84723f2b4592473d917588770322e855e5a677c7a26d465ca9d6488",
+        "bytes": 18893
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/prepare_qualification.py",
+        "sha256": "99879f85ebb08be97c754ad7bbc66f5e840e8dbec4f50edc132c28afc065d911",
+        "bytes": 13530
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/test_run.py",
+        "sha256": "5d4029e3f8175ff9c74af14e721a800bff1a197abf3cf05d782e28a67e94aa8e",
+        "bytes": 8325
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/operations.json",
+        "sha256": "6487883db945dd31f6ae8e773423eac1ccdfb95a55ea548bc96bb22802a4c52a",
+        "bytes": 13229
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3",
+        "bytes": 6733
+      }
+    ],
+    "resolved_findings": [
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "actual load_inputs hook catalog",
+      "cold CUDA reset before initialization",
+      "missing fcntl constants in declared uv3.12"
+    ],
+    "qualification_result": "NOT_RUN_BY_REVIEWER",
+    "capture_export_readback": "NOT_CLAIMED",
+    "withdrawn_objection": {
+      "claim": "Missing module-global archive_source would cause training NameError",
+      "reason": "Stale CodeGraph rendering omitted global declaration; owning file and05b704b8 both contain it."
+    },
+    "runtime_check": {
+      "command": "uv run --offline --python 3.12 python; inspect six fcntl seal attribute names",
+      "model_or_gpu_calls": false,
+      "all_six_attributes_absent": true,
+      "source_resolution": "Use existing factory ABI constants, and explicit CUDA init before reset."
+    },
+    "pending_user_tolerance_decision": "No answer inferred; qualification uses historical tolerance as test input only.",
+    "metadata_correction": {
+      "reviewed_at_ct": "2026-11-17T04:10:23.156323-06:00",
+      "supported": true,
+      "qualifier_sha256_unchanged": "4dd5bd83c26cf8a056cce7ba2b7818b27196498c6b4069f1839730d30eef55f1",
+      "preparer_sha256": "99879f85ebb08be97c754ad7bbc66f5e840e8dbec4f50edc132c28afc065d911",
+      "change": "Remove documentation plan/review paths from research-data inputs only; retain their exact named bindings/runtime checks. List actual topology metadata and remove inherited training-only fields. ROUND-2 now names the prepared qualification.",
+      "admission": "Qualification-only YES after declaration rebuild and required verifier; no execution or result inferred."
+    },
+    "retry_review": {
+      "reviewed_at_ct": "2026-11-17T04:14:52.949002-06:00",
+      "source_admission": "YES_EXACT_REFRESHED_SOURCES_AFTER_CHECKS_AND_DECLARATION",
+      "run_name": "vector-chance-final-graph-qualification-2",
+      "scope_unchanged": true,
+      "change": "inspect.unwrap resolves rms/gelu from the actual model functions beneath functools.wraps instrumentation; exact sibling name preserves failed first attempt.",
+      "first_attempt_failure": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification/failure.json",
+        "sha256": "ef1efa6330dd4111cfee9e0b3ad0dd30c8c4a4464a505989fe4e826f52f2fadb",
+        "bytes": 177
+      },
+      "first_attempt_events": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification/observability/events.jsonl",
+        "sha256": "5114e2a8dc74282b86aa73ae28ce5558c14f010c40b2214e00658836edc51684",
+        "bytes": 29645
+      },
+      "first_attempt_observed_calls": {
+        "solver.vjp": 0,
+        "native.acquire": 0,
+        "weights.install": 0
+      },
+      "first_attempt_result": "FAILED_KEYERROR_GELU_BEFORE_BACKPROP",
+      "regression_inspected": "Wrap actual forward with functools.wraps; wrapper globals lack gelu; verify helper identity after unwrapping.",
+      "reviewer_launched_retry": false,
+      "learning_admission": false,
+      "root_reported_controller_cpu_tests_passed": 5,
+      "capture_final": {
+        "reviewed_at_ct": "2026-11-17T04:19:08.812009-06:00",
+        "source_supported": true,
+        "expected_checkpoint_signal": "Loaded torch.utils.checkpoint._StopRecomputationError is separately counted and rethrown unchanged after an explicit early-stop span. Other exceptions remain errors.",
+        "root_reported_capture_tests_passed": 5,
+        "root_reported_archive_tests_passed": 5,
+        "inspected_actual_checkpoint_vjp_fixture": {
+          "blocks": 35,
+          "eligible_tensors": 538,
+          "vjp_calls": 1,
+          "step_lineage_asserted": true,
+          "expected_recompute_stops_observed": true,
+          "no_false_error_spans_asserted": true
+        },
+        "archive_fixture_scope": "Actual observer fixture receipt accepted; no live backend export claimed."
+      }
+    }
+  },
+  "result_review": {
+    "reviewed_at_ct": "2026-11-17T04:40:39.895965-06:00",
+    "verdict": "PASS_RECORDED_HELD_GRAPH_AND_TYPED_PREVIEW_SCOPE",
+    "rerun": false,
+    "records": [
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/declaration.json",
+        "sha256": "fbed805a8ed1fbdada5c084f104ebd3386ad13867926a10bc19dd2f02a7ce373",
+        "bytes": 255743
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/result.json",
+        "sha256": "1ca1261a9e540009e4d80aee9e3ac025e0fdb338af68de18ca87740ac26b01d4",
+        "bytes": 4387
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/proposal.json",
+        "sha256": "e5500be012c588467fba9c479bcda2f027b4d8dc413a0fd7d62c2a743fbb462b",
+        "bytes": 465865
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/typed-preview.json",
+        "sha256": "e2c814c2c3e21aa996445bc0c9a1e8cb29bbf54b96ebcfda754ce5779ec773d4",
+        "bytes": 134753
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/restored-state.json",
+        "sha256": "64f3b92b533d719b937d63a3c38f15080778d587bc57c9edf27c869b3b0abe8f",
+        "bytes": 880
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/observability/coverage.json",
+        "sha256": "0e42e183c3090ae1dfadd427156acd23fb37641f176ce3f38bf6fb77e9c3683c",
+        "bytes": 6923
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/observability/events.jsonl",
+        "sha256": "5eecea0d65068b3970429b4c378f059c57aeb0f147dcd743b091634a7064dcfd",
+        "bytes": 35640603
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/calculation-result.json",
+        "sha256": "3e6564a6e3609b383aef97b862073facde759883458639536d32b2f6e0bd0edb",
+        "bytes": 2627
+      }
+    ],
+    "admitted_source_bindings_compared": 23,
+    "source_binding_mismatches": [],
+    "eligible_gradient_and_typed_names_exact": true,
+    "eligible_tensors": 538,
+    "connected_nonzero_finite_tensors": 538,
+    "eligible_bf16": 278,
+    "eligible_f32": 260,
+    "typed_layout_mismatches": [],
+    "historical_loss_exact": 6.447133821394787e-05,
+    "gradient_scalar_reduction_difference": 0.0,
+    "gradient_diagnostic_norm_reduction_difference": 0.0,
+    "native_origin_checks": 3,
+    "vjp_calls": 1,
+    "directional_response_calls": 2,
+    "response_merge_counts": [
+      105,
+      105
+    ],
+    "coefficient_one_displacement_diagnostic": true,
+    "new_native_measurements": 0,
+    "native_generation_calls": 0,
+    "installed_updates": 0,
+    "retained_remainders": 70,
+    "memory": {
+      "cuda_allocator_allocated_peak_bytes": 4742136320,
+      "cuda_allocator_reserved_peak_bytes": 5161091072,
+      "process_peak_rss_bytes": 31413276672,
+      "separate_private_memfd_payload_bytes": 9311304896,
+      "complete_system_peak_established": false,
+      "new_468_persistent_remainders_exercised": false,
+      "fresh_generation_exercised": false
+    },
+    "timing": {
+      "execute_elapsed_seconds": 781.9491652880097,
+      "preview_inclusive_wall_seconds": 570.0425240480108,
+      "nested_encoding_sum_wall_seconds": 531.1554117291234,
+      "nested_times_are_not_additive": true,
+      "clean_machine_timing_or_causal_attribution": false
+    },
+    "concurrent_host_incident": {
+      "source": "Root report to reviewer",
+      "reported_time_ct": "04:27:55 CT",
+      "reported_effect": "Global OOM killed Java jobs; qualifier survived.",
+      "kernel_record_independently_inspected": false,
+      "cause_established": false
+    },
+    "observability": {
+      "setup_errors": [],
+      "operation_errors": {},
+      "checkpoint_recompute_stops": {
+        "model.layer": 35,
+        "model.normalize": 15,
+        "model.keys": 15
+      },
+      "parentless_model_detail_spans": {
+        "model.layer": 35,
+        "model.keys": 15,
+        "model.parameter": 15
+      },
+      "complete_gpu_backward_parent_lineage": false,
+      "status": "Separate ContextVar emission gap; numerical PASS is not complete trace qualification."
+    },
+    "limits": [
+      "No finite native response measured.",
+      "No learning step or new tolerance readiness established.",
+      "No safe-host or full post-update lifecycle memory claim.",
+      "No transfer or capability repair claim.",
+      "Tolerance policy choice remains pending."
+    ],
+    "interpretation_field_repair": {
+      "original_calculation_bytes_preserved": true,
+      "original_result_sha256": "3e6564a6e3609b383aef97b862073facde759883458639536d32b2f6e0bd0edb",
+      "calculation_record_sha256_matches_original_result": true,
+      "all_original_fields_unchanged": true,
+      "added_fields": [
+        "prediction_vs_result",
+        "failures_only",
+        "what_this_changes"
+      ],
+      "meaning": "Required interpretation only; no numerical rerun or historical result rewrite."
+    }
+  },
+  "prospective_logging_review": {
+    "reviewed_at_ct": "2026-11-17T04:50:51.006754-06:00",
+    "verdict": "SUPPORTED_SYNCHRONOUS_PRODUCT_FLOW_WITH_FOCUSED_ACTUAL_CUDA_EVIDENCE",
+    "owner_commit": "e59dc06c",
+    "sources_and_evidence": [
+      {
+        "record": "records/development/2026-11-17-final-experiment/capture.py",
+        "sha256": "49ab8c627acc84eb0fab4aa84f1cbfe333bc71d8e932af620ed56d7ec854ff8e",
+        "bytes": 28150
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/gpu_worker_context.py",
+        "sha256": "2748bba5c676be18c5be4bc6a518741dd0b4caa5669344abe43f8631edad396b",
+        "bytes": 4195
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/gpu-worker-context-result.json",
+        "sha256": "bcef196fe1d869947b95ad1d6f9974a6ed523b3539643ecfd3fedaab2e7333d4",
+        "bytes": 7918
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/test_capture.py",
+        "sha256": "96b86bae0b58d9d9a1f840e0ff313b00d0a3120dfe29d54a8570f1af24ad3630",
+        "bytes": 8089
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/capture-source-provenance.json",
+        "sha256": "26bf21caefedbebdf0398687114236b6d3fef5ffdf771b47e9e86cdd6123de35",
+        "bytes": 1265
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/source-snapshots/capture-qualifier-2-35ef0d5f.py",
+        "sha256": "35ef0d5fc03779648fe88cda7a65ecc46de641ded16422f33de24ad8d70a79a2",
+        "bytes": 26218
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/source-snapshots/operations-qualifier-2-6487883d.json",
+        "sha256": "6487883db945dd31f6ae8e773423eac1ccdfb95a55ea548bc96bb22802a4c52a",
+        "bytes": 13229
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/operations.json",
+        "sha256": "7382c20fb12af6a49de053616d5c0f1aaeb71a9ce4a603a4c8e227ebe545dcae",
+        "bytes": 13229
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/capture-tests.log",
+        "sha256": "f245190d6cceaf42e9693edb15448c99477badd3ebb427416fd3b167428124a6",
+        "bytes": 889
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/capture-archive-checks.json",
+        "sha256": "03403dc8c406379649a3e84f07fe1f1271e9b531ba86eae44a1aeac47a410f76",
+        "bytes": 1702
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/capture-archive-observer.md",
+        "sha256": "e455102e1bba80db390f7e52ff860166905c4f410cdc67754be28a76203761a9",
+        "bytes": 8427
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/gpu-worker-context.patch",
+        "sha256": "2c4cc529d2407c8cf8c69d16ae044d2ff530fdee4182517ea2740cf6665da467",
+        "bytes": 5669
+      }
+    ],
+    "source_assessment": {
+      "scope": "Only Recorder scalar context/parent stack is propagated to allowed foreign-thread model operations with an empty Recorder stack.",
+      "autograd_or_numerical_operations_changed": false,
+      "torch_contextvars_copied": false,
+      "snapshot_and_worker_tokens_restored_in_finally": true,
+      "snapshot_retains_model_or_tensor_references": false,
+      "prior_per_call_shared_projection_lifetime_preserved": true,
+      "counter_lock": "threading.RLock",
+      "concurrent_independent_products_claimed": false
+    },
+    "focused_recorded_cuda_result": {
+      "rerun_by_reviewer": false,
+      "shape": [
+        2,
+        2
+      ],
+      "cpu_leaf_staged_to": "cuda:0",
+      "checkpoint": "non-reentrant square",
+      "vjp_calls": 1,
+      "foreign_worker_thread_observed": true,
+      "worker_span_count": 1,
+      "same_actual_vjp_trace_and_parent": true,
+      "exact_step_source_target_context": [
+        7,
+        6,
+        7
+      ],
+      "member_context_preserved": true,
+      "response_kind_preserved": true,
+      "exact_gradient": 2.0,
+      "product_context_cleared": true,
+      "expected_recompute_stop_recorded": true,
+      "error_spans": 0,
+      "capture_source_hash_matches_fixture": true
+    },
+    "historical_qualifier2_hashes_unchanged": {
+      "observability/events.jsonl": true,
+      "declaration.json": true,
+      "calculation-result.json": true
+    },
+    "historical_parentless_roots_backfilled": false,
+    "full_model_rerun": false,
+    "learning_or_tolerance_approval": false,
+    "limits": [
+      "Focused actual CUDA foreign-worker logging route only.",
+      "No new full-model hierarchy observation with this prospective logger.",
+      "Historical65parentless detail roots remain disclosed.",
+      "One synchronous product per Capture is the reviewed controller flow."
+    ],
+    "executed_source_preservation": {
+      "verified": true,
+      "exact_executed_capture_sha256": "35ef0d5fc03779648fe88cda7a65ecc46de641ded16422f33de24ad8d70a79a2",
+      "matches_qualifier2_declaration_implementation_binding": true,
+      "method": "Hash-verified recovery reversing the prospective edit; not represented as an untouched original backup.",
+      "reviewed_delta_only": [
+        "Worker Recorder context/parent snapshot propagation",
+        "Scalar counter locking"
+      ],
+      "old_adjacent_catalog_sha256": "6487883db945dd31f6ae8e773423eac1ccdfb95a55ea548bc96bb22802a4c52a",
+      "historical_events_repaired": false
+    },
+    "recorded_cpu_capture_tests_passed": 5,
+    "commit_blob_checks": {
+      "prospective_capture_matches_49ab": true,
+      "recovered_executed_capture_matches_35ef": true
+    }
+  },
+  "current_plan_status_review": {
+    "reviewed_at_ct": "2026-11-17T05:02:37.584506-06:00",
+    "verdict": "SUPPORTED_STATUS_ONLY_REFRESH",
+    "current_plan": {
+      "record": "FINAL-EXPERIMENT.md",
+      "sha256": "4383117e99760b665efa01032c27b3f80834ee00c39c7b587016f2951816ad2c",
+      "bytes": 53377
+    },
+    "historical_qualifier_plan_binding": {
+      "record": "FINAL-EXPERIMENT.md",
+      "sha256": "979ab9728f7b08c1e5f8091bc5eeaf7fe31589de212d21411b5b755859302b10"
+    },
+    "historical_binding_unchanged": true,
+    "displayed_equations_unchanged": true,
+    "fenced_computations_unchanged": true,
+    "scope_section1_unchanged": true,
+    "tolerance_section5_unchanged": true,
+    "status_limits_preserved": [
+      "No native full538 installation or subsequent generation claimed.",
+      "No new fresh-loss decrease, convergence or repair claimed.",
+      "No new468 persistent remainder or full-lifecycle memory qualification claimed.",
+      "No safe complete-system budget or post-optimization speedup claimed.",
+      "No new full-model hierarchy with prospective logger claimed.",
+      "Tolerance choices remain pending."
+    ],
+    "clarity_corrections_verified": [
+      "Legacy embedding-reader/FP32/shared-projection gaps dated to stopped trainer.",
+      "No successor learning run distinguishes learning from completed qualification attempts."
+    ],
+    "rerun": false,
+    "learning_or_tolerance_admission": false
+  },
+  "retained_tolerance_accounting_review": {
+    "reviewed_at_ct": "2026-11-17T05:04:52.641224-06:00",
+    "verdict": "PASS_NARROW_READ_ONLY_ARITHMETIC_AND_PROVENANCE",
+    "accounting_record": {
+      "record": "records/development/2026-11-17-final-experiment/retained-tolerance-contribution.json",
+      "sha256": "5dc65dc1105bc64a871715e3db00186014f19e5ec1c44bd2d2c4b4d050011a42",
+      "bytes": 1827
+    },
+    "implementation_paragraph_record": {
+      "record": "records/development/2026-11-17-final-experiment/implementation.md",
+      "sha256": "f3418bf2b9c5c52a5007bfa434f2a5905528a0e048586c6b210b42e077112000",
+      "bytes": 9625
+    },
+    "implementation_review_scope": "Only final retained-zero-radius accounting paragraph; no broader new claims inferred.",
+    "source_bindings": [
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-full-weight-training/loop/21/measurement.json",
+        "sha256": "058687dc8f4f684892d769097e0fa11361b542b5cb5afee4a1b4b0d02ee3046d"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-full-weight-training/loop/21/residual-squared.npy",
+        "sha256": "8ff045c6a7b72d569cd3526564af7b9d84c7b2360574696589146a2f5d45a035",
+        "shape": [
+          560,
+          105
+        ],
+        "dtype": "<f8",
+        "sum": 6.447133821394787e-05,
+        "definition": "existing reference.measure weighted residual squared; aggregate mapped pairs by original reference event and merge"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+        "sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48"
+      }
+    ],
+    "all_source_hashes_verified": true,
+    "loss_map_binding_exactly_matches_source_measurement": true,
+    "shapes": [
+      [
+        560,
+        105
+      ],
+      [
+        560,
+        105
+      ]
+    ],
+    "dtypes": [
+      "float64",
+      "float64"
+    ],
+    "finite_nonnegative_inputs": true,
+    "mask": "C==0",
+    "all_reported_scalars_recomputed_exactly": true,
+    "zero_cells": 1365,
+    "zero_cells_with_positive_loss": 1365,
+    "zero_cell_loss": 5.021812046332389e-07,
+    "total_loss": 6.447133821394787e-05,
+    "fraction": 0.007789216395148378,
+    "percentage": 0.7789216395148378,
+    "complete_map_sum_exactly_matches_saved_objective": true,
+    "native_or_model_rerun": false,
+    "derivative_recomputed": false,
+    "inferences_not_supplied": [
+      "Gradient share",
+      "Causal effect or bottleneck",
+      "Harmlessness of collateral movement",
+      "Positive permissible allowance",
+      "Future full-parameter update behavior",
+      "Tolerance-policy approval"
+    ]
+  },
+  "restart_review": {
+    "reviewed_at_ct": "2026-11-17T09:01:52.155613-06:00",
+    "verdict": "YES_RETAINED_ORIGINAL_CALIBRATION_RESTART_SOURCE_DELTA",
+    "authority_and_reason": "Marcos latest November17 correction, relayed by root: the overnight positive-allowance prerequisite defeated continued training. Root withdraws its own restart block; retain measured historical calibration and disclose zero cells.",
+    "supersedes": "Earlier positive-allowance-dependent NO does not apply to this explicitly retained-original calibration restart.",
+    "sources": [
+      {
+        "record": "records/development/2026-11-17-final-experiment/run.py",
+        "sha256": "af03976fc07e93bc30dde64e221252efda5a8200b6ae9983bd60e059c1f9b748",
+        "bytes": 37064
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/prepare.py",
+        "sha256": "2ec5eda84de3e9f639aad348e3388bca05d5f47c3b7600a79f9642795468b0ae",
+        "bytes": 11964
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/test_run.py",
+        "sha256": "68ef75ed0b3d476f5f90fdad427f3b3f4c4291f465c0e3c8cd89b117bbb73103",
+        "bytes": 10503
+      },
+      {
+        "record": "FINAL-EXPERIMENT.md",
+        "sha256": "f62c8cefabd60b1abe87743d52cfe5d148694dbf41782238a4e05ae7b98b2c68",
+        "bytes": 53679
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/turn_artifact.py",
+        "sha256": "aba25664d1bde0df4a5b26b7cea16de8b1bb04eb63c7f3772f0b99853671e94e",
+        "bytes": 3753
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+        "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c",
+        "bytes": 3875
+      }
+    ],
+    "scope": "Narrow calibration admission/preparation/identity delta only; build review and actual-size qualification are reused, not repeated.",
+    "checks": {
+      "explicit_mutually_exclusive_cli_choice": true,
+      "original_vector_chance_format_required": true,
+      "exact_original_chance_binding_required": true,
+      "existing_original_artifact_loader_reused": true,
+      "original_turns_and_chance_values_unchanged": true,
+      "zero_cells_preserved_and_disclosed": true,
+      "loss_identity_uses_original_format_reference_and_chance_hashes": true,
+      "replacement_positive_mode_separate": true,
+      "gradient_update_equations_and_fenced_computations_unchanged": true,
+      "full538_scope_and_update_rule_unchanged": true,
+      "no_exact_zero_stopping_requirement_added": true
+    },
+    "regression_inspected": "All105 reference/chance slices and original identity preserved, zero cells retained, mismatched chance SHA rejected.",
+    "root_controller_tests": "Six controller tests running per root at review; reviewer did not rerun.",
+    "positive_allowance_established": false,
+    "new_floor_or_mask_added": false,
+    "learning_attempt_source_admitted": true,
+    "native_learning_result_claimed": false,
+    "new_general_qualification_campaign_required_by_this_review": false,
+    "papers_reread": false,
+    "actual_size_qualification_repeated": false,
+    "native_or_model_execution_by_reviewer": false,
+    "concrete_source_or_scientific_mismatches_found": [],
+    "retained_original_data": {
+      "reference": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+        "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+      },
+      "reference_format": "single-original-vector-chance/1",
+      "chance": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+        "sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48",
+        "shape": [
+          560,
+          105
+        ],
+        "dtype": "float64"
+      },
+      "turns": {
+        "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+        "sha256": "1b7ccbe9996af857f98d8a213fa3461e3cdd42f57906d4518f2b2f775184b2af",
+        "shape": [
+          560,
+          105,
+          1536
+        ],
+        "dtype": "float64"
+      },
+      "original_model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+      "zero_chance_cells_disclosed": 1365,
+      "data_arrays_reread_for_restart_review": false
+    },
+    "prospective_source_refresh": {
+      "reviewed_at_ct": "2026-11-17T09:07:37.314330-06:00",
+      "verdict": "SUPPORTED_ONE_LINE_CURRENT_SOURCE_BINDING_REFRESH",
+      "preparer": {
+        "record": "records/development/2026-11-17-final-experiment/prepare.py",
+        "sha256": "e0fc82d2af3088d12b3fe9172edddfbf1e14e5edda6948c28191327b0bf2254f",
+        "bytes": 12151
+      },
+      "failed_launch_records": [
+        {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317/declaration.json",
+          "sha256": "87d0db6ff2b7cdd935dfddc5ed1790b2014dbc6c75bbf8f1e7b8a067f5451048",
+          "bytes": 270182
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317/failure.json",
+          "sha256": "6ad618d2fe80305e0a5843eb3ed19394ae46b38072e23f00b9537060ec5ea1aa",
+          "bytes": 558
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317/observability/events.jsonl",
+          "sha256": "38d4ab1923119a0fb90640f91c8c351bce7f0365ba8f62d0190992bdc252b8c0",
+          "bytes": 5123
+        }
+      ],
+      "inherited_manifest_entries": 174,
+      "reported_stale_entry": "code/signal-trace/tests/test_model_trace_response.py",
+      "stale_entry_difference_verified": true,
+      "observed_started_spans": [
+        "research.invocation",
+        "run.bind"
+      ],
+      "no_model_restoration_load_or_acquisition_span": true,
+      "change": "Recompute current binding for every retained source in the new declaration; retain all entries and strict runtime validation.",
+      "historical_declarations_rewritten": false,
+      "scientific_or_numerical_change": false,
+      "separate_retry_folder_preserves_failed_launch": true,
+      "repeated_graph_qualification_required_by_this_review": false,
+      "reviewer_reran_model_or_native_work": false
+    },
+    "producer_receipt_fix": {
+      "reviewed_at_ct": "2026-11-17T09:16:53.208999-06:00",
+      "verdict": "SUPPORTED_REMOVAL_OF_DUPLICATE_NATIVE_RECEIPT_MUTATION_AND_WRITE",
+      "sources": [
+        {
+          "record": "records/development/2026-11-17-final-experiment/run.py",
+          "sha256": "c8e9dcaef430322d767b5a62083b40600284ad058d642d808f7e284934d029a6",
+          "bytes": 37040
+        },
+        {
+          "record": "records/development/2026-11-17-final-experiment/test_run.py",
+          "sha256": "f5ab830704a1fffb20fe51971b1d64c34d6e9fbf42cb141547e86f6aa8872ca5",
+          "bytes": 12892
+        }
+      ],
+      "failure_records": [
+        {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317-retry/launcher-exit.json",
+          "sha256": "e3d27a0f284203772a78d716338612e4820bee47f6e2c695c2c6ac789df4b003",
+          "bytes": 365
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317-retry/final-state.json",
+          "sha256": "8614d7990b982bd19ffcb73a43c1b1dd27eee332a027bb251c7f7c988ffbb071",
+          "bytes": 2671
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317-retry/loop/0/capture/capture.json",
+          "sha256": "bd2eecf39051d7e048db1f27223fec9086bdcc0be41209a4669d4551678ed5d9",
+          "bytes": 12205
+        }
+      ],
+      "observed_failure": "FileExistsError from second exclusive capture.json creation",
+      "native_generation_completed_before_failure": true,
+      "last_measurement": null,
+      "installed_updates": 0,
+      "state_complete": true,
+      "producer_receipt_preserved_exactly_by_source": true,
+      "generation_loss_update_and_stopping_changed": false,
+      "regression_inspected": "Existing receipt survives actual correspondence/local maps/measurement publication; fixture case ID corrected; saved capture binding and history checked.",
+      "root_reported_controller_tests_passed": 7,
+      "reviewer_reran_native_model_or_graph_qualification": false,
+      "legacy_label_limit": {
+        "recorded_seal_mask": 6,
+        "write_seal_established_for_live_learning_descriptor": false,
+        "note": "Generic producer diagnostic text mentions a finally write-sealed state; use actual seals/read-only child/sole-writer ordering, not that phrase, as evidence. Receipt is not rewritten."
+      },
+      "additional_qualification_campaign_required": false
+    }
+  }
+}

@@ -26,7 +26,7 @@ Companions: [all12 native A/B/C controls](exports/physics-background-sensitivity
 
 [Publication SVG](exports/physics-edit-footprint-2026-11-07--two-edits.svg) · [interpretation and denominators](../../studies/03-round-1-single-pair-edits/B-selective-footprint/run/REPORT.md) · [interactive four-case A comparison](http://127.0.0.1:4318/?trace=block-changed).
 
-The panels show relative vector change at two recorded boundaries over shared generated histories, through A's first changed token. A and B act similarly at the design anchor but differently later. The lines are not recovered latent geometry or probabilities. The standard plotting script reads the saved trace exports. Finished view captures are in [the visual-review folder](../../apps/decode-machine/.impeccable/review/weight-traces), including the user's desk viewport, laptop and phone.
+The panels show relative vector change at two recorded boundaries over shared generated histories, through A's first changed token. A and B act similarly at the design anchor but differently later. The lines are not recovered latent geometry or probabilities. The standard plotting script reads the saved trace exports. Finished view captures are in the visual-review folder, including the user's desk viewport, laptop and phone.
 
 ## Earlier figures
 
@@ -36,7 +36,7 @@ Seven existing SVG figures are retained in their original study directories and 
 
 Pilot: default capture path. Historical recorder limitations are part of this comparison; consult the pilot report before interpreting it.
 
-[Original](../../studies/02-physics-trace-observation/physics-trace-pilot/run/counterfactual-default.svg) · [Export](exports/physics-trace-2026-11-06--counterfactual-default.svg) · [Study report](../../studies/02-physics-trace-observation/physics-trace-pilot/run/REPORT.md)
+Original · [Export](exports/physics-trace-2026-11-06--counterfactual-default.svg) · [Study report](../../studies/02-physics-trace-observation/physics-trace-pilot/run/REPORT.md)
 
 ![counterfactual-default](exports/physics-trace-2026-11-06--counterfactual-default.svg)
 
@@ -68,7 +68,7 @@ BF16: traces at selected calculation anchors in the block example, before the la
 
 BF16 follow-up: connected transformations using the same question family; retain its own eligibility counts.
 
-[Original](../../studies/02-physics-trace-observation/physics-trace-bf16/run/connected-followup.svg) · [Export](exports/physics-trace-bf16-2026-11-06--connected-followup.svg) · [Study report](../../studies/02-physics-trace-observation/physics-trace-bf16/run/REPORT.md)
+Original · [Export](exports/physics-trace-bf16-2026-11-06--connected-followup.svg) · [Study report](../../studies/02-physics-trace-observation/physics-trace-bf16/run/REPORT.md)
 
 ![connected-followup](exports/physics-trace-bf16-2026-11-06--connected-followup.svg)
 
@@ -92,14 +92,14 @@ Q4 follow-up: connected paired transformations and relative separation across th
 
 Retained screens from the 30k observatory work:
 
-- [run-view-counters-desktop.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-counters-desktop.png)
-- [run-view-counters-laptop.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-counters-laptop.png)
-- [run-view-counters-phone.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-counters-phone.png)
-- [run-view-desktop-r2.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-desktop-r2.png)
-- [run-view-desktop-verified.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-desktop-verified.png)
-- [run-view-desktop.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-desktop.png)
-- [run-view-final-desktop.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-final-desktop.png)
-- [run-view-laptop-r2.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-laptop-r2.png)
-- [run-view-laptop-verified.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-laptop-verified.png)
-- [run-view-phone-r2.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-phone-r2.png)
-- [run-view-phone-verified.png](../runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/run-view-phone-verified.png)
+- run-view-counters-desktop.png
+- run-view-counters-laptop.png
+- run-view-counters-phone.png
+- run-view-desktop-r2.png
+- run-view-desktop-verified.png
+- run-view-desktop.png
+- run-view-final-desktop.png
+- run-view-laptop-r2.png
+- run-view-laptop-verified.png
+- run-view-phone-r2.png
+- run-view-phone-verified.png

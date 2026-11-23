@@ -1,0 +1,200 @@
+{
+  "method_step": [
+    3,
+    5
+  ],
+  "run_by": "weight-research-astra (objective and declaration), weight-research-fable (reference and solver), weight-research-perfomance (own-trace controls and comparison)",
+  "status": "The reference is made, by the declared reference command, twice on November 12: at 1:59 AM CT with the model's last merge read raw (kept as reference-raw-terminal and reference-raw-terminal-record.json, a description from here on), and at 2:32 AM CT with that merge read as what output_norm passes on (reference and reference-record.json, the one every cell is read from), after the specification's author ruled so before any candidate. The single-matrix edit phase is declared below (edit_phase, the rule's candidate and numerical_work, and the parameters from ridge_unit through terminal_coordinate). Fable reported that candidate execution began on card 0 at 2:37 AM CT, November 12; the selected candidate and primary own-trace reading are now complete and recorded in result.json. Follow-up conditional diagnostics are separate and do not select or change the candidate.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "target_source": "studies/04-round-2-overlap/runs/state-overlap-2/recurrence.npz",
+  "objective": "one full-computation correction objective",
+  "specification": "records/retrospectives/2026-11-12-correction-objective-astra.md",
+  "original_observations_from": "controlled-bf16-1",
+  "planned_starting_state": {
+    "source_run": "controlled-bf16-4",
+    "matrices_written": 19,
+    "model_sha256": "6d5dcb65494653a2dc6997a65c68bccf9f14f7dea69e3ac3b9619ef129858dfb",
+    "matrix": "blk.9.ffn_down.weight",
+    "source_rows": "studies/04-round-2-overlap/runs/controlled-bf16-4/passes/inspect-19-feedforward-1-rows.npz",
+    "model": "studies/04-round-2-overlap/runs/correction-at-19/own/controls/after-19/controlled-bf16-4-after-19-matrices.gguf"
+  },
+  "hypothesis": "A capability leaves a recurring discrepancy in the connected computation, and correcting that discrepancy in the weights repairs the capability. The prospective construction compares both outcome groups with the same original correct pattern, including direction and log size, over the whole registered answer trace. Agreement is part of the correction objective itself, not a separate preservation or restoration objective.",
+  "why_this_direction": "The original direction-only pull and original-relative size preservation could oppose movement toward the correct computation at the same place. The controlled sweeps repeatedly spent work restoring that movement and stopped on historical bounds without establishing a full-path repair. The user explicitly corrected that framing on November 12. Existing repairs and transfer remain established evidence; this work tests the configuration. Building the complete original direction/size target and preserving matched own-trace controls are the next necessary measurements, before the single-matrix correction experiment.",
+  "repeating_pattern_check": "Earlier constructions optimized a local or given-text reading while the model's own trajectory differed; mean agreement could also conceal member differences or both groups drifting together. The new target is the fixed original correct pattern for both groups, not the edited model or the other edited group. The entire own trace and member diagnostics are retained; a local fit is not called the research result. No target, radius or scale is selected from the candidate's answers. The mean-only instrument does not establish that the subsequent member-level/on-policy construction is solved.",
+  "what_went_wrong_before": "Original-relative protection was treated as the goal rather than correction. The previous selected-cell masks and size limits could count toward-correct movement as a violation. The first draft of this prospective specification then treated noisy sample centres as exact targets and used units that made size a small share of the raw objective; the original-data review corrected that before any declared candidate. Paired-fold calibration does not independently validate the common target.",
+  "rule": {
+    "reference": "Extend the existing whole original state overlap with the full original groups' mean log-size gap. Keep every registered answer place and all 105 merges. At the final merge only, transform each row through correction.passed_on, including the learned output_norm scale and RMS epsilon, before deriving its direction, log size, registration means, contrast and variance. Apply that same transform to original native replay and own-trace readings; retain the raw terminal quantities as description only. For each block retain original mean-contrast variance and the signed/vector full-contrast difference on the original native replay before squaring.",
+    "objective": "For each group and place, paired original-to-current mean movement is compared with the original correct-minus-that-group pattern gap, for direction and log size. Squared distance beyond the target's original-measured resolution is summed with globally normalized original contrast units. There is no static asked mask, original-relative size bound, bounded-family veto or bringing-back phase.",
+    "data_roles": "All original cohort members supply the frozen reference. Only the existing fitting half supplies construction and diagnostic decisions. Its existing three folds supply within-fit model selection in the later edit phase; no-fit and reserved answers are not used for tuning.",
+    "controls": "Preserve the completed original, unchanged nineteen-matrix state and a2-path own-answer recordings on fitting questions under this folder, with source paths and model hashes. They are measurement controls, not sources for changing the target after the candidate is read.",
+    "scope": "This declaration records the reference/diagnostic-data phase (step 3) and the single-matrix candidate phase (step 5). The edit_phase, candidate rule and numerical parameters were recorded before candidate execution. This is a bounded saved-state comparison, not an on-policy full sweep or a completed repair. Historical runs, references and verdicts are unchanged.",
+    "storage": "Expensive references, model copies and captures stay inside this run folder. Preserve provenance when completed temporary control outputs are copied here; do not move open outputs.",
+    "authority": "journal/2026-11-12-correction-not-protection.md; no additional approval is needed for the user's corrected objective.",
+    "candidate": "Specification, section 4, with its author's ruling of November 12 on what a candidate is. The existing fitting half (15 wrong and 15 correct original answers) in its existing three folds cross-validates the one objective. Three paths go down the ridges in step, each solved on two folds and read on the third. Every written state a path accepts is a candidate setting, named by its ridge and by the number of rounds taken at that ridge; a fold whose stage ended by itself before that many rounds stands at its stage's end; a fold whose linear solve gave no finite step ends the scoring, and no setting is scored on fewer than three folds. A setting's score is the mean of the three folds' readings, each fold by its number of answers. The setting with the least score is taken, the unchanged matrix among them; an exact tie goes to the smaller mean, over the folds, of the squared change of the matrix, then to the stronger ridge, then to the earlier round. All fifteen plus fifteen are then solved on once, down the same ridges to that one and no further than that many rounds at it; where that solve stands is the candidate. It is written into a copy of the after-19 state inside this folder (model/), the state's own file being only read, and the copy is checked: the candidate at that matrix value for value, every other byte the state's. No-fit and reserved answers enter nothing.",
+    "numerical_work": "Every limit here is a budget of computation, tested on this objective for the first time. None is a tolerance of the target, and a limit that is used up is recorded as used up and rejects nothing. Unit, first ridge, spacing, a stage's rounds, a round's linear work, the acceptance of a step and where the paths end are the parameters from ridge_unit to path_budget below, each with the record it was measured in. The record of the candidate says how the paths ended and whether the setting taken lies at the last ridge made."
+  },
+  "parameters": {
+    "original_counts": {
+      "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+      "derivation": "Count every original member by outcome group from the correspondence source; use those source counts in mean variances and group shares, not the five- or fifteen-member fitting readings.",
+      "scales_with": "Original cohort membership and group counts."
+    },
+    "registration": {
+      "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+      "derivation": "Use the existing computation correspondence; each member's registered steps at a place have weights summing to one, then members are averaged within their group.",
+      "scales_with": "Each answer's recorded steps and correspondence multiplicities."
+    },
+    "target": {
+      "measured_from": "studies/04-round-2-overlap/runs/controlled-bf16-4/reference",
+      "derivation": "Reuse only its original-derived direction gap and original member-variance statistics at the other 104 merges; derive the size gap from the full original groups' registered native log sizes, correct minus wrong. At the final merge, recompute both gaps and both member variances from the original rows after the declared output_norm transform, before registration means. Both groups answer to the same original correct pattern. No historical limit is used as a new acceptance rule.",
+      "scales_with": "Original direction and native-size observations at every merge and place."
+    },
+    "overlap_resolution": {
+      "measured_from": "records/retrospectives/2026-11-12-correction-objective-astra.md",
+      "derivation": "nu_f=V_wrong,f/N_wrong+V_correct,f/N_correct, the finite-partition mean-square distance of a balanced half-contrast from the full contrast. q_f is the squared signed/vector difference of the full original native-replay contrast and the original recorded contrast. radius_f=sqrt(max(nu_f,q_f)). There is no extra chosen multiplier.",
+      "scales_with": "Original member variation, counts and native replay discrepancy at the cell."
+    },
+    "global_units": {
+      "measured_from": "records/retrospectives/2026-11-12-correction-objective-astra.md",
+      "derivation": "S_f=sum over every original merge/place of (norm(gap_f)^2+nu_f), the summed mean-square original half-contrast. weight_f[g,m,c]=(N_g/N_total)/S_f. Store both positive scales once and use them for every fitting fold, refit and whole-model reading; never use an inverse per-cell preservation budget.",
+      "scales_with": "The complete original direction/log-size discrepancy fields and original cohort counts."
+    },
+    "native_coordinates": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+      "derivation": "u=h/norm(h), ell=log(norm(h)), in the original model's native computation. Native recorded log sizes are used where supplied; original replay comparisons use the corresponding native quantities. At the final merge h means the passed-on state from correction.passed_on, not the raw merge: w z sqrt(n) / sqrt(1 + n eps / (c^2 exp(2s))), with the original file's output_norm.weight w, last-layer scale c, width n and RMS epsilon eps, as derived and qualified in terminal_coordinate. Higher-precision reconstruction and scalar reduction do not change stored BF16 weights.",
+      "scales_with": "Recorded native states, numerical precision and each merge expression."
+    },
+    "ridge_unit": {
+      "measured_from": "records/development/2026-11-12-correction-objective/smoke-candidate-path.json",
+      "derivation": "The objective's own mean curvature over the directions of a change of the matrix, at the matrix the path starts from, on all fifteen plus fifteen fitting answers (correction.unit_of): (the trace of the direction cells' action on the rows' inputs times the mean of the merge's learned scale squared, plus the trace of the size cells' action over the number of outputs) over the number of inputs. One unit for the three folds' paths and for the last solve; a stage's ridge is the unit times a power of two and is counted from the matrix the path started from. Read on all thirty against the raw-terminal reference: 2.1326e-05 (2.1795e-05 on two folds, position19-resolved-thirds-0.json). The run computes it against its reference, whose cells' weights at this layer are 2.5% (direction) and 1.1% (size) less.",
+      "scales_with": "The cells' weights (so the reference's two scales), the rows' inputs at this state, the learned scale of the merge, and the matrix's shape."
+    },
+    "first_ridge": {
+      "measured_from": "records/development/2026-11-12-correction-objective/smoke-candidate-path.json",
+      "derivation": "The convention for where a path starts: the last power of two, over the unit, not above 2 |s|^2 / (RESOLVED x E), with E the objective on all the fitting answers at the start and s the slope of E/2 in the matrix there, every cell aimed at the nearest point of its ball (correction.strongest, first_power). In the initial linearized problem, with positive-semidefinite curvature H and a ridge r, the step is -(H + r)^-1 s and its first-order fall in E is at most 2 |s|^2 / r. The formula therefore sets a bound-based convention for the first ridge; it is neither an equality for an actual step nor a bound on a whole nonlinear/native stage. With the objective's curvature the initial linearized fall can be less, and the written BF16 matrix is its own reading (in the smoke run the first five ridges moved the readings in their fifth digit or not at all, at 5 s a stage). Computed at the start, never picked: 2^19 over the unit on all thirty against the raw-terminal reference.",
+      "scales_with": "The objective and its slope at the starting matrix, and the unit."
+    },
+    "ridge_spacing": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+      "derivation": "Each stage's ridge is half the one before (tube.PATH = 1, the spacing every sweep of this study has used), each stage starting from where the last one ended.",
+      "scales_with": "Nothing measured here; a finer spacing makes more settings at more cost."
+    },
+    "stage_rounds": {
+      "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+      "derivation": "A stage's rounds go on until one brings the objective down by no more than RESOLVED of what it was, or no part of a round's step leaves less of the objective, or the whole step moves no weight the file holds, or tube's standing 40 rounds are used (tube.EFFORT). RESOLVED is the root of float32's smallest relative step, 3.45e-04, where a linear solve stops being told from its own arithmetic. Measured on the calibration path: 2 to 8 rounds a stage from 2^11 to 2^0, 7 at 2^-1, 11 at 2^-2; the 40 were never used.",
+      "scales_with": "How well the first-order model of the merges holds for a step at the ridge, and the arithmetic's precision."
+    },
+    "round_linear_work": {
+      "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+      "derivation": "A round aims every cell at the nearest point of its radius' ball and solves the quadratic that brings the cells to their aims, with the ridge, by preconditioned conjugate gradients (the cells' action on the inputs in its own eigenvectors, each output by the square of the learned scale); the aims are then taken again from where the step puts the cells. A pass is at most 40 iterations and stops at RESOLVED of the round's first slope; the passes stop when the first-order objective with the ridge falls by no more than RESOLVED of itself, at most 10 passes (tube.EFFORT's back_iterations and passes, measured for the bounded solves and kept). Measured on the calibration path: 2 to 6 passes a round above the unit, up to 8 at the unit, and all 10 in the first round at 2^-1 and at 2^-2, after which the next round takes the aims up from where that one ended: the limit divides the work between rounds and ends nothing.",
+      "scales_with": "The spread of the objective's curvature over the directions of a change, and the ridge."
+    },
+    "step_acceptance": {
+      "measured_from": "records/retrospectives/2026-11-12-correction-objective-astra.md",
+      "derivation": "Specification, section 5. A trial is the matrix actually written in the file's BF16 (tube.written, nearest the wanted one in the solve's own measure), read through the merges themselves; it is taken when it reads strictly less of the solved data's objective. Otherwise the part of the step is halved (tube.halved) down to where the written matrix is the one stood on. No bound, family or fold vetoes a step.",
+      "scales_with": "The file's precision and the step's size."
+    },
+    "path_budget": {
+      "measured_from": "records/development/2026-11-12-correction-objective/position19-correction-thirds-0-from-above.out",
+      "derivation": "A declared exploratory stopping policy (the specification's author, November 12): a budget of computation, no certificate of a minimum, and no statement about ridges not made. From the first ridge down to the unit every ridge is made (a stage cost 3 to 44 s on the two calibration paths, and the first stages move the readings by about what a solve resolves, so a reading that does not fall there says nothing). Below the unit the three folds' paths, made in step, end at the first ridge at which states were written and neither any fold's best new state reads less than that fold has read at any state before, nor does the best new common setting's score (the folds' mean) read less than the best score before. The outer limit is the floor: a halved ridge less of the unit than a linear solve resolves, 2^-11 the last made. Paths also end where every fold's cells stand inside their radii, and a linear solve that gives no finite step ends the scoring. Settings not made are censored, not scored; the record says why the paths ended, the last ridge made, and whether the setting taken lies at it. A valley below the ridge the paths ended at would be missed: this experiment tests the instrument and its link to the model's own computation, not the least value of the local objective. Measured, first draft of the objective (no radius), one fold: the read fold was least at the unit (0.0080) and rose at each ridge below it, 0.0083, 0.0097, and 0.0119 when the run was stopped, while 2^-2 took 25 rounds and 322 s and 2^-3 had taken 38 rounds and 611 s. Measured, revised objective, one fold (position19-resolved-thirds-0.json): 44, 66 and 101 s at 2^0, 2^-1 and 2^-2 with the read fold still falling. Smoke of the whole policy at one round and one pass a stage (smoke-candidate-path.json, which chooses nothing for this run): the paths ended at 2^-5 and the least score lay at 2^-3, two ridges inside.",
+      "scales_with": "How the stages' cost grows below the unit and where the folds' readings stop falling; both are this objective's at this matrix and state."
+    },
+    "candidate_settings": {
+      "measured_from": "records/development/2026-11-12-correction-objective/position19-correction-thirds-0-from-above.out",
+      "derivation": "Every accepted written state is a candidate, aligned across the folds by ridge and by rounds taken at that ridge (the specification's author, November 12, on the measurement in this record: within a stage, later rounds brought the solved folds down and the read fold up, 0.007917 after the first round at the unit against 0.007996 at that stage's end, 0.007784 against 0.008294 a stage below, so a stage's end is not always its best written state). Scores, ties and the last solve on all the fitting answers are the rule's candidate.",
+      "scales_with": "The number of rounds each fold takes at each ridge."
+    },
+    "terminal_coordinate": {
+      "measured_from": "records/development/2026-11-12-correction-objective/terminal-check.out",
+      "derivation": "The engine's own operation after the last layer (torad-llama.cpp src/models/gemma4.cpp: l_out = pe_out x blk.34.layer_output_scale; build_norm(output_norm, LLM_NORM_RMS) = ggml_rms_norm(l_out, eps) x output_norm.weight): from a row's unit direction z and log size s at the last merge, the passed-on state is w z sqrt(n) / sqrt(1 + n eps / (c^2 e^(2s))), w the file's output_norm.weight, c = 0.1669921875 its blk.34.layer_output_scale, eps = 1e-6 (the file's gemma4.attention.layer_norm_rms_epsilon, float32), n = 1536 (correction.passed_on). No capture keeps the engine's result_norm itself, so the rebuilding was held against the engine through the head: over all 30,546 decisions of the 60 original answers, the scores rebuilt from the recorded direction and size (times the file's token rows, capped at 30 as the engine caps them) lie within 0.00023 of the eight recorded scores of each decision, and the recorded first token is the rebuilt first in every one. What eps takes from the log of the passed-on size is at most 5.3e-06 (the last merge's size runs from 72 to 387); it is kept in the arithmetic.",
+      "scales_with": "The model's output norm: its learned scale, the last layer's output scale and the norm's epsilon. None of them is a matrix a sweep writes."
+    }
+  },
+  "prediction": "The complete original reference will express the recurring direction and size discrepancy in common original contrast units, with the same correct-pattern target for both groups and zero error at agreement within its measured resolution. It will support a matched single-state correction test without changing any historical reference or deriving an allowance from an edited candidate.",
+  "would_weaken_it": "A reference that cannot reproduce its source original group contrasts, whose resolution or normalization silently depends on an edited model, or whose own-trace reading cannot distinguish a known unchanged original from correspondence noise would weaken this construction and require correction of that measurement before claiming a repair.",
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/input-overlap/inputs",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+    "studies/04-round-2-overlap/runs/state-overlap-2",
+    "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+    "studies/04-round-2-overlap/runs/controlled-bf16-1/own/original",
+    "studies/04-round-2-overlap/runs/controlled-bf16-4/reference",
+    "studies/04-round-2-overlap/runs/controlled-bf16-4/model",
+    "studies/04-round-2-overlap/runs/controlled-bf16-4/passes/inspect-19-feedforward-1-rows.npz",
+    "studies/04-round-2-overlap/runs/a2-path"
+  ],
+  "inputs_read_for_what": "Original traces, correspondence, weights, baseline and original own recordings supply the reference. controlled-bf16-4/reference supplies only statistics already derived from that original data, not edited-model limits for acceptance. Its model/kept rows and a2-path are the specified diagnostic states/controls; they supply no target, uncertainty, floor or scale. For the edit phase: the after-19 state's model file kept under own/controls/after-19 is read for the matrix it holds and copied for the candidate's model, and never written; controlled-bf16-4's kept rows, bindings and reference supply the rows' layout (the reference's bounds of the questions ride in that layout and no cell of the correction reads them).",
+  "outputs": [
+    "studies/04-round-2-overlap/runs/correction-at-19/reference",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference-record.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/own/controls",
+    "studies/04-round-2-overlap/runs/correction-at-19/own/candidate",
+    "studies/04-round-2-overlap/runs/correction-at-19/own/diagnostics",
+    "studies/04-round-2-overlap/runs/correction-at-19/provenance.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/logs",
+    "studies/04-round-2-overlap/runs/correction-at-19/result.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/candidate",
+    "studies/04-round-2-overlap/runs/correction-at-19/model",
+    "studies/04-round-2-overlap/runs/correction-at-19/run.sh",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference-raw-terminal",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference-raw-terminal-record.json"
+  ],
+  "edit_phase": {
+    "added_by": "weight-research-fable (solver and numerical work), November 12, 2026, before any candidate; the objective, the reference and the selection rule are weight-research-astra's",
+    "method_step": 5,
+    "why_this_direction": "The reference this run declared is made: one scale for each form over the whole original trace (direction 1237.206, size 28.353), the radius the root of nu at every cell (the pass's reading never exceeds it), and the original model's own objective 0.1220 for the direction and 0.1260 for the size. The method's next step for this bounded experiment is the correction of the one matrix against that reference and the reading of the whole model on its own answers. The solve has been calibrated on the kept rows, with nothing written into a model: on the first draft of the objective (no radius) the fold not solved on read least at the unit ridge with 40% of its objective closed; on the revised objective it fell at every stage from 2^11 to 2^-2, 76% closed at 8.8% of the matrix changed, and had not turned. So the configuration runs and its local reading is on record. What it does to the model's own computation is not known, and that is what the candidate is for.",
+    "repeating_pattern_check": "Three things have repeated. (1) A local reading on the given text improved while the model's own computation did otherwise: controlled-bf16-4 held every bound on the given text, and on its own answers its last state completes 3 of 15 wrong and 10 of 15 correct answers. This run does not avoid that, it measures it at one matrix: the candidate is fitted on given-text rows of the after-19 state and then read on its own answers, beside the unchanged state and the original. (2) A solve that ran out of work was read as a finding about the target (the stalls of the bringing back). Here every limit of work is named as a budget of computation being tested on this objective; one that is used up is recorded as used up and rejects nothing. (3) Choosing on what is being judged. The candidate is chosen once, inside the fitting folds, on the local objective; the own-trace reading chooses nothing and no second candidate follows from it.",
+    "hypothesis": "A capability leaves a recurring discrepancy in the connected computation, and correcting that discrepancy in the weights repairs the capability. The prospective construction compares both outcome groups with the same original correct pattern, including direction and log size, over the whole registered answer trace. Agreement is part of the correction objective itself, not a separate preservation or restoration objective.",
+    "prediction": "Specification, section 6: the correction-only candidate lowers the whole-model computation discrepancy L, read on the thirty fitting questions' own traces at all 105 merges, relative to the identical unchanged saved state. Locally, on the given-text rows, the candidate reads less of the objective on all the fitting answers than the start does; that is the solve's own doing and is not the prediction.",
+    "would_weaken_it": "Specification, section 6: the local objective falls and the own-trace whole-model discrepancy does not, or its total gain masks a materially worsened correct-pattern trace. Either is a finding about this construction at this state, not about the repairs already observed. A cross-validation that takes the start (no written state reads less on the folds it was not solved on) is a result too: no candidate is then written.",
+    "read_by": "weight-research-perfomance reads the written copy on its own answers against the controls kept under own/controls; weight-research-astra assesses. Nothing in that reading selects or changes the candidate."
+  },
+  "opening_diagnostic_phase": {
+    "added_when": "2026-11-12, after the primary candidate's own-trace result was reported; before the opening controls authorized by this revision",
+    "purpose": "Diagnose the effect of the observed early opening branch, not rescue or replace the unforced candidate result.",
+    "storage": "The completed candidate capture belongs under own/candidate, preserving its existing own/ tree, member cache and whole-model readings. Relocate the completed root from records/development/2026-11-12-path-forward/own-captures/correction-at-19-candidate only when no writer or active dependent reader is using it; preserve provenance and a SHA-256 manifest. Conditional replay and opening-control records belong under own/diagnostics. The capture destination was omitted from the earlier output list; this addition records that omission after capture and does not claim it was named before execution.",
+    "comparison": "Use the actual A starting model (after-19, hash 6d5dcb65494653a2dc6997a65c68bccf9f14f7dea69e3ac3b9619ef129858dfb) and the frozen candidate (hash a1945dcd2aea877b855637a06d0371b8dd32a3b0d5605f04fce7eb4e16d25865). On cases sharing the observed prefix, the crossed controls are after-19 continued through calculation and candidate continued through compact. Existing natural continuations supply the other cells only where their exact token prefix matches. An original-model/calculation reading, if already started, is retained as an additional control, never substituted for the matched after-19 comparison.",
+    "intervention": "Intervene at the observed branch token, with the exact preceding token prefix for that fitting case, then let the model generate freely. Use the ordinary native prompt prefill and single-token generated-prefix execution; do not turn the forced prefix into a new batched prompt or force a subsequent layout. Save the forced token IDs and the forced/free boundary. If the native runner does not support that continuation faithfully, record the limitation rather than label a different prompt construction as the same intervention.",
+    "eligibility": "All thirty fitting cases remain in the primary result. For this diagnostic, enumerate prefix matches and unmatched cases from the recorded token histories, not from success or failure after intervention. The observed third-token compact/calculation branch affects 26 of 30 cases on the recordings; do not force that branch at an unrelated position in another case or describe the eligible subset as the full cohort.",
+    "prediction": "If the opening branch mediates much of the regression, crossing the branch within each fixed model should change its later errors and lengths. If the candidate remains damaged on compact while the unchanged after-19 model handles calculation, the edit has effects beyond this branch. Interactions are possible; the third-token margin alone does not establish either account.",
+    "scope": "Text-only diagnostic continuations, no new trace capture required. Report full answers, first failure, length and truncation; no loss, candidate selector, protective constraint or new primary success score is created. Forced-prefix answers never replace the candidate's unforced result. No-fit and reserved remain untouched.",
+    "parameters": {
+      "prefix": {
+        "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/result.json",
+        "derivation": "Use the actual token IDs and per-case prefix at the observed first departure, not a newly chosen word, location or fixed prefix length. The reported compact/calculation event is at decision step 3 in 26 recording histories; match the actual after-19/candidate histories before using their natural continuations as controls.",
+        "scales_with": "Each fitting case's recorded token history and tokenizer."
+      },
+      "generation": {
+        "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/own/controls/after-19/provenance.json",
+        "derivation": "Use the same prompt, tokenizer, greedy native engine settings and per-question original-recording token limit as the existing after-19 own control. Count the forced prefix within that same total generation limit, not as a free extra budget; record the actual values and command with each control.",
+        "scales_with": "Each original question's recorded generation limit and the unchanged native runner."
+      },
+      "device": {
+        "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/own/controls/after-19/provenance.json",
+        "derivation": "Use card 1 and the same native arithmetic conventions as both existing own readings. This diagnostic does not supply the future on-policy loop's canonical card-0 history check.",
+        "scales_with": "The fixed comparison hardware and native execution configuration."
+      }
+    },
+    "unchanged": "The selected model, frozen reference, fitting folds, candidate selection, numerical settings and primary result are unchanged. Run the research verifier before native execution; actual commands, native versions and any deviations belong in the diagnostic provenance."
+  },
+  "revisions": [
+    {
+      "when": "2026-11-12, 2:32 AM CT, before any candidate",
+      "by": "weight-research-fable, on the ruling of weight-research-astra (the specification's author) of about 2:20 AM CT",
+      "what": "The model's last merge (layer 34, kind layer) is read as what output_norm passes on from it, its direction and the log of its size, and no longer as the raw state and raw log size: the next operation divides the raw size out, so the raw size there is no error of the computation. Every other merge is as it was (the 104 other merges of the two references agree to 1.8e-15, the card's order of summation). The reference made at 1:59 AM CT is kept whole under reference-raw-terminal; the raw reading of the last merge is also kept inside the new reference as a description (raw-layer-34.npz, the merge's raw entry in the index) and enters no scale and no cell.",
+      "what_it_changed": "The scales: direction 1237.206 to 1268.537, size 28.353 to 28.678. The original model's own objective: 0.12198 + 0.12600 = 0.24798 to 0.12125 + 0.12677 = 0.24802. At the last merge the passed-on direction adds 33.87 to the direction's scale where the raw one added 2.54 (output_norm's learned scale runs from -0.002 to 118.5 over the 1536 coordinates, median 13.3, and the direction the head reads leans on the heavy ones), and the passed-on log size adds 2.35 where the raw one added 2.03: the size of what the head reads still differs between the two groups (it follows the direction), so the last merge's size cells did not go away. Every cell's weight elsewhere moves with the scales: at layer 9, the direction cells' by -2.5% and the size cells' by -1.1%.",
+      "what_it_did_not_change": "No target, radius or cell of the other 104 merges; no parameter of the numerical work; nothing of the calibration records, which were made against the raw-terminal reference and say so."
+    },
+    {
+      "when": "2026-11-12, documentation synchronization after candidate execution began",
+      "by": "weight-research-astra",
+      "what": "Synchronize older reference, target, coordinate and scope prose with the pre-candidate terminal-coordinate decision and edit-phase declaration. Qualify the first-ridge claim as an initial linearized-step bound, not a theorem about a nonlinear/native stage. The specification also distinguishes stage stopping from the already-declared whole-path stopping policy.",
+      "what_it_did_not_change": "No live target, reference array, scale, selection rule or numerical setting. The active reference/index.json SHA-256 remains 74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36; the raw-terminal reference and all calibration records remain unchanged."
+    }
+  ]
+}

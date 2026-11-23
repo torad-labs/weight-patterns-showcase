@@ -1,0 +1,37 @@
+{
+ "run_by": "Claude",
+ "prediction_vs_result": {
+  "predicted": "Most of the 8 answers that subtract the descent add it instead, with their own numbers; the 7 correct answers keep their fields; the edit may go past the correct side and some answers may lose their form.",
+  "observed": [
+   "None of the 8 failing answers is repaired and all 7 correct answers are broken. None of the 28 edited answers states an available energy, a required energy or a verdict.",
+   "The edited model no longer reads the question. It writes fluent English, calls the question a riddle or a cryptic prompt, and quotes parts of it back. 'Lose their form' was predicted as a risk for some answers; it happened to all of them.",
+   "On the failing answers' own inputs the edit did what was asked: in every one of the 70 matrices the contribution after the edit matches its target (cosine 1.0000; before the edit 0.99).",
+   "The weight change this took is very large. The attention-output matrices changed by 23% to 115% of their own size (median 52%), the feed-forward-down matrices by 7% to 42% (median 11%). Round one's A changed one matrix by under 5%. The gap itself is only about 19% to 24% of the contribution it is added to."
+  ]
+ },
+ "failures_only": {
+  "failing_group": {
+   "answers": 8,
+   "repaired": 0
+  },
+  "damage_to_correct": {
+   "answers": 7,
+   "still_correct": 0
+  },
+  "all_28": {
+   "edited_with_any_field": 0
+  },
+  "per_answer": "answers.json"
+ },
+ "what_this_changes": [
+  "The gap can be put into the weights exactly at the inputs it was measured on, in all 70 matrices at once. That part works.",
+  "This edit did not carry only what recurs. It asked each of 750 inputs to reach its own target exactly, and the gap it used was the plain difference of the two group means at every position and merge. Fitting 750 separate targets exactly makes the solution reproduce what is particular to each input, and that is what cost weight changes several times larger than the gap. The method's step 3 says the discrepancy keeps what recurs across members; this build did not keep to that. It is a fault of this build, not a result about the hypothesis.",
+  "The run says nothing yet about whether the question content inside the 28-question discrepancy matters: the model broke before that could show.",
+  "The next edit carries the recurring part only: the part of the gap, and of the failing inputs, that holds when a member is left out."
+ ],
+ "records": [
+  "edit.json",
+  "answers.json",
+  "declaration.json"
+ ]
+}

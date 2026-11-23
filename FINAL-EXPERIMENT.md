@@ -2,7 +2,7 @@
 
 **Current experiment.** Compare naturally generated traces across the correct and incorrect operation groups. The comparison defines the trained directions. Score signed errors there with a squared loss at every magnitude, and regenerate every declared repair and preservation case on each new weight state. Differences observed within the correct group supply allowed directions of variation. A correct trace can supply the coordinate system for registration without supplying a unique answer to imitate.
 
-The November 17 specification below documents the earlier one-pair experiment. Its single-reference radii, directional hinges and one-prompt regeneration are historical. See the [active experiment plan](.claude/plans/trace-signal-in-the-loop.md#active-step--unbanded-group-overlap-and-feedback) and [research diary](journal/2026-11-18-trace-signal-in-the-loop.md).
+The November 17 specification below documents the earlier one-pair experiment. Its single-reference radii, directional hinges and one-prompt regeneration are historical. See the [research diary and group-overlap plan](journal/2026-11-18-trace-signal-in-the-loop.md).
 
 Prepared November 17, 2026 (CT), at Marcos's request. This is the consolidated specification for review before the next training attempt. “Final” names the document; it does not mean the hypothesis is proved or the implementation is ready. The implementation differences and unresolved numerical choices are stated in §12. Historical runs keep their original definitions and results.
 

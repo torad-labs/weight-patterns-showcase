@@ -10,7 +10,7 @@ no complete or exclusive physics function is required.
 The evidence directory is
 [`runs/legs/gemma4-e2b/physics-trace-2026-11-06`](.).
 The current definition of the research target is in
-[RESIDUAL-TRACE-HANDOFF.md](../../../../.dev/decode-machine/RESIDUAL-TRACE-HANDOFF.md).
+RESIDUAL-TRACE-HANDOFF.md.
 
 ## What we asked
 

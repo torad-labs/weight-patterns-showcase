@@ -1,0 +1,256 @@
+{
+  "prediction_vs_result": {
+    "discovery-05-channel-h1": {
+      "query_prechoice": 312,
+      "reference_prechoice": 312,
+      "reference_at_query_prechoice": [
+        312
+      ],
+      "reference_offset_at_query_prechoice": [
+        0
+      ],
+      "stages": {
+        "fixed_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            314
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "fixed_direction_log": {
+          "reference_event": 299,
+          "query_hits": [
+            297
+          ],
+          "relative_to_prechoice": [
+            -15
+          ]
+        },
+        "conditional_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            314
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "conditional_direction_log": {
+          "reference_event": 314,
+          "query_hits": [
+            314
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "historical_control": {
+          "reference_event": 312,
+          "query_hits": [
+            312
+          ],
+          "relative_to_prechoice": [
+            0
+          ]
+        }
+      }
+    },
+    "expanded-020-h1": {
+      "query_prechoice": 325,
+      "reference_prechoice": 312,
+      "reference_at_query_prechoice": [
+        312
+      ],
+      "reference_offset_at_query_prechoice": [
+        0
+      ],
+      "stages": {
+        "fixed_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            327
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "fixed_direction_log": {
+          "reference_event": 299,
+          "query_hits": [
+            310
+          ],
+          "relative_to_prechoice": [
+            -15
+          ]
+        },
+        "conditional_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            327
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "conditional_direction_log": {
+          "reference_event": 314,
+          "query_hits": [
+            327
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "historical_control": {
+          "reference_event": 312,
+          "query_hits": [
+            325
+          ],
+          "relative_to_prechoice": [
+            0
+          ]
+        }
+      }
+    },
+    "expanded-023-h1": {
+      "query_prechoice": 312,
+      "reference_prechoice": 312,
+      "reference_at_query_prechoice": [
+        312
+      ],
+      "reference_offset_at_query_prechoice": [
+        0
+      ],
+      "stages": {
+        "fixed_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            314
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "fixed_direction_log": {
+          "reference_event": 299,
+          "query_hits": [
+            299
+          ],
+          "relative_to_prechoice": [
+            -13
+          ]
+        },
+        "conditional_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            314
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "conditional_direction_log": {
+          "reference_event": 314,
+          "query_hits": [
+            314
+          ],
+          "relative_to_prechoice": [
+            2
+          ]
+        },
+        "historical_control": {
+          "reference_event": 312,
+          "query_hits": [
+            312
+          ],
+          "relative_to_prechoice": [
+            0
+          ]
+        }
+      }
+    },
+    "discovery-02-reordered-h3": {
+      "query_prechoice": 258,
+      "reference_prechoice": 312,
+      "reference_at_query_prechoice": [
+        261
+      ],
+      "reference_offset_at_query_prechoice": [
+        -51
+      ],
+      "stages": {
+        "fixed_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            350,
+            351,
+            352
+          ],
+          "relative_to_prechoice": [
+            92,
+            93,
+            94
+          ]
+        },
+        "fixed_direction_log": {
+          "reference_event": 299,
+          "query_hits": [
+            308,
+            317,
+            318,
+            319,
+            326,
+            327
+          ],
+          "relative_to_prechoice": [
+            50,
+            59,
+            60,
+            61,
+            68,
+            69
+          ]
+        },
+        "conditional_direction": {
+          "reference_event": 314,
+          "query_hits": [
+            350,
+            351,
+            352
+          ],
+          "relative_to_prechoice": [
+            92,
+            93,
+            94
+          ]
+        },
+        "conditional_direction_log": {
+          "reference_event": 314,
+          "query_hits": [
+            350,
+            351,
+            352
+          ],
+          "relative_to_prechoice": [
+            92,
+            93,
+            94
+          ]
+        },
+        "historical_control": {
+          "reference_event": 312,
+          "query_hits": [
+            346
+          ],
+          "relative_to_prechoice": [
+            88
+          ]
+        }
+      }
+    }
+  },
+  "failures_only": "An endpoint is the nearest cumulative correspondence available. It exists even if the query is unfamiliar. This test measures registration and supplies no class, trust margin, or gradient.",
+  "what_this_changes": "Compare the time at which frozen reference stages can be reached online with actual choices in the different histories."
+}

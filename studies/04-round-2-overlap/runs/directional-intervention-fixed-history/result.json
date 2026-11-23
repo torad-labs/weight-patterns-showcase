@@ -1,0 +1,377 @@
+{
+  "reconstruction": {
+    "archived_gradient_norm_squared": 0.00020051015220028866,
+    "reconstructed_gradient_norm_squared": 0.00020051015220028866,
+    "archived_gradient_objective": 0.00029245995972935026,
+    "reconstructed_gradient_objective": 0.00029245995972935026,
+    "archived_continuous_forecast": 0.0002915817983291137,
+    "archived_rounded_forecast": 0.00029174538322644753,
+    "applied_length": 0.005062849257092959
+  },
+  "fit": {
+    "member": "discovery-05-channel-h1",
+    "events": 578,
+    "pairs": 584,
+    "merges": 105,
+    "complete": true,
+    "callback_index_sha256": "b7e277ff9e1ecc35bf0bd90a0b9dfd3153ce9045a247ddb6f24f287c6bb78756",
+    "fresh_same_generated_ids": true,
+    "fresh_same_correspondence": true,
+    "native_global_loss_before": 0.00029245995972935026,
+    "native_held_loss_after": 0.00029161308231173607,
+    "native_fresh_loss_after": 0.00029161308231173607,
+    "native_fresh_standard_loss_after": 0.0002916099861255271,
+    "target": {
+      "reference_row": 312,
+      "merge": 61,
+      "current_rows": [
+        312
+      ],
+      "allowance": 0.38018045796900707,
+      "projection_before": [
+        0.39329149748553405
+      ],
+      "projection_native_after": [
+        0.3936732615726703
+      ],
+      "cell_loss_before": [
+        2.9234584558491592e-09
+      ],
+      "cell_loss_native_after": [
+        3.0961862089630254e-09
+      ],
+      "projection_continuous_prediction": [
+        0.3933270477692454
+      ],
+      "cell_loss_continuous_prediction": [
+        2.93933373087979e-09
+      ],
+      "turn_continuous_movement": [
+        0.0012225171210883188
+      ],
+      "turn_native_movement": [
+        0.0017615599286287234
+      ],
+      "turn_continuous_native_dot": [
+        1.5827271594218873e-06
+      ],
+      "projection_rounded_prediction": [
+        0.39332756525689516
+      ],
+      "cell_loss_rounded_prediction": [
+        2.939565136721849e-09
+      ],
+      "turn_rounded_movement": [
+        0.0011255935422147243
+      ],
+      "turn_rounded_native_dot": [
+        1.4530597841449175e-06
+      ]
+    },
+    "protected": {
+      "initial_inside_cells": 55558,
+      "newly_outside": 262,
+      "maximum_actual_turn_movement": 0.10018381035504764,
+      "maximum_new_local_loss": 4.942272976530809e-11
+    },
+    "continuous": {
+      "loss_prediction": 0.0002915817983291137,
+      "first_order_loss_change": -1.0151524830198489e-06,
+      "whole_turn_native_cosine": 0.6881238022321071,
+      "whole_turn_error_norm": 0.37953092355101853,
+      "maximum_protected_turn_prediction": 0.08033418363884574,
+      "protected_turn_native_cosine": 0.6539646285607956
+    },
+    "rounded": {
+      "loss_prediction": 0.0002917453832264475,
+      "first_order_loss_change": -8.256902660697125e-07,
+      "whole_turn_native_cosine": 0.6927443844907837,
+      "whole_turn_error_norm": 0.37999181756813316,
+      "maximum_protected_turn_prediction": 0.06982404533937109,
+      "protected_turn_native_cosine": 0.6553367171304957
+    }
+  },
+  "correct": {
+    "member": "expanded-004-h1",
+    "events": 560,
+    "pairs": 560,
+    "merges": 105,
+    "complete": true,
+    "callback_index_sha256": "f2f915b3894cb3312481f946296613deb056c50c099dffdd59e5c329e968121a",
+    "fresh_same_generated_ids": true,
+    "fresh_same_correspondence": true,
+    "native_global_loss_before": 1.3002743385995778e-07,
+    "native_held_loss_after": 1.5837864378813128e-07,
+    "native_fresh_loss_after": 1.5837864378813128e-07,
+    "native_fresh_standard_loss_after": 1.5837864378813128e-07,
+    "target": {
+      "reference_row": 312,
+      "merge": 61,
+      "current_rows": [
+        312
+      ],
+      "allowance": 0.38018045796900707,
+      "projection_before": [
+        5.070339471577946e-05
+      ],
+      "projection_native_after": [
+        0.0001842495156297179
+      ],
+      "cell_loss_before": [
+        0.0
+      ],
+      "cell_loss_native_after": [
+        0.0
+      ],
+      "projection_continuous_prediction": [
+        0.00033312035723316466
+      ],
+      "cell_loss_continuous_prediction": [
+        0.0
+      ],
+      "turn_continuous_movement": [
+        0.0007566862313575599
+      ],
+      "turn_native_movement": [
+        0.0009574581603156116
+      ],
+      "turn_continuous_native_dot": [
+        3.4922493135108514e-07
+      ],
+      "projection_rounded_prediction": [
+        0.0003012727529487862
+      ],
+      "cell_loss_rounded_prediction": [
+        0.0
+      ],
+      "turn_rounded_movement": [
+        0.0006876441240734565
+      ],
+      "turn_rounded_native_dot": [
+        3.180476839417863e-07
+      ]
+    },
+    "protected": {
+      "initial_inside_cells": 57456,
+      "newly_outside": 207,
+      "maximum_actual_turn_movement": 0.07113272657778948,
+      "maximum_new_local_loss": 3.63344726289871e-11
+    },
+    "continuous": {
+      "loss_prediction": 1.7159443386501768e-07,
+      "first_order_loss_change": -2.242515752636198e-08,
+      "whole_turn_native_cosine": 0.4034185052447797,
+      "whole_turn_error_norm": 0.37374930175865895,
+      "maximum_protected_turn_prediction": 0.028976423389014645,
+      "protected_turn_native_cosine": 0.3843000348908665
+    },
+    "rounded": {
+      "loss_prediction": 1.7204373841980047e-07,
+      "first_order_loss_change": -1.9721308002889045e-08,
+      "whole_turn_native_cosine": 0.39711970469282387,
+      "whole_turn_error_norm": 0.37465007219233004,
+      "maximum_protected_turn_prediction": 0.026968453481676168,
+      "protected_turn_native_cosine": 0.37806253812353297
+    }
+  },
+  "fresh_controls": {
+    "original": {
+      "fit": {
+        "standard": 0.00029245703627089436,
+        "directional": 0.00029245995972935026,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.393291497485534
+          ],
+          "excess": [
+            0.013111039516526923
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.39329286887467246
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "correct": {
+        "standard": 1.3002743385995776e-07,
+        "directional": 1.3002743385995776e-07,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            5.0703394715779476e-05
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.0008289543151163127
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "transfer": {
+        "standard": 0.011736433126376873,
+        "directional": 0.011736433126376873,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            296
+          ],
+          "projections": [
+            0.14119560623027164
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.667465317275453
+          ],
+          "limit": 0.38018045796900707
+        }
+      }
+    },
+    "standard": {
+      "fit": {
+        "standard": 0.0016223574862773086,
+        "directional": 0.0016223614437756606,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            325
+          ],
+          "projections": [
+            0.39543499510046926
+          ],
+          "excess": [
+            0.015254537131462187
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.4344851297071961
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "correct": {
+        "standard": 0.002785690502368196,
+        "directional": 0.002785690502368196,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            336
+          ],
+          "projections": [
+            0.08314874146640416
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.33075281684067975
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "transfer": {
+        "standard": 0.011737470317075843,
+        "directional": 0.011737470317075843,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            296
+          ],
+          "projections": [
+            0.1412073459622525
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.6674576885333119
+          ],
+          "limit": 0.38018045796900707
+        }
+      }
+    },
+    "treatment": {
+      "fit": {
+        "standard": 0.0002916099861255271,
+        "directional": 0.00029161308231173607,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.39367326157267024
+          ],
+          "excess": [
+            0.013492803603663173
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.39367608336919524
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "correct": {
+        "standard": 1.5837864378813128e-07,
+        "directional": 1.5837864378813128e-07,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.0001842495156297179
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.001001601994528997
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "transfer": {
+        "standard": 0.011740479520948886,
+        "directional": 0.011740479520948886,
+        "complete": true,
+        "site": {
+          "current_rows": [
+            296
+          ],
+          "projections": [
+            0.1411776859942398
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.6675291094615181
+          ],
+          "limit": 0.38018045796900707
+        }
+      }
+    }
+  },
+  "prediction_vs_result": "Compare all weighted local residuals and raw turns on the same native callback coordinates to continuous and exactly rounded forecasts.",
+  "failures_only": "The standard intervention changed histories and is listed only as a fresh control. The treated paths used identical input IDs and native callback schedules at both endpoints; no weight was installed or fresh acquisition repeated here.",
+  "what_this_changes": "Separates local gradient direction, native rounding, and actual fixed-history movement for one historical intervention. This is a retrospective diagnostic, not a new training rule or a repair claim."
+}

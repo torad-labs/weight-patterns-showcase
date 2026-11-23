@@ -1,0 +1,67 @@
+{
+ "method_step": 3,
+ "run_by": "weight-research-perfomance",
+ "status": "declared November 12, 2026, 9:11 PM CT, before any pass of its capture; the cases were listed (prepare, no card) before this declaration was written, so that the counts below are read from cases/index.json and not guessed. Its capture starts when fed-continuations-replay-original, whose kept own answers it reuses, has ended.",
+ "kind": "original-model diagnostic capture: the recorded traces of texts that exist. No edit, no solve, no candidate. The follow-up to fed-continuations-replay-original.",
+ "authority": "Marcos, November 12, 2026: the seats weight-research-fable and weight-research-astra are to brainstorm together and get to the goal. weight-research-astra, whose domain the objective and its reference data are, in records/retrospectives/2026-11-12-fork-request-decision-astra.md (commit 04e855aa), 'Capture priority includes the opening transplants': 'They are central to (b), because they provide different histories before the label while holding the question fixed. ... Add the existing opening transplants as a separately declared follow-up capture, using their recorded text and source provenance, including failed and reverse/correct-case controls. Reuse compatible baselines and deduplicate identical input streams where verified, while preserving the distinct intervention metadata. ... Keep selected trajectories through their recorded ends ... The extra sign-only replays are lower priority for this construction'.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "implementation": "code/signal-trace/pipeline/overlap/opening_replay.py (prepare), with fed_replay.py's capture and record; run by run.sh in this folder",
+ "hypothesis": "The project's hypothesis: a capability leaves a recurring difference between the traces of correct and wrong answers, and editing the weights where that recurring difference lives repairs the capability. What this run adds is material, not a test. Under a right answer's opening the unchanged original writes 'Total' by itself in 9 of 13 wrong fitting answers and comes out whole in 8; under a subtracting answer's opening, correct answers write 'Kin' and subtract (records/development/2026-11-12-path-forward/README.md, 'The opening and the sign'). Read from the passes' own records for this declaration: of an opening's 124 to 183 supplied tokens, at most four were not the model's own first choice, and the model preferred its own by 0.005 to 0.25 logits at 37 of the 39 (0.46 and 0.98 at two reverse controls). So one question has two histories that part at a near-tie early in the answer and reach the label on different routes. If the hypothesis is right, the computation on those two histories of one question is where a wrong answer's trace and a right one's can be compared with the question held fixed; this run records it, every token and all 105 merges.",
+ "why_this_direction": "Step 3 asks for the discrepancy along the whole path with what recurs kept, and Marcos's direction is that the trace defines the divergence, not the token (journal/2026-11-10-controlled-training.md: overlap traces are more important than checking answers, since token output is not a reliable measure of success or correctness). The objective's owner settled the construction on November 12 (04e855aa, 5c12dc14): a trace-derived computation request first, and for it the comparison of one question under two histories, candidate (b), is accepted as original-model reference-construction evidence. fed-continuations-replay-original records the continuations that part from the own answer at the heading, the label or the climb's word; the transplants part earlier, at the third token, at the token after 'Initial State' or at the heading's first word, and they are the passes in which the model then chose the label by itself. The request's form (Astra's transformation-effect target, or Fable's fork reading on one path) needs the states of both histories; they are not on disk. It is the next step because it completes the material the settled construction names, reuses the own answers already kept, and decides nothing by itself.",
+ "repeating_pattern_check": "Three things have happened more than once. (1) A divergence or a success was read from tokens and the trace was not looked at, because the trace was not on disk when the question came up; this run puts the trace of every transplant pass on disk. (2) Readings were made on the passes that worked and did not hold on the rest; this run takes all 27 passes of the transplant, none chosen by outcome: the 21 on wrong fitting answers (13 answers; 9 of them wrote 'Total', 4 stayed 'Kin') and the 6 reverse controls on correct fitting answers (5 wrote 'Kin', none complete). Two passes whose token stream is their question's own answer, and six whose stream is another pass's of the same question, are listed with their own donor and not read twice. (3) A declared replay was refused by the recorder for a reason not checked before declaring (twice in fed-continuations-replay-original: a supplied end-of-generation token, and supplied text that leaves the model no token); this run uses the case form that run ended with, which has by now read questions on this card.",
+ "what_went_wrong_before": "Every construction so far repaired some answers and broke others. The transplant's result was read from the text and the judge's fields, which Marcos has said is no reliable measure. Its report called the supplied text 'a right answer's opening', which is true of where the tokens came from and hides that all but one to four of them are what the model writes itself; this declaration states that from the passes' own records. In fed-continuations-replay-original the first declaration supplied every token and was revised twice before a question could be read.",
+ "rule": "Data roles: diagnostic and reference-construction observations of the unchanged original model on fitting answers. Nothing joins the frozen reference, the cohort, the fitting folds or any score; an answer under a supplied opening is no model's own result; no weight is solved and no target, mask or threshold is made here. A donor is a recorded answer whose opening's tokens are read from the transplant's own committed case list; no donor's recording is opened here, the answers no fit uses are not read, and reserved-40b is not opened. No answer is generated: every token of every text but its last is supplied, and the model writes the last token itself, as in fed-continuations-replay-original's second revision. The original model file is read only. Deviations, stated, the same as that run's: card 1 instead of GPU0, because the texts were generated there, so nothing here is compared with a GPU0 recording; the recorder's raw stream of one question at a time is a temporary outside this folder, removed once kept/ holds it losslessly with every state checked bit for bit against it; the cases' tokens come from this seat's committed development records (cases_built_from), frozen in cases/ with their sha256. Equality with the own answer is claimed only through the first token that differs from it, and is checked bit for bit, not assumed.",
+ "cases_built_from": {
+  "records/development/2026-11-12-path-forward/label-swap/transplant/prefix-transplant.json": "commit 0a1a8acf: the transplant's passes, donors, steps and judged fields",
+  "records/development/2026-11-12-path-forward/label-swap/transplant/plain.cases.json": "commit 0a1a8acf: the recorder list of those passes (prompt and supplied opening)",
+  "records/development/2026-11-12-path-forward/label-swap/transplant/plain": "the passes' own result.json (bulk, on disk): each step's token, the model's own first choice and the sha256 of the full scores; sha256 of each in cases/index.json"
+ },
+ "parameters": {
+  "cases": {
+   "measured_from": "records/development/2026-11-12-path-forward/label-swap/transplant/prefix-transplant.json",
+   "derivation": "Every pass under 'transplant' in that record: 27. Listed and not read again: 2 whose token stream is the question's own answer (the opening's tokens are the own answer's and nothing was forced) and 6 whose token stream under the same prompt is another pass's (two donors with the same opening): 19 passes are read, on 16 questions, 12,660 positions (cases/index.json). The sign feed's 14 passes are not in it: the owner ranked them lower for this construction; a stated gap.",
+   "scales_with": "The transplant's passes."
+  },
+  "forced_steps_and_first_difference": {
+   "measured_from": "records/development/2026-11-12-path-forward/label-swap/transplant/plain.cases.json",
+   "derivation": "A forced step is a step of the supplied opening at which the source pass's record has the model's own first choice differ from the supplied token. The first token that differs from the own answer must be the first forced step, and a pass with no forced step must be the own answer token for token, or prepare stops. The positions through the row that writes that token are the ones compared with the own answer.",
+   "scales_with": "The source passes."
+  },
+  "own_answers": {
+   "measured_from": "studies/04-round-2-overlap/runs/fed-continuations-replay-original/cases/index.json",
+   "derivation": "The own answer of each question is the one that run reads and keeps (its '.own' case; the prompt and the tokens are taken from its case list and checked against its sha256). It is not read again here: a case's shared positions are compared with that run's kept arrays, bit for bit.",
+   "scales_with": "That run."
+  },
+  "what_is_kept_per_position": {
+   "measured_from": "studies/04-round-2-overlap/runs/fed-continuations-replay-original/declaration.json",
+   "derivation": "As derived there: 247 recorded tensors a position at most, of which the scaled embedding and the 105 added parts are kept (106, and the output norm at each step) after every sum and layer exit is checked bit for bit. With the shared positions kept once in the own answers, 8,895 of the 12,660 positions are kept: 5.45 GiB (7.73 GiB if no shared prefix were equal); the largest raw stream of one question is 1.92 GiB.",
+   "scales_with": "The recorder's retention scope, the model's depth and width, and where each case first differs from the own answer."
+  },
+  "disk_margin": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-prefix-135-original/run.sh",
+   "derivation": "The machine's disk rule as that run applies it: nothing starts unless what it writes and 40 GB beside it fit on root (read as GiB, as df -BG does); per question, from free space before each recorder call.",
+   "scales_with": "The machine."
+  },
+  "card": {
+   "measured_from": "records/development/2026-11-12-path-forward/label-swap/transplant/prefix-transplant.json",
+   "derivation": "Card 1, where the transplant's passes ran and the own answers were captured. The runner takes /run/user/1000/gpu1.lock itself for each question and waits for 11,000 MiB free.",
+   "scales_with": "The card and the recorder's build."
+  }
+ },
+ "prediction": "Three statements, each counted by the record command. (1) Reproduction: in every one of the 19 passes read, every step has the source pass's full scores to the bit. (2) Unchanged before the first difference: in all 19 the positions through the row that writes the first token differing from the own answer hold the own answer's first incoming states and all 105 added parts bit for bit. (3) The text is the model's own under the opening: in all 19 the model's own first choice differs from the text's token only at the forced steps, and the one token the model writes is the text's last. The paired same-history row is described, not predicted.",
+ "would_weaken_it": "(1) A pass with steps whose scores differ from its source pass: its states are then not called the generated answer's states. (2) A pass whose positions before the first difference differ from the own answer's: two readings of one history differ on this card; the case keeps all its positions and says so. (3) An own first choice that differs from the text at a step that was not forced. None of these can weaken or support the project's hypothesis: this run records and compares no groups. What a reading of these states could later weaken is the account of two routes on one question: if the rows of a transplant that came out whole are no nearer the correct answers' computation than its own wrong answer's rows are, the opening changed the text and not the computation the hypothesis is about.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/fed-continuations-replay-original/cases",
+  "studies/04-round-2-overlap/runs/fed-continuations-replay-original/kept",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/opening-transplants-replay-original/cases"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/opening-transplants-replay-original/cases",
+  "studies/04-round-2-overlap/runs/opening-transplants-replay-original/kept",
+  "studies/04-round-2-overlap/runs/opening-transplants-replay-original/record",
+  "studies/04-round-2-overlap/runs/opening-transplants-replay-original/logs",
+  "studies/04-round-2-overlap/runs/opening-transplants-replay-original/result.json"
+ ]
+}

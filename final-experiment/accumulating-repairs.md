@@ -17,7 +17,7 @@ Decode native BF16 values at the union of the two endpoints’ sparse coordinate
 
 ## 2. Distinguish transfer from repetition on related weights
 
-The 175 checkpoint restored T and applied one further training update. Its already-correct fitted descent and still-incorrect 115 J development descent make it informative for measuring **dose or reversion on a descendant**. Neither reinstalling T's tensors nor adding its full historical difference to 175 introduces an independently learned capability. 175 parent checkpoint · [175 and 189 endpoint identities](../records/development/2026-11-17-family-swap/families.json)
+The 175 checkpoint restored T and applied one further training update. Its already-correct fitted descent and still-incorrect 115 J development descent make it informative for measuring **dose or reversion on a descendant**. Neither reinstalling T's tensors nor adding its full historical difference to 175 introduces an independently learned capability. [175 parent checkpoint](../studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/declaration.json) · [175 and 189 endpoint identities](../records/development/2026-11-17-family-swap/families.json)
 
 For a receiving model $B$, construct a fresh private copy for each arm. Use the model’s actual native rounding $Q$ only at the stated installation boundary. Freeze the receiver, donor and family before observing edited answers. Outside the selected family all stored bytes must match B. Record the following actual displacements over native coordinates.
 

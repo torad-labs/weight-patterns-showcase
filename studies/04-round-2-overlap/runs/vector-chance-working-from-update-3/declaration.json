@@ -1,0 +1,843 @@
+{
+  "method_step": 5,
+  "operation": "single-vector-chance-loop",
+  "status": "reviewed_authorized_for_sole_controller_execution",
+  "declared_at": "2026-11-16T05:03:15.047341-06:00",
+  "why_this_direction": "Marcos authorizes continuing the same one-pair experiment after replacing per-step copies/full scans with resident trainable weights and one GGUF handoff. The retained complete third update is the exact starting model, not the original and not the unsaved fourth proposal. Original correct reference/tolerance remain fixed.",
+  "repeating_pattern_check": "Do not substitute infrastructure or a perfect-correction search for the experiment. Preserve prior three updates and interrupted fourth proposal, bind exact retained state3 once, apply the unchanged derivative through the trace graph into weight space, update one file and measure a fresh path after every step. No per-step model copy/checkpoint/digest, token score or retuning.",
+  "hypothesis": "Repeated full computational-loss weight derivatives, each scaled by the current joint directional response and followed by native BF16 installation and fresh generation, can close this one wrong computation against the unchanged original correct computation.",
+  "what_went_wrong_before": "Three native updates completed, but repeated full-model copies/verification dominated runtime and accumulated checkpoints. Marcos stopped the sole controller at04:30:50CT, rejected the redo framework, and then explicitly authorized this minimal continuation.",
+  "rule": "For the complete fixed original radial residual r and current complete held correspondence: differentiate L=sum(r^2) once through the native-anchored graph into all 70 matrices; S=-dL/dW; measure q=J_r S once; alpha=-dot(r,q)/dot(q,q). Round W+alpha*S once to native BF16, publish all matrices, generate only the same training member from the reached file, and rebuild complete computational correspondence/measurement. No CGLS, candidate search, rate schedule, output scoring or position cut. Gradient/response/rounding stalls with outside cells are nonclosure. Only complete fresh native zero outside after an installed update is closure.",
+  "prediction": "Successive direct weight-space steps from retained update3 produce complete fresh computational measurements. Loss may rise or fall; only complete zero divergence against the unchanged original tolerance closes the one-pair loop.",
+  "would_weaken_it": "Zero derivative/response or no representable BF16 change with native divergence, repeated fresh-path loss growth or failure to close, or incomplete acquisition weakens this construction; none is hidden by a new tolerance, reference, inner search or answer judgment. Single-pair closure alone does not prove transfer.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "original_model": {
+    "record": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  },
+  "source_definition": {
+    "record": "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "sha256": "efd390a5fafeff948940bcf541ed43fef1821f9530279898cbe24d7ba449731b"
+  },
+  "forward": {
+    "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+    "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+  },
+  "architecture": {
+    "record": "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+    "sha256": "1905c24e43a943d2c20683f13c5538944281c2a9b939001cbfc5f746cbc5afde"
+  },
+  "tensors": {
+    "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+  },
+  "reference": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+  },
+  "device": "cuda:0",
+  "card": 0,
+  "compact_states": false,
+  "functional_loop": {
+    "acquisition": "native-events-only",
+    "cohort": "studies/04-round-2-overlap/runs/wide-overlap",
+    "history_before": "recordings",
+    "training_members": [
+      "discovery-05-channel-h1"
+    ],
+    "matrices": [
+      "blk.0.ffn_down.weight",
+      "blk.0.attn_output.weight",
+      "blk.1.ffn_down.weight",
+      "blk.1.attn_output.weight",
+      "blk.10.ffn_down.weight",
+      "blk.10.attn_output.weight",
+      "blk.11.ffn_down.weight",
+      "blk.11.attn_output.weight",
+      "blk.12.ffn_down.weight",
+      "blk.12.attn_output.weight",
+      "blk.13.ffn_down.weight",
+      "blk.13.attn_output.weight",
+      "blk.14.ffn_down.weight",
+      "blk.14.attn_output.weight",
+      "blk.15.ffn_down.weight",
+      "blk.15.attn_output.weight",
+      "blk.16.ffn_down.weight",
+      "blk.16.attn_output.weight",
+      "blk.17.ffn_down.weight",
+      "blk.17.attn_output.weight",
+      "blk.18.ffn_down.weight",
+      "blk.18.attn_output.weight",
+      "blk.19.ffn_down.weight",
+      "blk.19.attn_output.weight",
+      "blk.2.ffn_down.weight",
+      "blk.2.attn_output.weight",
+      "blk.20.ffn_down.weight",
+      "blk.20.attn_output.weight",
+      "blk.21.ffn_down.weight",
+      "blk.21.attn_output.weight",
+      "blk.22.ffn_down.weight",
+      "blk.22.attn_output.weight",
+      "blk.23.ffn_down.weight",
+      "blk.23.attn_output.weight",
+      "blk.24.ffn_down.weight",
+      "blk.24.attn_output.weight",
+      "blk.25.ffn_down.weight",
+      "blk.25.attn_output.weight",
+      "blk.26.ffn_down.weight",
+      "blk.26.attn_output.weight",
+      "blk.27.ffn_down.weight",
+      "blk.27.attn_output.weight",
+      "blk.28.ffn_down.weight",
+      "blk.28.attn_output.weight",
+      "blk.29.ffn_down.weight",
+      "blk.29.attn_output.weight",
+      "blk.3.ffn_down.weight",
+      "blk.3.attn_output.weight",
+      "blk.30.ffn_down.weight",
+      "blk.30.attn_output.weight",
+      "blk.31.ffn_down.weight",
+      "blk.31.attn_output.weight",
+      "blk.32.ffn_down.weight",
+      "blk.32.attn_output.weight",
+      "blk.33.ffn_down.weight",
+      "blk.33.attn_output.weight",
+      "blk.34.ffn_down.weight",
+      "blk.34.attn_output.weight",
+      "blk.4.ffn_down.weight",
+      "blk.4.attn_output.weight",
+      "blk.5.ffn_down.weight",
+      "blk.5.attn_output.weight",
+      "blk.6.ffn_down.weight",
+      "blk.6.attn_output.weight",
+      "blk.7.ffn_down.weight",
+      "blk.7.attn_output.weight",
+      "blk.8.ffn_down.weight",
+      "blk.8.attn_output.weight",
+      "blk.9.ffn_down.weight",
+      "blk.9.attn_output.weight"
+    ],
+    "cases": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/functional_loop-cases.json",
+      "sha256": "3c15a4ebda862155acce72d0a04105753818a8abce539892974dfbfe4dc9285c"
+    },
+    "reader_protocol": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/training.json",
+      "sha256": "b517d3d7c242526d0ae5322413ae69f39e3d94695185b6c8dbcb359178b91f08"
+    },
+    "first_state": {
+      "file": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+      "model_sha256": "0dfed0e7f5e0430e693def81549785baf863e4dd9a4f337f8d584d709a6d2a1a"
+    }
+  },
+  "post_closure": {
+    "members": [
+      "discovery-10-channel-h1",
+      "discovery-17-channel-h1",
+      "expanded-001-h3",
+      "expanded-020-h1",
+      "expanded-034-h3",
+      "expanded-042-h3",
+      "expanded-045-h1",
+      "expanded-046-h3",
+      "expanded-068-h1",
+      "expanded-070-h1",
+      "expanded-087-h3",
+      "expanded-092-h1",
+      "expanded-094-h1",
+      "expanded-095-h1",
+      "discovery-01-channel-h1",
+      "discovery-06-channel-h1",
+      "discovery-15-channel-h1",
+      "discovery-00-channel-h3",
+      "expanded-004-h1",
+      "discovery-08-channel-h3",
+      "discovery-10-channel-h3",
+      "expanded-029-h1",
+      "discovery-11-channel-h3",
+      "expanded-064-h1",
+      "expanded-071-h1",
+      "expanded-039-h3",
+      "expanded-076-h1",
+      "expanded-078-h1",
+      "expanded-023-h1"
+    ],
+    "cases": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/post_closure-cases.json",
+      "sha256": "db50a2762839f58ce3d7ac229beed3e0081375632325dd6435d57003d6b5ae90"
+    },
+    "reader_protocol": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/post-closure.json",
+      "sha256": "66ff792bbbe008bacad0c94bba051352591b1f4f2ea79bcdca63c1b6350dccb5"
+    },
+    "execution": "Separate prospective declaration bound to this run's complete closure.json; no acquisition before that record."
+  },
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/export_stream_traces.py",
+      "sha256": "c0ec25ce2c21b6f2f6f48b208002fef5de54cb14184423bfee51bde9a012a75b"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/late_start.py",
+      "sha256": "fdf4f5fde81b5f2072b32faebf41b372689106c193b4f57bc0907eb3051e73f8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/recorder_identity.py",
+      "sha256": "7a2b90fdc1b2bbfa0a95554e68928d74dcc9dca93b513256e24660f81ef21d38"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/run_a_baseline.py",
+      "sha256": "3c53b20317332d1f8ed4797ec0220fcb916dc573d97bb4211ca186d63af62ff6"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/run_a_observation.py",
+      "sha256": "33990f82d6f22a10bde5f3cd7c8122fb33da606532353ac8ad7d45782ef463be"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/compare_occurrences.py",
+      "sha256": "330c8201b63dd67b2d8963685eaafdcf0ec2fbed5df7ad926eb7575d6f47a2e0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/group_observation.py",
+      "sha256": "bd4c687514083a345feb364dfcb07cb172ab95606ac784538ede61be9bec034c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/__init__.py",
+      "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/__main__.py",
+      "sha256": "06cae09b6e7f6f122cb435d09f819e29e916fe0af2ef53d3bf943bd25965e8b5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/instrumentation.py",
+      "sha256": "30ba0f62f1542787c15d073b3bd22927cbf187d99525e8713a9eabbda7a3bcff"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/__init__.py",
+      "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/fed_replay.py",
+      "sha256": "87dac142d2f396f40a5fd653cb293e4371e2d94d645505c010a1b733092aee97"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/sent_overlap.py",
+      "sha256": "b4b315e5bcdcf53b3f1b4f07c58c943ebf8fcaa425068ed3630f265ded2b0995"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/trace_overlap.py",
+      "sha256": "a679203e08cb42c87e6c7e46fb62f19f32af867033ffe6c4cfb8b97881322e81"
+    },
+    {
+      "record": "code/signal-trace/pipeline/paths.py",
+      "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+      "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+      "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/a2.py",
+      "sha256": "6a0f398eceb0224de8075f179c6818c0614b36863a9a1dd54c7282283417798e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/a2_pattern.py",
+      "sha256": "39b9c11fd9161029c481557cb206e70aa16c8d15de865febd205139bd1336e6a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/bf16_direction.py",
+      "sha256": "79f6a4135806b22fe4ffc89928032ec476f9e34c920e10ba4a084fef13fdc827"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_score.py",
+      "sha256": "d429d3c52acdb5dc5954dee9a1afc5b58474c4e85ae88bedaaa5f5d7d3a00579"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+      "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/correction.py",
+      "sha256": "11f7ee7e2da40dca7b207f43a2431ae247085c676b3cbacf4f74525b9f56b670"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/field.py",
+      "sha256": "641619baa4a4959eded52907c2154525ef976828907ed95825b7e31edea16f7b"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_capture.py",
+      "sha256": "5faf388788d0fac2d944dfb62481b2c54445a103f6cd65d3cff04f397f473901"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_install.py",
+      "sha256": "982a8c1056599cb37184ddfa74e1971477080e3f9f97c58c4bf8feb99c0a2177"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_layout.py",
+      "sha256": "f411405196a3be873be6fe63b755d6880e030c65f51688d0073ebebd887a9250"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reading.py",
+      "sha256": "81110215edac4d5ba61d4cf786ac50a1488b9286d4ef19a58f6f193e07c493cf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reference.py",
+      "sha256": "ca4b2a5a2d61b355ef000668f92344cce7a3dfa8b081236aabfc3ac02d5602ed"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/fused.py",
+      "sha256": "538eafa61bd9dc9112fe39833cb6b797e8104da2db73500b3bc47e7b9fff162d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_late.py",
+      "sha256": "40ba298a423ec4bbb25597cbae51ce05b3a90755b16cb55722176c110ddd8c52"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_requests.py",
+      "sha256": "9844a0ccf63069f6b02c9caadb1b578c7c24ae9b87800f3642282ffb0b110a7f"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_rows.py",
+      "sha256": "e1e608adf7e969a52f602f46a6a28a73b5b2c39eb1ca8a891c9575117be3e273"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_run.py",
+      "sha256": "0b309f58c2dbd15c19719a69e8d2048df62d04c55282057aa79f01e176b4cf60"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_sets.py",
+      "sha256": "ac05cdc4d510470f9c41e915c0e5e5dc75c175e05c66339ffba20eb1e4c47e0a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_state.py",
+      "sha256": "7986dedac77faa49ad7aed20945e69c18438edee97c0ab2fa7f1d4ac51db845e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_sweep.py",
+      "sha256": "1374eb4bed648047136e13064f56d9908515e23df3f44d915542957e6b33c8ee"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+      "sha256": "919067f38b7764e6a098b5b8be2316e98133f4eeab439735be56785fe2f2763a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/joint_functional_step.py",
+      "sha256": "f6f8bbd72e6034d1474c9cbc50dbb770ec53a8cf03bff695039f3d00039c8c55"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/joint_inverse.py",
+      "sha256": "7153107edba6ed9b9b41536f521ce1ffca6bd5652efe285a3e4ed330c51eca7c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/joint_inverse_device.py",
+      "sha256": "5bf646323abc1344edf7f2c7be60add2840a98891898a2553c247bdced598cd4"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/ladder.py",
+      "sha256": "99a28aebceca2191fb25f93dd403dbbb0368a85f101c056321fc8a9cd187079e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/model_trace_response.py",
+      "sha256": "ca236c285a93b96ed082f7399771630bf84e39a272ab0afa8d102bf0db212dc0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/native_graph.py",
+      "sha256": "127de7e16bbdc48e1f3646dcb4f119ea832df80d11d70a799503f0025f838acf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/pair_loop.py",
+      "sha256": "b325adf627112d0db50051d2b0ef51051a2aa55e2d7ee3eb42ea52156621b788"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/reference_rule.py",
+      "sha256": "3bee52be452931486d397f5d9f6733a970a38470a1e1c2f5101b1992128b0241"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/set_points.py",
+      "sha256": "ae27418608b3878488623c51d14cff29bf6dc0b7417a0ff522a0b11d56f2a6d0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/state_tensors.py",
+      "sha256": "db56699e824bf72a5474da5839c25ff12e7397c3ca80a92b0bcc2ade9a74a000"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/success_sets.py",
+      "sha256": "71cc4d8edf8bff3a2fe07cbbcc8395a36508931bd35c6defe53d1a717bebe202"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/trace_gradient.py",
+      "sha256": "3fa643bcbb2aa61f1a1f3b83c923f1ff10494dba3d0b2fdb82377285916ad32d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/trace_response.py",
+      "sha256": "3c34c2ac01f61929adfbdb638c5199ebb9c42405ea7c9af888bf614c9fc06226"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/tube.py",
+      "sha256": "ec1701d642c41a07c5f3d976d4d76ee3a241ecc2babfc52c05ee0b976338e946"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_artifact.py",
+      "sha256": "aba25664d1bde0df4a5b26b7cea16de8b1bb04eb63c7f3772f0b99853671e94e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_correction.py",
+      "sha256": "e2c302136caeed811acfa9d957efe63b7bd8e52369d38537d81de22a9f8b40a9"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference.py",
+      "sha256": "886ed110f646d966fb287afc1eb4f468161a7551ed8d12263db8ae1ed68b04a0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference_run.py",
+      "sha256": "352e8d0e26aae28c04ffdb2fba6e5bc234fffdf0eb10ade73786d307ef54c129"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+      "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance_reference.py",
+      "sha256": "783e307423127ed98a24a3d9dc191eea55b8ec638bc9192527b27f9e36d767d5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance_run.py",
+      "sha256": "cc1cfe60813e984e4768b040f90f75999e7b9069a5d62cd407acd9e568b04943"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_device_loop.py",
+      "sha256": "8b418b3367f722f4893a26d654528d03702d9b0b6ded07c7b95ed58425e87892"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_gradient_loop.py",
+      "sha256": "73227e88b57c7463c9b01e90780da0d3323bd4ac3e56264a8760a5dc97d502fd"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_loop.py",
+      "sha256": "254013e043947a93f14d5dc46190669e81ed9227ad964648d8e61b4d09dda737"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_recovery.py",
+      "sha256": "1201b794f07cd0c68ed6abdf61e295420f4f0b39221e2812e6de7e0ed4e08b22"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_working_loop.py",
+      "sha256": "76e67dcb7e1de0e986d33c10a3a7ce475a6c495df64cc7061ac107c958bb9116"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_score.py",
+      "sha256": "6ff608a936d698ee5caa7a14fad36c400298ab66a7c64f2eed2b6aa0e4515aab"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/working_identity.py",
+      "sha256": "77f8a582faee00fe4ace022291f994cbd3927acced57b44852ffb3210c9478af"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/working_model.py",
+      "sha256": "19a525690a9506e5c1a9b0925240b0179163ef69110f28618f8a482d75265bd4"
+    },
+    {
+      "record": "code/signal-trace/recorder/observe-stream",
+      "sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060"
+    },
+    {
+      "record": "dependencies/recorder-workers/observe-stream-workers",
+      "sha256": "5c893cd713e352d05725c369e554238613fe0d3790633e23944c99e9d2f7b883"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/after-the-others.sh",
+      "sha256": "e8b1f20fe40b19f23a6c64d291889f8060a9f475498e61526543b73ac60dcebe"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/after_the_others.py",
+      "sha256": "6d86f85dbfb2632fe27902925b3c89aa44439d0277dd6599f99b2fdd2715e453"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/capture_bound.py",
+      "sha256": "8f8be0f98383c7d275dde225cdd5d87bdd9f160752417efe5f07fb5e5de96f7e"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/capture_registration.py",
+      "sha256": "56ed55d454fef4604e76ff73e003349654a0c03850d4b51f93e6661783cba873"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/cases.py",
+      "sha256": "4018f72fff9e8c33d00ee103bb12fa3ce933f86579d96ea5b8966ffd9d5881fc"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/generation_engine.py",
+      "sha256": "82749a8736e0bc8632ecdc2417a54c350701b776333a7d4e894059e4a3d1cf4e"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/native_events.py",
+      "sha256": "680a016a46a0981996edd1b75b4ed80e7c3f85a25f00e205fa843a04a17f6f91"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/native_events_protocol.py",
+      "sha256": "544a19c1d6b7994752769bd7ab16f8d2b100c0690f1f856b5597c7d4bb6a05da"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/reader_protocol.py",
+      "sha256": "483eff558e5024cda69578a03bb8029b5d4ea385ff4d41e184129a344941c15e"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/reader_protocol_roles.py",
+      "sha256": "da7ebb1ef9f6cfcb4da430b6a2d4fdd5bc011ba19ed20ea72282f8cad604e95b"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/reading_identity.py",
+      "sha256": "1d8df534df6ba1f655a72d67fcd3d225515a984703c984ff0cc905731529b0d9"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/recorder_engine.py",
+      "sha256": "43e0443a0c6262446eacbf2eab0af67e2654055827aa691b1363b13d5bf57f5a"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/states_reading_roles.py",
+      "sha256": "aa74a5ee11fbd6c5ef099a2ebc760b6d61d263a6cc0a7dceace31d062c4118ad"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/record-launcher-exit.py",
+      "sha256": "e8ecf723d3d07a08d84da31e15be3ac683cf9357dc7f5082942b953cde29a121"
+    }
+  ],
+  "implementation_inventory": "Preserved native protocol inventory plus AST local-import closure of the direct gradient entrypoint and every explicit central tracing hook/entrypoint, bound dynamic Torch forward, and run-local exit recorder. Historical inverse modules may be imported for inherited generic utilities but are never called by the direct correction.",
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/reached.json",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/authorized-stop.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/functional_loop-cases.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/training.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/post_closure-cases.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/source-records/post-closure.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3"
+  ],
+  "target_source": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "parameters": {
+    "trace": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "T=unit(output)-unit(input), canonical CPU float64, both edges differentiated, every event and merge. No prompt/token matching or positional support rule.",
+      "scales_with": "Full native history, model width and three merges per layer."
+    },
+    "chance": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Fixed original artifact: C=mean nonself witness mean mapped-event squared whole-turn difference. No witness-count SEM divisor.",
+      "scales_with": "Recorded original turn fields and complete correspondence."
+    },
+    "boundary": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Direct residual sqrt(mass)*max(1-sqrt(2C)/norm(delta),0)*delta; C=0 is identity residual including its Jacobian. Complete fresh zero outside is the same boundary.",
+      "scales_with": "Original chance and complete native computational discrepancy."
+    },
+    "step": {
+      "measured_from": "journal/2026-11-16-direct-computational-update.md",
+      "derivation": "One q=J_r S; alpha=-dot(r,q)/dot(q,q); BF16(W+alpha*S) once. Zero response or native no-op is nonclosure. No guessed rate or candidate search.",
+      "scales_with": "Current residual, its joint weight response and native BF16 representation."
+    },
+    "mass": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Each reference event/merge has mass 1/(reference_events*merges), shared over its complete mapped current events.",
+      "scales_with": "Original event inventory and chronological path multiplicity."
+    },
+    "acquisition": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Frozen controlled-bf16-12 and post-closure twin; physical card 0 under its lock, original recorder limits, only declared prompts.",
+      "scales_with": "Qualified recorder and case manifests."
+    },
+    "storage": {
+      "measured_from": "journal/2026-11-16-single-working-model.md",
+      "derivation": "One bootstrap copy of retained state3, then complete BF16 matrix writes in place; no per-step full-model copy/checkpoint/hash. Existing40GB floor applies to initial copy.",
+      "scales_with": "Model size once, prescribed editable tensor bytes each update; checkpoint saving remains separate."
+    },
+    "population": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "One first originally wrong fitting member in immutable inventory order; other 14 wrong and 15 correct fitting prompts are fixed prospectively and remain unread until closure.",
+      "scales_with": "Original fitting membership, never wording or edited outcomes."
+    },
+    "weight_derivative": {
+      "measured_from": "journal/2026-11-16-direct-computational-update.md",
+      "derivation": "S=-d(sum(r^2))/dW through the complete graph once, with current fixed correspondence and original reference/tolerance.",
+      "scales_with": "Every declared editable matrix, all merges/events and the complete computational residual graph."
+    }
+  },
+  "commands": {
+    "run": "python -m pipeline.observability run vector-working-loop ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-working-from-update-3"
+  },
+  "source_artifacts": "Same fixed original reference/tolerance and one fitting training member. New protocols use current native acquisition revision labels. Starting file is retained gradient-2 update3 with its complete file SHA; revision0 in this new run is that state, not original weights.",
+  "previous_attempt": {
+    "declaration": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/declaration.json",
+      "sha256": "8b485ad8bb5c81f2c239ccf9567f03fea588526c01d005fc0ed3873554124fa8"
+    },
+    "stop": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/authorized-stop.json",
+      "sha256": "94a86d267f28be6548846552e8ed0eeb9e6f51b50c005f74a854a5fe44201770"
+    },
+    "last_fresh_measurement": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/4/measurement.json",
+      "sha256": "5aacf77342986c8f7fae3ca850967d84a1c3188d763f593be59d28cf4d5f1055"
+    }
+  },
+  "gradient_step": {
+    "format": "response-scaled-weight-gradient/1",
+    "source": {
+      "record": "journal/2026-11-16-direct-computational-update.md",
+      "sha256": "df49ba995166b81d9aecc829f90b3b6b9baaa4c197657e5d9a3a74d36e5e4f98"
+    },
+    "derivative": "one full backward through sum of squared existing weighted residual tensors",
+    "scale": "S=-dL/dW; q=J_r S; alpha=-dot(r,q)/dot(q,q)",
+    "native": "one engine-compatible BF16 rounding and complete installation; no candidate evaluation",
+    "closure": "fresh complete native path only",
+    "attribution": "Implementation peer choice with independent Eli review; not a formula attributed to Marcos"
+  },
+  "replaces": {
+    "run": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original",
+    "declaration": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/declaration.json",
+      "sha256": "8b485ad8bb5c81f2c239ccf9567f03fea588526c01d005fc0ed3873554124fa8"
+    },
+    "service": "weight-patterns-vector-gradient-2.service",
+    "controller_pid": 0,
+    "reason": "Explicit authorized continuation from retained complete update3 after minimal in-place fix."
+  },
+  "whole_build_review": {
+    "accepted": true,
+    "source": {
+      "record": "records/retrospectives/2026-11-16-eli-minimal-working-model.md",
+      "sha256": "6c353e3ab5964da594747a218a70502614463dd015413f05b534c6a1e407b3e2"
+    },
+    "scope": "Minimal direct-gradient/native handoff plus exact retained-state3 seed addendum; independent11tests+2subtests. This is the authorized continuation, not a reset.",
+    "admitted_at": "2026-11-16T05:05:30.445261-06:00"
+  },
+  "hardware": {
+    "graph_card": 0,
+    "graph_uuid": "GPU-b6d3869b-4794-4ff4-0398-47df517a8c82",
+    "native_card": 0,
+    "reason": "Keep unchanged physical graph/native card0 and numerical path. Resident Torch model stays allocated between steps; actual native capture supplies combined-memory outcome.",
+    "second_gpu_work": "none required by this route"
+  },
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "pipeline.weight_edit.vector_working_loop",
+    "events": "observability/events.jsonl",
+    "sources": [
+      {
+        "record": "code/signal-trace/pipeline/observability/__init__.py",
+        "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/__main__.py",
+        "sha256": "06cae09b6e7f6f122cb435d09f819e29e916fe0af2ef53d3bf943bd25965e8b5"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/instrumentation.py",
+        "sha256": "30ba0f62f1542787c15d073b3bd22927cbf187d99525e8713a9eabbda7a3bcff"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/bf16_direction.py",
+        "sha256": "79f6a4135806b22fe4ffc89928032ec476f9e34c920e10ba4a084fef13fdc827"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/functional_install.py",
+        "sha256": "982a8c1056599cb37184ddfa74e1971477080e3f9f97c58c4bf8feb99c0a2177"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/functional_reading.py",
+        "sha256": "81110215edac4d5ba61d4cf786ac50a1488b9286d4ef19a58f6f193e07c493cf"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/gap_state.py",
+        "sha256": "7986dedac77faa49ad7aed20945e69c18438edee97c0ab2fa7f1d4ac51db845e"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/joint_functional_step.py",
+        "sha256": "f6f8bbd72e6034d1474c9cbc50dbb770ec53a8cf03bff695039f3d00039c8c55"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/joint_inverse.py",
+        "sha256": "7153107edba6ed9b9b41536f521ce1ffca6bd5652efe285a3e4ed330c51eca7c"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/joint_inverse_device.py",
+        "sha256": "5bf646323abc1344edf7f2c7be60add2840a98891898a2553c247bdced598cd4"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/model_trace_response.py",
+        "sha256": "ca236c285a93b96ed082f7399771630bf84e39a272ab0afa8d102bf0db212dc0"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/native_graph.py",
+        "sha256": "127de7e16bbdc48e1f3646dcb4f119ea832df80d11d70a799503f0025f838acf"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/pair_loop.py",
+        "sha256": "b325adf627112d0db50051d2b0ef51051a2aa55e2d7ee3eb42ea52156621b788"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/state_tensors.py",
+        "sha256": "db56699e824bf72a5474da5839c25ff12e7397c3ca80a92b0bcc2ade9a74a000"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/trace_gradient.py",
+        "sha256": "3fa643bcbb2aa61f1a1f3b83c923f1ff10494dba3d0b2fdb82377285916ad32d"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/turn_artifact.py",
+        "sha256": "aba25664d1bde0df4a5b26b7cea16de8b1bb04eb63c7f3772f0b99853671e94e"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/turn_correction.py",
+        "sha256": "e2c302136caeed811acfa9d957efe63b7bd8e52369d38537d81de22a9f8b40a9"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+        "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/turn_reference.py",
+        "sha256": "886ed110f646d966fb287afc1eb4f468161a7551ed8d12263db8ae1ed68b04a0"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/turn_reference_run.py",
+        "sha256": "352e8d0e26aae28c04ffdb2fba6e5bc234fffdf0eb10ade73786d307ef54c129"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+        "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_chance_reference.py",
+        "sha256": "783e307423127ed98a24a3d9dc191eea55b8ec638bc9192527b27f9e36d767d5"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_chance_run.py",
+        "sha256": "cc1cfe60813e984e4768b040f90f75999e7b9069a5d62cd407acd9e568b04943"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_device_loop.py",
+        "sha256": "8b418b3367f722f4893a26d654528d03702d9b0b6ded07c7b95ed58425e87892"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_gradient_loop.py",
+        "sha256": "73227e88b57c7463c9b01e90780da0d3323bd4ac3e56264a8760a5dc97d502fd"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_loop.py",
+        "sha256": "254013e043947a93f14d5dc46190669e81ed9227ad964648d8e61b4d09dda737"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_recovery.py",
+        "sha256": "1201b794f07cd0c68ed6abdf61e295420f4f0b39221e2812e6de7e0ed4e08b22"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_working_loop.py",
+        "sha256": "76e67dcb7e1de0e986d33c10a3a7ce475a6c495df64cc7061ac107c958bb9116"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/working_model.py",
+        "sha256": "19a525690a9506e5c1a9b0925240b0179163ef69110f28618f8a482d75265bd4"
+      }
+    ]
+  },
+  "qualification": {
+    "native_graph_fixture": {
+      "record": "records/development/2026-11-16-direct-gradient-qualification/instrumented-graph.json",
+      "sha256": "059d3488c2d7ceb2dc1a32afa8656e39dae563ce495ef36010eae1dee9b366b6"
+    },
+    "mlflow_readback": {
+      "record": "records/development/2026-11-16-direct-gradient-qualification/mlflow-readback.json",
+      "sha256": "554a48f3f2c419b64d019a7ac4b336992935981bd919f8bfc1747e04d15ed56f"
+    },
+    "cuda_initialization": {
+      "record": "records/development/2026-11-16-direct-gradient-cuda-context/cuda-init-readback.json",
+      "sha256": "942dc1f80f42be4a9a4eeaa1f7dddcfe30c07e5e5a5e941e7df34d542564c6e8"
+    }
+  },
+  "prior_updates": 3,
+  "working_model": {
+    "format": "single-working-model/1",
+    "start": {
+      "file": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+      "model_sha256": "0dfed0e7f5e0430e693def81549785baf863e4dd9a4f337f8d584d709a6d2a1a",
+      "reached": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/reached.json",
+        "sha256": "f54d9e9b1e11b2bf1929aa4bceefa00e161339b512f0c49717f2ee8e58a7cfbd"
+      }
+    },
+    "retention": "one mutable working file; no per-step checkpoint; previous retained experiment unchanged"
+  }
+}

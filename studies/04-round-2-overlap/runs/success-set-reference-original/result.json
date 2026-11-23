@@ -1,0 +1,21 @@
+{
+  "prediction_vs_result": {
+    "reference": {
+      "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+      "sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38"
+    },
+    "members": 30,
+    "donors": 15,
+    "rows": 19751,
+    "merges": 105,
+    "mapped_native_points": 317773
+  },
+  "failures_only": {
+    "limits": [
+      "Complete computational correspondence does not prove semantic equivalence.",
+      "Local convex sets may mix incompatible computations or charge legitimate context.",
+      "No edited model, native update, capability closure or no-fit evaluation was run."
+    ]
+  },
+  "what_this_changes": "An immutable successful-set membership artifact exists; no nearest point or training loss was fitted here."
+}

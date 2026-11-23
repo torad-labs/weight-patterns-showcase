@@ -1,0 +1,153 @@
+{
+ "method_step": 3,
+ "run_by": "weight-research-astra (the scope, the hypothesis and the assessment of what the result means), weight-research-fable (this declaration, the implementation, the execution and the tables)",
+ "status": "Declared on November 12, 2026 (CT), before any command of this run. A wiring trial of the module ran twice in scratch on the CPU at the embedding's rows and the model's first merge (the attention of layer 0, where the incoming side is undetermined), before and after two kept quantities were added to the module. It printed checks only: the closure of the terms, same-prefix-135-original's kept reading made again, and the two registered cases' rebuilt contributions beside their recorded ones. It kept nothing. No incoming, added, comparison or through reading of the five cases has been printed, kept or looked at, in a run or in development.",
+ "kind": "An original-data reading that joins two completed ones on the data they kept: merge-contributions-original's split of an outgoing leftover (what came in, what the merge added at the comparison held fixed, what the change of the comparison made of it), applied to same-prefix-135-original's five answers that write one text up to one decision, under that run's own reference and builders. It reads the sixty original answers' recordings, the five recorded prefixes and, from the original model file, the matrices of the two merges a layer that have one, their learned scales, the layers' output scales and the output norm. It reads no model through the engine, captures nothing, generates nothing, solves no weights, and makes no candidate, model, target, mask or threshold. It changes no reference and no run.",
+ "authority": "Astra's scope at d78e9545 (specification, section \"Next bounded reading\"): \"Fable owns one prospective original-data diagnostic, suggested name `same-prefix-contributions-original`. Declare it and its predictions/weakening readings before computing the new comparison, with the usual verifier and parameter provenance. It uses only the already-kept originals and the five prefix captures; no engine call, new question, full-answer generation, weight solve or edited candidate is authorized.\" Marcos, relayed on November 12: a robust path forward is to be planned and then acted on, with no waiting on his approvals.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "specification": "records/retrospectives/2026-11-12-inherited-and-added-result-astra.md",
+ "builds_on": "studies/04-round-2-overlap/runs/same-prefix-135-original/result.json",
+ "joins": [
+  "studies/04-round-2-overlap/runs/merge-contributions-original/result.json (1d98620a): the split and its uncertainty",
+  "studies/04-round-2-overlap/runs/same-prefix-135-original/result.json (a7d5b6ea): the five cases, their rows, the reference and the builders"
+ ],
+ "request_form_it_bears_on": "records/retrospectives/2026-11-12-fork-request-decision-astra.md (fd601fa6): the conditional transformation target T_r = x_r + sum_k alpha_rk (y_k^c - x_k^c). At the original weights its error y_r - T_r is this module's `through` term of the joint features, with the incoming coefficients held fixed.",
+ "prefix_run": "studies/04-round-2-overlap/runs/same-prefix-135-original",
+ "correction_reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+ "correction_reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+ "cases": [
+  {
+   "id": "discovery-10-channel-h1",
+   "group": "wrong",
+   "loss": 11,
+   "role": "registered original answer that subtracts the descent; a fitting answer of the cohort; recorded again here"
+  },
+  {
+   "id": "expanded-040-h1",
+   "group": "wrong",
+   "loss": 12,
+   "role": "registered original answer that subtracts the descent; a NO-FIT answer of the cohort, recorded again here from the original model for this diagnostic only"
+  },
+  {
+   "id": "expanded-041-h1",
+   "group": "successful",
+   "loss": 16,
+   "role": "unregistered, historically successful in the screening pool; an auxiliary diagnostic observation"
+  },
+  {
+   "id": "expanded-042-h1",
+   "group": "successful",
+   "loss": 20,
+   "role": "unregistered, historically successful in the screening pool; an auxiliary diagnostic observation"
+  },
+  {
+   "id": "expanded-043-h1",
+   "group": "successful",
+   "loss": 24,
+   "role": "unregistered, historically successful in the screening pool; an auxiliary diagnostic observation"
+  }
+ ],
+ "endpoint": {
+  "screening_step": 135,
+  "tokens_generated": 136,
+  "prompt_tokens": 173,
+  "last_input_position": 307,
+  "meaning": "Screening step n is the row at input position 172 + n: it writes answer token n. Step 135 is the row that writes the first token of the line after the descent's gain: 'Kin' in the two wrong answers' screening records and 'Total' in the three successful ones'. The capture keeps that row and stops: positions 0 to 307."
+ },
+ "implementation": {
+  "module": "code/signal-trace/pipeline/overlap/same_prefix_contributions.py (command terms), code/signal-trace/pipeline/overlap/same_prefix_contributions_read.py (command read: tables and figure from the kept arrays, no card; written after this declaration and before the terms end, it tabulates the kept arrays by the statistics this declaration names and computes no new term)",
+  "tests": "code/signal-trace/tests/test_same_prefix_contributions.py",
+  "searches": "code/signal-trace/pipeline/weight_edit/mixture.py, joined: same-prefix-135-original's two calls a step, in its order (the builders at the places, then the cases' rows), from the even mixture",
+  "reused": "pipeline/overlap/same_prefix.py (asked, loaded: the five cases and their recorded rows), pipeline/weight_edit/contributions.py (stages_of, raw_of, answer_rows, zero_sum, rooted, kappa: the sixty answers' rows and the bound of a term)"
+ },
+ "hypothesis": "Astra's, at d78e9545: \"replacing whole-state discrepancy by its fixed-comparison added component may remove a context-carried part common to successful and wrong same-prefix computation.\" In this run's terms: read on what the merges add, and on the features' increment at the comparison held fixed, the two wrong controls stand apart from the three historically successful ones more specifically than read on the whole state, and not merely with every reading smaller.",
+ "why_this_direction": "Two readings are complete and cannot be joined by their numbers. merge-contributions-original (1d98620a) found that what a merge adds recurs by itself between the wrong and the correct answers (the added term's own reading orders a wrong answer over a correct one in 0.9985 of the pairs at attention-17, against 0.3744 to 0.6301 in twelve random deals), with each correct answer read against its other twenty-nine. same-prefix-135-original (a7d5b6ea) read five answers on one shared text under one reference of twenty-nine: along the builders' common direction both wrong cases lie over all three successful ones at 44 of the 87 merges of layers 6 to 34 at the decision's row. Astra's assessment (d78e9545) is that the added recurrence is supported, that whole-state recurrence is not specific enough on the historically successful same-prefix controls, and that the two were measured on different references and scales. The request form proposed for the next solve (fd601fa6) asks a row for the correct transformation effect and no longer for the whole inherited contrast: its error at the original weights is the `through` term read here. Before a solve is specified on that form, the data on record can say whether the term charges the successful controls as it charges the wrong ones. That is the next step of method step 3 (where the recurring difference lives) because it tests, with no new sample, the one property a request needs before it is asked of a matrix: that it is specific on a shared path. It is no reaction to a bad number: it is the comparison that the assessment of the two completed readings names.",
+ "repeating_pattern_check": "What has happened more than once. (1) A reading built on whole states found a difference that recurs over the cohort, and a correction built on it moved computation that already agreed: correction-at-19's candidate carried the correct group's mean from 0.11 of its radius to 0.89 and moved the prompt's positions (rows_moved.py, cited in correction.py, quiet_of), and of fifteen correct fitting answers twelve stayed complete under B's candidate and ten under C's (correction-members-at-17-original/result.json). Why we think it keeps happening: a whole state at a row holds what the row inherited from its text, which answers on one text share whether they end right or wrong. This run tests that directly: it reads what a merge adds apart from what came in, on five answers of one text. (2) A number found after the data was seen was about to become a setting (the feedforward-19 ordering, the 0.047 and 0.137 fractions). Here no number of either earlier run selects a merge, a row or a scale: every merge and every row through the decision is read, and the statistics are fixed below before a term is computed. (3) Readings under different references were set side by side. Here there is one reference and one set of builders, same-prefix-135-original's, for every case and for the builders that form the direction. (4) A confound was settled by buying samples. Here nothing is captured: the five prefixes and the sixty recordings are on record. (5) A matching of the token written at a row was read as a matching of the history before it (merge-contributions-original's post-hoc same-token table). It is not, and this run uses the one control on record that does match the history: one text through the decision.",
+ "what_went_wrong_before": "The first attempt at round two was deleted because it never built on the overlap. In this line of readings: same-prefix-135-original's order of the cases along the common direction \"from feedforward-19\" was seen after the data and is no layer choice; merge-contributions-original's table of rows that write one token is not a same-prefix control, and its figures stand with that limit; and the fractions 0.047 and 0.137 were found after the data was seen and are no edit strength, matrix rule or confidence level (d78e9545). None of them is used here.",
+ "rule": {
+  "states": "As in merge-contributions-original (rule.states): the residual stream goes through three merges a layer, each an addition in the engine. Row by row, h- is the state a merge adds to, a what it adds, h+ = h- + a. For the five cases all three are on record in same-prefix-135-original's capture, each merge checked to be the engine's own addition, bit for bit (same_prefix.loaded); here h+ is taken as h- + a in double precision so that the identity below is exact, and how far that lies from the recorded float32 sum is logged. For the sixty answers they are as merge-contributions-original has them (contributions.raw_of): a matrix merge's contribution rebuilt from the matrix's recorded input, a layer's last merge's as the difference of two states, the last layer's outgoing state as recorded direction times recorded size. For the two registered cases both forms exist, and at every merge the rebuilt rows are laid beside the recorded ones: the contribution-reconstruction discrepancy, as a relative size and along the builders' added direction.",
+  "rows": "The five cases' answer rows 0 to 135, each at the place of the frozen registration that the two registered cases' rows are registered at (same-prefix-135-original's kept rows: parameters.row_places). A step that is registered at more than one place is read once at each. The existing common-prefix correspondence is used as it is: no continuation past the decision and no registration of the three unregistered answers is made. The sixty answers' rows are averaged at a place by the registration's own weights (tube.Layout.means), the same for h-, a and h+ and before anything else.",
+  "steps": "The 105 merges in the model's order and, after them, the model's output norm on the last merge's state (correction.passed_on), which is no addition: there only the features are read. The coefficients of the model's first merge's incoming side are those of the state it adds to (the embedding's rows).",
+  "comparison_point": "A tested vector t (a case's row, or a builder at a place) is compared with the mixture of the reference members nearest to it in the joint features: the unit state and the log of the size, |direction|^2 + (w_size / w_direction) size^2 with the frozen reference's weights, no radius, from the even mixture (mixture.joined; parameters.search_end). alpha+ are the coefficients found on a step's outgoing features, alpha- those of its incoming features: the outgoing features of the step before. alpha- is held fixed through the step and is not fitted again on the outgoing side inside a term.",
+  "terms": "With M the reference members: incoming e- = h-[t] - sum_k alpha-_k H-[k]; added D = a[t] - sum_k alpha-_k A[k]; comparison C = - sum_k (alpha+_k - alpha-_k) H+[k]; outgoing e+ = h+[t] - sum_k alpha+_k H+[k] = e- + D + C. The same split of the joint features phi (the unit state, and the log size times the root of the weights' ratio): incoming r-; through = [phi(h+) - phi(h-)] - sum_k alpha-_k [phi(H+_k) - phi(H-_k)], which holds the transformation's effect on the features and is no raw added vector; comparison; outgoing r+, which is same-prefix-135-original's reading and is laid beside its kept arrays at every merge. A merge's different response to different inputs is also something it adds: no label of input against error follows from the identity.",
+  "readings": "For every case, row and step, and for each term: (1) the term along the builders' summed vector of the same term (signed projection), its length, the signed fraction of its length that lies along it, and for the features the part of the projection that the size carries; (2) the term along the builders' summed outgoing term, where incoming + added + comparison = outgoing exactly; (3) each builder's term along the sum without itself and its case siblings: the level the registered wrong answers themselves show under this reference; (4) for each of the ten pairs of cases, how far apart their two vectors of the term lie. Where the builders' sum is nothing the reading is nothing and no ratio is made of it.",
+  "uncertainty": "As in merge-contributions-original: a search's bound gives e = sqrt(bound / w_direction), the distance of the mixture found from the true nearest one in the joint features, and a raw term's error is e times kappa(M | Z), the largest of |M'd| / |Z'd| over the differences d of two sets of coefficients. incoming: e- kappa(H- | Z-); added: e- kappa(A | Z-); comparison: e+ kappa(H+ | Z+) + e- kappa(H+ | Z-); outgoing: e+ kappa(H+ | Z+); the features: e-, e- kappa(F+ - F- | Z-), e+ + e- kappa(F+ | Z-), e+. Where the members' features do not determine the coefficients kappa is infinite and the term is undetermined: it is reported as undetermined, and it is not read as zero. A value along a direction may lie off by its own bound plus its length times the direction's turn (twice the builders' summed bounds over the sum's length); a direction is known where its length exceeds the builders' summed bounds.",
+  "statistics": "Fixed here, before a term is computed. The kinds are same-prefix-135-original's: the two wrong controls and the three historically successful ones. The decision's row is step 135. For one reading at one row and step: `determined` where every case's bound and the builders' are finite and the direction is known; `gap` = the lower of the two wrong controls less the highest of the three successful ones; `resolved` where determined, the gap is positive and it exceeds the largest allowance (bound plus length times turn) among the wrong controls plus the largest among the successful ones, which is same-prefix-135-original's rule; `resolved the other way` likewise with the kinds exchanged; `share` = the successful controls' mean over the wrong controls' mean, where determined and the wrong controls' mean is positive: the part of what the wrong controls show that the successful ones show too, which does not change when every value is made smaller alike. The readings compared are, in the raw states, the added term along the builders' added sum beside the outgoing term along the builders' outgoing sum, and in the joint features the through term along the builders' through sum beside the outgoing term along their outgoing sum. Reported at the decision's row at every step, by kind of merge, and at every row before it, where the five write the same token, as the level that the question's number gives without a difference in what is written (at every row read, the decision's included, the five cases' inputs differ in nothing but the loss in the question). Beside them, descriptive and named by no verdict: the split of the outgoing reading into what came in, what was added and what the comparison's change made; the lengths of the terms; the distances between the cases, with same-prefix-135-original's two matched comparisons (parameters.matched_comparisons); every case's level over the builders' own median; and every number of each case's question.",
+  "data_roles": "As in same-prefix-135-original (rule.data_roles): discovery-10-channel-h1 is a fitting wrong answer of the registered cohort and expanded-040-h1 a no-fit one, both original answers recorded again; expanded-041-h1, expanded-042-h1 and expanded-043-h1 are auxiliary diagnostic observations and stay outside the reference, the builders, the cohort, the folds and every score. Their label is the screening's historical one: a prefix verifies no full answer. The thirty no-fit originals among the sixty are read as the frozen reference reads them. Nothing is fitted, selected, tuned or evaluated. reserved-40b is not read and stays sealed.",
+  "scope": "Five answers of one set of m, v, drop and rise, whose questions differ in the loss: the wrong controls' losses are 11 and 12 and the successful ones' 16, 20 and 24, so the kind and the loss are not apart in these five, and the same answer prefix is not the same prompt. A favorable reading is development evidence about where a request should sit. It is no validated native target, no generalization, and no number of it becomes an edit strength, a matrix choice or a threshold. merge-contributions-original's and same-prefix-135-original's results, their verdicts and their gaps stand unchanged.",
+  "card": "terms on card 1 under /run/user/1000/gpu1.lock, the card same-prefix-135-original's read used, so that its kept reading is made again on the same device; read uses no card. No engine call is made by any command.",
+  "storage": "terms/terms.npz holds the readings (parameters.kept_arrays): bulk under studies/, ignored by git, archived with torad-research (store root <repo>/studies), verified there and kept locally. Committed: terms/index.json (the checks and every search's loops and bounds), read/ (summary.txt, summary.json, tables.txt, figure.png), the logs, provenance.json and result.json. Nothing is removed."
+ },
+ "parameters": {
+  "endpoint": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-prefix-135-original/declaration.json",
+   "derivation": "That run's endpoint, unchanged: screening step 135, the row at input position 307 of a 173-token prompt, which writes the first token of the line after the descent's gain. The command stops unless this declaration's endpoint and cases are that run's and every recorded prefix has 136 answer rows.",
+   "scales_with": "The shared text of the cases."
+  },
+  "cases": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-prefix-135-original/declaration.json",
+   "derivation": "That run's five cases, unchanged, with its kinds: wrong discovery-10-channel-h1, expanded-040-h1; successful expanded-041-h1, expanded-042-h1, expanded-043-h1.",
+   "scales_with": "The screening pool: which answers write one text through one decision."
+  },
+  "joint_weights": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "The frozen reference's scales S_direction 1268.5365669493656 and S_size 28.67797931944294: a cell weighs w_f = 0.5 / S_f (3.9415e-04 for the direction, 1.7435e-02 for the size), so the joint reading in the direction's units is |direction|^2 + 44.23381971299945 size^2, the same at every merge and place. The command stops if the reference's index is not the one with the declared hash.",
+   "scales_with": "The original model, its reference of all sixty answers and the terminal transform. Another source needs its own reference."
+  },
+  "reference_and_builders": {
+   "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+   "derivation": "same-prefix-135-original's rule, unchanged: A case is an id without its ending -h1 or -h3 (and -channel). Reference: the thirty registered correct answers less discovery-10-channel-h3, the case sibling of a tested case: 29. Builders: the thirty registered wrong answers less the two tested ones and expanded-042-h3, the case sibling of a tested case: 27. The command recomputes both from the cohort and the declared cases. Here: 29 reference members and 27 builders, and the command stops unless they are the ones that run kept (read/along.npz). The three unregistered cases are never a reference member or a builder.",
+   "scales_with": "The cohort and the tested cases."
+  },
+  "row_places": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-prefix-135-original/read/along.npz",
+   "derivation": "The rows that run read, as it kept them: 150 [step, place] rows on 149 places for steps 0 to 135 (a step registered at more than one place is a row at each), the decision's row at place 148. The command stops unless they are the registered cases' own registration through the decision.",
+   "scales_with": "The registration and the endpoint."
+  },
+  "matched_comparisons": {
+   "measured_from": "studies/04-round-2-overlap/inputs/acquisition",
+   "derivation": "A cross pair is laid beside the same-kind pairs with the same loss difference and the same number of differing prompt tokens: 12/16 beside 20/24 (4; one token), and 12/20 beside 16/24 (8; two tokens). The other four cross pairs (11/16, 11/20, 11/24, 12/24) have no such same-kind pair and are reported with their loss differences.",
+   "scales_with": "The five cases' losses and how they tokenize."
+  },
+  "search_end": {
+   "measured_from": "records/development/2026-11-12-correction-objective/members-held-out.txt",
+   "derivation": "As in the two runs joined: a search ends when the summed bound of its problems is at most sqrt(2.220446049250313e-16) = 1.4901161193847656e-08 of their summed cost, and the last loop allowed is the square of the number of members (841 for 29). In same-prefix-135-original no search took more than 40 loops and the greatest summed bound over summed cost was 1.43e-08 (its read/searches.json, 210 searches).",
+   "scales_with": "The arithmetic and the number of members."
+  },
+  "steps_read": {
+   "measured_from": "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+   "derivation": "35 layers of three merges each, 105 merges, and the output norm: 106 steps, all read. No merge, layer or row is left out or chosen.",
+   "scales_with": "The model's depth."
+  },
+  "kept_arrays": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-prefix-135-original/read/along.npz",
+   "derivation": "From the shapes: 5 cases, 150 rows, 10 pairs of cases, 27 builders, 149 places; four raw terms over 105 merges and four feature terms over 106 steps, in float32: 15189748 values, 60758992 bytes before compression. run.sh starts a command only if this and 40 GB beside it are free on root (the machine's disk rule, as in the two runs joined).",
+   "scales_with": "The number of cases, rows, builders and steps."
+  }
+ },
+ "prediction": "Three, each read at every step and reported whole. (1) Specificity, the hypothesis's own, at the decision's row, stated for the raw pair of readings (added beside outgoing) and for the feature pair (through beside outgoing) separately: the median share over the steps where both readings of the pair have one is lower for the added (through) reading than for the outgoing one, the added (through) share is the lower at more than half of those steps, and the added (through) reading is resolved, wrong over successful, at more steps than the outgoing one. (2) Which merges: the shared history enters a row through what its attention merges add, so at the decision's row the feed-forward merges' added reading has the lower median share and the attention merges' the higher. (3) The decision's row against the rows before it, at which the five write the same token: the added (through) reading is resolved at more steps at the decision's row than at the mean row before it. Beside these, an expectation that is mine and no part of the hypothesis: the whole length of the through term, which is the error the conditional transformation target (fd601fa6) would charge a row at the original weights, does not part the kinds, because one row's increment against a mixture of other answers is mostly its own particulars, while its part along the builders' common increment does.",
+ "would_weaken_it": "Of (1): a share of the added (through) reading that is not below the outgoing one's in the median, successful controls at or over the wrong ones, no more steps resolved than the outgoing reading has, or a reading undetermined or unresolved at most steps. Any of these weakens the proposed replacement of the whole-state leftover by its added component as the request, in this construction (one reference of twenty-nine, the cohort's builders, five cases); it says nothing against a request measured another way, and nothing about whether an edit can repair. Of (2): an attention reading as specific as the feed-forward's, or more: then the shared history is not what attention adds here, and the reason given for (1) is wrong even if (1) holds. Of (3): rows before the decision resolved at as many steps as the decision's row: then the separation follows the question's number through every row and is not particular to the decision, and since the kinds and the losses are not apart in these five, (1) could then not be read as the decision's computation. Of my expectation: through lengths that part the kinds as well as the projection does; the whole increment would then be usable as a request without a direction.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "studies/04-round-2-overlap/inputs/acquisition",
+  "studies/04-round-2-overlap/runs/same-prefix-135-original/declaration.json",
+  "studies/04-round-2-overlap/runs/same-prefix-135-original/record/prefix.json",
+  "studies/04-round-2-overlap/runs/same-prefix-135-original/capture/prefix",
+  "studies/04-round-2-overlap/runs/same-prefix-135-original/read/along.npz"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/same-prefix-contributions-original/terms",
+  "studies/04-round-2-overlap/runs/same-prefix-contributions-original/read",
+  "studies/04-round-2-overlap/runs/same-prefix-contributions-original/logs",
+  "studies/04-round-2-overlap/runs/same-prefix-contributions-original/provenance.json",
+  "studies/04-round-2-overlap/runs/same-prefix-contributions-original/result.json",
+  "studies/04-round-2-overlap/runs/same-prefix-contributions-original/run.sh"
+ ]
+}

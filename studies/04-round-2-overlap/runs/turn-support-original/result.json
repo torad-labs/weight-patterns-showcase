@@ -1,0 +1,44 @@
+{
+  "status": "compiled_original_support",
+  "complete": true,
+  "completed_at": "2026-11-15T21:01:40.617564-06:00",
+  "reference": "expanded-004-h1",
+  "original_successes": 15,
+  "witnesses": 14,
+  "reference_shape": [
+    560,
+    105,
+    1536
+  ],
+  "reference_sha256": "dacd0db1238d66b9f24aeb4cd4d6e538d3a96bc180f12d0982e2a1aa117acace",
+  "seconds": 85.13038168702042,
+  "complete_witnesses_inside": {
+    "frozen": [
+      "discovery-01-channel-h1",
+      "discovery-06-channel-h1",
+      "discovery-15-channel-h1",
+      "discovery-00-channel-h3",
+      "discovery-08-channel-h3",
+      "discovery-10-channel-h3",
+      "expanded-029-h1",
+      "discovery-11-channel-h3",
+      "expanded-064-h1",
+      "expanded-071-h1",
+      "expanded-039-h3",
+      "expanded-076-h1",
+      "expanded-078-h1",
+      "expanded-023-h1"
+    ],
+    "leave_one_witness_out": []
+  },
+  "prospective_weakening_condition_met": true,
+  "weight_updates": 0,
+  "generated_answers": 0,
+  "wrong_trace_evaluations": 0,
+  "closure": false,
+  "repair_claim": false,
+  "closure_boundary_admitted": false,
+  "prediction_vs_result": "Complete signed original support and both coverage readings were compiled without changing the selected reference or paths.",
+  "failures_only": "Calibration containment is construction, not validation; finite-sample ranges and independent coordinate combinations can misrepresent new correct computation. The declared leave-one-witness-out structural weakening condition is recorded separately.",
+  "what_this_changes": "Original-only evidence for assessing the interval form. No native correction loop or post-closure evaluation is admitted."
+}

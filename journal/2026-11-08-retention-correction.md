@@ -53,8 +53,8 @@ Withdrawn, method-mismatched bulk captures do not become valuable merely because
 we generated them. These are working retention choices, not a new gate or quota.
 
 The exact deletions and retained reconstruction routes are recorded in
-[the R2 record](../records/retention-correction-2026-11-08-r2.json) and
-[the local record](../records/retention-correction-2026-11-08-local.json).
+the R2 record and
+the local record.
 
 The current Construction 02 recovery material is now protected in R2 as well:
 the two new K/V patches and the two checkpoint reconstruction records added only
@@ -62,7 +62,7 @@ the two new K/V patches and the two checkpoint reconstruction records added only
 step-01 patch. Together with the previously archived original BF16 model, the
 three patches and their coefficients reproduce the two current measured
 checkpoints; both full current checkpoints remain local for ongoing work.
-[Current recovery archive record](../records/retention-correction-2026-11-08-recovery.json).
+Current recovery archive record.
 
 ## Completed disposition
 

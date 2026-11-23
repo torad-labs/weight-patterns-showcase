@@ -1,0 +1,268 @@
+{
+  "method_step": 4,
+  "operation": "same-input-failed-repair",
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/measure.py",
+    "sha256": "007c86d293f380c5f4c4a9f8e39ea53c2428776c8fa1a7e7fca739bbe9b0f1c6"
+  },
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "original_model": {
+    "record": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  },
+  "worker": {
+    "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/observe-clamped",
+    "sha256": "43d876b3e1377e9a921600b5e856b440c48d8bbad01fcfa1093e4b575dbdb766"
+  },
+  "worker_header": {
+    "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/same_input.hpp",
+    "sha256": "996bed380991ad2be693139190f292bead6b6467b64ad6b6c717a9fbec06b88e"
+  },
+  "worker_builder": {
+    "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/build.py",
+    "sha256": "d7df49550ca6fab9c5ac47c6c607a3f2049a419e62f0f0fc0d2269f4a39f7790"
+  },
+  "camera": {
+    "record": "dependencies/recorder-workers/observe_stream_workers.cpp",
+    "sha256": "e72580f16d27218f98eb1499fc8085ce065ce9fe2c4035363d775b01fb65abc5"
+  },
+  "target_source": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "reference": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+  },
+  "reference_field": {
+    "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "sha256": "1b7ccbe9996af857f98d8a213fa3461e3cdd42f57906d4518f2b2f775184b2af",
+    "shape": [
+      560,
+      105,
+      1536
+    ],
+    "dtype": "float64"
+  },
+  "chance": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+    "sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48",
+    "shape": [
+      560,
+      105
+    ],
+    "dtype": "float64"
+  },
+  "patch": {
+    "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.json",
+    "sha256": "8bc9ecc18a771758443188817a720762a10eb5cf59a21dfc963ee34ad057d2e2"
+  },
+  "case_id": "discovery-05-channel-h1",
+  "registration": {
+    "record": "studies/04-round-2-overlap/runs/same-input-operation-comparison/registration.json",
+    "sha256": "698cbfac8e7acaf8fdf2bb5458384dc09cc3365a653d3173c8d331274d18f344"
+  },
+  "stages": {
+    "descent": 312,
+    "friction": 366
+  },
+  "arithmetic_audit": {
+    "old": {
+      "descent": 312,
+      "friction": 372
+    },
+    "new": {
+      "descent": 325,
+      "friction": 397
+    }
+  },
+  "prediction": "If the local map changed selectively with descent error, compare the signed change in mean squared turn distance to the frozen reference on the wrong descent and on the correctly applied friction. Crossing the native chance band on protected friction, or a larger fixed-input effect at friction, weakens selectivity. The existing failed edit is a negative repair control; its sign relative to both independently successful edits is the across-arm research test.",
+  "why_this_direction": "Archival access to both complete native free histories and the exact physical endpoint update enables the control needed to isolate a changed local transformation from a changed incoming state. Direct effects can persist despite the wrong answer and must be compared to the successful edits.",
+  "repeating_pattern_check": "Replaying the whole graph after an update changed the local weights, residual input, K/V and auxiliary inputs together. Original-only K anchoring improved a signed forecast but incorrectly ranked two real edits. Native same-weight sham, frozen actual endpoint weights and verified donor clamps separate those differences with no surrogate.",
+  "hypothesis": "A native local transformation on the exact candidate input can distinguish local weight effects from propagation on a failed descent while showing how much correct friction was disturbed.",
+  "would_weaken_it": "The sham or endpoint archives disagree, the stage remaps fail to coincide with the independently audited operation, or a direct score fails to distinguish the failed edit from both repaired controls.",
+  "what_went_wrong_before": "Under the projected edit Gemma still subtracted downhill energy, applied friction correctly and reported \u22129 J. The earlier finite graph and gradient diverged in local sign even on fixed history.",
+  "rule": "Replay fresh failed endpoint history in native code. Capture donor outputs; rerun the endpoint weights with donor clamps as a sham, the actual original on original history, and original on candidate history with donor inputs clamped. On every block fix incoming residual, native edited K/V at all positions before cache conversion, projected per-layer input and exact merged intermediates consumed by successive sublayers; read each output before re-clamping. For each reference row retain every product of original/edited computational mates. The direct term uses the same edited state for both maps; original vs mixed defines inherited. Report raw output and unit-turn, witness variation, complete field and independent operation timings. Current K/V production (including current position), embedding projections and interblock scales sit outside the 105 local maps. No textual target, no weight training, no new greedy generation.",
+  "old": {
+    "measurement": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/measurement.json",
+      "sha256": "7ff3156dcd77fca7c47281f7ab71932a8d475ef10d0840d7e46e0ffaabfa1b20"
+    },
+    "pairs": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/pairs.npy",
+      "sha256": "3d1af7a43aca789609ac4c93076b3118fe51795c8e703b39ad0714d2e5a88d90"
+    },
+    "raw_response": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/result.json",
+      "sha256": "7ffd2f90c6f844b87da323ae6266c6fee2376b302cc11ccccf0c0cb7604cbbd9"
+    },
+    "raw_case": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/case.json",
+      "sha256": "34bb07a714d146a6b32056d989bac93e543861c6bd54997604ce3471e2ded9bd"
+    },
+    "capture": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+      "sha256": "6f258a0cdab83dd088848b647fca8e59277de6e1fcd87a2082cb9ff91299e6d5"
+    },
+    "stream": {
+      "stream.f32": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/stream.f32",
+        "sha256": "76001db3f05b371194f3a1d0d514c2f1007ec06d471449d8e19db12b87143de8"
+      },
+      "stream.jsonl": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/stream.jsonl",
+        "sha256": "b7e277ff9e1ecc35bf0bd90a0b9dfd3153ce9045a247ddb6f24f287c6bb78756"
+      }
+    }
+  },
+  "new": {
+    "measurement": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/measurement.json",
+      "sha256": "55ec6a99f6b38b4570d0469036d28f55ca2dd424a6afce4480840e0a8a241c3b"
+    },
+    "pairs": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/pairs.npy",
+      "sha256": "167810ebecf884e8cc91dd43272351c7f5e0b9ec9f0259948c488839f374f22d"
+    },
+    "raw_response": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/result.json",
+      "sha256": "2549d89ad9b8a5cae4b9665a6de68e1b6ef12c37615097600a2759c3c6e31dc6"
+    },
+    "raw_case": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/case.json",
+      "sha256": "34bb07a714d146a6b32056d989bac93e543861c6bd54997604ce3471e2ded9bd"
+    },
+    "capture": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/capture.json",
+      "sha256": "0a66c48d2d2773515e60a95424559645d5d5b6d092a1edd723ec6dc3d2cf3d85"
+    },
+    "stream": {
+      "stream.f32": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/stream.f32",
+        "sha256": "a2541f268f409bfdb186cd09565167ea15e58f5487a0abf35799b4d26786aa0d"
+      },
+      "stream.jsonl": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/stream.jsonl",
+        "sha256": "09e70217d9b027174b0245b63ddc8ffb0fba94ce67d6e37225766ad7442d89d1"
+      }
+    }
+  },
+  "libraries": [
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libggml-base.so.0.21.0",
+      "sha256": "1dbfd54200c1d3d4cffc72da14693bc413f1e4eaecdded8ce01a9f489c80172b"
+    },
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libggml-cpu.so.0.21.0",
+      "sha256": "5ebdeeca24df630d270f225115e41e3dba0c401a893b434e309365cdcb91f8ab"
+    },
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libggml-cuda.so.0.21.0",
+      "sha256": "7f865cd7aeedf126ce545994c7518dd4e0ef512b574fc0e6e0788e2e37b0be74"
+    },
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libggml.so.0.21.0",
+      "sha256": "a860ac65306fe35f24fb126bd56a6d78ed58f77de041459a1b52eeaf47a48260"
+    },
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libgomp.so.1",
+      "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+    },
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libllama.so.0.2.0",
+      "sha256": "43678f6f3bc3ec8e82e3aa4c076d031062be9b9fbf1fd41c06a29c5a7b7002d7"
+    }
+  ],
+  "storage_floor": 40000000000,
+  "capture_reserve": 4795114152,
+  "parameters": {
+    "capture_reserve": {
+      "value": 4795114152,
+      "measured_from": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/capture.json",
+      "derivation": "Three full failed-history raw stream sizes and one original, with three prior metadata streams per replay. Additional K,V, auxiliary and omitted residual branches are covered by prior full retained trace size.",
+      "scales_with": "event counts, native width, projection layouts and replay count"
+    }
+  },
+  "observability": {
+    "organization": "research-operations/1",
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "studies/04-round-2-overlap/runs/same-input-failed-repair/measure.py",
+    "events": "studies/04-round-2-overlap/runs/same-input-successful-repairs/observability/events.jsonl",
+    "mode": "direct Recorder API",
+    "operations": [
+      "diagnostic.prepare",
+      "native.capture",
+      "diagnostic.compare"
+    ],
+    "sources": [
+      {
+        "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+        "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/__init__.py",
+        "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/__main__.py",
+        "sha256": "06cae09b6e7f6f122cb435d09f819e29e916fe0af2ef53d3bf943bd25965e8b5"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/instrumentation.py",
+        "sha256": "30ba0f62f1542787c15d073b3bd22927cbf187d99525e8713a9eabbda7a3bcff"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+        "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+      },
+      {
+        "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+        "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/measure.py",
+        "sha256": "007c86d293f380c5f4c4a9f8e39ea53c2428776c8fa1a7e7fca739bbe9b0f1c6"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/same_input.hpp",
+        "sha256": "996bed380991ad2be693139190f292bead6b6467b64ad6b6c717a9fbec06b88e"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/build.py",
+        "sha256": "d7df49550ca6fab9c5ac47c6c607a3f2049a419e62f0f0fc0d2269f4a39f7790"
+      }
+    ]
+  },
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.json",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.xor.z",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/capture.json",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/measurement.json",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/pairs.npy",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/same-input-operation-comparison/registration.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/same-input-failed-repair/result.json",
+    "studies/04-round-2-overlap/runs/same-input-failed-repair/registered-fields.npz",
+    "studies/04-round-2-overlap/runs/same-input-failed-repair/registered-stage-vectors.npz",
+    "studies/04-round-2-overlap/runs/same-input-failed-repair/native-controls.json",
+    "studies/04-round-2-overlap/runs/same-input-failed-repair/arithmetic-timing-sensitivity.json",
+    "studies/04-round-2-overlap/runs/same-input-failed-repair/observability/events.jsonl"
+  ]
+}

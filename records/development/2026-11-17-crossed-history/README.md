@@ -1,0 +1,34 @@
+# Full native comparison of historical 175 and 189
+
+The current one-pair Final Experiment retains the original most-correct computational reference and regenerates the selected failing prompt after each native update. This diagnostic challenges the interpretation of the large decreases that coincide with a change of generated history. It uses the same 105 normalized input-output turns, original tolerances, local squared excess and computational alignment. It supplies no training example, weight update, checkpoint selection or stopping rule.
+
+## Why this interval
+
+The early complete native run records show several adjacent decreases associated with a switch. At 188→189, for example, fresh loss fell from 0.00009724400872 to 0.00004260499087 across 605→613 consumed positions. The earlier controller recorded its scalar proposal, native capture and measurement, and saved full native overrides at exit. It did not save individual native deltas or a recoverable checkpoint for 188. Treating the final 189 bytes or the measurement of 188 as weights at 188 would assign a condition we cannot reconstruct.
+
+Both ends of the encompassing 175→189 interval have complete, independently hashed native overrides against the same saved seed, correct model identities, and completed native GPU0 measurements. Their histories differ. Historical 175 has fresh loss 0.00009736345454 and 605 positions. Historical 189 has fresh loss 0.00004260499087 and 613 positions. This experiment tests weights across 14 accepted installations. Attributing the result to an individual update or weight group requires another intervention. These historical checkpoints had 70 updatable tensors. Restoring their complete overlays onto the original seed reconstructs the whole model, including every unedited weight.
+
+## Measurements and checks
+
+A new private model descriptor is restored and sealed for each endpoint. It is opened read-only by the qualified native recorder on physical GPU1. Both endpoints use the same GPU for all six measurements. The live GPU0 learner and its weight storage are outside this diagnostic. For each weight state, generate freely once and replay each complete recorded continuation with its original prompt. The replay asks the model to consume one supplied position per decode call, including ordinary prompt prefill. Its terminal label is included in the supplied sequence and adds no fictitious residual row. Each forced pass must reproduce the historical call/edge geometry for that history. The corpus contains the two measured histories of the same fitted case.
+
+Compute the training metric on each fresh native trace under its own new full computational correspondence. The four conditional cells, each with all 105 contributions, support two weight contrasts, two history contrasts and their interaction. The two free captures check which history the frozen state produces on GPU1 and expose any disagreement with the original GPU0 control. Only matching free generation, geometry, correspondence and loss can identify the forced diagonal with that historical natural outcome. This comparison combines a change in supplied history with its resulting computation and correspondence. It does not distinguish each of those mechanisms or assign credit to a token, layer or individual weight.
+
+The actual data, source bindings, declarations and outcomes live in [the scientific run](../../../studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189). A source-level CPU check decoded all saved sparse override entries for both states and matched both native index hashes, covering 108,186 and 110,162 callback records respectively. The original three PDFs and iterative learning document provide the experimental background. Marcos's November 17 Final Experiment defines the current target and parameter scope.
+
+## Native result
+
+All six captures completed. The following cells give measured loss. Rows change the native weights and columns change the consumed history.
+
+| Exact native weights | Supplied history from 175 | Supplied history from 189 | Free generation |
+|---|---:|---:|---:|
+| 175 | 0.00009736442088 | 0.00004270220913 | 0.00009736442088 |
+| 189 | 0.00009717688446 | 0.00004259005838 | 0.00004259005838 |
+
+The free-to-free loss fell **56.26%** on GPU1. Updating the weights while supplying the identical 175 history reduced the loss by **0.00000018754**. With the identical 189 history, changing the weights reduced it by **0.00000011215**. Either set of weights assigned a much lower loss to the later history. Supplying that history lowered the loss by **0.00005466221** at weights 175 and by **0.00005458683** at weights 189. These are **99.80%** and **99.66%** of the diagonal decline respectively. The two orders give a difference of **0.00000007539**, the measured interaction. The per-merge contribution decreased at each of the 105 merges on switching to the later history at either endpoint.
+
+The native free controls on GPU1 reproduced the same generated IDs, call geometry and computational correspondence recorded on GPU0. The free losses differed from the historical values by +0.0000000009663 at 175 and −0.0000000149325 at 189. On GPU1 each free control and its forced diagonal had exactly equal loss and correspondence. The four within-card measurements establish the conditional effects without assuming bitwise agreement across GPUs. [Six-cell result](../../../studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/result.json).
+
+The first different generated selection was index 381, subsequently consumed at position **554**, counting the 173 prompt positions. At each fixed weight state I compared the two native held captures directly. All 554 shared pre-fork pairs retained identical correspondence and mass. Every input and output coordinate used for their 105 turns was bitwise identical between histories, covering 119,132,160 distinct stored F32 edge coordinates per state. Thus the entire fixed-weight advantage of supplying the later history arises at or after the fork. Shared weights can still affect the competition that selects the next input while those histories have the same prefix. The large consequence of the switch and the smaller fixed-history weight contrast describe two different effects. Native prefix check.
+
+The new weight state itself freely generates the later trajectory. This provides a concrete route by which small changes to the fitted model can produce a large fall in fresh loss on one prompt. The experiment does not isolate the deciding weight or the last individual update. The later trajectory's computational excess against the agreed reference is genuinely lower under both models. This is separate from proving a semantic repair or a reusable change to the underlying capability.

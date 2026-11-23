@@ -1,0 +1,30 @@
+{
+  "declared_at": "2026-11-18T03:54:36.377764-06:00",
+  "rule": "Freeze the computation-consensus registration and all other weights and boundaries exactly as in registration-check.json. Score both public original members outside the 28-case historical landmark cohort, and all available matched reference and unfitted acquisitions from the already examined original/175/189/348 development profile. Measure the event before the verified descent and count gate-plus-score flags at the separately annotated, physically correct friction subtraction where available. Some acquisitions repeat the same questions. Do not tune, pool them into independent test cases, or train.",
+  "originals": [
+    "discovery-10-channel-h1",
+    "discovery-17-channel-h1"
+  ],
+  "profiles": [
+    "origin_reference",
+    "origin_unfitted",
+    "reference175",
+    "unfitted175",
+    "reference189",
+    "unfitted189",
+    "reference348",
+    "unfitted348"
+  ],
+  "sources": {
+    "origin_reference": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/baseline/raw/expanded-004-h1/result.json",
+    "origin_unfitted": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/baseline/raw/discovery-10-channel-h1/result.json",
+    "reference175": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-expanded-004-h1/native/raw/expanded-004-h1/result.json",
+    "unfitted175": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/result.json",
+    "reference189": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-expanded-004-h1/native/raw/expanded-004-h1/result.json",
+    "unfitted189": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/result.json",
+    "reference348": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/checkpoint348/raw/expanded-004-h1/result.json",
+    "unfitted348": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/raw/discovery-10-channel-h1/result.json"
+  },
+  "frozen_source_sha256": "21fcf64a19cfa5ebcb15e15986bfd88437b5e8ce36c6890a99da885e74c03fd0",
+  "output": "profile-results.json"
+}

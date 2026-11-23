@@ -1,0 +1,130 @@
+{
+ "method_step": 3,
+ "operation": "original-relational-envelope",
+ "run_by": "weight-research-astra",
+ "declared_at": "2026-11-15T06:13:11.153869-06:00",
+ "status": "revision 1 before retry: the first calculation refused negative entries of the stored squared-moment distance before any reference or result was written; original files only, no model or engine",
+ "revisions": [{
+  "revision": 1,
+  "at": "2026-11-15T06:18:20-06:00",
+  "previous_commit": "5eb3739d",
+  "previous_sha256": "1997e53915daf648d480337e0fddd938f4129bd1bb5264326fa60a33d3ea7c57",
+  "reason": "The cached squared-moment expansion is finite but can produce negative squared distances numerically. The first attempt refused these before writing anything. Calibrate witnesses from max(recorded squared distance, 0), the exact algebraic range of the metric, not a fitted tolerance increment; retain the count and least negative input in the result. Six synthetic tests pass, including this case. No input, mate, population, metric or output scope changes."
+ }],
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "why_this_direction": "Marcos points to positive correction requests on successful paths under Astra mean calibration (relay 5:55 AM CT November 15). Replace only its population/aggregation with the measured full successful envelope, retaining the frozen mates and metric, to learn what failure discrepancy remains before another proposal.",
+ "repeating_pattern_check": "A mean leaves successful outliers outside its level, while an earlier full-vector maximum envelope missed most wrong members and a projected envelope confused wording with agreement (2026-11-12-next-loop-astra.md:29-51). This run retains the complete relational descriptor and all original cells, reports the remaining wrong loss rather than presuming it, and changes no route assignment from its result.",
+ "hypothesis": "An empirical envelope of all fifteen original fitting successes removes direct loss on their original paths while retaining a measurable wrong-path discrepancy under the same relational metric and mates.",
+ "what_went_wrong_before": "The mean-calibrated reference has positive loss on original successes; its two alternative-route members have other-route mates. Enlarging a tolerance can hide failures too, and this diagnostic does not establish that those assignments are valid routes.",
+ "rule": {
+  "witnesses": [
+   "discovery-01-channel-h1",
+   "discovery-06-channel-h1",
+   "discovery-15-channel-h1",
+   "discovery-00-channel-h3",
+   "expanded-004-h1",
+   "discovery-08-channel-h3",
+   "discovery-10-channel-h3",
+   "expanded-029-h1",
+   "discovery-11-channel-h3",
+   "expanded-064-h1",
+   "expanded-071-h1",
+   "expanded-039-h3",
+   "expanded-076-h1",
+   "expanded-078-h1",
+   "expanded-023-h1"
+  ],
+  "donor_members": [
+   "discovery-01-channel-h1",
+   "expanded-004-h1",
+   "expanded-023-h1",
+   "discovery-06-channel-h1",
+   "expanded-064-h1",
+   "discovery-11-channel-h3",
+   "discovery-08-channel-h3",
+   "discovery-10-channel-h3",
+   "expanded-071-h1",
+   "expanded-039-h3"
+  ],
+  "mates": "unchanged from the bound mean reference",
+  "envelope": "For each original row and merge, max over all fitting successes of their mapped local own-mate distance; own successful observation included through exact self correspondence; existing uniform within-member correspondence weights.",
+  "loss": "positive part of distance minus the frozen envelope at each cell before aggregation; same original row mass",
+  "roles": "Original fitting data only; no changed arrays, no-fit data, native command, reference selection or model update"
+ },
+ "prediction": "All fifteen original successes have zero direct local hinge by construction; the amount and location of remaining wrong-path loss are not known before calculation.",
+ "would_weaken_it": "If the maximum erases the wrong-path discrepancy, the resulting objective supplies no useful correction at the original; if few cells or a cross-route outlier supplies the maximum nearly everywhere, that limits its interpretation. A nonzero wrong loss alone establishes no repair or transfer.",
+ "parameters": {
+  "witnesses": {
+   "measured_from": "studies/04-round-2-overlap/runs/relation-reference-original/arrays/mates.json",
+   "derivation": "every entry in successes, including the five outside the ten-donor bank",
+   "scales_with": "the original fitting-success inventory"
+  },
+  "tolerance": {
+   "measured_from": "studies/04-round-2-overlap/runs/relation-reference-original/arrays/apart.npy",
+   "derivation": "maximum of mapped per-success local disagreement with no self omission or multiplier",
+   "scales_with": "the original members, mates, rows, merge relations and correspondence"
+  },
+  "mass": {
+   "measured_from": "studies/04-round-2-overlap/runs/relation-reference-original/reference/reference.json",
+   "derivation": "retain the existing per-member original-row mean and merge mean, then sum members",
+   "scales_with": "original rows per member and merge count"
+  }
+ },
+ "bindings": {
+  "reference": {
+   "record": "studies/04-round-2-overlap/runs/relation-reference-original/reference/reference.json",
+   "sha256": "51184e7fc3b62b1ed2779a87a8b88d30eb879270c0aefb683e04fad076b20d6f"
+  },
+  "mean_tolerance": {
+   "record": "studies/04-round-2-overlap/runs/relation-reference-original/reference/tolerance.npy",
+   "sha256": "6ae1ff5f2391a0ac939332a63bf0d95f9f622aa6894b79d5d51b3ba7f65ca3be"
+  },
+  "arrays_meta": {
+   "record": "studies/04-round-2-overlap/runs/relation-reference-original/arrays/mates.json",
+   "sha256": "4b3c3ecfbc5a28655a8a7f1af70e867cab5e808233d05c79893638d9e1c645de"
+  },
+  "apart": {
+   "record": "studies/04-round-2-overlap/runs/relation-reference-original/arrays/apart.npy",
+   "sha256": "ff3b60821c4ad5c0993a8fafdd86b22bfe345b49847057dab78f1b34a7e57012"
+  },
+  "row_map": {
+   "record": "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json",
+   "sha256": "effb71113117aa4063f25e7d30ea30ea187343545e176b2ddd0243fdc499bf1b"
+  },
+  "offsets": {
+   "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/offsets.npy",
+   "sha256": "d11185d7b02cb6e9a5cc8ce9c87ee56101c90825d0da38a5ce0161436b7d0930"
+  },
+  "donor_rows": {
+   "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/donor-rows.npy",
+   "sha256": "1b55fc4e9428a59bead6e2b7b66b50b0c16557b15f028796933957f28c658525"
+  },
+  "membership_manifest": {
+   "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+   "sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38"
+  },
+  "program": {
+   "record": "code/signal-trace/pipeline/weight_edit/relation_envelope.py",
+   "sha256": "eba008f9680b11fa98e79898089e1e502f6b94c3bde364a597882eb54162b9e9"
+  },
+  "specification": {
+   "record": "records/retrospectives/2026-11-15-relational-envelope-astra.md",
+   "sha256": "bddf50c8ccb7e7f467649d1141046d52ad6522205bd5e630d9dc45d568d63eb9"
+  }
+ },
+ "inputs": [
+  "studies/04-round-2-overlap/runs/relation-reference-original/reference/reference.json",
+  "studies/04-round-2-overlap/runs/relation-reference-original/reference/tolerance.npy",
+  "studies/04-round-2-overlap/runs/relation-reference-original/arrays/mates.json",
+  "studies/04-round-2-overlap/runs/relation-reference-original/arrays/apart.npy",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/reference/offsets.npy",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/reference/donor-rows.npy",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/relation-envelope-original/reference",
+  "studies/04-round-2-overlap/runs/relation-envelope-original/result.json"
+ ],
+ "command": "PYTHONPATH=code/signal-trace uv run -q --with numpy --with pyyaml python -m pipeline.weight_edit.relation_envelope studies/04-round-2-overlap/runs/relation-envelope-original"
+}

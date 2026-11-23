@@ -65,13 +65,13 @@ The original edit and the new selective candidate are separate checkpoints. Both
 
 | Stage | Observation | Population and limits | Source |
 | --- | --- | --- | --- |
-| Q4 physics follow-up | Relative separation decreased at FF14 and increased at FF15 on **846/846** eligible recorded decisions | 12 paired question comparisons in a 24-question suite; repeated decisions are not independent tasks; absolute separation grows at both stages | [Q4 report](../../apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md) |
-| BF16 follow-up | Same progression on **1,707/1,708** eligible recorded decisions | 12 pairs; the exception is retained. At that decision FF14 was 1.0010507 rather than below 1; FF15 increased | [BF16 report](../../apps/decode-machine/PHYSICS-TRACE-BF16.md) |
+| Q4 physics follow-up | Relative separation decreased at FF14 and increased at FF15 on **846/846** eligible recorded decisions | 12 paired question comparisons in a 24-question suite; repeated decisions are not independent tasks; absolute separation grows at both stages | Q4 report |
+| BF16 follow-up | Same progression on **1,707/1,708** eligible recorded decisions | 12 pairs; the exception is retained. At that decision FF14 was 1.0010507 rather than below 1; FF15 increased | BF16 report |
 | Matched precision comparison | **131/131** eligible predictions with shared generated histories across all four runs, in both precisions | Original physical pairs contribute only predictions 0–3; the other pairs extend at most through prediction 24. Do not add this narrower population to the previous denominators | [Precision comparison](../../studies/02-physics-trace-observation/physics-trace-bf16/run/REPORT.md) |
-| One-time contribution replacement | **0 changed emitted tokens** across four substitutions; one complete-score hash changed per run | 1,860 donor/intervention decisions; six controls reproduced 2,790 decisions. This was activation substitution, not a checkpoint edit | [Intervention report](../../apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md) |
-| Persistent weight edit | Correct complete calculations **7/28 → 9/28**; correct explicit verdicts **16/28 → 16/28** | Previously observed questions, one source pair, one declared edit; one verdict regression and inconsistent prose remain | [Weight-edit report](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md) |
+| One-time contribution replacement | **0 changed emitted tokens** across four substitutions; one complete-score hash changed per run | 1,860 donor/intervention decisions; six controls reproduced 2,790 decisions. This was activation substitution, not a checkpoint edit | Intervention report |
+| Persistent weight edit | Correct complete calculations **7/28 → 9/28**; correct explicit verdicts **16/28 → 16/28** | Previously observed questions, one source pair, one declared edit; one verdict regression and inconsistent prose remain | Weight-edit report |
 
-The recurrence was upstream of the edited layer. The actual edit was guided by the connected observations and changed a layer-16 projection contribution; it did not modify the FF14/FF15 recurrence. This distinction is part of the result, not a reason to discard the partial-trace objective. See [the discussion notes](../../notes/2026-11-07-clarifications.md).
+The recurrence was upstream of the edited layer. The actual edit was guided by the connected observations and changed a layer-16 projection contribution; it did not modify the FF14/FF15 recurrence. This distinction is part of the result, not a reason to discard the partial-trace objective. See the discussion notes.
 
 ## Actual checkpoint change
 
@@ -102,7 +102,7 @@ The native capture matched ordinary edited inference on **3,396 decisions**. Pai
 
 The repaired response first diverged at prediction **269**: ` reached` was preferred before, ` gained` after. The edited continuation computed the recipient's own 90 J climb requirement. This is a visible text branch following a persistent intervention, not a word-level causal isolation. Across the full suite, every one of the **11,053 comparable complete-score hashes** changed, even when selected tokens did not.
 
-Sources: [full report](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md), [evidence index](../../studies/03-round-1-single-pair-edits/A-weight-edit/run/EVIDENCE-INDEX.md), [comparison](../../studies/03-round-1-single-pair-edits/A-weight-edit/run/comparison.json), [trace summary](../../studies/03-round-1-single-pair-edits/A-weight-edit/run/trace-summary.json), [review](../../studies/03-round-1-single-pair-edits/A-weight-edit/run/REVIEW.md).
+Sources: full report, [evidence index](../../studies/03-round-1-single-pair-edits/A-weight-edit/run/EVIDENCE-INDEX.md), comparison, trace summary, [review](../../studies/03-round-1-single-pair-edits/A-weight-edit/run/REVIEW.md).
 
 ## Baseline physics performance and precision
 
@@ -117,7 +117,7 @@ The BF16 report counts **0/18 fully correct physical explanations**. These basel
 
 Q4 follow-up observer qualification reproduced **13,462** decisions; BF16 reproduced **12,023**, including selected tokens and complete-score hashes. Precision labels refer to mixed native checkpoints: the Q4 file contains Q4_K, Q5_K, Q6_K, BF16, and F32 tensors; the BF16 file contains 318 BF16 and 283 F32 tensors. “4 bit” never licensed reading packed values as ordinary 16-bit scalars.
 
-Sources: [Q4](../../apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md), [BF16](../../apps/decode-machine/PHYSICS-TRACE-BF16.md). Earlier pilot captures and changes to the recording method remain in the [pilot record](../../apps/decode-machine/PHYSICS-TRACE-PILOT.md).
+Sources: Q4, BF16. Earlier pilot captures and changes to the recording method remain in the pilot record.
 
 ## Earlier work that led here
 

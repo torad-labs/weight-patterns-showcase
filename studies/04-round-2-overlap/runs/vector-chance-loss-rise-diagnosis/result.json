@@ -1,0 +1,84 @@
+{
+  "completed_at": "2026-11-16T12:30:44.008674+00:00",
+  "status": "completed-diagnostic-training-held",
+  "prediction_vs_result": "Exact historical replay failed, but the prescribed reconstructed5 to6 pair reproduces the first bad fresh-loss transition in the qualified native engine. Actual native held-input loss decreases while actual fresh-path loss increases5.624x; both complete fresh captures use the original settings and all105 merges.",
+  "failures_only": [
+    "Card1 replay endpoint differs795 BF16 entries and original-card replay differs66; no exact historical weight recovery is claimed.",
+    "The anchored/Torch mapping is internally consistent but its native finite response differs quantitatively from the JVP prediction.",
+    "Conditional native improvement failed to carry into fresh computational improvement for the prescribed pair.",
+    "Earlier native-held early-stop and incomplete library-watch attempts failed; original attempt records and raw data are retained."
+  ],
+  "what_this_changes": "The reproduced rise is located at the held-computation to regenerated-computation boundary. It does not require a sign or BF16 installation reversal in this replica. No specific numeric patch, new scale or full native Jacobian qualification follows. The current actual generation9 stays held; original model, training source, numerical loss, reference and tolerance remain unchanged.",
+  "numerical": {
+    "native_held_before": 0.00028798285443879684,
+    "native_held_after": 0.000287804698449655,
+    "native_fresh_before": 0.00028798285443879684,
+    "native_fresh_after": 0.0016196354752714714,
+    "fresh_ratio": 5.624069107960322,
+    "fresh_increase": 0.0013316526208326746,
+    "historical_fresh_before": 0.00028798317599835474,
+    "historical_fresh_after": 0.0016196377792669558,
+    "baseline_residual_squared_discrepancy": 2.692042159802494e-12,
+    "native_finite_cross_term": -3.0835723254913957e-07,
+    "native_finite_squared_residual_change": 1.3020124340733788e-07,
+    "linear_bf16_cross_term": -1.6805343649202817e-07,
+    "linear_bf16_squared_response": 9.48412255457209e-09
+  },
+  "limitations": [
+    "Paired result belongs to the prescribed reconstructed weights, not exact historical checkpoints.",
+    "One finite conditional displacement does not qualify the entire native derivative.",
+    "These measurements do not identify which native-versus-Torch operation accounts for the quantitative response difference.",
+    "No generated IDs, decoded output or output correctness was compared as a judge."
+  ],
+  "evidence": {
+    "original_gpu_replay": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/same-card/replay-report.json",
+      "sha256": "e9805612ae30e530d0c4a458bcbe8037945930629ef4642bd9ac6fad2008f6bf"
+    },
+    "native_pair": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/result.json",
+      "sha256": "247cd0de656690a0a15fcd956d7925e00ee521de3b1410364544a14100c7fa74"
+    },
+    "finite_residual_decomposition": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/residual-decomposition.json",
+      "sha256": "32e83e60adbc201225038a68c046abcd7d2c92b72e020490a5437a18a3b8f9fc"
+    },
+    "fresh_before": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/fresh-candidate-5/result.json",
+      "sha256": "b36d9b54eac9436b38063b2b886baa77ad4211958c86330d17ab166afe1ff6ae"
+    },
+    "fresh_after": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/fresh-candidate-6/result.json",
+      "sha256": "a2478efe153ef31be4e17e3baba809fd282ff24b1f98cf6c5f1fcf27c03adfe8"
+    },
+    "before_correspondence": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/fresh-candidate-5/correspondence-check.json",
+      "sha256": "a6cce19d9e940e1128fc310a0fbe302fbd260b5137a745e9188423ef0952e3ac"
+    },
+    "after_correspondence": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/fresh-candidate-6/correspondence-check.json",
+      "sha256": "9267d6bfa8c8358d6f51a088b225f6d545bd12ecb7d82da0fc036e3017f90bde"
+    },
+    "eli_review": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/eli-review.json",
+      "sha256": "134dca3b3d003263f1d2f2399a90c5eafbf84c612d57e43549787f06a2729794"
+    }
+  },
+  "independent_review": {
+    "record": "records/retrospectives/2026-11-16-independent-gradient-mapping-review.md",
+    "sha256": "01c464ae99d2cd3043070e8e59c83935e3712459581f22ada1aea8c612af6b8e"
+  },
+  "training": {
+    "generation": 9,
+    "held": true,
+    "controller_pid": 1984536,
+    "training_updates_during_diagnosis": 0,
+    "training_source_changed": false,
+    "numerical_rule_changed": false,
+    "original_or_current_model_writes": 0,
+    "record": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/calculation-hold.json",
+      "sha256": "eb3ba813d44fe65170c623749aa62fe7c51d1e8a5cdd9810d283d9b66179380f"
+    }
+  }
+}

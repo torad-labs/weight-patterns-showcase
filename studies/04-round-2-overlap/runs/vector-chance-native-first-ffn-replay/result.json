@@ -1,0 +1,1092 @@
+{
+  "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+  "retained_native_hardware": "GPU0 NVIDIA GeForce RTX 5080, compute capability 12.0; captured stderr and engine identities in the bound original capture",
+  "saved_branch_reproduction": {
+    "before": {
+      "bit_differences": 0,
+      "coordinates": 19968,
+      "difference_squared": 0.0,
+      "maximum_absolute_difference": 0.0
+    },
+    "after": {
+      "bit_differences": 0,
+      "coordinates": 19968,
+      "difference_squared": 0.0,
+      "maximum_absolute_difference": 0.0
+    }
+  },
+  "saved_branches_bit_exact": true,
+  "stages": {
+    "norm": {
+      "endpoints": {
+        "before": {
+          "bit_differences": 5823,
+          "coordinates": 19968,
+          "difference_squared": 7.711714513693379e-11,
+          "maximum_absolute_difference": 3.814697265625e-06
+        },
+        "after": {
+          "bit_differences": 15756,
+          "coordinates": 19968,
+          "difference_squared": 1.223206155024754e-10,
+          "maximum_absolute_difference": 3.814697265625e-06
+        }
+      },
+      "finite_response": {
+        "predicted_squared": 1.7991351780240082e-07,
+        "actual_squared": 1.7978941997882223e-07,
+        "dot": 1.7977390253884276e-07,
+        "difference_squared": 1.551327035375385e-10,
+        "cosine": 0.9995687794300575,
+        "actual_to_predicted_norm_ratio": 0.9996550586303259
+      },
+      "operand_codes": {
+        "before": {
+          "cpu_native_code_differences": 1
+        },
+        "after": {
+          "cpu_native_code_differences": 1
+        }
+      },
+      "inferred_native_bf16_change": {
+        "coordinates": 19968,
+        "changed_codes": 9,
+        "before_rounding_displacement_squared": 1.7978941997882223e-07,
+        "quantized_displacement_squared": 1.9328032294652076e-05
+      },
+      "cpu_bf16_change": {
+        "coordinates": 19968,
+        "changed_codes": 9,
+        "before_rounding_displacement_squared": 1.7991351780240082e-07,
+        "quantized_displacement_squared": 1.9328032294652076e-05
+      }
+    },
+    "gate": {
+      "endpoints": {
+        "before": {
+          "bit_differences": 75978,
+          "coordinates": 79872,
+          "difference_squared": 0.0001900135073094715,
+          "maximum_absolute_difference": 0.0007700920104980469
+        },
+        "after": {
+          "bit_differences": 75967,
+          "coordinates": 79872,
+          "difference_squared": 0.00018998719464893496,
+          "maximum_absolute_difference": 0.0007710456848144531
+        }
+      },
+      "finite_response": {
+        "predicted_squared": 0.0002389098133748213,
+        "actual_squared": 0.0002318078748990704,
+        "dot": -0.00014461148963537673,
+        "difference_squared": 0.0007599406675446452,
+        "cosine": -0.6144997527374932,
+        "actual_to_predicted_norm_ratio": 0.9850246489213645
+      }
+    },
+    "up": {
+      "endpoints": {
+        "before": {
+          "bit_differences": 74355,
+          "coordinates": 79872,
+          "difference_squared": 7.706355061424305e-05,
+          "maximum_absolute_difference": 0.0005409717559814453
+        },
+        "after": {
+          "bit_differences": 74333,
+          "coordinates": 79872,
+          "difference_squared": 7.704773766987246e-05,
+          "maximum_absolute_difference": 0.0005424022674560547
+        }
+      },
+      "finite_response": {
+        "predicted_squared": 9.886951092816232e-05,
+        "actual_squared": 9.568468461687574e-05,
+        "dot": -5.6822040457538137e-05,
+        "difference_squared": 0.00030819827646011433,
+        "cosine": -0.5842038533504414,
+        "actual_to_predicted_norm_ratio": 0.9837619523989618
+      }
+    },
+    "geglu": {
+      "endpoints": {
+        "before": {
+          "bit_differences": 79024,
+          "coordinates": 79872,
+          "difference_squared": 2.740687801885056e-05,
+          "maximum_absolute_difference": 0.0019941329956054688
+        },
+        "after": {
+          "bit_differences": 79017,
+          "coordinates": 79872,
+          "difference_squared": 2.6858922593189565e-05,
+          "maximum_absolute_difference": 0.0019350051879882812
+        }
+      },
+      "finite_response": {
+        "predicted_squared": 3.3652351348238646e-05,
+        "actual_squared": 2.9789141054079775e-05,
+        "dot": -2.2088174193838972e-05,
+        "difference_squared": 0.00010761784078999635,
+        "cosine": -0.6976267435202695,
+        "actual_to_predicted_norm_ratio": 0.9408519365815332
+      },
+      "operand_codes": {
+        "before": {
+          "cpu_native_code_differences": 1507
+        },
+        "after": {
+          "cpu_native_code_differences": 1514
+        }
+      },
+      "inferred_native_bf16_change": {
+        "coordinates": 79872,
+        "changed_codes": 1172,
+        "before_rounding_displacement_squared": 2.9789141054079775e-05,
+        "quantized_displacement_squared": 0.0010831796441128916
+      },
+      "cpu_bf16_change": {
+        "coordinates": 79872,
+        "changed_codes": 1170,
+        "before_rounding_displacement_squared": 3.3652351348238646e-05,
+        "quantized_displacement_squared": 0.0010773664015533146
+      }
+    },
+    "down": {
+      "endpoints": {
+        "before": {
+          "bit_differences": 19942,
+          "coordinates": 19968,
+          "difference_squared": 0.0013440270837321777,
+          "maximum_absolute_difference": 0.00710296630859375
+        },
+        "after": {
+          "bit_differences": 19936,
+          "coordinates": 19968,
+          "difference_squared": 0.001325002010202225,
+          "maximum_absolute_difference": 0.007354736328125
+        }
+      },
+      "finite_response": {
+        "predicted_squared": 0.0013397711651498521,
+        "actual_squared": 0.001335067522326758,
+        "dot": -0.0012338037366331836,
+        "difference_squared": 0.005142446160742977,
+        "cosine": -0.9225271415611558,
+        "actual_to_predicted_norm_ratio": 0.9982430662141935
+      }
+    },
+    "branch": {
+      "endpoints": {
+        "before": {
+          "bit_differences": 19941,
+          "coordinates": 19968,
+          "difference_squared": 0.058667916839137864,
+          "maximum_absolute_difference": 0.07959890365600586
+        },
+        "after": {
+          "bit_differences": 19932,
+          "coordinates": 19968,
+          "difference_squared": 0.05811565252011268,
+          "maximum_absolute_difference": 0.07965230941772461
+        }
+      },
+      "finite_response": {
+        "predicted_squared": 0.05845325645740394,
+        "actual_squared": 0.05830228263413756,
+        "dot": -0.05415979433872016,
+        "difference_squared": 0.2250751277689818,
+        "cosine": -0.9277476690019347,
+        "actual_to_predicted_norm_ratio": 0.9987077586194409
+      }
+    }
+  },
+  "native_execution": {
+    "before": {
+      "endpoint": "before",
+      "backend": "CUDA0",
+      "device": "NVIDIA GeForce RTX 5070 Ti",
+      "allocated_bytes": {
+        "weights": 56635392,
+        "values": 1437696
+      },
+      "nodes": [
+        {
+          "name": "input_rms",
+          "op": "RMS_NORM",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "input",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        },
+        {
+          "name": "norm",
+          "op": "MUL",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "input_rms",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "ffn_norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                1,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                6144,
+                6144
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        },
+        {
+          "name": "gate",
+          "op": "MUL_MAT",
+          "type": "f32",
+          "shape": [
+            6144,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "ffn_gate",
+              "type": "bf16",
+              "shape": [
+                1536,
+                6144,
+                1,
+                1
+              ],
+              "strides": [
+                2,
+                3072,
+                18874368,
+                18874368
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": 0
+        },
+        {
+          "name": "up",
+          "op": "MUL_MAT",
+          "type": "f32",
+          "shape": [
+            6144,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "ffn_up",
+              "type": "bf16",
+              "shape": [
+                1536,
+                6144,
+                1,
+                1
+              ],
+              "strides": [
+                2,
+                3072,
+                18874368,
+                18874368
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": 0
+        },
+        {
+          "name": "geglu",
+          "op": "GLU",
+          "type": "f32",
+          "shape": [
+            6144,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "gate",
+              "type": "f32",
+              "shape": [
+                6144,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                24576,
+                319488,
+                319488
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "up",
+              "type": "f32",
+              "shape": [
+                6144,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                24576,
+                319488,
+                319488
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": "GEGLU",
+          "mul_mat_precision": null
+        },
+        {
+          "name": "down",
+          "op": "MUL_MAT",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "ffn_down",
+              "type": "bf16",
+              "shape": [
+                6144,
+                1536,
+                1,
+                1
+              ],
+              "strides": [
+                2,
+                12288,
+                18874368,
+                18874368
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "geglu",
+              "type": "f32",
+              "shape": [
+                6144,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                24576,
+                319488,
+                319488
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": 0
+        },
+        {
+          "name": "output_rms",
+          "op": "RMS_NORM",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "down",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        },
+        {
+          "name": "branch",
+          "op": "MUL",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "output_rms",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "post_ffw_norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                1,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                6144,
+                6144
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        }
+      ],
+      "libraries": {
+        "ggml": "~/Documents/dev/research/weight-patterns/dependencies/engine-f089c9c-sm120-kept/libggml-base.so.0.21.0",
+        "base": "~/Documents/dev/research/weight-patterns/dependencies/engine-f089c9c-sm120-kept/libggml-base.so.0.21.0",
+        "cuda": "~/Documents/dev/research/weight-patterns/dependencies/engine-f089c9c-sm120/libggml-cuda.so.0.21.0"
+      },
+      "kernel_dispatch": "No exported per-operation kernel receipt exists in this library. Node geometry/backend are observed; MMF dispatch remains a source-derived prediction.",
+      "arrays": {
+        "norm": {
+          "file": "norm.f32",
+          "bytes": 79872,
+          "shape": [
+            13,
+            1536
+          ],
+          "sha256": "589cc1a89e6813b7499518c63576f9f36c0dc135a5c33030ecb02295198aead0"
+        },
+        "gate": {
+          "file": "gate.f32",
+          "bytes": 319488,
+          "shape": [
+            13,
+            6144
+          ],
+          "sha256": "561e92fbce780f62e65f7b3079ab8cd8a56531112b56d3bf3611ce2a50de4555"
+        },
+        "up": {
+          "file": "up.f32",
+          "bytes": 319488,
+          "shape": [
+            13,
+            6144
+          ],
+          "sha256": "4869035f32246d52411d43ccfe51179e767483e507d3b45a38dc3ac8acb6c717"
+        },
+        "geglu": {
+          "file": "geglu.f32",
+          "bytes": 319488,
+          "shape": [
+            13,
+            6144
+          ],
+          "sha256": "75bd94b721ea82010fbb00796af30f570ba13c0271c552e1b134bbd92b191418"
+        },
+        "down": {
+          "file": "down.f32",
+          "bytes": 79872,
+          "shape": [
+            13,
+            1536
+          ],
+          "sha256": "6b26b0096b72c929c09de0c982fed159c8eccefd7f3943df8e73c17755842052"
+        },
+        "branch": {
+          "file": "branch.f32",
+          "bytes": 79872,
+          "shape": [
+            13,
+            1536
+          ],
+          "sha256": "02c406580b6660e5559c7b6ebdf994c0ec78b33392c84712f270168a94280c75"
+        }
+      }
+    },
+    "after": {
+      "endpoint": "after",
+      "backend": "CUDA0",
+      "device": "NVIDIA GeForce RTX 5070 Ti",
+      "allocated_bytes": {
+        "weights": 56635392,
+        "values": 1437696
+      },
+      "nodes": [
+        {
+          "name": "input_rms",
+          "op": "RMS_NORM",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "input",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        },
+        {
+          "name": "norm",
+          "op": "MUL",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "input_rms",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "ffn_norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                1,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                6144,
+                6144
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        },
+        {
+          "name": "gate",
+          "op": "MUL_MAT",
+          "type": "f32",
+          "shape": [
+            6144,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "ffn_gate",
+              "type": "bf16",
+              "shape": [
+                1536,
+                6144,
+                1,
+                1
+              ],
+              "strides": [
+                2,
+                3072,
+                18874368,
+                18874368
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": 0
+        },
+        {
+          "name": "up",
+          "op": "MUL_MAT",
+          "type": "f32",
+          "shape": [
+            6144,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "ffn_up",
+              "type": "bf16",
+              "shape": [
+                1536,
+                6144,
+                1,
+                1
+              ],
+              "strides": [
+                2,
+                3072,
+                18874368,
+                18874368
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": 0
+        },
+        {
+          "name": "geglu",
+          "op": "GLU",
+          "type": "f32",
+          "shape": [
+            6144,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "gate",
+              "type": "f32",
+              "shape": [
+                6144,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                24576,
+                319488,
+                319488
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "up",
+              "type": "f32",
+              "shape": [
+                6144,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                24576,
+                319488,
+                319488
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": "GEGLU",
+          "mul_mat_precision": null
+        },
+        {
+          "name": "down",
+          "op": "MUL_MAT",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "ffn_down",
+              "type": "bf16",
+              "shape": [
+                6144,
+                1536,
+                1,
+                1
+              ],
+              "strides": [
+                2,
+                12288,
+                18874368,
+                18874368
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "geglu",
+              "type": "f32",
+              "shape": [
+                6144,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                24576,
+                319488,
+                319488
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": 0
+        },
+        {
+          "name": "output_rms",
+          "op": "RMS_NORM",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "down",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        },
+        {
+          "name": "branch",
+          "op": "MUL",
+          "type": "f32",
+          "shape": [
+            1536,
+            13,
+            1,
+            1
+          ],
+          "sources": [
+            {
+              "name": "output_rms",
+              "type": "f32",
+              "shape": [
+                1536,
+                13,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                79872,
+                79872
+              ],
+              "address_mod_16": 0
+            },
+            {
+              "name": "post_ffw_norm",
+              "type": "f32",
+              "shape": [
+                1536,
+                1,
+                1,
+                1
+              ],
+              "strides": [
+                4,
+                6144,
+                6144,
+                6144
+              ],
+              "address_mod_16": 0
+            }
+          ],
+          "glu_operation": null,
+          "mul_mat_precision": null
+        }
+      ],
+      "libraries": {
+        "ggml": "~/Documents/dev/research/weight-patterns/dependencies/engine-f089c9c-sm120-kept/libggml-base.so.0.21.0",
+        "base": "~/Documents/dev/research/weight-patterns/dependencies/engine-f089c9c-sm120-kept/libggml-base.so.0.21.0",
+        "cuda": "~/Documents/dev/research/weight-patterns/dependencies/engine-f089c9c-sm120/libggml-cuda.so.0.21.0"
+      },
+      "kernel_dispatch": "No exported per-operation kernel receipt exists in this library. Node geometry/backend are observed; MMF dispatch remains a source-derived prediction.",
+      "arrays": {
+        "norm": {
+          "file": "norm.f32",
+          "bytes": 79872,
+          "shape": [
+            13,
+            1536
+          ],
+          "sha256": "5f61e4c149799a8b09914c48b3742733774555bfcf01660bd902b2e0f3c77f2a"
+        },
+        "gate": {
+          "file": "gate.f32",
+          "bytes": 319488,
+          "shape": [
+            13,
+            6144
+          ],
+          "sha256": "d06c5dbc1ce05d42981793985a007f8ed2a4aac2f34b1fedac66e4685e255060"
+        },
+        "up": {
+          "file": "up.f32",
+          "bytes": 319488,
+          "shape": [
+            13,
+            6144
+          ],
+          "sha256": "ba2456b4c3c77ae069c9b05b4e8da71706e0e568d7d6dc8cd3c7e3a17e84095b"
+        },
+        "geglu": {
+          "file": "geglu.f32",
+          "bytes": 319488,
+          "shape": [
+            13,
+            6144
+          ],
+          "sha256": "673c8e2579cdb9281d170aa34085f6fd4a0e22bceaec5338e1ddc5be76e3d708"
+        },
+        "down": {
+          "file": "down.f32",
+          "bytes": 79872,
+          "shape": [
+            13,
+            1536
+          ],
+          "sha256": "3a4473073a74af01da8de37ca5ff1d818f3d158bfbcd060c960ac2897ae83b38"
+        },
+        "branch": {
+          "file": "branch.f32",
+          "bytes": 79872,
+          "shape": [
+            13,
+            1536
+          ],
+          "sha256": "7ceee14373b9038d2728d807772311da7accc06490b73899ef7fda3acc34ca31"
+        }
+      }
+    }
+  },
+  "prepared": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-native-first-ffn-replay/prepared/manifest.json",
+    "sha256": "306bea018b2cbfa04e6f7b51e713df1e1725b9ba9251f71114596004d99e8e39"
+  },
+  "program": {
+    "record": "records/development/2026-11-16-native-first-ffn-replay/run.py",
+    "sha256": "545038e41fdd365a9c6090b53897245a16a8047e131b83595e5d27da2d1f4def"
+  },
+  "native_binary": {
+    "record": "records/development/2026-11-16-native-first-ffn-replay/build/native_ffn",
+    "sha256": "a8cbc831262d57beecf6d9e1312e10ccecc9888c872c267e5fe1ff3ad958a202"
+  },
+  "prediction_vs_result": {
+    "prediction": "Locate the first native/CPU intermediate discrepancy in the recorded13-column FFN.",
+    "interpretation": "Stage measurements available for independent assessment."
+  },
+  "failures_only": "All13 observations from the prospectively selected native call are retained; no result-based event selection.",
+  "what_this_changes": "Paired local native operator evidence only; no gradient, training update or change to the active learner.",
+  "limitations": [
+    "GPU1 differs from the retained GPU0; exact saved-branch comparison is required before original-transition attribution.",
+    "No per-operation kernel trace hook exists in the reused library; observed operator geometry and loaded libraries do not alone prove a kernel name.",
+    "No complete fresh-loss, preservation or transfer claim follows from this local experiment."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "accepted": true,
+  "run_by": "Astra",
+  "reviewed_by": "claude",
+  "status": "Re-accepted for steps 1-4 after exact calibration. Single-card acquisition and pooled overlap precede step 5.",
+  "method_step": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "prediction_vs_result": {
+    "original": "The exploratory prediction of some multi-member, omission-supported group distinction is supported descriptively. This does not establish a procedure-specific target.",
+    "coordinate_gap": "A nonzero signed common portion exists at full-population positions on both cards, with peak examples at layer-13 FF. It is basis dependent and cannot quantify all distributed recurrence.",
+    "held_out": "The raw held-out statistic is size biased. Exact same-size calibration leaves GPU0 climb separation above most label assignments, including the fixed full-population position subset. This is conditional on the retained alignment and is not a clean capability target. GPU1 remains unresolved.",
+    "speed_control": "GPU 0 climb standardization retains a 0.9935023 norm ratio and 0.9756456 cosine against the unadjusted difference on the identical eligible population. GPU 1 has one eligible stratum, so its ratio of one is an identity, not evidence of confound removal.",
+    "components": "Native weighted contributions reconstruct the strong climb differences with relative residuals around 1e-7. L13 FF effective absolute counts are 2108 and 2256 of 6144. Component profiles share more with descent than opening, but remain uncontrolled for speed. Tiny early contrasts can be unreliable under native reconstruction.",
+    "label_calibration": "The predicted majority/minority null asymmetry is observed. A pure group-size explanation is weakened: GPU0 climb mean margin is 0.01684794 versus null mean 0.00183586, with 8027/498960 assignments at least as large; fixed full-population positions give 16686/498960. Descent and several individual success responses are less consistent."
+  },
+  "failures_only": {
+    "eligible_original_failures": 18,
+    "eligible_original_successes": 27,
+    "questions_newly_generated": 0,
+    "model_weights_changed": 0,
+    "repairs": null,
+    "regressions": null,
+    "reason": "Observation of retained original responses only; classification scores describe trace-group separation, not repaired model answers."
+  },
+  "what_this_changes": "The GPU0 final-climb recurring difference is accepted with the stated observational scope. Next acquire the entire analysis population on one card and review its pooled overlap before building an edit.",
+  "coverage": {
+    "responses": 45,
+    "direction_merges": 105,
+    "direction_layers": 35,
+    "component_merges": 46,
+    "component_layers": 23,
+    "position_merge_rows": 71820,
+    "component_limit": "59 merge types lack retained component input accounting; their direction traces remain observed."
+  },
+  "limitations": [
+    "Speed is controlled; mass, drop, loss, rise, wording and generated history are not.",
+    "Later outcome separation may reflect an error's consequences, not its source.",
+    "Many cells reuse the same members; no independent-trial uncertainty or unseen-question generalization is claimed.",
+    "Positive held-out classification does not guarantee that every component of the full-data mean difference recurs.",
+    "Coordinate common gaps are basis dependent; excluded amounts are not proved question-specific.",
+    "Component projections are observational accounts of recorded inputs, not causal effects of edits or ablations.",
+    "Prefill is outside this generated-position map; the earliest tiny nonzero value is not a capability onset.",
+    "Exact permutations condition on the saved outcome-dependent correspondence and selected population; they are not unconditional causal p-values.",
+    "The fixed-data null cannot identify a sufficient future sample size.",
+    "GPU populations differ; the new acquisition will use one common card rather than pool them."
+  ],
+  "evidence": [
+    "OVERLAP.md",
+    "declaration.json",
+    "cross-validated/summary.json",
+    "cross-validated/passage-summary.csv",
+    "cross-validated/position-merge-metrics.csv.gz",
+    "components/index.json",
+    "components/summary.json",
+    "components/summary.csv",
+    "review-acceptance.json",
+    "cross-validated/PER-RESPONSE.md",
+    "cross-validated/per-response.json",
+    "review-withdrawal.json",
+    "calibration/CALIBRATION.md",
+    "calibration/summary.json",
+    "calibration/PER-RESPONSE-CALIBRATION.md",
+    "calibration/figures/exact-null-distributions.png",
+    "calibration/figures/member-null-margins.png",
+    "review-calibration-acceptance.json"
+  ],
+  "validation": {
+    "command": "cd code/signal-trace && python3 -m unittest discover -s tests -p test_overlap_*.py -t .",
+    "exit_code": 0,
+    "tests_passed": 24,
+    "guard": "python3 code/signal-trace/pipeline/research_guard/verify_round2.py",
+    "guard_exit_code": 0,
+    "code_review": "Claude reviewed calibration code and interpretation; scoped re-acceptance recorded in review-calibration-acceptance.json."
+  },
+  "acceptance_review": {
+    "source": "review-acceptance.json",
+    "message_id": "c73ab356-5367-490c-8760-a7e69d09920b",
+    "reviewed_commit": "f6869718",
+    "scope": "Step 1-4 overlap analysis. Per-response view requested as a descriptive addition, not an acceptance gate. Acceptance does not assert component purity or authorize an unspecified edit."
+  },
+  "per_response_addition": {
+    "source": "cross-validated/per-response.json",
+    "timing": "Computed from existing saved folds after Claude acceptance; no new directions, observations, or acceptance threshold.",
+    "gpu0_climb_positive_mean": "8/12 failures and 12/17 successes within speed; the eight positive failures are all speed 8. At speeds 4 and 6, failure means are negative.",
+    "gpu0_climb_by_speed": "speed4: failures0/2, successes5/6; speed6: failures0/2, successes6/7; speed8: failures8/8, successes1/4.",
+    "gpu0_descent_positive_mean": "7/12 failures and 8/17 successes within speed.",
+    "gpu1_climb_positive_mean": "4/4 eligible failures and 1/3 eligible successes; two failures and seven successes unscored because their speed strata lack members.",
+    "implication": "Raw signs follow majority/minority status; see exact conditional label calibration before interpreting recurrence."
+  },
+  "withdrawal_review": {
+    "source": "review-withdrawal.json",
+    "message_id": "6b7d7811-74d3-4655-b08b-77d70e9cdff5",
+    "reason": "Group-size-dependent per-response pattern is consistent with leave-one-out design bias. The uncalibrated score and speed-standardized vector do not establish recurrence."
+  },
+  "label_calibration": {
+    "source": "calibration/summary.json",
+    "assignments_gpu0": 498960,
+    "assignments_gpu1": 35,
+    "eligible_responses_gpu0": 29,
+    "eligible_responses_gpu1": 7,
+    "unscored_responses_gpu1": 9,
+    "maximum_original_score_difference": 1.7694179454963432e-16,
+    "cutoff_selected": false,
+    "accepted_target": false
+  },
+  "scope": "GPU 0 final-climb recurring difference supported under exact size-preserving calibration; descent weaker; GPU 1 unresolved; labels observational; other parameters, wording and history confounds remain",
+  "reacceptance_review": {
+    "source": "review-calibration-acceptance.json",
+    "message_id": "882867d6-5b17-4197-afbc-95ed2145ba6a",
+    "reviewed_commits": [
+      "9b4245af",
+      "b44da35c",
+      "c46f1497"
+    ],
+    "scope": "GPU 0 final-climb recurring difference supported under exact size-preserving calibration; descent weaker; GPU 1 unresolved; labels observational; other parameters, wording and history confounds remain"
+  }
+}

@@ -10,13 +10,13 @@ Independent D data remain: 80 discovery responses and their classifications; 40 
 
 The old `physics-multitrace-2026-11-07` directory name remains only to preserve raw source paths and hashes. Its active report now describes D observations only. A–D, the original BF16 checkpoint and the replacement recorder are unchanged.
 
-The next experiment remains [the signal-trace plan](../experiments/signal-trace-repair/PLAN.md). No new generation, capture, fit or weight edit was performed during this cleanup. Marcos will arrange an outside session to check each research step before we proceed.
+The next experiment remains the signal-trace plan. No new generation, capture, fit or weight edit was performed during this cleanup. Marcos will arrange an outside session to check each research step before we proceed.
 
 ## Removal completed
 
 Removed 71 enumerated roots containing 423 files from active research. The 9,311,304,896-byte full E checkpoint was deleted after exact reconstruction verification from unchanged D plus the 6,291,456-byte replacement tensor. All 200 D evaluation response hashes still match their recorded judgments. The private undo directory is `~/Documents/dev/research/.withdrawn-weight-patterns-E-20261107-224847`; it is excluded from every research index. The native D checkpoint hash was verified unchanged.
 
-[Outside-session coordination](PEER-HANDOFF.md).
+Outside-session coordination.
 
 ## November 8 retention correction
 

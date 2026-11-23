@@ -1,0 +1,103 @@
+{
+  "observations": {
+    "fit": {
+      "before": [
+        {
+          "cell": {
+            "key": "learned-turn-contrast",
+            "event": 328,
+            "merge": 0
+          },
+          "value": 0.5285762395198985
+        }
+      ],
+      "after": [
+        {
+          "cell": {
+            "key": "learned-turn-contrast",
+            "event": 328,
+            "merge": 0
+          },
+          "value": 0.52857624755999
+        }
+      ],
+      "identical_consumed_history": true,
+      "comparison": {
+        "learned-turn-contrast": {
+          "status": "matched",
+          "source_cell": {
+            "key": "learned-turn-contrast",
+            "event": 328,
+            "merge": 0
+          },
+          "target_cell": {
+            "key": "learned-turn-contrast",
+            "event": 328,
+            "merge": 0
+          },
+          "before": 0.5285762395198985,
+          "after": 0.52857624755999,
+          "observed_change": 8.040091481475997e-09
+        }
+      },
+      "original_events_relative_to_prechoice": [
+        16
+      ]
+    },
+    "correct": {
+      "before": [
+        {
+          "cell": {
+            "key": "learned-turn-contrast",
+            "event": 329,
+            "merge": 0
+          },
+          "value": -0.5290013157193341
+        }
+      ],
+      "after": [
+        {
+          "cell": {
+            "key": "learned-turn-contrast",
+            "event": 329,
+            "merge": 0
+          },
+          "value": -0.5290013025079758
+        }
+      ],
+      "identical_consumed_history": true,
+      "comparison": {
+        "learned-turn-contrast": {
+          "status": "matched",
+          "source_cell": {
+            "key": "learned-turn-contrast",
+            "event": 329,
+            "merge": 0
+          },
+          "target_cell": {
+            "key": "learned-turn-contrast",
+            "event": 329,
+            "merge": 0
+          },
+          "before": -0.5290013157193341,
+          "after": -0.5290013025079758,
+          "observed_change": 1.3211358229625603e-08
+        }
+      },
+      "original_events_relative_to_prechoice": [
+        17
+      ]
+    },
+    "transfer": {
+      "before": [],
+      "after": [],
+      "identical_consumed_history": true,
+      "comparison": {},
+      "original_events_relative_to_prechoice": []
+    }
+  },
+  "signal_sha256": "eee6b82b9b23fa8cda90099a82a7267b05c484e4abcdd241c0011bfd610f2b6b",
+  "prediction_vs_result": "See each original and edited registration, and its independently audited timing.",
+  "failures_only": "A late or ambiguous coordinate cannot localize the failing decision.",
+  "what_this_changes": "Measures the actual frozen public reader on recorded Gemma native computation."
+}

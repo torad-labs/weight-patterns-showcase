@@ -1,0 +1,55 @@
+{
+ "method_step": [
+  5
+ ],
+ "run_by": "Claude",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/full-overlap/pre-error/summary.json",
+ "hypothesis": "Answers that use the same capability share a trace, and where correct and wrong answers part, the shared trace shows a gap that belongs to the capability. Changing the weights so that the wrong answers' own inputs produce the correct side of that gap, everywhere along the path where the gap is, fixes the wrong answers, and each fixed answer keeps its own numbers.",
+ "what_went_wrong_before": "Every earlier attempt put a step between the discrepancy and the edit (a patch test, a control, a separation of error from question) and then narrowed to single tokens, matched pairs and one matrix. No surviving run has built an edit from an overlap.",
+ "why_this_direction": "Steps 1 to 3 exist in full-overlap: the overlap of 7 correct answers, the overlap of 8 answers that subtract the descent, and a discrepancy that keeps its direction with any member left out (0.95 to 0.96). The method's next step is the edit. Marcos agreed on November 9 to build it now on this discrepancy, before widening the groups, and to let the edited model's answers say whether the question content inside the discrepancy matters. Round one's A is the precedent: its repaired answer used its own 3 m climb and did not copy the donor's number.",
+ "repeating_pattern_check": "What repeats: an agent sees the discrepancy, does not act on it, and adds a check that becomes the work. Here there is no check before the edit. The discrepancy goes into the weights as it is, in every matrix on the path, at full strength, and the first thing read afterwards is the answers.",
+ "rule": {
+  "members": "The groups of full-overlap as recorded: 7 correct answers and 8 answers whose first incorrect calculation subtracts the descent.",
+  "positions": "Every aligned position before the first wrong token where each group has at least two members: the 120 positions of full-overlap/pre-error.",
+  "matrices": "All 70 on the path: the attention-output matrix and the feed-forward-down matrix of each of the 35 layers. The per-layer-embedding merge has no matrix that reads the signal and is left as it is.",
+  "gap": "At each position and each of those merges: the mean recorded contribution of the correct members minus the mean recorded contribution of the failing members.",
+  "target": "For every failing answer's own input at every position: its own recorded contribution plus the gap. The matrix output feeds a norm that discards its size, so the output asked of the matrix is the one in the target's direction that is nearest to the output it gives now.",
+  "edit": "For each matrix, the smallest change (least Frobenius norm) that makes the failing answers' own inputs produce those outputs. Full strength. No protection of any input. All 70 matrices are changed together in one candidate, rounded into the native BF16 storage of a copy of the original model.",
+  "test": "The edited model answers round one's 28 physics questions on GPU0, greedy, 768-token limit, as the original did. Each answer's three fields are judged against the question's expected values and set beside the original's."
+ },
+ "parameters": {
+  "strength": {
+   "measured_from": "studies/04-round-2-overlap/runs/full-overlap/pre-error/summary.json",
+   "derivation": "1: the whole gap is added to each failing contribution, as in round one's A.",
+   "scales_with": "nothing; it is the gap itself"
+  },
+  "minimum_members_per_group": {
+   "measured_from": "studies/04-round-2-overlap/runs/full-overlap/pre-error/summary.json",
+   "derivation": "2: one answer is not an overlap. This is the count full-overlap used for its positions.",
+   "scales_with": "nothing"
+  },
+  "singular_value_floor": {
+   "measured_from": "studies/04-round-2-overlap/runs/full-overlap/declaration.json",
+   "derivation": "largest singular value of the failing inputs of a matrix, times the float32 epsilon, times the larger of the number of inputs and the input width. The inputs were recorded in float32; a direction of the inputs below this floor is rounding and cannot carry a target.",
+   "scales_with": "number of inputs, input width of the matrix, precision of the recording"
+  },
+  "raw_output_size": {
+   "measured_from": "studies/04-round-2-overlap/runs/full-overlap/declaration.json",
+   "derivation": "s = <y, u> / <u, u>, where y is the output the matrix gives now and u is the target contribution divided by the norm's learned scale. The norm after the matrix discards size, so s is free; this s makes the asked change of y the smallest.",
+   "scales_with": "each input"
+  }
+ },
+ "prediction": {
+  "expected_observation": "Among the 8 answers that subtract the descent, most now add it, and each uses its own numbers. The 7 correct answers keep their three fields. The 13 other failures are not predicted. Because every matrix closes its own part of the gap at once, and later parts are partly caused by earlier ones, the edit may go past the correct side; if it does, some answers will lose their form.",
+  "failures_only": "Reported per field for all 28 answers, original beside edited. Damage to the 7 correct answers is reported separately."
+ },
+ "would_weaken_it": "None of the 8 failing answers changes its available energy, or the answers that change copy the block question's numbers instead of using their own.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/full-overlap",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/a2"
+ ]
+}

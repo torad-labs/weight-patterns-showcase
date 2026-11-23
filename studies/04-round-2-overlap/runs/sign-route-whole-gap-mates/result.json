@@ -1,0 +1,374 @@
+{
+ "status": "finished November 14, 2026 (Chicago time). On card 0 under its lock, no edit, no solve, no candidate, no model written, nothing generated. Declared in 061a6b60 at 6:48:19 PM CT; the four passes ran from 6:48:34 to 6:57:09 PM CT (the original on the recordings 134 s, the swept model on the recordings 128 s, the original on the swept model's text 110 s, the swept model on its own text 106 s; logs/), then the files-only reading (sign-rows.json).",
+ "written_by": "weight-research-perfomance",
+ "prediction_vs_result": {
+  "1_the_swept_weights_on_the_recordings_text": {
+   "predicted": "the plus at most of the fifteen wrong answers' recorded sign rows (8 or more), though every such row lies after the step where the swept model's own answer leaves the recording; the fifteen correct answers' rows stay a plus",
+   "result": "met. The swept weights favour the plus at 12 of 15 wrong rows and the minus at 3 (the original, read again by the same instrument on the same card: the minus at 15 of 15, the score of ' +' less ' -' from -6.86 to -1.10). With the text held, the changed weights move all 15 rows toward the plus, by 2.21 to 11.43 logits, 7.21 at the median. The three rows left at the minus are discovery-17-channel-h1, expanded-068-h1 and expanded-070-h1 (-0.97, -1.13, -1.65). The correct answers' rows: the plus at 15 of 15 under both weights."
+  },
+  "2_the_originals_weights_on_the_swept_models_text": {
+   "predicted": "the plus at most of the wrong answers' rows between the names (8 or more), as on a2-path's text",
+   "result": "met, with five rows against. The pattern finds the row in 15 of 15 wrong answers (and 15 of 15 correct), each a single sign token, each written ' +', each as stated-numbers.json reads it. The original's weights favour the plus at 10 of 15 and the minus at 5: expanded-001-h3 (-5.86), expanded-087-h3 (-1.62), expanded-092-h1 (-4.01), expanded-094-h1 (-4.24), expanded-095-h1 (-3.86)."
+  },
+  "3_the_two_weights_on_the_swept_models_text": {
+   "predicted": "the swept weights' score of ' +' less ' -' above the original's at most rows where both keep both signs",
+   "result": "met: above the original's at 12 of 15 wrong rows (-0.79 to 10.53, 3.75 at the median) and 12 of 15 correct rows. Both signs were among the eight highest at every row of every pass, so no count rests on a missing score. The three wrong rows where the swept weights stand below the original (discovery-10-channel-h1, expanded-034-h3, expanded-042-h3, by 0.17 to 0.79) are a plus under both."
+  },
+  "both_1_and_2": "As declared for the case that both hold: the corrected sign is carried twice in most answers, by the changed weights on the wording the failure was recorded on and by the new wording under the old weights. Answer by answer: by both in 7 of 15, by the weights alone in 5, by the wording alone in 3, by neither in none (per_wrong_answer)."
+ },
+ "read_after_the_declared_comparisons": {
+  "why_it_is_apart": "Neither reading below was declared before the passes. Each is files only, made after the rows were read, and is no part of the predictions above. Both are associations among fifteen fitting answers, not isolated causes and not transfer.",
+  "the_two_routes_beside_what_each_answer_now_states": "Laid beside whole-gap-mates-original/stated-numbers.json: the 7 wrong answers whose own answer is now whole and right are exactly the 7 in which both routes give the plus. The 3 in which the swept weights leave the minus on the recordings' text are exactly the 3 wrong answers that now state the descent's gain twice (m = 4, v = 8, drop = 2, rise = 1). The 5 in which the original's weights favour the minus on the swept model's text are the 4 that now state another kinetic energy (m = 5) and the 1 that states another sum (expanded-001-h3).",
+  "the_originals_sign_on_the_swept_models_text_goes_with_the_line_before_it": {
+   "what": "The thirty rows of the swept model's own text grouped by the last 34 characters written before the sign, with what the original's weights favour there. Wrong and correct answers share the lines, and under the original's weights the sign follows the line, not the group: on the swept model's text the original's score of ' +' less ' -' is +2.02 at the median over the wrong answers and +2.49 over the correct ones, where on the recordings it is -3.89 and +5.79. Four correct answers' rows read a minus under the original's weights on this text (discovery-00-channel-h3, expanded-029-h1, expanded-076-h1, expanded-078-h1); all four own answers are whole and right.",
+   "lines": {
+    " rough section ($E_1$): $KE_i": {
+     "answers": 13,
+     "wrong": 7,
+     "correct": 6,
+     "the_original_favours_the_plus": 13,
+     "the_original_favours_the_minus": 0,
+     "least": 1.65,
+     "most": 5.19
+    },
+    " before rough section: $E_1 = KE_i": {
+     "answers": 5,
+     "wrong": 3,
+     "correct": 2,
+     "the_original_favours_the_plus": 5,
+     "the_original_favours_the_minus": 0,
+     "least": 5.96,
+     "most": 6.62
+    },
+    "_{1, \\text{before}} = KE_i": {
+     "answers": 2,
+     "wrong": 1,
+     "correct": 1,
+     "the_original_favours_the_plus": 0,
+     "the_original_favours_the_minus": 2,
+     "least": -5.86,
+     "most": -5.76
+    },
+    " of descent ($KE_1$): $KE_i": {
+     "answers": 9,
+     "wrong": 4,
+     "correct": 5,
+     "the_original_favours_the_plus": 2,
+     "the_original_favours_the_minus": 7,
+     "least": -4.24,
+     "most": 1.62
+    },
+    "nergy before rough section = $KE_i": {
+     "answers": 1,
+     "wrong": 0,
+     "correct": 1,
+     "the_original_favours_the_plus": 1,
+     "the_original_favours_the_minus": 0,
+     "least": 2.53,
+     "most": 2.53
+    }
+   }
+  }
+ },
+ "failures_only": [
+  "No declared prediction failed. What stands against a simple reading of each:",
+  "Of 1: at three wrong rows the changed weights do not reach the plus on the recorded wording (they move those rows 2.2 to 2.5 logits and leave -0.97 to -1.65). In those three answers the own answer's plus is on a line where the original's weights favour the plus too (+2.94 to +3.06).",
+  "Of 2: at five wrong rows the new wording does not carry the plus: the original's weights would write the minus there (-1.62 to -5.86), and the swept weights write the plus by 3.74 to 6.43.",
+  "The instrument's limits: one row an answer; fifteen wrong and fifteen correct fitting answers; a row on the swept model's text is not on the original's own path and a row on the recordings is not on the swept model's (30 of 30 answers in each case), so each is a reading at fixed input; the sign between the numbers is a plus under both weights at all thirty rows and separates nothing, both readings having read the first sign by then."
+ ],
+ "what_this_changes": {
+  "what_was_asked": "Fable, for Astra's decision on the next target: after the matched-context sweep every wrong fitting answer adds the descent's gain. Is that plus the changed weights', or does it ride on the wording the swept model writes before the sign?",
+  "what_the_rows_say": "Both, and not in the same answers. On the recorded wording, with nothing else changed, the swept weights turn 12 of the 15 wrong sign rows to the plus and leave every correct row a plus: unlike a2-path, whose plus rode on its wording, this sweep carries the corrected sign in its weights. On the swept model's own wording the original's weights give the plus at 10 of 15: the new text carries it too. Every wrong answer has at least one of the two, and the seven that are now whole and right have both.",
+  "for_a_field_that_asks_nothing_outside_the_gap": "This reading cannot say what another field would do; it says what today's plus rests on. In 12 of 15 answers it does not rest on the text before the row. In the three answers of m = 4, v = 8, drop = 2, rise = 1 it does: there the weights alone leave the minus on the recorded wording, and those are the answers that now double the gain. In five answers the new wording works against the plus under the original's weights and the changed weights overrule it at the row; four of them now state another kinetic energy.",
+  "what_it_does_not_say": "A sign is not a repaired computation: 8 of the 15 answers that write the plus are not whole and right. Nothing here is on answers no fit used. The complete sum of the run's comparison is unchanged by this reading and is not regraded by it."
+ },
+ "per_wrong_answer": {
+  "discovery-05-channel-h1": {
+   "the_recordings_text": {
+    "original_weights": -1.61,
+    "swept_weights": 6.38
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " rough section ($E_1$): $KE_i",
+    "original_weights": 1.94,
+    "swept_weights": 5.87
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text",
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": true,
+    "states": "its own"
+   }
+  },
+  "discovery-10-channel-h1": {
+   "the_recordings_text": {
+    "original_weights": -6.86,
+    "swept_weights": 2.72
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " before rough section: $E_1 = KE_i",
+    "original_weights": 5.96,
+    "swept_weights": 5.18
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text",
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": true,
+    "states": "its own"
+   }
+  },
+  "discovery-17-channel-h1": {
+   "the_recordings_text": {
+    "original_weights": -3.49,
+    "swept_weights": -0.97
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " rough section ($E_1$): $KE_i",
+    "original_weights": 3.06,
+    "swept_weights": 5.97
+   },
+   "carried_by": [
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "the gain twice"
+   }
+  },
+  "expanded-001-h3": {
+   "the_recordings_text": {
+    "original_weights": -5.26,
+    "swept_weights": 4.98
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": "_{1, \\text{before}} = KE_i",
+    "original_weights": -5.86,
+    "swept_weights": 3.74
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "another sum"
+   }
+  },
+  "expanded-020-h1": {
+   "the_recordings_text": {
+    "original_weights": -4.22,
+    "swept_weights": 6.31
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " rough section ($E_1$): $KE_i",
+    "original_weights": 2.02,
+    "swept_weights": 5.87
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text",
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": true,
+    "states": "its own"
+   }
+  },
+  "expanded-034-h3": {
+   "the_recordings_text": {
+    "original_weights": -4.71,
+    "swept_weights": 4.86
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " before rough section: $E_1 = KE_i",
+    "original_weights": 6.15,
+    "swept_weights": 5.98
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text",
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": true,
+    "states": "its own"
+   }
+  },
+  "expanded-042-h3": {
+   "the_recordings_text": {
+    "original_weights": -6.75,
+    "swept_weights": 4.68
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " before rough section: $E_1 = KE_i",
+    "original_weights": 6.47,
+    "swept_weights": 5.79
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text",
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": true,
+    "states": "its own"
+   }
+  },
+  "expanded-045-h1": {
+   "the_recordings_text": {
+    "original_weights": -2.14,
+    "swept_weights": 5.07
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " rough section ($E_1$): $KE_i",
+    "original_weights": 1.88,
+    "swept_weights": 5.63
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text",
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": true,
+    "states": "its own"
+   }
+  },
+  "expanded-046-h3": {
+   "the_recordings_text": {
+    "original_weights": -1.1,
+    "swept_weights": 4.39
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " rough section ($E_1$): $KE_i",
+    "original_weights": 2.32,
+    "swept_weights": 5.64
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text",
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": true,
+    "states": "its own"
+   }
+  },
+  "expanded-068-h1": {
+   "the_recordings_text": {
+    "original_weights": -3.37,
+    "swept_weights": -1.13
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " rough section ($E_1$): $KE_i",
+    "original_weights": 3.06,
+    "swept_weights": 6.07
+   },
+   "carried_by": [
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "the gain twice"
+   }
+  },
+  "expanded-070-h1": {
+   "the_recordings_text": {
+    "original_weights": -3.89,
+    "swept_weights": -1.65
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " rough section ($E_1$): $KE_i",
+    "original_weights": 2.94,
+    "swept_weights": 6.03
+   },
+   "carried_by": [
+    "the swept model's wording under the original's weights"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "the gain twice"
+   }
+  },
+  "expanded-087-h3": {
+   "the_recordings_text": {
+    "original_weights": -1.99,
+    "swept_weights": 0.22
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " of descent ($KE_1$): $KE_i",
+    "original_weights": -1.62,
+    "swept_weights": 6.43
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "another kinetic energy"
+   }
+  },
+  "expanded-092-h1": {
+   "the_recordings_text": {
+    "original_weights": -6.41,
+    "swept_weights": 1.9
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " of descent ($KE_1$): $KE_i",
+    "original_weights": -4.01,
+    "swept_weights": 6.3
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "another kinetic energy"
+   }
+  },
+  "expanded-094-h1": {
+   "the_recordings_text": {
+    "original_weights": -4.03,
+    "swept_weights": 1.03
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " of descent ($KE_1$): $KE_i",
+    "original_weights": -4.24,
+    "swept_weights": 6.29
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "another kinetic energy"
+   }
+  },
+  "expanded-095-h1": {
+   "the_recordings_text": {
+    "original_weights": -3.77,
+    "swept_weights": 0.72
+   },
+   "the_swept_models_text": {
+    "line_before_the_sign": " of descent ($KE_1$): $KE_i",
+    "original_weights": -3.86,
+    "swept_weights": 6.3
+   },
+   "carried_by": [
+    "the swept weights on the recordings' text"
+   ],
+   "its_own_answer_now": {
+    "whole_and_right": false,
+    "states": "another kinetic energy"
+   }
+  }
+ },
+ "provenance": {
+  "declaration": "declaration.json, committed 061a6b60 at 6:48:19 PM CT November 14, 2026, before any pass",
+  "read_model": "studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/working.gguf, sha256 05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe, as each of its two passes hashed it (passes/swept-*/history.json)",
+  "commands": "run.sh pass:original-recordings pass:swept-recordings pass:original-own pass:swept-own read",
+  "rows": "sign-rows.json",
+  "rows_sha256": "703b9a218bf1aaf1f1d8796345f0ad33e18a46c43c8690e01017e38cbd9c3627",
+  "reader": "records/development/2026-11-12-path-forward/sign_on_texts.py",
+  "reader_sha256": "aadd83215c9965a90755c0206c8cffcbf6e3a1e2a3674ced0c230b35174eab4a",
+  "the_two_later_readings": "computed from sign-rows.json and whole-gap-mates-original/stated-numbers.json; their numbers are in this record"
+ }
+}

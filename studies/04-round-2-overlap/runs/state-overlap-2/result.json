@@ -1,0 +1,25 @@
+{
+ "run_by": "Claude (weight-research-fable), on Astra's decision of November 11 (records/retrospectives/2026-11-11-native-reference-decision-astra.md)",
+ "population": "The 60 answers of the registered correspondence, their 30,546 generated steps as input-overlap recorded them on the original model, at the 70 matrices, laid on the 480 places of the axis by the registered pairs: the same as state-overlap. The state after a matrix's merge is rebuilt from the matrix's input as the engine multiplied it: rounded to the file's BF16 at each answer's first step (60 rows of 30,546), as recorded at every later step.",
+ "prediction_vs_result": "Predicted: only the places of the axis that hold an answer's first step change; everywhere else, and over places 142 to 313, the overlap is state-overlap's to the last digits; which way gap and chance move at those places, and whether a cell changes side of gap > 2 chance, was not predicted. Result: one place holds a first step, place 0, in all 60 answers. At its 70 cells (one per matrix) both patterns moved by 1.33e-04 (correct) and 1.37e-04 (wrong) rms, at most 3.48e-04. The gap changed at all 70: it rose at 50 and fell at 20, between 0.931 and 2.47 times what it was; over the 70 cells its rms went from 0.002421 to 0.002426. The chance rose at all 70, by 1.00008 to 2.99 times: in the engine's form the answers of a group differ more at their first step than the rows as recorded said. One cell changed side: place 0 at layer 0's attention is no longer diverged (gap 1.607e-09 to 3.970e-09, chance 7.754e-10 to 2.315e-09; gap over chance 2.07 to 1.71), so nothing is asked there now. No cell became diverged; 20946 of 33600 cells are diverged against 20947. Over places 142 to 313 nothing moved: 11542 cells diverged in both, gap over chance 4.84 to 9.26 (median 5.71) in both, the largest change of that ratio at a matrix 4.6e-07. Every other place: at the 50 matrices up to 6144 wide the overlap is state-overlap's bit for bit. At the 20 feed-forward matrices that are 12288 wide (layers 15 to 34) every place differs in the last digits of float32: the patterns by 8.3e-08 rms and at most 6.7e-07, the gap by at most 6.5e-05 of itself, the chance by at most 1.3e-05, and no cell there changes side. So 'to the last digits' held, and 'bit for bit' did not at those 20 matrices.",
+ "failures_only": "The declaration said that a place holding no first step that changed would mean the code reads the rows another way than declared. Places did change in the last digits at the 20 widest matrices, so this was checked (records/development/2026-11-10-controlled-training/wide-repeat.out, layer 15's feed-forward on card 0): today's product gives the same later rows bit for bit whether the first steps are rounded or not, and repeats bit for bit, so the correction touches no later row. The last digits of a product at that width do depend on how many rows are multiplied at once (1.4e-6 between 15,000 rows and all 30,546). Why the November 10 product at that width is not today's in its last digits is not found: the code of the product is the same; what the card held or the library chose that night was not looked into. The one cell that changed side is listed above and in against-state-overlap.json.",
+ "what_this_changes": "A sweep declared from here is aimed at this overlap, and its reference is made in the same form (controlled-bf16-2). What moves for an edit is the first place alone: its target there is the corrected gap, its ball is wider wherever the chance rose (everywhere at that place), and layer 0's attention is asked for nothing at the first place. state-overlap stays as it is, with a2-path, the ladder of November 10 and controlled-bf16-1 on it. The hypothesis is not tested by this run, and nothing in it says an edit would have gone differently; that is the sweep's to show.",
+ "records": {
+  "recurrence.npz": "as in state-overlap: gap, chance, halves, shared_part per place and matrix [480, 70]; the record of what the shared turn gaps add up to; embedding_gap, embedding_chance per place (unchanged: no matrix is in them)",
+  "correct-pattern.npy, wrong-pattern.npy": "float32 [480, 70, 1536], the group means of the direction of the state after each matrix's merge",
+  "members.json": "the answers, the matrices in path order, the correspondence used and how the matrix's input was taken",
+  "overlap.out": "one line per matrix and the summary",
+  "against-state-overlap.json": "everything that differs from state-overlap, per matrix and over all, rises and falls alike; made by records/development/2026-11-10-controlled-training/against_first.py"
+ },
+ "summary_line": {
+  "matrices": 70,
+  "places": 480,
+  "gap_over_chance": 3.64673746835775,
+  "gap_over_chance_142_313": 6.061031260228349,
+  "cells_diverged": 0.6233928571428572,
+  "median_halves_alike": 0.6655098929076291,
+  "embedding_gap_rms": 0.2537912578108439,
+  "first_merge_turn_gap_rms": 0.2525775900338594,
+  "first_merge_state_gap_rms": 0.04316628806054154
+ }
+}

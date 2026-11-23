@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "scope": "historical-qualification-only-not-final-experiment-readiness",
+  "source_checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-full-weight-training/final-state.json",
+    "sha256": "16523d45286c4ba64e5c52bad8675b94c05ff62fb6717fcbb3b114ea821c4891"
+  },
+  "source_measurement": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-full-weight-training/loop/21/measurement.json",
+    "sha256": "058687dc8f4f684892d769097e0fa11361b542b5cb5afee4a1b4b0d02ee3046d"
+  },
+  "source_model_identity": {
+    "kind": "native-working-revision/1",
+    "run": "studies/04-round-2-overlap/runs/vector-chance-full-weight-training",
+    "generation": 21,
+    "original_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  },
+  "events": 612,
+  "merges": 105,
+  "eligible_tensors": 538,
+  "native_types": {
+    "bf16": 278,
+    "f32": 260
+  },
+  "connected_tensors": 538,
+  "connected_zero": 0,
+  "historical_objective": 6.447133821394787e-05,
+  "historical_native_origin_checks": 3,
+  "vjp_calls": 1,
+  "jvp_calls": 2,
+  "new_generation_calls": 0,
+  "new_native_measurements": 0,
+  "installed_updates": 0,
+  "native_write_sealed": true,
+  "retained_remainders": 70,
+  "read_only_state_identity_unchanged": true,
+  "memory_payload": {
+    "dense_f32_leaf_bytes": 7508417672,
+    "compact_embedding_leaf_bytes": 8102912,
+    "cpu_leaf_and_direction_bytes": 15033041168,
+    "largest_block_operand_f32_bytes": 280002564,
+    "native_anchor_bytes": 789626880,
+    "policy": "CPU F32 leaves/directions; per-operator device transfers; layer checkpointing; sparse shared table rows",
+    "limitation": "Payload counts only; native model, captures, activations, gradients during recompute and library workspaces are additional. No native/GPU peak measured."
+  },
+  "private_ram_model_bytes": 9311304896,
+  "host_available_before_bytes": 52849053696,
+  "host_available_after_bytes": 28768399360,
+  "gpu_name": "NVIDIA GeForce RTX 5080",
+  "gpu_total_memory_bytes": 16707092480,
+  "memory_measurement_limit": "Process RSS, private memfd payload and PyTorch CUDA allocator peaks are separate accounts; they are not a complete-system memory peak and exclude some driver/cache allocations.",
+  "peak_cuda_allocated_bytes": 4742136320,
+  "peak_cuda_reserved_bytes": 5161091072,
+  "peak_process_rss_bytes": 31413276672,
+  "elapsed_seconds": 781.9491652880097,
+  "limitation": "Actual-size source/shape/connection/memory qualification on historical tolerance only. No native finite-response accuracy, new loss readiness, training stability, repair or transfer claim.",
+  "calculation_record": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2/calculation-result.json",
+    "sha256": "3e6564a6e3609b383aef97b862073facde759883458639536d32b2f6e0bd0edb"
+  },
+  "prediction_vs_result": {
+    "prediction": "All538 eligible tensors are connected,105 terms occur in each response, three differentiated native-origin checks are exact, typed BF16/F32 previews cover the complete inventory, and measured memory stays feasible on the declared hardware.",
+    "observed": "All538 eligible derivatives are connected, finite and nonzero on the retained612-position trace. Three native-origin checks and both105-merge JVP tables pass; typed preview completes without installation or generation.",
+    "limits": "Held-history implementation qualification only. It does not test a new native update, persistent468 new remainder allocations, fresh generation, native finite-derivative accuracy, or final tolerance readiness."
+  },
+  "failures_only": "Every eligible parameter and every105-merge residual on the complete retained path entered the calculation. No successful subset or favorable native step was selected; no learning step occurred.",
+  "what_this_changes": "The full parameter graph now has actual-size evidence beyond CPU fixtures. The570-second native preview and GPU worker trace-lineage gap require follow-up; globalOOM during the pass prevents a clean-machine performance claim. The original zero-radius tolerance remains unresolved and learning has not restarted.",
+  "researcher_annotation": "The original executable result is retained byte-for-byte as calculation-result.json; only the three required interpretation fields and this provenance annotation were added after execution."
+}

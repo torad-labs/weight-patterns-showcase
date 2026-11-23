@@ -1,0 +1,39 @@
+{
+  "status": "withdrawn_incomplete",
+  "complete": false,
+  "prediction_vs_result": "Five of fourteen nonself original witnesses completed. The sixth stopped at 7 of 628 events. Eli's audit established that the proposed relation is a Taylor remainder under current context, so the compilation was stopped and its objective withdrawn before a complete tolerance or reference artifact.",
+  "failures_only": "This is a failure of the proposed observable and its interpretation, not evidence against the research hypothesis. Partial costs and paths use the withdrawn discrepancy and cannot supply a new reference.",
+  "what_this_changes": "The compiler and dependent native objective paths are retired. Original partials and source provenance remain. No successor, replacement pair, native correction or post-closure evaluation is admitted.",
+  "weight_updates": 0,
+  "native_correction_loop_started": false,
+  "closure": false,
+  "repair_claim": false,
+  "source": "records/retrospectives/2026-11-15-reference-rule-withdrawal-astra.md",
+  "audit": "records/retrospectives/2026-11-15-token-audit-eli.md",
+  "stop": {
+    "mechanism": "TaskStop confirmed termination in the session",
+    "signal_time": null,
+    "process_check_at": "2026-11-15T19:25:56-06:00",
+    "matching_processes": 0,
+    "checked_command_patterns": [
+      "single-reference-original",
+      "test_pair_native",
+      "tmp7z5kdjuo"
+    ]
+  },
+  "completed_witnesses": 5,
+  "required_witnesses": 14,
+  "partial_witness": {
+    "member": "discovery-08-channel-h3",
+    "current_events": 7,
+    "required_events": 628,
+    "reference_events": 663,
+    "merges": 105
+  },
+  "retained_inventory": "retained-partials.json",
+  "retained_files_before_accounting": 16,
+  "retained_bytes_before_accounting": 444415377,
+  "complete_tolerance_artifact": false,
+  "complete_reference_artifact": false,
+  "source_retirement": "retired-sources.json"
+}

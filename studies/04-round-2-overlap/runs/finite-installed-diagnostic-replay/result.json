@@ -1,0 +1,36 @@
+{
+  "prediction_vs_result": {
+    "status": "measured",
+    "ambiguous_keys": [],
+    "sites": [
+      {
+        "cell": {
+          "key": "fixed_direction_log",
+          "event": 297,
+          "merge": 65
+        },
+        "native_origin": -0.0005533428312041178,
+        "endpoint": -0.0005200407832985365,
+        "finite_change": 3.330204790558122e-05
+      },
+      {
+        "cell": {
+          "key": "frozen-historical-turn-axis",
+          "event": 312,
+          "merge": 61
+        },
+        "native_origin": 0.14875928544034006,
+        "endpoint": 0.14888692875891704,
+        "finite_change": 0.00012764331857698097
+      }
+    ]
+  },
+  "changed_coordinates": 31552,
+  "original_history_events": 578,
+  "original_key_producers": 15,
+  "qualified_historical_change": 0.00012764331857700872,
+  "original_rounded_jvp": -4.9259623940206e-06,
+  "observed_native_change": 0.00011039465292017603,
+  "failures_only": "Only one held history and archived weight displacement, and zero prospective model installation. A finite change on the automatic diagnostic has no established causal meaning.",
+  "what_this_changes": "The same finite scoring path used by the public learner can read the original-only key-anchored response at both historical and computation-registered cells."
+}

@@ -1,0 +1,1135 @@
+{
+  "format": "whole-gap-conditional-comparison/1",
+  "prediction_vs_result": {
+    "complete": true,
+    "reference_rows": 19751,
+    "conditional_rows": 21443,
+    "merges": 105,
+    "comparisons_per_channel": 2073855,
+    "original_total": 0.06946585582271303,
+    "conditional_total": 0.15506338776473652,
+    "candidate_total": 0.1271622316557342,
+    "members": {
+      "discovery-05-channel-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.003149392910252735,
+          "size": 8.039212468091587e-05,
+          "total": 0.0032297850349336512
+        },
+        "conditional": {
+          "direction": 0.007575753452280196,
+          "size": 0.0003558116329487158,
+          "total": 0.007931565085228912
+        },
+        "candidate": {
+          "direction": 0.00600762582637874,
+          "size": 0.0002112494305242302,
+          "total": 0.00621887525690297
+        },
+        "history_change": {
+          "direction": 0.004426360542027461,
+          "size": 0.0002754195082677999,
+          "total": 0.004701780050295261
+        },
+        "weight_change": {
+          "direction": -0.0015681276259014564,
+          "size": -0.00014456220242448558,
+          "total": -0.0017126898283259424
+        },
+        "total_change": {
+          "direction": 0.0028582329161260045,
+          "size": 0.00013085730584331434,
+          "total": 0.0029890902219693186
+        }
+      },
+      "discovery-10-channel-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.0035765989388178124,
+          "size": 9.893750420466591e-05,
+          "total": 0.003675536443022478
+        },
+        "conditional": {
+          "direction": 0.004136583464400861,
+          "size": 0.00015170669690299643,
+          "total": 0.004288290161303858
+        },
+        "candidate": {
+          "direction": 0.0032078620571922203,
+          "size": 0.00013368575056617844,
+          "total": 0.0033415478077583986
+        },
+        "history_change": {
+          "direction": 0.0005599845255830484,
+          "size": 5.2769192698330514e-05,
+          "total": 0.0006127537182813794
+        },
+        "weight_change": {
+          "direction": -0.0009287214072086405,
+          "size": -1.8020946336817984e-05,
+          "total": -0.000946742353545459
+        },
+        "total_change": {
+          "direction": -0.0003687368816255921,
+          "size": 3.474824636151253e-05,
+          "total": -0.00033398863526407953
+        }
+      },
+      "discovery-17-channel-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.003807367027913659,
+          "size": 0.00010586170445796005,
+          "total": 0.0039132287323716194
+        },
+        "conditional": {
+          "direction": 0.003459482575427071,
+          "size": 0.00010776359241606632,
+          "total": 0.003567246167843137
+        },
+        "candidate": {
+          "direction": 0.0028528057496505807,
+          "size": 9.07467042078467e-05,
+          "total": 0.0029435524538584273
+        },
+        "history_change": {
+          "direction": -0.00034788445248658826,
+          "size": 1.9018879581062756e-06,
+          "total": -0.00034598256452848244
+        },
+        "weight_change": {
+          "direction": -0.0006066768257764902,
+          "size": -1.701688820821962e-05,
+          "total": -0.0006236937139847097
+        },
+        "total_change": {
+          "direction": -0.0009545612782630784,
+          "size": -1.5115000250113346e-05,
+          "total": -0.0009696762785131922
+        }
+      },
+      "expanded-001-h3": {
+        "correct": false,
+        "original": {
+          "direction": 0.007847829414360338,
+          "size": 0.00022549013056585946,
+          "total": 0.008073319544926199
+        },
+        "conditional": {
+          "direction": 0.009812403051020312,
+          "size": 0.0005672586243283908,
+          "total": 0.010379661675348702
+        },
+        "candidate": {
+          "direction": 0.007778025335039219,
+          "size": 0.0003016379670072206,
+          "total": 0.008079663302046439
+        },
+        "history_change": {
+          "direction": 0.0019645736366599737,
+          "size": 0.00034176849376253135,
+          "total": 0.002306342130422504
+        },
+        "weight_change": {
+          "direction": -0.0020343777159810934,
+          "size": -0.0002656206573211702,
+          "total": -0.0022999983733022634
+        },
+        "total_change": {
+          "direction": -6.980407932111968e-05,
+          "size": 7.614783644136115e-05,
+          "total": 6.343757120240434e-06
+        }
+      },
+      "expanded-020-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.007102441514534445,
+          "size": 0.0002784269460253429,
+          "total": 0.007380868460559788
+        },
+        "conditional": {
+          "direction": 0.011454163218267673,
+          "size": 0.0006028206550543047,
+          "total": 0.012056983873321978
+        },
+        "candidate": {
+          "direction": 0.008740896299316686,
+          "size": 0.0003364249965962019,
+          "total": 0.009077321295912887
+        },
+        "history_change": {
+          "direction": 0.004351721703733228,
+          "size": 0.00032439370902896187,
+          "total": 0.00467611541276219
+        },
+        "weight_change": {
+          "direction": -0.002713266918950987,
+          "size": -0.0002663956584581029,
+          "total": -0.0029796625774090903
+        },
+        "total_change": {
+          "direction": 0.001638454784782241,
+          "size": 5.799805057085899e-05,
+          "total": 0.0016964528353530994
+        }
+      },
+      "expanded-034-h3": {
+        "correct": false,
+        "original": {
+          "direction": 0.004844281273637592,
+          "size": 0.00012862031782869365,
+          "total": 0.004972901591466286
+        },
+        "conditional": {
+          "direction": 0.010947994126684499,
+          "size": 0.0006210023778258826,
+          "total": 0.011568996504510381
+        },
+        "candidate": {
+          "direction": 0.009026650282396909,
+          "size": 0.00044678894144859686,
+          "total": 0.009473439223845505
+        },
+        "history_change": {
+          "direction": 0.006103712853046906,
+          "size": 0.0004923820599971889,
+          "total": 0.0065960949130440955
+        },
+        "weight_change": {
+          "direction": -0.0019213438442875902,
+          "size": -0.00017421343637728575,
+          "total": -0.0020955572806648764
+        },
+        "total_change": {
+          "direction": 0.004182369008759316,
+          "size": 0.0003181686236199032,
+          "total": 0.004500537632379219
+        }
+      },
+      "expanded-042-h3": {
+        "correct": false,
+        "original": {
+          "direction": 0.0050602169761380916,
+          "size": 0.0001269981215736695,
+          "total": 0.005187215097711761
+        },
+        "conditional": {
+          "direction": 0.004581578295407303,
+          "size": 0.00010805359983561352,
+          "total": 0.004689631895242917
+        },
+        "candidate": {
+          "direction": 0.0036933942001814175,
+          "size": 9.904499629036608e-05,
+          "total": 0.0037924391964717836
+        },
+        "history_change": {
+          "direction": -0.00047863868073078856,
+          "size": -1.8944521738055984e-05,
+          "total": -0.000497583202468844
+        },
+        "weight_change": {
+          "direction": -0.0008881840952258855,
+          "size": -9.008603545247436e-06,
+          "total": -0.0008971926987711332
+        },
+        "total_change": {
+          "direction": -0.001366822775956674,
+          "size": -2.795312528330342e-05,
+          "total": -0.0013947759012399772
+        }
+      },
+      "expanded-045-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.002389165464706389,
+          "size": 6.396409749525852e-05,
+          "total": 0.0024531295622016477
+        },
+        "conditional": {
+          "direction": 0.00207440691772768,
+          "size": 5.5450113988031016e-05,
+          "total": 0.002129857031715711
+        },
+        "candidate": {
+          "direction": 0.0015954756036884244,
+          "size": 4.753571723840198e-05,
+          "total": 0.0016430113209268263
+        },
+        "history_change": {
+          "direction": -0.00031475854697870934,
+          "size": -8.5139835072275e-06,
+          "total": -0.00032327253048593674
+        },
+        "weight_change": {
+          "direction": -0.00047893131403925547,
+          "size": -7.914396749629033e-06,
+          "total": -0.00048684571078888464
+        },
+        "total_change": {
+          "direction": -0.0007936898610179648,
+          "size": -1.6428380256856533e-05,
+          "total": -0.0008101182412748214
+        }
+      },
+      "expanded-046-h3": {
+        "correct": false,
+        "original": {
+          "direction": 0.002291629940620777,
+          "size": 6.965466775595731e-05,
+          "total": 0.0023612846083767344
+        },
+        "conditional": {
+          "direction": 0.002025840547137636,
+          "size": 5.195886033943832e-05,
+          "total": 0.0020777994074770746
+        },
+        "candidate": {
+          "direction": 0.0015001565773105705,
+          "size": 4.686580495341351e-05,
+          "total": 0.001547022382263984
+        },
+        "history_change": {
+          "direction": -0.0002657893934831408,
+          "size": -1.7695807416518985e-05,
+          "total": -0.00028348520089965974
+        },
+        "weight_change": {
+          "direction": -0.0005256839698270655,
+          "size": -5.093055386024814e-06,
+          "total": -0.0005307770252130906
+        },
+        "total_change": {
+          "direction": -0.0007914733633102064,
+          "size": -2.27888628025438e-05,
+          "total": -0.0008142622261127503
+        }
+      },
+      "expanded-068-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.0032873352387181244,
+          "size": 9.058923282997463e-05,
+          "total": 0.003377924471548099
+        },
+        "conditional": {
+          "direction": 0.002603709479549579,
+          "size": 6.443496747056295e-05,
+          "total": 0.0026681444470201417
+        },
+        "candidate": {
+          "direction": 0.0020633249358929474,
+          "size": 5.7833069574639256e-05,
+          "total": 0.0021211580054675866
+        },
+        "history_change": {
+          "direction": -0.0006836257591685455,
+          "size": -2.6154265359411684e-05,
+          "total": -0.0007097800245279575
+        },
+        "weight_change": {
+          "direction": -0.0005403845436566315,
+          "size": -6.601897895923689e-06,
+          "total": -0.0005469864415525551
+        },
+        "total_change": {
+          "direction": -0.001224010302825177,
+          "size": -3.2756163255335373e-05,
+          "total": -0.0012567664660805126
+        }
+      },
+      "expanded-070-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.0025156603115806166,
+          "size": 6.222710037434451e-05,
+          "total": 0.002577887411954961
+        },
+        "conditional": {
+          "direction": 0.0018233345466416569,
+          "size": 4.5223511547531545e-05,
+          "total": 0.0018685580581891885
+        },
+        "candidate": {
+          "direction": 0.001408505179173366,
+          "size": 4.318450763842201e-05,
+          "total": 0.0014516896868117881
+        },
+        "history_change": {
+          "direction": -0.0006923257649389598,
+          "size": -1.7003588826812964e-05,
+          "total": -0.0007093293537657726
+        },
+        "weight_change": {
+          "direction": -0.00041482936746829084,
+          "size": -2.0390039091095323e-06,
+          "total": -0.00041686837137740033
+        },
+        "total_change": {
+          "direction": -0.0011071551324072506,
+          "size": -1.9042592735922497e-05,
+          "total": -0.001126197725143173
+        }
+      },
+      "expanded-087-h3": {
+        "correct": false,
+        "original": {
+          "direction": 0.008604543797452513,
+          "size": 0.00027377868635117904,
+          "total": 0.008878322483803693
+        },
+        "conditional": {
+          "direction": 0.01305389507146877,
+          "size": 0.0009961904797946358,
+          "total": 0.014050085551263405
+        },
+        "candidate": {
+          "direction": 0.010825641927926052,
+          "size": 0.0008640544993445419,
+          "total": 0.011689696427270595
+        },
+        "history_change": {
+          "direction": 0.0044493512740162566,
+          "size": 0.0007224117934434567,
+          "total": 0.0051717630674597125
+        },
+        "weight_change": {
+          "direction": -0.002228253143542717,
+          "size": -0.00013213598045009386,
+          "total": -0.00236038912399281
+        },
+        "total_change": {
+          "direction": 0.0022210981304735394,
+          "size": 0.0005902758129933629,
+          "total": 0.0028113739434669025
+        }
+      },
+      "expanded-092-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.0029850856771897515,
+          "size": 7.354061575075814e-05,
+          "total": 0.0030586262929405096
+        },
+        "conditional": {
+          "direction": 0.0032792704686964123,
+          "size": 9.037016900997018e-05,
+          "total": 0.0033696406377063826
+        },
+        "candidate": {
+          "direction": 0.0026816920450826874,
+          "size": 7.999177599564484e-05,
+          "total": 0.002761683821078332
+        },
+        "history_change": {
+          "direction": 0.00029418479150666085,
+          "size": 1.6829553259212042e-05,
+          "total": 0.00031101434476587305
+        },
+        "weight_change": {
+          "direction": -0.0005975784236137249,
+          "size": -1.0378393014325336e-05,
+          "total": -0.0006079568166280505
+        },
+        "total_change": {
+          "direction": -0.00030339363210706407,
+          "size": 6.451160244886706e-06,
+          "total": -0.0002969424718621775
+        }
+      },
+      "expanded-094-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.0042491309894294995,
+          "size": 0.000136516055096516,
+          "total": 0.004385647044526015
+        },
+        "conditional": {
+          "direction": 0.006006798166838365,
+          "size": 0.00025030457481578993,
+          "total": 0.006257102741654155
+        },
+        "candidate": {
+          "direction": 0.005059327110616442,
+          "size": 0.00019696460439742313,
+          "total": 0.005256291715013865
+        },
+        "history_change": {
+          "direction": 0.0017576671774088655,
+          "size": 0.00011378851971927394,
+          "total": 0.00187145569712814
+        },
+        "weight_change": {
+          "direction": -0.000947471056221923,
+          "size": -5.33399704183668e-05,
+          "total": -0.0010008110266402906
+        },
+        "total_change": {
+          "direction": 0.0008101961211869424,
+          "size": 6.044854930090714e-05,
+          "total": 0.0008706446704878495
+        }
+      },
+      "expanded-095-h1": {
+        "correct": false,
+        "original": {
+          "direction": 0.0057543554258001,
+          "size": 0.00018582361655906793,
+          "total": 0.005940179042359168
+        },
+        "conditional": {
+          "direction": 0.0072689613544310245,
+          "size": 0.00037772326949268484,
+          "total": 0.0076466846239237095
+        },
+        "candidate": {
+          "direction": 0.0060762723785987545,
+          "size": 0.00036816657347836767,
+          "total": 0.006444438952077122
+        },
+        "history_change": {
+          "direction": 0.0015146059286309244,
+          "size": 0.0001918996529336169,
+          "total": 0.0017065055815645418
+        },
+        "weight_change": {
+          "direction": -0.00119268897583227,
+          "size": -9.556696014317173e-06,
+          "total": -0.0012022456718465873
+        },
+        "total_change": {
+          "direction": 0.0003219169527986544,
+          "size": 0.00018234295691929974,
+          "total": 0.0005042599097179546
+        }
+      },
+      "discovery-01-channel-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.103044447912823e-17,
+          "size": 6.865064548572924e-16,
+          "total": 6.975368993364206e-16
+        },
+        "conditional": {
+          "direction": 0.0006171765914312751,
+          "size": 1.3379626513689639e-05,
+          "total": 0.0006305562179449648
+        },
+        "candidate": {
+          "direction": 0.0004930823551412731,
+          "size": 1.3706211000336353e-05,
+          "total": 0.0005067885661416095
+        },
+        "history_change": {
+          "direction": 0.0006171765914312641,
+          "size": 1.3379626513003132e-05,
+          "total": 0.0006305562179442672
+        },
+        "weight_change": {
+          "direction": -0.00012409423629000205,
+          "size": 3.265844866467141e-07,
+          "total": -0.00012376765180335532
+        },
+        "total_change": {
+          "direction": 0.000493082355141262,
+          "size": 1.3706210999649846e-05,
+          "total": 0.0005067885661409119
+        }
+      },
+      "discovery-06-channel-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.0963120493440601e-17,
+          "size": 6.785887494438484e-16,
+          "total": 6.89551869937289e-16
+        },
+        "conditional": {
+          "direction": 0.009158732105805187,
+          "size": 0.0005477288250157314,
+          "total": 0.009706460930820919
+        },
+        "candidate": {
+          "direction": 0.007149741172311962,
+          "size": 0.00032737119716768855,
+          "total": 0.00747711236947965
+        },
+        "history_change": {
+          "direction": 0.009158732105805176,
+          "size": 0.0005477288250150528,
+          "total": 0.00970646093082023
+        },
+        "weight_change": {
+          "direction": -0.002008990933493225,
+          "size": -0.0002203576278480429,
+          "total": -0.0022293485613412685
+        },
+        "total_change": {
+          "direction": 0.0071497411723119506,
+          "size": 0.00032737119716700995,
+          "total": 0.007477112369478961
+        }
+      },
+      "discovery-15-channel-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.0993676863155036e-17,
+          "size": 6.838460838247258e-16,
+          "total": 6.948397606878808e-16
+        },
+        "conditional": {
+          "direction": 0.004360833702090571,
+          "size": 0.00013680120164550973,
+          "total": 0.004497634903736081
+        },
+        "candidate": {
+          "direction": 0.0039004859521864703,
+          "size": 0.0001292820940325279,
+          "total": 0.004029768046218998
+        },
+        "history_change": {
+          "direction": 0.00436083370209056,
+          "size": 0.0001368012016448259,
+          "total": 0.004497634903735386
+        },
+        "weight_change": {
+          "direction": -0.0004603477499041009,
+          "size": -7.519107612981833e-06,
+          "total": -0.0004678668575170833
+        },
+        "total_change": {
+          "direction": 0.0039004859521864594,
+          "size": 0.00012928209403184407,
+          "total": 0.004029768046218303
+        }
+      },
+      "discovery-00-channel-h3": {
+        "correct": true,
+        "original": {
+          "direction": 1.0842719138880916e-17,
+          "size": 6.868260125622563e-16,
+          "total": 6.976687317011372e-16
+        },
+        "conditional": {
+          "direction": 0.007406181251239954,
+          "size": 0.0003628371071728892,
+          "total": 0.007769018358412843
+        },
+        "candidate": {
+          "direction": 0.005983095315160786,
+          "size": 0.0002451155722912974,
+          "total": 0.006228210887452084
+        },
+        "history_change": {
+          "direction": 0.0074061812512399424,
+          "size": 0.00036283710717220234,
+          "total": 0.007769018358412145
+        },
+        "weight_change": {
+          "direction": -0.0014230859360791675,
+          "size": -0.00011772153488159181,
+          "total": -0.001540807470960759
+        },
+        "total_change": {
+          "direction": 0.005983095315160775,
+          "size": 0.00024511557229061053,
+          "total": 0.006228210887451386
+        }
+      },
+      "expanded-004-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.1025353635716589e-17,
+          "size": 6.805472465402575e-16,
+          "total": 6.915726001759741e-16
+        },
+        "conditional": {
+          "direction": 0.000618076787536627,
+          "size": 1.3274032330689409e-05,
+          "total": 0.0006313508198673164
+        },
+        "candidate": {
+          "direction": 0.00049224547361624,
+          "size": 1.3646952964362801e-05,
+          "total": 0.0005058924265806027
+        },
+        "history_change": {
+          "direction": 0.000618076787536616,
+          "size": 1.3274032330008862e-05,
+          "total": 0.0006313508198666248
+        },
+        "weight_change": {
+          "direction": -0.00012583131392038705,
+          "size": 3.729206336733921e-07,
+          "total": -0.0001254583932867137
+        },
+        "total_change": {
+          "direction": 0.0004922454736162289,
+          "size": 1.3646952963682254e-05,
+          "total": 0.0005058924265799111
+        }
+      },
+      "discovery-08-channel-h3": {
+        "correct": true,
+        "original": {
+          "direction": 1.0991039379974562e-17,
+          "size": 6.795357771606809e-16,
+          "total": 6.905268165406555e-16
+        },
+        "conditional": {
+          "direction": 0.004337779168753994,
+          "size": 0.00012860498201956372,
+          "total": 0.004466384150773558
+        },
+        "candidate": {
+          "direction": 0.003610117792126028,
+          "size": 0.0001223145630737661,
+          "total": 0.003732432355199794
+        },
+        "history_change": {
+          "direction": 0.004337779168753983,
+          "size": 0.0001286049820188842,
+          "total": 0.004466384150772868
+        },
+        "weight_change": {
+          "direction": -0.0007276613766279663,
+          "size": -6.290418945797618e-06,
+          "total": -0.000733951795573764
+        },
+        "total_change": {
+          "direction": 0.003610117792126017,
+          "size": 0.00012231456307308658,
+          "total": 0.0037324323551991036
+        }
+      },
+      "discovery-10-channel-h3": {
+        "correct": true,
+        "original": {
+          "direction": 1.0852090737796629e-17,
+          "size": 6.886082686494521e-16,
+          "total": 6.994603593872487e-16
+        },
+        "conditional": {
+          "direction": 0.004439272774560569,
+          "size": 0.00013983515712407167,
+          "total": 0.004579107931684641
+        },
+        "candidate": {
+          "direction": 0.003938239643092026,
+          "size": 0.00013692602904390083,
+          "total": 0.004075165672135927
+        },
+        "history_change": {
+          "direction": 0.004439272774560557,
+          "size": 0.00013983515712338306,
+          "total": 0.004579107931683942
+        },
+        "weight_change": {
+          "direction": -0.0005010331314685423,
+          "size": -2.9091280801708406e-06,
+          "total": -0.0005039422595487135
+        },
+        "total_change": {
+          "direction": 0.003938239643092015,
+          "size": 0.00013692602904321222,
+          "total": 0.004075165672135228
+        }
+      },
+      "expanded-029-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.1050524694402336e-17,
+          "size": 6.809448729646054e-16,
+          "total": 6.919953976590078e-16
+        },
+        "conditional": {
+          "direction": 0.0024114257968721425,
+          "size": 6.962783934534909e-05,
+          "total": 0.0024810536362174914
+        },
+        "candidate": {
+          "direction": 0.0023350343919833795,
+          "size": 7.285063812518307e-05,
+          "total": 0.0024078850301085626
+        },
+        "history_change": {
+          "direction": 0.0024114257968721317,
+          "size": 6.962783934466814e-05,
+          "total": 0.0024810536362167993
+        },
+        "weight_change": {
+          "direction": -7.639140488876301e-05,
+          "size": 3.2227987798339884e-06,
+          "total": -7.316860610892886e-05
+        },
+        "total_change": {
+          "direction": 0.0023350343919833687,
+          "size": 7.285063812450213e-05,
+          "total": 0.0024078850301078704
+        }
+      },
+      "discovery-11-channel-h3": {
+        "correct": true,
+        "original": {
+          "direction": 1.10641497687329e-17,
+          "size": 6.814985021715151e-16,
+          "total": 6.925626519402479e-16
+        },
+        "conditional": {
+          "direction": 0.0017908297565263109,
+          "size": 4.096833711276966e-05,
+          "total": 0.0018317980936390806
+        },
+        "candidate": {
+          "direction": 0.0014666490374134944,
+          "size": 3.592428847364072e-05,
+          "total": 0.001502573325887135
+        },
+        "history_change": {
+          "direction": 0.0017908297565262998,
+          "size": 4.096833711208816e-05,
+          "total": 0.001831798093638388
+        },
+        "weight_change": {
+          "direction": -0.00032418071911281647,
+          "size": -5.04404863912894e-06,
+          "total": -0.0003292247677519455
+        },
+        "total_change": {
+          "direction": 0.0014666490374134833,
+          "size": 3.592428847295922e-05,
+          "total": 0.0015025733258864425
+        }
+      },
+      "expanded-064-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.0891513806285287e-17,
+          "size": 6.785961489381947e-16,
+          "total": 6.8948766274448e-16
+        },
+        "conditional": {
+          "direction": 0.002710113765710827,
+          "size": 6.939202232091214e-05,
+          "total": 0.002779505788031739
+        },
+        "candidate": {
+          "direction": 0.002351183745811328,
+          "size": 6.478640525883109e-05,
+          "total": 0.002415970151070159
+        },
+        "history_change": {
+          "direction": 0.002710113765710816,
+          "size": 6.939202232023354e-05,
+          "total": 0.0027795057880310495
+        },
+        "weight_change": {
+          "direction": -0.0003589300198994991,
+          "size": -4.6056170620810524e-06,
+          "total": -0.00036353563696158017
+        },
+        "total_change": {
+          "direction": 0.002351183745811317,
+          "size": 6.478640525815249e-05,
+          "total": 0.0024159701510694694
+        }
+      },
+      "expanded-071-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.0993279358739197e-17,
+          "size": 6.841131843273224e-16,
+          "total": 6.951064636860617e-16
+        },
+        "conditional": {
+          "direction": 0.0052114045235963045,
+          "size": 0.00013760912509017153,
+          "total": 0.005349013648686476
+        },
+        "candidate": {
+          "direction": 0.004884058032993621,
+          "size": 0.0001392047998253067,
+          "total": 0.005023262832818928
+        },
+        "history_change": {
+          "direction": 0.005211404523596293,
+          "size": 0.00013760912508948742,
+          "total": 0.005349013648685781
+        },
+        "weight_change": {
+          "direction": -0.00032734649060268354,
+          "size": 1.5956747351351832e-06,
+          "total": -0.00032575081586754765
+        },
+        "total_change": {
+          "direction": 0.00488405803299361,
+          "size": 0.0001392047998246226,
+          "total": 0.005023262832818233
+        }
+      },
+      "expanded-039-h3": {
+        "correct": true,
+        "original": {
+          "direction": 1.1100691113276521e-17,
+          "size": 6.783804620133873e-16,
+          "total": 6.894811531266638e-16
+        },
+        "conditional": {
+          "direction": 0.0036319695134067226,
+          "size": 8.75629035997738e-05,
+          "total": 0.0037195324170064964
+        },
+        "candidate": {
+          "direction": 0.0035506969097905015,
+          "size": 9.014662808419541e-05,
+          "total": 0.003640843537874697
+        },
+        "history_change": {
+          "direction": 0.0036319695134067113,
+          "size": 8.756290359909541e-05,
+          "total": 0.003719532417005807
+        },
+        "weight_change": {
+          "direction": -8.12726036162211e-05,
+          "size": 2.583724484421618e-06,
+          "total": -7.868887913179941e-05
+        },
+        "total_change": {
+          "direction": 0.0035506969097904902,
+          "size": 9.014662808351703e-05,
+          "total": 0.0036408435378740074
+        }
+      },
+      "expanded-076-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.1016891108437484e-17,
+          "size": 6.871750689946543e-16,
+          "total": 6.981919601030918e-16
+        },
+        "conditional": {
+          "direction": 0.0013014816982403231,
+          "size": 4.61962449391494e-05,
+          "total": 0.0013476779431794725
+        },
+        "candidate": {
+          "direction": 0.0011848681320465644,
+          "size": 5.124803131232092e-05,
+          "total": 0.0012361161633588852
+        },
+        "history_change": {
+          "direction": 0.001301481698240312,
+          "size": 4.619624493846222e-05,
+          "total": 0.0013476779431787743
+        },
+        "weight_change": {
+          "direction": -0.00011661356619375876,
+          "size": 5.051786373171525e-06,
+          "total": -0.00011156177982058727
+        },
+        "total_change": {
+          "direction": 0.0011848681320465533,
+          "size": 5.124803131163375e-05,
+          "total": 0.001236116163358187
+        }
+      },
+      "expanded-078-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.1018015145717699e-17,
+          "size": 6.881697741965077e-16,
+          "total": 6.991877893422254e-16
+        },
+        "conditional": {
+          "direction": 0.0020372534516336247,
+          "size": 6.251038634673098e-05,
+          "total": 0.002099763837980356
+        },
+        "candidate": {
+          "direction": 0.001890573513845153,
+          "size": 6.338790505773502e-05,
+          "total": 0.0019539614189028882
+        },
+        "history_change": {
+          "direction": 0.002037253451633614,
+          "size": 6.251038634604281e-05,
+          "total": 0.0020997638379796567
+        },
+        "weight_change": {
+          "direction": -0.0001466799377884717,
+          "size": 8.775187110040389e-07,
+          "total": -0.0001458024190774676
+        },
+        "total_change": {
+          "direction": 0.001890573513845142,
+          "size": 6.338790505704685e-05,
+          "total": 0.001953961418902189
+        }
+      },
+      "expanded-023-h1": {
+        "correct": true,
+        "original": {
+          "direction": 1.1045749758157179e-17,
+          "size": 6.864790237209862e-16,
+          "total": 6.975247734791434e-16
+        },
+        "conditional": {
+          "direction": 0.008250708715762818,
+          "size": 0.0003735725092426101,
+          "total": 0.008624281225005428
+        },
+        "candidate": {
+          "direction": 0.0063368561533529025,
+          "size": 0.00024756187144486054,
+          "total": 0.006584418024797763
+        },
+        "history_change": {
+          "direction": 0.008250708715762807,
+          "size": 0.00037357250924192366,
+          "total": 0.008624281225004731
+        },
+        "weight_change": {
+          "direction": -0.0019138525624099153,
+          "size": -0.00012601063779774959,
+          "total": -0.002039863200207666
+        },
+        "total_change": {
+          "direction": 0.006336856153352891,
+          "size": 0.0002475618714441741,
+          "total": 0.006584418024797065
+        }
+      }
+    },
+    "groups": {
+      "wrong": {
+        "original": {
+          "direction": 0.06746503490115245,
+          "size": 0.0020008209215501634,
+          "total": 0.0694658558227026
+        },
+        "conditional": {
+          "direction": 0.09010417473597905,
+          "size": 0.004446073125770615,
+          "total": 0.09455024786174963
+        },
+        "candidate": {
+          "direction": 0.07251765550844502,
+          "size": 0.003324175339261495,
+          "total": 0.07584183084770652
+        },
+        "history_change": {
+          "direction": 0.022639139834826592,
+          "size": 0.002445252204220452,
+          "total": 0.025084392039047047
+        },
+        "weight_change": {
+          "direction": -0.01758651922753402,
+          "size": -0.00112189778650912,
+          "total": -0.018708417014043143
+        },
+        "total_change": {
+          "direction": 0.00505262060729257,
+          "size": 0.0013233544177113318,
+          "total": 0.006375975025003899
+        }
+      },
+      "correct": {
+        "original": {
+          "direction": 1.6487925948184117e-16,
+          "size": 1.0249815630365688e-14,
+          "total": 1.0414694889847528e-14
+        },
+        "conditional": {
+          "direction": 0.058283239603167246,
+          "size": 0.002229900299819612,
+          "total": 0.06051313990298686
+        },
+        "candidate": {
+          "direction": 0.049566927620871726,
+          "size": 0.0017534731871559532,
+          "total": 0.051320400808027675
+        },
+        "history_change": {
+          "direction": 0.058283239603167086,
+          "size": 0.0022299002998093617,
+          "total": 0.06051313990297645
+        },
+        "weight_change": {
+          "direction": -0.00871631198229552,
+          "size": -0.00047642711266365805,
+          "total": -0.009192739094959181
+        },
+        "total_change": {
+          "direction": 0.04956692762087156,
+          "size": 0.0017534731871457034,
+          "total": 0.051320400808017266
+        }
+      }
+    }
+  },
+  "failures_only": {
+    "limits": [
+      "Ordered conditional contrast, not a unique causal share or history-independent repair number.",
+      "Correspondence is fixed to the primary capture; complete coverage does not prove semantic equivalence.",
+      "The fields are experimental targets; lower field error alone is not capability repair.",
+      "Fitting members only; no no-fit or sealed data. Neither primary result is regraded."
+    ]
+  },
+  "what_this_changes": "Separates the observed field-loss change into history under original weights and weights on that fixed history.",
+  "bindings": {
+    "declaration": {
+      "record": "studies/04-round-2-overlap/runs/whole-context-conditional-affine/declaration.json",
+      "sha256": "136d5bc05d5e9f2fa437b7668a4f9e0b2cea6b3ac0112e92bf13949d4747dbba"
+    },
+    "target": "studies/04-round-2-overlap/runs/whole-context-targets-original/affine",
+    "target_sha256": "50d32b89e09922265a3436a56a3c4eb52bacb49f0e4e1fb092819a548f7d240d",
+    "capture": "studies/04-round-2-overlap/runs/whole-gap-affine-original",
+    "normalization": {
+      "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+      "tensors": {
+        "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+        "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+      },
+      "reference": {
+        "record": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+        "sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36"
+      }
+    },
+    "mapping": {
+      "record": "studies/04-round-2-overlap/runs/same-history-control-affine/correspondence.json",
+      "sha256": "232a8afe27e5e3ea29dc5b105c6d752556a90a18c88ba33f17a47045e3936192"
+    },
+    "primary": {
+      "record": "studies/04-round-2-overlap/runs/whole-gap-affine-original/correspondence.json",
+      "sha256": "dbb8452f4a7a9858d8ea4264b2a12bdc189751e973f5c8ef2513dadab746114d"
+    },
+    "protocol": {
+      "record": "studies/04-round-2-overlap/runs/same-history-control-affine/reader-protocol/controlled-bf16-2.json",
+      "sha256": "3a2c6b61e9047c00a1a9281f75d3b17fb5cdc6d4cacb5c4838a08135684374f6"
+    },
+    "check": {
+      "record": "studies/04-round-2-overlap/runs/same-history-control-affine/check.json",
+      "sha256": "db9c5b5e42589cde794b124e701d7a6368cfb67aa978030c993cc4f0c66dc5bb"
+    },
+    "original_score": {
+      "record": "studies/04-round-2-overlap/runs/whole-context-score-original/affine-score.json",
+      "sha256": "42dc07f9a69ce3b18bd04c5739767f09819003083bd90d7599b1109033cdeb50"
+    },
+    "candidate_score": {
+      "record": "studies/04-round-2-overlap/runs/whole-gap-affine-original/comparison/candidate-score.json",
+      "sha256": "67b631c19892081ef84070b03c231e0944c7947b1190f0697478a5c5d407974d"
+    },
+    "primary_result": {
+      "record": "studies/04-round-2-overlap/runs/whole-gap-affine-original/comparison/result.json",
+      "sha256": "eb0d3edd473fe2e12a9e2f3f48d97112bb363869ae6aa60556d9504232c32ec3"
+    },
+    "original_reading": "studies/04-round-2-overlap/runs/whole-states-original/reading",
+    "candidate_reading": "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading",
+    "conditional_reading": "studies/04-round-2-overlap/runs/same-history-control-affine/reading",
+    "conditional_score": {
+      "record": "studies/04-round-2-overlap/runs/whole-context-conditional-affine/conditional-score.json",
+      "sha256": "5cb33b4ceb4593ee810f8cfc91955f338451f6bea5f8235d8006088bb5a31b22"
+    }
+  }
+}

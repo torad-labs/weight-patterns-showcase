@@ -1,0 +1,127 @@
+{
+  "predictions": {
+    "old": {
+      "original": {
+        "capped": 0.00029245995972935026,
+        "standard": 0.00029245703627089436,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.393291497485534
+          ],
+          "excess": [
+            0.013111039516526923
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.39329286887467246
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "finite": {
+        "capped": 0.00029170313801155903,
+        "standard": 0.00029170020323210366,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.3933168589972827
+          ],
+          "excess": [
+            0.013136401028275624
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.3933189598827423
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "signed_change": 2.5361511748700494e-05,
+      "original_all_105_merges_bitwise": true
+    },
+    "native_k_anchor": {
+      "original": {
+        "capped": 0.00029245995972935026,
+        "standard": 0.00029245703627089436,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.393291497485534
+          ],
+          "excess": [
+            0.013111039516526923
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.39329286887467246
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "finite": {
+        "capped": 0.00029164239277803,
+        "standard": 0.0002916394421547991,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.39335227052369104
+          ],
+          "excess": [
+            0.01317181255468397
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.393355635551796
+          ],
+          "limit": 0.38018045796900707
+        }
+      },
+      "signed_change": 6.0773038157047043e-05,
+      "original_all_105_merges_bitwise": true
+    }
+  },
+  "native": {
+    "signed_change": 0.0003817640871362493,
+    "capped_loss": 0.00029161308231173607,
+    "standard_loss": 0.0002916099861255271,
+    "before": 0.393291497485534,
+    "after": 0.39367326157267024,
+    "original_capture": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+      "sha256": "6f258a0cdab83dd088848b647fca8e59277de6e1fcd87a2082cb9ff91299e6d5"
+    },
+    "endpoint_capture": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/capture.json",
+      "sha256": "5ff2635400486a7e159e99b8bdbf4ac164f63605a17e85d0c766f09e73856d95"
+    },
+    "unchanged_endpoint": true
+  },
+  "signed_absolute_errors": {
+    "old": 0.0003564025753875488,
+    "native_k_anchor": 0.0003209910489792023
+  },
+  "capped_absolute_errors": {
+    "old": 9.005569982296251e-08,
+    "native_k_anchor": 2.9310466293918248e-08
+  },
+  "exact_endpoint": {
+    "changed_native_values": 31564,
+    "changed_tensors": 415,
+    "displacement_squared": 4.2419304069858225e-09
+  },
+  "producer_count": 15,
+  "events": 578,
+  "pairs": 584,
+  "prediction_vs_result": "With both forecasts already saved, compare the independent earlier directional finite endpoint to both graphs on the original held path.",
+  "failures_only": "One different archived displacement on the same fitted prompt is a second numerical validation and does not test transfer. No generation, new capture, retuning, gradient or installation.",
+  "what_this_changes": "Measures whether the signed finite prediction gain persists for another existing exact physical displacement with the wrapper and key source frozen."
+}

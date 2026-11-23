@@ -1,0 +1,116 @@
+{
+  "method_step": 3,
+  "declared_at": "2026-11-18T19:31:35.242308-06:00",
+  "why_this_direction": "The existing joint-stage matcher abstained after native free regeneration. Test the frozen landmark detector on every event, with the entire fitted family excluded as donor.",
+  "repeating_pattern_check": "Earlier background and friction confusions and four whole-trace misregistrations make uniqueness on a single generation insufficient.",
+  "what_went_wrong_before": "The free generated response changed its phase position. A plausible old whole-trace mate alone incorrectly localized four successful witnesses.",
+  "hypothesis": "A distinct computational phase witness can recognize the early-27 free downhill phase and reject valid friction and historically wrong whole-trace mates.",
+  "prediction": "Frozen local three-class two-turn registration and its downstream score recognize the audited downhill phase on the changed trajectory.",
+  "would_weaken_it": "A missed or false phase, extra events, valid friction alerts or acceptance of previously misregistered reference mates.",
+  "rule": "Original local argmin over consecutive FFN20 turns and three donor classes, with the original family exclusion. Also report the pre-existing prefix and forced two-way decisions on these events. Prospectively test one alternative: each eligible annotated donor downhill landmark must find the same unique nearest query event, and that event must be closer to downhill than to friction. Run on all 30 original responses and saved checkpoint controls. No cutoffs, outcome words, externally supplied query event or optimization. Do not use this open development read as a new blind split.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/descent-operand-identity/declaration.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/result.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/donor-phases.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+    "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/origin/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/edited/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/origin/capture.json",
+    "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/edited/capture.json",
+    "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/origin-measurement.json",
+    "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/result.json",
+    "studies/04-round-2-overlap/runs/descent-presign-witness-target/target.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json"
+  ],
+  "bindings": [
+    {
+      "record": "studies/04-round-2-overlap/runs/descent-operand-identity/declaration.json",
+      "sha256": "d43ba0e3dd07b9c18a81471713880d30e600ab32cfed10fc9d0163fda39215b3"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/descent-operand-identity/result.json",
+      "sha256": "17f645e0cab416393a23cbde5bc88debd485313890a369888010bd656970c492"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/donor-phases.json",
+      "sha256": "c4a20a8d7049f12ffef2cdd120d7a41506076c5a3c904a15637a0ad6123ddc40"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+      "sha256": "4172ea30ae1ccc77f11474735af07e3b8a316bc2f20a6a15c5aced613fe92361"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/origin/raw/discovery-05-channel-h1/result.json",
+      "sha256": "b986f00a911af9c1d517eecdac1a70303a9773dcd6144c319c22578142508822"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/edited/raw/discovery-05-channel-h1/result.json",
+      "sha256": "2eb37fe211802232dd37fd31dd0d9adb783f991eb9bf293307910822fd31059b"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/origin/capture.json",
+      "sha256": "aa6a4b4c8474fcc68ce1d1e33f5f28364fa8b8001b0f5165fb218f527f55abe4"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/edited/capture.json",
+      "sha256": "267904e04be9a77a872af4b14b0382aa5082143fb96353d85faeba41b648691a"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/origin-measurement.json",
+      "sha256": "b7bc4737e6311a2a2a1386cca2996ec2db764263ccbaf7b4b39915951bf5fac2"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/result.json",
+      "sha256": "46c72bddfbc5b30daca9f5618049cf0b2e1ed0b8300f595a1dbb0a581b18b24a"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/descent-presign-witness-target/target.json",
+      "sha256": "cbfa147f2a757e69c65e26cdcc6ffbb1f7abb85f8bf8cdca59996efb0eedb147"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+      "sha256": "bdcb750aa79e48c5ab34a01b010d31f7722c313e417abd5dccc621cadc9ed30b"
+    }
+  ],
+  "sources": [
+    {
+      "record": "records/development/2026-11-18-operand-phase-registration/study.py",
+      "sha256": "562dd8f32b35d3ba6f58bb568ab4d1cfa44d985372889d73769dd9eda5074dc6"
+    },
+    {
+      "record": "records/development/2026-11-18-operand-phase-registration/declare.py",
+      "sha256": "f0d7002b4b9da0023ff0831fa5aa4f5dbe8d24ece485d3e6eb8760e47331bbf3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/operand_phase.py",
+      "sha256": "b3af65fc5ff1002ad362e04c9fa673d02518fc241c14223e2d7508b156a814a2"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/descent-operand-identity/operand.py",
+      "sha256": "9453cecdd38fa7970c8c21cfa4adb5570394e34fde61bf5b3f5713e88fcbae94"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/descent-landmark-route-comparison/measure.py",
+      "sha256": "21fcf64a19cfa5ebcb15e15986bfd88437b5e8ce36c6890a99da885e74c03fd0"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/states_reading.py",
+      "sha256": "8b60abdc42f039636279c9f4338c193ba4d9edb22e81f87925944f19c1433025"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/native_key_driver.py",
+      "sha256": "617b34d8bcb0d183e5161ea3f8c7a8c14601eb5f4b35e2bda019a9f89b5c9773"
+    },
+    {
+      "record": "records/retrospectives/2026-11-17-natural-descent-decisions/scores.json",
+      "sha256": "330041fd0d969b76758ae4f8076ce4a3db1d9a180093f3284498bac61fc59025"
+    }
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/early-27-operand-phase-registration/prediction.json",
+    "studies/04-round-2-overlap/runs/early-27-operand-phase-registration/result.json",
+    "studies/04-round-2-overlap/runs/early-27-operand-phase-registration/donors.npz",
+    "studies/04-round-2-overlap/runs/early-27-operand-phase-registration/policy.json"
+  ],
+  "status": "Saved CPU-only native acquisition read. No updates or model generation."
+}

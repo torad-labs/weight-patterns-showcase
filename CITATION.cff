@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you reference these methods, instruments, or empirical findings, please cite this repository or the corresponding working papers."
+title: "Weight Patterns: Repairing Capabilities by Differentiating Computational Traces"
+type: software
+authors:
+  - family-names: Damasceno
+    given-names: Marcos
+    affiliation: Torad Labs
+date-released: "2026-11-22"
+license: MIT
+repository-code: "https://github.com/torad-labs/weight-patterns-showcase"
+keywords:
+  - mechanistic interpretability
+  - weight editing
+  - computational traces
+  - residual stream
+  - Gemma 4
+references:
+  - type: report
+    title: "Training on Local Divergence Between Computational Traces"
+    authors:
+      - family-names: Damasceno
+        given-names: Marcos
+    institution:
+      name: Torad Labs
+    year: 2026
+    month: 11
+  - type: report
+    title: "Editing the Weights from the Overlap of Many Answers: How the Path Edit Is Built and What Its First Run Did"
+    authors:
+      - family-names: Damasceno
+        given-names: Marcos
+    institution:
+      name: Torad Labs
+    year: 2026
+    month: 11
+  - type: report
+    title: "How the Trace-Derived Edit Works: An Internal Guide to the Method, Step by Step"
+    authors:
+      - family-names: Damasceno
+        given-names: Marcos
+    institution:
+      name: Torad Labs
+    year: 2026
+    month: 11
+  - type: report
+    title: "Fixing a Reasoning Mistake by Editing the Weights: Four Edits to a Small Language Model and What They Taught Us"
+    authors:
+      - family-names: Damasceno
+        given-names: Marcos
+    institution:
+      name: Torad Labs
+    year: 2026
+    month: 11

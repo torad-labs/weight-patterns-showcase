@@ -30,6 +30,6 @@ The downhill group contrast can recognize a successful outcome on this question.
 
 From the repository root, set `PYTHONPATH=code/signal-trace` with the environment used for the group learner. Each program takes one argument, the root of a restored archive tree. The readers first use a locally present file and otherwise resolve the same relative path under that root. They verify native stream bytes and index digests against the recorded captures.
 
-1. Run [compare.py](compare.py) to register five generations with the frozen production objective and read the selected cells back from the three training boundaries.
-2. Run [early_movement.py](early_movement.py) to compare each installed change over the input history common to the five controls and three training boundaries.
-3. Run [reverse_registration.py](reverse_registration.py) to look up missing stages with the two arguments of the original prefix matcher exchanged. The complete natural generation is available to this retrospective correspondence check.
+1. Run compare.py to register five generations with the frozen production objective and read the selected cells back from the three training boundaries.
+2. Run early_movement.py to compare each installed change over the input history common to the five controls and three training boundaries.
+3. Run reverse_registration.py to look up missing stages with the two arguments of the original prefix matcher exchanged. The complete natural generation is available to this retrospective correspondence check.

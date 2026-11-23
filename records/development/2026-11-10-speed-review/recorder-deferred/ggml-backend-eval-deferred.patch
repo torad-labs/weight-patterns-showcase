@@ -1,0 +1,175 @@
+--- a/ggml/src/ggml-backend.cpp
++++ b/ggml/src/ggml-backend.cpp
+@@ -783,6 +783,11 @@
+     struct ggml_cgraph graph;
+ };
+ 
++#ifndef GGML_SCHED_EVAL_CHUNKS
++#define GGML_SCHED_EVAL_CHUNKS 64
++#endif
++#define GGML_SCHED_EVAL_CHUNK_BYTES ((size_t) 64*1024*1024)
++
+ struct ggml_backend_sched {
+     bool is_reset; // true if the scheduler has been reset since the last graph split
+     bool is_alloc;
+@@ -838,6 +843,12 @@
+     ggml_backend_sched_eval_callback callback_eval;
+     void * callback_eval_user_data;
+ 
++    // GGML_SCHED_EVAL_DEFERRED=1: the outputs the eval callback wants are copied to host memory on the backend's own queue as
++    // their nodes are computed, and the backend is waited for once a split; the callbacks then read the copies
++    bool eval_deferred;
++    bool eval_deferred_said;
++    ggml_backend_buffer_t eval_chunks[GGML_SCHED_EVAL_CHUNKS];
++
+     char * context_buffer;
+     size_t context_buffer_size;
+ 
+@@ -1777,6 +1788,49 @@
+     return true;
+ }
+ 
++// a deferred callback reads its output's copy; a write into it would change nothing the graph computes
++static void ggml_backend_sched_eval_deferred_set(ggml_backend_buffer_t, struct ggml_tensor * tensor, const void *, size_t, size_t) {
++    GGML_ABORT("GGML_SCHED_EVAL_DEFERRED: the eval callback wrote into %s; a deferred callback holds a copy, not the tensor", tensor->name);
++}
++
++static void ggml_backend_sched_eval_deferred_memset(ggml_backend_buffer_t, struct ggml_tensor * tensor, uint8_t, size_t, size_t) {
++    GGML_ABORT("GGML_SCHED_EVAL_DEFERRED: the eval callback wrote into %s; a deferred callback holds a copy, not the tensor", tensor->name);
++}
++
++static void ggml_backend_sched_eval_deferred_set_2d(ggml_backend_buffer_t, struct ggml_tensor * tensor, const void *, size_t, size_t, size_t, size_t, size_t) {
++    GGML_ABORT("GGML_SCHED_EVAL_DEFERRED: the eval callback wrote into %s; a deferred callback holds a copy, not the tensor", tensor->name);
++}
++
++// host memory for one output of the split being computed: chunks are filled in order and none is freed or moved while a copy
++// into it may be waiting on the backend
++static void * ggml_backend_sched_eval_stage(ggml_backend_sched_t sched, ggml_backend_t backend, size_t size, int * chunk, size_t * used) {
++    const size_t aligned = (size + 63) & ~(size_t) 63;
++    if (sched->eval_chunks[*chunk] != NULL && *used + aligned <= ggml_backend_buffer_get_size(sched->eval_chunks[*chunk])) {
++        void * at = (char *) ggml_backend_buffer_get_base(sched->eval_chunks[*chunk]) + *used;
++        *used += aligned;
++        return at;
++    }
++    if (sched->eval_chunks[*chunk] != NULL) {
++        ++*chunk;   // the chunk in use keeps its copies; the next one is not in use by this split
++    }
++    GGML_ASSERT(*chunk < GGML_SCHED_EVAL_CHUNKS && "GGML_SCHED_EVAL_DEFERRED: more staged outputs than the chunks hold");
++    if (sched->eval_chunks[*chunk] != NULL && ggml_backend_buffer_get_size(sched->eval_chunks[*chunk]) < aligned) {
++        ggml_backend_buffer_free(sched->eval_chunks[*chunk]);
++        sched->eval_chunks[*chunk] = NULL;
++    }
++    if (sched->eval_chunks[*chunk] == NULL) {
++        ggml_backend_dev_t device = ggml_backend_get_device(backend);
++        ggml_backend_buffer_type_t buft = device ? ggml_backend_dev_host_buffer_type(device) : NULL;
++        if (buft == NULL) {
++            buft = ggml_backend_cpu_buffer_type();
++        }
++        sched->eval_chunks[*chunk] = ggml_backend_buft_alloc_buffer(buft, std::max(aligned, GGML_SCHED_EVAL_CHUNK_BYTES));
++        GGML_ASSERT(sched->eval_chunks[*chunk] != NULL && "GGML_SCHED_EVAL_DEFERRED: no host memory for the staged outputs");
++    }
++    *used = aligned;
++    return ggml_backend_buffer_get_base(sched->eval_chunks[*chunk]);
++}
++
+ static enum ggml_status ggml_backend_sched_compute_splits(ggml_backend_sched_t sched) {
+     GGML_ASSERT(sched);
+     struct ggml_backend_sched_split * splits = sched->splits;
+@@ -1974,6 +2028,77 @@
+             if (ec != GGML_STATUS_SUCCESS) {
+                 return ec;
+             }
++        } else if (sched->eval_deferred) {
++            // the same ranges of nodes, computed in the same order, as the branch below; what differs is when the backend is
++            // waited for. Each wanted output is copied to host memory on the backend's queue right after the range that ends
++            // with it, so the copy is taken before any later node can reuse its memory, and the callbacks read the copies after
++            // the split's last node.
++            if (!sched->eval_deferred_said) {
++                GGML_LOG_INFO("%s: GGML_SCHED_EVAL_DEFERRED=1, the eval callback's outputs are read back once a split\n", __func__);
++                sched->eval_deferred_said = true;
++            }
++            struct eval_wanted { struct ggml_tensor * t; void * host; int chunk; };
++            std::vector<eval_wanted> wanted;
++            int chunk = 0;
++            size_t used = 0;
++            for (int j0 = 0; j0 < split->graph.n_nodes; j0++) {
++                struct ggml_tensor * t = split->graph.nodes[j0];
++
++                bool need = sched->callback_eval(t, true, sched->callback_eval_user_data);
++
++                int j1 = j0;
++
++                while (!need && j1 < split->graph.n_nodes - 1) {
++                    t = split->graph.nodes[++j1];
++                    need = sched->callback_eval(t, true, sched->callback_eval_user_data);
++                }
++
++                struct ggml_cgraph gv = ggml_graph_view(&split->graph, j0, j1 + 1);
++
++                enum ggml_status ec = ggml_backend_graph_compute_async(split_backend, &gv);
++                if (ec != GGML_STATUS_SUCCESS) {
++                    return ec;
++                }
++
++                if (need) {
++                    const size_t size = ggml_nbytes(t);
++                    void * host = NULL;
++                    if (size > 0) {
++                        host = ggml_backend_sched_eval_stage(sched, split_backend, size, &chunk, &used);
++                        ggml_backend_tensor_get_async(split_backend, t, host, 0, size);
++                    }
++                    wanted.push_back({t, host, chunk});
++                }
++
++                j0 = j1;
++            }
++
++            ggml_backend_synchronize(split_backend);
++
++            for (const eval_wanted & w : wanted) {
++                struct ggml_tensor * t = w.t;
++                bool go_on;
++                if (w.host == NULL) {
++                    go_on = sched->callback_eval(t, false, sched->callback_eval_user_data);
++                } else {
++                    // ggml_backend_tensor_get reads through the buffer of the tensor, or of the tensor it is a view of
++                    struct ggml_backend_buffer copy = *sched->eval_chunks[w.chunk];
++                    copy.iface.set_tensor    = ggml_backend_sched_eval_deferred_set;
++                    copy.iface.memset_tensor = ggml_backend_sched_eval_deferred_memset;
++                    copy.iface.set_tensor_2d = ggml_backend_sched_eval_deferred_set_2d;
++                    struct ggml_tensor * owner = t->view_src ? t->view_src : t;
++                    ggml_backend_buffer_t owner_buffer = owner->buffer;
++                    void * data = t->data;
++                    owner->buffer = &copy;
++                    t->data = w.host;
++                    go_on = sched->callback_eval(t, false, sched->callback_eval_user_data);
++                    t->data = data;
++                    owner->buffer = owner_buffer;
++                }
++                if (!go_on) {
++                    GGML_ABORT("GGML_SCHED_EVAL_DEFERRED: the eval callback asked to stop at %s; a deferred split is already computed", t->name);
++                }
++            }
+         } else {
+             // similar to ggml_backend_compare_graph_backend
+             for (int j0 = 0; j0 < split->graph.n_nodes; j0++) {
+@@ -2062,6 +2187,9 @@
+     sched->debug_graph_size = 0;
+     sched->debug_prev_graph_size = 0;
+ 
++    const char * GGML_SCHED_EVAL_DEFERRED = getenv("GGML_SCHED_EVAL_DEFERRED");
++    sched->eval_deferred = GGML_SCHED_EVAL_DEFERRED != NULL && strcmp(GGML_SCHED_EVAL_DEFERRED, "1") == 0;
++
+     sched->context_buffer_size = ggml_sched_max_splits*GGML_SCHED_MAX_SPLIT_INPUTS*2*sizeof(struct ggml_tensor) + ggml_graph_overhead_custom(graph_size, false);
+     sched->context_buffer = (char *) malloc(sched->context_buffer_size);
+ 
+@@ -2108,6 +2236,9 @@
+             ggml_backend_buffer_free(st.buf);
+         }
+     }
++    for (int i = 0; i < GGML_SCHED_EVAL_CHUNKS; i++) {
++        ggml_backend_buffer_free(sched->eval_chunks[i]);
++    }
+     ggml_gallocr_free(sched->galloc);
+     ggml_free(sched->ctx);
+     ggml_hash_set_free(&sched->hash_set);

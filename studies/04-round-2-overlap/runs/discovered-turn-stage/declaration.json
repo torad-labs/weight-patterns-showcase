@@ -1,0 +1,543 @@
+{
+ "method_step": 3,
+ "operation": "discovered-turn-stage",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "why_this_direction": "Turn direction and two consecutive transformations informed manual localization; a repeatable monitor needs to derive a candidate without the known site, operation name or an annotated stage. Compare registration across a complete decode and differentiate the same score for a frozen cell.",
+ "repeating_pattern_check": "The old monitor missed the true precursor, matched subsequent repetitions and fired at valid friction. A perfect in-sample contrast is insufficient. Exclude the fitting energy group during discovery and radius calibration; report the full trace with ambiguous and missing registrations.",
+ "hypothesis": "A recurrence across registered natural computations can produce a usable, source-bound whole-response stage diagnostic without a manually selected location.",
+ "prediction": "A turn direction discovered from all covered reference rows and merges separates the historical classes in development, and naturally registers exactly once on the unseen fitting group near the independently audited precursor. Missing, off-stage and multiple occurrences weaken its use.",
+ "would_weaken_it": "No separated cell, wrong timing, multiple matches, misses or a reversed score on the held configuration. Such a readout supplies no authority for a training objective.",
+ "what_went_wrong_before": "The historical successful two-turn donor registration depended on one previously selected anchor. Population separation did not imply that stage was identifiable in a free response.",
+ "rule": "Use only provided whole-computation DTW and naturally generated signed direction turns. Equal group votes in each class define the centroid difference at each fully represented reference decoding event and merge. Nominate the largest minimum failing projection minus maximum successful projection, over member means. Test the nominee as one diagnostic, retaining its entire scan; it does not select trainable weights. Consecutive native donor turn pairs register the stage by a cutoff calibrated with each physical group excluded from its matching bank. Clamp coverage to the closest observed off-stage event. Report all matches and abstentions. No annotated positions, token identities or semantic role labels enter the matcher. Each member event mapped to the reference candidate is a positive in radius calibration even if DTW also maps it to another reference row. Other generated pairs are background. The reference maps to itself by identity.",
+ "parameters": {
+  "split": {
+   "measured_from": "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+   "derivation": "Exclude all members sharing its initial kinetic energy and gravitational work from all discovery and calibration.",
+   "scales_with": "source-group membership"
+  }
+ },
+ "reference_id": "expanded-004-h1",
+ "reference_rows": 560,
+ "reference_first": 172,
+ "held_group": "64-40",
+ "members": [
+  {
+   "id": "discovery-00-channel-h3",
+   "group": "16-20",
+   "prompt_events": 172,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3/turns.npy",
+    "sha256": "1878e19d6cc26b70a97f48fdf628a7529905f5e9775930eba2e33b04e7b0d21f",
+    "shape": [
+     627,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "discovery-01-channel-h1",
+   "group": "16-40",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1/turns.npy",
+    "sha256": "80a62ad17161d3b9696a45576886f6f6d1fce11fc670fa6bd4d901ec6dcecd05",
+    "shape": [
+     388,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "discovery-05-channel-h1",
+   "group": "64-40",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1/turns.npy",
+    "sha256": "dce73dd2863c6016b795ece01a6af8a27b05e530aa225293dca3b61d4499e30c",
+    "shape": [
+     406,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "discovery-06-channel-h1",
+   "group": "24-30",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1/turns.npy",
+    "sha256": "892f8ad8aca62ba76e3e4de52db069c5230ddbfdde7f78d9ed6e74f937c71701",
+    "shape": [
+     409,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "discovery-08-channel-h3",
+   "group": "54-30",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3/turns.npy",
+    "sha256": "bbe7512d3b48b5e6fc46caaf99212674b72550b400a79d5a124a0d24086ba151",
+    "shape": [
+     456,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "discovery-10-channel-h3",
+   "group": "96-30",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3/turns.npy",
+    "sha256": "6bb643730b4ee9e3fb94cfed13dda5b47bec9ac1e2486677ee43fcfe2cb671ce",
+    "shape": [
+     491,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "discovery-11-channel-h3",
+   "group": "96-60",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3/turns.npy",
+    "sha256": "6e4d7829c1d2446f22364d31b3284af857241d25ce72b5d40d514e37d4addb7b",
+    "shape": [
+     408,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "discovery-15-channel-h1",
+   "group": "72-80",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1/turns.npy",
+    "sha256": "3918511098b85aaf8cd4f1787ee1c38d4cf503f652846380629d33efe6537e73",
+    "shape": [
+     461,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-001-h3",
+   "group": "16-20",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3/turns.npy",
+    "sha256": "f423b7d4026ceba6ffd397690f212d1907f528626e3314c744898a2cf598cadf",
+    "shape": [
+     768,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-004-h1",
+   "group": "16-40",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/turns.npy",
+    "sha256": "c910371f6993b73dd723ab8e22042797a488cec09ecff433f3b83023c6baf167",
+    "shape": [
+     388,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-020-h1",
+   "group": "64-40",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1/turns.npy",
+    "sha256": "6c290366f7b823a72f3975d345124dc53258877c37fbf244e8cf3c88900430a7",
+    "shape": [
+     621,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-023-h1",
+   "group": "64-40",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy",
+    "sha256": "05f0bbf5fe0b2030f5db67ded3cb9c8f03f5c8ea7e71d13a4c2e58a05115497c",
+    "shape": [
+     417,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-029-h1",
+   "group": "24-60",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy",
+    "sha256": "bd7dda38e26cfc9924a64ce655897f55fdf3e83af16452c1ee75650890fe1823",
+    "shape": [
+     414,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-034-h3",
+   "group": "54-30",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3/turns.npy",
+    "sha256": "d1c9b512bf8210a5edee01e8f896137859c7b8d0d591c3c1cc513594cbbc9111",
+    "shape": [
+     548,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-039-h3",
+   "group": "54-60",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3/turns.npy",
+    "sha256": "fca12c31ed3934ffea62a0e1ac854c0589c88e2e4fa77fd4cf69c5f9161c085a",
+    "shape": [
+     414,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-042-h3",
+   "group": "96-30",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3/turns.npy",
+    "sha256": "6f40f0e7817169b048d4378908f7b20848ec33527b60a67f9870cfc399647b8f",
+    "shape": [
+     623,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-045-h1",
+   "group": "96-60",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1/turns.npy",
+    "sha256": "8411e5fb6e2963146483c22e17a3fbb18ec205cb8eda856a7ae9e1910bf522ce",
+    "shape": [
+     412,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-046-h3",
+   "group": "96-60",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3/turns.npy",
+    "sha256": "d5ba1fcdd7f1b10e1c90705e8771003a321d7a126e98a0096ae4897a08425c78",
+    "shape": [
+     411,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-064-h1",
+   "group": "128-40",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1/turns.npy",
+    "sha256": "222685dbecc9fc5f906b120001d5af534a2cdddb5cc7558ec36a853bdf7a8ec2",
+    "shape": [
+     474,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-068-h1",
+   "group": "128-80",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1/turns.npy",
+    "sha256": "849bd23d8389056bed881baeaf0932234e5f02155df585e8fc7aceefaef9d6b3",
+    "shape": [
+     442,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-070-h1",
+   "group": "128-80",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1/turns.npy",
+    "sha256": "e4f0dbfcae85fb629fa5b11fa5ce22dd64af80c7ef58f6d1fdc0c2f69121fa53",
+    "shape": [
+     410,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-071-h1",
+   "group": "128-80",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1/turns.npy",
+    "sha256": "ce81f9093a38bf611bad9e8a227ff0965a5d3f8525f684e3429b471c2b1c748a",
+    "shape": [
+     495,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-076-h1",
+   "group": "40-100",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1/turns.npy",
+    "sha256": "ba1422e3a24895b1adbb29b44a9e379582dc4e91818160b427f9cca00fb0be33",
+    "shape": [
+     412,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-078-h1",
+   "group": "40-100",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1/turns.npy",
+    "sha256": "147fa14437e15ff8f9b6cdcf7d22d8872b65b20b1192d5f8493ba0161153e673",
+    "shape": [
+     422,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "success"
+  },
+  {
+   "id": "expanded-087-h3",
+   "group": "90-100",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3/turns.npy",
+    "sha256": "fcd0cdb4c6a5f16b5df15867458a9d6fa538daa18ed3434539a294bf2deac896",
+    "shape": [
+     740,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-092-h1",
+   "group": "160-100",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1/turns.npy",
+    "sha256": "3f62deac07e113a9a9cf25672458c30a8c8ab24e0146b9040613466b71a0750f",
+    "shape": [
+     409,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-094-h1",
+   "group": "160-100",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1/turns.npy",
+    "sha256": "e9d231fe85122d0f506651fd621c968b377cfade6645507329ba4a68ff23778f",
+    "shape": [
+     513,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  },
+  {
+   "id": "expanded-095-h1",
+   "group": "160-100",
+   "prompt_events": 173,
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1/turns.npy",
+    "sha256": "edfee32a22d2d235df3ee8a7cf01d901f8aae55877a80860a41bed0347c31847",
+    "shape": [
+     594,
+     105,
+     1536
+    ],
+    "dtype": "<f4"
+   },
+   "class": "failure"
+  }
+ ],
+ "program": {
+  "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/discover.py",
+  "sha256": "88575a15871e7c74dd3754945899ccd12b42b815e971febccc4570f2d1f95c01"
+ },
+ "inputs": [
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1/turns.npy",
+  "studies/04-round-2-overlap/runs/descent-log-gain-and-repair-controls/declaration.json",
+  "studies/04-round-2-overlap/runs/descent-path-transfer/original-correspondences.npz",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/discovered-turn-stage/scan.npz",
+  "studies/04-round-2-overlap/runs/discovered-turn-stage/signal.json",
+  "studies/04-round-2-overlap/runs/discovered-turn-stage/registrations.json",
+  "studies/04-round-2-overlap/runs/discovered-turn-stage/result.json"
+ ],
+ "observability": {
+  "format": "weight-patterns-observability/1",
+  "entrypoint": "studies/04-round-2-overlap/runs/discovered-turn-stage/discover.py",
+  "events": "observability/events.jsonl",
+  "mode": "direct Recorder API",
+  "operations": [
+   "trace.discover"
+  ],
+  "sources": [
+   {
+    "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/discover.py",
+    "sha256": "88575a15871e7c74dd3754945899ccd12b42b815e971febccc4570f2d1f95c01"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/paired_turn_signal.py",
+    "sha256": "747fd23c06aad8f34fc006e15e8756a90ac2c0681f5386b501e2e33754fd62c4"
+   },
+   {
+    "record": "code/signal-trace/pipeline/observability/recorder.py",
+    "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+   }
+  ]
+ },
+ "correspondences": {
+  "record": "studies/04-round-2-overlap/runs/descent-path-transfer/original-correspondences.npz",
+  "sha256": "bbda41340f57d4a2720f33522c0cf80cacf4d444547cad0cf248b2b6238951b0"
+ }
+}

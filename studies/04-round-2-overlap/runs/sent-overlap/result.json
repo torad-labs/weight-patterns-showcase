@@ -1,0 +1,36 @@
+{
+ "run_by": "Claude",
+ "population": {
+  "correct": 30,
+  "wrong": 30,
+  "axis_steps": 480,
+  "matrices": 70,
+  "note": "trace-overlap's members, order and alignment. Every answer reproduced its recorded tokens."
+ },
+ "prediction_vs_result": {
+  "predicted": "Inside places 150 to 265 the gap in what the matrices send is several times chance and the two halves agree, as for the turns. The shared move is a small part of what a matrix sends, of the order of the 15 to 21% the move is of the turn, in both kinds of matrix.",
+  "observed": [
+   "Inside places 150 to 265 the gap in what the matrices send is 7.4 times chance in the attention-output matrices and 6.7 times in the feed-forward-down matrices (median over places and matrices), and two halves that share no answer agree on it at 0.89 and 0.88.",
+   "Before the stretch the gap is 1.9 times chance and the halves agree at 0.70 to 0.73. After it, 2.0 and 1.8 times chance, halves at 0.46 and 0.43. The same shape as the turns in trace-overlap.",
+   "The shared move is 13.5% (attention) and 13.9% (feed-forward) of what a matrix sends inside the stretch, 2.0 to 2.5% before it and 4.7 to 5.2% after it.",
+   "By layer inside the stretch the gap is 4.0 times chance in layer 0, 5 to 7 in most layers, and largest in layers 15 to 18 (10.5, 8.4, 13.4, 11.3)."
+  ],
+  "not_predicted": []
+ },
+ "failures_only": {
+  "scope": "Original model only. No edit in this run."
+ },
+ "what_this_changes": [
+  "The gap is written by the matrices where the turns show it: read in what each matrix sends, it recurs along the same stretch and at the same depths.",
+  "Read there it is a proportion of what the matrix already sends, about one seventh inside the stretch. a2-pattern had asked for 64% (attention) and 33% (feed-forward) of the output.",
+  "The wrong group's average inputs of every matrix are kept with it. The correct group's inputs were not kept; an edit that has to tell the two groups' inputs apart needs them recorded."
+ ],
+ "records": [
+  "sent/<id>.npy and sent/<id>-size.npy (60 answers, not in Git)",
+  "correct-pattern.npy",
+  "wrong-pattern.npy",
+  "recurrence.npz",
+  "wrong-inputs/",
+  "overlap.out"
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "method_step": [
+  6
+ ],
+ "run_by": "Claude (weight-research-fable), with Astra (weight-research-astra) as thinking partner: Astra read every incomplete answer of a2-path for its first error and reviewed the solver and the state target.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+ "baseline": "studies/04-round-2-overlap/runs/a2-path/baseline",
+ "protected_source": "studies/04-round-2-overlap/runs/a2-path/answers.json",
+ "matrices_source": "studies/04-round-2-overlap/runs/a2-path/edit.json",
+ "hypothesis": "The capability leaves a recurring difference between the traces of correct and wrong answers, from where the two shared patterns part until they reconcile, and closing it in the weights repairs the capability. a2-path showed the first half on the model's own answers: its traces moved along the gap and 29 of the 30 answers that subtracted the descent add it. It also moved both groups about one gap to the side and broke 12 of the 30 correct answers. B2 asks whether the movement along the gap can be had without the damage: with the 12 broken correct answers held where they were, the wrong answers' own computation still moves to the correct pattern where the patterns diverge and still adds the descent, and the held answers stay correct.",
+ "what_went_wrong_before": "a2-path, the A rung, has no protection, as an A rung has none. Answering on its own, the edited model broke 12 of the 30 correct answers of the overlap and 4 of round one's 7, with new errors of other kinds than the one the gap is about (the after-climb remainder reported as the available energy, the climb added to the remaining energy, the kinetic energy doubled or halved, and in four correct answers the descent newly subtracted), and the same new errors keep 12 of the 30 repaired calculations from being complete. Together with those errors, its own traces over places 142 to 313 show both groups about one gap to the side of the gap's own direction, and the correct answers 1.27 gaps from where they were; that the side movement causes the errors is not shown, and the changed wording of the answers can itself move the traces. Two things went wrong in how the build was run, not in the edit: it was stopped at 18 of 70 matrices on a reading of the given text that did not predict the answers, and before that it was paused and resumed on a misreading of a question of Marcos's. The earlier misses of round two are listed in a2-path's declaration.",
+ "why_this_direction": "Step 6 of the method: B2 protects what A2 broke, as round one's B did, and the paper's ladder needs the rungs to differ in one thing. Given a2-path's result this is also the direct question its evidence raises. The damage is a movement to the side that the correct answers share: at the places where a wrong answer is asked to move, the correct answers' rows moved as much. A weight change sees only its input, so whether the move along the gap can be had without that side movement depends on whether the inputs tell the two groups' rows apart, and holding correct rows where they were is what asks the fit to use that. A development reading says they do in part (the original model's stored rows, the first 9 matrices in path order, each alone; half of the wrong answers fitted with and without half of the correct answers held, read on the answers of neither half; nothing written, no native run): with the correct answers held, correct answers the fit did not see move 0.0086 to 0.039 rms where the unheld fit moves them 0.014 to 0.065 (about 0.6 of it at every matrix), the wrong answers it did not see go 0.24 to 0.39 of the way along their move where the unheld fit takes them 0.34 to 0.48 (about 0.8 of it), and what is left of the squared ask on those wrong answers is the same (0.61 to 0.72 against 0.61 to 0.71). So holding reaches correct answers that were not held, at a cost of about a fifth of the progress per matrix. That is one matrix at a time on the original rows; what it does to the edited model's own answers is this run's outcome.",
+ "repeating_pattern_check": "What has repeated, and what this run does about each. (a) A reading on given text was taken for a verdict, twice: the replay of a2-sent, and the stop of a2-path's build on rows that had drifted. Here the build runs through its declared matrices whatever the passes read, and nothing read during it is reported as an outcome or used to stop it; only a fit that fails to end would stop it, and that would be recorded as such. (b) Several things changed between runs, so they did not compare. Here one thing changes against a2-path: the 12 correct answers it broke are rows of the fit, asked for the state they had. The matrices are a2-path's 18, the target, the conversion, the path order, the choice of the ridge, the code and the test are the same. (c) The edit acted where nothing was asked. a2-path's fit asked the wrong answers' other steps to stay and still moved everything to the side; this rung adds the rows where that showed as damage, and reads the unheld correct answers apart to see whether holding carries. (d) A number chosen by eye: none here; which answers are held and how many matrices are edited are read from a2-path's records, and the held rows count as every other row does. (e) Work to keep moving instead of the method: this is the ladder's next rung, and its prediction and what would weaken it are written before any pass.",
+ "rule": {
+  "members": "The 30 wrong answers of the overlap, as in a2-path, and the 12 correct answers of the overlap that a2-path broke (complete before its edit and not after, by its answers.json): discovery-00-channel-h3, discovery-06-channel-h1, discovery-17-channel-h3, expanded-010-h3, expanded-017-h3, expanded-018-h3, expanded-022-h1, expanded-024-h1, expanded-028-h1, expanded-029-h1, expanded-071-h1, expanded-077-h1. Their rows are every generated step and every question position of their own computation. The other 18 correct answers pass through the model in every pass and are read, but are not fitted. Round one's questions are not rows of any fit.",
+  "ask": "As a2-path for the wrong answers: at each matrix, each row is asked for the direction the state had right after that matrix's merge in the original model, plus, at the generated steps of a wrong answer, the shared part of the gap between the correct and the wrong pattern of that state at the places that step is laid on, where the two patterns diverge at that matrix. Every row of a held correct answer is asked for the direction its state had right after that matrix's merge in the original model. Every row counts the same. What is asked of a matrix is that direction minus the one the row has now, with every earlier edit in the model.",
+  "conversion": "The direction of the state after the merge is unit(h + g*y/rms(y)), with y the matrix output for that row's input, g the learned scale after it and h the state it is added to. A change dW changes it by A(x dW) to first order, A = P_m diag(g) P_y / (|m| rms(y)): the norm takes out a change of size, the scale weighs each output, and a change along the merged state turns nothing. For a given ridge the change is the one that leaves the least of mean |wanted - state direction at the changed weights|^2 + ridge |dW|^2 over the fitted rows, the direction read by the model's own expression. It is found by preconditioned conjugate gradients on that expression: at every step the exact gradient at the current weights, a step along the conjugate direction sized by A there, kept only once the expression at the new weights confirms it and halved until it does; the preconditioner, a closed-form approximation of the system, is rebuilt whenever the conjugate direction fails. It ends when no step lowers what float32 can state, which is a truncated solve and is recorded as one, with its steps, the steps shortened, how it ended and how much of the gradient is left. The matrix is rounded to the model's BF16 storage and written only if, as rounded, it leaves less over the fitted rows than the matrix it replaces.",
+  "path": "The matrices are a2-path's 18, the attention output and feed-forward down of layers 0 to 8, in path order, attention then feed-forward of each layer. Before each one the 60 answers' own text is given to the model as it stands and that matrix's input and incoming state are read at every position. The original states after each merge are a2-path's baseline reading of the original model, made the same way. These passes build the edit; they are not a test and are not used to stop or judge the build.",
+  "test": "As a2-path. The edited model answers the 60 questions and round one's 28 on its own, on GPU0, greedy; fields are judged original beside edited, failures only; the held correct answers, the other correct answers and round one are reported apart; every answer that is not complete is read for its first error and for whether its written calculation adds the descent. Its answers to the 60 are recorded with the turns of their computation, laid along the same axis by the computation alone, and read against the original correct and wrong patterns both ways (the turns of every merge but the first; the state after each matrix), with the size of the state beside them. Every reading is set beside a2-path's."
+ },
+ "parameters": {
+  "shared_part": {
+   "measured_from": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+   "derivation": "max(0, 1 - chance / gap) at each place and matrix, for the direction of the state after that matrix's merge: the squared gap between two group means is, on average, the squared shared gap plus what chance adds; chance is the sum over the two groups of the members' spread divided by their count.",
+   "scales_with": "the number of members in each group and their spread at that place and matrix"
+  },
+  "diverged": {
+   "measured_from": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+   "derivation": "gap > 2 * chance at a place and matrix: two halves of one group of n differ, on average, by the spread over n/2 twice, which is twice chance. A place and matrix where the two groups are no further apart than that is one where they follow each other, and the row is asked to keep its state there.",
+   "scales_with": "the number of members in each group and their spread at that place and matrix"
+  },
+  "ridge": {
+   "measured_from": "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+   "derivation": "As a2-path, per matrix on the rows its own pass reads, with the fitted answers now the wrong answers and the held correct answers: each group is split in two halves, alternating, a candidate is fitted on one half of both, rounded to BF16, and judged by what it leaves on the other half of both, moving rows and rows asked to stay alike, read with the model's own expression. The search, the candidates kept and the rule that ends it are a2-path's. Leaving the matrix as it is is one of the candidates.",
+   "scales_with": "the matrix, its inputs after the earlier edits, the number of answers and how much of the ask recurs across them"
+  },
+  "held": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/answers.json",
+   "derivation": "The answers of the overlap that are correct in the original model (complete: both energy fields and the verdict right) and not complete in a2-path's own answers. 12 of 30.",
+   "scales_with": "what the A rung breaks"
+  },
+  "matrices": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/edit.json",
+   "derivation": "matrices_edited: the matrices the A rung, as tested, changed. 18, layers 0 to 8.",
+   "scales_with": "the A rung this rung protects"
+  }
+ },
+ "prediction": {
+  "expected_observation": "Answering on its own: most of the 12 held answers are complete again, and of the 18 correct answers that were not held fewer break than a2-path broke among all 30 in proportion (12 of 30), because holding reaches rows that were not held. Of the 30 wrong answers more than half still add the descent, fewer than a2-path's 29; how many of them are complete is not predicted, because holding should remove some of the new errors and some of the repair. Their own traces over places 142 to 313: less far along the gap than a2-path's 0.79, and less far to the side than its 1.04 gaps; the correct answers travel less than 1.27 gaps. The answers that add the descent lie further along the gap than those that subtract it, as in a2-path. Outside the fit, on round one, fewer correct answers break than 4 of 7; how many failures are complete there is not predicted.",
+  "failures_only": "Per wrong answer, its fields before and after, whether it adds the descent, its first error, and where its own trace lies between the two patterns, beside a2-path's. Held correct answers, other correct answers and round one's 28 separately."
+ },
+ "would_weaken_it": "The hypothesis: the wrong answers' own traces lie as far along the gap as in a2-path over places 142 to 313 and those answers subtract the descent. The construction, not the hypothesis: the held answers break as often as in a2-path although their rows were held during the passes, which would mean that holding on the given text does not hold the model's own answers; or the repair goes with the damage, the traces of the wrong answers no longer move along the gap and few of them add the descent, which would mean that this construction did not separate the two movements at these 18 matrices (not that the inputs cannot tell them apart), and the question passes to C2.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/state-overlap/members.json",
+  "studies/04-round-2-overlap/runs/state-overlap/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/recurrence.npz",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/full-overlap/questions.json",
+  "studies/04-round-2-overlap/runs/full-overlap/cases.json",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/a2-path/baseline",
+  "studies/04-round-2-overlap/runs/a2-path/answers.json",
+  "studies/04-round-2-overlap/runs/a2-path/edit.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/b2-path/passes",
+  "studies/04-round-2-overlap/runs/b2-path/build.jsonl",
+  "studies/04-round-2-overlap/runs/b2-path/edit.json",
+  "studies/04-round-2-overlap/runs/b2-path/model",
+  "studies/04-round-2-overlap/runs/b2-path/answers",
+  "studies/04-round-2-overlap/runs/b2-path/answers.json",
+  "studies/04-round-2-overlap/runs/b2-path/answers-text.json",
+  "studies/04-round-2-overlap/runs/b2-path/own",
+  "studies/04-round-2-overlap/runs/b2-path/own-traces",
+  "studies/04-round-2-overlap/runs/b2-path/overlay.npz",
+  "studies/04-round-2-overlap/runs/b2-path/overlay-states.npz",
+  "studies/04-round-2-overlap/runs/b2-path/result.json"
+ ],
+ "revisions": [
+  {
+   "date": "2026-11-10",
+   "made": "While the build was running, 4 of its 18 matrices written at most; no answer of the edited model existed.",
+   "what": "Wording only, after Astra's review. 'Its own traces show why' claimed a cause that a2-path's result does not show; the last sentence of would_weaken_it claimed more than a failed B2 could show. The held answers are the construction's own 12; the four round one answers a2-path broke stay outside the fit, so that set remains a reading of what carries. No rule, parameter or prediction changes.",
+   "why": "A declaration that overstates what a result would mean invites the result to be over-read."
+  }
+ ]
+}

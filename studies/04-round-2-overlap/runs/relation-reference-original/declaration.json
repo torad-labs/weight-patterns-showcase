@@ -1,0 +1,207 @@
+{
+ "method_step": 3,
+ "operation": "relation-reference",
+ "run_by": "weight-research-fable",
+ "declared_at": "2026-11-15T05:21:33.336021-06:00",
+ "status": "declared; nothing compiled under this declaration yet",
+ "kind": "source-only: files and one card's arithmetic. No engine, no recorder, no pass, no model changed or written, no answer read, graded or counted.",
+ "authority": "Astra's decision for the first relational gradient construction and her specification of it; Marcos's direction of November 15 (journal/2026-11-15-computation-not-state-values.md) that the trace is what each merge does to its input and that no target is made of state values.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "objective": "records/retrospectives/2026-11-15-relational-gradient-specification-astra.md",
+ "specification": {
+  "record": "records/retrospectives/2026-11-15-relational-gradient-specification-astra.md",
+  "sha256": "6bd253e88648b4b4245c695e6e4317559f57fb4a87c97a7ad8638434feb90d7b"
+ },
+ "decision_records": [
+  {
+   "record": "records/retrospectives/2026-11-15-relational-gradient-specification-astra.md",
+   "sha256": "6bd253e88648b4b4245c695e6e4317559f57fb4a87c97a7ad8638434feb90d7b"
+  },
+  {
+   "record": "records/retrospectives/2026-11-15-relational-loss-assessment-astra.md",
+   "sha256": "1ed2e73c3a9214b11b2a3efb715de9ac0efe28d73468fe7243c1bd8bf831d0ea"
+  },
+  {
+   "record": "journal/2026-11-15-computation-not-state-values.md",
+   "sha256": "7f7f0d85766a4f1687d0dda1f1291fcc3b9959bb7273fe7086d5223cc069aeed"
+  }
+ ],
+ "why_this_direction": "Step 3 of the method is the discrepancy between the correct answers' overlap and the wrong answers' along the whole path. The direction of November 15 made the trace each merge's relation between what it is given and what it passes on, and withdrew every target made of state values; the loss is a run's shortfall under the correct answers' own agreement, along the path. Astra's specification fixes one construction of that loss. Before a gradient is taken toward it or a model is measured against it, its reference has to exist once, compiled from the original alone and frozen: the members, each recipient's mate, the tolerance at every row and merge, and the masses a later history is summed with. Everything it needs is in files the original already left (its kept states at every merge, the reference's row correspondence, the questions' numbers), so this is the one step between the chosen construction and its first measured update, and it costs no engine pass.",
+ "repeating_pattern_check": "Four things have happened more than once. (1) A target carried another answer's content: the affine field, the matched field and the reference of sets were all distances between state values, and the two finished sweeps lowered the wrong answers' distance while raising the correct answers' from nothing. (2) A reference pooled successes of different routes into one pattern or centre: successes then read as divergent (0.56 to 0.61 of the wrong answers' level under the two fields) and a wrong answer was asked toward a mixture. (3) Sums hid the loss: the first relation reading averaged signed shortfalls, so cells inside the level cancelled cells outside it. (4) A changed history reweighted the reference: weighting a model's own rows by their own multiplicity gave the matched sweep's model 0.629 where the original's row masses give 0.705. They keep happening because a convenient summary (a value, a mean, a pooled centre, a model's own row count) was taken in place of the relation at every row and merge of a fixed domain. This compile avoids each: the descriptor is what a merge does to its input and nothing of the stream's values; a recipient has one assigned mate of its own question regime and every row of that mate keeps its share, so no pooled centre exists; the positive part is taken at every row and merge before any sum; the masses are the original rows' and are frozen here. It also tests (2) in the open: every member's own loss against its mate and every member's part of the tolerance are written, so a member that stands apart from its regime's mates is visible and is not tuned away.",
+ "hypothesis": "That the ten named successes, each recipient set against one member of its own regime, with the members' own mean disagreement as the tolerance, give on the original a loss along the whole path in which the wrong answers stand above the members: a frozen reference a gradient can be taken toward. It is a provisional reference hypothesis from the original's evidence (Astra): it does not claim the ten are pure, that their routes are one, or that the tolerance is a threshold of closure.",
+ "what_went_wrong_before": "Targets of state values copied content (the two whole-path sweeps; the loop toward the reference of sets, stopped in its first pass). The first relation reading took the state after a merge as the next merge's input, which is wrong at a layer's attention merge (the engine gives it the layer before's state times its output scale), and averaged signed shortfalls; both were corrected (records/development/2026-11-15-relation-reading/README.md). In the preparation of this construction the surrogate combined a position's several pairs before the positive part and both programs weighted a new history by its own rows; Astra's source check found both and they are corrected in the programs bound below (a hinge at every pair, the original row's mass).",
+ "rule": {
+  "members": [
+   "discovery-01-channel-h1",
+   "expanded-004-h1",
+   "expanded-023-h1",
+   "discovery-06-channel-h1",
+   "expanded-064-h1",
+   "discovery-11-channel-h3",
+   "discovery-08-channel-h3",
+   "discovery-10-channel-h3",
+   "expanded-071-h1",
+   "expanded-039-h3"
+  ],
+  "recipients": "all thirty fitting answers of controlled-bf16-1 (15 wrong, 15 successes), the members included",
+  "relation": "at a row and a merge, from what the merge is given, a, and what it passes on, b: turn = unit(b) - unit(a), not brought back to unit length; gain = log(|b| / |a|). The first merge is given the token's embedding times the root of the width; a layer's attention merge is given the layer before's last state times that layer's output scale; every other merge is given the state before it. Read from the engine's kept states of the original (all 105 merges, every row of the prompts and the answers).",
+  "regime": "the sign of a question's initial kinetic energy less the descent's energy, from the question's numbers (`kinetic_minus_descent_J`), read for the thirty fitting questions only",
+  "mate": "a recipient's one member: among the members of its regime, itself left out, the one whose distance from it is least on the original over its whole path (its prompt's rows and its answer's, the 105 merges, every row the same mass). Members at exactly the same distance go to the one named first in `members`; every tie is recorded. A recipient with no member of its regime is recorded and the objective is then not given at all.",
+  "distance": "|turn - mate's turn|^2 + (gain - mate's gain)^2 as the mean, over the mate's rows that correspond to the recipient's row (the reference's row correspondence, each of the mate's rows the same share), of each such row's own distance: the dispersion of the mate's rows stays in it. The turn's part and the gain's are reported apart.",
+  "tolerance": "at a recipient's row and a merge: the mean, over the members with the recipient itself left out, of each member's own distance from its own mate at that member's rows that correspond to the recipient's row. It is not enlarged to bring any member to nothing, and nothing of the torch forward's distance from the engine is in it. Each member's part is kept.",
+  "loss": "max(distance - tolerance, 0) at every row and merge, before any sum",
+  "mass": "every original row of an answer the same mass; an answer's loss is the mean over its rows and the 105 merges; the objective is the sum over the thirty answers. A later model's own rows are summed at the original rows they are laid on, the pairs of one original row sharing that row's mass; an original row with no pair makes the loss incomplete and it is refused.",
+  "undefined": "a state of zero or unbounded size makes the relation undefined and is refused; no constant stands in for it",
+  "windows": "none: no stretch of steps and no band of layers enters the mates, the tolerance or the loss",
+  "calibration": "the loss so defined on the original itself (every answer on its own rows), and on the one other model whose own-history reading exists, the model the matched sweep reached, read on its own answers by the stopped loop's first pass. Both are descriptions of the reference; neither is a target, a threshold or a verdict."
+ },
+ "prediction": "The compile ends with every one of the thirty recipients mated (none without a member of its regime, no tie), all 19,751 rows and 105 merges covered (2,073,855 cells) and no undefined cell, and writes the frozen artifacts with their hashes. The construction was already compiled into this seat's scratchpad during preparation, so its numbers are disclosed here and not predicted blind: the original's objective read 0.81871, the wrong answers' mean loss 0.0355 against the members' 0.0156 and the other successes' 0.0262, a wrong answer above a member in 0.82 of pairs, and the two members that stand highest are expanded-071-h1 and expanded-039-h3, whose only regime-compatible mates are of another route. The declared compile is expected to repeat these to the rounding of a card's arithmetic.",
+ "would_weaken_it": "A recipient with no member of its regime, an undefined cell, or a row left uncovered would stop this construction as specified. As a reference for a gradient it is weakened if the members' own loss stands as high as the wrong answers' (told apart near one half), since its gradient would then ask as much of the successes as of the failures; if the wrong answers' loss sat in the gain alone or in the prompts' rows alone; or if one member's part dominated the tolerance. A declared compile that differs from the preparation's numbers beyond rounding would mean the programs or the inputs are not the ones prepared. A complete reference establishes no repair: that is for the separately declared and admitted update.",
+ "limits": [
+  "A provisional reference hypothesis, not a claim that the ten members are pure or of one route; the mates of expanded-071-h1 and expanded-039-h3 are of another route and their loss shows it.",
+  "Fitting answers only. Nothing of the no-fit answers or the reserved set is read; of the regimes' record only the thirty fitting questions' `kinetic_minus_descent_J` is read; of the cohort's capture only the thirty fitting prompts' tokens.",
+  "The arrays are a card's arithmetic and do not repeat bit for bit across cards (the preparation's two compiles agreed on the objective to five digits with different bytes). The frozen tolerance is therefore the artifact's bytes: a later measurement loads it and holds it to the recorded sha256, and never compiles it again.",
+  "The second reading in the calibration is of a model made by a state-value construction that was stopped; it is historical evidence under the new loss and no start, target or selection.",
+  "No model is changed, no engine runs, no native loss is measured, and no closure, repair or hypothesis verdict follows from this run."
+ ],
+ "execution": {
+  "made_from": "code/signal-trace",
+  "python": "uv run -q --with torch --with numpy --with pyyaml --with tqdm python -u",
+  "order": [
+   "arrays",
+   "reference"
+  ],
+  "commands": {
+   "arrays": "bash studies/04-round-2-overlap/runs/relation-reference-original/run.sh arrays   # records/development/2026-11-15-relation-reading/relation_mates.py studies/04-round-2-overlap/runs/relation-reference-original/arrays ; card 0 under its lock (/run/user/1000/gpu0.lock); writes studies/04-round-2-overlap/runs/relation-reference-original/arrays",
+   "reference": "bash studies/04-round-2-overlap/runs/relation-reference-original/run.sh reference   # records/development/2026-11-15-relation-reading/relation_reference.py studies/04-round-2-overlap/runs/relation-reference-original/arrays studies/04-round-2-overlap/runs/relation-reference-original/reference members=<rule.members, in that order> ; the processor; writes studies/04-round-2-overlap/runs/relation-reference-original/reference"
+  },
+  "before_each": "the research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before each of the two steps",
+  "processor_threads": "OMP_NUM_THREADS=4, the setting of this seat's earlier runs (studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json, execution.processor_threads); it sets no size, cap or threshold of the reference",
+  "memory": "no command is started under a memory ceiling of its own: memory protection is hostshield's",
+  "cards": "the arrays on card 0 (RTX 5080), the canonical card, as arithmetic under its lock; no recorder and no engine"
+ },
+ "implementation": [
+  {
+   "record": "records/development/2026-11-15-relation-reading/relation_mates.py",
+   "sha256": "8e2bf963b57fbfc78ca3b95335baeba41e06dc1f78573d0ec4ff6cd7c0fe6b1c"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/relation_reference.py",
+   "sha256": "345d705ed13a3c22e766e715680a128e01679c8bc839057bd81fb0cad9c6734e"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/relation_reading.py",
+   "sha256": "46d03208ddfdb09d745b10fb6dd95fbfb010ff53c24050f0aea64e3903caabe5"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/declare_reference.py",
+   "sha256": "7a4e20c5be3bac0160557cbe9e7ca7b70bdac3d192c08b88f65bcee5a15e73be"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+   "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/turns_reading.py",
+   "sha256": "b072b0de9ff588985eccb7834a97d48d1ee62b4043b64349502dc596e45065e9"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch-forward/architecture.json",
+   "sha256": "1905c24e43a943d2c20683f13c5538944281c2a9b939001cbfc5f746cbc5afde"
+  },
+  {
+   "record": "code/signal-trace/pipeline/overlap/fed_replay.py",
+   "sha256": "817c4226eb96024540570c5b3ce622dbb33ce42bb62d67dfc8437c257b2a10b2"
+  },
+  {
+   "record": "code/signal-trace/pipeline/paths.py",
+   "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+  }
+ ],
+ "question_parameters": {
+  "record": "records/development/2026-11-12-path-forward/sign-by-regime/sign-by-regime.json",
+  "sha256": "12b2265affbefac827ff23e569e8e6373c9a9a62bca4ca1673519723418c2f4e",
+  "read": "`kinetic_minus_descent_J` of the thirty fitting questions only; the numbers used are written into reference.json"
+ },
+ "bindings": {
+  "original_reading": {
+   "record": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+   "sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf"
+  },
+  "original_row_map": {
+   "record": "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json",
+   "sha256": "effb71113117aa4063f25e7d30ea30ea187343545e176b2ddd0243fdc499bf1b"
+  },
+  "memberships": {
+   "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+   "sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38"
+  },
+  "tensors_index": {
+   "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+   "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+  },
+  "second_reading": {
+   "reading": {
+    "record": "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/loop/1/reading/reading.json",
+    "sha256": "b7620e2684357a5b31f1493a32eb7ee873fbaee0375172efb1dd361e0ed14d7b"
+   },
+   "record_of_pairs": {
+    "record": "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/loop/1/correspondence.json",
+    "sha256": "df4bbd5b06079b15b8a1d3eb70191606f6f2a5485608e3bd77a6357e96d14371"
+   },
+   "model": "the model the matched sweep reached (studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/working.gguf, sha256 05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe)"
+  }
+ },
+ "parameters": {
+  "members": {
+   "measured_from": "records/retrospectives/2026-11-15-relational-gradient-specification-astra.md",
+   "derivation": "Astra's choice from the original's evidence: the eight successes whose turns join above 0.932 where the successes part (steps 140 to 179, layers 6 to 17: records/development/2026-11-15-relation-reading/loss-fork.json), with the two successes of the other route (expanded-071-h1, expanded-039-h3: records/development/2026-11-15-relation-reading/loss-ten.json). No count or cut-off of this run chooses them.",
+   "scales_with": "the cohort's successes and where their computations part; chosen again for another capability, model or cohort"
+  },
+  "regime": {
+   "measured_from": "records/development/2026-11-12-path-forward/sign-by-regime/sign-by-regime.json",
+   "derivation": "sign(kinetic_minus_descent_J) of each fitting question; a question on the boundary (zero) is refused",
+   "scales_with": "the questions of the cohort: another capability needs its own statement of which successes face the same situation"
+  },
+  "mate": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+   "derivation": "argmin over the members of the recipient's regime, itself left out, of the mean over the recipient's rows and the 105 merges of the distance; ties to the member named first",
+   "scales_with": "the members, the regimes and the original's own computation; made again whenever any of them changes"
+  },
+  "tolerance": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+   "derivation": "at a row and a merge, the sum over the members (the recipient left out) of each member's own distance from its mate, carried to the row by the correspondence, over the count of members summed (nine at a member's own rows, ten elsewhere)",
+   "scales_with": "the members' own disagreement at that row and merge; it is a table over the original's rows and merges, not one number"
+  },
+  "mass": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json",
+   "derivation": "one over the count of an answer's original rows (its prompt's positions and its answer's steps) for each row, the mean over the 105 merges, the sum over the thirty answers",
+   "scales_with": "the original's rows of each answer; a later history keeps these masses"
+  },
+  "processor_threads": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json",
+   "derivation": "the same setting, 4; it changes how long the compile takes and nothing it writes",
+   "scales_with": "the machine's processors"
+  }
+ },
+ "inventory": {
+  "recipients": 30,
+  "members": 10,
+  "successes": 15,
+  "rows": 19751,
+  "merges": 105,
+  "cells": 2073855
+ },
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/reference",
+  "studies/04-round-2-overlap/runs/wide-overlap/capture",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/loop/1/reading",
+  "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/loop/1/correspondence.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/relation-reference-original/"
+ ]
+}

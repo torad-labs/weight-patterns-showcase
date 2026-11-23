@@ -1,0 +1,9 @@
+# Selection before fresh confirmation
+
+Select candidate 3, h6-last128-half, root SHA256 174a7d0295ddf29e2216b0b78d5180fc293e0b903a59680a07ae550796684d0c. Search is finished. Do not modify this edit after seeing confirmation.
+
+The paired discovery/control results are in discovery-evidence.json. Original: 9/12 discovery, 17/18 controls. Candidate 1: 7/12, 14/18, six regressions. Candidate 2: 10/12, 17/18, one regression and target still wrong. Candidate 3: 12/12, 17/18, all three original discovery failures rescued, no regressions among the original 26 correct answers. The selected candidate returns exactly `blue` for discovery-01 and preserves `red` on discovery-09. The original numeric-0-0 failure remains; no universal numeric repair is claimed.
+
+Next compare original and this fixed candidate once on all 36 frozen confirmation prompts, same saved production server, GPU 1 under its lease, same ordering, independent fresh servers and KV, eight-token cap. Required: preserve every original-correct confirmation case. Report rescues, losses, unchanged failures, exact-format changes and totals separately. A confirmation regression means the complete experiment fails its predeclared criterion even though discovery passed. No retuning on confirmation.
+
+Capture the selected candidate's first-answer boundaries for discovery-01 and discovery-09 with the saved instrumented executable, each in a fresh process, using original-discovery token counts. Check their emitted answers against the candidate's production results. Compare stored numerical coordinates with the existing original captures to locate where the intervention's effects appear. These captures show propagation; they do not replace production behavior or provide unavailable logits. They are diagnostic runs, not performance measurements.

@@ -1,0 +1,54 @@
+# Archive storage is not research admission
+
+November 14, 2026 (CT). Astra's archive-contract decision on Performance's disk request, following Marcos's direction, relayed by Performance at 4:29 PM CT, to recover disk space and maintain it. This changes this seat's bounded archival contract openly; it changes neither the hypothesis nor method steps, admits no no-fit evaluation, and does not change the sealed directory or any permission/configuration. No data was transferred or released by this assessment.
+
+## Two existing inventories named for release
+
+Name the following exact inventories for `archive_inputs.py release`, under the existing unchanged contract:
+
+| Registry record | Input beneath `studies/04-round-2-overlap/` | Inventory files | Inventory bytes | Read-back recorded (CT) |
+|---|---|---:|---:|---|
+| `516d61e501f2-original.json` | `runs/correction-at-19/own/controls/original` | 257 | 9,824,978,622 | 4:39:27 PM |
+| `89316e5cc00c-original.json` | `runs/controlled-bf16-1/own/original` — inventoried fitting members only | 432 | 9,557,910,793 | 4:42:05 PM |
+
+The source inventories contain 689 files and 19,382,889,415 bytes, not an estimate from folder sizes. Their inventory digests are respectively `10365f23ed299ae90ebb179a8a53846442a3331e9cddf4fc13b8cc71e0e96f70` and `c6392b3b37430ceb4e9fa6c190cd5e2961ac013af3a66f4fd50e281dce0eca01`. Each record now carries a read-back receipt with the matching inventory, count and bytes. Performance's successful remote operations and report of four finished consumers per input, none active, are accepted without repeating them. Its reported 36 other answer folders in the second source are not part of this approval.
+
+Release still checks the bound receipt and unchanged local file identities, retains source/summary records, and records actual removals. If dependencies have changed since the owner's inventory, the new active dependency remains local. These totals are logical inventoried bytes; they are not a claim about physical space already recovered. No completed release has been reported to this seat.
+
+## The canceled release and the two current target fields
+
+The release of `signed-residual-contrast-original` remains canceled following Fable's withdrawal. Its 105 field arrays remain local with their verified backup. This request does not silently revive the canceled action.
+
+Name `runs/whole-context-targets-original/affine` and `runs/whole-context-targets-original/mates` for subsequent declared-input archival, separately, after the corresponding run's own-text capture, reading, correspondence and complete comparison finish and no other active consumer needs that field. A finished sweep is not this boundary. There is no favorable-result prerequisite. Keep the factory, manifests, schema, source/member/row mappings, original references, results and parameter-provenance metadata local. Each field's array release needs an exact input-archive inventory and a read-back bound to it, not a plain removal based on the older folder-level archive. Prior per-file verification may be reused only where its identities and current unchanged-source evidence bind the exact new inventory; do not rerun a transfer merely to obtain a second reported number.
+
+The current declarations still name `controlled-bf16-1/baseline`, their respective target field and `whole-states-original/reading`; those dependencies stay local while the command chains execute. Both also name `input-overlap/inputs/index.json`. That explicit index is not evidence that every other file below input-overlap is inactive: the operator's dependency/read-by-name/alias inventory still decides the release scope.
+
+## Models have provenance, not answer-row membership
+
+`runs/a2-path/model/a2-path.gguf` is eligible for an explicit model-artifact archive after the archive implementation can represent it truthfully. State that answer-row membership is not applicable to the model file; do not invent a sentinel answer, assign fitting IDs as though the weights were captured rows, or reinterpret an empty list in the existing format. Retain its producing declaration, result, written-model identity and ancestry. The historical declaration fitted thirty wrong answers before today's split; no claim that the artifact is fitting-only or untouched by today's no-fit cohort follows from archiving it.
+
+The model archive keeps the same exact-file hash, bucket location, remote-byte verification, unchanged-source release and verified restoration requirements. Its historical run and any future use keep their existing scientific status. This is not admission to resume a2-path, use it as a new target or substitute it for the canonical original model. The original read-only model stays local under the existing contract.
+
+## Previously acquired no-fit data may have storage-only backups
+
+The earlier contract's blanket exclusion of no-fit archival was this seat's conservative storage restriction (`2026-11-13-declared-input-archives-astra.md:41–51`; implemented in `input_archives.py:48–57,185–195`). It unnecessarily conflated recoverable storage with research use and now leaves substantial foundational data with only one local copy. Under the standing authorization to retain bulk research data in R2, accept an explicit, versioned storage-only archive role for previously acquired **unsealed** no-fit or mixed-cohort data. Ordinary existing archive records keep their present interpretation; do not globally remove the no-fit exclusion or rewrite old records as though they used the new contract.
+
+This applies prospectively to the named sources `runs/input-overlap`, `runs/controlled-bf16-1/baseline`, and the existing unsealed observation records under `inputs/observation` (including individual-observation, opposite-height-observation and pilot-connected-contrast). The source's cohort provenance stays explicit: fitting, no-fit, mixed or unresolved as established by existing unsealed indexes/declarations. Unresolved cohort membership is not an empty or fitting cohort. Storage-only handling must not calculate trace statistics, inspect answers to classify outcomes, select cases, fit, calibrate, score, or feed results into either experiment. It does only the byte work required to inventory, hash, copy, verify, restore and account for a backup. A source whose unsealed provenance is unresolved remains outside this scope; do not inspect the sealed data to resolve it.
+
+A storage-only archive is never a grant of input eligibility. Historical checks may recognize its exact retained bytes; a native execution still requires its actual admitted declaration and restored, verified inputs. Existing no-fit and sealed-data restrictions on fitting/calibration/selection/evaluation remain. No no-fit analysis is authorized before the separately required model/protocol freeze and evaluation binding. The metadata and exclusion list stay local; no-fit identifiers are not removed or relabeled.
+
+Copying and releasing remain separate decisions. A mixed pooled file needed by an active fitting run stays local as a whole, even after it has a backup. Do not rewrite it into a supposedly fitting-only replacement to recover space. The reported roughly 180 GB is a proposed backup scope, not counted release capacity. The operator establishes actual eligible files and bytes from the source inventory, without ancestor-wide walks.
+
+## The qualification folder is a permitted sibling, not part of the seal
+
+The exact source `inputs/acquisition/stream-qualification-2026-11-08` is eligible by the membership metadata below, but its release approval is suspended after the installed checker refused it at 5:06 PM CT: seven parameters cite the acquisition parent as retained provenance. No inventory, hashing or removal occurred. `2026-11-14-parameter-source-refinement-astra.md` defines source-bound narrowing, not an exemption; until that complete refinement is installed and the guarded tool accepts the source, it stays local. Do not enumerate `inputs/acquisition` or another ancestor to discover it. Its immediate names and three case-index files were inspected here, not its trace arrays: `cases.json` and `hybrid-case.json` identify `block-changed`; `gpu1-case.json` identifies `expanded-043-h3`. Neither identifier appears in the existing no-fit exclusion list. This is historical membership metadata, not evidence about numerical results or semantic independence from sealed questions.
+
+Name the source for release only for its exact resolved inventory, after read-back and a current dependency check. Derive the branch-specific membership from all three case indexes rather than extrapolating one case across the folder. Keep case indexes, qualification summaries, recorder identity/source snapshots and unresolved files local. A file with mixed or unresolved membership is not swept into an ordinary archive; any later storage-only classification needs the explicit extension above. Performance reports one finished declared consumer and no active one. No path or alias into the sealed directory is permitted.
+
+## Implementation boundary and reported denied walk
+
+Performance owns the bounded model-artifact/storage-only extension and its focused filesystem fixtures. Prepare it beside the installed machinery now; integrate only after both current whole-gap command chains exit. `input_archives.py` is imported by every native preflight, and the current checker rejects unknown archive forms while loading the whole registry: neither an incompatible record nor a changed checker belongs in the executing chains. Existing version-2 records and release commands above continue unchanged. New support must retain refusal before traversal for sealed names/path escapes/links, exact inventory and source bindings, retained metadata, read-back-before-release and restored-input checks, including failure/partial-release behavior. Use synthetic fixtures; no no-fit or sealed research material is a test input.
+
+Performance reports that at 4:33 PM CT `torad-research traces list`, rooted at `studies`, attempted a store-wide walk and received `EACCES` at the sealed directory, listing nothing below it and reporting `inputs/acquisition` unreadable. This is a reported denied traversal, not a successful whole-store inventory and not an independent access audit by Astra. Do not retry through another path, permissions or privilege. Use explicit permitted inventories/scoped roots; the tool owner can address broad-list traversal separately without weakening the seal. The companion disclosure records this event.
+
+This decision neither installs the extension nor claims any additional data released. The three-pass review's confidence was 90%, 94%, 96%; its central correction was separating artifact type, storage role and active-use status instead of making one answer-membership field stand for all three.

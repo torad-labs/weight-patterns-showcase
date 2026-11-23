@@ -1,0 +1,160 @@
+{
+  "method_step": 3,
+  "operation": "calibrated-descent-development-outcome",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "why_this_direction": "The prior directional learner began with a physically correct fitted answer. A calibrated native update from the known physically wrong transplant donor supplies a direct repair opportunity while its own initial friction subtraction and a separate reference case supply preservation checks.",
+  "repeating_pattern_check": "Native trace loss and local operation correctness moved independently in the prior experiment. Record both in their own roles. Retain explicit contradictions, numeric friction, omitted arithmetic and every cap.",
+  "hypothesis": "A calibrated single update on the exact early donor repairs signed downhill work on the inspected fitted problem while preserving correctly applied friction and the valid reference computation.",
+  "what_went_wrong_before": "The earlier holdout endpoints had equal correct descent counts despite measurable native movement, and the categorical auditors differed on strict friction handling. Pre-freeze the computation's own signed operands and pair identical prompts on one GPU.",
+  "prediction": "Fresh baseline reproduces the known wrong 91 J response. The calibrated endpoint applies positive downhill work, reaches 104 J and 91 J, preserves subtraction of 13 J and the correct 44 J control. The 115 J problem is an explicitly inspected additional development comparison, independent of model selection.",
+  "would_weaken_it": "A persistent wrong descent, new strict friction defect, loss of an explicitly correct control operation, or an incomplete response weakens the corresponding repair or preservation claim.",
+  "rule": "Free greedy GPU1 generations at the exact legacy donor and the single complete unbanded endpoint bound by the training controller. Hold prompt tokens, engine, settings, two recorded native merge boundaries and device fixed. Require exact reproduction of the recorded baseline target history. Prespecify an independent checkpoint-blind audit of every physics operation. Regenerate all three problems after the installed update. The 44 J control and 115 J comparison are inspected development cases; neither supplies endpoint selection or stopping.",
+  "inputs": [
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-cases.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/declaration.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/cases.json",
+    "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-overrides.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/reached11-complete-acquisition/cases.json",
+    "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/cases.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/declaration.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome"
+  ],
+  "parameters": {
+    "cases": {
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/declaration.json",
+      "derivation": "Freeze the fitted donor target, historical successful reference question and inspected development failure with exact original tokens and inherited free context. Physics parameters come from the public matched problem manifests.",
+      "scales_with": "the selected historical donor target, known successful reference and inspected development comparison"
+    },
+    "native_context": {
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/declaration.json",
+      "derivation": "Inherit the same qualified native context and its prompt-residual decoding limits.",
+      "scales_with": "the model and prompt token count"
+    },
+    "resources": {
+      "measured_from": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/stderr.log",
+      "derivation": "Round the previous model, six KV buffers, three graph slots in each of the three contexts and the peak retained graph buffer memory up to MiB. CPU threads use the previous one-thread qualification. Scale the measured largest 390 sparse acquisition by native-context length over captured positions for the storage reserve. Keep the project free-disk floor.",
+      "scales_with": "native model, context size, recorder workers and streams, project disk reserve"
+    }
+  },
+  "legacy_baseline": {
+    "checkpoint": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-state.json",
+      "sha256": "58bcabb5b2c78423aae268068676cda29da6d2c8452f4030c54e6c3e01f9955f"
+    },
+    "overrides": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-overrides.npz",
+      "sha256": "1024b3ed034ae53e1af265ca3c02e7eb887a2de54efdfc35f0607d9491db6aaf"
+    },
+    "seed": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+      "sha256": "0dfed0e7f5e0430e693def81549785baf863e4dd9a4f337f8d584d709a6d2a1a"
+    },
+    "reconstruction_original": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/declaration.json",
+      "sha256": "13aab30b94bd3e247537bc750750aad5a98562b4bab644ba3aeb4ced95fb3307"
+    }
+  },
+  "reference": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+  },
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/run.py",
+    "sha256": "cd636670206628c745c3408dddbd9c19c9490aa175207a660a80ca55a9c865f4"
+  },
+  "panel": {
+    "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/panel.json",
+    "sha256": "5111245f5291160871f1981d8a28c81919bc23eca7075d60518129a274c91a74"
+  },
+  "rubric": {
+    "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/audit-protocol.md",
+    "sha256": "5e3d3926c9a9635564f796789bf5b4ab317a7ebea7ffa7e8714452b7ed846d05"
+  },
+  "cpu_threads": 1,
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "physical_gpu": 1,
+  "native_context": 2048,
+  "native_engine": {
+    "sha256": "27544c96710f23cb2a2d166b6d1d2b65990ea9dd4e618bf299fc4dc2b2e4ddeb",
+    "engine_sha256": "8c8b96aaa287bf890a7fcbc5af91197cf045b379865c69c2df16a962598c4fab"
+  },
+  "stream_labels": "^(attn_out-20|pe_in-20)$",
+  "gpu_minimum_free_mib": 4815,
+  "storage": {
+    "free_floor_bytes": 40000000000,
+    "capture_reserve_bytes": 29864881,
+    "historical_capture_bytes": 13634601,
+    "historical_capture_positions": 935,
+    "native_context": 2048,
+    "qualification_log": {
+      "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/stderr.log",
+      "sha256": "fd45c03ee2a66fb99ddc815568e1087d0369658ce890955d4c04bdcc6c85065c"
+    }
+  },
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "organization": "research-operations/1",
+    "mode": "direct Recorder API",
+    "entrypoint": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/run.py",
+    "events": "observability/events.jsonl",
+    "operations": [
+      "state.restore",
+      "native.capture",
+      "state.await_endpoint"
+    ],
+    "context_fields": [
+      "endpoint",
+      "member",
+      "model_identity_run",
+      "model_generation",
+      "candidate",
+      "physical_gpu",
+      "gpu_uuid"
+    ],
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/run.py",
+        "sha256": "cd636670206628c745c3408dddbd9c19c9490aa175207a660a80ca55a9c865f4"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+        "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+        "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+      },
+      {
+        "record": "records/development/2026-11-17-reference-preservation/run.py",
+        "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+      },
+      {
+        "record": "records/development/2026-11-16-factor-direction/native.py",
+        "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/full_state.py",
+        "sha256": "937736168ebc21f7f2d4f9986441df992b23001b99f86c8bf9d52b8b3731be80"
+      },
+      {
+        "record": "records/development/2026-11-12-path-forward/generation_engine.py",
+        "sha256": "82749a8736e0bc8632ecdc2417a54c350701b776333a7d4e894059e4a3d1cf4e"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/replay.py",
+        "sha256": "3bab1f6fccc57676e2eed0a85dabf4fc8a0be232c32468e3dd99892d235a0092"
+      }
+    ]
+  },
+  "method_change": "Marcos removed the tolerance band and requires per-update regeneration of every operation intended for preservation. This independent paired assessment covers the exact donor and the forthcoming single unbanded endpoint on all three inspected problems. The evaluation labels do not define the training residual."
+}

@@ -1,0 +1,58 @@
+{
+ "run_by": "Claude",
+ "edit": {
+  "matrices": 70,
+  "change_over_matrix": "attention-output: median 15% of the matrix (6 to 41%). Feed-forward-down: median 8.5% (1.6 to 45%). Per matrix in edit.json.",
+  "share_of_asked_change_reached": "about 65% on the average inputs it was built from"
+ },
+ "prediction_vs_result": {
+  "predicted": "The weight change is far smaller than a2's and the edited model still reads the question. Some of the 30 wrong answers now add the descent, with their own numbers. Most of the 30 correct answers keep their fields.",
+  "observed": [
+   "The weight change is smaller than a2's (15% against 52% in attention) and the model is still broken. None of the 88 answers has its fields: 0 of 30 wrong repaired, 0 of 30 correct kept, and on round one's 28, 0 of 21 wrong repaired and 0 of 7 correct kept.",
+   "The damage is milder than a2's. The edited model writes fluent English and recognises a physics problem, but garbles the question as it reads it (invented words such as 'dissipines', or a statement that the numbers are missing). It fails before the calculation.",
+   "Replayed token for token through the edited model, the same 60 answers show both patterns carried the same way by the edit: the wrong pattern travelled 83.9 and the correct pattern 83.1 over the whole path, where the gap between them was 19.2. At a median place each travelled about 4.8 gaps.",
+   "The gap between the two patterns did not close. It went from 19.2 to 26.1.",
+   "Along the gap itself, counting each place and merge by its shared gap, the wrong pattern moved 0.36 of the way to the correct one over the whole path and 0.50 inside places 150 to 265: towards it at the start of the stretch, not at all from about place 200, and away after place 265 (-0.07). Layers 16 and 17 moved away along most of the path.",
+   "Reading the recorded answers, the edited model would choose the recorded token at 41% of the steps (32 to 47% per answer)."
+  ],
+  "not_predicted": [
+   "The correct pattern moved as far as the wrong one. The edit is not a move of the wrong pattern; it displaces everything that passes through the matrices."
+  ]
+ },
+ "failures_only": {
+  "overlap_wrong_30": "0 repaired. All 30 lose their fields.",
+  "overlap_correct_30": "30 broken of 30.",
+  "round_one_wrong_21": "0 repaired. The 3 that had the available energy right lose it.",
+  "round_one_correct_7": "7 broken of 7.",
+  "per_answer": "answers.json"
+ },
+ "why_it_failed": {
+  "pointed_at_by": "Marcos, November 9: the difference cannot be applied as raw values; the computation has to be reversed to the weights as a ratio of what passes through them.",
+  "checked": [
+   "In the trace the shared move is small against the turn: 15% in attention and 17% in feed-forward, all places together (21% inside places 150 to 265, 5 to 6% outside).",
+   "At the matrices the same move became a change of 64% of the output in attention (31 to 98%) and 33% in feed-forward (9 to 110%). The conversion inflated it about four times in attention and two times in feed-forward.",
+   "A median of 66% (attention) and 67% (feed-forward) of the squared asked change falls on the tenth of outputs with the smallest learned scale, which barely reach the signal. The conversion took the raw difference of the merged signal and divided it by that scale; a scale near zero turns a small difference in the trace into a large demand on the matrix.",
+   "Ruled out: the fit on inputs averaged over the 30 answers. One answer's input is 3 to 5% larger than the average, and the edit's response to what is particular to one answer is 0.23 (attention) and 0.35 (feed-forward) of what was asked."
+  ],
+  "not_measured": "How much of the inflation comes from dividing by the scale and how much from choosing the size of the output in the same unscaled space. The inputs of single answers were not kept.",
+  "records": [
+   "asked.json",
+   "asked.out"
+  ]
+ },
+ "what_this_changes": [
+  "The gap must be read where each matrix writes: in what the matrix sends, as a part of what it already sends, so the learned scale cancels. Asking a matrix for the gap of the merged signal pushed back through the scale asks it mostly for outputs that never reach the signal.",
+  "The edited model's traces are a direct test of an edit before any answer is read: here they show the two patterns carried together about five gaps away, which no reading of the answers would show.",
+  "This run does not test the hypothesis. The model was broken before the calculation, so whether the descent enters differently was not observed."
+ ],
+ "records": [
+  "edit.json",
+  "edit-first-build.json",
+  "answers.json",
+  "score.out",
+  "moved.npz",
+  "moved.out",
+  "asked.json",
+  "how-far-the-patterns-moved.png"
+ ]
+}

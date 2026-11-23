@@ -1,0 +1,51 @@
+{
+  "format": "installed-trace-diagnostic/1",
+  "reader": {
+    "record": "code/signal-trace/pipeline/weight_edit/prefix_turn_signal.py",
+    "sha256": "8935b14b730dcf9df796764cc75a3ae6e53dca711fcc9679910a4888b267420d"
+  },
+  "artifact": {
+    "record": "records/development/2026-11-18-whole-prefix-diagnostic/artifact.json",
+    "sha256": "4baa113563346941ff5600d4e59b0bcd5e41d0c5658bf33c2bcb1eda7975b716"
+  },
+  "dependencies": [
+    {
+      "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+      "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/final_experiment.py",
+      "sha256": "2f810ca16b9e3ce5a28f5b7219a8a9252ee130edb99e74ac68244e7ce6f5a873"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    }
+  ],
+  "inputs": [
+    {
+      "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/turns.npy",
+      "sha256": "c910371f6993b73dd723ab8e22042797a488cec09ecff433f3b83023c6baf167"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-banks.npz",
+      "sha256": "b4be1b7af7a1163f2bdb429af6fb8d4dd235a3dec21a1eef1618fbe5a22082e3"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-sites.json",
+      "sha256": "80220ea5b40ded7683d787b1f215b6b0215c0be945e234a90fc8ecf8a4ea91c6"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/declaration.json",
+      "sha256": "0235b6a1e1c653cc88ce1cee982e4862dadf76cc9a36f4b63d2b0892e581365c"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/declaration.json",
+      "sha256": "4f0bee4415c9c342434a7033543a592c37b18784cd9d3821353541cf5fa9c9ce"
+    }
+  ]
+}

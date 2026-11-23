@@ -1,0 +1,22 @@
+{
+  "format": "conditional-function-layout-result/1",
+  "completed_at": "2026-11-15T16:07:34.515309-06:00",
+  "declaration_sha256": "a7f21c7fec64aaebc706a32801eb943362eb3c38e7e45cf58c69a97898ee474e",
+  "definition": {
+    "file": "definition.json",
+    "sha256": "efd390a5fafeff948940bcf541ed43fef1821f9530279898cbe24d7ba449731b"
+  },
+  "fitting_members": 30,
+  "successes": 15,
+  "merges": 105,
+  "counts": {
+    "axis_events": 9255,
+    "axis_merge_events": 971775,
+    "probe_slots": 150355,
+    "probe_merge_slots": 15787275
+  },
+  "numerical_functions_materialized": false,
+  "prediction_vs_result": "All original successful axes, raw mapped query/witness events and acquisition sources are bound; no numerical function has been evaluated.",
+  "failures_only": [],
+  "what_this_changes": "The conditional-function construction has an immutable original coordinate definition. This is neither a numerical bank nor native qualification, discrimination, repair or closure."
+}

@@ -1,0 +1,238 @@
+{
+  "status": "complete",
+  "reference_site": 312,
+  "merge": 61,
+  "upper": 0.38018045796900707,
+  "crossings": {
+    "early": {
+      "early": {
+        "native_row": 312,
+        "projection": 0.39113807930900746,
+        "excess_above_upper": 0.01095762134000039,
+        "history_length": 579,
+        "self_control": {
+          "attn_out-20": true,
+          "pe_in-20": true
+        },
+        "selection": "teacher",
+        "native_labels": {
+          "attn_out-20": "34d72da905385377cea2af626fbfddf878dcaecd046a2d8f330738f2e064db41",
+          "pe_in-20": "da1ee96420005c2f4e799d60800809f4433236705530d2d2a316e7e827029859"
+        },
+        "raw": {
+          "result.json": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/early/result.json",
+            "sha256": "aeca4a4dd495467206f41b15dd908a52218903e933501702f61f684846b57d3e"
+          },
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/early/stream.f32",
+            "sha256": "8dadbf09e903133fd490669270100a1a829fc7294b4159b1063de170d37c26f3"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/early/stream.jsonl",
+            "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+          }
+        }
+      },
+      "late_attention": {
+        "native_row": 312,
+        "projection": 0.014471058399703363,
+        "excess_above_upper": -0.3657093995693037,
+        "history_length": 605,
+        "self_control": null,
+        "selection": "teacher",
+        "native_labels": {
+          "attn_out-20": "976f9f40c2d99751d32c08ed25f68f9fff44ffd2b8316068623486f0aa83cd8e",
+          "pe_in-20": "ea5c797c4b3a8701801ba4f20aad4a2f64144acae8267cd0ddfc9c80235fd9cf"
+        },
+        "raw": {
+          "result.json": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/late_attention/result.json",
+            "sha256": "79b5475721c3d14947dfd571a1b35849a6ffb3b4a5a27ff52ceba2d9dcb484ce"
+          },
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/late_attention/stream.f32",
+            "sha256": "414c512847c2cc941ca2cbf2571900e69cb033b494efb46b71718ebf921df288"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/late_attention/stream.jsonl",
+            "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+          }
+        }
+      },
+      "late_ffn": {
+        "native_row": 312,
+        "projection": 0.014471058399703363,
+        "excess_above_upper": -0.3657093995693037,
+        "history_length": 605,
+        "self_control": null,
+        "selection": "teacher",
+        "native_labels": {
+          "attn_out-20": "976f9f40c2d99751d32c08ed25f68f9fff44ffd2b8316068623486f0aa83cd8e",
+          "pe_in-20": "ea5c797c4b3a8701801ba4f20aad4a2f64144acae8267cd0ddfc9c80235fd9cf"
+        },
+        "raw": {
+          "result.json": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/late_ffn/result.json",
+            "sha256": "930df9afd9bb25a9abf2d0f5cde107454c10212f2bdcbeeb6a76e9f4da6a65fc"
+          },
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/late_ffn/stream.f32",
+            "sha256": "414c512847c2cc941ca2cbf2571900e69cb033b494efb46b71718ebf921df288"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/early/raw/late_ffn/stream.jsonl",
+            "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+          }
+        }
+      }
+    },
+    "late_attention": {
+      "early": {
+        "native_row": 312,
+        "projection": 0.38308610622972616,
+        "excess_above_upper": 0.002905648260719096,
+        "history_length": 579,
+        "self_control": null,
+        "selection": "teacher",
+        "native_labels": {
+          "attn_out-20": "b054494167d03fa77143ac2cf5b016f5b1bcebd2028a17267a33fa0cefee0a84",
+          "pe_in-20": "f3ad32ff5e7e4f24a29eb964202783245a24767a1820be3db6847e6517bfb16c"
+        },
+        "raw": {
+          "result.json": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_attention/raw/early/result.json",
+            "sha256": "2b2374df851d89ee2f409eb8afa539babe0fdc77e441d8200a3601f7a6fc6963"
+          },
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_attention/raw/early/stream.f32",
+            "sha256": "719e161dd6cc468c08dc92ae9cef9b9713796ecd059333105956dc4061f52e96"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_attention/raw/early/stream.jsonl",
+            "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+          }
+        }
+      },
+      "late_attention": {
+        "native_row": 312,
+        "projection": 0.02112100798816277,
+        "excess_above_upper": -0.35905944998084427,
+        "history_length": 605,
+        "self_control": {
+          "attn_out-20": true,
+          "pe_in-20": true
+        },
+        "selection": "teacher",
+        "native_labels": {
+          "attn_out-20": "d291f0eca41be5bda627060ce54d69dbd29e2dab1cc2b3803aa5bab561c3d891",
+          "pe_in-20": "a51aabdecb7234c08b6669eeaca2815e13540c9e6ffc64bd7780ee6003aa43fa"
+        },
+        "raw": {
+          "result.json": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_attention/raw/late_attention/result.json",
+            "sha256": "33e0ee8667144fc38a2bbbe043d3ac6432c224cd001731e80e183d1f461d80d0"
+          },
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_attention/raw/late_attention/stream.f32",
+            "sha256": "aaf52851e79e56ebffb450aa1885c6672799b6b599680ebb153aea630e35e3f5"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_attention/raw/late_attention/stream.jsonl",
+            "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+          }
+        }
+      }
+    },
+    "late_ffn": {
+      "early": {
+        "native_row": 312,
+        "projection": 0.38981618043865796,
+        "excess_above_upper": 0.009635722469650887,
+        "history_length": 579,
+        "self_control": null,
+        "selection": "teacher",
+        "native_labels": {
+          "attn_out-20": "01dd9b349ce43e466f2fe6ce617364b2eb44354ed3f051faa6769732015f66c8",
+          "pe_in-20": "9e77d0be8865a2a75b31f4af6609facfc511fb6a17791e0b813caa176af52fb5"
+        },
+        "raw": {
+          "result.json": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_ffn/raw/early/result.json",
+            "sha256": "a5a137f00dbba149a6840b17b0172fd76aaefcba8c82c574f65c826ccfbd8bbd"
+          },
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_ffn/raw/early/stream.f32",
+            "sha256": "c492583244a913f1a8a42fbae1a75b80a811e21f02ee2fc056927e97a5b4d179"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_ffn/raw/early/stream.jsonl",
+            "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+          }
+        }
+      },
+      "late_ffn": {
+        "native_row": 312,
+        "projection": 0.01510147660858932,
+        "excess_above_upper": -0.3650789813604177,
+        "history_length": 605,
+        "self_control": {
+          "attn_out-20": true,
+          "pe_in-20": true
+        },
+        "selection": "teacher",
+        "native_labels": {
+          "attn_out-20": "e6091c04809dcecd383f67708a54bb252a92372b33a5f004b5c76f1a77ea43dd",
+          "pe_in-20": "a378a330c9a8b269506020b0f184a9f46a26dd2b0a768591cf4464370f852ba2"
+        },
+        "raw": {
+          "result.json": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_ffn/raw/late_ffn/result.json",
+            "sha256": "9389535c03407b6b4905cc5bdddf2def5c889bce2fcee7d7010910b921588ec7"
+          },
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_ffn/raw/late_ffn/stream.f32",
+            "sha256": "aab4c84a6915f7b1b640a8e2b368c01515b7b8e2125404a48060c257093a59d7"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/same-input-crossed-success-histories/late_ffn/raw/late_ffn/stream.jsonl",
+            "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+          }
+        }
+      }
+    }
+  },
+  "effects": {
+    "late_attention": {
+      "total": -0.3700170713208447,
+      "weights_on_early_history": -0.008051973079281294,
+      "history_at_early_weights": -0.3766670209093041,
+      "weights_on_repaired_history": 0.006649949588459408,
+      "history_at_repaired_weights": -0.3619650982415634,
+      "interaction": 0.014701922667740702,
+      "half_interaction_split_weight": -0.0007010117454109427,
+      "half_interaction_split_history": -0.3693160595754338
+    },
+    "late_ffn": {
+      "total": -0.37603660270041817,
+      "weights_on_early_history": -0.0013218988703495027,
+      "history_at_early_weights": -0.3766670209093041,
+      "weights_on_repaired_history": 0.0006304182088859578,
+      "history_at_repaired_weights": -0.37471470383006866,
+      "interaction": 0.0019523170792354605,
+      "half_interaction_split_weight": -0.00034574033073177246,
+      "half_interaction_split_history": -0.3756908623696864
+    }
+  },
+  "first_different_consumed_position": {
+    "early_vs_attention": 245,
+    "attention_vs_ffn": 496
+  },
+  "repeated_early_model_on_identical_repaired_prefix": {
+    "attn_out-20": true,
+    "pe_in-20": true
+  },
+  "prediction_vs_result": "Recorded the two conditional weight effects, the two conditional history effects, and their interaction for each observed repair. The sign and magnitude columns are native held readouts.",
+  "failures_only": "One fitted problem and one historically selected readout. Cross-history outputs are teacher-forced and cannot establish an independently generated answer. Two repaired histories share their whole input prefix through the measured stage.",
+  "what_this_changes": "Separates the history and whole-weight dependence of the downstream signed trace move for the actual fitted repairs. A controlled history effect can be mediated by the earlier weight change that selected that history."
+}

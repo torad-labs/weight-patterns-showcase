@@ -1,0 +1,339 @@
+{
+ "method_step": 5,
+ "operation": "own-trace-loop-in-torch-balanced",
+ "run_by": "weight-research-fable",
+ "declared_at": "2026-11-15T07:13:13.364864-06:00",
+ "status": "stopped by this seat after its step 4 on its declared weakening condition; closed with result.json; not started again",
+ "kind": "a trial in torch: files and one card's arithmetic. No engine, no recorder, no pass, no model file written, no answer read, graded or counted. Its losses are the torch forward's on answers torch writes: they are never the measured loss, which is the engine's on its own trace and belongs to the native loop declared separately for admission.",
+ "authority": "Marcos's directions of November 15 as relayed (journal/2026-11-15-computation-not-state-values.md, journal/2026-11-15-follow-the-changing-trace.md) and his diagnosis of the first step relayed at 5:55 AM CT (a tolerance under which correct paths get no gradient; what an update for one token does to the tokens that attend to it has to be balanced); Astra's envelope and her direction that the next proposal uses its frozen bytes under a prospective declaration, with the torch distances anchored on the engine's.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/relation-envelope-original/reference/tolerance.npy",
+ "objective": "records/retrospectives/2026-11-15-relational-gradient-specification-astra.md",
+ "specification": {
+  "record": "records/retrospectives/2026-11-15-relational-gradient-specification-astra.md",
+  "sha256": "6bd253e88648b4b4245c695e6e4317559f57fb4a87c97a7ad8638434feb90d7b"
+ },
+ "decision_records": [
+  {
+   "record": "records/retrospectives/2026-11-15-relational-gradient-specification-astra.md",
+   "sha256": "6bd253e88648b4b4245c695e6e4317559f57fb4a87c97a7ad8638434feb90d7b"
+  },
+  {
+   "record": "records/retrospectives/2026-11-15-relational-envelope-astra.md",
+   "sha256": "bddf50c8ccb7e7f467649d1141046d52ad6522205bd5e630d9dc45d568d63eb9"
+  },
+  {
+   "record": "records/retrospectives/2026-11-15-first-relational-native-comparison-astra.md",
+   "sha256": "486856b86971a9ce1659db4cb7fb351bab20764e93363c59113f4a154c683860"
+  },
+  {
+   "record": "journal/2026-11-15-computation-not-state-values.md",
+   "sha256": "7f7f0d85766a4f1687d0dda1f1291fcc3b9959bb7273fe7086d5223cc069aeed"
+  },
+  {
+   "record": "journal/2026-11-15-follow-the-changing-trace.md",
+   "sha256": "19adc946442f9dc02f92070a943e957069ea75f569547496420a6ef332893e15"
+  }
+ ],
+ "why_this_direction": "Step 5 is the correction made again on the model's own trace until the gap has closed. The first relational step was one step taken on a text held fixed under the tolerance at the members' mean: it read lower on that text (0.9411 of its start) and higher on the answers the stepped model writes itself in torch (2.6673 times). Marcos's diagnosis names what was wrong in how that step was applied, and the original's own derivative bears each part out (records/development/2026-11-15-relation-reading/grad-split-mean.json, grad-split-envelope.json; studies/04-round-2-overlap/runs/relation-envelope-original/result.json): (1) correct paths were given gradient: 0.368 of that step's first-order gain lay on the fifteen correct answers, pointing the same way as the wrong answers' part (cosine 0.8), and a position was inside the tolerance at all 105 merges at only 2664 of 19751 positions; (2) under the successes' envelope no correct cell is over its tolerance on the original and the fifteen wrong answers hold all of the loss, 0.0527 over 138187 cells; (3) the torch forward's own distance from the engine's states would by itself put 0.156 of the gradient's gain back on correct answers at the envelope's edge, which the anchor of the forward on the engine's distances removes; (4) only one step was ever taken: the specification's loop (a step, the answers written again, the trace read again, the next step from the state reached, whatever was read) has not been run, so nothing is known of what follows a first rise. Under the envelope 0.135 of the gradient's first-order gain is still applied at positions of the wrong answers that are inside their tolerance: it reaches them from other positions' losses through attention, and an update built from one position's input also moves every position whose input resembles it. This run is the plain loop with the update weighed against the inputs of the positions inside their tolerance, the form in which the two constructions that worked before (the background-conditioned row at attention 16, and the preservation rows of the full-path solve, without which that solve lost its repairs and damaged the correct answers) kept an edit from firing on the tokens it was not made for. The plain loop, declared before this one, has 4 own-trace readings on file as this is written (studies/04-round-2-overlap/runs/envelope-loop-plain-torch/loop.json, a record still being written): the own-trace loss 0.0580, 0.0916, 0.1828, 0.1141; the wrong answers' part 0.0574, 0.0489, 0.0952, 0.0496; the correct answers' part 0.0006, 0.0428, 0.0876, 0.0646; answers written as at the step before 21, 0, 0, 0 of 30 (the first of these is against the original's texts).",
+ "repeating_pattern_check": "Four things have happened more than once. (1) A change fitted on one history read worse on the history the changed model has: the two whole-path sweeps raised the correct members' sum on the model's own answers from nothing, and the four gradient steps taken on a fixed text (plain, lattice, whitened, the rows through the parting) read 0.91 to 0.96 on that text and 1.2 to 3.7 times on the text torch then writes (records/development/2026-11-15-relation-reading/step-own-plain.json, step-own-lattice.json, step-own-whitened.json, step-own-plain-through.json). It keeps happening because the request was made on a history the changed model no longer has, and because correct paths were asked to move. Every derivative of this loop is taken on the own trace of the state it stands at, and nothing is asked of a pair inside the envelope. (2) An interim reading was taken for a verdict: the first rise on the own text was called damage, and Marcos corrected it (journal/2026-11-15-follow-the-changing-trace.md). This loop draws no verdict from a rise, a spike of the derivative or an answer's length; it records each step and goes on from the state it reached. (3) A surrogate's arithmetic was read as the model's computation: the torch forward stands a little off the engine, which at a near tie writes another token and at a tolerance's edge calls cells over it. The distances are anchored on the engine's here, and every reading of this run is named a trial in torch. (4) A sum hid where the loss sits: a shortened answer lays many original rows on one of its steps, and a loss cannot close on a stretch with no trace of its own. Each step keeps every answer's record of pairs and every original row's loss, mass and count of positions.",
+ "hypothesis": "That what raises the own trace after a step is the update's effect on tokens the loss asks nothing of, and that weighing the update against those tokens' inputs keeps a step of the same measured length from it: after a step the own trace rises less than the plain loop's (or falls), fewer answers are rewritten, and the correct answers' part stays smaller. It is a hypothesis about this construction in torch's arithmetic. It does not claim the mates are each answer's right destination (two members' mates are of another route), and a fall is no repair: closure is measured on the engine's own trace.",
+ "what_went_wrong_before": "The first relational reference set its tolerance at the members' mean, which left a third of the loss, and of the gradient, on correct answers. The first steps were taken on the engine's recorded texts and judged on texts torch writes. An own-text rise after one step was reported as a finding against the update before any second step had been taken. In the preparation of this loop the torch forward alone, unanchored, put 0.156 of the gradient's gain on the fifteen correct answers under the envelope, where the engine's trace asks nothing of them (records/development/2026-11-15-relation-reading/grad-split-envelope.json); anchored, it read the engine's hinge on the original cell for cell in preparation (the objective 0.0526553 and 138,187 cells over, none of a correct answer); this run's first command makes the anchor again on its own card and records the same check.",
+ "rule": {
+  "start": "the original model's 70 matrices, held in float32 beside the model, which holds them rounded to BF16 as a file would",
+  "a_step": [
+   "the model as it stands writes its thirty answers in torch (the vocabulary's first choice at each position until the ending token or the limit, both the recorder's)",
+   "each written answer is laid on the original's rows: one on one where its text is the original's own, as the capture registers identical inputs; by the computation otherwise (torch_forward.registered against the original's exported turns)",
+   "the loss is read at every pair and merge with the original rows' masses (the pairs of one original row share its mass), against the frozen envelope, the forward's distance anchored on the engine's",
+   "the derivative of that own-trace loss in the 70 matrices is taken through the whole path, both sides of every merge and attention differentiated",
+   "a length is searched along the direction (`length`)",
+   "the weights move by the length taken; the next step starts from there by writing the answers again, whatever was read"
+  ],
+  "direction": "the whole derivative weighed against the inputs of the positions the loss asks nothing of (direction=balanced): for each matrix D_m (K_m + d_m I)^-1, with K_m the mean outer product of the matrix's input rows at the positions where no merge is over its tolerance on the step's own texts (every position of an answer inside its tolerance, and a wrong answer's positions inside it), and d_m the mean of K_m's diagonal times two to the matrix's power (`parameters.ridge`). No row of the loss is masked and nothing of the derivative is left out: the update is weighed, not cut.",
+  "length": "on the step's own texts held fixed, by the anchored loss: the first length is the loss over the slope of the loss along the direction; a trial at h reading L(h) gives the parabola through the start's loss, the start's slope and L(h), whose least point is the next length; the search ends at the first trial that does not read under the lowest so far, once one has read under the start, and the step is the lowest (it also ends where the loss fell at least as fast as its straight line, with that trial as the step). Every trial is on BF16-rounded weights. This is a strict decrease of the surrogate on a history held fixed, as the specification states the rule; it cannot see an answer leave its text, and the own trace written again after the step is read whatever it says: no length is shortened and no step is undone by it.",
+  "stall": "a step whose search finds no length reading under its start, down to a length that moves no stored weight, ends the loop: the proposal has stalled, which is no closure",
+  "closure": "the loop ends when the own-trace loss is nothing (every pair inside its tolerance); in torch that is a trial's reading and no closure of the capability gap",
+  "continuation": "no state is kept or dropped by its loss, and no step is undone; no count of steps is set; a stop by hand (for the card, or on a direction) is recorded by a dated revision of this declaration with the steps then on file",
+  "anchor": "distance at a pair laid on original row r = (the engine's distance at r on the original) + (the forward's distance at the pair) - (the forward's distance at r on the original); made once by this run's first command from the original's weights on the original's own texts on this run's card, and held to its sha256",
+  "kept_each_step": "the own-trace loss by answer and by group, the cells over tolerance by group, the positions over it, the derivative's size and the share of its gain that comes from the answers that are not wrong, every trial with its length, reading and stored weights moved, and in loop/step-<n>.npz every answer's written tokens and record of pairs with each original row's loss by merge, mass and count of positions",
+  "not_read": "what any answer says; no token, word or value is a measure here, and an answer's length is recorded only as how its trace lies on the original's rows"
+ },
+ "prediction": "The anchor's check repeats the preparation's: on the original's own texts the anchored forward reads the engine's objective (0.05266) with 138,187 cells over tolerance, none of a correct answer. In torch the own trace at the start is not the engine's for the answers that leave the recorded text at a near tie (9 of 30 in the earlier reading on card 1), so the loop's first own-trace loss stands above 0.0527 and some of it is on correct answers. The first step's length is of the same order as the plain loop's in shares of its unit. After it fewer answers are rewritten than in the plain loop and the own trace reads lower than the plain loop's at the same step; the correct answers' part of the loss stays under the plain loop's through the first ten steps. Whether the own trace passes under its start in those steps is not predicted either way. It is not predicted that the loss reaches nothing in the steps this run takes. Of the damping's reading: in preparation on six answers the least stood at the low end of what single precision reads for 67 of the 70 matrices, and the same is predicted here, which would mean the weighing is as strong as this arithmetic can read it and a stronger one, read in double precision, may do more.",
+ "would_weaken_it": "A first rise no smaller than the plain loop's, as many answers rewritten, or a correct answers' part as large: the weighing would then not be what keeps a step from the tokens inside their tolerance. A reading of the weights a step took that is not the next step's start reading on the same texts would mean the torch forward does not repeat itself, and the readings would not be exact.",
+ "limits": [
+  "A trial in torch. The engine words answers differently from torch at near ties and differently on its two cards; nothing here is the measured loss, and the native loop is declared separately for admission.",
+  "The anchor carries the forward's difference from the engine at each original row to whatever position is laid on that row; away from the original's own texts that is an approximation of the surrogate, not a measurement.",
+  "Fitting answers only: the thirty of controlled-bf16-1. Nothing of the no-fit answers or the reserved set is read; of the cohort's capture and exports only the thirty fitting ids.",
+  "The mates and the envelope are the frozen bytes of relation-envelope-original and are not made again or adjusted from anything this run reads. Two members' mates are of another route; that limit stays.",
+  "A success sits exactly on the envelope wherever it is itself the widest witness (91,285 of the successes' 971,775 cells on the original), so after any step some of those cells stand over it by little and carry a full derivative: protection inside the same objective, counted each step.",
+  "The loops of this family run on different cards, each with its own anchor; their readings are compared as trajectories, not digit for digit.",
+  "The damping is read in single precision, whose resolution bounds the powers read from below; where a matrix's least stands at that end, a smaller damping was not read, and the record says so matrix by matrix. The disturbance it weighs is of each matrix's own output at the positions inside their tolerance, to first order, every layer weighed alike; what reaches those positions through attention from other positions' changed states is not in it.",
+  "No model file is written, no engine runs, and no closure, repair or verdict on the hypothesis follows from this run."
+ ],
+ "execution": {
+  "made_from": "code/signal-trace",
+  "order": [
+   "anchor",
+   "loop"
+  ],
+  "commands": {
+   "anchor": "bash studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/run.sh anchor   # the anchor (studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/anchor.npy) and its check on the original (studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/anchor-read.json)",
+   "loop": "bash studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/run.sh loop   # the loop: studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/loop.json rewritten at every step, studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/loop/step-<n>.npz beside it"
+  },
+  "before_each": "the research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before each command",
+  "card": "card 0 under its lock (/run/user/1000/gpu0.lock), held for each command: arithmetic only, no recorder and no engine",
+  "spool": "the large constants of the texts held between steps are kept in files under /tmp/<run>-spool and removed when the run ends; nothing a record reads",
+  "memory": "no command is started under a memory ceiling of its own: memory protection is hostshield's",
+  "processor_threads": "OMP_NUM_THREADS=4, the setting of this seat's earlier runs; it sets no size, cap or threshold"
+ },
+ "implementation": [
+  {
+   "record": "records/development/2026-11-15-relation-reading/relation_step.py",
+   "sha256": "d2f157ef90c3321c878c7d32c2a4a37d142073a1d8b6e76f8b87032b4dd8c61d"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/relation_reading.py",
+   "sha256": "46d03208ddfdb09d745b10fb6dd95fbfb010ff53c24050f0aea64e3903caabe5"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/relation_mates.py",
+   "sha256": "8e2bf963b57fbfc78ca3b95335baeba41e06dc1f78573d0ec4ff6cd7c0fe6b1c"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/declare_envelope_loop.py",
+   "sha256": "ab012fe4cbcfbac1ddeedf1c0d2d3c8ca786ff352ebbae1a95ffe93aea46ad54"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/grad_split.py",
+   "sha256": "3062c81ed2122cfc3ac6d817c265474f65c7b6cb863570ca2081955ae7b3bc7a"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+   "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/turns_reading.py",
+   "sha256": "b072b0de9ff588985eccb7834a97d48d1ee62b4043b64349502dc596e45065e9"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/pairs_coverage.py",
+   "sha256": "02702758fda68f263e1c9715c3a65782492cd798dde4a6d8565049e010352e3b"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch-forward/architecture.json",
+   "sha256": "1905c24e43a943d2c20683f13c5538944281c2a9b939001cbfc5f746cbc5afde"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch-forward/write-original.json",
+   "sha256": "7df9711401bd30bd236c894ba746618a4956055b073533867fcd8d78887f93e3"
+  },
+  {
+   "record": "code/signal-trace/pipeline/overlap/fed_replay.py",
+   "sha256": "817c4226eb96024540570c5b3ce622dbb33ce42bb62d67dfc8437c257b2a10b2"
+  },
+  {
+   "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+   "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+  },
+  {
+   "record": "code/signal-trace/pipeline/paths.py",
+   "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+  }
+ ],
+ "bindings": {
+  "envelope": {
+   "reference": {
+    "record": "studies/04-round-2-overlap/runs/relation-envelope-original/reference/reference.json",
+    "sha256": "937ff3ec2f53b17e6a9a42bba0cc3f4edc7a6ec7b93c6fbd240486d881ebea50"
+   },
+   "tolerance": {
+    "record": "studies/04-round-2-overlap/runs/relation-envelope-original/reference/tolerance.npy",
+    "sha256": "d60f280c645bd15d70a00a6938c7e0e77fae6cc86fc53240da5889e1d68fb4d7"
+   },
+   "result": {
+    "record": "studies/04-round-2-overlap/runs/relation-envelope-original/result.json",
+    "sha256": "7482ef6798ca01a6b89781cbbfb95bb7787fb8f84acd71e19b2998218caf70d2"
+   },
+   "declaration": {
+    "record": "studies/04-round-2-overlap/runs/relation-envelope-original/declaration.json",
+    "sha256": "fbd72ec69dc332aad0300d5fe11b82a820b72e6ae0d7a3918c21497f5453c598"
+   }
+  },
+  "engine_distances": {
+   "file": "studies/04-round-2-overlap/runs/relation-reference-original/arrays/apart.npy",
+   "sha256": "ff3b60821c4ad5c0993a8fafdd86b22bfe345b49847057dab78f1b34a7e57012",
+   "what": "the engine's distance of every original row from each success at every merge; the mate's column is the engine's distance the anchor stands on"
+  },
+  "original_reading": {
+   "record": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+   "sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf"
+  },
+  "original_row_map": {
+   "record": "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json",
+   "sha256": "effb71113117aa4063f25e7d30ea30ea187343545e176b2ddd0243fdc499bf1b"
+  },
+  "memberships": {
+   "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+   "sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38"
+  },
+  "tensors_index": {
+   "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+   "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+  },
+  "preparation": [
+   {
+    "record": "records/development/2026-11-15-relation-reading/grad-split-mean.json",
+    "sha256": "7fef788379d3b3149050ad63647f4403f967e42d0b621c0a69df422a0313c00d"
+   },
+   {
+    "record": "records/development/2026-11-15-relation-reading/grad-split-envelope.json",
+    "sha256": "5f421657c2267d9893e44f847ff0aedc5eeb2a15f73e0f4ab6c4c4194ef97378"
+   },
+   {
+    "record": "records/development/2026-11-15-relation-reading/step-own-plain.json",
+    "sha256": "f9faed5e51ecae2e2286c85095a9974d655058d1b8a0104b36c5fb29b36a63dc"
+   },
+   {
+    "record": "records/development/2026-11-15-relation-reading/step-own-plain-along.json",
+    "sha256": "2c2d78af9a1a7cbb4decebe1536a58f69a620efcd537450ab1b81fdabb844501"
+   }
+  ]
+ },
+ "parameters": {
+  "tolerance": {
+   "measured_from": "studies/04-round-2-overlap/runs/relation-envelope-original/reference/tolerance.npy",
+   "derivation": "Astra's envelope: at a row and a merge, the largest of the fifteen fitting successes' own distances from their mates carried to the row, the recipient's own included; loaded as frozen bytes and held to the sha256 bound above",
+   "scales_with": "the successes' own disagreement at that row and merge"
+  },
+  "anchor": {
+   "measured_from": "studies/04-round-2-overlap/runs/relation-reference-original/arrays/apart.npy",
+   "derivation": "the hinge of a pair is the part over zero of (the forward's distance at the pair - the forward's distance at its row on the original's weights and texts, made by this run's first command) + (the engine's distance at its row - the tolerance at its row)",
+   "scales_with": "the torch forward's arithmetic on the card it runs on; made again for another card, model or reference"
+  },
+  "unit_length": {
+   "measured_from": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json",
+   "derivation": "each step: the loss the step starts from over the slope of the loss along the direction (the derivative's inner product with the direction)",
+   "scales_with": "the loss and its derivative at the state the step starts from",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/relation_step.py"
+  },
+  "trial_lengths": {
+   "measured_from": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json",
+   "derivation": "the least points of parabolas through the readings, as `rule.length` states them; no factor, count or fraction is set",
+   "scales_with": "the readings of the loss along the direction",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/relation_step.py"
+  },
+  "stored_format": {
+   "measured_from": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+   "derivation": "the 70 matrices are held as the file holds them, BF16; what a step leaves under the rounding stays in the float32 copy for the next",
+   "scales_with": "the format a model file holds its weights in"
+  },
+  "writing": {
+   "measured_from": "records/development/2026-11-12-path-forward/torch-forward/write-original.json",
+   "derivation": "the recorder's limit of tokens and ending token, as that record holds them (`written.limit`, `written.ending_tokens`)",
+   "scales_with": "the cohort's capture"
+  },
+  "steps": {
+   "measured_from": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json",
+   "derivation": "no count: the loop ends at a loss of nothing or at a stall, and a stop by hand is recorded by a dated revision",
+   "scales_with": "nothing set",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/relation_step.py"
+  },
+  "processor_threads": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json",
+   "derivation": "the same setting, 4; it changes how long a step takes and nothing it reads",
+   "scales_with": "the machine's processors"
+  },
+  "ridge": {
+   "measured_from": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json",
+   "derivation": "read once, at the loop's first step, from that step's own derivative and rows, and written into the record (`steps[0].balanced.ridge_reading`): for each matrix the positions inside their tolerance are dealt into three groups of answers (every third answer of the wrong and of the correct ones in the reading's order, a case's answers in one group); for each group left out, K is made from the other two and the direction D (K + d I)^-1 is read on the left-out group's rows as (what it moves them by, squared, per row) over (its first-order gain, squared): the disturbance of positions it did not see at a given gain. The matrix's power is the one at which the three groups' sum of that is least, the larger ridge on a tie, among the whole powers of two times the mean of K's diagonal from the top of K's own decomposition down to its numerical resolution in single precision (the larger of rows and width, times the float32 spacing, times the top). Every later step uses the matrix's power with its own K and its own mean diagonal.",
+   "scales_with": "each matrix's inputs at the positions inside their tolerance and the derivative at the loop's first state; read again for another model, reference or cohort",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/relation_step.py"
+  },
+  "ridge_groups": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+   "derivation": "three, the fitting answers' own count of groups in the solver (tube.picks deals every third answer within each original group; correction.case_folds keeps a case's answers together): the same rule on the thirty answers here",
+   "scales_with": "the cohort's fitting answers"
+  }
+ },
+ "inventory": {
+  "answers": 30,
+  "wrong": 15,
+  "successes": 15,
+  "original_rows": 19751,
+  "merges": 105,
+  "matrices": 70
+ },
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/relation-envelope-original/reference",
+  "studies/04-round-2-overlap/runs/relation-reference-original/arrays",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/reference",
+  "studies/04-round-2-overlap/runs/wide-overlap/capture",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/",
+  "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/declaration-before-stop.json",
+  "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/result.json"
+ ],
+ "revisions": [
+  {
+   "revision": 1,
+   "made": "2026-11-15 07:40:39 CT",
+   "made_by": "weight-research-fable",
+   "record": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/result.json",
+   "previous": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/declaration-before-stop.json",
+   "previous_sha256": "9cb87a3f18d78a7dd38ec175032fc534857936d2d10cebe3b7da387a9eada30f",
+   "reason": "The run is closed: what its declaration said would weaken the hypothesis was met at the first step and at each step after it, and the card goes to the kind that reads its lengths on answers written again. Only the status changes; every binding, the rule, the parameters, the prediction and what would weaken it stand as declared."
+  },
+  {
+   "revision": 2,
+   "made": "2026-11-15 13:59:51 CT",
+   "made_by": "weight-research-fable",
+   "record": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json",
+   "previous": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/declaration-before-revision-2.json",
+   "previous_sha256": "d2b3ecdadd7159610672b07b6668355339662c3e0e48ff36aeeb592196ff180a",
+   "reason": "This run's driver, relation_step.py, records how many answers were written token for token as the text a step started on, and the programs that declared and closed the run composed those counts. Marcos's direction of November 14, 2026 is that an instrument that measures by tokens, values or words is taken out of the project, not fenced by a rule, and on November 15 he asked again whether tokens were being compared (relayed at 1:44 PM CT). weight-research-astra, who holds the loss and the loop since 12:54 PM CT November 15, said at 1:55 PM CT that the replacement needs none of these programs and asked for them to be retired by dated revisions that keep every record of the run and the identity of every source. From this revision on the programs under `retired` are not in the tree: they left before it, leave with the commit that carries it, or are being removed by the seat that holds them. Every hash this declaration binds still names the bytes that ran: each is the blob of that file at the commit named beside it, read and hashed when this revision was made. The parameters that named a retired program as their source now name `retired-programs.json` in this folder, which says where those bytes are; what each named before is under `parameters_cited_again` and in the previous declaration. No outcome, no number and no other binding changes. The run's commands cannot be started from the tree.",
+   "retired": [
+    {
+     "file": "records/development/2026-11-15-relation-reading/relation_step.py",
+     "sha256": "d2f157ef90c3321c878c7d32c2a4a37d142073a1d8b6e76f8b87032b4dd8c61d",
+     "held_by_commit": "169394131cecd185287821eec283a013b790dcdd",
+     "bound_as": "by its sha256"
+    },
+    {
+     "file": "records/development/2026-11-15-relation-reading/grad_split.py",
+     "sha256": "3062c81ed2122cfc3ac6d817c265474f65c7b6cb863570ca2081955ae7b3bc7a",
+     "held_by_commit": "6aeb4f12acdb72c1884c55f6b32abb881d01cddb",
+     "bound_as": "by its sha256"
+    },
+    {
+     "file": "records/development/2026-11-15-relation-reading/declare_envelope_loop.py",
+     "sha256": "ab012fe4cbcfbac1ddeedf1c0d2d3c8ca786ff352ebbae1a95ffe93aea46ad54",
+     "held_by_commit": "169394131cecd185287821eec283a013b790dcdd",
+     "bound_as": "by its sha256"
+    }
+   ],
+   "parameters_cited_again": {
+    "unit_length": {
+     "was": "records/development/2026-11-15-relation-reading/relation_step.py",
+     "now": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json"
+    },
+    "trial_lengths": {
+     "was": "records/development/2026-11-15-relation-reading/relation_step.py",
+     "now": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json"
+    },
+    "steps": {
+     "was": "records/development/2026-11-15-relation-reading/relation_step.py",
+     "now": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json"
+    },
+    "ridge": {
+     "was": "records/development/2026-11-15-relation-reading/relation_step.py",
+     "now": "studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/retired-programs.json"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,2708 @@
+{
+  "patch": {
+    "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.xor.z",
+    "sha256": "ba08a7160b217ec39b0f42d12698fbd28e0cfff21b662de2dd586b707b7f4c64"
+  },
+  "endpoint_receipt": {
+    "changed_native_values": 31552,
+    "changed_tensors": 415,
+    "displacement_squared": 4.2410924154725674e-09
+  },
+  "fixed_history_events": 578,
+  "pair_count": 584,
+  "merge_count": 105,
+  "source_native": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+    "sha256": "6f258a0cdab83dd088848b647fca8e59277de6e1fcd87a2082cb9ff91299e6d5"
+  },
+  "endpoint_native": {
+    "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/capture.json",
+    "sha256": "9384a3c14dfb0ca576b35bea60fc7a778b0c7b214bdbd7aedb99a196079e77d5"
+  },
+  "site": {
+    "reference_row": 312,
+    "current_row": 312,
+    "merge": 61,
+    "measurements": {
+      "merge": 61,
+      "block": 20,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 4.290561954005532e-05,
+        "anchored_finite_change": 3.269166161311288e-05,
+        "native_finite_change": -3.273618065614825e-05,
+        "anchored_native_state_difference_at_row": 0.11565509328129028,
+        "anchored_native_max_state_difference_in_prefix": 1.2389225607374734
+      },
+      "merged": {
+        "jvp_change": 3.799196532224946e-05,
+        "anchored_finite_change": -4.1626182750401086e-05,
+        "native_finite_change": 7.765847226383349e-05,
+        "anchored_native_state_difference_at_row": 0.19677695364685638,
+        "anchored_native_max_state_difference_in_prefix": 2.3279580328499945
+      },
+      "jvp_change": -4.913654217805863e-06,
+      "anchored_finite_change": -7.431784436351396e-05,
+      "native_finite_change": 0.00011039465291998174,
+      "anchored_native_projection_gap": 0.0001847124972834957,
+      "jvp_to_anchored_projection_gap": -6.94041901457081e-05,
+      "anchored_native_local_branch_difference_at_row": 0.1538994911731184
+    }
+  },
+  "all_merge_coordinate_comparisons": [
+    {
+      "merge": 0,
+      "block": 0,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 0.0,
+        "anchored_finite_change": 0.0,
+        "native_finite_change": 0.0,
+        "anchored_native_state_difference_at_row": 0.0,
+        "anchored_native_max_state_difference_in_prefix": 0.0
+      },
+      "merged": {
+        "jvp_change": 3.98756408214605e-10,
+        "anchored_finite_change": -1.341619202538391e-08,
+        "native_finite_change": 3.3632666129532196e-08,
+        "anchored_native_state_difference_at_row": 0.00477957881000771,
+        "anchored_native_max_state_difference_in_prefix": 0.59165430911258
+      },
+      "jvp_change": 3.98756408214605e-10,
+      "anchored_finite_change": -1.341619202538391e-08,
+      "native_finite_change": 3.3632666129532196e-08,
+      "anchored_native_projection_gap": 4.7048858154916107e-08,
+      "jvp_to_anchored_projection_gap": -1.3814948433598516e-08,
+      "anchored_native_local_branch_difference_at_row": 0.00477957881000771
+    },
+    {
+      "merge": 1,
+      "block": 0,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 3.98756408214605e-10,
+        "anchored_finite_change": -1.341619202538391e-08,
+        "native_finite_change": 3.3632666129532196e-08,
+        "anchored_native_state_difference_at_row": 0.00477957881000771,
+        "anchored_native_max_state_difference_in_prefix": 0.59165430911258
+      },
+      "merged": {
+        "jvp_change": -3.126127691489277e-11,
+        "anchored_finite_change": -2.3316657625505055e-08,
+        "native_finite_change": -1.2529630388780078e-09,
+        "anchored_native_state_difference_at_row": 0.00629553298222531,
+        "anchored_native_max_state_difference_in_prefix": 0.9996574696904608
+      },
+      "jvp_change": -4.3001768512949777e-10,
+      "anchored_finite_change": -9.900465600121144e-09,
+      "native_finite_change": -3.4885629168410204e-08,
+      "anchored_native_projection_gap": -2.498516356828906e-08,
+      "jvp_to_anchored_projection_gap": -9.470447914991646e-09,
+      "anchored_native_local_branch_difference_at_row": 0.004063836212730557
+    },
+    {
+      "merge": 2,
+      "block": 0,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -3.126127691489277e-11,
+        "anchored_finite_change": -2.3316657625505055e-08,
+        "native_finite_change": -1.2529630388780078e-09,
+        "anchored_native_state_difference_at_row": 0.00629553298222531,
+        "anchored_native_max_state_difference_in_prefix": 0.9996574696904608
+      },
+      "merged": {
+        "jvp_change": -6.819814801543833e-08,
+        "anchored_finite_change": -9.129545988292853e-08,
+        "native_finite_change": -7.1508666970449e-08,
+        "anchored_native_state_difference_at_row": 0.006319835642612201,
+        "anchored_native_max_state_difference_in_prefix": 1.004497014780271
+      },
+      "jvp_change": -6.816688673852344e-08,
+      "anchored_finite_change": -6.797880225742348e-08,
+      "native_finite_change": -7.025570393157099e-08,
+      "anchored_native_projection_gap": -2.2769016741475134e-09,
+      "jvp_to_anchored_projection_gap": 1.8808448109995886e-10,
+      "anchored_native_local_branch_difference_at_row": 0.0004188409092567257
+    },
+    {
+      "merge": 3,
+      "block": 1,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -6.819822039441575e-08,
+        "anchored_finite_change": -9.06201975577059e-08,
+        "native_finite_change": -7.110069066493252e-08,
+        "anchored_native_state_difference_at_row": 0.00011262515801175547,
+        "anchored_native_max_state_difference_in_prefix": 0.01789920727351297
+      },
+      "merged": {
+        "jvp_change": -1.190780826026199e-05,
+        "anchored_finite_change": -1.2134567999940934e-05,
+        "native_finite_change": -1.1824134135429015e-05,
+        "anchored_native_state_difference_at_row": 0.003598156093132563,
+        "anchored_native_max_state_difference_in_prefix": 0.2508311377006051
+      },
+      "jvp_change": -1.1839610039867574e-05,
+      "anchored_finite_change": -1.2043947802383229e-05,
+      "native_finite_change": -1.1753033444764083e-05,
+      "anchored_native_projection_gap": 2.9091435761914586e-07,
+      "jvp_to_anchored_projection_gap": -2.0433776251565446e-07,
+      "anchored_native_local_branch_difference_at_row": 0.0035985812841969373
+    },
+    {
+      "merge": 4,
+      "block": 1,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -1.190780826026199e-05,
+        "anchored_finite_change": -1.2134567999940934e-05,
+        "native_finite_change": -1.1824134135429015e-05,
+        "anchored_native_state_difference_at_row": 0.003598156093132563,
+        "anchored_native_max_state_difference_in_prefix": 0.2508311377006051
+      },
+      "merged": {
+        "jvp_change": -1.5857134778914538e-05,
+        "anchored_finite_change": -1.541950117220879e-05,
+        "native_finite_change": -1.4810506954291563e-05,
+        "anchored_native_state_difference_at_row": 0.004175101050300056,
+        "anchored_native_max_state_difference_in_prefix": 0.2476454552792423
+      },
+      "jvp_change": -3.9493265186525486e-06,
+      "anchored_finite_change": -3.2849331722678565e-06,
+      "native_finite_change": -2.9863728188625482e-06,
+      "anchored_native_projection_gap": 2.985603534053083e-07,
+      "jvp_to_anchored_projection_gap": 6.64393346384692e-07,
+      "anchored_native_local_branch_difference_at_row": 0.0021953294940235636
+    },
+    {
+      "merge": 5,
+      "block": 1,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -1.5857134778914538e-05,
+        "anchored_finite_change": -1.541950117220879e-05,
+        "native_finite_change": -1.4810506954291563e-05,
+        "anchored_native_state_difference_at_row": 0.004175101050300056,
+        "anchored_native_max_state_difference_in_prefix": 0.2476454552792423
+      },
+      "merged": {
+        "jvp_change": -1.58095374241187e-05,
+        "anchored_finite_change": -1.534017423914305e-05,
+        "native_finite_change": -1.4726645158148755e-05,
+        "anchored_native_state_difference_at_row": 0.004177925026869289,
+        "anchored_native_max_state_difference_in_prefix": 0.24765777664480096
+      },
+      "jvp_change": 4.759735479583797e-08,
+      "anchored_finite_change": 7.932693306574035e-08,
+      "native_finite_change": 8.386179614280898e-08,
+      "anchored_native_projection_gap": 4.534863077068629e-09,
+      "jvp_to_anchored_projection_gap": 3.1729578269902375e-08,
+      "anchored_native_local_branch_difference_at_row": 2.768084194110974e-05
+    },
+    {
+      "merge": 6,
+      "block": 2,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -1.5809536660386185e-05,
+        "anchored_finite_change": -1.5340185105443965e-05,
+        "native_finite_change": -1.4726678699436557e-05,
+        "anchored_native_state_difference_at_row": 0.0009300441263058351,
+        "anchored_native_max_state_difference_in_prefix": 0.05514337717645514
+      },
+      "merged": {
+        "jvp_change": -1.8956907455024148e-05,
+        "anchored_finite_change": -1.9391408219911546e-05,
+        "native_finite_change": -1.8369867855286617e-05,
+        "anchored_native_state_difference_at_row": 0.0019910836745035843,
+        "anchored_native_max_state_difference_in_prefix": 0.05568790908436334
+      },
+      "jvp_change": -3.1473707946379635e-06,
+      "anchored_finite_change": -4.051223114467581e-06,
+      "native_finite_change": -3.64318915585006e-06,
+      "anchored_native_projection_gap": 4.080339586175208e-07,
+      "jvp_to_anchored_projection_gap": -9.038523198296174e-07,
+      "anchored_native_local_branch_difference_at_row": 0.001711134082679778
+    },
+    {
+      "merge": 7,
+      "block": 2,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -1.8956907455024148e-05,
+        "anchored_finite_change": -1.9391408219911546e-05,
+        "native_finite_change": -1.8369867855286617e-05,
+        "anchored_native_state_difference_at_row": 0.0019910836745035843,
+        "anchored_native_max_state_difference_in_prefix": 0.05568790908436334
+      },
+      "merged": {
+        "jvp_change": -1.235668768765733e-05,
+        "anchored_finite_change": -1.630500682869851e-05,
+        "native_finite_change": -1.7609234093114712e-05,
+        "anchored_native_state_difference_at_row": 0.003059080001545085,
+        "anchored_native_max_state_difference_in_prefix": 0.14382675954564444
+      },
+      "jvp_change": 6.600219767366819e-06,
+      "anchored_finite_change": 3.0864013912130367e-06,
+      "native_finite_change": 7.606337621719056e-07,
+      "anchored_native_projection_gap": -2.325767629041131e-06,
+      "jvp_to_anchored_projection_gap": -3.513818376153782e-06,
+      "anchored_native_local_branch_difference_at_row": 0.0023647563266153853
+    },
+    {
+      "merge": 8,
+      "block": 2,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -1.235668768765733e-05,
+        "anchored_finite_change": -1.630500682869851e-05,
+        "native_finite_change": -1.7609234093114712e-05,
+        "anchored_native_state_difference_at_row": 0.003059080001545085,
+        "anchored_native_max_state_difference_in_prefix": 0.14382675954564444
+      },
+      "merged": {
+        "jvp_change": -1.1239584081827607e-05,
+        "anchored_finite_change": -1.525014324078866e-05,
+        "native_finite_change": -1.6548904187063673e-05,
+        "anchored_native_state_difference_at_row": 0.0030592844963258036,
+        "anchored_native_max_state_difference_in_prefix": 0.14398848515802531
+      },
+      "jvp_change": 1.1171036058297223e-06,
+      "anchored_finite_change": 1.054863587909849e-06,
+      "native_finite_change": 1.0603299060510385e-06,
+      "anchored_native_projection_gap": 5.466318141189586e-09,
+      "jvp_to_anchored_projection_gap": -6.224001791987335e-08,
+      "anchored_native_local_branch_difference_at_row": 2.7643795020316953e-05
+    },
+    {
+      "merge": 9,
+      "block": 3,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -1.1239583082594501e-05,
+        "anchored_finite_change": -1.5249300279525368e-05,
+        "native_finite_change": -1.654785593194555e-05,
+        "anchored_native_state_difference_at_row": 0.0024258821728271743,
+        "anchored_native_max_state_difference_in_prefix": 0.11417839843929355
+      },
+      "merged": {
+        "jvp_change": -1.517451265177123e-05,
+        "anchored_finite_change": -1.753646002704279e-05,
+        "native_finite_change": -1.7972692302414828e-05,
+        "anchored_native_state_difference_at_row": 0.007499530690345503,
+        "anchored_native_max_state_difference_in_prefix": 0.13696178254515734
+      },
+      "jvp_change": -3.934929569176729e-06,
+      "anchored_finite_change": -2.28715974751742e-06,
+      "native_finite_change": -1.424836370469279e-06,
+      "anchored_native_projection_gap": 8.623233770481409e-07,
+      "jvp_to_anchored_projection_gap": 1.6477698216593095e-06,
+      "anchored_native_local_branch_difference_at_row": 0.006951746495940813
+    },
+    {
+      "merge": 10,
+      "block": 3,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -1.517451265177123e-05,
+        "anchored_finite_change": -1.753646002704279e-05,
+        "native_finite_change": -1.7972692302414828e-05,
+        "anchored_native_state_difference_at_row": 0.007499530690345503,
+        "anchored_native_max_state_difference_in_prefix": 0.13696178254515734
+      },
+      "merged": {
+        "jvp_change": 8.561263280246278e-06,
+        "anchored_finite_change": 1.3757673280663518e-05,
+        "native_finite_change": 1.761590425025661e-05,
+        "anchored_native_state_difference_at_row": 0.019742155221445856,
+        "anchored_native_max_state_difference_in_prefix": 0.5099543380098557
+      },
+      "jvp_change": 2.3735775932017507e-05,
+      "anchored_finite_change": 3.129413330770631e-05,
+      "native_finite_change": 3.5588596552671437e-05,
+      "anchored_native_projection_gap": 4.29446324496513e-06,
+      "jvp_to_anchored_projection_gap": 7.5583573756888e-06,
+      "anchored_native_local_branch_difference_at_row": 0.01819636210632099
+    },
+    {
+      "merge": 11,
+      "block": 3,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 8.561263280246278e-06,
+        "anchored_finite_change": 1.3757673280663518e-05,
+        "native_finite_change": 1.761590425025661e-05,
+        "anchored_native_state_difference_at_row": 0.019742155221445856,
+        "anchored_native_max_state_difference_in_prefix": 0.5099543380098557
+      },
+      "merged": {
+        "jvp_change": 8.97120320725731e-06,
+        "anchored_finite_change": 1.4135547552557304e-05,
+        "native_finite_change": 1.8016865951969024e-05,
+        "anchored_native_state_difference_at_row": 0.019758338429501927,
+        "anchored_native_max_state_difference_in_prefix": 0.5097706186213256
+      },
+      "jvp_change": 4.0993992701103237e-07,
+      "anchored_finite_change": 3.7787427189378553e-07,
+      "native_finite_change": 4.0096170171241563e-07,
+      "anchored_native_projection_gap": 2.30874298186301e-08,
+      "jvp_to_anchored_projection_gap": -3.206565511724684e-08,
+      "anchored_native_local_branch_difference_at_row": 0.00019093671927463785
+    },
+    {
+      "merge": 12,
+      "block": 4,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 8.971203605371982e-06,
+        "anchored_finite_change": 1.4135418025435637e-05,
+        "native_finite_change": 1.8016059062837125e-05,
+        "anchored_native_state_difference_at_row": 0.005672684830219626,
+        "anchored_native_max_state_difference_in_prefix": 0.14635997374605822
+      },
+      "merged": {
+        "jvp_change": 4.129323665931189e-06,
+        "anchored_finite_change": 7.894011433069378e-06,
+        "native_finite_change": 8.630516180451603e-06,
+        "anchored_native_state_difference_at_row": 0.011834929712164313,
+        "anchored_native_max_state_difference_in_prefix": 0.18667672055858803
+      },
+      "jvp_change": -4.841879939440793e-06,
+      "anchored_finite_change": -6.241406592366258e-06,
+      "native_finite_change": -9.385542882385522e-06,
+      "anchored_native_projection_gap": -3.1441362900192643e-06,
+      "jvp_to_anchored_projection_gap": -1.3995266529254653e-06,
+      "anchored_native_local_branch_difference_at_row": 0.010328519027583236
+    },
+    {
+      "merge": 13,
+      "block": 4,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 4.129323665931189e-06,
+        "anchored_finite_change": 7.894011433069378e-06,
+        "native_finite_change": 8.630516180451603e-06,
+        "anchored_native_state_difference_at_row": 0.011834929712164313,
+        "anchored_native_max_state_difference_in_prefix": 0.18667672055858803
+      },
+      "merged": {
+        "jvp_change": -2.9907625753309473e-06,
+        "anchored_finite_change": -6.510992748523514e-06,
+        "native_finite_change": -3.902220060249609e-06,
+        "anchored_native_state_difference_at_row": 0.01577478083561008,
+        "anchored_native_max_state_difference_in_prefix": 0.3205977650152573
+      },
+      "jvp_change": -7.1200862412621366e-06,
+      "anchored_finite_change": -1.4405004181592893e-05,
+      "native_finite_change": -1.2532736240701212e-05,
+      "anchored_native_projection_gap": 1.872267940891681e-06,
+      "jvp_to_anchored_projection_gap": -7.284917940330756e-06,
+      "anchored_native_local_branch_difference_at_row": 0.011419634565523721
+    },
+    {
+      "merge": 14,
+      "block": 4,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -2.9907625753309473e-06,
+        "anchored_finite_change": -6.510992748523514e-06,
+        "native_finite_change": -3.902220060249609e-06,
+        "anchored_native_state_difference_at_row": 0.01577478083561008,
+        "anchored_native_max_state_difference_in_prefix": 0.3205977650152573
+      },
+      "merged": {
+        "jvp_change": -2.8440190574693293e-06,
+        "anchored_finite_change": -6.396298539616298e-06,
+        "native_finite_change": -4.068422198735908e-06,
+        "anchored_native_state_difference_at_row": 0.015800490329384596,
+        "anchored_native_max_state_difference_in_prefix": 0.3208989187957444
+      },
+      "jvp_change": 1.46743517861618e-07,
+      "anchored_finite_change": 1.1469420890721643e-07,
+      "native_finite_change": -1.6620213848629953e-07,
+      "anchored_native_projection_gap": -2.8089634739351596e-07,
+      "jvp_to_anchored_projection_gap": -3.2049308954401577e-08,
+      "anchored_native_local_branch_difference_at_row": 0.000776848088976263
+    },
+    {
+      "merge": 15,
+      "block": 5,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -2.8440189328961095e-06,
+        "anchored_finite_change": -6.39624963650557e-06,
+        "native_finite_change": -4.068012155540764e-06,
+        "anchored_native_state_difference_at_row": 0.007870262108121709,
+        "anchored_native_max_state_difference_in_prefix": 0.15982301496442106
+      },
+      "merged": {
+        "jvp_change": -7.521575574025613e-06,
+        "anchored_finite_change": -6.994336659921045e-06,
+        "native_finite_change": -5.557885173297292e-06,
+        "anchored_native_state_difference_at_row": 0.01310021648350224,
+        "anchored_native_max_state_difference_in_prefix": 0.16487748799188556
+      },
+      "jvp_change": -4.677556641129504e-06,
+      "anchored_finite_change": -5.98087023415475e-07,
+      "native_finite_change": -1.489873017756528e-06,
+      "anchored_native_projection_gap": -8.91785994341053e-07,
+      "jvp_to_anchored_projection_gap": 4.079469617714029e-06,
+      "anchored_native_local_branch_difference_at_row": 0.009824278864003076
+    },
+    {
+      "merge": 16,
+      "block": 5,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -7.521575574025613e-06,
+        "anchored_finite_change": -6.994336659921045e-06,
+        "native_finite_change": -5.557885173297292e-06,
+        "anchored_native_state_difference_at_row": 0.01310021648350224,
+        "anchored_native_max_state_difference_in_prefix": 0.16487748799188556
+      },
+      "merged": {
+        "jvp_change": -7.892774710526578e-06,
+        "anchored_finite_change": -1.2831480163027868e-05,
+        "native_finite_change": -1.5529011440402682e-05,
+        "anchored_native_state_difference_at_row": 0.01650372694563224,
+        "anchored_native_max_state_difference_in_prefix": 0.30092382630278397
+      },
+      "jvp_change": -3.711991365009651e-07,
+      "anchored_finite_change": -5.837143503106823e-06,
+      "native_finite_change": -9.97112626710539e-06,
+      "anchored_native_projection_gap": -4.133982763998567e-06,
+      "jvp_to_anchored_projection_gap": -5.465944366605858e-06,
+      "anchored_native_local_branch_difference_at_row": 0.009648105608246896
+    },
+    {
+      "merge": 17,
+      "block": 5,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -7.892774710526578e-06,
+        "anchored_finite_change": -1.2831480163027868e-05,
+        "native_finite_change": -1.5529011440402682e-05,
+        "anchored_native_state_difference_at_row": 0.01650372694563224,
+        "anchored_native_max_state_difference_in_prefix": 0.30092382630278397
+      },
+      "merged": {
+        "jvp_change": -7.342831324491929e-06,
+        "anchored_finite_change": -1.2613212548808275e-05,
+        "native_finite_change": -1.4917906059262048e-05,
+        "anchored_native_state_difference_at_row": 0.01650573979492937,
+        "anchored_native_max_state_difference_in_prefix": 0.3029476431861276
+      },
+      "jvp_change": 5.499433860346496e-07,
+      "anchored_finite_change": 2.18267614219593e-07,
+      "native_finite_change": 6.111053811406336e-07,
+      "anchored_native_projection_gap": 3.928377669210406e-07,
+      "jvp_to_anchored_projection_gap": -3.3167577181505663e-07,
+      "anchored_native_local_branch_difference_at_row": 0.002047065921492139
+    },
+    {
+      "merge": 18,
+      "block": 6,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -7.342830795046159e-06,
+        "anchored_finite_change": -1.2614074796412321e-05,
+        "native_finite_change": -1.4918411296649566e-05,
+        "anchored_native_state_difference_at_row": 0.010509220446829665,
+        "anchored_native_max_state_difference_in_prefix": 0.19289292589493492
+      },
+      "merged": {
+        "jvp_change": -5.025271932038496e-06,
+        "anchored_finite_change": -9.21184896367222e-06,
+        "native_finite_change": -1.2367010975651918e-05,
+        "anchored_native_state_difference_at_row": 0.01353135102672192,
+        "anchored_native_max_state_difference_in_prefix": 0.20677460873473527
+      },
+      "jvp_change": 2.317558863007663e-06,
+      "anchored_finite_change": 3.402225832740101e-06,
+      "native_finite_change": 2.5514003209976474e-06,
+      "anchored_native_projection_gap": -8.508255117424535e-07,
+      "jvp_to_anchored_projection_gap": 1.0846669697324378e-06,
+      "anchored_native_local_branch_difference_at_row": 0.008920620718782326
+    },
+    {
+      "merge": 19,
+      "block": 6,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -5.025271932038496e-06,
+        "anchored_finite_change": -9.21184896367222e-06,
+        "native_finite_change": -1.2367010975651918e-05,
+        "anchored_native_state_difference_at_row": 0.01353135102672192,
+        "anchored_native_max_state_difference_in_prefix": 0.20677460873473527
+      },
+      "merged": {
+        "jvp_change": 5.169902254446693e-07,
+        "anchored_finite_change": -1.8452994768186626e-06,
+        "native_finite_change": -4.760368792695521e-06,
+        "anchored_native_state_difference_at_row": 0.020581674636334247,
+        "anchored_native_max_state_difference_in_prefix": 0.47734482060030914
+      },
+      "jvp_change": 5.5422621574831655e-06,
+      "anchored_finite_change": 7.3665494868535575e-06,
+      "native_finite_change": 7.606642182956397e-06,
+      "anchored_native_projection_gap": 2.4009269610283934e-07,
+      "jvp_to_anchored_projection_gap": 1.824287329370392e-06,
+      "anchored_native_local_branch_difference_at_row": 0.017686382654706803
+    },
+    {
+      "merge": 20,
+      "block": 6,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 5.169902254446693e-07,
+        "anchored_finite_change": -1.8452994768186626e-06,
+        "native_finite_change": -4.760368792695521e-06,
+        "anchored_native_state_difference_at_row": 0.020581674636334247,
+        "anchored_native_max_state_difference_in_prefix": 0.47734482060030914
+      },
+      "merged": {
+        "jvp_change": 3.596578928992488e-05,
+        "anchored_finite_change": 4.896299475597339e-05,
+        "native_finite_change": 2.715438345068759e-05,
+        "anchored_native_state_difference_at_row": 0.06215008917434604,
+        "anchored_native_max_state_difference_in_prefix": 0.4973404540756704
+      },
+      "jvp_change": 3.544879906448021e-05,
+      "anchored_finite_change": 5.080829423279205e-05,
+      "native_finite_change": 3.191475224338311e-05,
+      "anchored_native_projection_gap": -1.8893541989408943e-05,
+      "jvp_to_anchored_projection_gap": 1.5359495168311844e-05,
+      "anchored_native_local_branch_difference_at_row": 0.057561876634961956
+    },
+    {
+      "merge": 21,
+      "block": 7,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 3.596578799127045e-05,
+        "anchored_finite_change": 4.896292107654625e-05,
+        "native_finite_change": 2.7154686600065585e-05,
+        "anchored_native_state_difference_at_row": 0.03095373945525217,
+        "anchored_native_max_state_difference_in_prefix": 0.24769916587026114
+      },
+      "merged": {
+        "jvp_change": 2.7663001457645056e-05,
+        "anchored_finite_change": 1.0437832418441761e-05,
+        "native_finite_change": 1.891359206988158e-05,
+        "anchored_native_state_difference_at_row": 0.07977111142153015,
+        "anchored_native_max_state_difference_in_prefix": 0.28418080241969834
+      },
+      "jvp_change": -8.302786533625396e-06,
+      "anchored_finite_change": -3.8525088658104487e-05,
+      "native_finite_change": -8.241094530184005e-06,
+      "anchored_native_projection_gap": 3.028399412792048e-05,
+      "jvp_to_anchored_projection_gap": -3.022230212447909e-05,
+      "anchored_native_local_branch_difference_at_row": 0.07399936272561991
+    },
+    {
+      "merge": 22,
+      "block": 7,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 2.7663001457645056e-05,
+        "anchored_finite_change": 1.0437832418441761e-05,
+        "native_finite_change": 1.891359206988158e-05,
+        "anchored_native_state_difference_at_row": 0.07977111142153015,
+        "anchored_native_max_state_difference_in_prefix": 0.28418080241969834
+      },
+      "merged": {
+        "jvp_change": -2.464462581522347e-05,
+        "anchored_finite_change": -5.845417043149649e-05,
+        "native_finite_change": -3.498514102967705e-05,
+        "anchored_native_state_difference_at_row": 0.21499284296993962,
+        "anchored_native_max_state_difference_in_prefix": 0.8644087215607933
+      },
+      "jvp_change": -5.230762727286853e-05,
+      "anchored_finite_change": -6.889200284993825e-05,
+      "native_finite_change": -5.389873309955863e-05,
+      "anchored_native_projection_gap": 1.4993269750379623e-05,
+      "jvp_to_anchored_projection_gap": -1.6584375577069725e-05,
+      "anchored_native_local_branch_difference_at_row": 0.20512630676712904
+    },
+    {
+      "merge": 23,
+      "block": 7,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -2.464462581522347e-05,
+        "anchored_finite_change": -5.845417043149649e-05,
+        "native_finite_change": -3.498514102967705e-05,
+        "anchored_native_state_difference_at_row": 0.21499284296993962,
+        "anchored_native_max_state_difference_in_prefix": 0.8644087215607933
+      },
+      "merged": {
+        "jvp_change": -2.4526283561692988e-05,
+        "anchored_finite_change": -5.709446530583525e-05,
+        "native_finite_change": -3.395653294913613e-05,
+        "anchored_native_state_difference_at_row": 0.21518465863768263,
+        "anchored_native_max_state_difference_in_prefix": 0.8722160987321395
+      },
+      "jvp_change": 1.1834225353048324e-07,
+      "anchored_finite_change": 1.359705125661241e-06,
+      "native_finite_change": 1.0286080805409215e-06,
+      "anchored_native_projection_gap": -3.310970451203196e-07,
+      "jvp_to_anchored_projection_gap": 1.2413628721307578e-06,
+      "anchored_native_local_branch_difference_at_row": 0.00923968357378439
+    },
+    {
+      "merge": 24,
+      "block": 8,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -2.452627812657433e-05,
+        "anchored_finite_change": -5.709476721658339e-05,
+        "native_finite_change": -3.395711518482548e-05,
+        "anchored_native_state_difference_at_row": 0.1311281411663953,
+        "anchored_native_max_state_difference_in_prefix": 0.5315068553510038
+      },
+      "merged": {
+        "jvp_change": 9.149243374819953e-05,
+        "anchored_finite_change": 0.00011008935655683859,
+        "native_finite_change": 9.746833781791239e-05,
+        "anchored_native_state_difference_at_row": 0.2895276637989274,
+        "anchored_native_max_state_difference_in_prefix": 0.7807463943546277
+      },
+      "jvp_change": 0.00011601871187477386,
+      "anchored_finite_change": 0.00016718412377342198,
+      "native_finite_change": 0.00013142545300273787,
+      "anchored_native_projection_gap": -3.5758670770684106e-05,
+      "jvp_to_anchored_projection_gap": 5.116541189864811e-05,
+      "anchored_native_local_branch_difference_at_row": 0.2656775774019291
+    },
+    {
+      "merge": 25,
+      "block": 8,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 9.149243374819953e-05,
+        "anchored_finite_change": 0.00011008935655683859,
+        "native_finite_change": 9.746833781791239e-05,
+        "anchored_native_state_difference_at_row": 0.2895276637989274,
+        "anchored_native_max_state_difference_in_prefix": 0.7807463943546277
+      },
+      "merged": {
+        "jvp_change": -5.943048506739836e-05,
+        "anchored_finite_change": -0.00026256382366739855,
+        "native_finite_change": -9.558464624202269e-05,
+        "anchored_native_state_difference_at_row": 0.5502400037896759,
+        "anchored_native_max_state_difference_in_prefix": 2.0144178313457126
+      },
+      "jvp_change": -0.00015092291881559788,
+      "anchored_finite_change": -0.00037265318022423714,
+      "native_finite_change": -0.00019305298405993508,
+      "anchored_native_projection_gap": 0.00017960019616430206,
+      "jvp_to_anchored_projection_gap": -0.00022173026140863926,
+      "anchored_native_local_branch_difference_at_row": 0.4686636946065875
+    },
+    {
+      "merge": 26,
+      "block": 8,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -5.943048506739836e-05,
+        "anchored_finite_change": -0.00026256382366739855,
+        "native_finite_change": -9.558464624202269e-05,
+        "anchored_native_state_difference_at_row": 0.5502400037896759,
+        "anchored_native_max_state_difference_in_prefix": 2.0144178313457126
+      },
+      "merged": {
+        "jvp_change": -6.325190225564614e-05,
+        "anchored_finite_change": -0.00023592756608972884,
+        "native_finite_change": -9.687543153799518e-05,
+        "anchored_native_state_difference_at_row": 0.5577786741366091,
+        "anchored_native_max_state_difference_in_prefix": 2.0306803908456112
+      },
+      "jvp_change": -3.821417188247777e-06,
+      "anchored_finite_change": 2.6636257577669718e-05,
+      "native_finite_change": -1.2907852959724922e-06,
+      "anchored_native_projection_gap": -2.792704287364221e-05,
+      "jvp_to_anchored_projection_gap": 3.0457674765917495e-05,
+      "anchored_native_local_branch_difference_at_row": 0.06432563963460702
+    },
+    {
+      "merge": 27,
+      "block": 9,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -6.32519012587687e-05,
+        "anchored_finite_change": -0.00023592707419563957,
+        "native_finite_change": -9.687512216326102e-05,
+        "anchored_native_state_difference_at_row": 0.21025738176807598,
+        "anchored_native_max_state_difference_in_prefix": 0.7654742281498036
+      },
+      "merged": {
+        "jvp_change": -0.00013703224765359635,
+        "anchored_finite_change": -0.00037954272657383557,
+        "native_finite_change": -8.050166199848518e-05,
+        "anchored_native_state_difference_at_row": 0.5099628187220282,
+        "anchored_native_max_state_difference_in_prefix": 1.0616290844972323
+      },
+      "jvp_change": -7.378034639482765e-05,
+      "anchored_finite_change": -0.000143615652378196,
+      "native_finite_change": 1.6373460164775832e-05,
+      "anchored_native_projection_gap": 0.00015998911254297182,
+      "jvp_to_anchored_projection_gap": -6.983530598336835e-05,
+      "anchored_native_local_branch_difference_at_row": 0.4663154098700958
+    },
+    {
+      "merge": 28,
+      "block": 9,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -0.00013703224765359635,
+        "anchored_finite_change": -0.00037954272657383557,
+        "native_finite_change": -8.050166199848518e-05,
+        "anchored_native_state_difference_at_row": 0.5099628187220282,
+        "anchored_native_max_state_difference_in_prefix": 1.0616290844972323
+      },
+      "merged": {
+        "jvp_change": 0.00010194960444439473,
+        "anchored_finite_change": 2.274454352681199e-05,
+        "native_finite_change": 8.832918631925674e-05,
+        "anchored_native_state_difference_at_row": 0.84908385412532,
+        "anchored_native_max_state_difference_in_prefix": 2.5522241523303695
+      },
+      "jvp_change": 0.00023898185209799108,
+      "anchored_finite_change": 0.00040228727010064756,
+      "native_finite_change": 0.00016883084831774192,
+      "anchored_native_projection_gap": -0.00023345642178290564,
+      "jvp_to_anchored_projection_gap": 0.00016330541800265648,
+      "anchored_native_local_branch_difference_at_row": 0.707651655031617
+    },
+    {
+      "merge": 29,
+      "block": 9,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 0.00010194960444439473,
+        "anchored_finite_change": 2.274454352681199e-05,
+        "native_finite_change": 8.832918631925674e-05,
+        "anchored_native_state_difference_at_row": 0.84908385412532,
+        "anchored_native_max_state_difference_in_prefix": 2.5522241523303695
+      },
+      "merged": {
+        "jvp_change": 0.0001035248734984741,
+        "anchored_finite_change": 2.8144657388685934e-05,
+        "native_finite_change": 9.12569558966167e-05,
+        "anchored_native_state_difference_at_row": 0.8492768622346937,
+        "anchored_native_max_state_difference_in_prefix": 2.6342093302336362
+      },
+      "jvp_change": 1.5752690540793608e-06,
+      "anchored_finite_change": 5.400113861873945e-06,
+      "native_finite_change": 2.927769577359962e-06,
+      "anchored_native_projection_gap": -2.472344284513983e-06,
+      "jvp_to_anchored_projection_gap": 3.8248448077945845e-06,
+      "anchored_native_local_branch_difference_at_row": 0.018693135702188928
+    },
+    {
+      "merge": 30,
+      "block": 10,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 0.00010352486561723512,
+        "anchored_finite_change": 2.8145924587812815e-05,
+        "native_finite_change": 9.1257161214095e-05,
+        "anchored_native_state_difference_at_row": 0.39478141088969804,
+        "anchored_native_max_state_difference_in_prefix": 1.2244977725508284
+      },
+      "merged": {
+        "jvp_change": 4.0143538855321195e-05,
+        "anchored_finite_change": 1.5512212877715967e-05,
+        "native_finite_change": -4.2503165861140085e-06,
+        "anchored_native_state_difference_at_row": 0.42506226379845113,
+        "anchored_native_max_state_difference_in_prefix": 1.340395295064178
+      },
+      "jvp_change": -6.338132676191394e-05,
+      "anchored_finite_change": -1.2633711710096848e-05,
+      "native_finite_change": -9.5507477800209e-05,
+      "anchored_native_projection_gap": -8.287376609011216e-05,
+      "jvp_to_anchored_projection_gap": 5.074761505181709e-05,
+      "anchored_native_local_branch_difference_at_row": 0.25755722433773437
+    },
+    {
+      "merge": 31,
+      "block": 10,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 4.0143538855321195e-05,
+        "anchored_finite_change": 1.5512212877715967e-05,
+        "native_finite_change": -4.2503165861140085e-06,
+        "anchored_native_state_difference_at_row": 0.42506226379845113,
+        "anchored_native_max_state_difference_in_prefix": 1.340395295064178
+      },
+      "merged": {
+        "jvp_change": 1.1850010578746853e-05,
+        "anchored_finite_change": -6.038357714804876e-05,
+        "native_finite_change": -5.251450373678669e-05,
+        "anchored_native_state_difference_at_row": 0.8373114735009555,
+        "anchored_native_max_state_difference_in_prefix": 3.3034948828073234
+      },
+      "jvp_change": -2.8293528276574342e-05,
+      "anchored_finite_change": -7.589579002576473e-05,
+      "native_finite_change": -4.826418715067268e-05,
+      "anchored_native_projection_gap": 2.7631602875092046e-05,
+      "jvp_to_anchored_projection_gap": -4.7602261749190386e-05,
+      "anchored_native_local_branch_difference_at_row": 0.7190508503021719
+    },
+    {
+      "merge": 32,
+      "block": 10,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 1.1850010578746853e-05,
+        "anchored_finite_change": -6.038357714804876e-05,
+        "native_finite_change": -5.251450373678669e-05,
+        "anchored_native_state_difference_at_row": 0.8373114735009555,
+        "anchored_native_max_state_difference_in_prefix": 3.3034948828073234
+      },
+      "merged": {
+        "jvp_change": 1.1737439838466629e-05,
+        "anchored_finite_change": -6.040035224099023e-05,
+        "native_finite_change": -5.1270887323179304e-05,
+        "anchored_native_state_difference_at_row": 0.8375979316368976,
+        "anchored_native_max_state_difference_in_prefix": 3.320415056296624
+      },
+      "jvp_change": -1.1257074028022364e-07,
+      "anchored_finite_change": -1.6775092941470615e-08,
+      "native_finite_change": 1.2436164136073874e-06,
+      "anchored_native_projection_gap": 1.260391506548858e-06,
+      "jvp_to_anchored_projection_gap": 9.579564733875302e-08,
+      "anchored_native_local_branch_difference_at_row": 0.008965236954411733
+    },
+    {
+      "merge": 33,
+      "block": 11,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 1.173744922618947e-05,
+        "anchored_finite_change": -6.0399351761790745e-05,
+        "native_finite_change": -5.127009510932229e-05,
+        "anchored_native_state_difference_at_row": 0.37135733641215285,
+        "anchored_native_max_state_difference_in_prefix": 1.4721386245023669
+      },
+      "merged": {
+        "jvp_change": 2.2884027406992572e-05,
+        "anchored_finite_change": -0.00010030346104278245,
+        "native_finite_change": 8.856404362570652e-05,
+        "anchored_native_state_difference_at_row": 0.44860427846831635,
+        "anchored_native_max_state_difference_in_prefix": 1.8331649966974208
+      },
+      "jvp_change": 1.1146578180803102e-05,
+      "anchored_finite_change": -3.99041092809917e-05,
+      "native_finite_change": 0.0001398341387350288,
+      "anchored_native_projection_gap": 0.00017973824801602051,
+      "jvp_to_anchored_projection_gap": -5.10506874617948e-05,
+      "anchored_native_local_branch_difference_at_row": 0.24952442909636063
+    },
+    {
+      "merge": 34,
+      "block": 11,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 2.2884027406992572e-05,
+        "anchored_finite_change": -0.00010030346104278245,
+        "native_finite_change": 8.856404362570652e-05,
+        "anchored_native_state_difference_at_row": 0.44860427846831635,
+        "anchored_native_max_state_difference_in_prefix": 1.8331649966974208
+      },
+      "merged": {
+        "jvp_change": 9.407443697061111e-05,
+        "anchored_finite_change": 0.00033542380186243025,
+        "native_finite_change": 0.00018936312900109335,
+        "anchored_native_state_difference_at_row": 1.2196450008910809,
+        "anchored_native_max_state_difference_in_prefix": 4.973177654974584
+      },
+      "jvp_change": 7.119040956361854e-05,
+      "anchored_finite_change": 0.0004357272629052127,
+      "native_finite_change": 0.00010079908537538682,
+      "anchored_native_projection_gap": -0.00033492817752982587,
+      "jvp_to_anchored_projection_gap": 0.00036453685334159416,
+      "anchored_native_local_branch_difference_at_row": 1.1186668484708366
+    },
+    {
+      "merge": 35,
+      "block": 11,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 9.407443697061111e-05,
+        "anchored_finite_change": 0.00033542380186243025,
+        "native_finite_change": 0.00018936312900109335,
+        "anchored_native_state_difference_at_row": 1.2196450008910809,
+        "anchored_native_max_state_difference_in_prefix": 4.973177654974584
+      },
+      "merged": {
+        "jvp_change": 9.35570391588513e-05,
+        "anchored_finite_change": 0.00033473509407125,
+        "native_finite_change": 0.0001882609040580784,
+        "anchored_native_state_difference_at_row": 1.2197243459952678,
+        "anchored_native_max_state_difference_in_prefix": 4.975494594213294
+      },
+      "jvp_change": -5.173978117598065e-07,
+      "anchored_finite_change": -6.887077911802569e-07,
+      "native_finite_change": -1.1022249430149567e-06,
+      "anchored_native_projection_gap": -4.135171518346997e-07,
+      "jvp_to_anchored_projection_gap": -1.7130997942045047e-07,
+      "anchored_native_local_branch_difference_at_row": 0.015610048947141443
+    },
+    {
+      "merge": 36,
+      "block": 12,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 9.355704853474999e-05,
+        "anchored_finite_change": 0.000334735731115773,
+        "native_finite_change": 0.00018826200917930296,
+        "anchored_native_state_difference_at_row": 0.45025028359934127,
+        "anchored_native_max_state_difference_in_prefix": 1.8366593160360172
+      },
+      "merged": {
+        "jvp_change": 2.0824693832599904e-05,
+        "anchored_finite_change": 0.00013235233627596071,
+        "native_finite_change": 2.3877975551336167e-05,
+        "anchored_native_state_difference_at_row": 0.5620701678620625,
+        "anchored_native_max_state_difference_in_prefix": 2.399124679056212
+      },
+      "jvp_change": -7.273235470215008e-05,
+      "anchored_finite_change": -0.0002023833948398123,
+      "native_finite_change": -0.0001643840336279668,
+      "anchored_native_projection_gap": 3.799936121184552e-05,
+      "jvp_to_anchored_projection_gap": -0.00012965104013766223,
+      "anchored_native_local_branch_difference_at_row": 0.3436762294108305
+    },
+    {
+      "merge": 37,
+      "block": 12,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 2.0824693832599904e-05,
+        "anchored_finite_change": 0.00013235233627596071,
+        "native_finite_change": 2.3877975551336167e-05,
+        "anchored_native_state_difference_at_row": 0.5620701678620625,
+        "anchored_native_max_state_difference_in_prefix": 2.399124679056212
+      },
+      "merged": {
+        "jvp_change": 0.0001973641133373199,
+        "anchored_finite_change": 0.0005227247489014075,
+        "native_finite_change": 0.0001945468115625926,
+        "anchored_native_state_difference_at_row": 1.2190512858764304,
+        "anchored_native_max_state_difference_in_prefix": 5.612518427170422
+      },
+      "jvp_change": 0.00017653941950472,
+      "anchored_finite_change": 0.00039037241262544677,
+      "native_finite_change": 0.00017066883601125644,
+      "anchored_native_projection_gap": -0.00021970357661419034,
+      "jvp_to_anchored_projection_gap": 0.00021383299312072678,
+      "anchored_native_local_branch_difference_at_row": 1.0977096861467055
+    },
+    {
+      "merge": 38,
+      "block": 12,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 0.0001973641133373199,
+        "anchored_finite_change": 0.0005227247489014075,
+        "native_finite_change": 0.0001945468115625926,
+        "anchored_native_state_difference_at_row": 1.2190512858764304,
+        "anchored_native_max_state_difference_in_prefix": 5.612518427170422
+      },
+      "merged": {
+        "jvp_change": 0.00019821683536539394,
+        "anchored_finite_change": 0.0005261433087865239,
+        "native_finite_change": 0.0001942765395679929,
+        "anchored_native_state_difference_at_row": 1.219231593332934,
+        "anchored_native_max_state_difference_in_prefix": 5.66897385602356
+      },
+      "jvp_change": 8.527220280740461e-07,
+      "anchored_finite_change": 3.4185598851163915e-06,
+      "native_finite_change": -2.7027199459971757e-07,
+      "anchored_native_projection_gap": -3.688831879716109e-06,
+      "jvp_to_anchored_projection_gap": 2.5658378570423454e-06,
+      "anchored_native_local_branch_difference_at_row": 0.01631934594353142
+    },
+    {
+      "merge": 39,
+      "block": 13,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 0.000198216837412431,
+        "anchored_finite_change": 0.0005261440591369914,
+        "native_finite_change": 0.00019427692357155057,
+        "anchored_native_state_difference_at_row": 0.39529794943965463,
+        "anchored_native_max_state_difference_in_prefix": 1.837989283489365
+      },
+      "merged": {
+        "jvp_change": 0.00020141494163196442,
+        "anchored_finite_change": 0.0006503172320523609,
+        "native_finite_change": 0.00016661170746032176,
+        "anchored_native_state_difference_at_row": 0.46043889641246427,
+        "anchored_native_max_state_difference_in_prefix": 2.1327132706853535
+      },
+      "jvp_change": 3.198104219533413e-06,
+      "anchored_finite_change": 0.00012417317291536951,
+      "native_finite_change": -2.7665216111228807e-05,
+      "anchored_native_projection_gap": -0.00015183838902659832,
+      "jvp_to_anchored_projection_gap": 0.0001209750686958361,
+      "anchored_native_local_branch_difference_at_row": 0.26196857367449017
+    },
+    {
+      "merge": 40,
+      "block": 13,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 0.00020141494163196442,
+        "anchored_finite_change": 0.0006503172320523609,
+        "native_finite_change": 0.00016661170746032176,
+        "anchored_native_state_difference_at_row": 0.46043889641246427,
+        "anchored_native_max_state_difference_in_prefix": 2.1327132706853535
+      },
+      "merged": {
+        "jvp_change": -7.485897824012659e-06,
+        "anchored_finite_change": 3.225474514372516e-05,
+        "native_finite_change": -2.423127297324426e-05,
+        "anchored_native_state_difference_at_row": 3.402268760793816,
+        "anchored_native_max_state_difference_in_prefix": 17.060631475365362
+      },
+      "jvp_change": -0.0002089008394559771,
+      "anchored_finite_change": -0.0006180624869086358,
+      "native_finite_change": -0.00019084298043356603,
+      "anchored_native_projection_gap": 0.00042721950647506973,
+      "jvp_to_anchored_projection_gap": -0.00040916164745265866,
+      "anchored_native_local_branch_difference_at_row": 3.376835028911479
+    },
+    {
+      "merge": 41,
+      "block": 13,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -7.485897824012659e-06,
+        "anchored_finite_change": 3.225474514372516e-05,
+        "native_finite_change": -2.423127297324426e-05,
+        "anchored_native_state_difference_at_row": 3.402268760793816,
+        "anchored_native_max_state_difference_in_prefix": 17.060631475365362
+      },
+      "merged": {
+        "jvp_change": -1.6588623748261752e-05,
+        "anchored_finite_change": 9.972425697290371e-06,
+        "native_finite_change": -3.4099181574299975e-05,
+        "anchored_native_state_difference_at_row": 3.4098704187464115,
+        "anchored_native_max_state_difference_in_prefix": 17.532093282692898
+      },
+      "jvp_change": -9.102725924249093e-06,
+      "anchored_finite_change": -2.2282319446434787e-05,
+      "native_finite_change": -9.867908601055714e-06,
+      "anchored_native_projection_gap": 1.2414410845379073e-05,
+      "jvp_to_anchored_projection_gap": -1.3179593522185694e-05,
+      "anchored_native_local_branch_difference_at_row": 0.2399113904231447
+    },
+    {
+      "merge": 42,
+      "block": 14,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -1.6588624883526974e-05,
+        "anchored_finite_change": 9.973163019802445e-06,
+        "native_finite_change": -3.409931410001607e-05,
+        "anchored_native_state_difference_at_row": 0.30136033417156843,
+        "anchored_native_max_state_difference_in_prefix": 1.5494658250431828
+      },
+      "merged": {
+        "jvp_change": 8.075789664834668e-07,
+        "anchored_finite_change": -5.483204984688128e-05,
+        "native_finite_change": -6.866962662722964e-05,
+        "anchored_native_state_difference_at_row": 1.0790409408719874,
+        "anchored_native_max_state_difference_in_prefix": 11.946593842949689
+      },
+      "jvp_change": 1.739620385001044e-05,
+      "anchored_finite_change": -6.480521286668373e-05,
+      "native_finite_change": -3.457031252721357e-05,
+      "anchored_native_projection_gap": 3.0234900339470155e-05,
+      "jvp_to_anchored_projection_gap": -8.220141671669417e-05,
+      "anchored_native_local_branch_difference_at_row": 1.0399527957115369
+    },
+    {
+      "merge": 43,
+      "block": 14,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 8.075789664834668e-07,
+        "anchored_finite_change": -5.483204984688128e-05,
+        "native_finite_change": -6.866962662722964e-05,
+        "anchored_native_state_difference_at_row": 1.0790409408719874,
+        "anchored_native_max_state_difference_in_prefix": 11.946593842949689
+      },
+      "merged": {
+        "jvp_change": 3.0455957976393015e-05,
+        "anchored_finite_change": 8.79736058779744e-05,
+        "native_finite_change": 4.424896859209909e-05,
+        "anchored_native_state_difference_at_row": 2.304586865194527,
+        "anchored_native_max_state_difference_in_prefix": 32.359916242861914
+      },
+      "jvp_change": 2.964837900990955e-05,
+      "anchored_finite_change": 0.00014280565572485568,
+      "native_finite_change": 0.00011291859521932873,
+      "anchored_native_projection_gap": -2.9887060505526947e-05,
+      "jvp_to_anchored_projection_gap": 0.00011315727671494614,
+      "anchored_native_local_branch_difference_at_row": 2.0884253625421936
+    },
+    {
+      "merge": 44,
+      "block": 14,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 3.0455957976393015e-05,
+        "anchored_finite_change": 8.79736058779744e-05,
+        "native_finite_change": 4.424896859209909e-05,
+        "anchored_native_state_difference_at_row": 2.304586865194527,
+        "anchored_native_max_state_difference_in_prefix": 32.359916242861914
+      },
+      "merged": {
+        "jvp_change": 1.82695588277522e-05,
+        "anchored_finite_change": 8.02940145369635e-05,
+        "native_finite_change": 3.1429017888308375e-05,
+        "anchored_native_state_difference_at_row": 2.445324234759466,
+        "anchored_native_max_state_difference_in_prefix": 33.947637580546754
+      },
+      "jvp_change": -1.2186399148640814e-05,
+      "anchored_finite_change": -7.6795913410109e-06,
+      "native_finite_change": -1.2819950703790717e-05,
+      "anchored_native_projection_gap": -5.140359362779817e-06,
+      "jvp_to_anchored_projection_gap": 4.5068078076299145e-06,
+      "anchored_native_local_branch_difference_at_row": 0.5902781384882728
+    },
+    {
+      "merge": 45,
+      "block": 15,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 1.8269560046804543e-05,
+        "anchored_finite_change": 8.02941107898008e-05,
+        "native_finite_change": 3.1429556448494406e-05,
+        "anchored_native_state_difference_at_row": 0.06985168824432061,
+        "anchored_native_max_state_difference_in_prefix": 0.9697309562061107
+      },
+      "merged": {
+        "jvp_change": 1.3060001253941517e-05,
+        "anchored_finite_change": 6.0084029505923925e-05,
+        "native_finite_change": 2.7572572581657448e-05,
+        "anchored_native_state_difference_at_row": 0.07420046105615609,
+        "anchored_native_max_state_difference_in_prefix": 0.9957098783399029
+      },
+      "jvp_change": -5.2095587928630254e-06,
+      "anchored_finite_change": -2.021008128387687e-05,
+      "native_finite_change": -3.856983866836958e-06,
+      "anchored_native_projection_gap": 1.6353097417039913e-05,
+      "jvp_to_anchored_projection_gap": -1.5000522491013846e-05,
+      "anchored_native_local_branch_difference_at_row": 0.0291087978795814
+    },
+    {
+      "merge": 46,
+      "block": 15,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 1.3060001253941517e-05,
+        "anchored_finite_change": 6.0084029505923925e-05,
+        "native_finite_change": 2.7572572581657448e-05,
+        "anchored_native_state_difference_at_row": 0.07420046105615609,
+        "anchored_native_max_state_difference_in_prefix": 0.9957098783399029
+      },
+      "merged": {
+        "jvp_change": 1.833680009571102e-05,
+        "anchored_finite_change": 7.821442543316792e-05,
+        "native_finite_change": 2.9038424170915733e-05,
+        "anchored_native_state_difference_at_row": 0.2477435014267761,
+        "anchored_native_max_state_difference_in_prefix": 4.8179508351682365
+      },
+      "jvp_change": 5.276798841769503e-06,
+      "anchored_finite_change": 1.8130395927243997e-05,
+      "native_finite_change": 1.4658515892582852e-06,
+      "anchored_native_projection_gap": -1.6664544337985712e-05,
+      "jvp_to_anchored_projection_gap": 1.2853597085474495e-05,
+      "anchored_native_local_branch_difference_at_row": 0.23052176753901266
+    },
+    {
+      "merge": 47,
+      "block": 15,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 1.833680009571102e-05,
+        "anchored_finite_change": 7.821442543316792e-05,
+        "native_finite_change": 2.9038424170915733e-05,
+        "anchored_native_state_difference_at_row": 0.2477435014267761,
+        "anchored_native_max_state_difference_in_prefix": 4.8179508351682365
+      },
+      "merged": {
+        "jvp_change": 1.470909786241765e-05,
+        "anchored_finite_change": 5.9284517204119536e-05,
+        "native_finite_change": 2.280012139822818e-05,
+        "anchored_native_state_difference_at_row": 0.24745524469098035,
+        "anchored_native_max_state_difference_in_prefix": 4.84466557932436
+      },
+      "jvp_change": -3.62770223329337e-06,
+      "anchored_finite_change": -1.8929908229048387e-05,
+      "native_finite_change": -6.238302772687554e-06,
+      "anchored_native_projection_gap": 1.2691605456360833e-05,
+      "jvp_to_anchored_projection_gap": -1.5302205995755017e-05,
+      "anchored_native_local_branch_difference_at_row": 0.005767242216770892
+    },
+    {
+      "merge": 48,
+      "block": 16,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 1.4709098077873623e-05,
+        "anchored_finite_change": 5.928495363895919e-05,
+        "native_finite_change": 2.2799398795000925e-05,
+        "anchored_native_state_difference_at_row": 0.06283066774186326,
+        "anchored_native_max_state_difference_in_prefix": 1.2300941481824925
+      },
+      "merged": {
+        "jvp_change": 1.8211179310297576e-05,
+        "anchored_finite_change": 5.1603630536495304e-05,
+        "native_finite_change": 1.6084605174541966e-05,
+        "anchored_native_state_difference_at_row": 0.07626721313683968,
+        "anchored_native_max_state_difference_in_prefix": 1.234865836603707
+      },
+      "jvp_change": 3.502081232423953e-06,
+      "anchored_finite_change": -7.681323102463888e-06,
+      "native_finite_change": -6.714793620458959e-06,
+      "anchored_native_projection_gap": 9.665294820049297e-07,
+      "jvp_to_anchored_projection_gap": -1.1183404334887842e-05,
+      "anchored_native_local_branch_difference_at_row": 0.04514747717562869
+    },
+    {
+      "merge": 49,
+      "block": 16,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 1.8211179310297576e-05,
+        "anchored_finite_change": 5.1603630536495304e-05,
+        "native_finite_change": 1.6084605174541966e-05,
+        "anchored_native_state_difference_at_row": 0.07626721313683968,
+        "anchored_native_max_state_difference_in_prefix": 1.234865836603707
+      },
+      "merged": {
+        "jvp_change": 2.3952820208172133e-06,
+        "anchored_finite_change": 3.309349381491744e-05,
+        "native_finite_change": 6.127551638937523e-07,
+        "anchored_native_state_difference_at_row": 0.12238695237729746,
+        "anchored_native_max_state_difference_in_prefix": 2.136129218019263
+      },
+      "jvp_change": -1.5815897289480365e-05,
+      "anchored_finite_change": -1.8510136721577863e-05,
+      "native_finite_change": -1.5471850010648214e-05,
+      "anchored_native_projection_gap": 3.0382867109296496e-06,
+      "jvp_to_anchored_projection_gap": -2.694239432097499e-06,
+      "anchored_native_local_branch_difference_at_row": 0.0969164427735321
+    },
+    {
+      "merge": 50,
+      "block": 16,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 2.3952820208172133e-06,
+        "anchored_finite_change": 3.309349381491744e-05,
+        "native_finite_change": 6.127551638937523e-07,
+        "anchored_native_state_difference_at_row": 0.12238695237729746,
+        "anchored_native_max_state_difference_in_prefix": 2.136129218019263
+      },
+      "merged": {
+        "jvp_change": 2.0759457641280234e-06,
+        "anchored_finite_change": 3.153478736817039e-05,
+        "native_finite_change": 7.734237353063111e-07,
+        "anchored_native_state_difference_at_row": 0.12223026240080492,
+        "anchored_native_max_state_difference_in_prefix": 2.1364604599339914
+      },
+      "jvp_change": -3.193362566891899e-07,
+      "anchored_finite_change": -1.558706446747049e-06,
+      "native_finite_change": 1.6066857141255886e-07,
+      "anchored_native_projection_gap": 1.719375018159608e-06,
+      "jvp_to_anchored_projection_gap": -1.2393701900578591e-06,
+      "anchored_native_local_branch_difference_at_row": 0.0026953472791509535
+    },
+    {
+      "merge": 51,
+      "block": 17,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 2.0759461522038423e-06,
+        "anchored_finite_change": 3.1535226491088975e-05,
+        "native_finite_change": 7.721337090330072e-07,
+        "anchored_native_state_difference_at_row": 0.07161962182431614,
+        "anchored_native_max_state_difference_in_prefix": 1.2518326085983573
+      },
+      "merged": {
+        "jvp_change": 6.199914954427587e-06,
+        "anchored_finite_change": 3.9453320635297884e-05,
+        "native_finite_change": 3.0215260424917845e-05,
+        "anchored_native_state_difference_at_row": 0.08554498965006463,
+        "anchored_native_max_state_difference_in_prefix": 1.2547469274751852
+      },
+      "jvp_change": 4.1239688022237445e-06,
+      "anchored_finite_change": 7.91809414420891e-06,
+      "native_finite_change": 2.9443126715884838e-05,
+      "anchored_native_projection_gap": 2.152503257167593e-05,
+      "jvp_to_anchored_projection_gap": 3.7941253419851647e-06,
+      "anchored_native_local_branch_difference_at_row": 0.0415911950411017
+    },
+    {
+      "merge": 52,
+      "block": 17,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 6.199914954427587e-06,
+        "anchored_finite_change": 3.9453320635297884e-05,
+        "native_finite_change": 3.0215260424917845e-05,
+        "anchored_native_state_difference_at_row": 0.08554498965006463,
+        "anchored_native_max_state_difference_in_prefix": 1.2547469274751852
+      },
+      "merged": {
+        "jvp_change": 2.3699817960228797e-05,
+        "anchored_finite_change": 2.7766644141169472e-05,
+        "native_finite_change": 1.6839073616242706e-05,
+        "anchored_native_state_difference_at_row": 0.13029030242874973,
+        "anchored_native_max_state_difference_in_prefix": 1.7189569362421602
+      },
+      "jvp_change": 1.749990300580121e-05,
+      "anchored_finite_change": -1.1686676494128412e-05,
+      "native_finite_change": -1.3376186808675139e-05,
+      "anchored_native_projection_gap": -1.6895103145467272e-06,
+      "jvp_to_anchored_projection_gap": -2.918657949992962e-05,
+      "anchored_native_local_branch_difference_at_row": 0.10236344117343792
+    },
+    {
+      "merge": 53,
+      "block": 17,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 2.3699817960228797e-05,
+        "anchored_finite_change": 2.7766644141169472e-05,
+        "native_finite_change": 1.6839073616242706e-05,
+        "anchored_native_state_difference_at_row": 0.13029030242874973,
+        "anchored_native_max_state_difference_in_prefix": 1.7189569362421602
+      },
+      "merged": {
+        "jvp_change": 2.3071911968942895e-05,
+        "anchored_finite_change": 2.627273988784623e-05,
+        "native_finite_change": 1.680730854371204e-05,
+        "anchored_native_state_difference_at_row": 0.13021855848781122,
+        "anchored_native_max_state_difference_in_prefix": 1.7135276706573213
+      },
+      "jvp_change": -6.279059912859022e-07,
+      "anchored_finite_change": -1.4939042533232416e-06,
+      "native_finite_change": -3.176507253066507e-08,
+      "anchored_native_projection_gap": 1.4621391807925765e-06,
+      "jvp_to_anchored_projection_gap": -8.659982620373394e-07,
+      "anchored_native_local_branch_difference_at_row": 0.006715333472216474
+    },
+    {
+      "merge": 54,
+      "block": 18,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 2.307191117017508e-05,
+        "anchored_finite_change": 2.6274858099778475e-05,
+        "native_finite_change": 1.680839668331824e-05,
+        "anchored_native_state_difference_at_row": 0.08545608987630789,
+        "anchored_native_max_state_difference_in_prefix": 1.1245027357090087
+      },
+      "merged": {
+        "jvp_change": 2.2202048301896186e-05,
+        "anchored_finite_change": 5.355579533641852e-05,
+        "native_finite_change": 3.0075143608525312e-05,
+        "anchored_native_state_difference_at_row": 0.09424592806354654,
+        "anchored_native_max_state_difference_in_prefix": 1.1284083500981896
+      },
+      "jvp_change": -8.698628682788944e-07,
+      "anchored_finite_change": 2.7280937236640046e-05,
+      "native_finite_change": 1.3266746925207074e-05,
+      "anchored_native_projection_gap": -1.4014190311432972e-05,
+      "jvp_to_anchored_projection_gap": 2.815080010491894e-05,
+      "anchored_native_local_branch_difference_at_row": 0.04374885249162618
+    },
+    {
+      "merge": 55,
+      "block": 18,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 2.2202048301896186e-05,
+        "anchored_finite_change": 5.355579533641852e-05,
+        "native_finite_change": 3.0075143608525312e-05,
+        "anchored_native_state_difference_at_row": 0.09424592806354654,
+        "anchored_native_max_state_difference_in_prefix": 1.1284083500981896
+      },
+      "merged": {
+        "jvp_change": 2.5211747538202542e-05,
+        "anchored_finite_change": 5.9413241169474496e-05,
+        "native_finite_change": -2.3041301186431384e-06,
+        "anchored_native_state_difference_at_row": 0.15068811981007932,
+        "anchored_native_max_state_difference_in_prefix": 1.7317961782995708
+      },
+      "jvp_change": 3.009699236306356e-06,
+      "anchored_finite_change": 5.857445833055974e-06,
+      "native_finite_change": -3.237927372716845e-05,
+      "anchored_native_projection_gap": -3.8236719560224425e-05,
+      "jvp_to_anchored_projection_gap": 2.847746596749618e-06,
+      "anchored_native_local_branch_difference_at_row": 0.12290223844205164
+    },
+    {
+      "merge": 56,
+      "block": 18,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 2.5211747538202542e-05,
+        "anchored_finite_change": 5.9413241169474496e-05,
+        "native_finite_change": -2.3041301186431384e-06,
+        "anchored_native_state_difference_at_row": 0.15068811981007932,
+        "anchored_native_max_state_difference_in_prefix": 1.7317961782995708
+      },
+      "merged": {
+        "jvp_change": 2.3157978258392256e-05,
+        "anchored_finite_change": 5.7530047905235415e-05,
+        "native_finite_change": -1.3081834862767316e-06,
+        "anchored_native_state_difference_at_row": 0.15108751424816982,
+        "anchored_native_max_state_difference_in_prefix": 1.7404498276502047
+      },
+      "jvp_change": -2.053769279810286e-06,
+      "anchored_finite_change": -1.8831932642390803e-06,
+      "native_finite_change": 9.959466323664068e-07,
+      "anchored_native_projection_gap": 2.879139896605487e-06,
+      "jvp_to_anchored_projection_gap": 1.705760155712056e-07,
+      "anchored_native_local_branch_difference_at_row": 0.005041872323395331
+    },
+    {
+      "merge": 57,
+      "block": 19,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 2.315797762126711e-05,
+        "anchored_finite_change": 5.753043418661036e-05,
+        "native_finite_change": -1.309286032268736e-06,
+        "anchored_native_state_difference_at_row": 0.09088891286962104,
+        "anchored_native_max_state_difference_in_prefix": 1.0469896740058404
+      },
+      "merged": {
+        "jvp_change": 2.6944924581226892e-05,
+        "anchored_finite_change": 5.1576007803939145e-05,
+        "native_finite_change": -8.211222176316563e-06,
+        "anchored_native_state_difference_at_row": 0.11827235774311136,
+        "anchored_native_max_state_difference_in_prefix": 1.1610295447429213
+      },
+      "jvp_change": 3.7869469599597814e-06,
+      "anchored_finite_change": -5.954426382671213e-06,
+      "native_finite_change": -6.901936144047827e-06,
+      "anchored_native_projection_gap": -9.475097613766137e-07,
+      "jvp_to_anchored_projection_gap": -9.741373342630994e-06,
+      "anchored_native_local_branch_difference_at_row": 0.07160022685835687
+    },
+    {
+      "merge": 58,
+      "block": 19,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 2.6944924581226892e-05,
+        "anchored_finite_change": 5.1576007803939145e-05,
+        "native_finite_change": -8.211222176316563e-06,
+        "anchored_native_state_difference_at_row": 0.11827235774311136,
+        "anchored_native_max_state_difference_in_prefix": 1.1610295447429213
+      },
+      "merged": {
+        "jvp_change": 3.665382539795577e-05,
+        "anchored_finite_change": 2.8145904055670856e-05,
+        "native_finite_change": -3.620721605648858e-05,
+        "anchored_native_state_difference_at_row": 0.209539656490599,
+        "anchored_native_max_state_difference_in_prefix": 2.292101617844904
+      },
+      "jvp_change": 9.708900816728878e-06,
+      "anchored_finite_change": -2.343010374826829e-05,
+      "native_finite_change": -2.7995993880172015e-05,
+      "anchored_native_projection_gap": -4.565890131903727e-06,
+      "jvp_to_anchored_projection_gap": -3.3139004564997166e-05,
+      "anchored_native_local_branch_difference_at_row": 0.17372933859846704
+    },
+    {
+      "merge": 59,
+      "block": 19,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 3.665382539795577e-05,
+        "anchored_finite_change": 2.8145904055670856e-05,
+        "native_finite_change": -3.620721605648858e-05,
+        "anchored_native_state_difference_at_row": 0.209539656490599,
+        "anchored_native_max_state_difference_in_prefix": 2.292101617844904
+      },
+      "merged": {
+        "jvp_change": 3.4909352958334036e-05,
+        "anchored_finite_change": 2.6850014491028307e-05,
+        "native_finite_change": -3.8866826210057215e-05,
+        "anchored_native_state_difference_at_row": 0.20989020194061941,
+        "anchored_native_max_state_difference_in_prefix": 2.2982612514721428
+      },
+      "jvp_change": -1.7444724396217345e-06,
+      "anchored_finite_change": -1.2958895646425495e-06,
+      "native_finite_change": -2.6596101535686367e-06,
+      "anchored_native_projection_gap": -1.3637205889260873e-06,
+      "jvp_to_anchored_projection_gap": 4.485828749791851e-07,
+      "anchored_native_local_branch_difference_at_row": 0.007275155664758432
+    },
+    {
+      "merge": 60,
+      "block": 20,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 3.490935328007151e-05,
+        "anchored_finite_change": 2.6850388543345205e-05,
+        "native_finite_change": -3.886815068174232e-05,
+        "anchored_native_state_difference_at_row": 0.11314399091609768,
+        "anchored_native_max_state_difference_in_prefix": 1.2389072262872198
+      },
+      "merged": {
+        "jvp_change": 4.290561954005532e-05,
+        "anchored_finite_change": 3.269166161311288e-05,
+        "native_finite_change": -3.273618065614825e-05,
+        "anchored_native_state_difference_at_row": 0.11565509328129028,
+        "anchored_native_max_state_difference_in_prefix": 1.2389225607374734
+      },
+      "jvp_change": 7.99626625998381e-06,
+      "anchored_finite_change": 5.841273069767672e-06,
+      "native_finite_change": 6.131970025594069e-06,
+      "anchored_native_projection_gap": 2.906969558263972e-07,
+      "jvp_to_anchored_projection_gap": -2.154993190216139e-06,
+      "anchored_native_local_branch_difference_at_row": 0.025548456040366017
+    },
+    {
+      "merge": 61,
+      "block": 20,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 4.290561954005532e-05,
+        "anchored_finite_change": 3.269166161311288e-05,
+        "native_finite_change": -3.273618065614825e-05,
+        "anchored_native_state_difference_at_row": 0.11565509328129028,
+        "anchored_native_max_state_difference_in_prefix": 1.2389225607374734
+      },
+      "merged": {
+        "jvp_change": 3.799196532224946e-05,
+        "anchored_finite_change": -4.1626182750401086e-05,
+        "native_finite_change": 7.765847226383349e-05,
+        "anchored_native_state_difference_at_row": 0.19677695364685638,
+        "anchored_native_max_state_difference_in_prefix": 2.3279580328499945
+      },
+      "jvp_change": -4.913654217805863e-06,
+      "anchored_finite_change": -7.431784436351396e-05,
+      "native_finite_change": 0.00011039465291998174,
+      "anchored_native_projection_gap": 0.0001847124972834957,
+      "jvp_to_anchored_projection_gap": -6.94041901457081e-05,
+      "anchored_native_local_branch_difference_at_row": 0.1538994911731184
+    },
+    {
+      "merge": 62,
+      "block": 20,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 3.799196532224946e-05,
+        "anchored_finite_change": -4.1626182750401086e-05,
+        "native_finite_change": 7.765847226383349e-05,
+        "anchored_native_state_difference_at_row": 0.19677695364685638,
+        "anchored_native_max_state_difference_in_prefix": 2.3279580328499945
+      },
+      "merged": {
+        "jvp_change": 3.320804100155595e-05,
+        "anchored_finite_change": -3.8041591311405165e-05,
+        "native_finite_change": 7.494257347755162e-05,
+        "anchored_native_state_difference_at_row": 0.19683008234232452,
+        "anchored_native_max_state_difference_in_prefix": 2.3306278889949583
+      },
+      "jvp_change": -4.78392432069351e-06,
+      "anchored_finite_change": 3.584591438995921e-06,
+      "native_finite_change": -2.7158987862818673e-06,
+      "anchored_native_projection_gap": -6.300490225277788e-06,
+      "jvp_to_anchored_projection_gap": 8.368515759689431e-06,
+      "anchored_native_local_branch_difference_at_row": 0.007617351302000014
+    },
+    {
+      "merge": 63,
+      "block": 21,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 3.320804046448437e-05,
+        "anchored_finite_change": -3.8041385153633756e-05,
+        "native_finite_change": 7.493766320604278e-05,
+        "anchored_native_state_difference_at_row": 0.09726164236817197,
+        "anchored_native_max_state_difference_in_prefix": 1.1516579371231446
+      },
+      "merged": {
+        "jvp_change": 3.696060520163053e-05,
+        "anchored_finite_change": -3.317362654678413e-05,
+        "native_finite_change": 6.850267610494093e-05,
+        "anchored_native_state_difference_at_row": 0.10132903861286288,
+        "anchored_native_max_state_difference_in_prefix": 1.1528671043362857
+      },
+      "jvp_change": 3.7525647371461604e-06,
+      "anchored_finite_change": 4.867758606849626e-06,
+      "native_finite_change": -6.434987101101852e-06,
+      "anchored_native_projection_gap": -1.1302745707951478e-05,
+      "jvp_to_anchored_projection_gap": 1.1151938697034655e-06,
+      "anchored_native_local_branch_difference_at_row": 0.030040173302777935
+    },
+    {
+      "merge": 64,
+      "block": 21,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 3.696060520163053e-05,
+        "anchored_finite_change": -3.317362654678413e-05,
+        "native_finite_change": 6.850267610494093e-05,
+        "anchored_native_state_difference_at_row": 0.10132903861286288,
+        "anchored_native_max_state_difference_in_prefix": 1.1528671043362857
+      },
+      "merged": {
+        "jvp_change": 1.127616647057311e-06,
+        "anchored_finite_change": -0.00011386000430548687,
+        "native_finite_change": -2.7755286410274804e-05,
+        "anchored_native_state_difference_at_row": 0.14426720486762185,
+        "anchored_native_max_state_difference_in_prefix": 1.7590183214805057
+      },
+      "jvp_change": -3.583298855457322e-05,
+      "anchored_finite_change": -8.068637775870274e-05,
+      "native_finite_change": -9.625796251521573e-05,
+      "anchored_native_projection_gap": -1.557158475651299e-05,
+      "jvp_to_anchored_projection_gap": -4.485338920412952e-05,
+      "anchored_native_local_branch_difference_at_row": 0.10443328001630146
+    },
+    {
+      "merge": 65,
+      "block": 21,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 1.127616647057311e-06,
+        "anchored_finite_change": -0.00011386000430548687,
+        "native_finite_change": -2.7755286410274804e-05,
+        "anchored_native_state_difference_at_row": 0.14426720486762185,
+        "anchored_native_max_state_difference_in_prefix": 1.7590183214805057
+      },
+      "merged": {
+        "jvp_change": 1.9712930589121208e-06,
+        "anchored_finite_change": -0.00011204133111938214,
+        "native_finite_change": -2.5611462517734218e-05,
+        "anchored_native_state_difference_at_row": 0.14423221430010386,
+        "anchored_native_max_state_difference_in_prefix": 1.7715490292278575
+      },
+      "jvp_change": 8.436764118548097e-07,
+      "anchored_finite_change": 1.8186731861047356e-06,
+      "native_finite_change": 2.143823892540586e-06,
+      "anchored_native_projection_gap": 3.2515070643585053e-07,
+      "jvp_to_anchored_projection_gap": 9.749967742499259e-07,
+      "anchored_native_local_branch_difference_at_row": 0.004150903648821108
+    },
+    {
+      "merge": 66,
+      "block": 22,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 1.9712939994597856e-06,
+        "anchored_finite_change": -0.00011203853253371338,
+        "native_finite_change": -2.561195086130813e-05,
+        "anchored_native_state_difference_at_row": 0.09296225153527407,
+        "anchored_native_max_state_difference_in_prefix": 1.141818722298822
+      },
+      "merged": {
+        "jvp_change": 4.81762768561469e-06,
+        "anchored_finite_change": -9.719818803348435e-05,
+        "native_finite_change": -1.2276287892666604e-05,
+        "anchored_native_state_difference_at_row": 0.09395440359338927,
+        "anchored_native_max_state_difference_in_prefix": 1.1408939323043321
+      },
+      "jvp_change": 2.8463336861549043e-06,
+      "anchored_finite_change": 1.484034450022903e-05,
+      "native_finite_change": 1.3335662968641526e-05,
+      "anchored_native_projection_gap": -1.504681531587504e-06,
+      "jvp_to_anchored_projection_gap": 1.1994010814074126e-05,
+      "anchored_native_local_branch_difference_at_row": 0.017608668289852806
+    },
+    {
+      "merge": 67,
+      "block": 22,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 4.81762768561469e-06,
+        "anchored_finite_change": -9.719818803348435e-05,
+        "native_finite_change": -1.2276287892666604e-05,
+        "anchored_native_state_difference_at_row": 0.09395440359338927,
+        "anchored_native_max_state_difference_in_prefix": 1.1408939323043321
+      },
+      "merged": {
+        "jvp_change": -4.602331349031124e-05,
+        "anchored_finite_change": -6.509652673605815e-05,
+        "native_finite_change": 2.1537650501307626e-05,
+        "anchored_native_state_difference_at_row": 0.14772828834275334,
+        "anchored_native_max_state_difference_in_prefix": 1.693618477295641
+      },
+      "jvp_change": -5.084094117592593e-05,
+      "anchored_finite_change": 3.21016612974262e-05,
+      "native_finite_change": 3.381393839397423e-05,
+      "anchored_native_projection_gap": 1.7122770965480316e-06,
+      "jvp_to_anchored_projection_gap": 8.294260247335212e-05,
+      "anchored_native_local_branch_difference_at_row": 0.11617982076762244
+    },
+    {
+      "merge": 68,
+      "block": 22,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -4.602331349031124e-05,
+        "anchored_finite_change": -6.509652673605815e-05,
+        "native_finite_change": 2.1537650501307626e-05,
+        "anchored_native_state_difference_at_row": 0.14772828834275334,
+        "anchored_native_max_state_difference_in_prefix": 1.693618477295641
+      },
+      "merged": {
+        "jvp_change": -4.462463766845547e-05,
+        "anchored_finite_change": -5.940286638934922e-05,
+        "native_finite_change": 1.6442874520398998e-05,
+        "anchored_native_state_difference_at_row": 0.14827610350404494,
+        "anchored_native_max_state_difference_in_prefix": 1.6940349418804679
+      },
+      "jvp_change": 1.3986758218557694e-06,
+      "anchored_finite_change": 5.693660346708929e-06,
+      "native_finite_change": -5.094775980908628e-06,
+      "anchored_native_projection_gap": -1.0788436327617557e-05,
+      "jvp_to_anchored_projection_gap": 4.294984524853159e-06,
+      "anchored_native_local_branch_difference_at_row": 0.01415697633161123
+    },
+    {
+      "merge": 69,
+      "block": 23,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -4.462463966329599e-05,
+        "anchored_finite_change": -5.9403859888028376e-05,
+        "native_finite_change": 1.644158029253523e-05,
+        "anchored_native_state_difference_at_row": 0.09383100332545785,
+        "anchored_native_max_state_difference_in_prefix": 1.0720067545331762
+      },
+      "merged": {
+        "jvp_change": -5.38448030812566e-05,
+        "anchored_finite_change": -6.61503470853475e-05,
+        "native_finite_change": -2.1018096721253654e-06,
+        "anchored_native_state_difference_at_row": 0.09622564146056915,
+        "anchored_native_max_state_difference_in_prefix": 1.074395693006761
+      },
+      "jvp_change": -9.22016341796061e-06,
+      "anchored_finite_change": -6.746487197319129e-06,
+      "native_finite_change": -1.8543389964660595e-05,
+      "anchored_native_projection_gap": -1.1796902767341466e-05,
+      "jvp_to_anchored_projection_gap": 2.473676220641482e-06,
+      "anchored_native_local_branch_difference_at_row": 0.019486312695600264
+    },
+    {
+      "merge": 70,
+      "block": 23,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -5.38448030812566e-05,
+        "anchored_finite_change": -6.61503470853475e-05,
+        "native_finite_change": -2.1018096721253654e-06,
+        "anchored_native_state_difference_at_row": 0.09622564146056915,
+        "anchored_native_max_state_difference_in_prefix": 1.074395693006761
+      },
+      "merged": {
+        "jvp_change": -3.7213660763193677e-06,
+        "anchored_finite_change": -5.216821445444553e-05,
+        "native_finite_change": 3.5062287937932812e-06,
+        "anchored_native_state_difference_at_row": 0.1804880822569988,
+        "anchored_native_max_state_difference_in_prefix": 2.5431974880605406
+      },
+      "jvp_change": 5.0123437004937236e-05,
+      "anchored_finite_change": 1.3982132630901978e-05,
+      "native_finite_change": 5.608038465918647e-06,
+      "anchored_native_projection_gap": -8.374094164983331e-06,
+      "jvp_to_anchored_projection_gap": -3.614130437403526e-05,
+      "anchored_native_local_branch_difference_at_row": 0.15144391440354907
+    },
+    {
+      "merge": 71,
+      "block": 23,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -3.7213660763193677e-06,
+        "anchored_finite_change": -5.216821445444553e-05,
+        "native_finite_change": 3.5062287937932812e-06,
+        "anchored_native_state_difference_at_row": 0.1804880822569988,
+        "anchored_native_max_state_difference_in_prefix": 2.5431974880605406
+      },
+      "merged": {
+        "jvp_change": -2.1794044039851127e-06,
+        "anchored_finite_change": -4.7340185557485925e-05,
+        "native_finite_change": 4.58168424974717e-06,
+        "anchored_native_state_difference_at_row": 0.18075339737548438,
+        "anchored_native_max_state_difference_in_prefix": 2.574715368948862
+      },
+      "jvp_change": 1.541961672334255e-06,
+      "anchored_finite_change": 4.828028896959602e-06,
+      "native_finite_change": 1.0754554559538887e-06,
+      "anchored_native_projection_gap": -3.7525734410057132e-06,
+      "jvp_to_anchored_projection_gap": 3.286067224625347e-06,
+      "anchored_native_local_branch_difference_at_row": 0.005710541371656398
+    },
+    {
+      "merge": 72,
+      "block": 24,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -2.179402131782169e-06,
+        "anchored_finite_change": -4.7340779894003426e-05,
+        "native_finite_change": 4.582972088898463e-06,
+        "anchored_native_state_difference_at_row": 0.07802051388190381,
+        "anchored_native_max_state_difference_in_prefix": 1.1113519763959931
+      },
+      "merged": {
+        "jvp_change": 1.1628770982123112e-05,
+        "anchored_finite_change": -3.152444197649859e-05,
+        "native_finite_change": 2.882861884935181e-05,
+        "anchored_native_state_difference_at_row": 0.09522523347717281,
+        "anchored_native_max_state_difference_in_prefix": 1.1050857396044256
+      },
+      "jvp_change": 1.3808173113905281e-05,
+      "anchored_finite_change": 1.5816337917504836e-05,
+      "native_finite_change": 2.424564676045335e-05,
+      "anchored_native_projection_gap": 8.429308842948513e-06,
+      "jvp_to_anchored_projection_gap": 2.0081648035995545e-06,
+      "anchored_native_local_branch_difference_at_row": 0.052645115100628866
+    },
+    {
+      "merge": 73,
+      "block": 24,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 1.1628770982123112e-05,
+        "anchored_finite_change": -3.152444197649859e-05,
+        "native_finite_change": 2.882861884935181e-05,
+        "anchored_native_state_difference_at_row": 0.09522523347717281,
+        "anchored_native_max_state_difference_in_prefix": 1.1050857396044256
+      },
+      "merged": {
+        "jvp_change": -2.122538315921169e-05,
+        "anchored_finite_change": -4.576344700152335e-05,
+        "native_finite_change": -2.9946217207157955e-06,
+        "anchored_native_state_difference_at_row": 0.16108529929819193,
+        "anchored_native_max_state_difference_in_prefix": 2.6244036712871304
+      },
+      "jvp_change": -3.28541541413348e-05,
+      "anchored_finite_change": -1.4239005025024759e-05,
+      "native_finite_change": -3.182324057006761e-05,
+      "anchored_native_projection_gap": -1.7584235545042848e-05,
+      "jvp_to_anchored_projection_gap": 1.8615149116310043e-05,
+      "anchored_native_local_branch_difference_at_row": 0.12944922477504103
+    },
+    {
+      "merge": 74,
+      "block": 24,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -2.122538315921169e-05,
+        "anchored_finite_change": -4.576344700152335e-05,
+        "native_finite_change": -2.9946217207157955e-06,
+        "anchored_native_state_difference_at_row": 0.16108529929819193,
+        "anchored_native_max_state_difference_in_prefix": 2.6244036712871304
+      },
+      "merged": {
+        "jvp_change": -1.999345493094335e-05,
+        "anchored_finite_change": -3.9627178724653545e-05,
+        "native_finite_change": -1.7070097996368938e-06,
+        "anchored_native_state_difference_at_row": 0.1611209234187667,
+        "anchored_native_max_state_difference_in_prefix": 2.652518352618532
+      },
+      "jvp_change": 1.2319282282683395e-06,
+      "anchored_finite_change": 6.136268276869805e-06,
+      "native_finite_change": 1.2876119210789017e-06,
+      "anchored_native_projection_gap": -4.8486563557909035e-06,
+      "jvp_to_anchored_projection_gap": 4.904340048601466e-06,
+      "anchored_native_local_branch_difference_at_row": 0.0024162990702124103
+    },
+    {
+      "merge": 75,
+      "block": 25,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -1.9993454301230522e-05,
+        "anchored_finite_change": -3.962843181806036e-05,
+        "native_finite_change": -1.7079376679191016e-06,
+        "anchored_native_state_difference_at_row": 0.07049040875350547,
+        "anchored_native_max_state_difference_in_prefix": 1.1604775619509475
+      },
+      "merged": {
+        "jvp_change": -1.8958784918279065e-05,
+        "anchored_finite_change": -1.841263125978987e-05,
+        "native_finite_change": 1.1024500837224227e-05,
+        "anchored_native_state_difference_at_row": 0.07531602239745876,
+        "anchored_native_max_state_difference_in_prefix": 1.1750144323135263
+      },
+      "jvp_change": 1.0346693829514566e-06,
+      "anchored_finite_change": 2.1215800558270492e-05,
+      "native_finite_change": 1.2732438505143329e-05,
+      "anchored_native_projection_gap": -8.483362053127164e-06,
+      "jvp_to_anchored_projection_gap": 2.0181131175319036e-05,
+      "anchored_native_local_branch_difference_at_row": 0.019663330605109046
+    },
+    {
+      "merge": 76,
+      "block": 25,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -1.8958784918279065e-05,
+        "anchored_finite_change": -1.841263125978987e-05,
+        "native_finite_change": 1.1024500837224227e-05,
+        "anchored_native_state_difference_at_row": 0.07531602239745876,
+        "anchored_native_max_state_difference_in_prefix": 1.1750144323135263
+      },
+      "merged": {
+        "jvp_change": -1.3651515413004121e-05,
+        "anchored_finite_change": -9.730028971657867e-06,
+        "native_finite_change": 4.855531069714036e-07,
+        "anchored_native_state_difference_at_row": 0.09324062200172302,
+        "anchored_native_max_state_difference_in_prefix": 1.5658455879148838
+      },
+      "jvp_change": 5.307269505274944e-06,
+      "anchored_finite_change": 8.682602288132002e-06,
+      "native_finite_change": -1.0538947730252823e-05,
+      "anchored_native_projection_gap": -1.9221550018384825e-05,
+      "jvp_to_anchored_projection_gap": 3.375332782857058e-06,
+      "anchored_native_local_branch_difference_at_row": 0.05182998067223295
+    },
+    {
+      "merge": 77,
+      "block": 25,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -1.3651515413004121e-05,
+        "anchored_finite_change": -9.730028971657867e-06,
+        "native_finite_change": 4.855531069714036e-07,
+        "anchored_native_state_difference_at_row": 0.09324062200172302,
+        "anchored_native_max_state_difference_in_prefix": 1.5658455879148838
+      },
+      "merged": {
+        "jvp_change": -1.3727592105071354e-05,
+        "anchored_finite_change": -9.476915368830663e-06,
+        "native_finite_change": 4.858462883464143e-07,
+        "anchored_native_state_difference_at_row": 0.09325659248783644,
+        "anchored_native_max_state_difference_in_prefix": 1.5730157636609488
+      },
+      "jvp_change": -7.607669206723297e-08,
+      "anchored_finite_change": 2.531136028272041e-07,
+      "native_finite_change": 2.931813750106649e-10,
+      "anchored_native_projection_gap": -2.528204214521934e-07,
+      "jvp_to_anchored_projection_gap": 3.2919029489443705e-07,
+      "anchored_native_local_branch_difference_at_row": 0.0013539862590832901
+    },
+    {
+      "merge": 78,
+      "block": 26,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -1.3727592326764991e-05,
+        "anchored_finite_change": -9.47692738263034e-06,
+        "native_finite_change": 4.860935036987701e-07,
+        "anchored_native_state_difference_at_row": 0.07322046711334262,
+        "anchored_native_max_state_difference_in_prefix": 1.235062768831323
+      },
+      "merged": {
+        "jvp_change": -8.961012178353989e-06,
+        "anchored_finite_change": -1.0635446699901185e-05,
+        "native_finite_change": 7.078837972962493e-06,
+        "anchored_native_state_difference_at_row": 0.07278093305606917,
+        "anchored_native_max_state_difference_in_prefix": 1.233295569480353
+      },
+      "jvp_change": 4.766580148411002e-06,
+      "anchored_finite_change": -1.1585193172708452e-06,
+      "native_finite_change": 6.592744469263723e-06,
+      "anchored_native_projection_gap": 7.751263786534568e-06,
+      "jvp_to_anchored_projection_gap": -5.9250994656818474e-06,
+      "anchored_native_local_branch_difference_at_row": 0.01075379062834743
+    },
+    {
+      "merge": 79,
+      "block": 26,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -8.961012178353989e-06,
+        "anchored_finite_change": -1.0635446699901185e-05,
+        "native_finite_change": 7.078837972962493e-06,
+        "anchored_native_state_difference_at_row": 0.07278093305606917,
+        "anchored_native_max_state_difference_in_prefix": 1.233295569480353
+      },
+      "merged": {
+        "jvp_change": -9.590157306237871e-06,
+        "anchored_finite_change": -1.2841430535898146e-05,
+        "native_finite_change": -5.089701978665956e-06,
+        "anchored_native_state_difference_at_row": 0.08027349322947276,
+        "anchored_native_max_state_difference_in_prefix": 1.4736818323461156
+      },
+      "jvp_change": -6.291451278838826e-07,
+      "anchored_finite_change": -2.205983835996961e-06,
+      "native_finite_change": -1.2168539951628449e-05,
+      "anchored_native_projection_gap": -9.962556115631488e-06,
+      "jvp_to_anchored_projection_gap": -1.5768387081130782e-06,
+      "anchored_native_local_branch_difference_at_row": 0.03602328061686077
+    },
+    {
+      "merge": 80,
+      "block": 26,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -9.590157306237871e-06,
+        "anchored_finite_change": -1.2841430535898146e-05,
+        "native_finite_change": -5.089701978665956e-06,
+        "anchored_native_state_difference_at_row": 0.08027349322947276,
+        "anchored_native_max_state_difference_in_prefix": 1.4736818323461156
+      },
+      "merged": {
+        "jvp_change": -9.189762823154656e-06,
+        "anchored_finite_change": -1.1909627430140013e-05,
+        "native_finite_change": -4.633358968584439e-06,
+        "anchored_native_state_difference_at_row": 0.0802839680317806,
+        "anchored_native_max_state_difference_in_prefix": 1.4779986542823769
+      },
+      "jvp_change": 4.003944830832159e-07,
+      "anchored_finite_change": 9.318031057581333e-07,
+      "native_finite_change": 4.563430100815169e-07,
+      "anchored_native_projection_gap": -4.754600956766164e-07,
+      "jvp_to_anchored_projection_gap": 5.314086226749174e-07,
+      "anchored_native_local_branch_difference_at_row": 0.00125292520779343
+    },
+    {
+      "merge": 81,
+      "block": 27,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -9.18976271313284e-06,
+        "anchored_finite_change": -1.1909660139038103e-05,
+        "native_finite_change": -4.634258783886569e-06,
+        "anchored_native_state_difference_at_row": 0.0661715045571807,
+        "anchored_native_max_state_difference_in_prefix": 1.2181937968841219
+      },
+      "merged": {
+        "jvp_change": -1.1490878745617227e-05,
+        "anchored_finite_change": -9.355864159527744e-06,
+        "native_finite_change": -8.499065426416375e-06,
+        "anchored_native_state_difference_at_row": 0.06730662273045881,
+        "anchored_native_max_state_difference_in_prefix": 1.2403996005154148
+      },
+      "jvp_change": -2.3011160324843872e-06,
+      "anchored_finite_change": 2.5537959795103593e-06,
+      "native_finite_change": -3.8648066425298055e-06,
+      "anchored_native_projection_gap": -6.418602622040165e-06,
+      "jvp_to_anchored_projection_gap": 4.8549120119947465e-06,
+      "anchored_native_local_branch_difference_at_row": 0.009764032420347566
+    },
+    {
+      "merge": 82,
+      "block": 27,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -1.1490878745617227e-05,
+        "anchored_finite_change": -9.355864159527744e-06,
+        "native_finite_change": -8.499065426416375e-06,
+        "anchored_native_state_difference_at_row": 0.06730662273045881,
+        "anchored_native_max_state_difference_in_prefix": 1.2403996005154148
+      },
+      "merged": {
+        "jvp_change": -1.0747613929851696e-05,
+        "anchored_finite_change": -9.648318244383225e-06,
+        "native_finite_change": -5.7311413252623955e-06,
+        "anchored_native_state_difference_at_row": 0.07595306434781428,
+        "anchored_native_max_state_difference_in_prefix": 1.4202128729827077
+      },
+      "jvp_change": 7.432648157655307e-07,
+      "anchored_finite_change": -2.924540848554813e-07,
+      "native_finite_change": 2.767924101153979e-06,
+      "anchored_native_projection_gap": 3.0603781860094603e-06,
+      "jvp_to_anchored_projection_gap": -1.035718900621012e-06,
+      "anchored_native_local_branch_difference_at_row": 0.03728121028669562
+    },
+    {
+      "merge": 83,
+      "block": 27,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -1.0747613929851696e-05,
+        "anchored_finite_change": -9.648318244383225e-06,
+        "native_finite_change": -5.7311413252623955e-06,
+        "anchored_native_state_difference_at_row": 0.07595306434781428,
+        "anchored_native_max_state_difference_in_prefix": 1.4202128729827077
+      },
+      "merged": {
+        "jvp_change": -1.0719215730430946e-05,
+        "anchored_finite_change": -9.389022724529128e-06,
+        "native_finite_change": -5.532769794220488e-06,
+        "anchored_native_state_difference_at_row": 0.07594767693551784,
+        "anchored_native_max_state_difference_in_prefix": 1.4212745910609492
+      },
+      "jvp_change": 2.839819942075043e-08,
+      "anchored_finite_change": 2.5929551985409693e-07,
+      "native_finite_change": 1.9837153104190763e-07,
+      "anchored_native_projection_gap": -6.09239888121893e-08,
+      "jvp_to_anchored_projection_gap": 2.308973204333465e-07,
+      "anchored_native_local_branch_difference_at_row": 0.0006950510938122466
+    },
+    {
+      "merge": 84,
+      "block": 28,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -1.0719215354477585e-05,
+        "anchored_finite_change": -9.388675382193679e-06,
+        "native_finite_change": -5.53255475391895e-06,
+        "anchored_native_state_difference_at_row": 0.06230127214068864,
+        "anchored_native_max_state_difference_in_prefix": 1.1658885397753387
+      },
+      "merged": {
+        "jvp_change": -9.640398073117783e-06,
+        "anchored_finite_change": -8.352423502118456e-06,
+        "native_finite_change": -2.791304647236509e-06,
+        "anchored_native_state_difference_at_row": 0.06242276056958641,
+        "anchored_native_max_state_difference_in_prefix": 1.1783872521493488
+      },
+      "jvp_change": 1.0788172813598019e-06,
+      "anchored_finite_change": 1.036251880075223e-06,
+      "native_finite_change": 2.7412501066824413e-06,
+      "anchored_native_projection_gap": 1.7049982266072183e-06,
+      "jvp_to_anchored_projection_gap": -4.256540128457891e-08,
+      "anchored_native_local_branch_difference_at_row": 0.009210178209120103
+    },
+    {
+      "merge": 85,
+      "block": 28,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -9.640398073117783e-06,
+        "anchored_finite_change": -8.352423502118456e-06,
+        "native_finite_change": -2.791304647236509e-06,
+        "anchored_native_state_difference_at_row": 0.06242276056958641,
+        "anchored_native_max_state_difference_in_prefix": 1.1783872521493488
+      },
+      "merged": {
+        "jvp_change": -7.827115544025182e-06,
+        "anchored_finite_change": -5.835650268386922e-06,
+        "native_finite_change": -1.5513188097310282e-06,
+        "anchored_native_state_difference_at_row": 0.07040981148810166,
+        "anchored_native_max_state_difference_in_prefix": 1.393356525614963
+      },
+      "jvp_change": 1.8132825290926007e-06,
+      "anchored_finite_change": 2.516773233731534e-06,
+      "native_finite_change": 1.2399858375054806e-06,
+      "anchored_native_projection_gap": -1.2767873962260534e-06,
+      "jvp_to_anchored_projection_gap": 7.034907046389333e-07,
+      "anchored_native_local_branch_difference_at_row": 0.037836927100048906
+    },
+    {
+      "merge": 86,
+      "block": 28,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -7.827115544025182e-06,
+        "anchored_finite_change": -5.835650268386922e-06,
+        "native_finite_change": -1.5513188097310282e-06,
+        "anchored_native_state_difference_at_row": 0.07040981148810166,
+        "anchored_native_max_state_difference_in_prefix": 1.393356525614963
+      },
+      "merged": {
+        "jvp_change": -7.987604460067963e-06,
+        "anchored_finite_change": -6.462634179724841e-06,
+        "native_finite_change": -2.1530563135835346e-06,
+        "anchored_native_state_difference_at_row": 0.07036571534461357,
+        "anchored_native_max_state_difference_in_prefix": 1.39971197747101
+      },
+      "jvp_change": -1.6048891604278153e-07,
+      "anchored_finite_change": -6.269839113379194e-07,
+      "native_finite_change": -6.017375038525064e-07,
+      "anchored_native_projection_gap": 2.524640748541307e-08,
+      "jvp_to_anchored_projection_gap": -4.664949952951379e-07,
+      "anchored_native_local_branch_difference_at_row": 0.0007809930208690608
+    },
+    {
+      "merge": 87,
+      "block": 29,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": -7.987603997060215e-06,
+        "anchored_finite_change": -6.4630390252985725e-06,
+        "native_finite_change": -2.1539075393123275e-06,
+        "anchored_native_state_difference_at_row": 0.05772256353160733,
+        "anchored_native_max_state_difference_in_prefix": 1.1482006749023292
+      },
+      "merged": {
+        "jvp_change": -4.6888029575615264e-06,
+        "anchored_finite_change": -1.1370155683802785e-05,
+        "native_finite_change": -1.182656427171913e-06,
+        "anchored_native_state_difference_at_row": 0.06277546699836399,
+        "anchored_native_max_state_difference_in_prefix": 1.1607139594895886
+      },
+      "jvp_change": 3.2988010394986887e-06,
+      "anchored_finite_change": -4.9071166585042125e-06,
+      "native_finite_change": 9.712511121404144e-07,
+      "anchored_native_projection_gap": 5.878367770644627e-06,
+      "jvp_to_anchored_projection_gap": -8.205917698002901e-06,
+      "anchored_native_local_branch_difference_at_row": 0.02912901734038898
+    },
+    {
+      "merge": 88,
+      "block": 29,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": -4.6888029575615264e-06,
+        "anchored_finite_change": -1.1370155683802785e-05,
+        "native_finite_change": -1.182656427171913e-06,
+        "anchored_native_state_difference_at_row": 0.06277546699836399,
+        "anchored_native_max_state_difference_in_prefix": 1.1607139594895886
+      },
+      "merged": {
+        "jvp_change": 2.326751088306278e-06,
+        "anchored_finite_change": 5.109524176261093e-07,
+        "native_finite_change": 1.4200065357398983e-05,
+        "anchored_native_state_difference_at_row": 0.06938732501205348,
+        "anchored_native_max_state_difference_in_prefix": 1.4257137295515636
+      },
+      "jvp_change": 7.015554045867805e-06,
+      "anchored_finite_change": 1.1881108101428894e-05,
+      "native_finite_change": 1.5382721784570896e-05,
+      "anchored_native_projection_gap": 3.501613683142002e-06,
+      "jvp_to_anchored_projection_gap": 4.865554055561089e-06,
+      "anchored_native_local_branch_difference_at_row": 0.032896125643437565
+    },
+    {
+      "merge": 89,
+      "block": 29,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 2.326751088306278e-06,
+        "anchored_finite_change": 5.109524176261093e-07,
+        "native_finite_change": 1.4200065357398983e-05,
+        "anchored_native_state_difference_at_row": 0.06938732501205348,
+        "anchored_native_max_state_difference_in_prefix": 1.4257137295515636
+      },
+      "merged": {
+        "jvp_change": 1.534838089089116e-06,
+        "anchored_finite_change": 5.070844944637942e-07,
+        "native_finite_change": 1.3664259576908616e-05,
+        "anchored_native_state_difference_at_row": 0.06935551365102663,
+        "anchored_native_max_state_difference_in_prefix": 1.424532050163619
+      },
+      "jvp_change": -7.919129992171621e-07,
+      "anchored_finite_change": -3.867923162315101e-09,
+      "native_finite_change": -5.358057804903671e-07,
+      "anchored_native_projection_gap": -5.31937857328052e-07,
+      "jvp_to_anchored_projection_gap": 7.88045076054847e-07,
+      "anchored_native_local_branch_difference_at_row": 0.0018039867535377815
+    },
+    {
+      "merge": 90,
+      "block": 30,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 1.534837967410816e-06,
+        "anchored_finite_change": 5.072664431282625e-07,
+        "native_finite_change": 1.3664403774996114e-05,
+        "anchored_native_state_difference_at_row": 0.05635111590760723,
+        "anchored_native_max_state_difference_in_prefix": 1.1574365654286485
+      },
+      "merged": {
+        "jvp_change": 1.0151121269293768e-06,
+        "anchored_finite_change": -1.237179244596015e-06,
+        "native_finite_change": 1.2249526282353401e-05,
+        "anchored_native_state_difference_at_row": 0.05675493959355104,
+        "anchored_native_max_state_difference_in_prefix": 1.161723746831846
+      },
+      "jvp_change": -5.197258404814391e-07,
+      "anchored_finite_change": -1.7444456877242775e-06,
+      "native_finite_change": -1.4148774926427132e-06,
+      "anchored_native_projection_gap": 3.295681950815643e-07,
+      "jvp_to_anchored_projection_gap": -1.2247198472428384e-06,
+      "anchored_native_local_branch_difference_at_row": 0.006177393992377991
+    },
+    {
+      "merge": 91,
+      "block": 30,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 1.0151121269293768e-06,
+        "anchored_finite_change": -1.237179244596015e-06,
+        "native_finite_change": 1.2249526282353401e-05,
+        "anchored_native_state_difference_at_row": 0.05675493959355104,
+        "anchored_native_max_state_difference_in_prefix": 1.161723746831846
+      },
+      "merged": {
+        "jvp_change": 5.09172491187371e-06,
+        "anchored_finite_change": 5.4230750649864046e-06,
+        "native_finite_change": 1.56769745083829e-05,
+        "anchored_native_state_difference_at_row": 0.061565083615023115,
+        "anchored_native_max_state_difference_in_prefix": 1.2334622066320535
+      },
+      "jvp_change": 4.076612784944333e-06,
+      "anchored_finite_change": 6.66025430958242e-06,
+      "native_finite_change": 3.4274482260295003e-06,
+      "anchored_native_projection_gap": -3.2328060835529193e-06,
+      "jvp_to_anchored_projection_gap": 2.5836415246380864e-06,
+      "anchored_native_local_branch_difference_at_row": 0.024901704597443224
+    },
+    {
+      "merge": 92,
+      "block": 30,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 5.09172491187371e-06,
+        "anchored_finite_change": 5.4230750649864046e-06,
+        "native_finite_change": 1.56769745083829e-05,
+        "anchored_native_state_difference_at_row": 0.061565083615023115,
+        "anchored_native_max_state_difference_in_prefix": 1.2334622066320535
+      },
+      "merged": {
+        "jvp_change": 4.93000987279364e-06,
+        "anchored_finite_change": 5.934670719659474e-06,
+        "native_finite_change": 1.5100299119059912e-05,
+        "anchored_native_state_difference_at_row": 0.06153279975560354,
+        "anchored_native_max_state_difference_in_prefix": 1.2308113626268806
+      },
+      "jvp_change": -1.6171503908007055e-07,
+      "anchored_finite_change": 5.115956546730693e-07,
+      "native_finite_change": -5.766753893229892e-07,
+      "anchored_native_projection_gap": -1.0882710439960586e-06,
+      "jvp_to_anchored_projection_gap": 6.733106937531399e-07,
+      "anchored_native_local_branch_difference_at_row": 0.003122786708176265
+    },
+    {
+      "merge": 93,
+      "block": 31,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 4.93000995112187e-06,
+        "anchored_finite_change": 5.934098377402552e-06,
+        "native_finite_change": 1.510003127801196e-05,
+        "anchored_native_state_difference_at_row": 0.05360092304309881,
+        "anchored_native_max_state_difference_in_prefix": 1.0721518852748255
+      },
+      "merged": {
+        "jvp_change": 4.353892426986384e-06,
+        "anchored_finite_change": 5.5323996841147305e-06,
+        "native_finite_change": 1.346175467770161e-05,
+        "anchored_native_state_difference_at_row": 0.05368114492326327,
+        "anchored_native_max_state_difference_in_prefix": 1.0663017562169264
+      },
+      "jvp_change": -5.761175241354862e-07,
+      "anchored_finite_change": -4.0169869328782193e-07,
+      "native_finite_change": -1.638276600310351e-06,
+      "anchored_native_projection_gap": -1.2365779070225291e-06,
+      "jvp_to_anchored_projection_gap": 1.744188308476643e-07,
+      "anchored_native_local_branch_difference_at_row": 0.004193835386031023
+    },
+    {
+      "merge": 94,
+      "block": 31,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 4.353892426986384e-06,
+        "anchored_finite_change": 5.5323996841147305e-06,
+        "native_finite_change": 1.346175467770161e-05,
+        "anchored_native_state_difference_at_row": 0.05368114492326327,
+        "anchored_native_max_state_difference_in_prefix": 1.0663017562169264
+      },
+      "merged": {
+        "jvp_change": 1.9597911868871224e-06,
+        "anchored_finite_change": -1.971893124382701e-05,
+        "native_finite_change": -2.337420612501251e-06,
+        "anchored_native_state_difference_at_row": 0.060191455861125884,
+        "anchored_native_max_state_difference_in_prefix": 1.1169285217086964
+      },
+      "jvp_change": -2.394101240099261e-06,
+      "anchored_finite_change": -2.525133092794174e-05,
+      "native_finite_change": -1.579917529020286e-05,
+      "anchored_native_projection_gap": 9.45215563773888e-06,
+      "jvp_to_anchored_projection_gap": -2.2857229687842478e-05,
+      "anchored_native_local_branch_difference_at_row": 0.02626794878397642
+    },
+    {
+      "merge": 95,
+      "block": 31,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 1.9597911868871224e-06,
+        "anchored_finite_change": -1.971893124382701e-05,
+        "native_finite_change": -2.337420612501251e-06,
+        "anchored_native_state_difference_at_row": 0.060191455861125884,
+        "anchored_native_max_state_difference_in_prefix": 1.1169285217086964
+      },
+      "merged": {
+        "jvp_change": 2.3852060415028757e-06,
+        "anchored_finite_change": -1.926786484717294e-05,
+        "native_finite_change": -1.7871813671396786e-06,
+        "anchored_native_state_difference_at_row": 0.060290254057595305,
+        "anchored_native_max_state_difference_in_prefix": 1.117470920216941
+      },
+      "jvp_change": 4.254148546157532e-07,
+      "anchored_finite_change": 4.5106639665407067e-07,
+      "native_finite_change": 5.502392453615723e-07,
+      "anchored_native_projection_gap": 9.917284870750165e-08,
+      "jvp_to_anchored_projection_gap": 2.5651542038317444e-08,
+      "anchored_native_local_branch_difference_at_row": 0.001851826447575456
+    },
+    {
+      "merge": 96,
+      "block": 32,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 2.3852068123278104e-06,
+        "anchored_finite_change": -1.926753075765994e-05,
+        "native_finite_change": -1.7873283205162294e-06,
+        "anchored_native_state_difference_at_row": 0.049928844481798504,
+        "anchored_native_max_state_difference_in_prefix": 0.9254061600634448
+      },
+      "merged": {
+        "jvp_change": 4.5460772233877815e-06,
+        "anchored_finite_change": -1.8792096570574568e-05,
+        "native_finite_change": 4.2920390718945156e-07,
+        "anchored_native_state_difference_at_row": 0.05016188240572364,
+        "anchored_native_max_state_difference_in_prefix": 0.925844356868177
+      },
+      "jvp_change": 2.160870411059971e-06,
+      "anchored_finite_change": 4.7543418708537177e-07,
+      "native_finite_change": 2.216532227705681e-06,
+      "anchored_native_projection_gap": 1.7410980406203092e-06,
+      "jvp_to_anchored_projection_gap": -1.6854362239745993e-06,
+      "anchored_native_local_branch_difference_at_row": 0.005731570993473049
+    },
+    {
+      "merge": 97,
+      "block": 32,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 4.5460772233877815e-06,
+        "anchored_finite_change": -1.8792096570574568e-05,
+        "native_finite_change": 4.2920390718945156e-07,
+        "anchored_native_state_difference_at_row": 0.05016188240572364,
+        "anchored_native_max_state_difference_in_prefix": 0.925844356868177
+      },
+      "merged": {
+        "jvp_change": 3.343469983938335e-06,
+        "anchored_finite_change": -1.2624037799644633e-05,
+        "native_finite_change": -3.7640033686420216e-07,
+        "anchored_native_state_difference_at_row": 0.05384203824451334,
+        "anchored_native_max_state_difference_in_prefix": 1.0435398676472436
+      },
+      "jvp_change": -1.2026072394494465e-06,
+      "anchored_finite_change": 6.168058770929935e-06,
+      "native_finite_change": -8.056042440536537e-07,
+      "anchored_native_projection_gap": -6.973663014983589e-06,
+      "jvp_to_anchored_projection_gap": 7.3706660103793816e-06,
+      "anchored_native_local_branch_difference_at_row": 0.02086098945991433
+    },
+    {
+      "merge": 98,
+      "block": 32,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 3.343469983938335e-06,
+        "anchored_finite_change": -1.2624037799644633e-05,
+        "native_finite_change": -3.7640033686420216e-07,
+        "anchored_native_state_difference_at_row": 0.05384203824451334,
+        "anchored_native_max_state_difference_in_prefix": 1.0435398676472436
+      },
+      "merged": {
+        "jvp_change": 2.5021866932435443e-06,
+        "anchored_finite_change": -1.2465004936637603e-05,
+        "native_finite_change": -7.627669482389299e-07,
+        "anchored_native_state_difference_at_row": 0.05391045055177736,
+        "anchored_native_max_state_difference_in_prefix": 1.0438718056256315
+      },
+      "jvp_change": -8.412832906947907e-07,
+      "anchored_finite_change": 1.5903286300703035e-07,
+      "native_finite_change": -3.863666113747277e-07,
+      "anchored_native_projection_gap": -5.453994743817581e-07,
+      "jvp_to_anchored_projection_gap": 1.000316153701821e-06,
+      "anchored_native_local_branch_difference_at_row": 0.0029142876287481315
+    },
+    {
+      "merge": 99,
+      "block": 33,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 2.502186097110411e-06,
+        "anchored_finite_change": -1.2465060081442991e-05,
+        "native_finite_change": -7.629030459657682e-07,
+        "anchored_native_state_difference_at_row": 0.04696197534251651,
+        "anchored_native_max_state_difference_in_prefix": 0.9093101291534281
+      },
+      "merged": {
+        "jvp_change": 2.3258514105069236e-06,
+        "anchored_finite_change": -1.1916246590058105e-05,
+        "native_finite_change": -1.878253712679634e-06,
+        "anchored_native_state_difference_at_row": 0.04730908364901716,
+        "anchored_native_max_state_difference_in_prefix": 0.9127119787072365
+      },
+      "jvp_change": -1.763346866034874e-07,
+      "anchored_finite_change": 5.488134913848863e-07,
+      "native_finite_change": -1.1153506667138657e-06,
+      "anchored_native_projection_gap": -1.664164158098752e-06,
+      "jvp_to_anchored_projection_gap": 7.251481779883737e-07,
+      "anchored_native_local_branch_difference_at_row": 0.006237112065724251
+    },
+    {
+      "merge": 100,
+      "block": 33,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 2.3258514105069236e-06,
+        "anchored_finite_change": -1.1916246590058105e-05,
+        "native_finite_change": -1.878253712679634e-06,
+        "anchored_native_state_difference_at_row": 0.04730908364901716,
+        "anchored_native_max_state_difference_in_prefix": 0.9127119787072365
+      },
+      "merged": {
+        "jvp_change": 8.87613494584403e-06,
+        "anchored_finite_change": -1.0829590077098689e-05,
+        "native_finite_change": -4.615679863630151e-07,
+        "anchored_native_state_difference_at_row": 0.05094264928699041,
+        "anchored_native_max_state_difference_in_prefix": 1.1685865285531605
+      },
+      "jvp_change": 6.550283535337107e-06,
+      "anchored_finite_change": 1.0866565129594163e-06,
+      "native_finite_change": 1.4166857263166188e-06,
+      "anchored_native_projection_gap": 3.300292133572025e-07,
+      "jvp_to_anchored_projection_gap": -5.463627022377691e-06,
+      "anchored_native_local_branch_difference_at_row": 0.024659650493292783
+    },
+    {
+      "merge": 101,
+      "block": 33,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": 8.87613494584403e-06,
+        "anchored_finite_change": -1.0829590077098689e-05,
+        "native_finite_change": -4.615679863630151e-07,
+        "anchored_native_state_difference_at_row": 0.05094264928699041,
+        "anchored_native_max_state_difference_in_prefix": 1.1685865285531605
+      },
+      "merged": {
+        "jvp_change": 9.902818973749605e-06,
+        "anchored_finite_change": -9.862657642623757e-06,
+        "native_finite_change": 1.5525020391864153e-06,
+        "anchored_native_state_difference_at_row": 0.05092681731867718,
+        "anchored_native_max_state_difference_in_prefix": 1.1683630918958678
+      },
+      "jvp_change": 1.0266840279055744e-06,
+      "anchored_finite_change": 9.66932434474932e-07,
+      "native_finite_change": 2.0140700255494304e-06,
+      "anchored_native_projection_gap": 1.0471375910744984e-06,
+      "jvp_to_anchored_projection_gap": -5.975159343064245e-08,
+      "anchored_native_local_branch_difference_at_row": 0.001954214502803212
+    },
+    {
+      "merge": 102,
+      "block": 34,
+      "operation": "attention",
+      "incoming": {
+        "jvp_change": 9.902818418304172e-06,
+        "anchored_finite_change": -9.863289447697293e-06,
+        "native_finite_change": 1.5521816947618172e-06,
+        "anchored_native_state_difference_at_row": 0.03541006866433731,
+        "anchored_native_max_state_difference_in_prefix": 0.8123778519263714
+      },
+      "merged": {
+        "jvp_change": 8.314633916450401e-06,
+        "anchored_finite_change": -1.611520040966513e-05,
+        "native_finite_change": -1.1381906440181139e-05,
+        "anchored_native_state_difference_at_row": 0.03783992400807198,
+        "anchored_native_max_state_difference_in_prefix": 0.8117551193275433
+      },
+      "jvp_change": -1.588184501853771e-06,
+      "anchored_finite_change": -6.251910961967838e-06,
+      "native_finite_change": -1.2934088134942956e-05,
+      "anchored_native_projection_gap": -6.682177172975118e-06,
+      "jvp_to_anchored_projection_gap": -4.663726460114067e-06,
+      "anchored_native_local_branch_difference_at_row": 0.01373258392176758
+    },
+    {
+      "merge": 103,
+      "block": 34,
+      "operation": "feed_forward",
+      "incoming": {
+        "jvp_change": 8.314633916450401e-06,
+        "anchored_finite_change": -1.611520040966513e-05,
+        "native_finite_change": -1.1381906440181139e-05,
+        "anchored_native_state_difference_at_row": 0.03783992400807198,
+        "anchored_native_max_state_difference_in_prefix": 0.8117551193275433
+      },
+      "merged": {
+        "jvp_change": -9.489309670284902e-06,
+        "anchored_finite_change": -1.1021293248945907e-05,
+        "native_finite_change": -1.3222117334472233e-05,
+        "anchored_native_state_difference_at_row": 0.09909984437314454,
+        "anchored_native_max_state_difference_in_prefix": 2.1827484121176144
+      },
+      "jvp_change": -1.7803943586735303e-05,
+      "anchored_finite_change": 5.093907160719224e-06,
+      "native_finite_change": -1.8402108942910944e-06,
+      "anchored_native_projection_gap": -6.934118055010319e-06,
+      "jvp_to_anchored_projection_gap": 2.2897850747454527e-05,
+      "anchored_native_local_branch_difference_at_row": 0.08873787751287948
+    },
+    {
+      "merge": 104,
+      "block": 34,
+      "operation": "per_layer_input",
+      "incoming": {
+        "jvp_change": -9.489309670284902e-06,
+        "anchored_finite_change": -1.1021293248945907e-05,
+        "native_finite_change": -1.3222117334472233e-05,
+        "anchored_native_state_difference_at_row": 0.09909984437314454,
+        "anchored_native_max_state_difference_in_prefix": 2.1827484121176144
+      },
+      "merged": {
+        "jvp_change": -1.1300297002526992e-05,
+        "anchored_finite_change": -1.2195840630144922e-05,
+        "native_finite_change": -1.3715503157298026e-05,
+        "anchored_native_state_difference_at_row": 0.0991298280990407,
+        "anchored_native_max_state_difference_in_prefix": 2.183155285779799
+      },
+      "jvp_change": -1.81098733224209e-06,
+      "anchored_finite_change": -1.1745473811990148e-06,
+      "native_finite_change": -4.933858228257926e-07,
+      "anchored_native_projection_gap": 6.811615583732222e-07,
+      "jvp_to_anchored_projection_gap": 6.364399510430752e-07,
+      "anchored_native_local_branch_difference_at_row": 0.0015776701761036497
+    }
+  ],
+  "first_exactly_nonzero_current_row_branch_discrepancy": 0,
+  "first_held_prefix_merge_with_target_sized_projection_gap": 28,
+  "jvp_projection_from_previous_preview": -4.91336935967619e-06,
+  "jvp_projection_recomputed": -4.913654217805863e-06,
+  "anchored_finite_projection_change": -7.431784436351396e-05,
+  "native_finite_projection_change": 0.00011039465291998174,
+  "native_finite_projection_change_from_capture": 0.00011039465292017603,
+  "capped_loss_origin": 0.00029245995972935026,
+  "capped_loss_anchored_endpoint": 0.0002916668827424572,
+  "capped_loss_native_endpoint": 0.00029169578198691215,
+  "actual_displacement_response": {
+    "objective": 0.00029245995972935026,
+    "slope": -8.254635733781154e-07,
+    "curvature": 1.1072444663894049e-07,
+    "length": 3.7275579081007097,
+    "predicted_objective": 0.0002909214780939529,
+    "status": "proposal"
+  },
+  "capped_map_origin": {
+    "record": "studies/04-round-2-overlap/runs/directional-intervention-anchored-replay/origin-capped-map.npy",
+    "sha256": "bdc3ac84a956c08df5d8dd79a9d30c275e680f7d4da006a90deedc31203aba7a"
+  },
+  "capped_map_endpoint": {
+    "record": "studies/04-round-2-overlap/runs/directional-intervention-anchored-replay/endpoint-capped-map.npy",
+    "sha256": "538f6b07339b5a0918f811297c5e2c774624dd492325dfdae58428ccfc9f8fa2"
+  },
+  "prediction_vs_result": "Compare the exact rounded-weight JVP, anchored finite forward with original model anchors, and recorded native finite response on identical full history and correspondence.",
+  "failures_only": "Coordinate differences across earlier residual transforms are observational localization. A signed projection on an earlier unit residual is not a causal derivative of the target. Attention context and reconstructed caches can transmit differences.",
+  "what_this_changes": "Separates a held finite-graph departure from native finite graph mismatch without making weights, selecting directions, invoking generation or changing the training graph."
+}

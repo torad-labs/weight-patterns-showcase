@@ -1,0 +1,108 @@
+{
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+ "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+ "physical_gpu": 1,
+ "storage": {
+  "free_floor_bytes": 40000000000,
+  "capture_reserve_bytes": 3606388736,
+  "sizing": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/storage-sizing.json",
+   "sha256": "632e432ea92b1a9bac6576af676aa25bc4cfad2a6ab66b423b114faa1d719214"
+  }
+ },
+ "reference": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+ },
+ "reading": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+  "sha256": "bdcb750aa79e48c5ab34a01b010d31f7722c313e417abd5dccc621cadc9ed30b"
+ },
+ "method_step": 3,
+ "operation": "frozen-energy-paired-overlap",
+ "parent": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/declaration.json",
+  "sha256": "f12383767e85eb78026dbc179ecfdf8c0d9904aee5a39cc2b57a8e89891b77df"
+ },
+ "panel_program": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/evaluate.py",
+  "sha256": "919f2400823f2574d5840cef5ff0cbac9d852271f09dbe8e9ddd0daa4f32ba42"
+ },
+ "program": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/measure.py",
+  "sha256": "48e9c2caf6e333e3b9f9814a007b77a30700c63c2b5b4c0dd1fea993a2415b9a"
+ },
+ "states": [
+  "original",
+  "390"
+ ],
+ "original_model": {
+  "record": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+ },
+ "why_this_direction": "The outcome panel contains paired repairs, regressions, and stable failures on the same questions. Determine what the single existing whole-computation rule measures about these transitions. No new outcome-supervised fitting or operation-specific detector.",
+ "repeating_pattern_check": "A repaired response and its verdict can improve while a local computational error persists. Complete labels or a single score cannot locate that discrepancy. Read every local excess after the existing computation-only registration to the fixed original successful trace, retaining growth, relief, and every layer.",
+ "hypothesis": "The native trace objective and its local excesses contain a repeatable signature of which divergent computations were reduced by an edit across families.",
+ "prediction": "On fully observed pairs changing from an incorrect to a correct chain, the independent rule yields lower total discrepancy and more local relief than growth. Compare the signed changes to completed unchanged-error controls and separately report cap-limited histories. This is a retrospective technique diagnostic after the outcomes were known.",
+ "would_weaken_it": "A complete repair that increases the same native loss, or an unchanged failure with a larger apparent gain, limits that scalar as a reusable selector; opposite local changes can point to where the reference or correspondence lacks specificity.",
+ "what_went_wrong_before": "Turning named physics operations into separate learning objectives prevents a repeatable procedure. The operation audit enters only after computing every map.",
+ "rule": "Original and frozen 390, all eight previously evaluated numerical formulations. Regenerate with the full stream. Verify native output matches the recorded history for every prompt and endpoint. Use unchanged native computational registration, 105 merges and calibrated local loss. Compare loss and cell maps on the common reference grid. Transfers, scores, signs and arithmetic labels never enter measurement. Report full vs prefix; none of these eight supplies a gradient or a fresh final test.",
+ "observability": {
+  "format": "weight-patterns-observability/1",
+  "entrypoint": "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/measure.py",
+  "events": "observability/events.jsonl",
+  "mode": "direct Recorder API",
+  "operations": [
+   "state.restore",
+   "native.capture",
+   "native.measure"
+  ],
+  "sources": [
+   {
+    "record": "code/signal-trace/pipeline/observability/recorder.py",
+    "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+   },
+   {
+    "record": "records/development/2026-11-16-factor-direction/native.py",
+    "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+   },
+   {
+    "record": "records/development/2026-11-17-reference-preservation/profile.py",
+    "sha256": "161cb82a1c26e1bad408d1efd62390efe7c61d9cf6418e0c40b35da86f668a5c"
+   },
+   {
+    "record": "records/development/2026-11-17-reference-preservation/run.py",
+    "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+   },
+   {
+    "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/evaluate.py",
+    "sha256": "919f2400823f2574d5840cef5ff0cbac9d852271f09dbe8e9ddd0daa4f32ba42"
+   },
+   {
+    "record": "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/measure.py",
+    "sha256": "48e9c2caf6e333e3b9f9814a007b77a30700c63c2b5b4c0dd1fea993a2415b9a"
+   }
+  ],
+  "context_fields": [
+   "member",
+   "candidate",
+   "candidate_evaluation_index",
+   "historical_update",
+   "checkpoint_sha256",
+   "reference_sha256",
+   "physical_gpu",
+   "gpu_uuid"
+  ]
+ },
+ "inputs": [
+  "studies/04-round-2-overlap/runs/frozen-energy-generalization/panel.json",
+  "studies/04-round-2-overlap/runs/frozen-energy-generalization/declaration.json",
+  "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/result.json",
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/observability/events.jsonl"
+ ]
+}

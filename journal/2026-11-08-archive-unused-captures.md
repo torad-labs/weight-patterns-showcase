@@ -48,12 +48,12 @@ Other unarchived historical models and group arrays were not silently discarded.
 
 ## Evidence and restoration
 
-- [Checkpoint transfers, hashes and restore commands](../records/storage-release-2026-11-08-checkpoints.json).
-- [Excluded-capture transfers, hashes and restore commands](../records/storage-release-2026-11-08-unused-captures.json).
-- [Exact excerpt source and reconstruction map](../records/storage-release-2026-11-08-excerpt-plan.json).
-- [Excerpt release and cached-handle record](../records/storage-release-2026-11-08-excerpts.json).
-- [Verified recovery bundle](../records/storage-release-2026-11-08-recovery.json).
-- [Counts and filesystem observation](../records/storage-release-2026-11-08-summary.json).
+- Checkpoint transfers, hashes and restore commands.
+- Excluded-capture transfers, hashes and restore commands.
+- Exact excerpt source and reconstruction map.
+- Excerpt release and cached-handle record.
+- Verified recovery bundle.
+- Counts and filesystem observation.
 
 For an excerpt, use its recorded `torad-research traces extract` command to a new
 `native-restored` directory. Compare its source/segment map with the retained

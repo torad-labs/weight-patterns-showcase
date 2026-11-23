@@ -1,0 +1,19 @@
+# Small Gemma retrieval intervention
+
+Purpose: test whether inspecting actual Gemma E2B parameters and recorded internal activity lets the editor predict a selective effect of a bounded parameter edit on short key/value retrieval. This is an exploratory causal experiment, not a general quality or performance claim.
+
+Authorized scope: baseline and edited local inference, with the original checkpoint preserved. All checkpoint variants live under models/gemma4/gemma4-e2b/. Logs, captures, predictions and results live in this run directory. Never mutate or hard-link-and-edit an original weight file. Use the existing checkpoint-generation publisher for variants. Same engine executable, policy, precision, tokenizer and prompt template across every compared arm. Use the normal GPU card lease on device 0; no other GPU work in parallel.
+
+Dataset: 12 discovery retrieval prompts, 24 distinct confirmation retrieval prompts and 12 simple unrelated controls. Balance requested position and answer value. Freeze the corpus before any edit; use only discovery outputs for candidate selection. Answers are short. First baseline/candidate runs cap generation at 8 tokens, increasing only if a recorded formatting issue prevents observing the answer. Score correctness and format separately.
+
+Baseline: first one discovery prompt through the saved qgre-infer production executable, then the rest. Record output and boundary captures with its instrumented mint. Compare internal effects only within that instrumented path and production behavior only within the production path; matching emitted tokens does not establish internal-state identity. Preserve both mint identities. No candidate is accepted from a shape-mismatched tap. Use existing native forced-choice scoring if its contract fits the dataset, otherwise report the exact-answer fallback below (never a CPU forward implementation).
+
+Candidate: inspect weights and their real input/output relationships. Record target, byte/coordinate binding, predicted sign and context selectivity, two representable edit strengths and refutation before running edited inference. No conclusion from magnitude alone. At most three separately explained hypotheses in this experiment; do not fit weights iteratively to a loss. Every failed/null test remains in the report.
+
+Comparison: original, byte-identical republished checkpoint, candidate, and three deterministic matched random controls with comparable location, parameter count and edit magnitude. Every arm starts a fresh request and builds its own KV state for the same prompt. Local fixed-state probes, if used, are labeled separately. Confirmation is evaluated after freezing the candidate; no tuning to confirmation outcomes.
+
+Primary measure: paired change in correct-answer versus distractor score on the same retrieval prompts, if the native score path is available; otherwise report exact-answer rescues/regressions without inventing scores. Companion: unrelated-control correctness and output validity. Also report changes in target-component outputs. Prediction band is set for the chosen candidate after baseline; baseline has no expected edit effect. Timing is diagnostic only, not an inference speed claim.
+
+Refutation: missing predicted direction, effects reproduced by matched random changes, generalized output collapse, or missing coordinate/capture identity makes the proposed mechanism unsupported. A selective weakening can validate localization but is not a model improvement. A small confirmation set is preliminary evidence, not a benchmark result.
+
+Known limits: the saved MLP capture ABI has 6,144 coordinates in layers whose actual input width may be 12,288; those rows are excluded. The first edit may use a component with an exact proven binding; otherwise repair the required capture/binding before applying it. The ghost visualization is owned separately and is not redesigned here.

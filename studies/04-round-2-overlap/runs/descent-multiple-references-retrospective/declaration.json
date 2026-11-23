@@ -1,0 +1,199 @@
+{
+  "method_step": 3,
+  "operation": "Read-only retrospective on the previously reported FFN20 development cell; no model calls, edits, site search, or held evaluation.",
+  "declared_at": "2026-11-18T00:44:04.649801-06:00",
+  "why_this_direction": "The old fitted direction missed a different route. Is simple proximity to several correct turns sufficient to identify the original departure, and does a direction estimated from both groups survive leaving energy settings out?",
+  "repeating_pattern_check": "Site selection and same-template reuse can make development separation look predictive. Hold out both initial kinetic and downhill energy as a tuple across all donors, including for calibration; keep the known discovery-site selection explicit.",
+  "hypothesis": "Natural correct turns at this site give a useful reference for incoming wrong cases that realize the same operation on different energy settings.",
+  "prediction": "Nearest-correct distance and the class-centroid direction should identify departures even with matching energy settings removed if these turns represent the common operation in the respective geometry.",
+  "would_weaken_it": "Wrong turns fall inside the correct-to-correct distance envelope or lie on the correct side of the class midpoint after their energy tuple is removed.",
+  "what_went_wrong_before": "A selected one-pair direction separated these development traces yet missed a previously reserved subtraction. Its isolation in one template restricts interpretation.",
+  "rule": "Read the single historical mate of reference row 312 at merge 61 for each original member. Nearest-positive distance is compared with the largest within-donor nearest-positive distance, excluding the donor energy group on each calibration query. Separately orient a unit direction from correct to wrong class centroid in the donor fold and classify by its equal-distance midpoint. Freeze both rules. Use all eligible other groups, no fitting to tabulated scores.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-cases.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/descent-multiple-references-retrospective/result.json"
+  ],
+  "location_provenance": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/analysis.json",
+    "sha256": "1e7261846966a14627357b82cca4cbe39e99570c12458c6d652f1c10f7af0906",
+    "reference_row": 312,
+    "merge": 61
+  },
+  "members": [
+    {
+      "id": "discovery-00-channel-h3",
+      "descent": "correct",
+      "current_row": 357
+    },
+    {
+      "id": "discovery-01-channel-h1",
+      "descent": "correct",
+      "current_row": 312
+    },
+    {
+      "id": "discovery-05-channel-h1",
+      "descent": "wrong",
+      "current_row": 312
+    },
+    {
+      "id": "discovery-06-channel-h1",
+      "descent": "correct",
+      "current_row": 322
+    },
+    {
+      "id": "discovery-08-channel-h3",
+      "descent": "correct",
+      "current_row": 325
+    },
+    {
+      "id": "discovery-10-channel-h3",
+      "descent": "correct",
+      "current_row": 325
+    },
+    {
+      "id": "discovery-11-channel-h3",
+      "descent": "correct",
+      "current_row": 324
+    },
+    {
+      "id": "discovery-15-channel-h1",
+      "descent": "correct",
+      "current_row": 364
+    },
+    {
+      "id": "expanded-001-h3",
+      "descent": "wrong",
+      "current_row": 363
+    },
+    {
+      "id": "expanded-004-h1",
+      "descent": "correct",
+      "current_row": 312
+    },
+    {
+      "id": "expanded-020-h1",
+      "descent": "wrong",
+      "current_row": 325
+    },
+    {
+      "id": "expanded-023-h1",
+      "descent": "correct",
+      "current_row": 312
+    },
+    {
+      "id": "expanded-029-h1",
+      "descent": "correct",
+      "current_row": 312
+    },
+    {
+      "id": "expanded-034-h3",
+      "descent": "wrong",
+      "current_row": 378
+    },
+    {
+      "id": "expanded-039-h3",
+      "descent": "correct",
+      "current_row": 317
+    },
+    {
+      "id": "expanded-042-h3",
+      "descent": "wrong",
+      "current_row": 378
+    },
+    {
+      "id": "expanded-045-h1",
+      "descent": "wrong",
+      "current_row": 312
+    },
+    {
+      "id": "expanded-046-h3",
+      "descent": "wrong",
+      "current_row": 312
+    },
+    {
+      "id": "expanded-064-h1",
+      "descent": "correct",
+      "current_row": 323
+    },
+    {
+      "id": "expanded-068-h1",
+      "descent": "wrong",
+      "current_row": 313
+    },
+    {
+      "id": "expanded-070-h1",
+      "descent": "wrong",
+      "current_row": 313
+    },
+    {
+      "id": "expanded-071-h1",
+      "descent": "correct",
+      "current_row": 319
+    },
+    {
+      "id": "expanded-076-h1",
+      "descent": "correct",
+      "current_row": 313
+    },
+    {
+      "id": "expanded-078-h1",
+      "descent": "correct",
+      "current_row": 313
+    },
+    {
+      "id": "expanded-087-h3",
+      "descent": "wrong",
+      "current_row": 312
+    },
+    {
+      "id": "expanded-092-h1",
+      "descent": "wrong",
+      "current_row": 312
+    },
+    {
+      "id": "expanded-094-h1",
+      "descent": "wrong",
+      "current_row": 313
+    },
+    {
+      "id": "expanded-095-h1",
+      "descent": "wrong",
+      "current_row": 313
+    }
+  ],
+  "case_group": "Ordered pair (initial kinetic energy, energy released by descent). These prompts use g = 10 m/s\u00b2.",
+  "kind": "post-selection, development-only geometry audit; all members use the channel template"
+}

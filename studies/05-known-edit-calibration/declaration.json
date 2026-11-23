@@ -1,0 +1,80 @@
+{
+  "kind": "Withdrawn proposal for deliberate calibration on known outcomes. Astra incorrectly treated Marcos's optional references as a request for this study; Marcos clarified that no calibration was requested.",
+  "authority": "President's scope ruling delivered November 10: separate study under studies/, committed declaration before any fit, historical inputs read-only, outputs confined here, no changes to the round-two guard/method. Round two may cite reasoning but cannot consume this study's outputs, targets or parameters.",
+  "why_this_direction": "D1 is the best-repair/selectivity anchor and the deleted full-path A2 is the transfer anchor. D1's actual stored tensors and native states survive. First separate a wrong forward/inverse calculation from a wrong target: reproduce the known D1 state changes, independently read its action against the original overlap, and compare background action. Restore old A2 by its recorded identity rather than inventing a checkpoint from a historical path.",
+  "repeating_pattern_check": "Prior attempts repeatedly confused local fit with natural repair, mixed failure types, selected a ridge on one estimator and applied another, and treated a weight percentage as an action scale. D1 has a larger matrix change but much quieter background action than A1. This study reuses the actual rounded nonlinear estimator, declares known-answer fitting honestly, separates conversion from overlap association, keeps climb-reference and descent-subtraction contrasts separate, and never scores a forced prefix as a new behavioral success.",
+  "hypothesis": "The exact normalized-state operator can reproduce a known useful persistent edit's native effect; deliberate fitting to those effects can reveal whether the solver or its choice of target/regularization is responsible for mismatching useful changes. D1 and old A2 are calibration evidence, not new tests of generalization.",
+  "prediction": "The forward equation agrees with native D1 much more closely than the edit's state change, and its local derivative explains most of that finite change. A nonzero BF16 fit recovers useful portions of D1's state action on the four original trajectories, but its background action may differ because Euclidean weight regularization does not encode D1's background covariance. D1 is expected to reduce some of the descent-group discrepancy on the repaired sled; complete closure is not predicted. The singleton climb contrast is descriptive, not recurrence evidence.",
+  "would_weaken_it": "Large native forward errors would identify a conversion/coordinate problem. Poor known-effect recovery despite an exactly available D1 solution would identify limitations of the estimator or regularization/search. Good known-effect recovery but no alignment between D1's effect and the independently constructed overlap target would weaken that target's usefulness, not erase the observed repair. A restored A2 hash mismatch invalidates its use.",
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "models/gemma4/gemma4-e2b/round-1/D-background-sensitivity/projection-before.bf16",
+    "models/gemma4/gemma4-e2b/round-1/D-background-sensitivity/projection-after.bf16",
+    "studies/03-round-1-single-pair-edits/D-background-sensitivity/run",
+    "studies/04-round-2-overlap/runs/full-overlap/cases.json",
+    "studies/04-round-2-overlap/runs/full-overlap/labels-original-gpu0.json",
+    "studies/04-round-2-overlap/runs/full-overlap/capture",
+    "studies/04-round-2-overlap/runs/full-overlap/exported",
+    "records/retrospectives/2026-11-09-round-two-repairs",
+    "records/storage-release-2026-11-09-first-full-path-streams.json"
+  ],
+  "input_identity": {
+    "original_model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+    "d1_before_sha256": "cc71d19b9d810565de0bd7f688a73529cc67442cda34fe2286f57c1e78bcc403",
+    "d1_after_sha256": "7409bfd2295eabb22bb1ba3e32701b15b60cdb72d5420df066fec67c79dbd8e2",
+    "old_a2_checkpoint_sha256": "c02e7dd39fc79d4b00feb83f07b42a000d7d5d1b51f5114a3b709fd378c35b57",
+    "old_a2_archive_path": "gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded.gguf"
+  },
+  "rule": {
+    "conversion": "Use the D1 receipt's single changed matrix and native learned scale. Reconstruct original incoming states from original token embeddings plus the sum of all preceding recorded unit-state turns, multiplied by that merge's native incoming norm. This reconstructs a residual state, not a matrix input: actual 2048-wide matrix inputs come from D1's original physics arrays. Compare reconstruction with native D1 incoming states on every common-history row; compare the forward expression with native projections/postnorms/merged states. Keep numerical errors visible rather than introducing a pass threshold.",
+    "known_effect_fit": "On all original generated rows of block-changed, sled-changed, block-base and block-m4-changed, target F(W_D1;x,h,g). Fit starting from W_original with the existing ladder.fit nonlinear objective and BF16 candidate selection, on CPU while the partner uses the GPUs. This is deliberately learning a known edit's local action; D1's zero loss on its own computed target is tautological and is NOT evidence that it closes an overlap gap. Alternating repaired members and preserved members creates two member-disjoint folds, each containing one of each. Report each case, actual rounded delta cosine with D1, conditional action and original numerical outcomes separately. Save only a projection candidate, not a new GGUF or a claimed new repair.",
+    "overlap_reading": "Separately align the 7 correct and 8 descent-subtraction original traces, plus block-changed, using all 105 turns and complete minimum-cosine-distance paths. Choose an axis minimizing total absolute difference in recorded trace length, with id ties. At the historically edited merge compute the original correct/descent group state overlap, its variance and shared discrepancy by the current formulas. Read D1's action against that target on sled-changed's own original inputs, and report movements on both preserved cases. Only one original climb-reference failure is present: report block-changed's unshrunk correct-mean contrast as a singleton diagnostic, never claim a recurring climb gap or apply a fabricated wrong-group variance.",
+    "background": "Read every original background row; compare actual raw projection actions of D1 and the fitted candidate. Give requests equal weight and steps equal weight within each request; preserve the historical calibration/held-out partition. These already seen requests are development comparisons here.",
+    "old_a2": "Restore the archived full-path first-pass checkpoint to a new empty directory inside this study and verify its recorded SHA. Retain the existing per-case repair/transfer evidence as the behavior record. Do not rerun inference or claim a new transfer result in this study. If corresponding native arrays are unavailable, report that gap rather than substitute independent matrix calculations for the multi-layer network.",
+    "no_round_two_import": "No outputs, fitted parameters or restored edited models from this study may become inputs/targets/parameters of round two under its current method. Reserved-40b remains unopened."
+  },
+  "parameters": {
+    "edited_matrix": {
+      "measured_from": "studies/03-round-1-single-pair-edits/D-background-sensitivity/run/native-applied.json",
+      "derivation": "The sole tensor named in the known D1 intervention; all its rows/columns retained. Historical calibration location only.",
+      "scales_with": "The intervention being calibrated, not a new model's chosen layers."
+    },
+    "norm_epsilon": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/a2.py",
+      "derivation": "NORM_EPSILON=1e-6 is the recorded Gemma native RMSNorm epsilon; use the native value, not a fit.",
+      "scales_with": "The native model's normalization definition."
+    },
+    "member_folds": {
+      "measured_from": "studies/03-round-1-single-pair-edits/D-background-sensitivity/run/physics-index.json",
+      "derivation": "Two repaired and two preserved trajectories: alternate sorted IDs within each category into two folds, one of each category per fold. No token-level split is called unseen-answer validation.",
+      "scales_with": "Available distinct members; this tiny cross-case calibration is not a population estimate."
+    },
+    "ridge_and_stopping": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/ladder.py",
+      "derivation": "Use the same exact nonlinear fit and BF16 held-member selection being calibrated, including no change. Spectral starting ridge, binary-radix spacing, golden-section refinement and float32 termination are algorithmic definitions, not D1 percentages transplanted into a rung. Record every candidate and status; the best evaluated point is not a proven global optimum.",
+      "scales_with": "The supplied input/state rows, local operator spectrum, storage and solver arithmetic."
+    },
+    "correspondence_axis": {
+      "measured_from": "studies/04-round-2-overlap/runs/full-overlap/exported",
+      "derivation": "argmin_i sum_j abs(length_i-length_j) among the named original members; ties by case ID. Every native step remains represented.",
+      "scales_with": "Recorded trace lengths of the comparison cohort."
+    },
+    "shared_part": {
+      "measured_from": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "derivation": "For the descent group, chance=sum_group trace(sample_covariance)/member_count, shared_part=max(0,1-chance/gap); descriptive divergence uses gap>2*chance as the existing within-group split-half yardstick. No such estimate is claimed for the one-member climb contrast.",
+      "scales_with": "Measured between-member variation and group sizes at each aligned place."
+    },
+    "background_weighting": {
+      "measured_from": "studies/03-round-1-single-pair-edits/D-background-sensitivity/run/background-index.json",
+      "derivation": "Mean squared action within each request, then mean across requests in each recorded partition. All listed rows retained.",
+      "scales_with": "Number and length of background requests."
+    }
+  },
+  "outputs": [
+    "studies/05-known-edit-calibration/results",
+    "studies/05-known-edit-calibration/restored",
+    "studies/05-known-edit-calibration/REPORT.md"
+  ],
+  "status": "Withdrawn before any calibration fit or new native inference. The checkpoint-restoration background task was stopped. The historical edits remain optional references; this study is not a prerequisite for round two.",
+  "withdrawal_reason": "Marcos clarified on November 10 that he had not requested anything: the earlier edits were mentioned in case they could help and might not be needed at all. Astra had not established a need for the added study. The scope ruling permitted an arrangement; it did not request this work. No guard or method was changed."
+}

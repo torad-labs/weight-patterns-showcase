@@ -1,0 +1,28 @@
+{
+  "policy": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-target/policy.json",
+    "sha256": "22f64fd140377eaee564d02a64e29035fefd657f4a59c738a43c6b5f7618a84b"
+  },
+  "support": {
+    "downhill": 331,
+    "climb": 712,
+    "friction": 1995
+  },
+  "source_landmarks": [
+    141,
+    156
+  ],
+  "source_stage_rows": [
+    138,
+    139,
+    140,
+    141,
+    153,
+    154,
+    155,
+    156
+  ],
+  "prediction_vs_result": "Climb, corrected downhill and friction share the same source trajectory. The stock gain and stock climb errors are assigned separate falling residuals in one weight objective.",
+  "failures_only": "The downhill recognizer can abstain on explicit reordered routes. Its absence means correspondence is unresolved.",
+  "what_this_changes": "The shared learner can acquire both failing fits and the independent preservation question on each installed revision."
+}

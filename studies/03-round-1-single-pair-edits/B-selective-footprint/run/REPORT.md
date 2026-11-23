@@ -30,7 +30,7 @@ There are **1,193 eligible matched predictions**. The first differing prediction
 
 At the first differing prediction, projection changes are 0.7212% for the target, 0.8620% for the sled, and 0.8609% for the 4 kg case. Their final-normalization changes are 0.1522%, 0.1807%, and 0.6315%, respectively. Thus a similar initial effect need not develop the same way downstream. The preserved block's last prediction changes internally despite identical emitted tokens. Percentages use the original vector norm at each boundary, not one common physical unit or a probability denominator.
 
-Source: [connected-traces.json](connected-traces.json), including graph/event/offset joins and all four continuations.
+Source: connected-traces.json, including graph/event/offset joins and all four continuations.
 
 ## A: fresh family results
 
@@ -44,13 +44,13 @@ The 24 physics prompts are three wordings of eight energy situations, with varie
 | Correct arithmetic controls | 4 / 4 | 4 / 4 |
 | Correct language controls | 4 / 4 | 4 / 4 |
 
-All eight control continuations are token-identical. Overall, 22/32 continuations are identical. The extra correct literal verdict comes from a wagon response whose derivation still includes `640 − 600 + 500 = 140`; it is not a new correct numerical chain. The one correct physics chain reaches a clear verbal conclusion before its cap, but does not finish the requested literal YES/NO line. Both facts are explicit in [family-assessment.json](family-assessment.json) and [the complete responses](RESPONSES.md).
+All eight control continuations are token-identical. Overall, 22/32 continuations are identical. The extra correct literal verdict comes from a wagon response whose derivation still includes `640 − 600 + 500 = 140`; it is not a new correct numerical chain. The one correct physics chain reaches a clear verbal conclusion before its cap, but does not finish the requested literal YES/NO line. Both facts are explicit in family-assessment.json and the complete responses.
 
 This family does not demonstrate broad transfer of A's numerical repair. The high cap rate also limits what was observed; unseen continuation is never assumed correct.
 
 ## B: a persistent edit with protected contexts
 
-[The prediction](SELECTIVE-PLAN.md) was written before generation. B keeps A's output correction direction at target prediction 235, but changes which incoming contexts receive it. The input key removes the span of the original 4 kg case's nine consecutive incoming vectors at predictions 430–438, immediately before and including A's first changed token. It is then normalized to keep the intended correction at the design input:
+The prediction was written before generation. B keeps A's output correction direction at target prediction 235, but changes which incoming contexts receive it. The input key removes the span of the original 4 kg case's nine consecutive incoming vectors at predictions 430–438, immediately before and including A's first changed token. It is then normalized to keep the intended correction at the design input:
 
 `q = x − projection_onto_protected_span(x)`
 
@@ -60,7 +60,7 @@ The nine-vector window was chosen from conditioning-only inspection of one, five
 
 B is a separate saved GGUF, made from the original. The editor rounds the modified entries into native BF16 before inference. It changes **312,037 of 3,145,728** values in `blk.16.attn_output.weight`, **317,283 bytes**, with realized matrix-norm change **0.0445366%**. A's corresponding change is 0.0296559%. Full-file comparison covers **9,311,304,896 bytes** and finds **zero changes outside the selected tensor**. Original and A checkpoints are retained.
 
-After storage rounding, B's actual matrix-difference action on the nine protected original inputs is **8.78%–17.88% of A's**, median 15.97%. The ideal null does not survive exactly in BF16. This fixed-input arithmetic check is separate from native generation. [Stored protection](stored-protection.json), [saved edit](selective-applied.json).
+After storage rounding, B's actual matrix-difference action on the nine protected original inputs is **8.78%–17.88% of A's**, median 15.97%. The ideal null does not survive exactly in BF16. This fixed-input arithmetic check is separate from native generation. Stored protection, saved edit.
 
 | Declared requirement | Observed B result | Result |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ After storage rounding, B's actual matrix-difference action on the nine protecte
 
 Six of eight confirmation continuations are identical. The new gain is `confirm-disc-4`: B computes **64 + 20 − 24 = 60 J**, compares it with **80 J**, and finishes with **NO**. The original computed 0 J and reached a correct verbal NO before its cap. B still contains a confused generic energy equation and unexplained reference-height switch. This is a numerical repair, not a fully corrected physical explanation. The gain is reported separately; it does not rescue the failed primary prediction.
 
-[Candidate assessment](candidate-assessment.json) · [all candidate responses](CANDIDATE-RESPONSES.md) · [independent review](REVIEW.md).
+Candidate assessment · all candidate responses · independent review.
 
 ## What the native traces add
 
@@ -93,7 +93,7 @@ The fixed-input editor diagnostic also places both rounded edits similarly close
 
 ![Native changes across the shared histories](../../../../publications/figures/exports/physics-edit-footprint-2026-11-07--two-edits.png)
 
-[SVG for publication](../../../../publications/figures/exports/physics-edit-footprint-2026-11-07--two-edits.svg) · [native B trace data](candidate-traces.json).
+[SVG for publication](../../../../publications/figures/exports/physics-edit-footprint-2026-11-07--two-edits.svg) · native B trace data.
 
 ## Connected inspection view
 

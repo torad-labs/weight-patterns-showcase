@@ -1,0 +1,269 @@
+{
+  "status": "complete",
+  "events": 578,
+  "target_event": 312,
+  "changes": {
+    "event": {
+      "plain_adapter": {
+        "native_norm": 0.00025504353424914453,
+        "mixer_norm": 8.244746203113996e-05,
+        "error_norm": 0.0002600733168958708,
+        "relative_error": 1.0197212709647163,
+        "cosine": 0.10002662620287321
+      },
+      "adapter_with_native_qkv": {
+        "native_norm": 0.00025504353424914453,
+        "mixer_norm": 0.00025754251369908716,
+        "error_norm": 8.755322458838114e-06,
+        "relative_error": 0.034328737188394264,
+        "cosine": 0.999464023351426
+      }
+    },
+    "causal_prefix": {
+      "plain_adapter": {
+        "native_norm": 0.027275743113409384,
+        "mixer_norm": 0.027610015657525046,
+        "error_norm": 0.03872773983270837,
+        "relative_error": 1.4198601178960701,
+        "cosine": 0.004276612609698361
+      },
+      "adapter_with_native_qkv": {
+        "native_norm": 0.027275743113409384,
+        "mixer_norm": 0.024270614733869524,
+        "error_norm": 0.012267168361681546,
+        "relative_error": 0.44974643992928365,
+        "cosine": 0.8931625185394986
+      }
+    },
+    "whole_history": {
+      "plain_adapter": {
+        "native_norm": 0.034582100130084996,
+        "mixer_norm": 0.031023668079530838,
+        "error_norm": 0.046455871202545074,
+        "relative_error": 1.343350202208523,
+        "cosine": 0.0001126244424662198
+      },
+      "adapter_with_native_qkv": {
+        "native_norm": 0.034582100130084996,
+        "mixer_norm": 0.03226121611219989,
+        "error_norm": 0.012267476513779588,
+        "relative_error": 0.354734861897742,
+        "cosine": 0.9349692565001659
+      }
+    },
+    "causal_calls_1_columns": {
+      "plain_adapter": {
+        "native_norm": 0.023284072865242905,
+        "mixer_norm": 0.023053586947062346,
+        "error_norm": 0.0326108681132777,
+        "relative_error": 1.4005654552798317,
+        "cosine": 0.009451893499490811
+      },
+      "adapter_with_native_qkv": {
+        "native_norm": 0.023284072865242905,
+        "mixer_norm": 0.023288890662746805,
+        "error_norm": 6.952507351112711e-05,
+        "relative_error": 0.002985949834185155,
+        "cosine": 0.9999955643762598
+      }
+    },
+    "causal_calls_13_columns": {
+      "plain_adapter": {
+        "native_norm": 0.0016315724797547496,
+        "mixer_norm": 0.0007314924224848526,
+        "error_norm": 0.0017282190615685363,
+        "relative_error": 1.0592352365665754,
+        "cosine": 0.0881323038129044
+      },
+      "adapter_with_native_qkv": {
+        "native_norm": 0.0016315724797547496,
+        "mixer_norm": 0.00044031342594319533,
+        "error_norm": 0.0015735963406946006,
+        "relative_error": 0.9644660964930816,
+        "cosine": 0.2642660766592011
+      }
+    },
+    "causal_calls_32_columns": {
+      "plain_adapter": {
+        "native_norm": 0.014112267161518218,
+        "mixer_norm": 0.015175968249797509,
+        "error_norm": 0.020817837839785035,
+        "relative_error": 1.4751589947610815,
+        "cosine": -0.00914302797541015
+      },
+      "adapter_with_native_qkv": {
+        "native_norm": 0.014112267161518218,
+        "mixer_norm": 0.006818829470333096,
+        "error_norm": 0.012165622895460249,
+        "relative_error": 0.8620601322396914,
+        "cosine": 0.5073833980401599
+      }
+    }
+  },
+  "native_context": {
+    "original": {
+      "cache_reports": [
+        "llama_kv_cache: size =   12.00 MiB (  2048 cells,   3 layers,  1/1 seqs), K (f16):    6.00 MiB, V (f16):    6.00 MiB",
+        "llama_kv_cache: size =   24.00 MiB (  2048 cells,  12 layers,  1/1 seqs), K (f16):   12.00 MiB, V (f16):   12.00 MiB"
+      ],
+      "flash_attn": [
+        "llama_context: flash_attn            = enabled"
+      ]
+    },
+    "projected": {
+      "cache_reports": [
+        "llama_kv_cache: size =   12.00 MiB (  2048 cells,   3 layers,  1/1 seqs), K (f16):    6.00 MiB, V (f16):    6.00 MiB",
+        "llama_kv_cache: size =   24.00 MiB (  2048 cells,  12 layers,  1/1 seqs), K (f16):   12.00 MiB, V (f16):   12.00 MiB"
+      ],
+      "flash_attn": [
+        "llama_context: flash_attn            = enabled"
+      ]
+    }
+  },
+  "kv_encoding_comparison": {
+    "Kcur_pos-0": {
+      "f32": {
+        "native_before_to_after": {
+          "total": 60179,
+          "causal_prefix": 32366,
+          "target_row": 108
+        },
+        "adapter_before_to_after": {
+          "total": 58692,
+          "causal_prefix": 31570,
+          "target_row": 105
+        },
+        "original_native_vs_adapter": {
+          "total": 142980,
+          "causal_prefix": 76297,
+          "target_row": 249
+        },
+        "projected_native_vs_adapter": {
+          "total": 142987,
+          "causal_prefix": 76281,
+          "target_row": 248
+        }
+      },
+      "f16": {
+        "native_before_to_after": {
+          "total": 69,
+          "causal_prefix": 46,
+          "target_row": 0
+        },
+        "adapter_before_to_after": {
+          "total": 68,
+          "causal_prefix": 42,
+          "target_row": 0
+        },
+        "original_native_vs_adapter": {
+          "total": 8148,
+          "causal_prefix": 2755,
+          "target_row": 9
+        },
+        "projected_native_vs_adapter": {
+          "total": 8150,
+          "causal_prefix": 2757,
+          "target_row": 9
+        }
+      },
+      "bf16": {
+        "native_before_to_after": {
+          "total": 12,
+          "causal_prefix": 7,
+          "target_row": 0
+        },
+        "adapter_before_to_after": {
+          "total": 6,
+          "causal_prefix": 2,
+          "target_row": 0
+        },
+        "original_native_vs_adapter": {
+          "total": 1594,
+          "causal_prefix": 518,
+          "target_row": 3
+        },
+        "projected_native_vs_adapter": {
+          "total": 1591,
+          "causal_prefix": 518,
+          "target_row": 3
+        }
+      }
+    },
+    "Vcur_normed-0": {
+      "f32": {
+        "native_before_to_after": {
+          "total": 152,
+          "causal_prefix": 63,
+          "target_row": 0
+        },
+        "adapter_before_to_after": {
+          "total": 373,
+          "causal_prefix": 268,
+          "target_row": 0
+        },
+        "original_native_vs_adapter": {
+          "total": 120929,
+          "causal_prefix": 65444,
+          "target_row": 199
+        },
+        "projected_native_vs_adapter": {
+          "total": 120954,
+          "causal_prefix": 65460,
+          "target_row": 199
+        }
+      },
+      "f16": {
+        "native_before_to_after": {
+          "total": 0,
+          "causal_prefix": 0,
+          "target_row": 0
+        },
+        "adapter_before_to_after": {
+          "total": 0,
+          "causal_prefix": 0,
+          "target_row": 0
+        },
+        "original_native_vs_adapter": {
+          "total": 228,
+          "causal_prefix": 110,
+          "target_row": 0
+        },
+        "projected_native_vs_adapter": {
+          "total": 228,
+          "causal_prefix": 110,
+          "target_row": 0
+        }
+      },
+      "bf16": {
+        "native_before_to_after": {
+          "total": 0,
+          "causal_prefix": 0,
+          "target_row": 0
+        },
+        "adapter_before_to_after": {
+          "total": 0,
+          "causal_prefix": 0,
+          "target_row": 0
+        },
+        "original_native_vs_adapter": {
+          "total": 36,
+          "causal_prefix": 22,
+          "target_row": 0
+        },
+        "projected_native_vs_adapter": {
+          "total": 36,
+          "causal_prefix": 22,
+          "target_row": 0
+        }
+      }
+    }
+  },
+  "native_call_sizes": {
+    "32": 5,
+    "13": 1,
+    "1": 405
+  },
+  "prediction_vs_result": "Compare the response of the executed two-product Torch mixer under its own QKV with the same mixer supplied with captured native Q and FP16-rounded native K/V.",
+  "failures_only": "Native physical KV read bytes, mask storage, partition and padded execution shapes were not retained. The F16 conversion is reconstructed from the recorded pre-cache tensor and verified native cache dtype. BF16 counts are a diagnostic cast, not an observed cache setting.",
+  "what_this_changes": "Measures how much mixed-output disagreement is removed by substituting the available native inputs without touching weights, the learner or the recorder."
+}

@@ -1,0 +1,51 @@
+{
+  "method_step": 4,
+  "operation": "descent-presign-correct-projection-target",
+  "why_this_direction": "The old FFN20 target was mixed with the whole-trace loss. A direct weight calculation first needs a concrete native target for the same pre-choice computation, on the existing direction.",
+  "repeating_pattern_check": "Correspondence can align a later repetition or friction. Check original correct donor phase before aggregating its projection. Exclude the fitting energy family. Use the actual symbolic feeding row to distinguish sign selection from sign consumption.",
+  "what_went_wrong_before": "A decrease in aggregate loss coexisted with increased precursor error. An allowed boundary is insufficient as a target for the pure pullback.",
+  "hypothesis": "Positive witnesses whose computations align at the same audited phase supply a measurable absolute target on the original frozen FFN20 direction.",
+  "prediction": "The frozen source model has eligible independently audited positive families and they specify a finite target distinct from the fitted wrong computation.",
+  "would_weaken_it": "No eligible correct families or a correct-witness centre on the measured failing value would leave the proposed direction without a useful target.",
+  "rule": "Use the historically paired pre-choice stage; audit donors using the recorded native operations; take the family-balanced correct mean on the pre-existing axis. No fresh outputs or donor weight differences participate.",
+  "site": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/axis-row312-merge61.json",
+    "sha256": "e149fb10801c7d4a5b4e24161f9b81652bd33fc5836e7eb32b8bd43a157f54db"
+  },
+  "operations": {
+    "record": "records/development/2026-11-18-original-operation-witnesses/witnesses.json",
+    "sha256": "6758040c344068d37fd24e24301f6be117be2de2b86cbc53a625f39bdf394b12"
+  },
+  "families": {
+    "record": "studies/04-round-2-overlap/runs/descent-multiple-references-retrospective/result.json",
+    "sha256": "301bf11468d8435118b595352c02e7b1c3754bba289d0303255b1e794c7a6d23"
+  },
+  "reference": "expanded-004-h1",
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/descent-presign-witness-target/measure.py",
+    "sha256": "3cc55cd26e2693dc049cd615967c12f7d732245dbbc0035d37601bfdbd7a70da"
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/descent-multiple-references-retrospective/result.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/descent-presign-witness-target/target.json"
+  ],
+  "observability": {
+    "entrypoint": "studies/04-round-2-overlap/runs/descent-presign-witness-target/measure.py",
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/descent-presign-witness-target/measure.py",
+        "sha256": "3cc55cd26e2693dc049cd615967c12f7d732245dbbc0035d37601bfdbd7a70da"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      }
+    ],
+    "local_events": "studies/04-round-2-overlap/runs/descent-presign-witness-target/observability/events.jsonl",
+    "operations": [
+      "descent.correct_projection_target"
+    ]
+  }
+}

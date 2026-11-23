@@ -1,0 +1,125 @@
+{
+  "prediction_vs_result": "The exact early baseline reproduced the known wrong 91 J generation. The selected endpoint changed the verdict to YES while still subtracting downhill work. It preserved the target's local friction subtraction and both development controls' numerical chains.",
+  "failures_only": [
+    "The fitted answer still subtracts 40 J on the downhill segment.",
+    "The fitted initial kinetic energy regressed from 64 J to 128 J, yielding 88 J at the bottom and 75 J after friction.",
+    "The edited answer also calls 95 J available by adding the required 20 J climb to its 75 J post-friction energy.",
+    "The original evaluator exited after the three baseline acquisitions. Recovery reused them under the same owner lock."
+  ],
+  "what_this_changes": "The tested edit preserved the two valid development chains and the target's friction operation, while the target's apparent verdict gain does not establish physical repair. The separate out-of-fit test was contingent on fitted repair and was not triggered.",
+  "method_scope": "The frozen behavioral declaration preceded the replacement of the single calibrated update with an unbanded two-update training interval. The behavioral panel and rubric were held fixed. This result evaluates the selected two-update descendant.",
+  "native_gpu": 1,
+  "native_updates": 2,
+  "complete_group_comparison": false,
+  "out_of_fit_test": {
+    "executed": false,
+    "reason": "Persistent fitted descent and full-chain failure."
+  },
+  "bindings": {
+    "panel": {
+      "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/panel.json",
+      "sha256": "5111245f5291160871f1981d8a28c81919bc23eca7075d60518129a274c91a74"
+    },
+    "declaration": {
+      "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/declaration.json",
+      "sha256": "e9b0b3ade8873e7becd24d86d31ab5effee44cba6819aa60a2d51e20de440340"
+    },
+    "endpoint": {
+      "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/edited-endpoint.json",
+      "sha256": "543e4d624ad2f9797c570b4df6ac72048bb079546fdde4f9ae8daa74b428a967"
+    },
+    "independent_paired_audit": {
+      "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/paired-audit.json",
+      "sha256": "0e6265fec84853390be652fd04afa66cb367799b11cc45c725e6275aac64df6a"
+    }
+  },
+  "cases": {
+    "discovery-05-channel-h1": {
+      "role": "fitted-target",
+      "baseline": {
+        "initial": "correct",
+        "descent": "incorrect",
+        "bottom": "incorrect",
+        "numeric_friction": "correct",
+        "friction": "correct",
+        "available": "incorrect",
+        "climb": "correct",
+        "comparison": "correct",
+        "verdict": "incorrect",
+        "full_chain": "incorrect"
+      },
+      "edited": {
+        "initial": "incorrect",
+        "descent": "incorrect",
+        "bottom": "incorrect",
+        "numeric_friction": "correct",
+        "friction": "correct",
+        "available": "incorrect",
+        "climb": "correct",
+        "comparison": "correct",
+        "verdict": "correct",
+        "full_chain": "incorrect"
+      },
+      "exact_sequence_repeated": false,
+      "natural_termination_at_both": true
+    },
+    "expanded-004-h1": {
+      "role": "preservation-control",
+      "baseline": {
+        "initial": "correct",
+        "descent": "correct",
+        "bottom": "correct",
+        "numeric_friction": "correct",
+        "friction": "correct",
+        "available": "correct",
+        "climb": "correct",
+        "comparison": "correct",
+        "verdict": "correct",
+        "full_chain": "correct"
+      },
+      "edited": {
+        "initial": "correct",
+        "descent": "correct",
+        "bottom": "correct",
+        "numeric_friction": "correct",
+        "friction": "correct",
+        "available": "correct",
+        "climb": "correct",
+        "comparison": "correct",
+        "verdict": "correct",
+        "full_chain": "correct"
+      },
+      "exact_sequence_repeated": false,
+      "natural_termination_at_both": true
+    },
+    "discovery-10-channel-h1": {
+      "role": "inspected-development-comparison",
+      "baseline": {
+        "initial": "correct",
+        "descent": "correct",
+        "bottom": "correct",
+        "numeric_friction": "correct",
+        "friction": "correct",
+        "available": "correct",
+        "climb": "correct",
+        "comparison": "correct",
+        "verdict": "correct",
+        "full_chain": "correct"
+      },
+      "edited": {
+        "initial": "correct",
+        "descent": "correct",
+        "bottom": "correct",
+        "numeric_friction": "correct",
+        "friction": "correct",
+        "available": "correct",
+        "climb": "correct",
+        "comparison": "correct",
+        "verdict": "correct",
+        "full_chain": "correct"
+      },
+      "exact_sequence_repeated": true,
+      "natural_termination_at_both": true
+    }
+  }
+}

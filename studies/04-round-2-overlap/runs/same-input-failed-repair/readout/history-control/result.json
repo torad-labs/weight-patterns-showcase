@@ -1,0 +1,93 @@
+{
+  "status": "measured",
+  "conditions": {
+    "original": {
+      "old": {
+        "event": 312,
+        "projection": 0.39329149748553405,
+        "archived_boundary_values_bitwise": true,
+        "source": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/original/raw/original-old/stream.f32",
+          "sha256": "04c065aac80b5a53b1c3e1f8a0b5dd939df426618d22a7094627497ba56d702a"
+        },
+        "metadata": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/original/raw/original-old/stream.jsonl",
+          "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+        },
+        "answer_history_replay": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/original/raw/original-old/result.json",
+          "sha256": "add0cb4bf07b7b8485bbb2bd34d931645f5d39218947bb2ae4a268e80fe5bed8"
+        }
+      },
+      "new": {
+        "event": 325,
+        "projection": 0.3951466393041215,
+        "archived_boundary_values_bitwise": null,
+        "source": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/original/raw/original-new/stream.f32",
+          "sha256": "d39fe648a0c579b0f13861274a1c1648422f0d7cb23afd8771e62e87d702374f"
+        },
+        "metadata": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/original/raw/original-new/stream.jsonl",
+          "sha256": "4e1f0fd248dccee5bd6d9f45c683e2c4188f5fb2658d3cf69c6608da1a6b7398"
+        },
+        "answer_history_replay": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/original/raw/original-new/result.json",
+          "sha256": "ca6025522fd7ab0e888fba2ba52048d95690b5e61328db7eb375ba8eece44a82"
+        }
+      }
+    },
+    "edited": {
+      "old": {
+        "event": 312,
+        "projection": 0.3934018921384541,
+        "archived_boundary_values_bitwise": true,
+        "source": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/edited/raw/edited-old/stream.f32",
+          "sha256": "64305522f5b75d8f6824ac66bb497a98fc432e84a39e60d8167a35c7a780eb0e"
+        },
+        "metadata": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/edited/raw/edited-old/stream.jsonl",
+          "sha256": "aa0f1132fa32baad5b2df499f18e9c2a107fec2c678c1df08acfdb4a95901cbf"
+        },
+        "answer_history_replay": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/edited/raw/edited-old/result.json",
+          "sha256": "b7651debaade7db4fd9a100f14537fd76c9689997cfcb584134283a5d9355e50"
+        }
+      },
+      "new": {
+        "event": 325,
+        "projection": 0.3953782918526309,
+        "archived_boundary_values_bitwise": true,
+        "source": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/edited/raw/edited-new/stream.f32",
+          "sha256": "6e27b5f7698eb8c320c87be46e35272f56381cf53dba690aab8c8b3cf24d51b9"
+        },
+        "metadata": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/edited/raw/edited-new/stream.jsonl",
+          "sha256": "4e1f0fd248dccee5bd6d9f45c683e2c4188f5fb2658d3cf69c6608da1a6b7398"
+        },
+        "answer_history_replay": {
+          "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/history-control/edited/raw/edited-new/result.json",
+          "sha256": "c2df0b5b061e0f79a45b0bd8503393685deb1490514768c21c1ae0f17046a6f1"
+        }
+      }
+    }
+  },
+  "old_weight_history_effect": 0.0018551418185874802,
+  "new_weight_history_effect": 0.001976399714176791,
+  "weight_effect_old_history": 0.000110394652920065,
+  "weight_effect_new_history": 0.00023165254850937567,
+  "interaction": 0.00012125789558931066,
+  "total_diagonal": 0.002086794367096856,
+  "symmetric_weight_component": 0.00017102360071472034,
+  "symmetric_history_component": 0.0019157707663821355,
+  "registered_site": {
+    "reference": 312,
+    "merge": 61
+  },
+  "three_observed_endpoints_reproduced_bitwise": true,
+  "prediction_vs_result": "Cross both physical weight states with both histories and evaluate a previously specified signed direction at its computed mate.",
+  "failures_only": "The four projections are fixed-route replay at a historically selected site. Scores include incoming computation and weight effects. The observed weight and history interaction can make either order-specific split differ. No new free generation, holdout or training.",
+  "what_this_changes": "Directly measures the previously missing original weights on the edited response history, closing both orders of the signed history/weights decomposition."
+}

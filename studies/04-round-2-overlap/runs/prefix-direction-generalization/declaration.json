@@ -1,0 +1,180 @@
+{
+  "method_step": 3,
+  "operation": "prefix-direction-generalization",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "why_this_direction": "The two successful edits moved the native trace similarly before histories differed on one fitted question. Fresh generations at the existing and final checkpoints can test whether repair carries to unused configurations in both orders of facts.",
+  "repeating_pattern_check": "Earlier panels mixed a locally valid friction step with an invalid available energy and hid operation-level regressions in a complete-answer count. Pair every exact prompt and audit every operation independently before exposing the checkpoints.",
+  "hypothesis": "Training toward the frozen prefix direction transfers the downhill-energy computation beyond the fitting context and preserves correct friction and climb computations.",
+  "prediction": "Compared with native 390, the final trace-selected checkpoint repairs explicit descent failures and produces more complete correct chains in both orderings, preserving previously correct friction and climb.",
+  "would_weaken_it": "No gains despite parent errors, gains confined to one ordering, or losses in previously correct friction or climb. A missing distinct edited endpoint leaves transfer unmeasured.",
+  "what_went_wrong_before": "The earlier panel used familiar prompt order and found a complete-chain regression alongside repairs. A correct final value cannot establish that descent, friction and climb were all computed correctly.",
+  "rule": "One greedy free GPU1 acquisition for each fixed case at native 390 and at the sole final edited checkpoint returned by the learning controller. Compare both from freshly restored complete native states in the same checked engine. The held panel supplies no fit, calibration, checkpoint ranking or stopping. The edited state and controller selection receipt are bound separately before edited acquisition. Independent blinded manual readout for every operation and all cases.",
+  "audit_independence": "The coordinating seat independently reads anonymous shuffled responses and physics tuples after endpoint selection. Native capture directory names, original prompt ordering, checkpoint labels and pair mapping are withheld.",
+  "inputs": [
+    "studies/04-round-2-overlap/inputs/acquisition/historical-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/fresh-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-00-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-01-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-02-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/discovery-03-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-00-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-01-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-02-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-03-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-04-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-05-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-06-cases.json",
+    "studies/04-round-2-overlap/inputs/acquisition/expanded-07-cases.json",
+    "studies/04-round-2-overlap/runs/frozen-energy-generalization/panel.json",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/native.bin",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/remainder.f32"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/prefix-direction-generalization"
+  ],
+  "parameters": {
+    "panel": {
+      "measured_from": "studies/04-round-2-overlap/inputs/acquisition/expanded-cases.json",
+      "derivation": "Public speeds 4, 6, 8 furnish integer midpoints 5, 7. Use both observed descents 1, 2 and the same mass 2 and gravity 10. Use rise 2 for the lower speed and the prior panel's rise 3 for the higher speed. Assign friction one integer joule on alternating sides of the break-even value K0+mgd-mgh, balanced over speeds and descents. Exclude prior full tuples; present the same facts in both orders.",
+      "scales_with": "public parameter grid, observed climb heights and integer measurement resolution"
+    },
+    "decode": {
+      "measured_from": "studies/04-round-2-overlap/inputs/acquisition/discovery-00-cases.json",
+      "derivation": "Use the same registered 768-token public screen cap and retain capped rows as unresolved unless all scored operations are explicit.",
+      "scales_with": "native screen and model context"
+    },
+    "resources": {
+      "measured_from": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/stderr.log",
+      "derivation": "Round the previous model, six KV buffers, three graph slots in each of the three contexts and the peak retained graph buffer memory up to MiB. CPU threads use the previous one-thread qualification. Scale the measured largest 390 sparse acquisition by native-context length over captured positions for the storage reserve. Keep the project free-disk floor.",
+      "scales_with": "native model, context size, recorder workers and streams, project disk reserve"
+    }
+  },
+  "baseline": {
+    "checkpoint": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-state.json",
+      "sha256": "29187bb4943fea3bd17975a453ca41b4483438aafce9904ad1f5bf4c43a9721f"
+    },
+    "checkpoint_manifest": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/state.json",
+      "sha256": "d135eb8e8db9171599005afba851acdf2f74628520d51eb2b1dbceebf667ea49"
+    },
+    "seed": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+      "sha256": "0dfed0e7f5e0430e693def81549785baf863e4dd9a4f337f8d584d709a6d2a1a"
+    },
+    "loss_identity": {
+      "loss_version": "single-original-vector-chance/1",
+      "reference_sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4",
+      "tolerance_sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48",
+      "tolerance_policy": "retained-original-chance"
+    },
+    "native_payload": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/native.bin",
+      "sha256": "f0b626e285d6bc4ee2d88bc5c5f891400b24aaf3ac118d8109807b46871acf68"
+    },
+    "remainder_payload": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/remainder.f32",
+      "sha256": "9d35643cd6d6192b8fd8c9e01d1cc370a2a6621392a97210f7808dbdb48784bb"
+    }
+  },
+  "native_engine": {
+    "sha256": "27544c96710f23cb2a2d166b6d1d2b65990ea9dd4e618bf299fc4dc2b2e4ddeb",
+    "engine_sha256": "8c8b96aaa287bf890a7fcbc5af91197cf045b379865c69c2df16a962598c4fab"
+  },
+  "physical_gpu": 1,
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "gpu_minimum_free_mib": 4815,
+  "cpu_threads": 1,
+  "storage": {
+    "free_floor_bytes": 40000000000,
+    "capture_reserve_bytes": 29864881,
+    "historical_capture_bytes": 13634601,
+    "historical_capture_positions": 935,
+    "native_context": 2048,
+    "qualification_log": {
+      "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/stderr.log",
+      "sha256": "fd45c03ee2a66fb99ddc815568e1087d0369658ce890955d4c04bdcc6c85065c"
+    }
+  },
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+    "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+  },
+  "protocol": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/audit-protocol.md",
+    "sha256": "2a3abc370895c6bfca41c63a44ff22fb84086ac6013f803195617ade4718e43c"
+  },
+  "panel": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/panel.json",
+    "sha256": "864c193e65da65d1ffe4d8d4798e5098aff58b03d86e5514f5604e3723e5b0a9"
+  },
+  "novelty": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/novelty.json",
+    "sha256": "e6a27ec00d9978653eeb714f111e6c559184ae40acf580a11d798ea283903a03"
+  },
+  "panel_generator": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/freeze_panel.py",
+    "sha256": "f6a1d1829612d1d02280a86bf45fad51e1f944efb98ea0d7179c5570fe9a00d2"
+  },
+  "command": "env PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "organization": "research-operations/1",
+    "entrypoint": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+    "events": "observability/events.jsonl",
+    "mode": "direct Recorder API",
+    "operations": [
+      "state.restore",
+      "native.capture",
+      "state.await_endpoint"
+    ],
+    "context_fields": [
+      "checkpoint_sha256",
+      "model_identity_run",
+      "model_generation",
+      "endpoint",
+      "member",
+      "physical_gpu",
+      "gpu_uuid"
+    ],
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+        "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+        "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/full_state.py",
+        "sha256": "937736168ebc21f7f2d4f9986441df992b23001b99f86c8bf9d52b8b3731be80"
+      },
+      {
+        "record": "records/development/2026-11-16-factor-direction/native.py",
+        "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+      },
+      {
+        "record": "records/development/2026-11-17-reference-preservation/run.py",
+        "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+      },
+      {
+        "record": "records/development/2026-11-12-path-forward/generation_engine.py",
+        "sha256": "82749a8736e0bc8632ecdc2417a54c350701b776333a7d4e894059e4a3d1cf4e"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/replay.py",
+        "sha256": "3bab1f6fccc57676e2eed0a85dabf4fc8a0be232c32468e3dd99892d235a0092"
+      }
+    ]
+  }
+}

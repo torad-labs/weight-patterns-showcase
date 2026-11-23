@@ -1,0 +1,47 @@
+{
+  "controls": {
+    "175": {
+      "free_reproduces_history": true,
+      "free_matches_source_geometry": true,
+      "free_matches_historical_correspondence": true,
+      "free_minus_historical": 9.663368717005962e-10,
+      "free_minus_forced_diagonal": 0.0,
+      "free_and_forced_correspondence_equal": true
+    },
+    "189": {
+      "free_reproduces_history": true,
+      "free_matches_source_geometry": true,
+      "free_matches_historical_correspondence": true,
+      "free_minus_historical": -1.4932491223882533e-08,
+      "free_minus_forced_diagonal": 0.0,
+      "free_and_forced_correspondence_equal": true
+    }
+  },
+  "losses": {
+    "175/free": 9.736442087775514e-05,
+    "175/175": 9.736442087775514e-05,
+    "175/189": 4.270220912879821e-05,
+    "189/free": 4.259005837627896e-05,
+    "189/175": 9.717688445758613e-05,
+    "189/189": 4.259005837627896e-05
+  },
+  "conditional_weight_change_on_175": -1.8753642016901598e-07,
+  "conditional_weight_change_on_189": -1.1215075251924775e-07,
+  "conditional_history_change_at_175": -5.466221174895694e-05,
+  "conditional_history_change_at_189": -5.458682608130717e-05,
+  "interaction": 7.538566764976823e-08,
+  "diagonal_change": -5.4774362501476185e-05,
+  "prediction_vs_result": {
+    "prediction": "At each fixed weight state the 189 history has smaller full loss than the 175 history. Compare the magnitude and sign of the history contrast, conditional weight contrast, and interaction without fitting a threshold.",
+    "measurements": {
+      "175/free": 9.736442087775514e-05,
+      "175/175": 9.736442087775514e-05,
+      "175/189": 4.270220912879821e-05,
+      "189/free": 4.259005837627896e-05,
+      "189/175": 9.717688445758613e-05,
+      "189/189": 4.259005837627896e-05
+    }
+  },
+  "failures_only": "Both states, both histories and both free generations retained.",
+  "what_this_changes": "Conditional weight, supplied-history and interaction effects for this one-pair interval; see native/free diagonal controls."
+}

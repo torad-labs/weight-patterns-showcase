@@ -1,0 +1,40 @@
+{
+ "status": "finished November 12, 2026. Capture 9:01 PM to 9:43 PM CT: three questions in the second start and the other 27 in the third (the first start and the end of the second were refused by the recorder; they are the two revisions in declaration.json). Record written 9:44 PM CT. All three predictions met.",
+ "written_by": "weight-research-perfomance",
+ "prediction_vs_result": {
+  "1_reproduction": {
+   "predicted": "in every one of the 48 continuations, every step has the source pass's full scores to the bit",
+   "result": "met: 48 of 48 continuations, every step (the sha256 of all 262,144 scores equals the source pass's at each)",
+   "counted_from": "record/replay.json, steps_with_the_source_pass_scores_to_the_bit against steps"
+  },
+  "2_unchanged_before_the_choice": {
+   "predicted": "in all 48 continuations the positions through the row that writes the first forced token hold the own answer's first incoming states and all 105 added parts bit for bit",
+   "result": "met: 48 of 48; those positions are kept once, in the own answer (14,037 of the 52,754 positions)",
+   "counted_from": "record/replay.json, those_positions_hold_the_own_answers_states_bit_for_bit"
+  },
+  "3_the_text_is_the_models_own_under_the_feeds": {
+   "predicted": "in all 78 cases the model's own first choice differs from the text's token only at forced steps (never, in the 30 own answers), and the one token the model writes is the text's last token",
+   "result": "met: 78 of 78 on both counts",
+   "counted_from": "record/replay.json, the_text_is_the_models_own_under_these_feeds and the_model_wrote_the_texts_last_token_itself"
+  }
+ },
+ "read_after_the_declared_comparisons": {
+  "the_paired_same_history_row": "Described, as declared. At the position whose input is the first fed token, with every earlier position the same to the bit, the state each merge puts out differs from the own answer's by a median 0.05 of its size at the first merge, 0.26 at the middle of the stack and 0.57 at the last merge after a fed label (29 cases) or a fed label and climb word (7); 0.10, 0.28 and 0.32 after a fed heading word (6, and the 6 with the label after it). One changed input token, the same history: this is the size of what the next row computes differently.",
+  "the_own_answers_beside_the_registered_recordings": "Not predicted; read from the kept steps and the acquisition's recordings of the same thirty questions. The own answer on card 1 is the registered recording's whole text in 21 of the 30 and through the row that writes the first sign after KE_i in 27. No step of any of the 30 has the registered recording's score hash. Where the text is the same, the greatest change of a best token's score is 0.05 to 0.16 logits. So a state kept here is card 1's and is not compared with a state of the registered recordings without saying so; sign-counterexamples-replay-original was declared on this.",
+  "cost": "recorder 1,961 s and keeping 452 s over the 30 questions (about 80 s a question); 38,717 positions kept, 25.5 GB on disk (the declaration derived 23.71 GiB); 91 GB free on root before, 66 GB after"
+ },
+ "failures_only": [
+  "The first capture call (started 8:39 PM CT, refused at 8:55 PM CT once it had the card) was refused before any question: the recorder refuses a supplied end-of-generation token. Revised at 9:00 PM CT before any reading: the model writes the last token itself.",
+  "The second call (9:01 PM CT) was refused at its fourth question, after three were kept: the recorder refuses supplied text that leaves the model no token (the four texts that stopped at their limit). Revised at 9:05 PM CT: those four also leave their last token to the model. Neither revision changed a token of any text, and the three questions already kept hold none of the four.",
+  "A background command of mine reported exit 0 for the first refused call because it ended in a tail; later commands end with the capture's own status.",
+  "No case failed a check: every incoming, added and merged state and every layer exit of all 52,754 positions equalled the raw stream bit for bit before the raw stream was removed."
+ ],
+ "what_this_changes": "The states of every fed continuation and every own answer of the thirty fitting questions are on disk, lossless, on one card: 78 texts, every position, all 105 merges (read with pipeline.overlap.fed_replay.states(run, case)). The three things a paired reading needs hold exactly: a replay under supplied tokens is the arithmetic of the pass that wrote the text; the history before a fed word is the own answer's to the bit; and after the fed word the text is what the model writes by itself. So a request of the form the owner settled (the own row's state plus what a corrected continuation's rows do differently) can be read from these arrays without another pass, and a difference found before the first forced row cannot exist. It decides no site and makes no target. It also fixes a caution for every later reading: the registered recordings and card 1 are two arithmetics (no score hash in common; 9 of 30 own texts differ), so groups are compared on one card.",
+ "provenance": {
+  "declaration": "declaration.json (declared 8:38 PM CT; revisions at 9:00 PM and 9:05 PM CT)",
+  "record": "record/replay.json",
+  "kept": "kept/ (bulk, not in git): first.npy, added.npy, result_norm.npy and steps.json per case; <question>.done per question",
+  "code": "code/signal-trace/pipeline/overlap/fed_replay.py",
+  "logs": "logs/"
+ }
+}

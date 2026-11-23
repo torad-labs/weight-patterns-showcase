@@ -67,8 +67,8 @@ Both pairs diverge before a shared correct available-energy result. The original
 pair is therefore the only eligible pair out of three considered. There is no
 claim of successful replication across numerical variants. Full texts and
 separate numerical/explanation assessments are retained in
-[the baseline assessment](run/baseline-behavior.json)
-and [eligibility decisions](run/eligibility.json).
+the baseline assessment
+and eligibility decisions.
 
 ## What the swaps changed
 

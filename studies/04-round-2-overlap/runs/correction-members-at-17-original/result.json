@@ -1,0 +1,861 @@
+{
+  "status": "Completed fitting-only native assessment of the single preselected candidate. The two narrow behavioral count predictions and the conditional R prediction are met; reliable capability correction is not established. Repairs swap and five originally correct answers become incomplete.",
+  "assessed_by": "weight-research-astra, November 12, 2026 (CT)",
+  "reading_by": "weight-research-perfomance, commits 4ab32660 and db69f5ab",
+  "construction_by": "weight-research-fable, declaration/solver bd08b2a0 and construction records 46bd74f8",
+  "model_sha256": "2f0eb953ecc3f996608e0e923cdf1df59c172cc2c8ca3c680bb1ce04ca401714",
+  "reference_record_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+  "scope": {
+    "candidates": 1,
+    "written_models": 1,
+    "source_answer_count": 30,
+    "original_wrong_fitting_answers": 15,
+    "original_correct_fitting_answers": 15,
+    "native_reading_card": 1,
+    "reading_window_as_reported": "November 12, 2026, 11:31 AM to 12:56 PM CT",
+    "original_and_B_controls": "Existing completed captures reused; the corrected conditional reading uses the same definition for both candidates.",
+    "full_original_reference": "The unchanged original-derived full-cohort reference; the thirty fitting answers are not the full reference cohort.",
+    "no_fit_execution": "Not read.",
+    "reserved_40b": "Sealed; not opened.",
+    "spillover": "Not measured for A, B or C.",
+    "own_semantic_correspondence": "Unresolved across changed histories; recording all merges and registering all places does not certify semantic correspondence."
+  },
+  "prediction_vs_result": {
+    "wrong_complete_count": {
+      "prediction": "At least B's six complete repairs in the originally wrong fitting group; the pre-candidate clarification specifies a count, with identities also reported.",
+      "verdict": "Met as a count, not as retention of the same six repairs.",
+      "original": 0,
+      "B": 6,
+      "C": 6,
+      "retained_B_repairs": [
+        "expanded-001-h3",
+        "expanded-095-h1"
+      ],
+      "lost_B_repairs": [
+        "discovery-17-channel-h1",
+        "expanded-045-h1",
+        "expanded-068-h1",
+        "expanded-092-h1"
+      ],
+      "new_C_repairs": [
+        "discovery-05-channel-h1",
+        "discovery-10-channel-h1",
+        "expanded-087-h3",
+        "expanded-094-h1"
+      ]
+    },
+    "correct_required_energy_errors": {
+      "prediction": "Fewer than B's three originally correct answers acquire required-energy errors.",
+      "verdict": "Met: one instead of three. This misses four new available-energy failures.",
+      "original": 0,
+      "B": 3,
+      "C": 1,
+      "B_cases": [
+        "discovery-06-channel-h1",
+        "discovery-08-channel-h3",
+        "discovery-11-channel-h3"
+      ],
+      "C_cases": [
+        "discovery-00-channel-h3"
+      ]
+    },
+    "conditional_statistic": {
+      "prediction": "C has lower R = sqrt(C_err + Q_err) / P than B on identical original-control text, with positive directional progress and actual wrong-cell loss reduction.",
+      "verdict": "Met, with the required whole coverage and both cell checks reported by the reader.",
+      "definition_version": 2,
+      "definition_commit": "9a436042",
+      "B_R": 2.0020471079400712,
+      "C_R": 0.6734506469921546
+    },
+    "primary_research_question": {
+      "verdict": "The conditional reduction is real but does not establish the intended reliable native improvement.",
+      "explanation": "C repairs six originally wrong answers, but only two are B's repairs; complete originally correct answers fall from B's twelve to ten. The held-text error ranking between B and C does not predict that outcome. Whole-path computation correspondence remains unresolved.",
+      "purpose": "Every wrong answer corrected, no correct answer broken, and repair generalizes.",
+      "purpose_met": false,
+      "limitation_of_my_prediction": "The behavioral prediction tracked the wrong group's complete count and the correct group's required-energy errors. It allowed repair identities to swap and damage to move to another field. Its narrow success is retained honestly, not substituted for the purpose or retrospectively relabeled a failed prediction."
+    }
+  },
+  "failures_only": {
+    "source": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/diagnostics/answers/answers.json",
+    "originally_wrong_not_complete": {
+      "count": 9,
+      "available_energy_descent_subtracted": [
+        "discovery-17-channel-h1",
+        "expanded-042-h3",
+        "expanded-045-h1",
+        "expanded-046-h3",
+        "expanded-068-h1",
+        "expanded-070-h1"
+      ],
+      "available_energy_descent_omitted": [
+        "expanded-034-h3"
+      ],
+      "available_energy_other": [
+        "expanded-020-h1",
+        "expanded-092-h1"
+      ],
+      "required_energy_climb_plus_descent": [
+        "expanded-034-h3"
+      ]
+    },
+    "originally_correct_not_complete": {
+      "count": 5,
+      "available_energy_descent_omitted": [
+        "discovery-15-channel-h1",
+        "expanded-029-h1",
+        "expanded-076-h1",
+        "expanded-078-h1"
+      ],
+      "available_missing_required_climb_plus_descent_verdict_missing_at_token_limit": [
+        "discovery-00-channel-h3"
+      ]
+    },
+    "interpretation": "All five originally correct failures are new relative to B. Four of B's complete wrong-group repairs are lost. Small average conditional error did not keep the deciding computation correct; changed histories and incomplete correspondence limit attribution.",
+    "unevaluated": [
+      "No-fit generalization",
+      "Reserved-40b",
+      "Spillover"
+    ]
+  },
+  "own_answers": {
+    "source": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/diagnostics/answers/answers.json",
+    "readable_source": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/diagnostics/answers/answers.txt",
+    "counts_from_source": {
+      "wrong": {
+        "answers": 15,
+        "original": {
+          "available": {
+            "descent subtracted": 14,
+            "correct": 1
+          },
+          "required": {
+            "correct": 12,
+            "climb plus descent": 2,
+            "other": 1
+          },
+          "verdict_right": 1,
+          "complete": 0,
+          "cut_at_the_limit": 1,
+          "the_recordings_tokens": 8
+        },
+        "correction-at-17-original": {
+          "available": {
+            "other": 2,
+            "correct": 8,
+            "descent omitted": 2,
+            "descent subtracted": 3
+          },
+          "required": {
+            "correct": 13,
+            "climb plus descent": 2
+          },
+          "verdict_right": 11,
+          "complete": 6,
+          "cut_at_the_limit": 0,
+          "the_recordings_tokens": 0
+        },
+        "correction-members-at-17-original": {
+          "available": {
+            "correct": 6,
+            "descent subtracted": 6,
+            "other": 2,
+            "descent omitted": 1
+          },
+          "required": {
+            "correct": 14,
+            "climb plus descent": 1
+          },
+          "verdict_right": 9,
+          "complete": 6,
+          "cut_at_the_limit": 0,
+          "the_recordings_tokens": 0
+        }
+      },
+      "correct": {
+        "answers": 15,
+        "original": {
+          "available": {
+            "correct": 15
+          },
+          "required": {
+            "correct": 15
+          },
+          "verdict_right": 15,
+          "complete": 15,
+          "cut_at_the_limit": 0,
+          "the_recordings_tokens": 13
+        },
+        "correction-at-17-original": {
+          "available": {
+            "correct": 15
+          },
+          "required": {
+            "correct": 12,
+            "other": 2,
+            "climb plus descent": 1
+          },
+          "verdict_right": 15,
+          "complete": 12,
+          "cut_at_the_limit": 0,
+          "the_recordings_tokens": 0
+        },
+        "correction-members-at-17-original": {
+          "available": {
+            "correct": 10,
+            "descent omitted": 4,
+            "missing": 1
+          },
+          "required": {
+            "correct": 14,
+            "climb plus descent": 1
+          },
+          "verdict_right": 11,
+          "complete": 10,
+          "cut_at_the_limit": 1,
+          "the_recordings_tokens": 6
+        }
+      }
+    },
+    "per_answer_comparison_from_source": {
+      "before": "correction-at-17-original",
+      "last": "correction-members-at-17-original",
+      "complete_repairs": {
+        "original": [],
+        "correction-at-17-original": [
+          "discovery-17-channel-h1",
+          "expanded-001-h3",
+          "expanded-045-h1",
+          "expanded-068-h1",
+          "expanded-092-h1",
+          "expanded-095-h1"
+        ],
+        "correction-members-at-17-original": [
+          "discovery-05-channel-h1",
+          "discovery-10-channel-h1",
+          "expanded-001-h3",
+          "expanded-087-h3",
+          "expanded-094-h1",
+          "expanded-095-h1"
+        ]
+      },
+      "retained": [
+        "expanded-001-h3",
+        "expanded-095-h1"
+      ],
+      "lost": [
+        "discovery-17-channel-h1",
+        "expanded-045-h1",
+        "expanded-068-h1",
+        "expanded-092-h1"
+      ],
+      "new": [
+        "discovery-05-channel-h1",
+        "discovery-10-channel-h1",
+        "expanded-087-h3",
+        "expanded-094-h1"
+      ],
+      "available_energy_right_in_the_wrong_group": {
+        "original": [
+          "expanded-001-h3"
+        ],
+        "correction-at-17-original": [
+          "discovery-10-channel-h1",
+          "discovery-17-channel-h1",
+          "expanded-001-h3",
+          "expanded-045-h1",
+          "expanded-068-h1",
+          "expanded-087-h3",
+          "expanded-092-h1",
+          "expanded-095-h1"
+        ],
+        "correction-members-at-17-original": [
+          "discovery-05-channel-h1",
+          "discovery-10-channel-h1",
+          "expanded-001-h3",
+          "expanded-087-h3",
+          "expanded-094-h1",
+          "expanded-095-h1"
+        ]
+      },
+      "correct_answers_not_complete": {
+        "original": [],
+        "correction-at-17-original": [
+          "discovery-06-channel-h1",
+          "discovery-08-channel-h3",
+          "discovery-11-channel-h3"
+        ],
+        "correction-members-at-17-original": [
+          "discovery-15-channel-h1",
+          "discovery-00-channel-h3",
+          "expanded-029-h1",
+          "expanded-076-h1",
+          "expanded-078-h1"
+        ]
+      },
+      "correct_answers_with_a_required_energy_error": {
+        "original": [],
+        "correction-at-17-original": [
+          "discovery-06-channel-h1",
+          "discovery-08-channel-h3",
+          "discovery-11-channel-h3"
+        ],
+        "correction-members-at-17-original": [
+          "discovery-00-channel-h3"
+        ]
+      }
+    },
+    "originally_wrong_complete_in_neither": [
+      "expanded-020-h1",
+      "expanded-034-h3",
+      "expanded-042-h3",
+      "expanded-046-h3",
+      "expanded-070-h1"
+    ],
+    "original_correct_C_failure_modes": {
+      "descent_omitted": [
+        "discovery-15-channel-h1",
+        "expanded-029-h1",
+        "expanded-076-h1",
+        "expanded-078-h1"
+      ],
+      "available_missing_required_climb_plus_descent_and_token_limit": [
+        "discovery-00-channel-h3"
+      ],
+      "qualification": "All five were complete under B. B's three originally correct required-energy failures are complete again under C. The token-limit case remains a failure under the same declared budget; it is not discarded."
+    }
+  },
+  "own_trace": {
+    "interpretation": "Historical frozen registered instrument, not a calibrated capability-loss scalar. No lower-own-L pass threshold was declared for C.",
+    "original": {
+      "L": 0.24663741365365,
+      "L_direction": 0.1118220034888722,
+      "L_size": 0.1348154101647778,
+      "by_group": {
+        "wrong": {
+          "L": 0.244110200837154,
+          "direction": 0.11175371030672997,
+          "size": 0.13235649053042403
+        },
+        "correct": {
+          "L": 0.002527212816496002,
+          "direction": 0.00006829318214222451,
+          "size": 0.0024589196343537774
+        }
+      },
+      "answers_in_each_group": [
+        15,
+        15
+      ],
+      "answers_with_the_recordings_tokens": 21,
+      "reference_record_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+      "last_merge_read_as": "what the output norm passes on (correction.passed_on)",
+      "source": "studies/04-round-2-overlap/runs/correction-at-19/own/controls/original/whole-model-l/l.json"
+    },
+    "B": {
+      "L": 0.42048873665689257,
+      "L_direction": 0.12122442562591418,
+      "L_size": 0.2992643110309784,
+      "by_group": {
+        "wrong": {
+          "L": 0.2761329759658855,
+          "direction": 0.08322524497414932,
+          "size": 0.19290773099173614
+        },
+        "correct": {
+          "L": 0.14435576069100714,
+          "direction": 0.03799918065176486,
+          "size": 0.10635658003924228
+        }
+      },
+      "answers_in_each_group": [
+        15,
+        15
+      ],
+      "answers_with_the_recordings_tokens": 0,
+      "reference_record_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+      "last_merge_read_as": "what the output norm passes on (correction.passed_on)",
+      "source": "studies/04-round-2-overlap/runs/correction-at-17-original/own/candidate/whole-model-l/l.json"
+    },
+    "C": {
+      "L": 0.2738044726798539,
+      "L_direction": 0.08600401850765504,
+      "L_size": 0.18780045417219887,
+      "by_group": {
+        "wrong": {
+          "L": 0.17821350096770439,
+          "direction": 0.06782326900086508,
+          "size": 0.1103902319668393
+        },
+        "correct": {
+          "L": 0.09559097171214953,
+          "direction": 0.018180749506789964,
+          "size": 0.07741022220535956
+        }
+      },
+      "answers_in_each_group": [
+        15,
+        15
+      ],
+      "answers_with_the_recordings_tokens": 6,
+      "reference_record_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+      "last_merge_read_as": "what the output norm passes on (correction.passed_on)",
+      "source": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/candidate/whole-model-l/l.json"
+    },
+    "projected_member_reading": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/diagnostics/member-projected.txt",
+    "projected_member_coverage": "The source reports each answer and stretch, including the share whose correspondence is unknown because registration stretches a step beyond the original-correct envelope. Those positions are excluded from its sums, not counted as agreement; visibility of the wrong pattern varies by place and merge.",
+    "text_by_weights_as_reported": {
+      "source": "records/development/2026-11-12-path-forward/text-and-weights/logs/text-and-weights-with-c.out",
+      "original_weights_on_C_text": {
+        "L": 0.27928,
+        "wrong": 0.1821,
+        "correct": 0.09719
+      },
+      "wrong_group_history_effect_at_original_weights": -0.06201,
+      "wrong_group_weight_effect_on_C_text": -0.00388,
+      "interpretation": "Most of C's own wrong-group L decrease is reproduced by the original weights on C's changed text. This is a conditional decomposition, not evidence that the weights are behaviorally irrelevant or a history-independent causal repair score."
+    }
+  },
+  "conditional_reading": {
+    "source": "records/development/2026-11-12-path-forward/conditional-members/conditional-reading.json",
+    "definition_version": 2,
+    "definition": "records/retrospectives/2026-11-12-correct-members-native-astra.md: Conditional reading clarified before a C candidate",
+    "B": {
+      "W0": 0.244110200837154,
+      "W": 0.22124106260935678,
+      "loss_reduction": 0.022869138227797237,
+      "P": 0.10799519779205996,
+      "C_err": 0.03731607846595102,
+      "Q_err": 0.009431322768608686,
+      "R": 2.0020471079400712,
+      "no_ratio_because": null,
+      "coverage": {
+        "answer_places": "all 105 merges and 480 places, 15 correct members",
+        "prompt_positions": "whole: every question position of the 15 correct members (2579 positions; [171, 172] a question, the prompt but its last token) at all 105 merges, the last through the output norm"
+      },
+      "checks": {
+        "baseline_cells_largest_difference_from_the_controls_L": 2.0493724339071262e-11,
+        "held_cells_largest_difference_from_the_replays_L": 1.2010698750668236e-11,
+        "the_controls_L_read_from": "~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/correction-at-19/own/controls/original/whole-model-l",
+        "the_replays_L_read_from": "~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/correction-at-17-original/own/diagnostics/conditional-replays/on-the-originals-own-text/l"
+      }
+    },
+    "C": {
+      "W0": 0.244110200837154,
+      "W": 0.2224921851303138,
+      "loss_reduction": 0.021618015706840216,
+      "P": 0.09264230234905518,
+      "C_err": 0.0037153061799117953,
+      "Q_err": 0.000177208223005019,
+      "R": 0.6734506469921546,
+      "no_ratio_because": null,
+      "coverage": {
+        "answer_places": "all 105 merges and 480 places, 15 correct members",
+        "prompt_positions": "whole: every question position of the 15 correct members (2579 positions; [171, 172] a question, the prompt but its last token) at all 105 merges, the last through the output norm"
+      },
+      "checks": {
+        "baseline_cells_largest_difference_from_the_controls_L": 2.0493724339071262e-11,
+        "held_cells_largest_difference_from_the_replays_L": 2.4808547685779836e-11,
+        "the_controls_L_read_from": "~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/correction-at-19/own/controls/original/whole-model-l",
+        "the_replays_L_read_from": "/tmp/claude-1000/-home-marcos-Documents-dev-research-weight-patterns/fd0687fe-97c6-4325-999a-91a831f8d090/scratchpad/cm/c/l"
+      }
+    },
+    "held_text_L_as_reported": {
+      "B": 0.22418,
+      "C": 0.22506
+    },
+    "fitting_text_overlap": "The original card-1 control uses the fitting recordings' tokens in 21 of 30 answers. This conditional replay is not held-out generalization.",
+    "per_correct_member_C": {
+      "discovery-01-channel-h1": {
+        "C_err": 0.0011046840746287575,
+        "by_form": {
+          "direction": 0.0006064609256848437,
+          "size": 0.0004982231489439138
+        },
+        "by_stretch": {
+          "0-141": 0.00002959038363815516,
+          "142-171": 0.0002203766893473712,
+          "172-201": 0.00021449796873845725,
+          "202-259": 0.00021066765291535754,
+          "260-313": 0.00010464699834129081,
+          "314-399": 0.0001712496924914579,
+          "400-479": 0.00015365468915666782
+        },
+        "Q_err": 0.000011530660109791664,
+        "control_wrote_the_recordings_tokens": false
+      },
+      "discovery-06-channel-h1": {
+        "C_err": 0.00010147746305041189,
+        "by_form": {
+          "direction": 0.000051380322600560177,
+          "size": 0.00005009714044985172
+        },
+        "by_stretch": {
+          "0-141": 0.00003226974772906905,
+          "142-171": 0.000015659965077890995,
+          "172-201": 0.000004562027636119335,
+          "202-259": 0.000005777359140618934,
+          "260-313": 0.000012797795527343376,
+          "314-399": 0.000013608733591683797,
+          "400-479": 0.00001680183434768641
+        },
+        "Q_err": 0.000011793500324202196,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "discovery-15-channel-h1": {
+        "C_err": 0.00029494968304711786,
+        "by_form": {
+          "direction": 0.00015003915493394022,
+          "size": 0.0001449105281131776
+        },
+        "by_stretch": {
+          "0-141": 0.000012142956503828575,
+          "142-171": 0.00021707190567423761,
+          "172-201": 0.000011237119743100105,
+          "202-259": 0.000009815567643573102,
+          "260-313": 0.000013483265780921407,
+          "314-399": 0.00001714748667354484,
+          "400-479": 0.00001405138102791217
+        },
+        "Q_err": 0.000011793767886003044,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "discovery-00-channel-h3": {
+        "C_err": 0.0003355500163548542,
+        "by_form": {
+          "direction": 0.0001843079212645053,
+          "size": 0.00015124209509034887
+        },
+        "by_stretch": {
+          "0-141": 0.00002351384854875314,
+          "142-171": 0.00018961236171834243,
+          "172-201": 0.000005012653327348673,
+          "202-259": 0.00001513922980030923,
+          "260-313": 0.000014765984801468958,
+          "314-399": 0.00002246684548697218,
+          "400-479": 0.0000650390926716596
+        },
+        "Q_err": 0.000012211455666039488,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "expanded-004-h1": {
+        "C_err": 0.00006313726057431641,
+        "by_form": {
+          "direction": 0.00003317634880304678,
+          "size": 0.00002996091177126964
+        },
+        "by_stretch": {
+          "0-141": 0.000011896141034953399,
+          "142-171": 0.00000953474312963887,
+          "172-201": 0.000003616292565751872,
+          "202-259": 0.000006237703892559751,
+          "260-313": 0.000007316959575918868,
+          "314-399": 0.000014724149152398475,
+          "400-479": 0.00000981127122309518
+        },
+        "Q_err": 0.000010937786907476894,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "discovery-08-channel-h3": {
+        "C_err": 0.00013529605590175694,
+        "by_form": {
+          "direction": 0.00007989478947757209,
+          "size": 0.00005540126642418485
+        },
+        "by_stretch": {
+          "0-141": 0.00001869686188040599,
+          "142-171": 0.0000142633817477223,
+          "172-201": 0.0000038987951442295154,
+          "202-259": 0.000008807589738871904,
+          "260-313": 0.000006657468411885927,
+          "314-399": 0.00002082264293125021,
+          "400-479": 0.00006214931604739109
+        },
+        "Q_err": 0.000012353027198147628,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "discovery-10-channel-h3": {
+        "C_err": 0.00008484060803676934,
+        "by_form": {
+          "direction": 0.00004658951796570521,
+          "size": 0.00003825109007106413
+        },
+        "by_stretch": {
+          "0-141": 0.000018966656546125135,
+          "142-171": 0.000014228688817525276,
+          "172-201": 0.000004138154076531476,
+          "202-259": 0.00000884336913908764,
+          "260-313": 0.000007511499033427613,
+          "314-399": 0.000020819166192710993,
+          "400-479": 0.000010333074231361208
+        },
+        "Q_err": 0.000012447812531611046,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "expanded-029-h1": {
+        "C_err": 0.0003999701095078323,
+        "by_form": {
+          "direction": 0.00019791988629441344,
+          "size": 0.0002020502232134189
+        },
+        "by_stretch": {
+          "0-141": 0.000011981340226465418,
+          "142-171": 0.00023728742894699075,
+          "172-201": 0.00002148847759863721,
+          "202-259": 0.000022252323344958898,
+          "260-313": 0.0000638008288622058,
+          "314-399": 0.00002195799988974086,
+          "400-479": 0.000021201710638833338
+        },
+        "Q_err": 0.000011707222254717399,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "discovery-11-channel-h3": {
+        "C_err": 0.00009644086526059111,
+        "by_form": {
+          "direction": 0.00004782886088706395,
+          "size": 0.00004861200437352717
+        },
+        "by_stretch": {
+          "0-141": 0.000022572609844191903,
+          "142-171": 0.000028094629403495633,
+          "172-201": 0.0000057808820920109045,
+          "202-259": 0.000011844905007650525,
+          "260-313": 0.00000480442734725229,
+          "314-399": 0.000014575999136864324,
+          "400-479": 0.000008767412429125542
+        },
+        "Q_err": 0.00001187964865364442,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "expanded-064-h1": {
+        "C_err": 0.00010556278910173723,
+        "by_form": {
+          "direction": 0.00005062225546196511,
+          "size": 0.00005494053363977213
+        },
+        "by_stretch": {
+          "0-141": 0.00003204462204868448,
+          "142-171": 0.000022989879531850393,
+          "172-201": 0.000004582382220300963,
+          "202-259": 0.000006143742774002201,
+          "260-313": 0.000013404104533321622,
+          "314-399": 0.00001594425864494389,
+          "400-479": 0.000010453799348633676
+        },
+        "Q_err": 0.000011980335146977733,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "expanded-071-h1": {
+        "C_err": 0.00014606555284330612,
+        "by_form": {
+          "direction": 0.00008249381416950976,
+          "size": 0.00006357173867379636
+        },
+        "by_stretch": {
+          "0-141": 0.00003567705169266789,
+          "142-171": 0.0000025907245930607274,
+          "172-201": 0.000006352419506127088,
+          "202-259": 0.000014163762990413856,
+          "260-313": 0.000025433094619029095,
+          "314-399": 0.00004027674041676541,
+          "400-479": 0.00002157175902524206
+        },
+        "Q_err": 0.000011713315939093105,
+        "control_wrote_the_recordings_tokens": false
+      },
+      "expanded-039-h3": {
+        "C_err": 0.00011902504511980825,
+        "by_form": {
+          "direction": 0.00007292563530270272,
+          "size": 0.000046099409817105524
+        },
+        "by_stretch": {
+          "0-141": 0.000033237407308500506,
+          "142-171": 0.0000018059934800647982,
+          "172-201": 0.000005096780649476999,
+          "202-259": 0.000013147834259568659,
+          "260-313": 0.00003694847805832791,
+          "314-399": 0.000014319725076627823,
+          "400-479": 0.000014468826287241548
+        },
+        "Q_err": 0.000011595658977110027,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "expanded-076-h1": {
+        "C_err": 0.0002966575465856698,
+        "by_form": {
+          "direction": 0.00016321657258608154,
+          "size": 0.0001334409739995883
+        },
+        "by_stretch": {
+          "0-141": 0.000012255650708238376,
+          "142-171": 0.00019893327808239943,
+          "172-201": 0.00002291416549847864,
+          "202-259": 0.000017402085542012947,
+          "260-313": 0.000013168509897314933,
+          "314-399": 0.000011916001636461222,
+          "400-479": 0.000020067855220764282
+        },
+        "Q_err": 0.000011764897103534621,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "expanded-078-h1": {
+        "C_err": 0.00035395170509051974,
+        "by_form": {
+          "direction": 0.0001957131492777862,
+          "size": 0.00015823855581273356
+        },
+        "by_stretch": {
+          "0-141": 0.00001303663467742039,
+          "142-171": 0.00020961050042818554,
+          "172-201": 0.000022372744713526793,
+          "202-259": 0.000018346935873582817,
+          "260-313": 0.000059111734148370694,
+          "314-399": 0.000018598099376583948,
+          "400-479": 0.00001287505587284957
+        },
+        "Q_err": 0.00001174331502652662,
+        "control_wrote_the_recordings_tokens": true
+      },
+      "expanded-023-h1": {
+        "C_err": 0.00007769740480834612,
+        "by_form": {
+          "direction": 0.000039754768702673746,
+          "size": 0.00003794263610567237
+        },
+        "by_stretch": {
+          "0-141": 0.000012924306056682575,
+          "142-171": 0.000015967437522453015,
+          "172-201": 0.0000039030016282312105,
+          "202-259": 0.000011054514157808353,
+          "260-313": 0.0000100076042923706,
+          "314-399": 0.00001558746614105137,
+          "400-479": 0.000008253075009748999
+        },
+        "Q_err": 0.000011755819280143098,
+        "control_wrote_the_recordings_tokens": true
+      }
+    },
+    "interpretation": "C reduces correct-member and prompt error substantially while retaining positive wrong-group progress. Yet five originally correct answers break rather than B's three. Five of C's six largest member errors belong to the five broken answers, but the largest-error member remains complete, and those five did not break under B despite larger error. There is no established universal error threshold or answer-quality ordering."
+  },
+  "construction": {
+    "record": "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate/record.json",
+    "provenance": "studies/04-round-2-overlap/runs/correction-members-at-17-original/provenance.json",
+    "checked_model_record": "studies/04-round-2-overlap/runs/correction-members-at-17-original/model/written.json",
+    "objective": "C's declared replacement objective: B's wrong-group cells plus individual original-correct answer-place and prompt error, with the old correct-group ball absent.",
+    "selection_as_reported": {
+      "ridge_power": -5,
+      "selected_round": 40,
+      "all_fitting_rounds_at_selected_ridge": 38,
+      "last_ridge_made": -11,
+      "held_whole_objective_before": 0.00103669,
+      "held_whole_objective_at_selection": 0.000345604,
+      "all_fitting_whole_objective_before": 0.00103669,
+      "all_fitting_whole_objective_after": 0.000093334,
+      "all_fitting_wrong_cells_after": 0.0000539162,
+      "all_fitting_correct_members_after": 0.0000394178
+    },
+    "matrix_relative_change_as_reported": {
+      "B": 0.0953,
+      "C": 0.2007
+    },
+    "checks_as_reported_by_builder": "The one BF16 candidate was written value for value; 3,110,825 weights changed and every byte outside the selected matrix equals the original. Declared solver hashes matched.",
+    "limits": "These are construction readings, not the native result or independent validation. Only the objective was deliberately changed; the unchanged selection policy chose a weaker ridge and a larger matrix change. The comparison is not matched in change size, and the close held scores do not robustly distinguish the selected ridge beyond the previously observed solver variation.",
+    "after_selected_ridge_work_as_reported": {
+      "source": "records/development/2026-11-10-speed-review/README.md: correction-solves/",
+      "source_commit": "cec6a7a8",
+      "B_seconds": 2423,
+      "B_total_seconds": 3680,
+      "C_seconds": 3184,
+      "C_total_seconds": 4922,
+      "decision": "Recorded as numerical evidence only. Earlier stopping changes what can be selected; no selection or second-ridge policy is retroactively changed."
+    }
+  },
+  "descriptive_findings": {
+    "sign_score_on_recordings_as_reported": {
+      "wrong_median_margin_change": {
+        "B": 7.02,
+        "C": 2.27
+      },
+      "wrong_answers_with_plus_preferred": {
+        "B": 12,
+        "C": 8
+      },
+      "correct_median_margin_change": {
+        "B": -0.34,
+        "C": 0.13
+      },
+      "interpretation": "A conditional sign score is neither the own answer nor a complete correction target."
+    },
+    "changed_decisions_on_own_prefixes_as_reported": {
+      "B": {
+        "changed": 379,
+        "steps": 15709
+      },
+      "C": {
+        "changed": 185,
+        "steps": 14917
+      }
+    },
+    "first_rung_intervention": {
+      "source": "records/development/2026-11-12-path-forward/text-and-weights/ladder/first-rung.txt",
+      "interpretation": "Unlike later cumulative-prefix rungs, the first rung feeds the original its own prefix plus one edited-model token, then lets the original generate the rest. It measures a specific single-token history intervention at the original weights.",
+      "original_with_C_first_token": {
+        "wrong_complete": 5,
+        "also_C_complete": 4,
+        "originally_correct_incomplete": 5
+      },
+      "original_with_B_first_token": {
+        "wrong_complete": 3,
+        "also_B_complete": 1,
+        "originally_correct_incomplete": 6,
+        "later_restored_by_B": 4
+      },
+      "limitation": "This demonstrates sensitivity to the particular token the edit chose, not that arbitrary near-ties are repair switches or that those tokens define a training mask. The native repairs remain real; history can mediate them.",
+      "same_first_intervention_different_later_outcome": "expanded-029-h1: Work to Energy at step 145 occurs in both ladders; B subsequently becomes complete, C does not."
+    },
+    "shared_line_failure": {
+      "source": "records/development/2026-11-12-correction-objective/README.md: rows at the break and members in the gap",
+      "source_commit": "99edd068",
+      "observation": "The four correct descent-omission failures share the line used by six wrong members. B repaired three of those wrong members and C loses all three. C's favorable group/stretch averages conceal the changed deciding rows.",
+      "limitation": "The observed same-prefix row movement and original-state geometry locate a mechanism to test; they do not establish an independently sufficient causal mask or whole-history correspondence."
+    }
+  },
+  "interpretation_correction_2026_11_12": {
+    "source_commit": "3025eade",
+    "verification_source": "records/development/2026-11-12-path-forward/deep-think-analysis/3-deep-think-verify.md",
+    "timing_source": "records/development/2026-11-12-correction-objective/README.md: correction of November 12, 1:25 PM CT",
+    "B_shared_line_repairs": "In discovery-17-channel-h1, expanded-045-h1 and expanded-068-h1, B rewrites the heading before the sign: bottom to the and descent to rough. On that changed prefix the original already prefers plus in two of the three, and prefers minus by 0.15 in the third. The later lost-to-gained rung makes each continuation stay right. This is not a sign-only intervention on B's own path; the large sign-margin gains are conditional on the recordings' text.",
+    "registered_row_timing": "On the shared line, place 168 contains the computation that writes the sign. The four correct-case changed rows at place 169 occur three to nine tokens after their sign. Strong separation at places 169 onward includes the effect of having read different signs and is already visible from layer 0. It does not identify where the earlier sign or term decision was formed.",
+    "attribution": "C's loss of B's three repairs cannot be uniquely attributed to the correct-member term from these two candidates. The deliberate objective change also changes the solve's selected ridge and written matrix. The current mixture diagnostic retains that term and changes the wrong-side target; it tests that target construction, not an independent removal of the member term.",
+    "unchanged_result": "No counts, scores, candidate, declared prediction or assessment verdict change. Repairs through valid alternative progressions are not discarded as mere avoidance."
+  },
+  "what_this_changes": {
+    "established": [
+      "Native partial repair remains: six originally wrong fitting answers are complete under C.",
+      "The declared correct-member replacement reduces same-text correct-member and prompt error, including under the completed whole-path conditional reading.",
+      "Those improvements do not prevent new correct-case failures or retain most of B's repair identities."
+    ],
+    "not_established": [
+      "Reliable full-path capability correction with no correct answer broken.",
+      "Generalization to no-fit or reserved questions.",
+      "Spillover behavior.",
+      "A validated correspondence or capability metric across reworded own trajectories.",
+      "An optimal or robustly identified ridge."
+    ],
+    "next_work": "The separately specified joint correct-mixture development diagnostic at 2dc2cc89 tests the pooled-target mechanism from original traces. It does not replace C, authorize another native candidate here, or use these answer scores to select settings.",
+    "no_retroactive_change": "C, its reference, declaration, candidate, predictions and all outcomes are preserved. No second candidate, dose or opening control is made for this result."
+  },
+  "evidence": {
+    "reading_page": "records/development/2026-11-12-path-forward/README.md: Experiment C's one candidate, read",
+    "frozen_reading": "records/development/2026-11-12-path-forward/conditional-members/READING-OF-C.md",
+    "original_specification": "records/retrospectives/2026-11-12-correct-members-native-astra.md",
+    "declaration": "studies/04-round-2-overlap/runs/correction-members-at-17-original/declaration.json",
+    "own_capture": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/candidate/own.json",
+    "own_provenance": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/candidate/provenance.json",
+    "own_manifest": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/candidate/manifest.sha256",
+    "per_place_and_band_readings": "studies/04-round-2-overlap/runs/correction-members-at-17-original/own/diagnostics/",
+    "preliminary_conditional_draft": "records/development/2026-11-12-path-forward/conditional-members/first-draft/",
+    "preliminary_draft_role": "Preserved historical definition and outputs; not the version-2 B/C statistic."
+  }
+}

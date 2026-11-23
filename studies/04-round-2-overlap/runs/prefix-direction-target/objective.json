@@ -1,0 +1,70 @@
+{
+  "format": "common-prefix-turn-objective/1",
+  "arrays": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-target/frozen.npz",
+    "sha256": "0e7d239eca6aba3edd90849492938025f8a4b49fb3b02a150906fb4f0f6d0c77"
+  },
+  "registrar": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+    "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+  },
+  "first_source_event": 172,
+  "inputs": [
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/early/capture.json",
+      "sha256": "9efa4a2ba2dad9e2e7c348ff1c00e5db464469c6f049eca2ace99b9f671fc060"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/early/raw/discovery-05-channel-h1/stream.f32",
+      "sha256": "0960398797ac5f07846d4692d5c21cd9f937809bdd1d8c62d19e04ab2a4dd0b8"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/stream.jsonl",
+      "sha256": "2c722688f08be0e863c855e689160f159df0fef6e5605a9cbf7872351899a4f3"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/early/raw/discovery-05-channel-h1/result.json",
+      "sha256": "43dd51022062f3df4177e9fad5f680f0387ad2beecbdb6bc57407e2db576f804"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_attention/capture.json",
+      "sha256": "9c6c922520cd4aab40490738d3a622e5599964e71c36a44c2560c1de3adb2347"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_attention/raw/discovery-05-channel-h1/stream.f32",
+      "sha256": "6e1782812354d5989d464d4295ef1dab5ca4bc3d9bd8b006406b4cc33c6111c0"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/raw/discovery-05-channel-h1/stream.jsonl",
+      "sha256": "879f468621a2392db947ca97465406c87f878416b0faf80ed3fd971614e634f3"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_attention/raw/discovery-05-channel-h1/result.json",
+      "sha256": "e341b84c16e72bc3a41ba862132c16b275f65f746a569868ee39d38c3e74907e"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_ffn/capture.json",
+      "sha256": "630b0e9dc7ca124edb8832441567442a4d66d2b54d4abbd71aa167bd92e00a35"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_ffn/raw/discovery-05-channel-h1/stream.f32",
+      "sha256": "780815a847aa989bc7eda4dd0fce07f8a879a9766b75edb8cd7e71a8f0131941"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/raw/discovery-05-channel-h1/stream.jsonl",
+      "sha256": "879f468621a2392db947ca97465406c87f878416b0faf80ed3fd971614e634f3"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_ffn/raw/discovery-05-channel-h1/result.json",
+      "sha256": "de4325ba1b87914c9f85a4c38e039e57a4ad8d92897adced5cf3325a5366bace"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-operation-comparison/prefix-effects.json",
+      "sha256": "bfb02bd18fef676ffc4055af7120a6088bdc2994cb66f924a94c863ea0ab3de5"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/same-input-operation-comparison/prefix-declaration.json",
+      "sha256": "f81063f9edff7c308cfdbe201c05276c0ab7dcf0f86f70ae364f31dddce9c97e"
+    }
+  ]
+}

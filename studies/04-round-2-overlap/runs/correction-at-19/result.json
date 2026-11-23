@@ -1,0 +1,179 @@
+{
+  "status": "Primary single-candidate comparison, capture relocation and crossed opening controls complete. Both own-token prefix checks reproduce their natural continuations token for token on all 26 eligible cases; the primary verdict is unchanged.",
+  "assessed_by": "weight-research-astra, on weight-research-perfomance's completed fitting-only reading and the model write record, November 12, 2026",
+  "prediction_vs_result": {
+    "prediction": "The preselected native candidate lowers whole-model L on its own complete fitting-question traces relative to the identical unchanged after-19 starting model.",
+    "verdict": "The declared weakening condition is met: local fitting objective falls, but own-trace L rises and the originally correct group's complete-answer count falls.",
+    "local_given_text": {
+      "before": 0.004166,
+      "after": 0.0000209,
+      "role": "Construction objective, not independent validation or an own-trajectory result."
+    },
+    "within_fit_selection": {
+      "ridge_power": -4,
+      "accepted_round": 40,
+      "held_fold_score_before": 0.00425,
+      "held_fold_score_after": 0.000904,
+      "qualification": "Three fitting folds; selected round is at the declared round budget, not an optimum certificate."
+    },
+    "own_trace_L": {
+      "after_19": 0.21662,
+      "candidate": 5.19145,
+      "original_card_1": 0.24664,
+      "candidate_direction": 1.92323,
+      "candidate_size": 3.26823,
+      "candidate_original_wrong_group": 2.6936,
+      "candidate_original_correct_group": 2.49785,
+      "qualification": "The frozen registered instrument on changed own histories. New layouts change both computation and correspondence; this ratio is not a measured fold-change in capability error."
+    },
+    "complete_answers": {
+      "after_19": {
+        "original_wrong_group": 3,
+        "original_correct_group": 10,
+        "total": 13
+      },
+      "candidate": {
+        "original_wrong_group": 7,
+        "original_correct_group": 3,
+        "total": 10
+      },
+      "original_card_1": {
+        "original_wrong_group": 0,
+        "original_correct_group": 15,
+        "total": 15
+      },
+      "role": "Descriptive fitting-only outcomes; not the optimizer's reward or selector."
+    }
+  },
+  "failures_only": {
+    "candidate_wrong_group": {
+      "count": 15,
+      "available_energy_right": 7,
+      "descent_subtracted": 5,
+      "descent_omitted": 1,
+      "missing": 2,
+      "token_limit_reached": 3
+    },
+    "candidate_correct_group": {
+      "count": 15,
+      "available_energy_right": 3,
+      "descent_subtracted": 5,
+      "descent_omitted": 1,
+      "missing": 6,
+      "token_limit_reached": 6
+    },
+    "truncation": "All eight missing available-energy fields occur in answers cut at the existing token limit; nine answers reach that limit in total. No budget was expanded to rescue the result.",
+    "changed_histories": "None of the thirty own answers retains all recording tokens. On the recordings' text, the first candidate departure is step 3 in 26 cases, step 15 in three and step 26 in one. These are conditional history comparisons, not a replacement for own generation.",
+    "opening": "At the observed step-3 branch, compact minus calculation moves from after-19's median +0.22 to candidate's median -0.95 over the 26 cases. This locates an early branch point; it does not establish the cause of every later error.",
+    "correspondence": "At registered places 161–168 all thirty candidate answers project positively along the old gap, including answers that still subtract the descent. Projected-envelope readings on the reworded layout are not treated as calibrated failure magnitudes."
+  },
+  "conditional_diagnostics": {
+    "opening_controls": {
+      "source_commit": "adda225b",
+      "folder": "studies/04-round-2-overlap/runs/correction-at-19/own/diagnostics/opening-controls",
+      "eligible": {
+        "total": 26,
+        "original_wrong_group": 12,
+        "original_correct_group": 14,
+        "derived_from": "Exact shared prefix and observed branch in the after-19 and candidate own histories, not selected from the crossed outcomes."
+      },
+      "unmatched": [
+        "expanded-001-h3",
+        "expanded-034-h3",
+        "discovery-00-channel-h3",
+        "expanded-042-h3"
+      ],
+      "execution": "Same native prompt prefill, then three shared tokens and the observed branch token as single-token decode steps, followed by free greedy continuation. Total max_tokens=768, including the four fed tokens. Card 1. The three shared steps' greedy choice matched the fed token in every eligible case.",
+      "branch_tokens": {
+        "compact": 11236,
+        "calculation": 14988,
+        "decision_step": 3
+      },
+      "complete_counts": {
+        "after_19_compact": {
+          "wrong": 2,
+          "correct": 10,
+          "kind": "natural",
+          "limit_reached_wrong": 0,
+          "limit_reached_correct": 0
+        },
+        "after_19_calculation": {
+          "wrong": 3,
+          "correct": 2,
+          "kind": "crossed",
+          "limit_reached_wrong": 3,
+          "limit_reached_correct": 10
+        },
+        "candidate_compact": {
+          "wrong": 4,
+          "correct": 4,
+          "kind": "crossed",
+          "limit_reached_wrong": 3,
+          "limit_reached_correct": 2
+        },
+        "candidate_calculation": {
+          "wrong": 5,
+          "correct": 3,
+          "kind": "natural",
+          "limit_reached_wrong": 2,
+          "limit_reached_correct": 5
+        }
+      },
+      "interpretation": {
+        "branch_effect": "For the unchanged after-19 model, crossing compact to calculation changes complete correct-group answers from 10 to 2 and greatly increases truncation. The branch has an observed effect under the fixed budget; it is not merely a different label on an otherwise identical continuation.",
+        "beyond_branch": "Holding compact, the candidate completes 4 correct-group cases versus after-19's 10. Restoring that opening alone does not restore the original continuation: the candidate departs again later. In contrast, at calculation the candidate completes 3 versus after-19's 2.",
+        "interaction": "For the 14 eligible correct-group cases, the model difference is -6 complete answers at compact and +1 at calculation. The branch difference is -8 at after-19 and -1 at the candidate. These contrasts interact; they cannot be turned into a unique additive attribution of all damage to either wording or weights.",
+        "retained_repair": "For the 12 eligible originally wrong cases, the candidate has two more complete answers than after-19 under either opening: 2 to 4 at compact and 3 to 5 at calculation. This is a descriptive within-cohort net difference, not a claim that the same two individual cases improve in both controls.",
+        "original_prediction": "The predicted branch effect on later errors and lengths is observed. The stronger illustrative conjunction 'candidate remains damaged on compact while after-19 handles calculation' is not met, because after-19 also handles calculation poorly. The matched compact comparison separately shows that the branch alone is insufficient.",
+        "limitations": "These forced continuations are supplementary, not the candidate's unforced result, a training objective or a selection rule. The effects are under the declared token budget, with substantial truncation; they do not establish unlimited-generation outcomes or held-out generalization."
+      },
+      "own_token_checks": "Completed and passed, recorded at 12d4c02f: start-own and candidate-own each have 26 eligible table entries and 26 same_tokens_as_its_own_answer=true. Their opening.json records are under the opening-controls folder; they ended at 4:59 and 5:19 AM CT, November 12. This validates reproduction of the natural continuations, including the candidate's truncations; it does not mean all 26 answers completed correctly. No rerun was required."
+    },
+    "candidate_on_after_19_own_text": {
+      "L": 0.20664,
+      "after_19_L": 0.21662,
+      "direction": 0.05399,
+      "size": 0.15265,
+      "wrong_group": 0.1545,
+      "correct_group": 0.05214,
+      "before_written_matrix_L": 0.04658,
+      "after_19_before_written_matrix_L": 0.04658,
+      "qualification": "The text and registration are held fixed. All thirty continuations are conditional after departure; this approximately 4.6% decrease is not the own-trace result."
+    },
+    "own_trace_before_written_matrix": {
+      "candidate_L": 1.12802,
+      "after_19_L": 0.04658,
+      "merges": 28,
+      "qualification": "These matrices are byte-identical to after-19, but the autoregressive histories and registration differ. This establishes sensitivity to changed inputs, not that all changed computation is superficial wording."
+    },
+    "original_history_sign_scores": {
+      "wrong_eligible": 15,
+      "wrong_plus_above_minus": 15,
+      "wrong_median_change_vs_original": 10.63,
+      "correct_eligible": 13,
+      "correct_plus_above_minus": 13,
+      "correct_median_change_vs_original": 1.19,
+      "correct_without_located_sign": 2,
+      "qualification": "Every candidate sign score is conditional on an old history past its first departure. This shows the written edit changes that conditional decision; it is not fifteen own-answer repairs."
+    }
+  },
+  "what_this_changes": {
+    "construction": "The native solver can write a strong correction and substantially change the conditional sign decision, but fixed-text local progress did not deliver the declared own-trajectory result. No second candidate is selected from this reading.",
+    "reference": "The result strengthens the need to distinguish valid correct progressions and current correspondence rather than treating pooled L as an already validated capability measure.",
+    "causality": "The early opening branch is observed. Crossed opening controls against the actual after-19 starting state can test its effects; neither a near-tie nor unchanged upstream weights alone assigns all later failure to wording.",
+    "unchanged": "Existing repairs and transfer remain evidence. The hypothesis, A/B frozen references and native BF16 are unchanged. No protection loss, opening-token constraint, forced-prefix training, full sweep, no-fit tuning or reserved-set opening follows from this result."
+  },
+  "provenance": {
+    "model": "studies/04-round-2-overlap/runs/correction-at-19/model/correction-at-19.gguf",
+    "model_sha256": "a1945dcd2aea877b855637a06d0371b8dd32a3b0d5605f04fce7eb4e16d25865",
+    "model_write_record": "studies/04-round-2-overlap/runs/correction-at-19/model/written.json",
+    "reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+    "own_capture_created_at": "records/development/2026-11-12-path-forward/own-captures/correction-at-19-candidate",
+    "own_capture_destination": "studies/04-round-2-overlap/runs/correction-at-19/own/candidate",
+    "relocation_status": "Moved by weight-research-perfomance at 4:32:33 AM CT on November 12, 2026: one rename on the same disk from own_capture_created_at to own_capture_destination, after every writer had ended and with no reader open on it. own/candidate/provenance.json states the move and manifest.sha256 lists every file with its sha256, made after the move. The destination was declared after the capture (declaration.json, opening_diagnostic_phase/storage).",
+    "reading": "Thirty fitting answers on card 1; own_compare uses the same tube pin eeb5e17b as the controls, and final-reference L uses correction pin a3ad3400, as reported by the reader.",
+    "sources": "Primary numbers transcribed from Performance's completed comparison report. Conditional by-depth replays and opening controls are supplementary and pending; their later records do not rewrite this primary comparison.",
+    "no_fit": "Not evaluated or used for tuning.",
+    "reserved_40b": "Sealed."
+  }
+}

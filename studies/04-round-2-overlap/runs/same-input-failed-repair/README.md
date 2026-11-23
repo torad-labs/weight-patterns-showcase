@@ -1,0 +1,27 @@
+# A native same-input test of the failed descent update
+
+On the 91 J fitted problem the projected update still produced the wrong downhill subtraction. Its next friction calculation correctly removed 13 J from the arriving 24 J. We replayed that edited response at its 716 native events and the original response at its 578 native events. Each was the model’s own previously generated history. The candidate and original reproductions matched all 141 recorded common residual boundaries bit for bit. An independent same-weight run that clamped each input back to the candidate reproduced all 172 recorded boundaries bit for bit. [Four native receipts and qualified result](result.json) · Per-boundary controls
+
+| Registered prechoice | Mean change in squared turn distance to correct reference from changing only local weights | Mean change in squared positive excess beyond correct variation | Outside before → after (105 merges) | Direct turn change, field L2 | Total turn change, field L2 |
+|---|---:|---:|---:|---:|---:|
+| Descent | +1.9440 × 10⁻⁷ | +5.0367 × 10⁻¹² | 3 → 3 | 0.0003962 | 2.3430 |
+| Friction | +7.8218 × 10⁻⁹ | −4.1808 × 10⁻¹³ | 8 → 8 | 0.0003745 | 4.0675 |
+
+A positive raw score means the physical local map at the edited weights produced a turn farther from the frozen correct reference than the old local map on exactly the same input. Within this edit, both signed means were positive. The excess changed little at either prechoice. Pooling whole-trajectory movement would conceal the much smaller direct effects. On the numerical restatements the raw scores were +1.4414 × 10⁻⁸ for descent and +5.4086 × 10⁻⁹ for friction. These readings are observations of a single known failed edit. All phase readouts · Arithmetic timing sensitivity
+
+We used the original source-bound native GGUF, all 31,552 physical candidate changes, and the same physical GPU as the historical free acquisitions. The mixed run restored the edited state immediately after reading each local original-weight output. It supplied the candidate’s residual input to every merge, the projected per-layer auxiliary embedding, and the candidate’s full causal sequence of K and V before the ordinary cache conversion. All 137 clamped labels covered all 716 positions and each injection was read back. By this explicit boundary definition, effects mediated by producing K/V, projected input embeddings, or interblock gains can enter downstream as inherited state. Within each attention computation Q, the attention mixer and O still evaluate at the model condition’s own weights on that fixed context. [Acquisition rule](declaration.json) · Native worker and callback source
+
+Whole-history computational correspondence supplies all 820 old/new mate combinations at 560 reference rows across all 105 merges. The arithmetic labels only identify summary rows afterward. For the primary descent comparison the original and edited rows were 312 and 325. For friction they were 371 and 397. The original friction correspondence fell one event before the independent prechoice annotation at 372. The sensitivity file retains the original-372 comparison separately. The archived correct range uses Euclidean radius sqrt(2 × chance). Full per-cell measurements · Selected turn vectors
+
+All four acquisitions completed. The original combined process then rejected an unused partially materialized vocabulary boundary, before it produced a scientific readout. Source review also identified a mismatch in how its first draft interpreted chance. The separately declared reader checks every retained computational boundary and uses the exact learner radius. Both qualifications were recorded before evaluating the mixed endpoint. The acquisition run preserves its process failure. The qualified readout finished and the local exporter confirmed both computational spans and all 16 signed or norm metrics. Readout declaration · [MLflow readout](http://127.0.0.1:5000/#/experiments/6/runs/cb50a0a99a64456fa9b20b6db2a90264) · Tracking receipt
+
+## How much of the historical signed change follows the generated route?
+
+We replayed both previously free histories at both sets of actual weights and retained only the two vectors defining the audited signed turn. The complete prechoice inputs and outputs of the three previously observed conditions reproduced bit for bit. The fourth condition asks how the original weights process the edited answer’s history. All four readings refer to the computation-matched descent stage on the same fitted problem. [Native crossed-history results](readout/history-control/result.json)
+
+| Physical weights | Original history | Edited history |
+|---|---:|---:|
+| Original | 0.3932914975 | 0.3951466393 |
+| Edited | 0.3934018921 | 0.3953782919 |
+
+Holding the generated route fixed, the edited weights increased the signed error by 0.000110395 on the original route and by 0.000231653 on the edited route. Holding weights fixed, switching the route increased it by 0.001855142 at the original weights and 0.001976400 at the edited weights. Depending on intervention order, the history component accounts for 88.90% or 94.71% of the total 0.002086794 diagonal change. Splitting the interaction equally gives 91.80%. The histories were generated under their own weights, so their variation is one way a weight edit can exert its downstream effect. The controlled readings quantify this historical diagnostic and do not identify the first weight or event that selected a different route. Prospective control · Local MLflow receipt

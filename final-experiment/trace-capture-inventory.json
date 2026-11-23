@@ -1,0 +1,1841 @@
+{
+  "as_of": "2026-11-18T02:06:34.278119-06:00",
+  "basis": "Manifest joins, local NumPy headers, file lengths, existing digest-bound archive verification receipts and the local final capture event index. No new remote readback, tensor-value analysis, classifications, model calls or overlap.",
+  "original": {
+    "reading": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+    "row_map": "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json",
+    "archive": "studies/04-round-2-overlap/input-archives/c5c84ce60ad8-reading.json",
+    "merge_files": {
+      "R2 verified in receipt": 105
+    },
+    "archived_reading_bytes": 12954077127,
+    "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "model_present": true,
+    "block_count": 35,
+    "merge_count": 105,
+    "width": 1536,
+    "prompt_events": 5159,
+    "generation_events": 14592,
+    "by_group": {
+      "wrong": 15,
+      "correct": 15
+    },
+    "limit_reached": [
+      "expanded-001-h3"
+    ],
+    "members": [
+      {
+        "member": "discovery-05-channel-h1",
+        "group": "wrong",
+        "generated_events": 406,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-05-channel-h1/question.npy"
+      },
+      {
+        "member": "discovery-10-channel-h1",
+        "group": "wrong",
+        "generated_events": 489,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-10-channel-h1/question.npy"
+      },
+      {
+        "member": "discovery-17-channel-h1",
+        "group": "wrong",
+        "generated_events": 530,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-17-channel-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-17-channel-h1/question.npy"
+      },
+      {
+        "member": "expanded-001-h3",
+        "group": "wrong",
+        "generated_events": 768,
+        "prompt_events": 172,
+        "ended": false,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-001-h3/question.npy"
+      },
+      {
+        "member": "expanded-020-h1",
+        "group": "wrong",
+        "generated_events": 621,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-020-h1/question.npy"
+      },
+      {
+        "member": "expanded-034-h3",
+        "group": "wrong",
+        "generated_events": 548,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-034-h3/question.npy"
+      },
+      {
+        "member": "expanded-042-h3",
+        "group": "wrong",
+        "generated_events": 623,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-042-h3/question.npy"
+      },
+      {
+        "member": "expanded-045-h1",
+        "group": "wrong",
+        "generated_events": 412,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-045-h1/question.npy"
+      },
+      {
+        "member": "expanded-046-h3",
+        "group": "wrong",
+        "generated_events": 411,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-046-h3/question.npy"
+      },
+      {
+        "member": "expanded-068-h1",
+        "group": "wrong",
+        "generated_events": 442,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-068-h1/question.npy"
+      },
+      {
+        "member": "expanded-070-h1",
+        "group": "wrong",
+        "generated_events": 410,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-070-h1/question.npy"
+      },
+      {
+        "member": "expanded-087-h3",
+        "group": "wrong",
+        "generated_events": 740,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-087-h3/question.npy"
+      },
+      {
+        "member": "expanded-092-h1",
+        "group": "wrong",
+        "generated_events": 409,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-092-h1/question.npy"
+      },
+      {
+        "member": "expanded-094-h1",
+        "group": "wrong",
+        "generated_events": 513,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-094-h1/question.npy"
+      },
+      {
+        "member": "expanded-095-h1",
+        "group": "wrong",
+        "generated_events": 594,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-095-h1/question.npy"
+      },
+      {
+        "member": "discovery-01-channel-h1",
+        "group": "correct",
+        "generated_events": 388,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-01-channel-h1/question.npy"
+      },
+      {
+        "member": "discovery-06-channel-h1",
+        "group": "correct",
+        "generated_events": 409,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-06-channel-h1/question.npy"
+      },
+      {
+        "member": "discovery-15-channel-h1",
+        "group": "correct",
+        "generated_events": 461,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-15-channel-h1/question.npy"
+      },
+      {
+        "member": "discovery-00-channel-h3",
+        "group": "correct",
+        "generated_events": 627,
+        "prompt_events": 171,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-00-channel-h3/question.npy"
+      },
+      {
+        "member": "expanded-004-h1",
+        "group": "correct",
+        "generated_events": 388,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-004-h1/question.npy"
+      },
+      {
+        "member": "discovery-08-channel-h3",
+        "group": "correct",
+        "generated_events": 456,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-08-channel-h3/question.npy"
+      },
+      {
+        "member": "discovery-10-channel-h3",
+        "group": "correct",
+        "generated_events": 491,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-10-channel-h3/question.npy"
+      },
+      {
+        "member": "expanded-029-h1",
+        "group": "correct",
+        "generated_events": 414,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-029-h1/question.npy"
+      },
+      {
+        "member": "discovery-11-channel-h3",
+        "group": "correct",
+        "generated_events": 408,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-11-channel-h3/question.npy"
+      },
+      {
+        "member": "expanded-064-h1",
+        "group": "correct",
+        "generated_events": 474,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-064-h1/question.npy"
+      },
+      {
+        "member": "expanded-071-h1",
+        "group": "correct",
+        "generated_events": 495,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-071-h1/question.npy"
+      },
+      {
+        "member": "expanded-039-h3",
+        "group": "correct",
+        "generated_events": 414,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-039-h3/question.npy"
+      },
+      {
+        "member": "expanded-076-h1",
+        "group": "correct",
+        "generated_events": 412,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-076-h1/question.npy"
+      },
+      {
+        "member": "expanded-078-h1",
+        "group": "correct",
+        "generated_events": 422,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-078-h1/question.npy"
+      },
+      {
+        "member": "expanded-023-h1",
+        "group": "correct",
+        "generated_events": 417,
+        "prompt_events": 172,
+        "ended": true,
+        "generation_features": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1",
+        "prompt_turns": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-023-h1/question.npy"
+      }
+    ]
+  },
+  "descent_development": {
+    "source": "studies/04-round-2-overlap/runs/descent-multiple-references-retrospective/declaration.json",
+    "groups": {
+      "correct": 15,
+      "wrong": 13
+    },
+    "excluded_from_that_analysis": [
+      "discovery-10-channel-h1",
+      "discovery-17-channel-h1"
+    ]
+  },
+  "final_training": {
+    "run": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery",
+    "members": [
+      "discovery-05-channel-h1"
+    ],
+    "store_pairs": {
+      "R2 verified in receipt / R2 verified in receipt": 41,
+      "local / local": 2
+    },
+    "final_input_output_branch_index_coverage": {
+      "unique_native_labels": 245,
+      "events": 612,
+      "merges": 105,
+      "complete": true
+    },
+    "observations": [
+      {
+        "cumulative_update": 348,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/0/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/0/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "6d44d039c4dbee6a5598f269323fdae76793476e3c6501db8712ac9f75dc3085",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/4c563ac66020-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/0/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/57347a1a5529-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 349,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/1/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/1/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "dc6ac61a8f0be913582a90ced52004dad7f6fa5f9e55527beaac6c6b0ae4f31e",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/8622a1522f09-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/1/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/e0a016c20751-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 350,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/2/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/2/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "bb6fa1423b90d55a3694259a182917ba9631a02156e4c1aee0d95875030debdc",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/5054382a40a2-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/2/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/04bd0568c559-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 351,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/3/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/3/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "53be099c691dc4cf1f8a514132c7ad2c433f807ad889aaadf238b0ccc2f2cd11",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/b608da4b64cc-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/3/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/f388242b3475-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 352,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/4/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/4/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "9c54bed5f5a13db7fc064d437dd8fac947e453dac7f6aa2003e0b0cb9df74337",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/d26336c5f2d7-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/4/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/7286d190e02d-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 353,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/5/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/5/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "54d6491b2a8447038902ec082efde4c8696f0557a724986b49c7688c58b4fc67",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/1643867a96fb-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/5/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/bae76ca990f4-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 354,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/6/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/6/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "4182a68a0ad6679bfb106205f024aa568d3db55b55c8a2c1816a5c80b2f3004f",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/1eb2f7044c9c-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/6/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/29c42fc6ff09-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 355,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/7/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/7/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "231fb4dede178424d812a47eaed0714c35b3a368bc636158478330153d0f751f",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/83f31cb56c3b-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/7/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/69b1a79846d0-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 356,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/8/measurement.json",
+        "events": 631,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/8/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "696b1b40c5b2a516f15f0e48a9274ea578d57b642939dc64b821b12c31f10b5d",
+            "storage": "R2 verified in receipt",
+            "bytes": 956534784,
+            "archive": "studies/04-round-2-overlap/input-archives/eda8bce2858e-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/8/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "a74e2c1202c6a90bff12d9a1aa4aaa1620be3965aa9b1eff81f31e7cee96226e",
+            "storage": "R2 verified in receipt",
+            "bytes": 49775120,
+            "archive": "studies/04-round-2-overlap/input-archives/e962688a2868-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 357,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/9/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/9/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "fddee7b93477062918bb4a17bb83e72f12b27ae614fc06e0b6428fda6f3c8aaa",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/eb09acb80263-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/9/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/f88ebd447314-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 358,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/10/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/10/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "867bb2de7449462b94153d4a444c32e828165834185011a19443c77effb5fc14",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/b9c4b39b707c-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/10/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/99371875d7bd-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 359,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/11/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/11/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "4f45bc3829ede1c544d7243b96f851a17e8b3f258e7c483cc63a42c51eaa45bb",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/d6e4ae184325-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/11/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/96d7f2aaca3d-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 360,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/12/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/12/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "e4ea338b68878bb18285029efca68424277844acfb5b4ae22583c65afc3b17a6",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/4c65fc52efcf-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/12/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/f4b32ba22972-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 361,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/13/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/13/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "9c8132fe34acae9d6e58744641bd25b0dcb55f4d85f4ead3e9dabbc3b196d7aa",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/4571ff896aa3-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/13/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/3dfcd1c78abe-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 362,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/14/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/14/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "430b5365cdb1dbf94f0ba1616e644d0151ccc63bcc9bf42cfb4ffc892fffbd1a",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/b642b960a4ce-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/14/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/a9126ce7375a-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 363,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/15/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/15/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "f5e9a1bdcbdf8c0747de3bfd64071d37b4e52ab753859439d753b62ab293d658",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/571691525257-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/15/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/f595b6cd519f-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 364,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/16/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/16/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "79a9b73afb6c3c422c1aaf601e8430051a44c90d7c840d440e1f375758637904",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/4341d3535467-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/16/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/e87009f6a14e-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 365,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/17/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/17/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "74de3b08c69562f47bdadd0fa38fd347ff3991c6059c82a0a2a17faf23598e20",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/097524eabb20-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/17/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/dc4195189adf-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 366,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/18/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/18/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "9421fe1025d3ecde931db728db4e76cd6dc08d5a2aca1f46441f5c9f1ac68750",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/1c48dd807061-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/18/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/8818ab92ef6c-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 367,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/19/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/19/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "f7caa57e05b96e5c3c1677ab7d3e41fd8c70d6195ebdf576fe53d76cc5c4ab7f",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/4dc1a1fe01f5-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/19/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/5b385393d7b1-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 368,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/20/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/20/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "13ed61e559fce41fa18d36d09a0ae82c516d083ba9e33bb5600e01aca9d018ea",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/fb6636ece06f-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/20/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/b323a927e423-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 369,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/21/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/21/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "5d12a55aa79b1f27a59e4e9a0938ac59343c81868d15f52081e74623d3d2d067",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/fd31b9f148fc-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/21/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/592b87431dc1-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 370,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/22/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/22/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "92c26a0b2acc7bb268d5a7d96effc87c86fe34cc5556cfc45cb8ef7dfaed86e3",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/1268dee5c982-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/22/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/7da1e96e4af3-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 371,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/23/measurement.json",
+        "events": 634,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/23/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "4c5065e0550ce29cf9ebcc37bdd1358758ae8dfcb314ed2f6d139ada0faea2f3",
+            "storage": "R2 verified in receipt",
+            "bytes": 961087488,
+            "archive": "studies/04-round-2-overlap/input-archives/ccda2b838a55-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/23/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "0e229fd855e32582208a29f6804adcae4ba31f0668d028fd30fa8f7a401d06e5",
+            "storage": "R2 verified in receipt",
+            "bytes": 50096900,
+            "archive": "studies/04-round-2-overlap/input-archives/b2824f912d3b-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 372,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/24/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/24/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "3293d321ece4c1cffcea221494ac8ef4e4c20d8b625ee55b9395cb240fd11643",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/830097acf3d0-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/24/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/7e7e4483a868-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 373,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/25/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/25/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "4245a9f034f1b7c46cbcb152c1d884292732a298f2f71cbd12a0a612693a4e5b",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/b57b1f52773d-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/25/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/859cde1e5bc7-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 374,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/26/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/26/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "5433876aa894b7a1d32abb604097f62a8cad29f68544f5c56d75ffed512382f5",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/aebc4a7f4aeb-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/26/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/cd7705c8aa1c-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 375,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/27/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/27/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "3bf2e8d11319f42da7811b00235ad62c61062c6395626af54dc1edc9ed3112b8",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/9da3b51e21a7-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/27/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/97af80b0eaef-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 376,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/28/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/28/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "33736b55ff2c1db4ac0da20902f60da7bf9e3d4ed36290141d37a970f2ac046d",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/a56c4ad59288-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/28/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/d7f47aceb811-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 377,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/29/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/29/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "1244ba63f4b99fbbf11019fb3fbc1d1d4c3875ad27576c7c370958159585c710",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/fb8955d694a1-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/29/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/d1ae21533006-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 378,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/30/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/30/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "5279a051eedfc5683a1886e158aca775946286b0d1e4a600b6a5c0d240887467",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/93b4c5216480-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/30/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/befb1bdbdb23-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 379,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/31/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/31/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "9ba3f7dedc9297a9ae5081db56cb68db0484a2f8e02bc07fba390262cabb1c62",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/2540d1e5e76a-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/31/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/49d10006d4a0-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 380,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/32/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/32/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "09214c31dafdd21894b240843f51d9c8314dde326c492d6917bd93202bad8a5d",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/f9f5cce5d51a-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/32/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/e93faf19f058-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 381,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/33/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/33/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "d227e79fd2a7b3995f1991c0d56740773f107845c9b62f81024df050b6dd7235",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/d0075c627ef9-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/33/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/13ee126607e4-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 382,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/34/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/34/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "2ea406e5226d818a8adf1c74712e742b074a5fa0bbe737b4dfa0ead494150aeb",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/8b5251278740-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/34/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/8063eb0b9a25-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 383,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/35/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/35/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "23a0e3a400e63ceeb1cbe1c3c9009adf8fecb3134a5b7078da93d64a38124ac5",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/4dd979a977a8-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/35/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/2e6fb187db83-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 384,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/36/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/36/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "d0df719118d3001300930bb7059560da6f9d791bcfd74faf83aa3b58cb2c825d",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/40607b8bdde5-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/36/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/8661bcfaa432-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 385,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/37/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/37/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "07cb4b3b1dc21ae02830cddafb93772e8a2e6afb68ec665d8f0ef0be7680040a",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/db37094c53d7-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/37/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/968d0e94bf61-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 386,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/38/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/38/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "ebde01e491da20aaf90d4820f8e2ba4062f65a847b2ff33c81cfcb9b1d5a16cf",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/6661678040f9-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/38/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/e32c421922c0-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 387,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/39/measurement.json",
+        "events": 634,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/39/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "3eeae43fe5a079f4567a36fead9a30a46788d33392cb4362e24fccf2ffcf97d8",
+            "storage": "R2 verified in receipt",
+            "bytes": 961087488,
+            "archive": "studies/04-round-2-overlap/input-archives/fdcb092ab5e9-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/39/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "0e229fd855e32582208a29f6804adcae4ba31f0668d028fd30fa8f7a401d06e5",
+            "storage": "R2 verified in receipt",
+            "bytes": 50096900,
+            "archive": "studies/04-round-2-overlap/input-archives/ee3327186881-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 388,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/40/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/40/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "1bdbde44590e18e2fe40612271d6e82f4acc838bfe16e55424eee9816dfbc265",
+            "storage": "R2 verified in receipt",
+            "bytes": 927700992,
+            "archive": "studies/04-round-2-overlap/input-archives/837dda3d630b-stream.f32.json"
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/40/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "R2 verified in receipt",
+            "bytes": 47737180,
+            "archive": "studies/04-round-2-overlap/input-archives/2e3b0e496fab-stream.jsonl.json"
+          }
+        }
+      },
+      {
+        "cumulative_update": 389,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/41/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/41/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "67bcfe3e1cd7494a8f25d4038d4b9db8cbd9412cd4318cfd2c631343c3b9cb29",
+            "storage": "local",
+            "bytes": 927700992
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/41/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "local",
+            "bytes": 47737180
+          }
+        }
+      },
+      {
+        "cumulative_update": 390,
+        "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/measurement.json",
+        "events": 612,
+        "end_observed": true,
+        "merges": 105,
+        "member": "discovery-05-channel-h1",
+        "streams": {
+          "stream.f32": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/capture/raw/discovery-05-channel-h1/stream.f32",
+            "sha256_as_recorded": "de9b51ca08f52017ebff69355056522ebddea8e08589ab5eff1023380116430c",
+            "storage": "local",
+            "bytes": 927700992
+          },
+          "stream.jsonl": {
+            "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/capture/raw/discovery-05-channel-h1/stream.jsonl",
+            "sha256_as_recorded": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c",
+            "storage": "local",
+            "bytes": 47737180
+          }
+        }
+      }
+    ]
+  },
+  "other_published_captures": [
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/measurement.json",
+      "events": 605,
+      "end_observed": null,
+      "merges": null,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "73add44f97f55f100af921e944e85da29fb145f02fde1e41001115bfe07dc33c",
+          "storage": "local",
+          "bytes": 917078016
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "879f468621a2392db947ca97465406c87f878416b0faf80ed3fd971614e634f3",
+          "storage": "local",
+          "bytes": 46986360
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/measurement.json",
+      "events": 613,
+      "end_observed": null,
+      "merges": null,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "c677827f0dc286b01346112dc543b0c81219b6fe55006f17f30dddf20368a79b",
+          "storage": "local",
+          "bytes": 929218560
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "50e5b3ddf6891de991d41ca96929202257b461c431d6413e0d40f33b0d2b1dab",
+          "storage": "local",
+          "bytes": 47844440
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/measurement.json",
+      "events": 605,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-10-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.f32",
+          "sha256_as_recorded": "a032e81e19427b3936790120dcf94e22f969d62481d0dc94e849d90492b74bd9",
+          "storage": "local",
+          "bytes": 910694400
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "3db5e59340908dec576911a6ff731f784938d74a13b31be9fa72761739e4c5d1",
+          "storage": "local",
+          "bytes": 46608050
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-expanded-004-h1/native/measurement.json",
+      "events": 609,
+      "end_observed": true,
+      "merges": 105,
+      "member": "expanded-004-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-expanded-004-h1/native/raw/expanded-004-h1/stream.f32",
+          "sha256_as_recorded": "f9a9a4e17b37f0934fcce47afd9cb7acb34823d8241f63c06a2703b34b23b180",
+          "storage": "local",
+          "bytes": 916715520
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-expanded-004-h1/native/raw/expanded-004-h1/stream.jsonl",
+          "sha256_as_recorded": "36ff7edcdc1e89a5868510d9d33764b2ce4e78b229f9a3ac30b0a10950791328",
+          "storage": "local",
+          "bytes": 47033638
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/measurement.json",
+      "events": 605,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-10-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.f32",
+          "sha256_as_recorded": "43c5d1a74b072758e05ea8b80ab3657287719753b1ae052d0c921ff90ec8b823",
+          "storage": "local",
+          "bytes": 910694400
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "3db5e59340908dec576911a6ff731f784938d74a13b31be9fa72761739e4c5d1",
+          "storage": "local",
+          "bytes": 46608050
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-expanded-004-h1/native/measurement.json",
+      "events": 609,
+      "end_observed": true,
+      "merges": 105,
+      "member": "expanded-004-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-expanded-004-h1/native/raw/expanded-004-h1/stream.f32",
+          "sha256_as_recorded": "3e11f33a23028364788bfa66c6cd0057b3a639fa62489e7f0786204618985922",
+          "storage": "local",
+          "bytes": 916715520
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-expanded-004-h1/native/raw/expanded-004-h1/stream.jsonl",
+          "sha256_as_recorded": "36ff7edcdc1e89a5868510d9d33764b2ce4e78b229f9a3ac30b0a10950791328",
+          "storage": "local",
+          "bytes": 47033638
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/baseline/measurement.json",
+      "events": 661,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-10-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/baseline/raw/discovery-10-channel-h1/stream.f32",
+          "sha256_as_recorded": "2932ff70c5cef9b4e1120b1273bc887e91246e40410f11d0ba8ba5f9605467c6",
+          "storage": "local",
+          "bytes": 994990080
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/baseline/raw/discovery-10-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "52d7120064ba22606708466dd66603891ab8cc3fe26b586bfd2e1e72c9c8b2e5",
+          "storage": "local",
+          "bytes": 52566282
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/measurement.json",
+      "events": 652,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-10-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/raw/discovery-10-channel-h1/stream.f32",
+          "sha256_as_recorded": "6ec498e700325657a610cb1898209909900d5988455af1313a3f11f949514ebf",
+          "storage": "local",
+          "bytes": 981442560
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/raw/discovery-10-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "016084ec0ec6466fbe10529e8cb5e688df032204f7f0085947e1fe7b87dd9946",
+          "storage": "local",
+          "bytes": 51608709
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/baseline/measurement.json",
+      "events": 560,
+      "end_observed": true,
+      "merges": 105,
+      "member": "expanded-004-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/baseline/raw/expanded-004-h1/stream.f32",
+          "sha256_as_recorded": "ab97e80d5328cdb9559406a3da9e68c333da6eef2ed12e6004b7211d2875cc2b",
+          "storage": "local",
+          "bytes": 842956800
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/baseline/raw/expanded-004-h1/stream.jsonl",
+          "sha256_as_recorded": "39cc315ca3e657acda8671dbbbabaf2a92f45166040461e1b5bd9c6f84b2e3bf",
+          "storage": "local",
+          "bytes": 41823900
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/checkpoint348/measurement.json",
+      "events": 584,
+      "end_observed": true,
+      "merges": 105,
+      "member": "expanded-004-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/checkpoint348/raw/expanded-004-h1/stream.f32",
+          "sha256_as_recorded": "40988217f0935ee895de1667b2c350eac307419b58924c9fc9109818c986c412",
+          "storage": "local",
+          "bytes": 879083520
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/checkpoint348/raw/expanded-004-h1/stream.jsonl",
+          "sha256_as_recorded": "6805fd64cf4be4dda0f32b11e6d82eef490975ea55a1430b028993be3e99d018",
+          "storage": "local",
+          "bytes": 44373713
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/measurement.json",
+      "events": 579,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "0960398797ac5f07846d4692d5c21cd9f937809bdd1d8c62d19e04ab2a4dd0b8",
+          "storage": "local",
+          "bytes": 877621248
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "2c722688f08be0e863c855e689160f159df0fef6e5605a9cbf7872351899a4f3",
+          "storage": "local",
+          "bytes": 44197600
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late/measurement.json",
+      "events": 605,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "483f4ae0e2c9fabd3b6459a4127be8ab3e026e087f23cbe2bf02f1d5a99c971b",
+          "storage": "local",
+          "bytes": 917078016
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "879f468621a2392db947ca97465406c87f878416b0faf80ed3fd971614e634f3",
+          "storage": "local",
+          "bytes": 46986360
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/measurement.json",
+      "events": 605,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "6e1782812354d5989d464d4295ef1dab5ca4bc3d9bd8b006406b4cc33c6111c0",
+          "storage": "local",
+          "bytes": 917078016
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "879f468621a2392db947ca97465406c87f878416b0faf80ed3fd971614e634f3",
+          "storage": "local",
+          "bytes": 46986360
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/measurement.json",
+      "events": 605,
+      "end_observed": true,
+      "merges": 105,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "780815a847aa989bc7eda4dd0fce07f8a879a9766b75edb8cd7e71a8f0131941",
+          "storage": "local",
+          "bytes": 917078016
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "879f468621a2392db947ca97465406c87f878416b0faf80ed3fd971614e634f3",
+          "storage": "local",
+          "bytes": 46986360
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/measurement.json",
+      "events": 578,
+      "end_observed": true,
+      "merges": null,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "76001db3f05b371194f3a1d0d514c2f1007ec06d471449d8e19db12b87143de8",
+          "storage": "local",
+          "bytes": 876103680
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "b7e277ff9e1ecc35bf0bd90a0b9dfd3153ce9045a247ddb6f24f287c6bb78756",
+          "storage": "local",
+          "bytes": 44090340
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/correct/measurement.json",
+      "events": 560,
+      "end_observed": true,
+      "merges": null,
+      "member": "expanded-004-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/correct/raw/expanded-004-h1/stream.f32",
+          "sha256_as_recorded": "4dfd21f2b9c62dd015537ac66a6c4ee16a5cf65f5174687a8d7f373910dca585",
+          "storage": "local",
+          "bytes": 848787456
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/correct/raw/expanded-004-h1/stream.jsonl",
+          "sha256_as_recorded": "f2f915b3894cb3312481f946296613deb056c50c099dffdd59e5c329e968121a",
+          "storage": "local",
+          "bytes": 42162589
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/measurement.json",
+      "events": 676,
+      "end_observed": true,
+      "merges": null,
+      "member": "discovery-02-reordered-h3",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/raw/discovery-02-reordered-h3/stream.f32",
+          "sha256_as_recorded": "dfac8e9827c97d0646ffe519d25382d2d9d58d2fe6f83c30be583fe1aa2d5cf3",
+          "storage": "local",
+          "bytes": 1024868352
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/raw/discovery-02-reordered-h3/stream.jsonl",
+          "sha256_as_recorded": "67ba720d477fde8a4ba00aaf361f757575a2ed04d61f264253601b5a02b8e63e",
+          "storage": "local",
+          "bytes": 55349060
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/fit/measurement.json",
+      "events": 716,
+      "end_observed": true,
+      "merges": null,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/fit/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "486510b1bc590f8ee4e9b8ed0d13b6f0a47b61d3b91fc582edf5fde3fc012201",
+          "storage": "local",
+          "bytes": 1085528064
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/fit/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "09e70217d9b027174b0245b63ddc8ffb0fba94ce67d6e37225766ad7442d89d1",
+          "storage": "local",
+          "bytes": 58906140
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/correct/measurement.json",
+      "events": 926,
+      "end_observed": true,
+      "merges": null,
+      "member": "expanded-004-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/correct/raw/expanded-004-h1/stream.f32",
+          "sha256_as_recorded": "a2d17aa9bd3b6c24c5f0f1ab399eed9005be60b168121cebc882751fac308ab2",
+          "storage": "local",
+          "bytes": 1404217344
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/correct/raw/expanded-004-h1/stream.jsonl",
+          "sha256_as_recorded": "570535d1e9928a69e2093df3afca513227d3af57a0d6e3e5d51a7e9f6836d7e9",
+          "storage": "local",
+          "bytes": 81482610
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/transfer/measurement.json",
+      "events": 676,
+      "end_observed": true,
+      "merges": null,
+      "member": "discovery-02-reordered-h3",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/transfer/raw/discovery-02-reordered-h3/stream.f32",
+          "sha256_as_recorded": "98b63cc06aa50af335a2018fa40610f293a98304e4442527dc308e48c108cd6e",
+          "storage": "local",
+          "bytes": 1024868352
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/transfer/raw/discovery-02-reordered-h3/stream.jsonl",
+          "sha256_as_recorded": "67ba720d477fde8a4ba00aaf361f757575a2ed04d61f264253601b5a02b8e63e",
+          "storage": "local",
+          "bytes": 55349060
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/measurement.json",
+      "events": 578,
+      "end_observed": true,
+      "merges": null,
+      "member": "discovery-05-channel-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/raw/discovery-05-channel-h1/stream.f32",
+          "sha256_as_recorded": "12775f485a7d0faf0835076691cd40be88168749c12aba1fc006a0de66d9c760",
+          "storage": "local",
+          "bytes": 876103680
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256_as_recorded": "b7e277ff9e1ecc35bf0bd90a0b9dfd3153ce9045a247ddb6f24f287c6bb78756",
+          "storage": "local",
+          "bytes": 44090340
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/correct/measurement.json",
+      "events": 560,
+      "end_observed": true,
+      "merges": null,
+      "member": "expanded-004-h1",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/correct/raw/expanded-004-h1/stream.f32",
+          "sha256_as_recorded": "5dc055531b13cce6fcbacca1b9a6fa52cac33999aea975782a415191bc3f31ea",
+          "storage": "local",
+          "bytes": 848787456
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/correct/raw/expanded-004-h1/stream.jsonl",
+          "sha256_as_recorded": "f2f915b3894cb3312481f946296613deb056c50c099dffdd59e5c329e968121a",
+          "storage": "local",
+          "bytes": 42162589
+        }
+      }
+    },
+    {
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/transfer/measurement.json",
+      "events": 676,
+      "end_observed": true,
+      "merges": null,
+      "member": "discovery-02-reordered-h3",
+      "streams": {
+        "stream.f32": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/transfer/raw/discovery-02-reordered-h3/stream.f32",
+          "sha256_as_recorded": "0f25e4fc48af991a2f063d35c707c68aeb2da68319c173e1375cfba0a470768f",
+          "storage": "local",
+          "bytes": 1024868352
+        },
+        "stream.jsonl": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/transfer/raw/discovery-02-reordered-h3/stream.jsonl",
+          "sha256_as_recorded": "67ba720d477fde8a4ba00aaf361f757575a2ed04d61f264253601b5a02b8e63e",
+          "storage": "local",
+          "bytes": 55349060
+        }
+      }
+    }
+  ]
+}

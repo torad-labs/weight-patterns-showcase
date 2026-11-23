@@ -1,0 +1,471 @@
+{
+  "hypothesis": "Natural responses using the same energy-accounting procedure leave recurring changes in signal direction and size across the connected merges. The difference between the successful and failing group overlaps will contain a direction that remains supported when any individual member is left out, rather than being supplied by one question.",
+  "what_went_wrong_before": "The previous attempt fitted question-specific contrasts. Its edits and analyses were deleted; this run derives the success and failure overlaps first and never constructs or applies weights.",
+  "rule": {
+    "grouping": "Use the retained natural_numerical_success and failure populations separately on each original GPU. Exclude other_failure and supplied histories. Each aligned member has equal weight at its own saved prediction. Retain the original correspondence, with no interpolation or invented links.",
+    "direction": "At each aligned position and actual merge, t = unit(outgoing) - unit(incoming). Compute each group mean, dispersion and every member cosine against the mean of its other group members. Compute d = mean(success) - mean(failure) after these separate overlaps.",
+    "recurrence": "Report continuous member and leave-one-out statistics. A contrast is labeled unanimously supported only when every included member agrees in direction with the rest of its own group and is on its own side of the leave-one-out midpoint along the leave-one-out group difference. Zero is the directional sign boundary, not an empirical similarity threshold. A group with no other member cannot establish recurrence. Report how many of the full eligible group contribute at every position; incomplete coverage is never called population-wide recurrence.",
+    "size": "Analyze log(norm(outgoing)/norm(incoming)) separately from direction. Report group dispersion and leave-one-out separation, without mixing units.",
+    "components": "Map recurring contrasts at every merge and passage before examining weights. Decompose the contributing attention-output heads and feed-forward units only through their recorded input activations, native matrix and normalization. Report exact additive accounting and its reconstruction residual. Include every layer for which the retained matrix inputs support that calculation; show missing layers explicitly rather than silently restricting the map.",
+    "first_appearance": "Report earliest recorded prediction/merge meeting the stated directional-support condition, with actual tokens and passage roles. This is earliest observed separation on aligned generated predictions, not the origin of the capability or a prefill claim.",
+    "cross_passage": "Compare component action profiles and recurring group differences between passages, preserving signs, group membership and GPU. Shared formatting and physical-parameter confounds remain explicit.",
+    "output": "Only analysis artifacts inside this run folder; code and tests in a new analysis module. No fit, edit, new inference, new capture or sealed evaluation access."
+  },
+  "prediction": {
+    "expected_observation": "At least one multi-member passage has a success-minus-failure difference supported after leaving each individual member out. If there is a procedure-specific signal, it should be distinguishable from agreement shared by both groups in the opening and from changing numerals. This is an exploratory prediction, not a claimed effect size.",
+    "unanimously_supported_observed_locations": {
+      "minimum": 1,
+      "maximum": "all measured aligned position/merge locations, enumerated from the input correspondences"
+    },
+    "model_weights_changed": {
+      "minimum": 0,
+      "maximum": 0
+    },
+    "new_responses_generated": {
+      "minimum": 0,
+      "maximum": 0
+    }
+  },
+  "would_weaken_it": "No contrast survives member omission, support is limited to low-coverage positions or one GPU, or the recurring signal is equally present in shared formatting/early correct passages and has no distinguishable energy-accounting progression. A component decomposition that fails native reconstruction cannot support an attribution claim.",
+  "parameters": {},
+  "parameter_policy": "No empirical cutoff, layer threshold, cap, strength, schedule or top-k selection. Architectural dimensions and population counts are read from the retained inputs; zero/sign, arithmetic means and leave-one-out are definitions. No construction is proposed for application in this run.",
+  "input_inventory": {
+    "population": [
+      {
+        "case": "block-changed",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 480
+      },
+      {
+        "case": "discovery-13-channel-h1",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 521
+      },
+      {
+        "case": "discovery-16-channel-h1",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 434
+      },
+      {
+        "case": "discovery-20-channel-h1",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 517
+      },
+      {
+        "case": "discovery-22-channel-h1",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 522
+      },
+      {
+        "case": "discovery-22-channel-h3",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 475
+      },
+      {
+        "case": "expanded-027-h3",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 566
+      },
+      {
+        "case": "expanded-043-h3",
+        "role": "failure",
+        "gpu": 1,
+        "predictions": 479
+      },
+      {
+        "case": "expanded-064-h3",
+        "role": "failure",
+        "gpu": 1,
+        "predictions": 475
+      },
+      {
+        "case": "expanded-067-h3",
+        "role": "failure",
+        "gpu": 1,
+        "predictions": 475
+      },
+      {
+        "case": "expanded-074-h3",
+        "role": "failure",
+        "gpu": 1,
+        "predictions": 530
+      },
+      {
+        "case": "expanded-081-h1",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 493
+      },
+      {
+        "case": "expanded-082-h1",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 493
+      },
+      {
+        "case": "expanded-083-h3",
+        "role": "failure",
+        "gpu": 1,
+        "predictions": 514
+      },
+      {
+        "case": "expanded-088-h1",
+        "role": "failure",
+        "gpu": 1,
+        "predictions": 581
+      },
+      {
+        "case": "expanded-088-h3",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 484
+      },
+      {
+        "case": "expanded-089-h1",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 581
+      },
+      {
+        "case": "expanded-090-h3",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 475
+      },
+      {
+        "case": "expanded-091-h1",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 603
+      },
+      {
+        "case": "expanded-091-h3",
+        "role": "failure",
+        "gpu": 0,
+        "predictions": 475
+      },
+      {
+        "case": "block-base",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 450
+      },
+      {
+        "case": "discovery-13-channel-h3",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 411
+      },
+      {
+        "case": "discovery-14-channel-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 487
+      },
+      {
+        "case": "discovery-18-channel-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 427
+      },
+      {
+        "case": "discovery-18-channel-h3",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 421
+      },
+      {
+        "case": "expanded-026-h3",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 457
+      },
+      {
+        "case": "expanded-027-h1",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 464
+      },
+      {
+        "case": "expanded-043-h1",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 491
+      },
+      {
+        "case": "expanded-051-h3",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 456
+      },
+      {
+        "case": "expanded-063-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 415
+      },
+      {
+        "case": "expanded-063-h3",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 569
+      },
+      {
+        "case": "expanded-064-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 474
+      },
+      {
+        "case": "expanded-068-h3",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 547
+      },
+      {
+        "case": "expanded-071-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 495
+      },
+      {
+        "case": "expanded-071-h3",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 514
+      },
+      {
+        "case": "expanded-072-h3",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 428
+      },
+      {
+        "case": "expanded-073-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 427
+      },
+      {
+        "case": "expanded-073-h3",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 398
+      },
+      {
+        "case": "expanded-074-h1",
+        "role": "natural_numerical_success",
+        "gpu": 1,
+        "predictions": 503
+      },
+      {
+        "case": "expanded-075-h3",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 398
+      },
+      {
+        "case": "expanded-080-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 491
+      },
+      {
+        "case": "expanded-082-h3",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 463
+      },
+      {
+        "case": "expanded-083-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 491
+      },
+      {
+        "case": "expanded-090-h1",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 527
+      },
+      {
+        "case": "expanded-092-h3",
+        "role": "natural_numerical_success",
+        "gpu": 0,
+        "predictions": 462
+      }
+    ],
+    "merges": 105,
+    "sources": {
+      "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/response-correspondence/index.json": "302024d2d9d3716f878880ca982777256d74ee077506232016807804041218c6",
+      "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/original-model-traces/native-operators.json": "0f82b6e6bc55497a4f4d4e7b80a8d8a7fb72078f62ba6b2cc5d62b88a35c1788",
+      "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/original-model-traces/full-response-turns/index.json": "8f3bbc897048365f43df8b9131f9bd1384d33a66a5cf3daa59a244c9af205680"
+    },
+    "matrix_input_layers": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "question_count": 45,
+    "prediction_count": 21839
+  },
+  "run_directory": "~/Documents/dev/research/weight-patterns/runs/legs/gemma4-e2b/round-2/overlap",
+  "review_before_construction": "Marcos",
+  "method_step": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "run_by": "Astra",
+  "why_this_direction": "The retained inputs are natural successful and failing executions of the same energy-accounting family. The method starts by overlaying each outcome group independently; therefore this run computes those two overlaps and their leave-one-out support before any weight correction is considered.",
+  "why_it_might_be_wrong": "Outcome groups can differ in numbers, wording and token alignment. Their centroid difference could encode those context differences or shared formatting rather than a recurring procedural divergence. We retain every member, its omission test, coverage and the early correct/opening passages so these alternatives can be seen, instead of treating a group mean as a mechanism.",
+  "repeating_pattern_check": "The repeated drift was substituting fits to individual examples or answer-count optimization for a recurring group trace. This run has no fit, edit, answer-based step selection or new inference. Its saved differences are computed only after the two independent group overlaps, and all nonrecurring and unmatched observations remain visible.",
+  "inputs": [
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/response-correspondence",
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/group-observation",
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/original-model-traces/full-response-turns",
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/original-model-traces/matrix-inputs",
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/original-model-traces/native-operators.json",
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/observation/individual-observation/block-changed/branch-view/view.json",
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/acquisition/capture-pilot/block-changed/signal-events.jsonl",
+    "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/shared/acquisition/cohort-inputs",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "runs/legs/gemma4-e2b/round-2/overlap/cross-validated"
+  ],
+  "outputs": [
+    "runs/legs/gemma4-e2b/round-2/overlap"
+  ],
+  "reasoning_field_timing": {
+    "status": "Added after the group-overlap run started, in response to the newly installed guard; not represented as pre-run additions.",
+    "original_declaration_commit": "9a9fc1e6",
+    "original_hypothesis_rule_prediction": "Unchanged from that committed pre-run declaration.",
+    "new_fields": [
+      "method_step",
+      "run_by",
+      "why_this_direction",
+      "why_it_might_be_wrong",
+      "repeating_pattern_check",
+      "inputs",
+      "outputs"
+    ]
+  },
+  "analysis_amendments": [
+    {
+      "phase": "common-coordinates",
+      "timing": "Declared after the raw group overlays and before the common-coordinate calculation. The original raw-overlap prediction is not rewritten.",
+      "why_this_direction": "Independent mathematical review found that positive whole-vector leave-one-out margins can retain an orthogonal coordinate supplied by one response. This phase measures a common portion with an explicit member-level guarantee.",
+      "why_it_might_be_wrong": "The native-coordinate envelope is conservative and basis dependent. It can miss shared directions when contexts overlap or rotate them. It cannot distinguish a recurring physical-parameter confound from a capability contribution.",
+      "repeating_pattern_check": "A convincing whole-vector picture is not enough to establish that each retained contribution recurs. Here every retained signed coordinate must be present in every included cross-group difference. Full distributions, missing positions, and all excluded-by-criterion amounts stay visible.",
+      "hypothesis": "Some common signed portion of the observed success-minus-failure direction changes survives individual member variability in the recorded coordinates.",
+      "rule": "Independently take each group coordinate minimum and maximum. g_j = min(S_j)-max(F_j) if positive; g_j = max(S_j)-min(F_j) if negative; otherwise zero. Both groups require more than one member. Report all aligned and full-population coverage separately; omission changes measure direction stability but do not gate coordinates.",
+      "prediction": "At least one aligned position/merge has a nonzero common portion. The amount and passage dependence are not prespecified. This is descriptive, not a prediction of causal repair.",
+      "would_weaken_it": "No common portion, support only in incomplete positions, or a signal confined to wording/numerals with no distinguishable procedure progression. A null only rejects this stringent native-coordinate criterion.",
+      "parameters": {},
+      "numeric_definitions": "Zero is the exact sign boundary on stored recorded values, not an empirical tolerance. Population sizes, dimensions, and extrema come from those values. No significance threshold or top-k is used.",
+      "reviewed_by": "eli /root/anchored_ladder_review",
+      "review_scope": "Mathematical definition approved; no semantic or causal identification. Ratio of squared norms is not a complementary variance decomposition.",
+      "output_directory": "runs/legs/gemma4-e2b/round-2/overlap/common-coordinates"
+    },
+    {
+      "phase": "component-accounting",
+      "timing": "Declared before component-accounting outputs; original-model read permitted by Claude in deae97a5.",
+      "method_step": 4,
+      "why_this_direction": "The group maps locate an observed common portion around the final climb, with fully covered peaks at the layer-13 feed-forward merge on both cards. The next method step is to account for the transformations supplying the observed difference.",
+      "why_it_might_be_wrong": "Native rounding can break ideal algebraic reconstruction, and projecting an average difference onto a common axis does not establish causal responsibility. Input retention covers only 46 weighted merges in 23 layers.",
+      "repeating_pattern_check": "We must not assign meanings to isolated weights or replace the group overlap with a selected pair. Each contribution is computed from its own recorded input and normalization, then averaged separately by outcome group.",
+      "hypothesis": "The recorded change in direction can be accounted for by the actual weighted branch contributions plus the incoming residual normalization term, exposing whether the observed group contrast is concentrated or spread across heads and feed-forward units.",
+      "rule": "Decode the original native BF16/f32 matrices at the retained bindings; verify their checkpoint SHA. Reconstruct each recorded normalized residual turn with its own inputs, then subtract independently averaged success/failure component contributions. Preserve signed cancellation and report full-vector and common-axis reconstruction errors. No weights are written.",
+      "prediction": "The ideal decomposition reconstructs the native direction change with a measurable rounding residual; at least some of the largest observed contrasts admit informative head/unit accounting. No component concentration or causal effect size is assumed.",
+      "would_weaken_it": "Reconstruction error is comparable to the measured group contrast, especially its projection along the common axis; missing inputs cover the dominant locations; or apparent concentration is entirely cancellation/normalization rather than a stable component pattern.",
+      "parameters": {},
+      "output_directory": "runs/legs/gemma4-e2b/round-2/overlap/components"
+    },
+    {
+      "phase": "cross-validated-direction",
+      "timing": "Declared after the coordinate-gap result and before the new cross-validation and equal-speed analyses, at Claude review request.",
+      "method_step": 3,
+      "why_this_direction": "The coordinate envelope is basis dependent and can miss directions distributed over native coordinates. A held-out projection tests whether the other members group difference predicts the omitted member without learning its distinctive coordinates.",
+      "why_it_might_be_wrong": "Positive held-out classification does not certify that the full-data mean vector is free of member-specific components. Labels also correlate with speed and other numerical inputs. Small matched strata have uncertain and missing estimates.",
+      "repeating_pattern_check": "We previously mistook whole-vector agreement for proof that every component recurs. This phase reports held-out predictive support and direction stability without converting them into a component-purity guarantee or an accepted editing vector.",
+      "hypothesis": "The outcome-group trace difference has predictive support on held-out members and retains some of that support when failures and successes are compared at the same recorded speed.",
+      "rule": {
+        "unmatched": "At every aligned position/merge, leave each member out of its own group mean; form d_minus_i from the remaining success and failure means. Project the held-out member relative to the midpoint onto unit(d_minus_i), with sign positive toward its true group. Report every margin, both group means, fraction on own side, balanced fraction, and mean pairwise cosine of all nonzero d_minus_i. No score threshold selects a target.",
+        "matched": "Repeat independently inside every observed speed value with at least two members per group. Report all strata and unavailable strata with counts. Form a standardized within-speed mean difference by equal member-count weighting over supported strata, giving successes and failures identical speed weights. Compare it to the unadjusted difference on the same eligible member pool, reporting norm ratio and cosine, not explained variance. No pairing of individual responses.",
+        "coverage": "Main view is every aligned subset with its member counts. Full-population positions remain a strict subset. Each omitted member is absent from both means used to predict it. Speed is held exactly, not residualized; mass, descent, loss, rise and wording remain uncontrolled."
+      },
+      "prediction": "Some final-climb held-out margins remain positive in same-speed strata; predictive support and direction stability may decrease relative to unmatched groups. No numeric performance band is invented, and no model-answer repair is predicted by this observational calculation.",
+      "would_weaken_it": "The apparent outcome separation disappears or reverses within equal-speed groups, is driven by one stratum/member, or training directions vary strongly under omission. Empty/one-member strata are missing evidence, not a negative result.",
+      "parameters": {},
+      "output_directory": "runs/legs/gemma4-e2b/round-2/overlap/cross-validated"
+    },
+    {
+      "phase": "exact-label-calibration",
+      "timing": "Declared after the reviewer withdrew acceptance, before any permuted-label outcome is computed. Existing observed margins are known; predictions are not retroactively presented as blind.",
+      "method_step": [
+        3,
+        4
+      ],
+      "run_by": "Astra",
+      "why_this_direction": "The per-response scores track stratum majority/minority status. Calibrate the same held-out statistic under labels carrying no information, preserving the measured speed groups, group sizes and correlations across each response.",
+      "why_it_might_be_wrong": "Responses and template variants are not independent randomized units, and the saved alignment was formed using outcome groups. Label permutations conditional on that fixed alignment are a design diagnostic, not an unconditional causal test. Missing positions can change eligibility when labels change; full-population positions are reported separately.",
+      "repeating_pattern_check": "We repeatedly mistook a convincing aggregate for recurrence without calibrating its design. No direction, threshold or construction is selected here. Every partition in each supported speed stratum is enumerated, and individual/group null results and coverage remain visible.",
+      "hypothesis": "The apparent within-speed held-out separation is partly or wholly explained by the small, unequal group design. Real-label scores may fail to stand out against label assignments with identical group sizes.",
+      "what_went_wrong_before": "The approximately 69 percent cell score was compared informally with one half. Per-response scores showed minority groups on the wrong side in every speed stratum, making that reference unjustified.",
+      "rule": {
+        "units": "One response label per card and speed stratum, fixed across its entire trace; enumerate every choice of the original failure count from the full stratum. Never shuffle each position independently.",
+        "scores": "Recompute leave-one-out signed margins and own-side fractions from the recorded turns. Average valid merges within an own prediction, then predictions within a response. Form class-balanced group averages giving each response equal influence.",
+        "coverage": "Main view uses the same aligned position set and minimum group existence requirements as the observed test, recomputed for every assignment. Undefined positions and scored counts are reported. Also report originally full-population positions as a fixed-coverage check.",
+        "per_response_null": "Report all assignments, plus the assignments where that response retains its real outcome label, so its group size matches its observed comparison. Give exact empirical ranks and full distributions, not a chosen significance cutoff.",
+        "whole_card": "Each stratum is exhaustively evaluated independently. Combine scalar stratum summaries across their Cartesian product where finite, preserving class counts. No additional directions are fitted.",
+        "precision": "Use centered Gram matrices to evaluate the same Euclidean centroid projections efficiently. Verify the real-label row against the saved direct calculation and test algebra against direct held-out calculations. Record undefined squared lengths instead of assigning them a successful score.",
+        "acquisition": "Use calibration to assess the identifiable effect and the discrete resolution/coverage limits. Do not invent a larger sample requirement if this data cannot identify one. New data collection remains a separately declared proposal; no model is run here."
+      },
+      "prediction": "The null baseline will depend on class size; majority/minority asymmetry may appear without informative labels. No model-answer changes are predicted. Report observed ranks without setting an acceptance percentile after seeing them.",
+      "would_weaken_it": "Real-label margins consistently exceed the design-matched distribution for both outcome groups and do not rely on sparse or changing-coverage positions. That would weaken the design-bias explanation, subject to the alignment and exchangeability limitations.",
+      "parameters": {
+        "enumeration_count": {
+          "measured_from": "runs/legs/gemma4-e2b/round-2/overlap/cross-validated/index.json",
+          "derivation": "For each card/speed, enumerate C(n_failure+n_success,n_failure), retaining the real-label assignment. Counts are derived from the recorded eligible population, not a Monte Carlo budget.",
+          "scales_with": "Stratum population and original outcome counts."
+        },
+        "minimum_members": {
+          "measured_from": "runs/legs/gemma4-e2b/round-2/overlap/cross-validated/gpu0/index.json",
+          "derivation": "Each outcome needs the held-out member plus another training member: two in each group. Existing undefined strata remain undefined.",
+          "scales_with": "Whether each leave-one-out centroid exists."
+        }
+      },
+      "output_directory": "runs/legs/gemma4-e2b/round-2/overlap/calibration"
+    }
+  ],
+  "raw_support_interpretation": "Whole-vector support from the initial calculation is descriptive only. It cannot certify that every component recurs and is not an accepted edit target.",
+  "context_check_timing": "Original question parameter distributions were inspected descriptively after the common-coordinate results, to report confounding rather than to change the groups or the extraction rule.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+}

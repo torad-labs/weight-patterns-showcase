@@ -1,0 +1,51 @@
+{
+ "method_step": [
+  5
+ ],
+ "run_by": "Claude",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/sent-overlap/recurrence.npz",
+ "hypothesis": "The correct answers share a pattern in what each matrix sends along the path and the wrong answers share another. Asking each matrix to send, on the wrong answers' own inputs, its own sending moved by the shared part of that gap brings the wrong pattern to the correct one. The token, the value and the answer are irrelevant.",
+ "what_went_wrong_before": "a2-pattern pushed the gap of the merged signal back to each matrix through the learned scale. The ask came out four times too large in attention and twice in feed-forward, two thirds of it on outputs that barely reach the signal. At the very first matrix, with nothing edited before it, the wrong pattern was asked to move 0.88 of the gap and moved 0.06 along it and 2.2 gaps sideways. The model garbled the question.",
+ "why_this_direction": "sent-overlap shows the gap is written by the matrices where the turns show it: read in what each matrix sends, it is about 7 times chance inside places 150 to 265 with the halves agreeing at 0.88 to 0.89, and it is about one seventh of what a matrix sends. Marcos, November 9: the ratio is different per layer and has to be reversed correctly; and if the pattern of the computation is off after the edit, the math of the correction is wrong, so the traces are read before any answer. This run changes one thing against a2-pattern, the conversion from the gap to the ask at each matrix, so the two compare.",
+ "repeating_pattern_check": "What repeats: the edit asks for more than the gap, and it is found after the model breaks. Here the ask is measured against the matrix output before the build (ask step), and the edited model is read at the matrices before any answer. Two things are inherited from a2-pattern unchanged and are measured, not removed, in this run. First, the edit is built from the wrong group's inputs only, and both groups send nearly the same inputs through each matrix, so the correct group's sending is expected to move with the wrong group's; round one's A did the same and protection came in B and C. Second, all 70 matrices are sized on the original inputs and applied together; the first matrix has nothing edited before it, so the difference between it and the later ones shows what the earlier edits add. A reviewer session named both on November 9 from the committed code.",
+ "rule": {
+  "members": "The 30 wrong answers of trace-overlap, with sent-overlap's patterns, alignment and inputs.",
+  "where_and_how_much": "At every place of the axis and each of the 70 matrices, the gap between what the correct group and the wrong group send is multiplied by its shared part, 1 minus chance over gap, and by zero where chance is larger. No place, layer or matrix is picked by hand, and each matrix has its own gap and its own shared part.",
+  "target": "Each wrong answer's own sending at that matrix and place, moved by that shared gap, at the size nearest to its present output. The change this asks of the matrix output is averaged over the 30 answers at each place, together with their average input. No learned scale enters.",
+  "edit": "a2-pattern's, unchanged: for each matrix the smallest change that makes the average input of every place produce the average change asked there, keeping the input directions stronger than what two halves of the wrong group disagree on. Full strength. All 70 together in one copy of the original model, in its native BF16 storage.",
+  "test": "First the traces: the same 60 answers replayed token for token through the edited model on GPU0, read at the 70 matrices (what each sends, against what was asked) and in the turns. Only if the wrong pattern has moved as asked does the edited model answer the 60 questions and round one's 28."
+ },
+ "parameters": {
+  "shared_part": {
+   "measured_from": "studies/04-round-2-overlap/runs/sent-overlap/recurrence.npz",
+   "derivation": "max(0, 1 - chance / gap) at each place and matrix. The squared gap between two group means is, on average, the squared shared gap plus what chance adds; chance is the sum over the two groups of the members' spread divided by their count.",
+   "scales_with": "the number of members in each group and their spread at that place and matrix"
+  },
+  "singular_value_floor": {
+   "measured_from": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs",
+   "derivation": "the largest singular value of (average input of one half of the wrong group minus average input of the other half) / 2, per matrix. That difference holds nothing the group shares. An input direction is kept if it is stronger than this.",
+   "scales_with": "the number of wrong answers and how much their inputs differ at each place"
+  },
+  "raw_output_size": {
+   "measured_from": "studies/04-round-2-overlap/runs/sent-overlap/sent",
+   "derivation": "s = <y, u> / <u, u>, with y the answer's matrix output and u its sending moved by the shared gap: the norm after the matrix discards the size of its output, so the size asked is the one nearest to the present output.",
+   "scales_with": "each input"
+  }
+ },
+ "prediction": {
+  "expected_observation": "The change asked of each matrix is a small part of its output, of the order of the shared move (about 14% inside the stretch, less outside), and the matrices change several times less than in a2-pattern. At the first matrix, inside places 150 to 265, the wrong group's sending moves along the gap by most of what was asked and less than half a gap sideways. The correct group's sending moves about as far as the wrong group's. Deeper along the path the travel is larger than at the first matrix.",
+  "failures_only": "Read only if the traces moved as asked: per field, original beside edited, for the 60 and for round one's 28, damage to correct answers separately."
+ },
+ "would_weaken_it": "The math of the correction: the first matrix's sending does not move as asked. The hypothesis: the wrong pattern moves to the correct one along the path, the model still reads the question, and no wrong answer changes how the descent enters.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/sent-overlap",
+  "studies/04-round-2-overlap/runs/trace-overlap",
+  "studies/04-round-2-overlap/runs/wide-overlap",
+  "studies/04-round-2-overlap/runs/full-overlap",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/a2-sent"
+ ]
+}

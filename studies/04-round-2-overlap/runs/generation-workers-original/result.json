@@ -1,0 +1,58 @@
+{
+ "run": "generation-workers-original",
+ "kind": "instrument qualification on the unchanged original model: no weight is written, no loss is computed, nothing is corrected",
+ "status": "completed: all four steps ran in order and each exited 0, 2026-11-15 12:03:32 CT",
+ "closed": "2026-11-15 12:03:32 CT, complete: all four steps ran in order and each exited 0",
+ "accepted": {
+  "by": "weight-research-astra",
+  "at": "2026-11-15 12:12:21 CT (commit 6a4fcd29)",
+  "record": "records/retrospectives/2026-11-15-generation-workers-result-astra.md",
+  "assessed_result_sha256": "08baf1b6bbb34e8c82c7772f37121ffa0cef0a2c7d509192a64cfe93c9c9b370",
+  "added_after_the_assessment": "this file as assessed (commit 2222ddf1) had no `status`, `accepted` or `release`: the three were added at 12:15 PM CT, and the fourth line of `failures_only` now says the arrays left. Nothing else changed."
+ },
+ "release": {
+  "what": "the kept reading's 107 arrays, as reading/reading.json inventories them: nodes/<merge>/state.npy at the 105 merges, terminal/l_out.npy and terminal/result_norm.npy, 12,952,782,208 bytes",
+  "why_they_could_leave": "every row was compared with the original control bit for bit (compare/integrated.json), the two readings' inventories name the same 107 files at the same sha256, and the folders held exactly those files; the control stays here (runs/whole-states-original/reading) and in the bucket. Named for release by Astra's assessment, as the declared close.",
+  "when": "2026-11-15 12:14:10 CT",
+  "free_bytes": {"before": 173970636800, "after": 186928041984},
+  "deleted_files_still_held_open": "none of this run (held_deleted.py look at 12:14 PM CT)",
+  "kept": "reading/reading.json, reading/row-map.json, reading/answers, own, logs, qualification, compare, declaration.json, run.sh and this file, here and in the bucket (110 files read back at 12:07 PM CT; this file sent again after this change). The bucket copy of this run holds no arrays."
+ },
+ "ran": {
+  "command": "studies/04-round-2-overlap/runs/generation-workers-original/run.sh capture reading held account",
+  "from_commit": "81f6ea206a7928f0fbb0cb92c0cae65adad470aa",
+  "declaration_revision": "1, reviewed by Astra at sha256 f5e3338d1c2674e81e76676411dbffedc844679a64604799281fbd5c2a93c43b and admitted 2026-11-15 11:52:03 CT (records/retrospectives/2026-11-15-generation-workers-admission-astra.md); with her admission field the file is sha256 02a949f63b0f3435d1501694af7dd825abbf6b256a63819d05777f43e54a8199 and that is what the capture's text.json names",
+  "reader_protocol": "records/development/2026-11-12-path-forward/reader-protocol/controlled-bf16-9-qualifying.json, sha256 6fe1855840793355165a497cf88631cd248bc04ae870b8c3953c5cd3a84ce790",
+  "by": "weight-research-perfomance",
+  "card": "card 0 (NVIDIA GeForce RTX 5080, driver 615.71.10), each recorder call under its lock; no other process was listed on the card at any of 41 askings",
+  "clock": {
+   "run.sh started": "11:59:37 AM CT",
+   "capture": "scope held 11:59:46, the three calls began 11:59:59, 12:00:36 and 12:01:09, closed 12:01:44 PM CT",
+   "reading": "scope held 12:01:55, closed 12:02:49 PM CT",
+   "held": "12:02:59 PM CT",
+   "account": "12:03:32 PM CT"
+  },
+  "load_average": "7.0 at the first asking of the card, 11.1 midway, 6.7 at the close: not a quiet machine"
+ },
+ "prediction_vs_result": {
+  "1_capture": "As predicted. 30 of 30 answers were generated with the recordings' tokens (14,592 answer steps) and registered by the identity of their inputs, in three calls of ten. Each call says it ran 3 workers, took each of its ten cases once (three or four a worker) and left 9 schedulers' totals: 27 in all, no split unmarked, every split one range (10,600, 9,978 and 8,906 splits a call). Answers 11 to 30, which the workers recorder had never generated, and the second and third calls stand as the first ten did.",
+  "2_reading_and_held": "As predicted. states_reading_roles.py kept all thirty streams as 19,751 rows at 105 merges and the two terminal arrays, with no second pass, each stream removed as it was kept; reader_protocol_roles.held took the capture and that reading as the protocol's generation (role `kept from the generation`; qualification/held-by-the-protocol.json).",
+  "3_account": "As predicted. Every row is the original control's bits: 19,751 rows (14,592 answer steps and 5,159 question positions) at all 105 merges, l_out at 19,751 rows and result_norm at 14,592, no row different and the largest difference 0.0; 30 of 30 answers at the original's computation, `apart` empty (compare/integrated.json). The comparison is across two executions and says so: the workers recorder 5c893cd713e3… on the kept libraries 8c8b96aaa287… against the installed recorder 0b4ea036c2c3… on the installed libraries 06ffecec44d0…, the same model, card and driver.",
+  "not_predicted_and_recorded": "The capture took 108.3 s, 101.1 of them in the three recorder calls (37.4, 33.1 and 30.6 s; 34.5, 30.7 and 28.3 s from the workers' start), with 0.0 s on its own clock for exports and for registrations; an answer took 5.4 to 13.8 s in its worker. The reading took 49.1 s. The recorder held 7,878 MiB of the card at most. run.sh's four steps, each with the research verifier and the 61 bound files checked before it, took 3 min 55 s."
+ },
+ "failures_only": [
+  "None of the seven conditions the declaration names occurred: no row off the control's bits, no answer worded otherwise, no call without its contexts' totals or cases, no kept row that is not the engine's ADD of its operands, no refusal by the protocol, no crash or hang, no step ended by the scope check or by a source off its bound bytes.",
+  "The machine was loaded (load average 7.0 to 11.1), so the seconds are not a quiet machine's; no time was a condition.",
+  "A commit of this seat (9896e0ee, 12:02:10 PM CT, a speed record and the index) landed while the reading ran. It touched no bound file, and the bound check before `held` and before `account` passed after it.",
+  "The kept reading's arrays (12.95 GB) stayed in the run's folder through Astra's assessment, because her admission says to keep all 105 merges and the terminal arrays, and left at 12:14:10 PM CT once she had assessed (`release`)."
+ ],
+ "what_this_changes": "A step's capture by three engine contexts in one recorder process, with its states kept from that generation's own streams and no second pass, gives the original's own computation at every answer step and every question position of the thirty fitting answers, with every call and context accounted for. The instrument is qualified on the original only. Nothing is adopted by this result: the readers and controlled-bf16-8 are unchanged, and a protocol that admits a changed state (controlled-bf16-9, binding this run as its integrated qualification) is made only after Astra assesses it. For scale and not as a comparison of like with like: the stopped loop's first pass took 205.1 s to generate its thirty answers with the installed recorder and one context, and a separate pass of the installed recorder for the control's states took 235.7 s. This is not a prerequisite of the direct-overlap step and nothing about that step waits on it.",
+ "records": {
+  "account": "compare/integrated.json",
+  "held": "qualification/held-by-the-protocol.json",
+  "capture": "own/text.json, own/sources.json, logs/capture.log, logs/capture.scope.json, logs/capture.sources.json",
+  "reading": "reading/reading.json, reading/row-map.json, logs/reading.log, logs/reading.scope.json, logs/reading.sources.json",
+  "card": "logs/card-0.jsonl (41 askings, every 3 s)",
+  "sources_each_step_loaded": {"capture": 33, "reading": 35, "held": 27}
+ }
+}

@@ -35,8 +35,8 @@ All nine full GGUF files together total **56.26 GiB**. Each BF16 file is exactly
 
 ## Transfer information
 
-- The machine-readable inventory is [checkpoint-upload-inventory-2026-11-07.json](../records/checkpoint-upload-inventory-2026-11-07.json). It includes absolute paths, byte sizes, SHA-256 values, provenance reports, companion tensors, and retention guidance.
-- The checksum list is [checkpoint-upload-SHA256SUMS-2026-11-07.txt](../records/checkpoint-upload-SHA256SUMS-2026-11-07.txt). Its filenames are relative to the physical model directory above.
+- The machine-readable inventory is checkpoint-upload-inventory-2026-11-07.json. It includes absolute paths, byte sizes, SHA-256 values, provenance reports, companion tensors, and retention guidance.
+- The checksum list is checkpoint-upload-SHA256SUMS-2026-11-07.txt. Its filenames are relative to the physical model directory above.
 - Most full-file checksums were recorded when the checkpoints were created; this inventory rechecked their existence and sizes rather than rereading every large file. The reverse control was freshly rehashed and matched its recorded checksum.
 - Verify source and uploaded content against the expected SHA-256 and byte size before any local removal. A multipart object ETag is not a substitute for a SHA-256 verification.
 - Archive the companion before/after tensors and the referenced edit reports with the model. Keep these small files, the research reports, custom code, and captured evidence locally.

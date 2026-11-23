@@ -1,0 +1,296 @@
+{
+  "events": 613,
+  "merge": 1,
+  "reference_events": 560,
+  "retained_total_merges": 105,
+  "pairs": 613,
+  "operation_counts": {
+    "finite_local_endpoint_evaluations": 3,
+    "local_jvps": 1,
+    "native_acquisitions": 0,
+    "weight_updates": 0
+  },
+  "input_fp32_subtraction_error_squared": 0.0,
+  "baseline_branch_discrepancy": {
+    "predicted_squared": 190104512.43873265,
+    "actual_squared": 190104542.06200418,
+    "dot": 190104527.1832207,
+    "difference_squared": 0.13429538867445573,
+    "cosine": 0.9999999996467883,
+    "actual_to_predicted_norm_ratio": 1.0000000779131173
+  },
+  "after_branch_discrepancy": {
+    "predicted_squared": 190104625.93597972,
+    "actual_squared": 190104617.34675878,
+    "dot": 190104621.57554728,
+    "difference_squared": 0.13164393753256348,
+    "cosine": 0.9999999996537594,
+    "actual_to_predicted_norm_ratio": 0.9999999774092266
+  },
+  "branch_ste": {
+    "predicted_squared": 0.0008247193028251985,
+    "actual_squared": 1.1575072667726145,
+    "dot": 0.001017186960470348,
+    "difference_squared": 1.156297612154499,
+    "cosine": 0.03292197201382978,
+    "actual_to_predicted_norm_ratio": 37.463537504326354
+  },
+  "branch_finite": {
+    "predicted_squared": 1.1420773231835297,
+    "actual_squared": 1.1575072667726145,
+    "dot": 1.010521417553927,
+    "difference_squared": 0.2785417548482901,
+    "cosine": 0.8788927972915662,
+    "actual_to_predicted_norm_ratio": 1.006732546096489
+  },
+  "branch_input_leg": {
+    "predicted_squared": 1.1420518978730407,
+    "actual_squared": 1.1575072667726145,
+    "dot": 1.0104973777549635,
+    "difference_squared": 0.2785644091357285,
+    "cosine": 0.8788816719061481,
+    "actual_to_predicted_norm_ratio": 1.0067437523933092
+  },
+  "branch_weight_leg_after_input": {
+    "predicted_squared": 2.181785504132652e-05,
+    "actual_squared": 1.1575072667726145,
+    "dot": 2.403979896362956e-05,
+    "difference_squared": 1.1574810050297284,
+    "cosine": 0.00478368905657601,
+    "actual_to_predicted_norm_ratio": 230.33282654920163
+  },
+  "weight_operand_changes": {
+    "coordinates": 9437184,
+    "changed_codes": 962,
+    "before_rounding_displacement_squared": 4.0020086349462346e-11,
+    "quantized_displacement_squared": 4.0020086349462346e-11
+  },
+  "input_leg_squared": 1.1420518978730407,
+  "weight_leg_squared": 2.181785504132652e-05,
+  "input_weight_cross": 3.607455447525343e-06,
+  "leg_reconstruction_error_squared": 0.0,
+  "weighted_residual_ste": {
+    "predicted_squared": 1.3965353101764752e-16,
+    "actual_squared": 2.0998130847857707e-13,
+    "dot": 7.641392818267232e-17,
+    "difference_squared": 2.0996813415322936e-13,
+    "cosine": 0.014110949791083571,
+    "actual_to_predicted_norm_ratio": 38.77612068213413
+  },
+  "weighted_residual_finite": {
+    "predicted_squared": 2.2403439187214985e-13,
+    "actual_squared": 2.0998130847857707e-13,
+    "dot": 4.175326532534774e-14,
+    "difference_squared": 3.505091697000315e-13,
+    "cosine": 0.1925053395459117,
+    "actual_to_predicted_norm_ratio": 0.968128427129828
+  },
+  "weighted_residual_input_leg": {
+    "predicted_squared": 2.2405033224322246e-13,
+    "actual_squared": 2.0998130847857707e-13,
+    "dot": 4.176121080827169e-14,
+    "difference_squared": 3.5050921910525614e-13,
+    "cosine": 0.19253512310392176,
+    "actual_to_predicted_norm_ratio": 0.9680939870986124
+  },
+  "weighted_loss": {
+    "native_before": 5.824884282959549e-07,
+    "native_after": 5.824884531779773e-07,
+    "anchored_after": 5.82488893081994e-07,
+    "jvp_prediction": 5.824884025757624e-07,
+    "crossed_input_only": 5.824888947850781e-07
+  },
+  "groups": [
+    {
+      "columns": 1,
+      "events": 440,
+      "calls": 440,
+      "operand_policy": "FP32 operands/accumulation, separate native-size calls",
+      "branch_ste": {
+        "predicted_squared": 0.000574650641169815,
+        "actual_squared": 0.0005799049027537661,
+        "dot": 0.0005751685099687149,
+        "difference_squared": 4.218523986151235e-06,
+        "cosine": 0.9963565099056111,
+        "actual_to_predicted_norm_ratio": 1.004561298073017
+      },
+      "branch_finite": {
+        "predicted_squared": 0.0006065877280021005,
+        "actual_squared": 0.0005799049027537661,
+        "dot": 0.0005756163668758059,
+        "difference_squared": 3.525989700425445e-05,
+        "cosine": 0.9705276971547955,
+        "actual_to_predicted_norm_ratio": 0.9777584555023953
+      },
+      "weighted_residual_ste": {
+        "predicted_squared": 8.876076722705194e-18,
+        "actual_squared": 8.97961000667783e-18,
+        "dot": 8.873673034976615e-18,
+        "difference_squared": 1.0834065942979185e-19,
+        "cosine": 0.9939491370806292,
+        "actual_to_predicted_norm_ratio": 1.0058152449699238
+      },
+      "weighted_residual_finite": {
+        "predicted_squared": 9.133988637072352e-18,
+        "actual_squared": 8.97961000667783e-18,
+        "dot": 8.83154373435122e-18,
+        "difference_squared": 4.505111750477427e-19,
+        "cosine": 0.9751639836024987,
+        "actual_to_predicted_norm_ratio": 0.9915132086420094
+      },
+      "operand_changes": null
+    },
+    {
+      "columns": 13,
+      "events": 13,
+      "calls": 1,
+      "operand_policy": "BF16-valued operands, CPU F32 accumulation",
+      "branch_ste": {
+        "predicted_squared": 2.2104972785656184e-05,
+        "actual_squared": 0.05830228263413756,
+        "dot": -9.743878645381592e-06,
+        "difference_squared": 0.05834387536421397,
+        "cosine": -0.008583098467893454,
+        "actual_to_predicted_norm_ratio": 51.35678008355982
+      },
+      "branch_finite": {
+        "predicted_squared": 0.05845325645740394,
+        "actual_squared": 0.05830228263413756,
+        "dot": -0.05415979433872016,
+        "difference_squared": 0.2250751277689818,
+        "cosine": -0.9277476690019347,
+        "actual_to_predicted_norm_ratio": 0.9987077586194409
+      },
+      "weighted_residual_ste": {
+        "predicted_squared": 1.3624409855680467e-17,
+        "actual_squared": 8.125423076446197e-14,
+        "dot": -1.7403591732372858e-17,
+        "difference_squared": 8.13026623577824e-14,
+        "cosine": -0.016540820365982967,
+        "actual_to_predicted_norm_ratio": 77.2261068702883
+      },
+      "weighted_residual_finite": {
+        "predicted_squared": 8.411581967139882e-14,
+        "actual_squared": 8.125423076446197e-14,
+        "dot": -8.04206957238385e-14,
+        "difference_squared": 3.2621144188353784e-13,
+        "cosine": -0.9727606486457476,
+        "actual_to_predicted_norm_ratio": 0.9828430046796994
+      },
+      "operand_changes": {
+        "normalized": {
+          "coordinates": 19968,
+          "changed_codes": 9,
+          "before_rounding_displacement_squared": 1.7991351780240082e-07,
+          "quantized_displacement_squared": 1.9328032294652076e-05
+        },
+        "down_input": {
+          "coordinates": 79872,
+          "changed_codes": 1170,
+          "before_rounding_displacement_squared": 3.3652351348238646e-05,
+          "quantized_displacement_squared": 0.0010773664015533146
+        }
+      }
+    },
+    {
+      "columns": 32,
+      "events": 160,
+      "calls": 5,
+      "operand_policy": "BF16-valued operands, CPU F32 accumulation",
+      "branch_ste": {
+        "predicted_squared": 0.00022796368886972745,
+        "actual_squared": 1.098625079235723,
+        "dot": 0.0004517623291470145,
+        "difference_squared": 1.097949518266299,
+        "cosine": 0.028546470624217717,
+        "actual_to_predicted_norm_ratio": 69.42116800806893
+      },
+      "branch_finite": {
+        "predicted_squared": 1.0830174789981237,
+        "actual_squared": 1.098625079235723,
+        "dot": 1.0641055955257714,
+        "difference_squared": 0.05343136718230398,
+        "cosine": 0.9755336164647279,
+        "actual_to_predicted_norm_ratio": 1.0071798336481135
+      },
+      "weighted_residual_ste": {
+        "predicted_squared": 1.1715304443926185e-16,
+        "actual_squared": 1.287180981041084e-13,
+        "dot": 8.494384688006856e-17,
+        "difference_squared": 1.2866536345478756e-13,
+        "cosine": 0.02187435865304661,
+        "actual_to_predicted_norm_ratio": 33.146907592290496
+      },
+      "weighted_residual_finite": {
+        "predicted_squared": 1.3990943821211396e-13,
+        "actual_squared": 1.287180981041084e-13,
+        "dot": 1.2216512950545192e-13,
+        "difference_squared": 2.4297277305318562e-14,
+        "cosine": 0.9103406715670714,
+        "actual_to_predicted_norm_ratio": 0.9591715765807042
+      },
+      "operand_changes": {
+        "normalized": {
+          "coordinates": 245760,
+          "changed_codes": 117,
+          "before_rounding_displacement_squared": 1.3974298278060883e-06,
+          "quantized_displacement_squared": 0.00026768638898388986
+        },
+        "down_input": {
+          "coordinates": 983040,
+          "changed_codes": 16560,
+          "before_rounding_displacement_squared": 0.00047438556531543944,
+          "quantized_displacement_squared": 0.010504587255447579
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "CPU F32 accumulation of BF16-valued operands is not native CUDA kernel reproduction.",
+    "Observed incoming displacement removes upstream tangent estimation from this local comparison.",
+    "Local results cover every event at one FFN; they do not quantify the whole 105-merge causal error fraction.",
+    "Branch finite differences use F64 subtraction; anchored endpoints and tangent propagation retain F32 model arithmetic.",
+    "The original reference/tolerance and 105-merge normalization are retained; there is no local renormalization.",
+    "No fitted rate, native generation, new optimizer step or automatic pass/fail fidelity threshold."
+  ],
+  "prediction_vs_result": {
+    "prediction": "Compare rounded finite and observed-input STE responses with native change, before and after the original residual transformation.",
+    "measured_cosines": {
+      "branch_ste": 0.03292197201382978,
+      "branch_finite": 0.8788927972915662,
+      "weighted_residual_ste": 0.014110949791083571,
+      "weighted_residual_finite": 0.1925053395459117
+    },
+    "interpretation": "Measurements complete; independent causal interpretation pending. No threshold or automatic causal verdict is applied."
+  },
+  "failures_only": {
+    "selection": "None: every recorded event and correspondence pair is included, including zero-loss events.",
+    "unresolved_limits": [
+      "CPU F32 accumulation of BF16-valued operands is not native CUDA kernel reproduction.",
+      "Observed incoming displacement removes upstream tangent estimation from this local comparison.",
+      "Local results cover every event at one FFN; they do not quantify the whole 105-merge causal error fraction.",
+      "Branch finite differences use F64 subtraction; anchored endpoints and tangent propagation retain F32 model arithmetic.",
+      "The original reference/tolerance and 105-merge normalization are retained; there is no local renormalization.",
+      "No fitted rate, native generation, new optimizer step or automatic pass/fail fidelity threshold."
+    ]
+  },
+  "what_this_changes": "Adds a retained-transition local response measurement for independent assessment. It changes no training source, weights, reference, tolerance, rate or stopping decision; any next experiment remains a separate research decision.",
+  "retained_scalar_differences": {
+    "before": 1.0587911840678754e-22,
+    "after": 0.0
+  },
+  "inputs": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/inputs.json",
+    "sha256": "726f378d0f0d97ca87fefdfdd46be76719001109bac6400effece5040f89fbcd"
+  },
+  "program": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/replay.py",
+    "sha256": "799ea7a3950ff023eb63494c5358b24c326c17805f4508c1b00d7cc8a54a0a7f"
+  },
+  "backend": {
+    "torch": "2.15.0+cu132",
+    "numpy": "2.5.5",
+    "device": "cpu",
+    "cpu_threads": 1
+  }
+}

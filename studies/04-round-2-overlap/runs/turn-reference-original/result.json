@@ -1,0 +1,23 @@
+{
+  "status": "compiled_original_reference",
+  "complete": true,
+  "completed_at": "2026-11-15T20:41:13.938233-06:00",
+  "reference": "expanded-004-h1",
+  "witnesses": 14,
+  "original_successes": 15,
+  "reference_shape": [
+    560,
+    105,
+    1536
+  ],
+  "seconds": 638.6095321869943,
+  "reference_sha256": "1be12cf319a120c009917218f3567a2fbed1fa48b5fc7dc1f90b1dbc3c5cc80d",
+  "weight_updates": 0,
+  "generated_answers": 0,
+  "wrong_trace_evaluations": 0,
+  "repair_claim": false,
+  "closure": false,
+  "prediction_vs_result": "One observed original reference and its complete component RMS boundary compiled from every declared fitting success.",
+  "failures_only": "RMS is a measured variation scale, not a confidence bound; some original successes may stand outside it. Coordinate bounds can admit unobserved combinations, and chronological correspondence is not proof of shared reasoning.",
+  "what_this_changes": "Supplies original-only reference data for a separately declared one-prompt experiment; no training pair, native step, closure or post-closure evaluation is admitted."
+}

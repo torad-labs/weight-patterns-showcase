@@ -1,0 +1,685 @@
+{
+  "program": {
+    "record": "records/development/2026-11-16-component-gradient-diagnosis/diagnose.py",
+    "sha256": "27feb434d8df8a81802362a69d3d048f330e76c1c88747d3b9a0183645073c38"
+  },
+  "source_declaration": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/declaration.json",
+    "sha256": "f95993b1291d08007e5c4bb59cf91c6260233c8a73bb59a794ca4dce74a2dc05"
+  },
+  "precision_source": {
+    "record": "records/development/2026-11-16-accumulated-native-response/run.py",
+    "sha256": "a910e3f44adb15c30278e48b85627c16190f3f871c3cec6ab729158e76511164"
+  },
+  "checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/final-state.json",
+    "sha256": "b151b9e696817026bbaab8f027ec41106c068461e400535bcec0e65d1e27db6a"
+  },
+  "measurement": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/measurement.json",
+    "sha256": "1545cc9c572c1b1ab64b4ef2de1c772429d1edf67f17d4ba20ab6c20bcf239fa"
+  },
+  "overrides": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/final-overrides.npz",
+    "sha256": "48571412e5a6ee6bc2e59389c10df405c3fd3160489f3472cd82ebabc52aa5b9"
+  },
+  "seed": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "sha256": "0dfed0e7f5e0430e693def81549785baf863e4dd9a4f337f8d584d709a6d2a1a"
+  },
+  "raw": {
+    "stream.f32": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/capture/raw/discovery-05-channel-h1/stream.f32",
+      "sha256": "7bc886941967a7b2874617912e8e207e85a994f374fb992c4e6b21f6db0dacb8"
+    },
+    "stream.jsonl": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/capture/raw/discovery-05-channel-h1/stream.jsonl",
+      "sha256": "54713ced3ebd3e9366786b5876a9f02a8352ef594cdb61c43039c8f9e8f9aa7c"
+    }
+  },
+  "reading": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "sha256": "bdcb750aa79e48c5ab34a01b010d31f7722c313e417abd5dccc621cadc9ed30b"
+  },
+  "reconstruction_original": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/declaration.json",
+    "sha256": "13aab30b94bd3e247537bc750750aad5a98562b4bab644ba3aeb4ced95fb3307"
+  },
+  "reconstruction_helper": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/replay.py",
+    "sha256": "3bab1f6fccc57676e2eed0a85dabf4fc8a0be232c32468e3dd99892d235a0092"
+  },
+  "reference": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+  },
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "selected_merge": 0,
+  "physical_gpu": 1,
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+  "cpu_threads": 1,
+  "cuda_precision": {
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "matmul_allow_bf16_reduced_precision_reduction": false
+  },
+  "operation": "component-gradient-diagnosis",
+  "prediction": "A small component norm relative to full norm with little opposing projection supports weak conditional drive; a negative component dot other identifies opposing drive, and a nonpositive component dot full means the full negative gradient is not a strict descent direction for this component. Both mechanisms may coexist. No threshold classifies smallness.",
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "records/development/2026-11-16-component-gradient-diagnosis/diagnose.py",
+    "events": "observability/events.jsonl",
+    "mode": "direct Recorder API",
+    "operations": [
+      "diagnostic.prepare",
+      "proposal.compute",
+      "diagnostic.compare"
+    ],
+    "sources": [
+      {
+        "record": "records/development/2026-11-16-component-gradient-diagnosis/diagnose.py",
+        "sha256": "27feb434d8df8a81802362a69d3d048f330e76c1c88747d3b9a0183645073c38"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      }
+    ]
+  },
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/export_stream_traces.py",
+      "sha256": "c0ec25ce2c21b6f2f6f48b208002fef5de54cb14184423bfee51bde9a012a75b"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/late_start.py",
+      "sha256": "fdf4f5fde81b5f2072b32faebf41b372689106c193b4f57bc0907eb3051e73f8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/recorder_identity.py",
+      "sha256": "7a2b90fdc1b2bbfa0a95554e68928d74dcc9dca93b513256e24660f81ef21d38"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/run_a_baseline.py",
+      "sha256": "3c53b20317332d1f8ed4797ec0220fcb916dc573d97bb4211ca186d63af62ff6"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/run_a_observation.py",
+      "sha256": "33990f82d6f22a10bde5f3cd7c8122fb33da606532353ac8ad7d45782ef463be"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/compare_occurrences.py",
+      "sha256": "330c8201b63dd67b2d8963685eaafdcf0ec2fbed5df7ad926eb7575d6f47a2e0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/group_observation.py",
+      "sha256": "bd4c687514083a345feb364dfcb07cb172ab95606ac784538ede61be9bec034c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/__init__.py",
+      "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/__main__.py",
+      "sha256": "06cae09b6e7f6f122cb435d09f819e29e916fe0af2ef53d3bf943bd25965e8b5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/instrumentation.py",
+      "sha256": "30ba0f62f1542787c15d073b3bd22927cbf187d99525e8713a9eabbda7a3bcff"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/__init__.py",
+      "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/fed_replay.py",
+      "sha256": "87dac142d2f396f40a5fd653cb293e4371e2d94d645505c010a1b733092aee97"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/sent_overlap.py",
+      "sha256": "b4b315e5bcdcf53b3f1b4f07c58c943ebf8fcaa425068ed3630f265ded2b0995"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/trace_overlap.py",
+      "sha256": "a679203e08cb42c87e6c7e46fb62f19f32af867033ffe6c4cfb8b97881322e81"
+    },
+    {
+      "record": "code/signal-trace/pipeline/paths.py",
+      "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/archive_inputs.py",
+      "sha256": "0e96063d72ebd2f0b72d6f50b0941298dbcb7ff75c051740b0ac5e795386bc58"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+      "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+      "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/a2.py",
+      "sha256": "6a0f398eceb0224de8075f179c6818c0614b36863a9a1dd54c7282283417798e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/a2_pattern.py",
+      "sha256": "39b9c11fd9161029c481557cb206e70aa16c8d15de865febd205139bd1336e6a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/bf16_direction.py",
+      "sha256": "79f6a4135806b22fe4ffc89928032ec476f9e34c920e10ba4a084fef13fdc827"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_score.py",
+      "sha256": "d429d3c52acdb5dc5954dee9a1afc5b58474c4e85ae88bedaaa5f5d7d3a00579"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+      "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/correction.py",
+      "sha256": "11f7ee7e2da40dca7b207f43a2431ae247085c676b3cbacf4f74525b9f56b670"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/field.py",
+      "sha256": "641619baa4a4959eded52907c2154525ef976828907ed95825b7e31edea16f7b"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_capture.py",
+      "sha256": "5faf388788d0fac2d944dfb62481b2c54445a103f6cd65d3cff04f397f473901"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_install.py",
+      "sha256": "982a8c1056599cb37184ddfa74e1971477080e3f9f97c58c4bf8feb99c0a2177"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_layout.py",
+      "sha256": "f411405196a3be873be6fe63b755d6880e030c65f51688d0073ebebd887a9250"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reading.py",
+      "sha256": "81110215edac4d5ba61d4cf786ac50a1488b9286d4ef19a58f6f193e07c493cf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reference.py",
+      "sha256": "ca4b2a5a2d61b355ef000668f92344cce7a3dfa8b081236aabfc3ac02d5602ed"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/fused.py",
+      "sha256": "538eafa61bd9dc9112fe39833cb6b797e8104da2db73500b3bc47e7b9fff162d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_late.py",
+      "sha256": "40ba298a423ec4bbb25597cbae51ce05b3a90755b16cb55722176c110ddd8c52"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_requests.py",
+      "sha256": "9844a0ccf63069f6b02c9caadb1b578c7c24ae9b87800f3642282ffb0b110a7f"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_rows.py",
+      "sha256": "e1e608adf7e969a52f602f46a6a28a73b5b2c39eb1ca8a891c9575117be3e273"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_run.py",
+      "sha256": "0b309f58c2dbd15c19719a69e8d2048df62d04c55282057aa79f01e176b4cf60"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_sets.py",
+      "sha256": "ac05cdc4d510470f9c41e915c0e5e5dc75c175e05c66339ffba20eb1e4c47e0a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_state.py",
+      "sha256": "7986dedac77faa49ad7aed20945e69c18438edee97c0ab2fa7f1d4ac51db845e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_sweep.py",
+      "sha256": "1374eb4bed648047136e13064f56d9908515e23df3f44d915542957e6b33c8ee"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+      "sha256": "919067f38b7764e6a098b5b8be2316e98133f4eeab439735be56785fe2f2763a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/joint_functional_step.py",
+      "sha256": "f6f8bbd72e6034d1474c9cbc50dbb770ec53a8cf03bff695039f3d00039c8c55"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/joint_inverse.py",
+      "sha256": "7153107edba6ed9b9b41536f521ce1ffca6bd5652efe285a3e4ed330c51eca7c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/joint_inverse_device.py",
+      "sha256": "5bf646323abc1344edf7f2c7be60add2840a98891898a2553c247bdced598cd4"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/ladder.py",
+      "sha256": "99a28aebceca2191fb25f93dd403dbbb0368a85f101c056321fc8a9cd187079e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/model_trace_response.py",
+      "sha256": "ca236c285a93b96ed082f7399771630bf84e39a272ab0afa8d102bf0db212dc0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/native_graph.py",
+      "sha256": "127de7e16bbdc48e1f3646dcb4f119ea832df80d11d70a799503f0025f838acf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/pair_loop.py",
+      "sha256": "b325adf627112d0db50051d2b0ef51051a2aa55e2d7ee3eb42ea52156621b788"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/reference_rule.py",
+      "sha256": "3bee52be452931486d397f5d9f6733a970a38470a1e1c2f5101b1992128b0241"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/set_points.py",
+      "sha256": "ae27418608b3878488623c51d14cff29bf6dc0b7417a0ff522a0b11d56f2a6d0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/state_tensors.py",
+      "sha256": "db56699e824bf72a5474da5839c25ff12e7397c3ca80a92b0bcc2ade9a74a000"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/success_sets.py",
+      "sha256": "71cc4d8edf8bff3a2fe07cbbcc8395a36508931bd35c6defe53d1a717bebe202"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/trace_gradient.py",
+      "sha256": "3fa643bcbb2aa61f1a1f3b83c923f1ff10494dba3d0b2fdb82377285916ad32d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/trace_response.py",
+      "sha256": "3c34c2ac01f61929adfbdb638c5199ebb9c42405ea7c9af888bf614c9fc06226"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/tube.py",
+      "sha256": "ec1701d642c41a07c5f3d976d4d76ee3a241ecc2babfc52c05ee0b976338e946"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_artifact.py",
+      "sha256": "aba25664d1bde0df4a5b26b7cea16de8b1bb04eb63c7f3772f0b99853671e94e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_correction.py",
+      "sha256": "e2c302136caeed811acfa9d957efe63b7bd8e52369d38537d81de22a9f8b40a9"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference.py",
+      "sha256": "886ed110f646d966fb287afc1eb4f468161a7551ed8d12263db8ae1ed68b04a0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference_run.py",
+      "sha256": "352e8d0e26aae28c04ffdb2fba6e5bc234fffdf0eb10ade73786d307ef54c129"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+      "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance_reference.py",
+      "sha256": "783e307423127ed98a24a3d9dc191eea55b8ec638bc9192527b27f9e36d767d5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance_run.py",
+      "sha256": "cc1cfe60813e984e4768b040f90f75999e7b9069a5d62cd407acd9e568b04943"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_device_loop.py",
+      "sha256": "8b418b3367f722f4893a26d654528d03702d9b0b6ded07c7b95ed58425e87892"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_gradient_loop.py",
+      "sha256": "73227e88b57c7463c9b01e90780da0d3323bd4ac3e56264a8760a5dc97d502fd"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_loop.py",
+      "sha256": "254013e043947a93f14d5dc46190669e81ed9227ad964648d8e61b4d09dda737"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_recovery.py",
+      "sha256": "1201b794f07cd0c68ed6abdf61e295420f4f0b39221e2812e6de7e0ed4e08b22"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_working_loop.py",
+      "sha256": "76e67dcb7e1de0e986d33c10a3a7ce475a6c495df64cc7061ac107c958bb9116"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_score.py",
+      "sha256": "6ff608a936d698ee5caa7a14fad36c400298ab66a7c64f2eed2b6aa0e4515aab"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/working_identity.py",
+      "sha256": "77f8a582faee00fe4ace022291f994cbd3927acced57b44852ffb3210c9478af"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/working_model.py",
+      "sha256": "19a525690a9506e5c1a9b0925240b0179163ef69110f28618f8a482d75265bd4"
+    },
+    {
+      "record": "code/signal-trace/recorder/observe-stream",
+      "sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060"
+    },
+    {
+      "record": "dependencies/recorder-workers/observe-stream-workers",
+      "sha256": "5c893cd713e352d05725c369e554238613fe0d3790633e23944c99e9d2f7b883"
+    },
+    {
+      "record": "records/development/2026-11-10-speed-review/declared-inputs/held_deleted.py",
+      "sha256": "1342acb28e80afba39ae32eece25709d1f6ef881c10b6fef467018f21be8a8b4"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/after-the-others.sh",
+      "sha256": "e8b1f20fe40b19f23a6c64d291889f8060a9f475498e61526543b73ac60dcebe"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/after_the_others.py",
+      "sha256": "6d86f85dbfb2632fe27902925b3c89aa44439d0277dd6599f99b2fdd2715e453"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/capture_bound.py",
+      "sha256": "8f8be0f98383c7d275dde225cdd5d87bdd9f160752417efe5f07fb5e5de96f7e"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/capture_registration.py",
+      "sha256": "56ed55d454fef4604e76ff73e003349654a0c03850d4b51f93e6661783cba873"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/cases.py",
+      "sha256": "4018f72fff9e8c33d00ee103bb12fa3ce933f86579d96ea5b8966ffd9d5881fc"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/generation_engine.py",
+      "sha256": "82749a8736e0bc8632ecdc2417a54c350701b776333a7d4e894059e4a3d1cf4e"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/native_events.py",
+      "sha256": "680a016a46a0981996edd1b75b4ed80e7c3f85a25f00e205fa843a04a17f6f91"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/native_events_protocol.py",
+      "sha256": "544a19c1d6b7994752769bd7ab16f8d2b100c0690f1f856b5597c7d4bb6a05da"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/reader_protocol.py",
+      "sha256": "483eff558e5024cda69578a03bb8029b5d4ea385ff4d41e184129a344941c15e"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/reader_protocol_roles.py",
+      "sha256": "da7ebb1ef9f6cfcb4da430b6a2d4fdd5bc011ba19ed20ea72282f8cad604e95b"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/reading_identity.py",
+      "sha256": "1d8df534df6ba1f655a72d67fcd3d225515a984703c984ff0cc905731529b0d9"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/recorder_engine.py",
+      "sha256": "43e0443a0c6262446eacbf2eab0af67e2654055827aa691b1363b13d5bf57f5a"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/states_reading_roles.py",
+      "sha256": "aa74a5ee11fbd6c5ef099a2ebc760b6d61d263a6cc0a7dceace31d062c4118ad"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/record-launcher-exit.py",
+      "sha256": "e8ecf723d3d07a08d84da31e15be3ac683cf9357dc7f5082942b953cde29a121"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/consumed_trace_archive.py",
+      "sha256": "d156dab96142b98086477fbd42c3be645e2c8dc91ab4d045fb2f3c9f1f218ef8"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_precision.py",
+      "sha256": "dca9f6aaa0cc93e5f216cfe35731acc07338acf639633fd953845d725f166e70"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_precision_accumulate_direct.py",
+      "sha256": "940d499a3caaaf735213926f0b3b9e0f2d0ca3acc98aace002c62b5097f04c93"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_v2.py",
+      "sha256": "f2021014e2774822689287446cf9db0ea58b6f371346b9cdeb6ed240320b1a21"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_v3.py",
+      "sha256": "a7cd560f943232a37126d980b1220b590137dee3ce2135279c2b985a6d72a610"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/replay.py",
+      "sha256": "3bab1f6fccc57676e2eed0a85dabf4fc8a0be232c32468e3dd99892d235a0092"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-held/replay.py",
+      "sha256": "e34b7854894ef4b3eca455f71e17d2736631d0e8a2101148e631b8c47bfd657a"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/per-merge-response/ffn-native-precision-adapter/adapter.py",
+      "sha256": "c4850aaf892619e6186af1e61e11dad6a136ed21790404187e3e816bdc9bf267"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/per-merge-response/measure.py",
+      "sha256": "861eba1b54f3f5bdcaec65a16de571946249e4b8fb05e1b26df1f2212dc2482e"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/replay_updates.py",
+      "sha256": "169e5c73139adcda9ccbab073219966b11ab4d7cf1aff7ea39a3cd725d7d4239"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/response-step-experiment/evaluate.py",
+      "sha256": "a071cbbcfdb4b7693239bfb02595a1936f1566f84b8a7474f76c6d379f6a2813"
+    },
+    {
+      "record": "tools/box-image/bin/wp_overlap.py",
+      "sha256": "38422bdaf694e0bf663e2ebc9b6eb86e6f578402c3ca876d99ddffd38fe8eaab"
+    },
+    {
+      "record": "tools/box-image/bin/wp_training_models.py",
+      "sha256": "50e35aefc382ea635560d85abda940d7f9341afe44471093de4eebf0b380a141"
+    },
+    {
+      "record": "tools/torad-research/src/bucket.ts",
+      "sha256": "48b394ad7b48f31787d535278422911fac2812ae69169b64f4f017add8d8f66a"
+    },
+    {
+      "record": "tools/torad-research/src/cache-hash.py",
+      "sha256": "ee7df1aa27518e8fd9c7b14726127174b48f56e5158cedc6f1ec3a54c221b320"
+    },
+    {
+      "record": "tools/torad-research/src/cli.ts",
+      "sha256": "29f1ff6a49a45750fd77ac3da24abb47e7b5ae3328876d95c6eef30b3daed790"
+    },
+    {
+      "record": "tools/torad-research/src/extract.ts",
+      "sha256": "015cfa869e224f5f5f15b7efdab1d44526cabec1dfabfc29fd38d98b2d77a9cb"
+    },
+    {
+      "record": "tools/torad-research/src/store.ts",
+      "sha256": "3feea0ee8ecef652b7afc9e3d08b5e415c5c3002ddc0504dfd2ca0963f7922ec"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/bf16_accumulation.py",
+      "sha256": "37e110803a85a0566ad2b39d4b7fd2d5f32c01a94f615b887e5844d988a7a35e"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/native_bf16_encoding.py",
+      "sha256": "8a75239dc0abde01df5a667b53e68b39ce846f98da8f5323c74675d294294677"
+    },
+    {
+      "record": "records/development/2026-11-16-accumulated-native-response/run.py",
+      "sha256": "a910e3f44adb15c30278e48b85627c16190f3f871c3cec6ab729158e76511164"
+    },
+    {
+      "record": "records/development/2026-11-16-accumulated-native-response/transition_response.py",
+      "sha256": "40253c1360bd649224f3a6dbcf49d1cc0a69e832373fc4a1947e5675ad4f1b9f"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/transition_geometry.py",
+      "sha256": "cb62c83b03a5434c86eaef76199f9c15d2f9f1cf2e09cd0fe4cb9deb190cdb98"
+    },
+    {
+      "record": "records/development/2026-11-16-component-gradient-diagnosis/diagnose.py",
+      "sha256": "27feb434d8df8a81802362a69d3d048f330e76c1c88747d3b9a0183645073c38"
+    }
+  ],
+  "method_step": 5,
+  "status": "prospective saved-state gradient diagnosis for independent review",
+  "declared_at": "2026-11-16T17:57:24.349594-06:00",
+  "why_this_direction": "The observed-through208 review finds dominant layer0 residual with negligible or adverse installed drive. Component gradients distinguish weak pullback from opposition by other merges without changing learning.",
+  "repeating_pattern_check": "Avoid explaining low drive solely from native response error or total loss. Inspect the selected largest saved component and complete remainder-of-objective gradient at the same retained state; do not introduce local reweighting or search.",
+  "hypothesis": "The dominant merge has either a weak conditional weight gradient, an opposing contribution from other merges, or both within the existing editable scope.",
+  "would_weaken_it": "A substantial component norm with positive useful projection onto the full gradient weakens intrinsic weak-drive and cancellation explanations for the unscaled continuous direction; it does not clear finite scale/remainder/rounding.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/declaration.json",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/final-overrides.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/declaration.json",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/capture/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/answer.json",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/residual-squared.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/capture/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/capture/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/reached11-complete-acquisition/cases.json",
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-component-gradient-206"
+  ],
+  "target_source": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "rule": "At exact retained206, compute the unchanged full weighted loss gradient and its largest saved merge component gradient over the full declared70-matrix scope. Record norms/projections/unused status without fitting, editing, native acquisition or any current-learner control. Fixed native history and original computational reference remain unchanged.",
+  "parameters": {
+    "selected_merge": {
+      "value": 0,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/residual-squared.npy",
+      "derivation": "Unique argmax of sums over all560 reference rows for each of105 merge columns, using math.fsum; ties fail.",
+      "scales_with": "The exact retained206 saved full residual map."
+    },
+    "history_events": {
+      "value": 612,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/loop/1/measurement.json",
+      "derivation": "Complete saved206 native history from bound prompt tokens and acquisition tokens except final emitted token.",
+      "scales_with": "Retained acquisition."
+    },
+    "matrices": {
+      "value": 70,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/declaration.json",
+      "derivation": "All existing declared editable matrices in existing order.",
+      "scales_with": "Bound editable scope."
+    },
+    "cpu_threads": {
+      "value": 1,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/declaration.json",
+      "derivation": "Exact retained learner setting.",
+      "scales_with": "Same calculation runtime."
+    },
+    "cuda_precision": {
+      "value": {
+        "matmul_allow_tf32": false,
+        "cudnn_allow_tf32": false,
+        "matmul_allow_bf16_reduced_precision_reduction": false
+      },
+      "measured_from": "records/development/2026-11-16-accumulated-native-response/run.py",
+      "derivation": "Exact explicit flags used by the retained learner before numerical execution.",
+      "scales_with": "Bound learner source."
+    },
+    "reverse_passes": {
+      "value": 2,
+      "measured_from": "records/development/2026-11-16-component-gradient-diagnosis/diagnose.py",
+      "derivation": "One selected-component derivative and one full derivative at the same unchanged graph/weights. No JVP or candidate.",
+      "scales_with": "Two objectives required for the requested comparison."
+    },
+    "maximum_retained_component_gradient_bytes": {
+      "value": 2604662784,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response/final-state.json",
+      "derivation": "Upper bound is one F32 component-gradient value per declared editable weight; only non-None component tensors are actually retained on CPU, and one full-gradient matrix is compared at a time.",
+      "scales_with": "Exact editable matrix inventory."
+    }
+  },
+  "plan": {
+    "record": "records/development/2026-11-16-component-gradient-diagnosis/plan.json",
+    "sha256": "46b051af07136f3c1b6b5f484a017b728b9ede67c46892b7ac27a06569667bf6"
+  },
+  "input_inventory": {
+    "record": "records/development/2026-11-16-component-gradient-diagnosis/inputs.json",
+    "sha256": "3fd1b3245d3c21b9582486851b19b71df61d33dd34584436d20f8f050fcef422"
+  },
+  "commands": [
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-component-gradient-diagnosis/diagnose.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-component-gradient-206"
+  ],
+  "what_went_wrong_before": "Aggregate loss/response and per-merge installed JVPs could not distinguish a weak component gradient from opposing contributions in the shared full gradient. No component gradient was previously retained. This diagnostic measures both derivatives at one exact saved state.",
+  "whole_build_review": {
+    "accepted": true,
+    "record": "records/retrospectives/2026-11-16-component-gradient-diagnosis-eli.json",
+    "sha256": "47cbddd0ba2a49da652d72439de7b9e64f304f04b8ae7bba298813f0d8077524",
+    "reviewed_declaration_sha256": "879633baf3bb736b832caa91d0efacac3c8a32e0006e5b400b0415321688a187",
+    "canonical_declaration_sha256_excluding_review": "e98b8ec856e319860b08ff02b99c3c3f18408e5f3b0b6b6eda3386282961ab62"
+  }
+}

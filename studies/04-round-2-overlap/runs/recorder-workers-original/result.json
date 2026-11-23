@@ -1,0 +1,204 @@
+{
+ "status": "completed November 15, 2026: run.sh compare from 9:34:38 to 9:43:38 AM CT on card 0, admitted by weight-research-astra (declaration revision 3, 9:31:21 AM CT); every arrangement ran and none was refused",
+ "written_by": "weight-research-perfomance",
+ "prediction_vs_result": {
+  "1_bytes": "Held in every arrangement: {'workers-1': '10 of 10', 'workers-2': '10 of 10', 'workers-3': '10 of 10', 'workers-3-kept': '10 of 10', 'installed-timed': '10 of 10', 'kept-timed': '10 of 10'}. Each of the ten answers' four files has the installed arrangement's sha256 with one, two and three contexts computing at once as threads of one process, on the installed scheduler and on the kept one, and with the engine's timers on. Nothing is apart ({}).",
+  "2_time": "With two workers the workers recorder writes 99.69 steps a second and with three 118.34, against 60.79 with one: 1.6399 and 1.9467 of one worker, inside the declared bounds (0.7 to about 2.3) and far from what processes beside each other gave (0.72). Three workers on the kept scheduler write 147.43 steps a second, 2.4252 of one worker on the installed scheduler. By the whole call's seconds for the same ten answers (5,250 steps, the model's loading included): installed 79.38, workers-1 88.05, workers-2 54.73, workers-3 46.45, workers-3-kept 37.65, installed-timed 74.49, kept-timed 62.28. One worker took 1.109 of the installed recorder's call, inside what two calls differ by on this machine under load and not separated from it (the load average rose from 6.15 to 11.49 during it). The part of the prediction that three workers gain less over one on the kept scheduler than on the installed one is not supported by the calls: three workers took 0.585 of the installed one-context call and 0.605 of the kept one-context call (the kept one with the timers on, so the two ratios are not the same measurement).",
+  "3_card_and_phases": "On the installed scheduler three workers held 738 MiB more than one (5782 against 5044), two 370 more: the weights are held once, as predicted. On the kept scheduler three workers held 7878 MiB, 2070 more than its one context (5808): the kept outputs are a context's own, so the under-1-GB prediction does not hold there. The engine's phase timer puts 99.6% of a decode call in graph_compute on the installed scheduler (12371.1 of 12512.6 microseconds) and 99.2% on the kept one (9962.2 of 10116.5): nearly all of it on both, the call itself shorter on the kept one.",
+  "time_denominators": {
+   "steps_a_second": "the workers recorder only: the steps of every case of the call over the seconds its own line states, which begin before the contexts are made; over_one_worker divides two such numbers and nothing else",
+   "milliseconds_a_step": "the installed recorder only: each case from the end of the case before it, so the call's first case and the start are left out",
+   "milliseconds_a_step_a_worker": "the workers recorder: the cases' own seconds summed over the workers, over their steps; with more than one worker it is a worker's time, not the clock's",
+   "not_one_measure": "steps_a_second and milliseconds_a_step are different intervals over different cases and are never divided by each other"
+  }
+ },
+ "failures_only": [
+  "No arrangement wrote other bytes, crashed, hung or was refused a context.",
+  "The seconds are a loaded machine's, and part of the load was this seat's own: the load average stood between 4.34 and 12.71 in the sampler's 266 readings, and this seat ran file analyses (overlap_wordings.py) on the same six processor threads the comparison's processes are held to (2,3,4,10,11,12): five runs from 9:39:26 to 9:40:04 AM CT, inside the workers-3 arrangement (9:39:08 to 9:40:05), and one batch of about twenty seconds before them whose time was not kept (after 9:36:42 AM CT, so inside workers-1 or workers-2); a torch reading on card 1 and threads 5 and 13 ran inside kept-timed (9:42:55 AM CT, 11 s). The bytes are not touched by that; the seconds are, most of all workers-3's, by an amount this run does not measure. workers-3-kept (9:40:06 to 9:40:54) and installed (9:34:49 to 9:36:08) ran beside none of them. A quiet-machine time is not measured.",
+  "One worker of the workers recorder took 1.109 of the installed recorder's call; whether that is the load or the worker's own bookkeeping is not separated.",
+  "Three contexts on the kept scheduler hold 7878 MiB of card 0, 2834 more than the installed recorder: a capture made this way does not fit on the card beside a solve of the wide matrices.",
+  "Ten answers of one call, not the thirty of a capture; the rates of a capture's three calls are not measured.",
+  "Prediction 2's last sentence (less gain on the kept scheduler) is not supported, and prediction 3's memory bound does not hold on the kept scheduler."
+ ],
+ "what_this_changes": "The recorder can compute several answers at once on one card, as threads of one process with one copy of the weights, and write each answer's files with the bytes it writes today: the lever that processes side by side closed (recorders-beside-original, 0.72) is open this way. In this run the ten answers' call took 37.65 s with three contexts on the kept scheduler against 79.38 s as installed (0.474) and 62.28 s with one kept context (0.605). Nothing is adopted by this result: the readers (own_text.py, reader protocol controlled-bf16-8) still start the installed recorder with the kept scheduler, one context. Bringing the workers recorder into the capture is a change of a bound instrument and of the protocol, with its own admission; this result is the evidence for that decision, which is Astra's. No model, reference, target, loss or score was made or changed.",
+ "provenance": {
+  "command": "bash studies/04-round-2-overlap/runs/recorder-workers-original/run.sh compare",
+  "began": "2026-11-15 09:34:38 CST",
+  "ended": "2026-11-15 09:43:38 CST",
+  "declaration_sha256": "f9c6869a1f7696f153765bcba76afd4a57d72083a3bce9935a72a57d831dd1cc",
+  "declared_sha256_the_comparison_recorded": {
+   "installed": "1dbfd54200c1d3d4cffc72da14693bc413f1e4eaecdded8ce01a9f489c80172b",
+   "kept": "de163ac072154fd89c4a19ec8db00c6df711570c09ba442a8ca2d9c19dd6b47d",
+   "recorder": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+   "workers_recorder": "5c893cd713e352d05725c369e554238613fe0d3790633e23944c99e9d2f7b883",
+   "comparison": "cfce5069ac120d030beb6c9e81252462bdc48fdc50729c16e91c1ab20f037700",
+   "recorder_kept": "3beb364c84693989a8813e3481aad5df1e933f334476f771f9a7a40d25c8cabc",
+   "recorder_deferred": "f7d03d1fdddc20380aa1467577a1d775a62a39d84105c0f2fd94ffde1ab040d0",
+   "recorders_beside": "db1a060afbfdb10e068fb610ab41c366ee82677721eeddd53fb68921ba8f99ad",
+   "recorder_engine": "43e0443a0c6262446eacbf2eab0af67e2654055827aa691b1363b13d5bf57f5a",
+   "reading_identity": "fed8fcbd3779a9cdb02bdb165eff71b6ac4ce4a99630b3ba7170bd8b8f596969",
+   "cases": "3752b9b65d72d39f7f1e1198908d089888b531a5456bc9c5d6c9f3a795bc7712"
+  },
+  "records": {
+   "summary": {
+    "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/workers.json",
+    "sha256": "29f751caf07eae14270a35ee2f67203b073b7eecfd6ae87afcb7236472de9b3a"
+   },
+   "arrangements": {
+    "installed": {
+     "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/installed.json",
+     "sha256": "702845d2d5199f54e6df83802ec1845454a9d611079816ce5607ee63a8891708"
+    },
+    "workers-1": {
+     "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/workers-1.json",
+     "sha256": "627e0e862b9805f6e954d8325982509b518726c96bfabf175f17461696420ef9"
+    },
+    "workers-2": {
+     "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/workers-2.json",
+     "sha256": "e235e6b279ab96cfa33f946c4c125a733c5c8242519a8e824e1352043e841f7e"
+    },
+    "workers-3": {
+     "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/workers-3.json",
+     "sha256": "efb81d52be85add2e8b487df4f0adb3a00c7cf9fe1deca7d277afed3f9a8ccb6"
+    },
+    "workers-3-kept": {
+     "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/workers-3-kept.json",
+     "sha256": "96cc66254b5ebbf23b0a19b79629ebd515d17d7ecd21b8add306ff17da824c67"
+    },
+    "installed-timed": {
+     "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/installed-timed.json",
+     "sha256": "f33f9cf08728146007f0fdbb8e9b0ef17ad0a1f2ddb9eb5f89927775400ff0d9"
+    },
+    "kept-timed": {
+     "file": "studies/04-round-2-overlap/runs/recorder-workers-original/compare/kept-timed.json",
+     "sha256": "c710ccbf35c2732b25e464f81a401942795f911bf6825c2cc7e56aa2fc487d6d"
+    }
+   },
+   "log": "studies/04-round-2-overlap/runs/recorder-workers-original/logs/compare.log",
+   "card_0_sampler": {
+    "file": "studies/04-round-2-overlap/runs/recorder-workers-original/logs/card0-sampler.log",
+    "what": "one line every two seconds beside the comparison, started by the seat: card 0's memory and utilization, its compute processes, the load average",
+    "readings": 266,
+    "compute_processes_at_once_at_most": 1,
+    "card_mib_most": 7888
+   }
+  },
+  "libraries": "every arrangement's six bound libraries were the declared files before and after it and in its process's map (each arrangement's record, `libraries`); the comparison would not have gone on otherwise",
+  "machine": {
+   "installed": {
+    "load_average_before": [
+     4.61,
+     5.77,
+     8.69
+    ],
+    "card_held_by_others_mib_before": [],
+    "load_average_after": [
+     6.15,
+     6.05,
+     8.55
+    ],
+    "card_held_by_others_mib_after": [],
+    "not_seen": "a process that came to the card and left inside the arrangement is in neither listing"
+   },
+   "workers-1": {
+    "load_average_before": [
+     6.15,
+     6.05,
+     8.55
+    ],
+    "card_held_by_others_mib_before": [],
+    "load_average_after": [
+     11.49,
+     7.89,
+     8.93
+    ],
+    "card_held_by_others_mib_after": [],
+    "not_seen": "a process that came to the card and left inside the arrangement is in neither listing"
+   },
+   "workers-2": {
+    "load_average_before": [
+     11.49,
+     7.89,
+     8.93
+    ],
+    "card_held_by_others_mib_before": [],
+    "load_average_after": [
+     12.71,
+     8.81,
+     9.16
+    ],
+    "card_held_by_others_mib_after": [],
+    "not_seen": "a process that came to the card and left inside the arrangement is in neither listing"
+   },
+   "workers-3": {
+    "load_average_before": [
+     12.71,
+     8.81,
+     9.16
+    ],
+    "card_held_by_others_mib_before": [],
+    "load_average_after": [
+     10.02,
+     8.69,
+     9.1
+    ],
+    "card_held_by_others_mib_after": [],
+    "not_seen": "a process that came to the card and left inside the arrangement is in neither listing"
+   },
+   "workers-3-kept": {
+    "load_average_before": [
+     10.02,
+     8.69,
+     9.1
+    ],
+    "card_held_by_others_mib_before": [],
+    "load_average_after": [
+     7.97,
+     8.39,
+     8.98
+    ],
+    "card_held_by_others_mib_after": [],
+    "not_seen": "a process that came to the card and left inside the arrangement is in neither listing"
+   },
+   "installed-timed": {
+    "load_average_before": [
+     7.97,
+     8.39,
+     8.98
+    ],
+    "card_held_by_others_mib_before": [],
+    "load_average_after": [
+     4.81,
+     7.27,
+     8.53
+    ],
+    "card_held_by_others_mib_after": [],
+    "not_seen": "a process that came to the card and left inside the arrangement is in neither listing"
+   },
+   "kept-timed": {
+    "load_average_before": [
+     4.81,
+     7.27,
+     8.53
+    ],
+    "card_held_by_others_mib_before": [],
+    "load_average_after": [
+     6.45,
+     7.24,
+     8.42
+    ],
+    "card_held_by_others_mib_after": [],
+    "not_seen": "a process that came to the card and left inside the arrangement is in neither listing"
+   }
+  },
+  "arrangements_in_order": [
+   "installed",
+   "workers-1",
+   "workers-2",
+   "workers-3",
+   "workers-3-kept",
+   "installed-timed",
+   "kept-timed"
+  ]
+ }
+}

@@ -8,7 +8,7 @@ There are 22 indexed studies under `runs/legs/gemma4-e2b/`, plus the supporting 
 | [ghost-inspection-2026-11-05](../../studies/01-early-exploration/ghost-inspection/run/analysis.md) | Early weight instrumentation | Historical weight/activation inspection; does not by itself establish a residual trace. |
 | [ghost-retrieval-2026-11-05](../../studies/01-early-exploration/ghost-retrieval/run/PLAN.md) | Early intervention experiment | Original plan, prediction, amendment, captures and outcomes; predates the clarified trace direction. |
 | [individual-edit-2026-11-06](../../studies/01-early-exploration/individual-weight-edit/run/PLAN.md) | Early individual-edit investigation | Historical candidate and measurement artifacts; keep separate from the later connected-trace study. |
-| [targeted-lookup-2026-11-06](../../studies/01-early-exploration/targeted-lookup/run/PLAN.md) | Targeted lookup attempts | Selection and three predictions with native-edit records; historical approach, not the final trace method. |
+| targeted-lookup-2026-11-06 | Targeted lookup attempts | Selection and three predictions with native-edit records; historical approach, not the final trace method. |
 | [mechanism-study-2026-11-06](../../studies/01-early-exploration/mechanism-study/run/COLOR-PROBE.md) | Lookup mechanism investigation | Mechanism and color probes before the engine comparison and capability-focused physics studies. |
 | [lookup-failure-family-2026-11-06](../../studies/01-early-exploration/lookup-failure-family/run/RESULTS.md) | Repeated lookup failure family | Question-family observations and full completion examination, including limits of the initially assumed pattern. |
 | [behavior-pattern-20-2026-11-06](../../studies/01-early-exploration/behavior-pattern/run/STOPPED.md) | Twenty-question observation plan | Retains questions and the stopped-run account; do not count planned work as completed. |
@@ -32,7 +32,7 @@ There are 22 indexed studies under `runs/legs/gemma4-e2b/`, plus the supporting 
 
 The invalid parallel round and E have both been withdrawn. [Removal of E](../../journal/2026-11-07-e-withdrawal.md). Round two is tracked in [ROUND-2.md](../../studies/04-round-2-overlap/ROUND-2.md); no round-two edit built from the overlap exists yet. Original A–D and the independent D observations remain.
 
-[Current clarification](../../notes/2026-11-07-clarifications.md) → [full theory](../../apps/decode-machine/RESIDUAL-TRACE-THEORY.md) → [Q4 follow-up](../../apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md) → [BF16 follow-up](../../apps/decode-machine/PHYSICS-TRACE-BF16.md) → [activation intervention](../../apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md) → [persistent weight edit](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md) → [footprint and selective edit](../../studies/03-round-1-single-pair-edits/B-selective-footprint/run/REPORT.md) → [connected-preservation candidate C](../../studies/03-round-1-single-pair-edits/C-connected-preservation/run/REPORT.md).
+Current clarification → full theory → Q4 follow-up → BF16 follow-up → activation intervention → persistent weight edit → [footprint and selective edit](../../studies/03-round-1-single-pair-edits/B-selective-footprint/run/REPORT.md) → [connected-preservation candidate C](../../studies/03-round-1-single-pair-edits/C-connected-preservation/run/REPORT.md).
 
 ## Historical interpretation
 

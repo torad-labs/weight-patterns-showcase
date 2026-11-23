@@ -1,0 +1,264 @@
+--- a/ggml/src/ggml-backend.cpp
++++ b/ggml/src/ggml-backend.cpp
+@@ -783,6 +783,11 @@
+     struct ggml_cgraph graph;
+ };
+ 
++#ifndef GGML_SCHED_EVAL_CHUNKS
++#define GGML_SCHED_EVAL_CHUNKS 64
++#endif
++#define GGML_SCHED_EVAL_CHUNK_BYTES ((size_t) 64*1024*1024)
++
+ struct ggml_backend_sched {
+     bool is_reset; // true if the scheduler has been reset since the last graph split
+     bool is_alloc;
+@@ -838,6 +843,16 @@
+     ggml_backend_sched_eval_callback callback_eval;
+     void * callback_eval_user_data;
+ 
++    // GGML_SCHED_EVAL_KEPT=1: every node is kept as an output, so a split is computed in as few ranges as its graph allows and the eval callback reads copies of its outputs after the split
++    bool eval_kept;
++    bool eval_kept_said;
++    long long eval_kept_splits;
++    long long eval_kept_ranges;
++    long long eval_kept_wanted;
++    long long eval_kept_unmarked;
++    ggml_backend_buffer_type_t eval_chunk_buft;
++    ggml_backend_buffer_t eval_chunks[GGML_SCHED_EVAL_CHUNKS];
++
+     char * context_buffer;
+     size_t context_buffer_size;
+ 
+@@ -1178,6 +1193,13 @@
+ 
+     graph->uid = ggml_graph_next_uid();
+ 
++    if (sched->eval_kept && sched->callback_eval) {
++        // the allocator gives an output's memory to no other node
++        for (int i = 0; i < graph->n_nodes; i++) {
++            graph->nodes[i]->flags |= GGML_TENSOR_FLAG_OUTPUT;
++        }
++    }
++
+     // pass 1: assign backends to ops with pre-allocated inputs
+     for (int i = 0; i < graph->n_leafs; i++) {
+         struct ggml_tensor * leaf = graph->leafs[i];
+@@ -1777,6 +1799,72 @@
+     return true;
+ }
+ 
++// a kept callback reads a copy of its output; a write into it would change nothing the graph computes
++static void ggml_backend_sched_eval_kept_set(ggml_backend_buffer_t, struct ggml_tensor * tensor, const void *, size_t, size_t) {
++    GGML_ABORT("GGML_SCHED_EVAL_KEPT: the eval callback wrote into %s; a kept callback holds a copy, not the tensor", tensor->name);
++}
++
++static void ggml_backend_sched_eval_kept_memset(ggml_backend_buffer_t, struct ggml_tensor * tensor, uint8_t, size_t, size_t) {
++    GGML_ABORT("GGML_SCHED_EVAL_KEPT: the eval callback wrote into %s; a kept callback holds a copy, not the tensor", tensor->name);
++}
++
++static void ggml_backend_sched_eval_kept_set_2d(ggml_backend_buffer_t, struct ggml_tensor * tensor, const void *, size_t, size_t, size_t, size_t, size_t) {
++    GGML_ABORT("GGML_SCHED_EVAL_KEPT: the eval callback wrote into %s; a kept callback holds a copy, not the tensor", tensor->name);
++}
++
++// true when computing t writes into the memory of the tensor it is a view of
++static bool ggml_backend_sched_eval_writes_in_place(const struct ggml_tensor * t) {
++    switch (t->op) {
++        case GGML_OP_NONE:
++        case GGML_OP_RESHAPE:
++        case GGML_OP_VIEW:
++        case GGML_OP_PERMUTE:
++        case GGML_OP_TRANSPOSE:
++            return false;
++        default:
++            return t->view_src != NULL;
++    }
++}
++
++// host memory for one output of the split being computed; chunks are filled in order and none is freed or moved while a copy into it may be pending
++static void * ggml_backend_sched_eval_stage(ggml_backend_sched_t sched, ggml_backend_t backend, size_t size, int * chunk, size_t * used) {
++    ggml_backend_dev_t device = ggml_backend_get_device(backend);
++    ggml_backend_buffer_type_t buft = device ? ggml_backend_dev_host_buffer_type(device) : NULL;
++    if (buft == NULL) {
++        buft = ggml_backend_cpu_buffer_type();
++    }
++    if (sched->eval_chunk_buft != buft) {
++        // another backend's host memory: only at a split's first output, when no copy is pending
++        GGML_ASSERT(*chunk == 0 && *used == 0);
++        for (int i = 0; i < GGML_SCHED_EVAL_CHUNKS; i++) {
++            ggml_backend_buffer_free(sched->eval_chunks[i]);
++            sched->eval_chunks[i] = NULL;
++        }
++        sched->eval_chunk_buft = buft;
++        fprintf(stderr, "GGML_SCHED_EVAL_KEPT: outputs are staged in %s memory\n", ggml_backend_buft_name(buft));
++    }
++    const size_t aligned = (size + 63) & ~(size_t) 63;
++    if (sched->eval_chunks[*chunk] != NULL && *used + aligned <= ggml_backend_buffer_get_size(sched->eval_chunks[*chunk])) {
++        void * at = (char *) ggml_backend_buffer_get_base(sched->eval_chunks[*chunk]) + *used;
++        *used += aligned;
++        return at;
++    }
++    if (sched->eval_chunks[*chunk] != NULL && *used > 0) {
++        ++*chunk; // the chunk in use keeps its copies
++    }
++    GGML_ASSERT(*chunk < GGML_SCHED_EVAL_CHUNKS && "GGML_SCHED_EVAL_KEPT: more staged outputs than the chunks hold");
++    if (sched->eval_chunks[*chunk] != NULL && ggml_backend_buffer_get_size(sched->eval_chunks[*chunk]) < aligned) {
++        ggml_backend_buffer_free(sched->eval_chunks[*chunk]);
++        sched->eval_chunks[*chunk] = NULL;
++    }
++    if (sched->eval_chunks[*chunk] == NULL) {
++        sched->eval_chunks[*chunk] = ggml_backend_buft_alloc_buffer(buft, std::max(aligned, GGML_SCHED_EVAL_CHUNK_BYTES));
++        GGML_ASSERT(sched->eval_chunks[*chunk] != NULL && "GGML_SCHED_EVAL_KEPT: no host memory for the staged outputs");
++    }
++    *used = aligned;
++    return ggml_backend_buffer_get_base(sched->eval_chunks[*chunk]);
++}
++
+ static enum ggml_status ggml_backend_sched_compute_splits(ggml_backend_sched_t sched) {
+     GGML_ASSERT(sched);
+     struct ggml_backend_sched_split * splits = sched->splits;
+@@ -1974,6 +2062,121 @@
+             if (ec != GGML_STATUS_SUCCESS) {
+                 return ec;
+             }
++        } else if (sched->eval_kept) {
++            if (!sched->eval_kept_said) {
++                GGML_LOG_INFO("%s: GGML_SCHED_EVAL_KEPT=1, a split is computed whole and the eval callback's outputs are read back after it\n", __func__);
++                sched->eval_kept_said = true;
++            }
++            struct ggml_cgraph * g = &split->graph;
++
++            // marked: every node is an output, so no wanted output's memory is given to a later node
++            bool marked = true;
++            for (int j = 0; j < g->n_nodes && marked; j++) {
++                marked = (g->nodes[j]->flags & GGML_TENSOR_FLAG_OUTPUT) != 0;
++            }
++
++            struct eval_wanted { struct ggml_tensor * t; void * host; int chunk; };
++            std::vector<eval_wanted> wanted;
++            size_t copied = 0; // wanted[0, copied) have their copy queued
++            int chunk = 0;
++            size_t used = 0;
++            int j0 = 0; // first node not yet given to the backend
++            int ranges = 0;
++
++            // compute [j0, j1), then queue a copy of every output wanted so far
++            auto flush = [&](int j1) -> enum ggml_status {
++                if (j1 > j0) {
++                    enum ggml_status ec;
++                    if (j0 == 0 && j1 == g->n_nodes) {
++                        ec = ggml_backend_graph_compute_async(split_backend, g);
++                    } else {
++                        struct ggml_cgraph gv = ggml_graph_view(g, j0, j1);
++                        ec = ggml_backend_graph_compute_async(split_backend, &gv);
++                    }
++                    if (ec != GGML_STATUS_SUCCESS) {
++                        return ec;
++                    }
++                    j0 = j1;
++                    ranges++;
++                }
++                for (; copied < wanted.size(); copied++) {
++                    eval_wanted & w = wanted[copied];
++                    const size_t size = ggml_nbytes(w.t);
++                    if (size > 0) {
++                        w.host = ggml_backend_sched_eval_stage(sched, split_backend, size, &chunk, &used);
++                        w.chunk = chunk;
++                        ggml_backend_tensor_get_async(split_backend, w.t, w.host, 0, size);
++                    }
++                }
++                return GGML_STATUS_SUCCESS;
++            };
++
++            for (int j = 0; j < g->n_nodes; j++) {
++                struct ggml_tensor * t = g->nodes[j];
++                const bool need = sched->callback_eval(t, true, sched->callback_eval_user_data);
++
++                if (ggml_backend_sched_eval_writes_in_place(t)) {
++                    // t changes the memory of the tensor it is a view of: an output wanted earlier that lives there is copied first
++                    for (size_t k = copied; k < wanted.size(); k++) {
++                        const struct ggml_tensor * w = wanted[k].t;
++                        if ((w->view_src ? w->view_src : w) == t->view_src) {
++                            enum ggml_status ec = flush(j);
++                            if (ec != GGML_STATUS_SUCCESS) {
++                                return ec;
++                            }
++                            break;
++                        }
++                    }
++                }
++
++                if (need) {
++                    wanted.push_back({t, NULL, 0});
++                    if (!marked) {
++                        // not allocated as outputs: a later node may get this memory, so the copy is queued right after the node
++                        enum ggml_status ec = flush(j + 1);
++                        if (ec != GGML_STATUS_SUCCESS) {
++                            return ec;
++                        }
++                    }
++                }
++            }
++
++            enum ggml_status ec = flush(g->n_nodes);
++            if (ec != GGML_STATUS_SUCCESS) {
++                return ec;
++            }
++
++            ggml_backend_synchronize(split_backend);
++
++            sched->eval_kept_splits += 1;
++            sched->eval_kept_ranges += ranges;
++            sched->eval_kept_wanted += (long long) wanted.size();
++            sched->eval_kept_unmarked += marked ? 0 : 1;
++
++            for (const eval_wanted & w : wanted) {
++                struct ggml_tensor * t = w.t;
++                bool go_on;
++                if (w.host == NULL) {
++                    go_on = sched->callback_eval(t, false, sched->callback_eval_user_data);
++                } else {
++                    // ggml_backend_tensor_get reads through the buffer of the tensor, or of the tensor it is a view of
++                    struct ggml_backend_buffer copy = *sched->eval_chunks[w.chunk];
++                    copy.iface.set_tensor    = ggml_backend_sched_eval_kept_set;
++                    copy.iface.memset_tensor = ggml_backend_sched_eval_kept_memset;
++                    copy.iface.set_tensor_2d = ggml_backend_sched_eval_kept_set_2d;
++                    struct ggml_tensor * owner = t->view_src ? t->view_src : t;
++                    ggml_backend_buffer_t owner_buffer = owner->buffer;
++                    void * data = t->data;
++                    owner->buffer = &copy;
++                    t->data = w.host;
++                    go_on = sched->callback_eval(t, false, sched->callback_eval_user_data);
++                    t->data = data;
++                    owner->buffer = owner_buffer;
++                }
++                if (!go_on) {
++                    GGML_ABORT("GGML_SCHED_EVAL_KEPT: the eval callback asked to stop at %s; a kept split is already computed", t->name);
++                }
++            }
+         } else {
+             // similar to ggml_backend_compare_graph_backend
+             for (int j0 = 0; j0 < split->graph.n_nodes; j0++) {
+@@ -2062,6 +2265,9 @@
+     sched->debug_graph_size = 0;
+     sched->debug_prev_graph_size = 0;
+ 
++    const char * GGML_SCHED_EVAL_KEPT = getenv("GGML_SCHED_EVAL_KEPT");
++    sched->eval_kept = GGML_SCHED_EVAL_KEPT != NULL && strcmp(GGML_SCHED_EVAL_KEPT, "1") == 0;
++
+     sched->context_buffer_size = ggml_sched_max_splits*GGML_SCHED_MAX_SPLIT_INPUTS*2*sizeof(struct ggml_tensor) + ggml_graph_overhead_custom(graph_size, false);
+     sched->context_buffer = (char *) malloc(sched->context_buffer_size);
+ 
+@@ -2108,6 +2314,13 @@
+             ggml_backend_buffer_free(st.buf);
+         }
+     }
++    if (sched->eval_kept && sched->eval_kept_splits > 0) {
++        fprintf(stderr, "GGML_SCHED_EVAL_KEPT totals: %lld splits, %lld ranges, %lld outputs read back, %lld splits not marked\n",
++                sched->eval_kept_splits, sched->eval_kept_ranges, sched->eval_kept_wanted, sched->eval_kept_unmarked);
++    }
++    for (int i = 0; i < GGML_SCHED_EVAL_CHUNKS; i++) {
++        ggml_backend_buffer_free(sched->eval_chunks[i]);
++    }
+     ggml_gallocr_free(sched->galloc);
+     ggml_free(sched->ctx);
+     ggml_hash_set_free(&sched->hash_set);

@@ -1,0 +1,145 @@
+{
+ "method_step": 5,
+ "run_by": "weight-research-astra (the objective and this test's specification), weight-research-fable (this declaration, the solver and the execution), weight-research-perfomance (the one candidate's native reading)",
+ "status": "Declared on November 12, 2026, before the candidate is solved.",
+ "kind": "A bounded native test from the original model at one matrix: one candidate, one model copy. Not the on-policy loop and not a full sweep.",
+ "authority": "Marcos, November 12 (journal/2026-11-12-correction-not-protection.md): the training should know where the overlap exists and that nothing should be applied where the computation already agrees; and, relayed the same night, a robust path forward is to be planned and then acted on, with no waiting on his approvals. Astra's specification of this test (specification) says no further approval is needed within it.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/state-overlap-2/recurrence.npz",
+ "objective": "one full-computation correction objective, with the known correct computation at member granularity: the wrong group's cells as correction-at-17-original has them, and in the place of the correct group's cells each correct member's own error against its original computation, at every place and every prompt position, direction and size",
+ "specification": "records/retrospectives/2026-11-12-correct-members-native-astra.md",
+ "decision_record": "records/retrospectives/2026-11-12-next-loop-astra.md",
+ "original_observations_from": "controlled-bf16-1",
+ "correction_reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+ "correction_reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+ "planned_starting_state": {
+  "source_run": "controlled-bf16-4",
+  "source_run_role": "Read its original-derived binding, membership, layout and baseline only. Its edited model and edited rows are not this run's starting state.",
+  "matrices_written": 0,
+  "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "matrix": "blk.17.attn_output.weight",
+  "source_rows": "studies/04-round-2-overlap/runs/correction-at-17-original/passes/rows-blk.17.attn_output.npz",
+  "source_rows_sha256": "57ee7ae213e04e1ddb94c3e67483271e5641ff463ee0f4a89ee100d9cfaa000e",
+  "source_rows_role": "The rows correction-at-17-original kept: the 30 fitting answers' recorded text once through the original BF16 model at this matrix, 14,592 answer rows and 5,159 rows at the prompts' positions. This run reads no rows of its own and no model through the engine before its candidate is written."
+ },
+ "correct_members": {
+  "requests": [
+   "correct_places",
+   "correct_prompt"
+  ],
+  "replaces_the_correct_groups_cells": true,
+  "read_by": "correction.candidate, which hands them to correction.chosen (charges, replaced). The wrong members' requests of the separability diagnostic are refused by the command."
+ },
+ "solver": {
+  "file": "code/signal-trace/pipeline/weight_edit/correction.py",
+  "sha256": "298f90519dd24209f31e07ed5acafc79bbc9be7927448b060d4dc76fc601b817",
+  "tube_sha256": "f761f1d0c14ab09979e6534a7bfa8497e86a0564d485d290aaa95bc0453da754",
+  "tests": "code/signal-trace/tests/test_correction.py, 21 passed on the CPU: among them that a member's error is weighed by the reference's own cells whatever the sum holds, that it stands in the group's place and is not added to it, that members which cancel in their mean still cost, that a correct member's prompt positions cost and a wrong member's do not, and that with nothing named a reading is the cells' as before",
+  "checked_on_the_card": "Before this declaration, on the same kept rows and with nothing kept: with nothing named, fold 0's path from 2^23 down to 2^16 gave correction-at-17-original's recorded objective bit for bit at all eight stages and its held reading bit for bit at seven, 2e-10 of itself apart at one; and this run's selection ran to its end with one round a stage allowed. That is a check that the code runs, and no reading of this run.",
+  "the_command_records": "candidate/record.json keeps the hashes of correction.py and tube.py as they are when the command starts"
+ },
+ "hypothesis": "A capability leaves a recurring difference between the connected traces of correct and wrong answers, and editing the weights where that difference recurs can repair the capability. This test adds one thing to correction-at-17-original's construction: where the computation is known to be correct, a correct answer's own original computation on the same text, the objective says so continuously and member by member, so that the change is made where the traces differ and little is applied where the computation already agrees.",
+ "why_this_direction": "correction-at-17-original's one matrix gave six complete repairs among the 15 originally wrong fitting answers and the right available energy in 8 (the original: 1), and three originally correct answers acquired required-energy errors (its result.json). Astra's assessment (decision_record) names what its objective left free: a cell's radius has a flat interior, a group's mean hides its members' movements, and no cell reads the prompt's positions; the candidate used all three (records/development/2026-11-12-correction-objective/rows-moved-correction-at-17-original.txt). The declared diagnostic separable-at-17-original then measured, on the same rows and with the same solver, what happens when a correct member's own computation is in the same sum (its `correct` variant, which charges exactly the two requests named here, beside the group's cells): on answers a path was never solved on, in all three folds, the wrong group still made +0.272, +0.288 and +0.304 of the gap while a correct member's own movement per part of the gap made was 2.60, 2.26 and 2.73 times smaller than on the cells-only path at its matched stage, and its prompt positions' 4.5 to 5.0 times smaller. So the next step of the method is the native test of that measured mechanism: step 5 asks for no or minimal correction where the current computation agrees, and this is the first construction in which the known correct computation is in the objective at the grain at which it is known. It is not chosen because B's numbers were bad: B's repair is what this test is predicted to keep, and the change answers a measured defect of the objective.",
+ "repeating_pattern_check": "A solve spends whatever its objective leaves free, and every construction so far has left the correct computation free somewhere. a2-path fitted the wrong answers' rows with nothing said of the correct ones and broke 12 of the 30 correct answers. controlled-bf16-1 to controlled-bf16-4 said it as separate bounds with a bringing-back phase, and each sweep ended, not accepted, before its model was finished (at its third, third, ninth and twentieth matrix). correction-at-19 and correction-at-17-original said it as a radius around the group's mean, and each candidate carried the correct group's mean from the centre of its cells to their edge and moved the prompt's positions. Why it recurs: each objective stated the correct computation more coarsely than it is known. Here it is stated at the grain it is known at, with no flat region, in the one sum, and the diagnostic showed on held answers that a solve can meet it. What this run still leaves free is named, not hidden: the wrong group's cells keep their radius and their pooled target, the wrong members' prompt positions and unresolved cells are asked nothing, and on a model's own changed text the correspondence to the original computation is not established. A second repeated pattern is a reading taken for a verdict (a local objective for a repair, a failed search for a failed technique): here the local objective is a construction reading, the result is the candidate's own answers and their traces as weight-research-perfomance reads them, and a path that stops is reported as stopped, with no claim of an optimum. A third is this solver's own: two runs of the same declared solve differ by 2.5% to 9.4% on a fold's read sum at the weakest ridge compared (records/development/2026-11-12-correction-objective/same-solve-twice-correction-at-17-original.txt). One candidate is made by the declared rule and none is made again; what is compared with B is native, where the differences that matter are whole answers.",
+ "what_went_wrong_before": "B's objective asked the correct group for no movement of its mean beyond a radius, and that was read as agreement being cared for inside the objective; it was a region the solve could spend. The diagnostic ADDED the members' requests to the group's cells, which counts the correct aggregate's error twice once the mean leaves its radius, and it ended every path at B's selected ridge, where the charged paths were still making +0.02 to +0.03 of the gap per halving; this run replaces the correct group's cells and selects its own ridge and round. The diagnostic's two further variants also charged a wrong member's prompt positions and unresolved cells; neither has a known correct reference, Astra's specification keeps them out, and the command refuses them. This session's second ridge on a round's step is not used: it makes the solve repeat itself and does not reach a lower objective, and the specification keeps B's solver so that C differs from B by its objective alone.",
+ "rule": {
+  "reference": "The frozen output-norm reference correction-at-19 made from the original model, read only, with the index hash above: the same gaps, radii, group shares and scales as correction-at-17-original. Nothing of it changes and nothing is added to it. The correct group's cells are left out of the sum by a view made in memory (correction.without_correct); the saved arrays are untouched.",
+  "objective": "For a form f (the unit direction, or the log of the size), a registered answer place p and a prompt position t, with d the movement of a member's own mean from the original's computation on the same recorded text and w_g,f = (N_g/N_total)/S_f the reference's weight: E_C = sum_f,p w_wrong,f max(||mean_wrong(d_i,p,f) - G_p,f|| - r_p,f, 0)^2 + sum_f,p (w_correct,f/n_correct) sum_correct_i ||d_i,p,f||^2 + sum_f (w_correct,f/n_correct) sum_correct_i sum_t ||d_i,t,f||^2, at the matrix's own merge. The first term is the wrong group's cells exactly as B had them. The correct group's mean-and-radius cells are ABSENT, not added. The second and third terms are zero at each correct member's own original computation and grow continuously away from it, with no radius under them. n_correct is the number of correct members among the answers summed over. There is no request on a wrong member's prompt positions or unresolved cells, no separate protection term, no bound and no bringing-back phase.",
+  "counted_from": "Every row is counted from the original file's own output at the same row, as B's rows were (tube.counted_from on controlled-bf16-4's original-derived baseline): a member's movement at a place is the mean over its steps there of each row's own movement, and a prompt position's is that row's. That is each correct member's ORIGINAL correct computation on the same history, not an edited state's.",
+  "data_roles": "The fitting half only, 15 wrong and 15 correct, in the existing three folds; two folds solved on and the third read, in rotation, and all thirty for the last solve. No subset-only fit and no crop to a passage. The full original cohort supplies the fixed reference. No-fit answers supply no fitting and no selection reading; reserved-40b stays sealed.",
+  "candidate": "correction.chosen with the two requests and the correct group's cells replaced. Three paths go down the ridges in step from the first ridge; every written state a path accepts is a setting, named by its ridge and its round; a setting's score is the mean, each fold by its number of answers, of the WHOLE sum E_C read on the fold it was not solved on; the least score is taken, the unchanged matrix among the settings, with the existing ties (smaller mean squared change, stronger ridge, earlier round). All thirty are then solved on once down the same ridges to that setting and no further than its round. The path is not cut at B's ridge: it ends by the declared budget (parameters.path_budget). One candidate; none is made again whatever it reads.",
+  "numerical_work": "B's solver with nothing of the solve changed and no second ridge on a step: halving ridges, the declared rounds, passes and iterations, and a written BF16 state taken when it reads strictly less of the whole sum E_C on the answers solved on. The unit of the ridge is recomputed from the reference's UNMODIFIED cells on these rows, as B's was: a fixed scale the search is counted in, and no claim about E_C's own curvature, which the members' terms add to. The first ridge is found from the whole E_C and its slope at the start. What speeds the linear solves and what a writing is nearest in are made from the reference's unmodified cells, as in B and in the diagnostic. The record keeps both computations, every stage and round, each stop's reason, the last ridge made and whether the setting taken lies there. A stopped path or an exhausted budget is reported as that and is no certificate of an optimum.",
+  "write": "Only a copy of the original inside this run is written (correction.write): the candidate at blk.17.attn_output.weight, each value one the file's BF16 holds, checked value for value, and every other byte of the copy checked equal to the original's. If the selection keeps the unchanged matrix, that is the result and no copy and no other candidate is made.",
+  "own_reading": "weight-research-perfomance reads the one written model on all thirty fitting questions with the same card-1 engine, prompts, greedy decoding and token limits as the original and B controls: its own answers with all 105 merges, the questions' positions and every answer field, per member, with the histories and the limits of correspondence kept; and the conditional reading on the original control's text, by the statistic the specification fixes for B and C alike (its subsection 'Conditional reading clarified before a C candidate', commit 9a436042). How it is read was fixed before this candidate exists (records/development/2026-11-12-path-forward/conditional-members/READING-OF-C.md). B and the unchanged original are the comparators, from their completed captures. Nothing in that reading selects or changes the candidate.",
+  "scope": "One matrix, from the original, on the recordings' text. It does not solve the correspondence of a model's own changed text to the original computation, does not change the wrong group's target, and is not the on-policy loop. It does not open the no-fit or reserved evaluations.",
+  "storage": "The candidate's records (B's are 15 MB) and the one model copy (9.3 GB) stay inside this run, with the reading's captures. Inputs and other runs' records are only read."
+ },
+ "parameters": {
+  "coordinates_and_target": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "The saved direction and log-size gaps G, radii r (r^2 = max(nu, q)), group shares (0.5 and 0.5 of 60) and scales (S_direction 1268.5366, S_size 28.677979) exactly as B used them. The wrong group's cells take w_wrong,f = 0.5/S_f. The correct group's target in the reference is no movement, which is the same target the members' terms take, member by member and without the radius.",
+   "scales_with": "The original model, its full original reference and the native terminal transform. Another source needs its own reference."
+  },
+  "correct_member_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "A correct member's squared own error at a place weighs w_correct,f/n_correct, with w_correct,f = 0.5/S_f the reference's own weight for the correct group (3.9415e-04 for the direction, 1.7435e-02 for the size) and n_correct the number of correct members among the answers summed over: 10 on the two folds a path is solved on, 5 on the fold it is read on, 15 for the last solve. Since |mean_i d_i|^2 <= mean_i |d_i|^2, with equality when the members move alike, the members together weigh at least what the group's mean would have weighed with no radius; the group's own cell is left out so that this is counted once. No number of ours is in it.",
+   "scales_with": "The reference's weights and the number of correct members in each sum."
+  },
+  "prompt_position_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/separable-at-17-original/summary.json",
+   "derivation": "One native prompt position of a correct member weighs what one registered answer place of that member weighs, w_correct,f/n_correct. This is the convention the diagnostic exercised, not a measured identity between the two units and not a multiplier to tune. A correct fitting answer has 480 places and 171 or 172 prompt positions (2,579 over the 15; 859, 860 and 860 in the three folds' five), so at equal error per position its prompt carries 0.36 of what its places carry; the total depends on the prompt's length.",
+   "scales_with": "The reference's weights, the number of correct members summed over, and each prompt's number of positions."
+  },
+  "ridge_unit": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-17-original/candidate/record.json",
+   "derivation": "correction.unit_of on the reference's unmodified cells, at the original matrix over all thirty fitting answers' rows: trace(the direction cells' action on the inputs) times mean(learned scale squared), plus the size cells' curvature trace over the output width, over the input width. B's command recorded 1.3140701017e-05 on these rows, and the check before this declaration read 1.3140701010e-05, 6e-10 of itself apart (the card's arithmetic does not repeat bit for bit). This run's command recomputes it and records its own value. One unit serves the three folds and the last solve.",
+   "scales_with": "The rows' inputs, the matrix's shape, the learned merge scale and the reference's weights."
+  },
+  "first_ridge": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-17-original/candidate/record.json",
+   "derivation": "The largest power of two times the unit not above 2||s||^2/(RESOLVED x E_C), with E_C the whole sum on all thirty at the start and s the slope of E_C/2 there (correction.strongest). At the start no correct member has moved, so the members' terms add nothing to E_C or to s, and the correct group's cells, which are left out, read nothing there either: the value is expected to be B's, 2^23 units, and is computed from E_C by the command and recorded with its inputs.",
+   "scales_with": "The initial slope and reading of E_C, the unit and the arithmetic's resolution."
+  },
+  "ridge_spacing": {
+   "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+   "derivation": "Use the measured correction solver's binary ridge path (tube.PATH=1): successive powers differ by one, so each stage's ridge is half its predecessor and begins at its written endpoint. This is the exploratory search granularity exercised in the calibration, not a measured optimum for B; the declared interpretation permits missing a later valley.",
+   "scales_with": "The range of ridge powers computed for B; a different granularity changes work and would be a separately declared construction."
+  },
+  "stage_work": {
+   "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+   "derivation": "Keep the measured solver work budget of at most 40 accepted rounds per ridge. RESOLVED=sqrt(float32 epsilon), about 3.45e-4. End a stage on a fall no larger than RESOLVED of the stage-round starting objective, no improving representable trial, no written movement, or the work budget. Calibration used 2 to 11 rounds per stage through 2^-2; this motivates an exploratory work budget, not a claim that 40 solves every B stage. A stage ending does not itself end the ridge path.",
+   "scales_with": "Local nonlinear/BF16 response and ridge; record actual use and any exhausted budget at B."
+  },
+  "linear_work": {
+   "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+   "derivation": "For a round use the existing eigenbasis preconditioned solve, at most 40 conjugate-gradient iterations per aim-refinement pass and 10 passes, with RESOLVED-relative slope/objective stopping. The revised-target calibration used 2 to 10 passes, including all 10 below the unit; continuing rounds supplied more work. These are measured numerical budgets, not scientific rejection criteria.",
+   "scales_with": "B's curvature spectrum, ridge and native nonlinear approximation; record exhausted work."
+  },
+  "step_acceptance": {
+   "measured_from": "records/retrospectives/2026-11-12-correct-members-native-astra.md",
+   "derivation": "Each BF16-written trial is read through the native merge expression and taken only when the WHOLE sum E_C on the answers solved on is strictly less; otherwise the part of the step is halved down to no written movement, as the existing search does. No bound and no held reading vetoes a step; held folds select the setting only.",
+   "scales_with": "The file's BF16 grid and the proposed change."
+  },
+  "path_budget": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-17-original/declaration.json",
+   "derivation": "Every ridge from the first down to the unit is made. Below the unit the paths end at the first ridge at which states were written and neither any fold's best new held reading of E_C nor the folds' best new mean improves on what it had read before; or at the last halved ridge not smaller than RESOLVED of the unit (2^-11); or where nothing of any fold's sum is left; or at a linear solve that gives no finite step. Every accepted state is kept in the record with how the paths ended and whether the setting taken lies at the last ridge made. B's paths ended at 2^-8 by the same rule with their own objective; this run's end is its own.",
+   "scales_with": "This run's held readings of E_C, the arithmetic's resolution and the computed unit; never B's chosen setting."
+  },
+  "solve_geometry": {
+   "measured_from": "studies/04-round-2-overlap/runs/separable-at-17-original/summary.json",
+   "derivation": "The eigenbasis that speeds a round's linear solves and the measure a writing is nearest in are made from the reference's unmodified cells on the rows solved on (correction.basis_of), as in B and in the diagnostic's charged paths, which ran this numerical machinery with members' requests in the sum. They change how fast a solve arrives and which BF16 neighbour a writing prefers, not what is solved.",
+   "scales_with": "The rows solved on and the reference's weights."
+  }
+ },
+ "prediction": "Stated before the candidate exists and apart from its selection (Astra's specification). (1) On the original control's text, read through the written model: less correct-member error, at the places and at the prompt positions, per part of the wrong group's directional progress than B's model shows, by the one conditional statistic the specification fixes for B and C alike (R = sqrt(C_err + Q_err)/P, with P, the actual loss reduction, C_err and Q_err reported apart, and no ratio where there is no positive progress). (2) On the model's own answers: at least B's six complete repairs among the 15 originally wrong fitting answers are kept, and fewer than B's three originally correct fitting answers acquire required-energy errors. Those two numbers are B's recorded result, not a cap or a reward; the prediction is of the counts, and which of B's repairs are kept or lost is reported answer by answer. (3) The whole frozen L and the per-place and per-member fields on the model's own answers are read as the same historical instruments as for B and reported with their coverage; no single scalar of them is predicted to be the verdict. A lower fitting objective is expected from the construction and is not this prediction.",
+ "would_weaken_it": "The conditional correct-member error improves but the repair disappears on the model's own histories; or the model's own comparable computation still drifts with no corresponding correction and the correct answers' regressions persist. A selection that keeps the unchanged matrix is also a result. Any of these limits this objective at this matrix, on these rows and with this work. None would negate the earlier repairs or B's, show that the difference cannot be separated, or license a second candidate, another dose, or a change of the reference after seeing C. A better conditional score or answer count with the whole-path correspondence unresolved is partial or measurement-limited evidence, not complete training success.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/state-overlap-2",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/reference",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/model/bindings.json",
+  "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "studies/04-round-2-overlap/runs/correction-at-19/own/controls/original",
+  "studies/04-round-2-overlap/runs/correction-at-17-original/passes",
+  "studies/04-round-2-overlap/runs/correction-at-17-original/candidate",
+  "studies/04-round-2-overlap/runs/correction-at-17-original/own",
+  "studies/04-round-2-overlap/runs/separable-at-17-original/summary.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/model",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/own",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/logs",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/provenance.json",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/result.json",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/run.sh"
+ ]
+}

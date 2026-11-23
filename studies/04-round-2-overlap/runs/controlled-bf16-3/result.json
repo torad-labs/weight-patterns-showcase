@@ -1,0 +1,409 @@
+{
+ "run": "controlled-bf16-3",
+ "model": "none finished: model/controlled-bf16-3.partial is left as the build left it, for inspection (sha256 716b083a6c93dad6e53134b3aecb5221d4f46b64e400d5f05f9dc8cc846f0fb3). In it the attention and feed-forward matrices of layers 0 to 3 are changed, by 0.42, 2.71, 2.28, 2.06, 5.76, 3.72, 6.76 and 3.37% of the matrix in path order; every other tensor is the original.",
+ "chronology": "November 11, 12:18 to 2:12 PM CT. Reference 12:18 to 12:22 and own-start 12:22 to 12:30, both from the original file's saved observations, no model run. Start 12:30. The build was started three times: at 12:30, stopped by hand during its first position with the model copy still the original's bytes (the pull's ridge center, the declaration's first revision); at 1:11, which wrote layer 0's attention and ended at 1:18 on a fault in a progress line before the second matrix was chosen or written; and at 1:19, which went on from the first matrix's record, wrote seven more and ended at 2:12 at the ninth. Positions 1 to 8 took 3,195 s.",
+ "what_this_sweep_established": [
+  "The sweep passed its third matrix, and its eighth. Eight matrices in path order were written, and after every one the engine's own output at the merges just above it holds every bound: twelve readings (the attention's merge, the feed-forward's merge and the layer's last merge at layers 0 to 3), the furthest part at 0.908 to 0.999 of its bound. Neither sweep before it wrote a third matrix.",
+  "A feed-forward's solve reads the layer's last merge as the engine does. At all four feed-forward matrices the engine's own output behind the written matrix was inside every bound at both merges at once; no bound was drawn in and no matrix was chosen a second time. The tube loss the engine reads at the layer's last merge is the solve's to four digits at each (0.8904, 0.9844, 0.9962, 0.9949). This is what ended controlled-bf16-2, gone on four cases.",
+  "The first matrix trains: layer 0's attention, changed by 0.42% of the matrix with every bound held on every third and on all the fitting answers together, leaves them 0.7215 of their tube loss at its merge (0.7727 with 0.29% in controlled-bf16-2, before the pull's ridge counted from where its path starts).",
+  "What arrives outside is brought back in the file's BF16, at every width met so far but one. Each of the seven matrices after the first arrived with 4 to 9 direction parts and 3 to 17 size parts past their bounds (the furthest 3.8 to 48 times its bound for the direction, 3.8 to 110 for the size), and each was brought back inside every bound of every third and of all together in 3 to 12 rounds and 31 to 267 s, with 2.1 to 6.8% of the matrix changed. The stepped ridge ended at 2^-11 to 2^-15 of the unit.",
+  "After the first matrix next to nothing is pulled. The tube loss left at each matrix's own merge is 0.889 at layer 0's feed-forward, then 0.976, 0.984, 0.990, 0.996, 0.995 and 0.995: what the first matrix gains at its own merge reads 0.89 by the end of its layer and 0.98 one layer on, and no later matrix adds to it. Every bringing back ends with its furthest part at 0.988 to 0.9997 of its bound and the path that follows passes over 8 to 11 of its starts. Five of the seven kept a pull beyond their bringing back, of 3.4e-6 to 1.9e-5 of the matrix (positions 1, 2, 3, 4 and 6), each leaving all the fitting answers together 5e-7 to 3.4e-5 less of their tube loss; the feed-forwards of layers 2 and 3 kept the bringing back alone (this record's candidates; Astra's table in records/retrospectives/2026-11-11-opening-cells-and-split-astra.md). That path took 2,122 of the 3,038 s of positions 1 to 7 (weight-research-perfomance's reading of this record).",
+  "Where the pull is stopped, from the same reading: in 498 of 531 namings over positions 1 to 7 the part a solve stood furthest along is at the answers' first four places, where all 60 answers read the same token; their frozen bounds are 1e-4 to 1e-6 of their merge's median bound."
+ ],
+ "where_it_ended": {
+  "at": "position 8, layer 4's attention, the first matrix 4096 wide a sweep has reached. It arrived with 8 direction and 9 size parts past their bounds (the furthest 5.87 and 36.9 times its bound; 373.4 outside in all, a sum). The bringing back took that to 4.57, 0.367 and 0.0039 in three rounds. In the next thirteen the ridge was halved to its floor, 2^-23 of the unit; one round took an eighth of its step (0.0039 to 0.0022) and in the other twelve no part of the step, written in the file's BF16, left less outside. It ended with one part of one third at 1.0022 of its bound and all the fitting answers together inside (0.9869). The matrix before it kept its bringing back alone, so there was no pull to take back, and the sweep ended as declared: not accepted, not finished. The replay, the own answers and the verdict were not run.",
+  "the_bringing_back": {
+   "rounds": 16,
+   "rounds_taken": 4,
+   "outside_before_each_round": [
+    373.40988,
+    4.57365,
+    0.3671,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00393,
+    0.00216,
+    0.00216,
+    0.00216
+   ],
+   "parts_of_the_steps_taken": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.125,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ridge_halvings": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "passes": [
+    10,
+    10,
+    10,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "outside_left": 0.0021587610244750977,
+   "largest_over_its_bound": 1.002158761024475,
+   "all_together_largest_over_its_bound": 0.9869280457496643,
+   "change_over_matrix": 0.006314030848443508
+  },
+  "which_part": "The run's record does not name the part that was left at 1.0022.",
+  "read_after_the_sweep": "Development, not part of this run's commands or verdict (records/development/2026-11-10-controlled-training/position8-back.out): the rows the build solved on there were read once more from the left model on card 0 (passes/inspect-8-attention-1, nothing written into the model) and the same bringing back was run on them three times with the same solver. All three ended inside every bound: in 3, 7 and 7 rounds and 38, 92 and 60 s, with 0.62 to 0.67% of the matrix changed, the furthest part at 0.998 to 0.999. Two runs of one solve differ in their last digits (sums on a card are not taken in a fixed order), and the end of this solve is spent at the size of what one writing adds to a part. So the sweep ended on which way that end went, not at a bound no matrix the file holds can meet."
+ },
+ "by_position": [
+  {
+   "position": 0,
+   "matrix": "layer 0's attention",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.002,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.021
+   },
+   "brought_back": null,
+   "starts_of_the_path_passed_over": 5,
+   "selected": "the end of the branch that read group 1",
+   "change_over_matrix": 0.00419,
+   "tube_loss_left_at_its_merge": 0.7215,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 339.4
+  },
+  {
+   "position": 1,
+   "matrix": "layer 0's feed-forward",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 4,
+    "furthest_direction_part_of_its_bound": 6.783,
+    "size_parts_past": 3,
+    "furthest_size_part_of_its_bound": 3.798
+   },
+   "brought_back": {
+    "rounds": 10,
+    "rounds_taken": 10,
+    "seconds": 267,
+    "ridge_power_at_the_end": -15,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9876
+   },
+   "starts_of_the_path_passed_over": 10,
+   "selected": "the end of the branch that read group 2",
+   "change_over_matrix": 0.02706,
+   "tube_loss_left_at_its_merge": 0.8888,
+   "tube_loss_left_at_the_layers_last_merge": 0.8904,
+   "seconds": 1084.0
+  },
+  {
+   "position": 2,
+   "matrix": "layer 1's attention",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 8,
+    "furthest_direction_part_of_its_bound": 15.733,
+    "size_parts_past": 13,
+    "furthest_size_part_of_its_bound": 110.422
+   },
+   "brought_back": {
+    "rounds": 4,
+    "rounds_taken": 4,
+    "seconds": 31,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9987
+   },
+   "starts_of_the_path_passed_over": 11,
+   "selected": "the last matrix inside of the branch that read group 2, before it left a bound",
+   "change_over_matrix": 0.02275,
+   "tube_loss_left_at_its_merge": 0.9761,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 127.3
+  },
+  {
+   "position": 3,
+   "matrix": "layer 1's feed-forward",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 9,
+    "furthest_direction_part_of_its_bound": 3.747,
+    "size_parts_past": 9,
+    "furthest_size_part_of_its_bound": 26.699
+   },
+   "brought_back": {
+    "rounds": 3,
+    "rounds_taken": 3,
+    "seconds": 73,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9908
+   },
+   "starts_of_the_path_passed_over": 11,
+   "selected": "the last matrix inside of the branch that read group 0, before it left a bound",
+   "change_over_matrix": 0.02062,
+   "tube_loss_left_at_its_merge": 0.9844,
+   "tube_loss_left_at_the_layers_last_merge": 0.9844,
+   "seconds": 389.5
+  },
+  {
+   "position": 4,
+   "matrix": "layer 2's attention",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 8,
+    "furthest_direction_part_of_its_bound": 17.53,
+    "size_parts_past": 7,
+    "furthest_size_part_of_its_bound": 6.288
+   },
+   "brought_back": {
+    "rounds": 8,
+    "rounds_taken": 8,
+    "seconds": 62,
+    "ridge_power_at_the_end": -13,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.998
+   },
+   "starts_of_the_path_passed_over": 11,
+   "selected": "the end of the branch that read group 0",
+   "change_over_matrix": 0.05763,
+   "tube_loss_left_at_its_merge": 0.9895,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 177.0
+  },
+  {
+   "position": 5,
+   "matrix": "layer 2's feed-forward",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 8,
+    "furthest_direction_part_of_its_bound": 6.401,
+    "size_parts_past": 8,
+    "furthest_size_part_of_its_bound": 30.745
+   },
+   "brought_back": {
+    "rounds": 12,
+    "rounds_taken": 12,
+    "seconds": 262,
+    "ridge_power_at_the_end": -13,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.999
+   },
+   "starts_of_the_path_passed_over": 8,
+   "selected": "the bringing back alone: no candidate that holds every bound on every group and on all the fitting answers together leaves them less tube loss than where the path started",
+   "change_over_matrix": 0.03723,
+   "tube_loss_left_at_its_merge": 0.9963,
+   "tube_loss_left_at_the_layers_last_merge": 0.9962,
+   "seconds": 524.1
+  },
+  {
+   "position": 6,
+   "matrix": "layer 3's attention",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 8,
+    "furthest_direction_part_of_its_bound": 48.344,
+    "size_parts_past": 17,
+    "furthest_size_part_of_its_bound": 34.754
+   },
+   "brought_back": {
+    "rounds": 11,
+    "rounds_taken": 11,
+    "seconds": 81,
+    "ridge_power_at_the_end": -13,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9989
+   },
+   "starts_of_the_path_passed_over": 11,
+   "selected": "the last matrix inside of the branch that read group 1, before it left a bound",
+   "change_over_matrix": 0.06761,
+   "tube_loss_left_at_its_merge": 0.995,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 219.4
+  },
+  {
+   "position": 7,
+   "matrix": "layer 3's feed-forward",
+   "written": true,
+   "arrived": {
+    "direction_parts_past": 9,
+    "furthest_direction_part_of_its_bound": 8.87,
+    "size_parts_past": 11,
+    "furthest_size_part_of_its_bound": 8.114
+   },
+   "brought_back": {
+    "rounds": 6,
+    "rounds_taken": 6,
+    "seconds": 140,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9997
+   },
+   "starts_of_the_path_passed_over": 11,
+   "selected": "the bringing back alone: no candidate that holds every bound on every group and on all the fitting answers together leaves them less tube loss than where the path started",
+   "change_over_matrix": 0.03375,
+   "tube_loss_left_at_its_merge": 0.9948,
+   "tube_loss_left_at_the_layers_last_merge": 0.9949,
+   "seconds": 516.6
+  },
+  {
+   "position": 8,
+   "matrix": "layer 4's attention",
+   "written": false,
+   "arrived": {
+    "direction_parts_past": 8,
+    "furthest_direction_part_of_its_bound": 5.867,
+    "size_parts_past": 9,
+    "furthest_size_part_of_its_bound": 36.902
+   },
+   "brought_back": {
+    "rounds": 16,
+    "rounds_taken": 4,
+    "seconds": 133,
+    "ridge_power_at_the_end": -23,
+    "every_bound_inside": false,
+    "furthest_part_after_of_its_bound": 1.0022
+   },
+   "starts_of_the_path_passed_over": 0,
+   "selected": "no change: a bound is outside and no feasible restoration was found under this search",
+   "change_over_matrix": 0.0,
+   "tube_loss_left_at_its_merge": null,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 157.5
+  }
+ ],
+ "the_engines_own_output_after_each_written_matrix": {
+  "attention-0": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7215,
+   "furthest_part_of_its_bound": 0.9082
+  },
+  "feedforward-0": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8888,
+   "furthest_part_of_its_bound": 0.9604
+  },
+  "layer-0": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8904,
+   "furthest_part_of_its_bound": 0.9889
+  },
+  "attention-1": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9761,
+   "furthest_part_of_its_bound": 0.9652
+  },
+  "feedforward-1": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9844,
+   "furthest_part_of_its_bound": 0.9813
+  },
+  "layer-1": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9844,
+   "furthest_part_of_its_bound": 0.9814
+  },
+  "attention-2": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9895,
+   "furthest_part_of_its_bound": 0.9948
+  },
+  "feedforward-2": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9963,
+   "furthest_part_of_its_bound": 0.9959
+  },
+  "layer-2": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9962,
+   "furthest_part_of_its_bound": 0.9948
+  },
+  "attention-3": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.995,
+   "furthest_part_of_its_bound": 0.9871
+  },
+  "feedforward-3": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9948,
+   "furthest_part_of_its_bound": 0.999
+  },
+  "layer-3": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9949,
+   "furthest_part_of_its_bound": 0.9988
+  }
+ },
+ "prediction_vs_result": {
+  "the_reference": "The 105 array files are controlled-bf16-2's byte for byte; two diagnostic sums of the index differ in their last digits (the declaration's first revision). The prediction said to the last digit and did not except the index.",
+  "layer_0_attention": "Predicted about 0.77 left; result 0.7215 with 0.42% changed. Nearer the target than predicted; the prediction was read off the second sweep, before the ridge center changed.",
+  "layer_0_feed_forward": "Predicted: back inside both merges in about 19 rounds, the ridge ending near 2^-17, about 2.3% changed, no pull kept (about 0.91), the engine inside behind it. Result: 10 rounds, 2^-15, 2.71%, 0.889 left, the engine inside at once. The rounds and the ridge are the revised rule's (its kept-row figure was 10 rounds and 2.21%).",
+  "the_sweep_passes_its_third_matrix": "As predicted.",
+  "the_later_matrices": "As predicted in kind: all seven arrived outside and were brought back, with 2.1 to 6.8% of the matrix changed where 1% to a few percent was predicted, and kept next to no pull. The tube loss left is 0.995 at layer 3's merges, nearer the original's than the predicted 'nearer 0.9 than 0.5' suggests; the prediction called itself weakest here.",
+  "the_sweep_ends_early": "As predicted, and at the first of the three ends named: a bringing back that did not end inside in its search. Not at the widest matrices or the card's memory, which it never reached.",
+  "the_time": "Predicted 5 minutes an attention matrix and 12 a feed-forward. Result 2 to 6 and 6 to 18 minutes; two thirds of it in the path after a bringing back."
+ },
+ "failures_only": [
+  "The sweep ended at its ninth of 70 matrices, not accepted.",
+  "The bringing back at layer 4's attention ended 0.0022 outside in all, one part at 1.0022 of its bound, after 16 rounds of which 4 were taken. The solver's claim that the stepped ridge brings back what arrives outside is weakened as the declaration said it would be: by a bringing back that used its rounds at the smallest ridge.",
+  "No matrix after the first kept a pull that shows in the trace (at most 1.9e-5 of a matrix beyond its bringing back, at most 3.4e-5 less of the tube loss), and the path that looked for one took 70% of the time after the first matrix.",
+  "The build's record of a bringing back that ends outside does not name the parts left outside.",
+  "The build was started three times (chronology): once stopped by hand for a solver correction, once ended by a fault in a line of its own progress report."
+ ],
+ "what_this_changes": [
+  "This run does not test the hypothesis, by its own declaration: once the first matrix has filled its bounds the later ones are brought back and keep pulls of at most 1.9e-5 of a matrix, so the model left barely differs from the original in the trace's terms (0.995 of the tube loss left at layer 3). That is the configuration's outcome under this allowance. The earlier repairs and their transfer stand as recorded.",
+  "The allowance: the next new sweep tests the mean and the rows held apart, which Marcos approved at 1:48 PM CT on November 11 (journal/2026-11-11-mean-and-row-preservation.md). What this sweep adds to that: the parts that stop the pull are the answers' first four places, where every answer reads the same token and the bound is 1e-4 to 1e-6 of the merge's median. Whether the new allowance gives room there depends on whether the movement at those places is the rows' own or their group's together, which is read on the kept rows before that sweep is declared; the bounds there are Astra's to weigh.",
+  "The solver, which is this session's: (1) the end of a bringing back has to be made at the size of what a writing adds, so that it does not turn on the last digits; (2) the path after a bringing back starts from a matrix that stands at its bounds by construction, kept at most 1.9e-5 of a matrix in seven tries and cost two thirds of the time, so it is either given room (the pull as a constrained step, Astra's records/retrospectives/2026-11-11-splitting-and-constrained-pull-astra.md, section 4) or not walked; (3) a bringing back that ends outside has to name the parts it left."
+ ],
+ "records": {
+  "build.jsonl": "one line per position: 0 to 7 written, 8 where it ended",
+  "logs/build.out, build-2.out, build-3.out, run.log": "the three starts of the build and what each said",
+  "reference, own/start.json": "what the original model fixes for this run (the second sweep's arrays)",
+  "passes/inspect-8-attention-1-rows.npz": "the rows at layer 4's attention read from the left model after the sweep (not in Git)",
+  "records/development/2026-11-10-controlled-training/position8-back.out, position8-back.jsonl": "the bringing back at layer 4's attention run three times on those rows",
+  "records/development/2026-11-10-speed-review/as-we-go": "weight-research-perfomance's readings of the model after each written matrix (card 1) and of this record"
+ }
+}

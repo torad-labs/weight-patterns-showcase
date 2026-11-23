@@ -1,0 +1,30 @@
+{
+ "method_step": [
+  1,
+  2,
+  3
+ ],
+ "run_by": "Claude",
+ "hypothesis": "The pattern is in the trace of the computation. Answers that use the same capability share a pattern in how the signal turns along the path, the correct answers one and the wrong answers another, and the gap between those two shared patterns is what a weight change has to close. The token, the value and the answer text are irrelevant to it.",
+ "what_went_wrong_before": "Every overlap so far lined the answers up by their words. Where the two groups wrote different words their traces were left out, the reading was told through the words, and the correct group was about to be re-chosen by the value of the speed. Marcos, November 9: we should not be looking at the specifics of the tokens or the values; we need to overlap the trace of the computation.",
+ "why_this_direction": "wide-overlap already holds the full traces of 30 correct and 30 wrong answers. With each group cut in two halves that share no answer, the gap between the overlaps recurs (agreement 0.37 before the wording forks, 0.77 after) although single answers do not separate. That reading still rested on a token alignment. This run overlaps the same traces with the computation as the only thing that lines them up, so that where the gap lives is read from the trace alone.",
+ "repeating_pattern_check": "What repeats: the trace gets replaced by something easier to point at, a word, a number, a field, one layer. Here nothing but the turns enters the alignment, the patterns or the gap. The only use of the answers is which group each one belongs to, which is how the hypothesis defines the groups.",
+ "rule": {
+  "members": "The 60 answers of wide-overlap, as they are. Correct: both fields and the verdict right. Wrong: the 30 that subtract the descent. No member is added, dropped or re-chosen.",
+  "axis": "The member of median length serves as the axis the others are laid along. It is a coordinate, not a model answer.",
+  "alignment": "Two steps are alike by the cosine between their turns at all 105 merges. Each answer is matched to the axis by the monotonic path with the greatest total likeness. Every member is present at every place of the axis.",
+  "overlap": "At every place and merge: the mean turn of the correct members, the mean turn of the wrong members, and their difference, the gap.",
+  "recurrence": "Two readings of whether the gap is shared. The gap against what two patterns of one and the same group would differ by, from the spread of the members and their count. And the agreement of the gap between two halves of each group that share no answer (members in listed order, alternating)."
+ },
+ "prediction": {
+  "expected_observation": "The gap between the two shared patterns is several times what chance would give along a connected stretch of the path, and the two halves agree there. The stretch begins before the place where the token alignment showed the wording fork, and it is not the same at every depth.",
+  "failures_only": "Original model only. No edit in this run."
+ },
+ "would_weaken_it": "The gap is no larger than chance gives and the two halves do not agree anywhere along the path, or only where the earlier token alignment already separated the groups at every depth.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/wide-overlap"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/trace-overlap"
+ ]
+}

@@ -1,4 +1,4 @@
-#set document(title: "Training on Local Divergence Between Computational Traces", author: "Marcos Damasceno", description: "Working paper on trace-guided weight updates, arithmetic repair and transfer in Gemma 4 E2B.")
+#set document(title: "Training on Local Divergence Between Computational Traces", author: "Marcos Damasceno", description: "Working paper on trace-guided weight updates, arithmetic repair and transfer in Gemma 4 E2B.", date: datetime(year: 2026, month: 11, day: 18))
 #let web = sys.inputs.at("edition", default: "print") == "web"
 #let ink = rgb("#192f37")
 #let accent = rgb("#08665f")

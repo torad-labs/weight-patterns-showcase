@@ -1,0 +1,9 @@
+{
+  "declared_at": "2026-11-18T03:22:11.471235-06:00",
+  "source": "result.json",
+  "additional_input": "records/retrospectives/2026-11-17-natural-descent-decisions/scores.json",
+  "inputs": "Same original cohort, turn files, group exclusions, FFN20 site and turn midpoint as declaration.json.",
+  "motivation": "After observing two consecutive alarms on the reordered case, check whether this timing also accompanies valid descents and how often the same response has earlier alarms.",
+  "rule": "Score the observed turn at every available prediction event using the fixed energy-group-excluded centroid midpoint. Compare both immediately preceding event scores with zero. Report counts of wrong and correct responses flagged at both, at the last alone (irrespective of the other), and anywhere earlier. Separately count traces with their only two flags at those last two events. Record unavailable annotations or turns. Use the sign annotation only for evaluating timing, never as an input to the score. There is no fit or threshold search.",
+  "scope": "Post-hoc follow-up prompted by a known development example. This uses no new model output and supplies no independent validation."
+}

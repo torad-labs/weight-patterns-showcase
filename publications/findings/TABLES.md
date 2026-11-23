@@ -52,7 +52,7 @@ Source: [apps/decode-machine/EVIDENCE-ONTOLOGY.md](../../apps/decode-machine/EVI
 
 ## 4. Relational artifact: `qgre.ghost-observations.v1`
 
-Source: [apps/decode-machine/GHOST-INSTRUMENTATION.md](../../apps/decode-machine/GHOST-INSTRUMENTATION.md), line 37.
+Source: apps/decode-machine/GHOST-INSTRUMENTATION.md, line 37.
 
 | Table | Identity and joins | What it establishes |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ Source: [apps/decode-machine/GHOST-INSTRUMENTATION.md](../../apps/decode-machine
 
 ## 5. The candidate and its counterfactuals
 
-Source: [apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md](../../apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md), line 23.
+Source: apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md, line 23.
 
 | Head | Halved by half edit | Removed at the scale floor | Already zero | Removed by zero edit |
 |---|---:|---:|---:|---:|
@@ -78,7 +78,7 @@ Source: [apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md](../../apps/decode-ma
 
 ## 6. Behavioral results
 
-Source: [apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md](../../apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md), line 46.
+Source: apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md, line 46.
 
 | Checkpoint / intervention | Discovery / 12 | Confirmation / 24 | Unrelated controls / 12 |
 |---|---:|---:|---:|
@@ -95,7 +95,7 @@ Source: [apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md](../../apps/decode-ma
 
 ## 7. How the edit propagates
 
-Source: [apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md](../../apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md), line 71.
+Source: apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md, line 71.
 
 | Recorded stage (zero-based layer) | Half/full change length | Direction agreement |
 |---|---:|---:|
@@ -110,7 +110,7 @@ Source: [apps/decode-machine/GHOST-RETRIEVAL-EXPERIMENT.md](../../apps/decode-ma
 
 ## 8. Individual quantized weight editing
 
-Source: [apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md](../../apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md), line 27.
+Source: apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md, line 27.
 
 | Requested fraction of original | Changed codes | Unchanged codes | Nonzero values rounded to zero | Changed scales |
 | --- | ---: | ---: | ---: | ---: |
@@ -120,7 +120,7 @@ Source: [apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md](../../apps/decode-
 
 ## 9. Individual quantized weight editing
 
-Source: [apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md](../../apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md), line 39.
+Source: apps/decode-machine/INDIVIDUAL-WEIGHT-EXPERIMENT.md, line 39.
 
 | Model / requested fraction | Target answer (wanted `blue`) | Correct / 66 | Original-correct preserved / 56 | Newly correct | Regressed | Decision |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
@@ -149,7 +149,7 @@ Source: [apps/decode-machine/INTERNAL-EQUIPMENT.md](../../apps/decode-machine/IN
 
 ## 11. What the model did
 
-Source: [apps/decode-machine/PHYSICS-TRACE-BF16.md](../../apps/decode-machine/PHYSICS-TRACE-BF16.md), line 22.
+Source: apps/decode-machine/PHYSICS-TRACE-BF16.md, line 22.
 
 | Observation across the same questions | Q4_K_M | BF16 |
 | --- | ---: | ---: |
@@ -161,7 +161,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-BF16.md](../../apps/decode-machine/PH
 
 ## 12. A correct partial calculation with a controlled comparison
 
-Source: [apps/decode-machine/PHYSICS-TRACE-BF16.md](../../apps/decode-machine/PHYSICS-TRACE-BF16.md), line 64.
+Source: apps/decode-machine/PHYSICS-TRACE-BF16.md, line 64.
 
 | Observable calculation moment | Decision, zero-based | FF14 relative ratio | FF15 relative ratio |
 | --- | ---: | ---: | ---: |
@@ -172,7 +172,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-BF16.md](../../apps/decode-machine/PH
 
 ## 13. How broadly the earlier progression persists
 
-Source: [apps/decode-machine/PHYSICS-TRACE-BF16.md](../../apps/decode-machine/PHYSICS-TRACE-BF16.md), line 95.
+Source: apps/decode-machine/PHYSICS-TRACE-BF16.md, line 95.
 
 | Pair | Q4 progression / eligible | BF16 progression / eligible | BF16 median FF14 ratio | BF16 median FF15 ratio |
 | --- | ---: | ---: | ---: | ---: |
@@ -191,7 +191,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-BF16.md](../../apps/decode-machine/PH
 
 ## 14. The connected progression
 
-Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md), line 44.
+Source: apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md, line 44.
 
 | Pair | Kind | Predicted sequence / eligible | Median FF14 ratio | Median FF15 ratio |
 | --- | --- | ---: | ---: | ---: |
@@ -210,7 +210,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machin
 
 ## 15. The connected progression
 
-Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md), line 76.
+Source: apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md, line 76.
 
 | Layer | Absolute separation ratio | State-length growth | Update alignment cosine | Before/after difference cosine |
 | --- | ---: | ---: | ---: | ---: |
@@ -219,7 +219,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machin
 
 ## 16. What the model actually did
 
-Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md), line 93.
+Source: apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md, line 93.
 
 | Kind | Cases | Correct explicit verdicts | Complete correct solutions | Capped |
 | --- | ---: | ---: | ---: | ---: |
@@ -229,7 +229,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machin
 
 ## 17. Connecting concrete calculation moments
 
-Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md), line 125.
+Source: apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md, line 125.
 
 | Execution | Observable progression | Recorded decision indices (zero-based) |
 | --- | --- | --- |
@@ -240,7 +240,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-FOLLOWUP.md](../../apps/decode-machin
 
 ## 18. The observable target
 
-Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md), line 30.
+Source: apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md, line 30.
 
 | Recipient | Correct available / required / verdict | Recorded baseline |
 | --- | --- | --- |
@@ -249,7 +249,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-ma
 
 ## 19. The additional numerical variants
 
-Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md), line 61.
+Source: apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md, line 61.
 
 | Pair | Correct available energy | Required energy, base / changed | Shared generated prefix | Observation |
 | --- | ---: | ---: | ---: | --- |
@@ -258,7 +258,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-ma
 
 ## 20. What the swaps changed
 
-Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md), line 75.
+Source: apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md, line 75.
 
 | Recipient | Swap time | Difference in substituted branch, relative to recipient branch | Changed vocabulary-score decisions | Final answer |
 | --- | --- | ---: | ---: | --- |
@@ -269,7 +269,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-ma
 
 ## 21. What the swaps changed
 
-Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md), line 91.
+Source: apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md, line 91.
 
 | Recorded boundary | Difference from the unmodified recipient, relative L2 |
 | --- | ---: |
@@ -284,7 +284,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-INTERVENTION.md](../../apps/decode-ma
 
 ## 22. What we asked
 
-Source: [apps/decode-machine/PHYSICS-TRACE-PILOT.md](../../apps/decode-machine/PHYSICS-TRACE-PILOT.md), line 26.
+Source: apps/decode-machine/PHYSICS-TRACE-PILOT.md, line 26.
 
 | Server pilot format | Correct YES/NO verdict | Reached output limit | Interpretation |
 | --- | ---: | ---: | --- |
@@ -294,7 +294,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-PILOT.md](../../apps/decode-machine/P
 
 ## 23. Native representation and checkpoint integrity
 
-Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md), line 70.
+Source: apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md, line 70.
 
 | Measurement | Result |
 | --- | ---: |
@@ -311,7 +311,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-mac
 
 ## 24. All 28 behavioral comparisons
 
-Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md), line 102.
+Source: apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md, line 102.
 
 | Measure | Original | Edited |
 | --- | ---: | ---: |
@@ -322,7 +322,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-mac
 
 ## 25. All 28 behavioral comparisons
 
-Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md), line 115.
+Source: apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md, line 115.
 
 | Case | Original available / required / verdict | Edited | Interpretation |
 | --- | --- | --- | --- |
@@ -333,7 +333,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-mac
 
 ## 26. Following the effect
 
-Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md), line 151.
+Source: apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md, line 151.
 
 | Boundary | Difference from original, relative L2 |
 | --- | ---: |
@@ -346,7 +346,7 @@ Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-mac
 
 ## 27. Following the effect
 
-Source: [apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md](../../apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md), line 167.
+Source: apps/decode-machine/PHYSICS-TRACE-WEIGHT-EDIT.md, line 167.
 
 | Candidate token | Original logit | Edited logit |
 | --- | ---: | ---: |
@@ -370,7 +370,7 @@ Source: [apps/decode-machine/PROFILING-LENSES.md](../../apps/decode-machine/PROF
 
 ## 29. The other analogies
 
-Source: [references/history/pre-organization-RESIDUAL-TRACE-THEORY.md](../../references/history/pre-organization-RESIDUAL-TRACE-THEORY.md), line 162.
+Source: references/history/pre-organization-RESIDUAL-TRACE-THEORY.md, line 162.
 
 | Analogy | Concept it conveys |
 |---|---|
@@ -383,7 +383,7 @@ Source: [references/history/pre-organization-RESIDUAL-TRACE-THEORY.md](../../ref
 
 ## 30. 7. Misunderstandings to avoid
 
-Source: [references/history/pre-organization-RESIDUAL-TRACE-THEORY.md](../../references/history/pre-organization-RESIDUAL-TRACE-THEORY.md), line 350.
+Source: references/history/pre-organization-RESIDUAL-TRACE-THEORY.md, line 350.
 
 | Misreading | Meaning to retain |
 |---|---|
@@ -400,7 +400,7 @@ Source: [references/history/pre-organization-RESIDUAL-TRACE-THEORY.md](../../ref
 
 ## 31. Targeted key/value lookup edit
 
-Source: [apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md](../../apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md), line 5.
+Source: apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md, line 5.
 
 | Run | Target answer | Discovery correct / 12 | Controls correct / 18 | Losses among 26 original-correct discovery/controls |
 | --- | --- | ---: | ---: | ---: |
@@ -412,7 +412,7 @@ Source: [apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md](../../apps/decode-ma
 
 ## 32. Targeted key/value lookup edit
 
-Source: [apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md](../../apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md), line 62.
+Source: apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md, line 62.
 
 | Recorded location | Target: changed / total | Protected red case: changed / total |
 | --- | ---: | ---: |
@@ -424,7 +424,7 @@ Source: [apps/decode-machine/TARGETED-LOOKUP-EXPERIMENT.md](../../apps/decode-ma
 
 ## 33. Observations and the first test
 
-Source: [apps/decode-machine/WEIGHT-SPACE-ORIENTATION.md](../../apps/decode-machine/WEIGHT-SPACE-ORIENTATION.md), line 62.
+Source: apps/decode-machine/WEIGHT-SPACE-ORIENTATION.md, line 62.
 
 | Pair | Expected | Original wording | Color wording |
 | --- | --- | --- | --- |
@@ -484,7 +484,7 @@ Source: [runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/ANALYSIS.md](../
 
 ## 37. Desktop, 3840x2050: mean 6.7
 
-Source: [runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md](../../studies/01-early-exploration/decode-observatory/run/design-review.md), line 7.
+Source: runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md, line 7.
 
 | # | Criterion | Score | Reason |
 |---|---|---|---|
@@ -502,7 +502,7 @@ Source: [runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md
 
 ## 38. Laptop, 1440x900: mean 7.5
 
-Source: [runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md](../../studies/01-early-exploration/decode-observatory/run/design-review.md), line 23.
+Source: runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md, line 23.
 
 | # | Criterion | Score | Reason |
 |---|---|---|---|
@@ -520,7 +520,7 @@ Source: [runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md
 
 ## 39. Phone, 390x844: mean 7.5 over 10 criteria
 
-Source: [runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md](../../studies/01-early-exploration/decode-observatory/run/design-review.md), line 41.
+Source: runs/legs/gemma4-e2b/decode-observatory-30k-2026-11-05/design-review.md, line 41.
 
 | # | Criterion | Score | Reason |
 |---|---|---|---|
@@ -838,7 +838,7 @@ Source: [runs/legs/gemma4-e2b/physics-trace-followup-2026-11-06/REPORT.md](../..
 
 ## 63. Calculation anchors
 
-Source: [runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/CALCULATION-ANCHORS.md](../../studies/02-physics-trace-observation/physics-trace-bf16/run/CALCULATION-ANCHORS.md), line 7.
+Source: runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/CALCULATION-ANCHORS.md, line 7.
 
 | Case | Moment | Decision (zero-based) | Input position | Pair history still matched? |
 | --- | --- | ---: | ---: | --- |
@@ -906,7 +906,7 @@ Source: [runs/legs/gemma4-e2b/physics-trace-bf16-2026-11-06/REPORT.md](../../stu
 
 ## 67. Only after qualification validation exited0:
 
-Source: [runs/legs/gemma4-e2b/physics-intervention-2026-11-07/COMMANDS.md](../../studies/02-physics-trace-observation/physics-intervention/run/COMMANDS.md), line 43.
+Source: runs/legs/gemma4-e2b/physics-intervention-2026-11-07/COMMANDS.md, line 43.
 
 | Command | Outcome |
 | --- | --- |

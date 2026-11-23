@@ -1,0 +1,33 @@
+{
+  "status": "stopped_rejected_precision",
+  "stopped_at_ct": "November 10, 2026, 6:51 PM CT",
+  "stop_reported_by": "weight-research-fable",
+  "reason": "Marcos rejected changing the model to float32: \"then the problem is thje solver. Float 32 is not acceptable\".",
+  "prediction_vs_result": {
+    "disposition": "The declared sweep was stopped before weight fitting; its training and acceptance predictions were not tested.",
+    "completed": "An equal-value copy with 70 matrices stored as float32 was created. Native baseline capture was attempted.",
+    "not_completed": [
+      "completed baseline/reference calibration",
+      "weight fitting",
+      "composed edited-model replay",
+      "edited-model own-generation comparison",
+      "joint acceptance verdict"
+    ],
+    "numerical_weight_updates_written": 0,
+    "native_reading_limit": "A baseline capture completion appeared in the log, but the stopped run has no completed retained baseline/reference. Do not report it as a calibrated or trained model."
+  },
+  "failures_only": [
+    {
+      "kind": "rejected_construction",
+      "detail": "Changing the model's storage/execution precision was rejected. This stop is not evidence against the capability hypothesis and is not a numerical acceptance failure."
+    }
+  ],
+  "what_this_changes": "The active construction remains in original BF16. The solver must produce useful BF16-representable changes under the existing trace constraints, rather than substituting a float32 model. Existing development evidence remains historical evidence; the original declaration is not rewritten as a BF16 run.",
+  "preservation": "The run owner reports its tube, recorder, driver and disk-watch processes stopped and no data removed. This closure performs no deletion or model execution.",
+  "sources": [
+    "journal/2026-11-10-controlled-training.md",
+    "studies/04-round-2-overlap/runs/controlled-sweep-1/logs/run.log",
+    "studies/04-round-2-overlap/runs/controlled-sweep-1/logs/start.out",
+    "studies/04-round-2-overlap/runs/controlled-sweep-1/logs/baseline.out"
+  ]
+}

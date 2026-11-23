@@ -1,0 +1,230 @@
+{
+  "status": "The single preselected candidate's fitting-only own-trace comparison is complete. The declared lower-L prediction is not met; partial behavioral repair and new failures are both retained.",
+  "assessed_by": "weight-research-astra, November 12, 2026; primary readings by weight-research-perfomance at 12d4c02f",
+  "prediction_vs_result": {
+    "prediction": "The preselected native BF16 candidate lowers whole-model computation discrepancy L on its own fitting-question traces relative to the identical unchanged original.",
+    "verdict": "The declared L prediction is not met: 0.24664 to 0.42049. This does not erase the six complete repairs of originally wrong answers; it also does not erase three newly incomplete originally correct answers.",
+    "own_trace_L": {
+      "original_card_1": 0.24664,
+      "candidate": 0.42048873665689257,
+      "candidate_direction": 0.12122442562591418,
+      "candidate_size": 0.2992643110309784,
+      "candidate_original_wrong_group": 0.2761329759658855,
+      "candidate_original_correct_group": 0.14435576069100714,
+      "original_direction_as_reported": 0.112,
+      "original_size_as_reported": 0.135,
+      "qualification": "The frozen registered instrument, not a calibrated numerical measure of capability damage. All thirty own histories differ from their original recordings."
+    },
+    "complete_answers": {
+      "original_card_1": {
+        "wrong": 0,
+        "correct": 15,
+        "total": 15
+      },
+      "candidate": {
+        "wrong": 6,
+        "correct": 12,
+        "total": 18
+      }
+    },
+    "available_energy_right": {
+      "original_card_1": {
+        "wrong": 1,
+        "correct": 15
+      },
+      "candidate": {
+        "wrong": 8,
+        "correct": 15
+      }
+    },
+    "verdict_right": {
+      "original_card_1": {
+        "wrong": 1,
+        "correct": 15
+      },
+      "candidate": {
+        "wrong": 11,
+        "correct": 15
+      }
+    },
+    "limit_reached": {
+      "original_card_1": {
+        "wrong": 1,
+        "correct": 0
+      },
+      "candidate": {
+        "wrong": 0,
+        "correct": 0
+      }
+    },
+    "median_steps": {
+      "original_card_1": {
+        "wrong": 489,
+        "correct": 422
+      },
+      "candidate": {
+        "wrong": 533,
+        "correct": 473
+      }
+    },
+    "local_given_text": {
+      "before": 0.00103669,
+      "after": 0.000047239,
+      "role": "All-fitting construction objective, not independent validation or the candidate's own trajectory."
+    },
+    "selection": {
+      "ridge_power": -3,
+      "accepted_round": 25,
+      "all_fitting_rounds_at_that_ridge": 13,
+      "held_fold_score_before": 0.00103669,
+      "held_fold_score_after": 0.000143128,
+      "qualification": "The all-fitting refit ended naturally before the selected round budget. These are within-fitting construction readings."
+    }
+  },
+  "failures_only": {
+    "wrong_group": {
+      "count": 15,
+      "available_energy_right": 8,
+      "descent_subtracted": 3,
+      "descent_omitted": 2,
+      "adds_descent_but_doubles_kinetic_energy": 2,
+      "complete": 6
+    },
+    "doubled_kinetic_energy_cases": [
+      "discovery-05-channel-h1",
+      "expanded-020-h1"
+    ],
+    "still_subtracting": [
+      "expanded-042-h3",
+      "expanded-046-h3",
+      "expanded-070-h1"
+    ],
+    "descent_omitted": [
+      "expanded-034-h3",
+      "expanded-094-h1"
+    ],
+    "correct_group": {
+      "count": 15,
+      "available_energy_right": 15,
+      "verdict_right": 15,
+      "complete": 12,
+      "new_required_energy_failures": 3
+    },
+    "required_energy_changes": "Three originally correct cases acquire required-energy errors; one originally wrong case acquires a new required-energy error, while two originally wrong cases repair a prior required-energy error. The per-answer source tables retain the actual fields, not just these totals.",
+    "per_answer_evidence": {
+      "original_recording_and_candidate": "studies/04-round-2-overlap/runs/correction-at-17-original/own/candidate/own.json: table (30 entries, original and now fields)",
+      "matched_original_card_1": "studies/04-round-2-overlap/runs/correction-at-19/own/controls/original/own.json: table, joined by id",
+      "full_generated_traces": "studies/04-round-2-overlap/runs/correction-at-17-original/own/candidate/own/<id>/",
+      "projected_member_reading": "records/development/2026-11-12-path-forward/member-projected.txt"
+    },
+    "projected_reading_limit": "On the sign's line the old projection mostly tracks the subtraction error, but the two doubled-kinetic-energy cases read near agreement and two complete originally correct cases read substantial projected error (0.277 and 0.157). That axis is not a complete correctness target."
+  },
+  "conditional_diagnostics": {
+    "by_depth_at_sign": {
+      "source_commit": "af4da914",
+      "source": "records/development/2026-11-12-path-forward/sign-decision/depth.txt",
+      "scope": "Fitting answers at the sign decision on the original recordings' text, card 1. Conditional on that old history; not an own-trajectory result.",
+      "through_layer_16": "State unchanged from the original, before the written matrix.",
+      "wrong_same_line": {
+        "members": 6,
+        "layers": "28–32",
+        "median_movement_along_same_line_contrast": [
+          0.96,
+          1.03
+        ]
+      },
+      "wrong_other_wording": {
+        "members": 9,
+        "layers": "23–32",
+        "median_movement_along_same_line_contrast": [
+          0.58,
+          0.75
+        ]
+      },
+      "correct_same_line": {
+        "members": 4,
+        "median_movement_along_same_line_contrast": [
+          0.31,
+          0.56
+        ]
+      },
+      "correct_other_wording": {
+        "members": 9,
+        "median_movement_along_same_line_contrast": [
+          -0.05,
+          0
+        ]
+      },
+      "whole_squared_movement_over_contrast_squared": {
+        "wrong_group": [
+          4,
+          4.2
+        ],
+        "correct_group": [
+          0.1,
+          0.12
+        ]
+      },
+      "interpretation": "The wrong-group movement has a substantial component along the observed pre-sign contrast under both wording comparisons. The correct same-line subset also moves: preserved available-energy answers do not imply unchanged correct computation. This projection is one component of the whole movement and does not establish a complete or context-free capability target."
+    },
+    "candidate_on_original_card_1_own_text": {
+      "original_L": 0.24664,
+      "candidate_L": 0.22418,
+      "original_L_from_layer_17": 0.13339,
+      "candidate_L_from_layer_17": 0.11093,
+      "original_wrong_group_L": 0.2441,
+      "candidate_wrong_group_L": 0.2212,
+      "original_correct_group_L": 0.0025,
+      "candidate_correct_group_L": 0.0029,
+      "qualification": "Text and registration held; approximately 9.1% less of the specified L. Conditional replay, not the own-trajectory result."
+    },
+    "upstream_before_written_matrix": {
+      "merges": 51,
+      "own_L_original": 0.11325,
+      "own_L_candidate": 0.21727,
+      "held_text_state_distance": 0,
+      "interpretation": "On fixed text these unchanged layers reproduce the original state. Their changed own states are therefore mediated by changed generated histories; that does not establish that the changes are merely cosmetic or that all downstream L change is a wording artifact."
+    },
+    "original_history_sign_margin": {
+      "wrong_eligible": 15,
+      "wrong_plus_above_minus": 12,
+      "wrong_median_change_vs_original": 7.02,
+      "wrong_change_range": [
+        2,
+        12.21
+      ],
+      "correct_eligible": 13,
+      "correct_plus_above_minus": 13,
+      "correct_median_change_vs_original": -0.34,
+      "qualification": "These numbers are CHANGES in plus-minus margin, not the candidate's absolute margins. They are conditional on the original histories, not twelve own-answer repairs."
+    },
+    "other_original_history_scores": {
+      "median_absolute_supplied_token_margin_change": 0.174,
+      "first_choices_changed": 365,
+      "role": "Description only; no candidate selected from these values."
+    }
+  },
+  "what_this_changes": {
+    "established": "One persistent native matrix change constructed from the overlap produces six complete repairs on the originally wrong fitting questions while all fifteen originally correct questions retain correct available energy and verdict. That is partial repair evidence, with three required-energy regressions retained.",
+    "unmet": "The lower-L prediction fails, and the goal of correcting all wrong answers without breaking correct ones is not met. This reading does not establish held-out transfer.",
+    "metric": "Pooled own-trace L cannot serve by itself as the validated measure of capability closure: it combines changed computation with history-dependent reference and registration differences. Keep its historical value and failed prediction; do not retune it to rank models by answer count or replace it with answer scores as the optimizer's reward.",
+    "construction": "The positive repair action is retained while the next construction addresses unpriced movement, member-level agreement, prompt computation, context-dependent correct progressions and current own histories. No pure or exclusive capability direction is required before testing an edit, but no unsupported zero-movement target is introduced.",
+    "limits": "A and B start from different models, so their difference does not isolate edit location. No second B candidate or post-result dose is selected. The separate kept-row diagnostic is not the next native training run and does not change this result."
+  },
+  "provenance": {
+    "source_commit": "12d4c02f",
+    "source_report": "records/development/2026-11-12-path-forward/README.md:244-298",
+    "model": "studies/04-round-2-overlap/runs/correction-at-17-original/model/correction-at-17-original.gguf",
+    "model_sha256": "89c6839a3cfbd771e90a899fb8ac0b33365a13dc75350fea99d0f477f5622592",
+    "model_write_record": "studies/04-round-2-overlap/runs/correction-at-17-original/model/written.json",
+    "reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+    "own_capture": "studies/04-round-2-overlap/runs/correction-at-17-original/own/candidate",
+    "own_provenance": "studies/04-round-2-overlap/runs/correction-at-17-original/own/candidate/provenance.json",
+    "own_L_record": "studies/04-round-2-overlap/runs/correction-at-17-original/own/candidate/whole-model-l/l.json",
+    "own_manifest": "studies/04-round-2-overlap/runs/correction-at-17-original/own/candidate/manifest.sha256",
+    "conditional_replay": "studies/04-round-2-overlap/runs/correction-at-17-original/own/diagnostics/conditional-replays/on-the-originals-own-text",
+    "comparison": "Thirty fitting answers on card 1, against the unchanged original on the same card. Native model and reference hashes are recorded with the source readings.",
+    "no_fit": "Not generated or used for tuning.",
+    "reserved_40b": "Sealed."
+  }
+}

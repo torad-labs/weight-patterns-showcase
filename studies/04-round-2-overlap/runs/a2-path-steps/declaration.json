@@ -1,0 +1,54 @@
+{
+ "method_step": [
+  5
+ ],
+ "run_by": "Claude (weight-research-fable). Asked for by Marcos on November 10: to understand what happened to the trace at the places where the correct answers became wrong, and the rate of change that this caused, so as to find a way to stabilize.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+ "edit_source": "studies/04-round-2-overlap/runs/a2-path",
+ "hypothesis": "The capability's gap, closed in the weights, repairs the capability (a2-path: 29 of 30 answers that subtracted the descent add it on their own). What a2-path broke is not that repair going wrong but the edit, at its full size, tipping choices the original model makes by a hair where nothing was asked of it: at the fourth token of the answer the original prefers one opening over another by 0.09 to 0.5 of a score, the edit moves that preference by 0.24 to 0.45 in every answer alike, and the answer then follows another layout to its end. If that is what happened, the damage depends on the size of the step much more steeply than the repair does, and there is a size at which the model stays on its own text where the two groups follow each other and still adds the descent.",
+ "what_went_wrong_before": "a2-path broke 12 of 30 correct answers and left 12 of its 29 repaired calculations incomplete. Read by where each answer's text leaves the original's: 40 of 60 answers part from the original at the fourth token and 14 more within the first 18, in the opening sentence and the first heading. By layout, the 38 answers that took the numbered layout no original answer has are complete 15 times; the 22 that kept the original layout or its headings are complete 20 times and add the descent 22 times, and of the 11 that kept the original opening all 5 that were wrong are complete and 5 of the 6 that were correct. b2-path held the 12 broken answers' rows on their original text and did worse on its own answers (complete: 4 of the 30 that were wrong, 4 of the 12 held, 5 of the 18 not held): it moved the same preference further (0.45 to 0.68), all 60 answers left the original opening, and the rows it held are of a text the edited model no longer writes. Both rungs took the edit at one size, the whole of what each matrix's fit gave.",
+ "why_this_direction": "Marcos asked for the rate of change that broke the correct answers, to find a way to stabilize the learning, and what a2-path's own answers show is a threshold crossed, not a slow drift: a preference of a few tenths of a score, moved by about a third of a score. To first order that movement is in proportion to the size of the edit, so each answer has a fraction of the edit at which it would leave its original text: over the 60 answers a quarter by 0.268 of the edit, half by 0.579, three quarters by 0.786. Reading the same edit at those fractions measures both curves on the model's own answers, how many answers stay on their text and how many add the descent, which is what a step size has to be chosen from. It adds no new fit: the matrices are a2-path's, scaled. It comes before C2 because C2 as round one ran it starts from A's weights, and whether A's damage is a matter of size decides what C2 has to cancel.",
+ "repeating_pattern_check": "What has repeated, and what this run does about each. (a) A reading on given text taken for a verdict: nothing here is read on given text; every reading is the model's own answer. (b) Several things changed at once: one thing changes, the fraction of a2-path's stored change; the questions, the judge and the way of answering are a2-path's. (c) A number chosen by eye: the three fractions are computed from a2-path's own answers and the original's (the quarter, half and three quarters of the fractions at which each answer would first leave its text); the quarters only space the readings, and no fraction is chosen by its score. (d) Tuning to the 60 answers: this run does not pick a step; it reports the two curves. A rule for the step is a change to the method ('Strength: one, as in A') and goes to Marcos with these curves. (e) Doing something to keep moving: the run answers the question Marcos put, and its prediction can fail in a way that says size is not the cause.",
+ "rule": {
+  "members": "No fit. The 18 matrices a2-path changed, each taken as the original plus a fraction of a2-path's stored change, rounded to BF16; every other tensor is the original's.",
+  "ask": "Three fractions, computed by ladder.fractions_of from a2-path's answers: for each of the 60 answers of the overlap, at the first step where a2-path's own answer writes another token than the original's, the original prefers its token by m0 and a2-path prefers the other by m1, and m0 / (m0 + m1) is the fraction at which the preference would cross if it moved in proportion. The fractions are the quarter, the half and the three quarters of those 59 values (one answer's scores were not kept): 0.268, 0.579, 0.786.",
+  "conversion": "None: a scaled copy of a stored edit.",
+  "path": "For each fraction the model is written, answers, is judged and is removed; it can be rebuilt exactly from the original, a2-path's model and the fraction.",
+  "test": "At each fraction the model answers the 60 questions and round one's 28 on its own, on GPU0, greedy, judged by the same judge. Read per answer: complete or not; whether its written calculation adds the descent (the first energy stated plus the descent gain appears among the stated energies; on a2-path this count agrees with Astra's full reading, 29 of 30 and 26 of 30); the first step at which its text parts from the original's. Reported beside the original (fraction 0) and a2-path (fraction 1), for the answers that were wrong, the answers that were correct and round one, and by whether the answer left its original text before the calculation. No traces are recorded: the reading is of answers; a fraction worth a trace reading gets one in its own run."
+ },
+ "parameters": {
+  "fractions": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/answers",
+   "derivation": "np.percentile of m0 / (m0 + m1) over the answers of the overlap, at 25, 50 and 75, with m0 and m1 the two preferences at the first step where a2-path's answer and the original's part (ladder.leaves).",
+   "scales_with": "how close the original model's choices are along its answers, and how far the edit moves them"
+  }
+ },
+ "prediction": {
+  "expected_observation": "The share of answers that part from the original within the first 20 steps rises with the fraction about as computed: near a quarter at 0.268, a half at 0.579, three quarters at 0.786 (54 of 60 at the whole edit). Correct answers that keep their original text through the opening stay complete at every fraction, so fewer correct answers break at smaller fractions: fewer than 12 at 0.786, fewer still at 0.268. Whether the answers that were wrong add the descent at a fraction of the edit is not known and is the reading: if the repair grows with the fraction more gradually than the damage, some of them add the descent at 0.579 while fewer than half of the correct answers have left their text.",
+  "failures_only": "Per fraction and per group: complete, adds the descent, first step apart; the answers that break although they kept their original opening are listed by name."
+ },
+ "would_weaken_it": "That the damage is a matter of size: correct answers break as often at 0.268 as at the whole edit, or break while keeping their original text through the opening. That a smaller step is a way to stabilize: the answers that were wrong add the descent only at the whole edit, so that no fraction repairs more than it breaks; then what separates repair from damage is the direction of the change, which is C2's and D2's question, not its size. Neither would weigh on the hypothesis itself, which a2-path's own answers and traces already bear on.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/a2-path/model",
+  "studies/04-round-2-overlap/runs/a2-path/edit.json",
+  "studies/04-round-2-overlap/runs/a2-path/answers",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/source/original-gpu0",
+  "studies/04-round-2-overlap/runs/full-overlap/questions.json",
+  "studies/04-round-2-overlap/runs/full-overlap/cases.json",
+  "studies/04-round-2-overlap/runs/full-overlap/capture",
+  "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/a2-path-steps/model",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answers",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answer-cases.json",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answers-0.268.json",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answers-0.579.json",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answers-0.786.json",
+  "studies/04-round-2-overlap/runs/a2-path-steps/result.json"
+ ]
+}

@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-11-16T19:57:33.318098-06:00",
+  "status": "stopped_disk_reserve_complete_checkpoint",
+  "historical_step": 243,
+  "local_step": 7,
+  "accumulated_step": 53,
+  "initial_objective": 7.484178006761292e-05,
+  "final_objective": 7.465837447218978e-05,
+  "run_minimum": {
+    "historical_step": 240,
+    "objective": 7.45822141777547e-05
+  },
+  "relative_loss_change": -0.00245057767543011,
+  "weight_state": "complete",
+  "pending_install": null,
+  "pending_transition": null,
+  "stop_reason": "OSError: rounded_candidate requires 46262050922 free bytes; available 45729206272",
+  "checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-full-request-from-236/final-state.json",
+    "sha256": "7db267436c2950ab6c7bcfb905daa1a22a6e6776d87c53e9fcc6d5bcf0fae5ca"
+  },
+  "prediction_vs_result": "Seven full-request updates give a small net fresh loss decrease with reversals; the best historical state remains lower. Neither reliable descent nor superiority over the component construction is established.",
+  "failures_only": "All original105 merges and fixed original computational correspondence remain included; no result-based filtering.",
+  "what_this_changes": "Continue the identical source/reference/tolerance/eta from exact complete243 after capacity recovery. Diagnostic findings are separate; no rollback or numerical modification."
+}

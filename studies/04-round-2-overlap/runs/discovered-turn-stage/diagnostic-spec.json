@@ -1,0 +1,27 @@
+{
+  "format": "installed-trace-diagnostic/1",
+  "artifact": {
+    "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/signal.json",
+    "sha256": "eee6b82b9b23fa8cda90099a82a7267b05c484e4abcdd241c0011bfd610f2b6b"
+  },
+  "reader": {
+    "record": "code/signal-trace/pipeline/weight_edit/paired_turn_signal.py",
+    "sha256": "747fd23c06aad8f34fc006e15e8756a90ac2c0681f5386b501e2e33754fd62c4"
+  },
+  "inputs": [
+    {
+      "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/declaration.json",
+      "sha256": "46b5cdbf97f2ea037284063becc38b9bf8b50b69dd273377191e658548e81021"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/result.json",
+      "sha256": "d6e64a0f0f8150d4949222d761d309ec67cb3737b0418d30964bd6a39695d3f2"
+    }
+  ],
+  "dependencies": [
+    {
+      "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/discover.py",
+      "sha256": "88575a15871e7c74dd3754945899ccd12b42b815e971febccc4570f2d1f95c01"
+    }
+  ]
+}

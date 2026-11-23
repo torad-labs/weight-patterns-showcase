@@ -1,0 +1,50 @@
+{
+  "prediction_vs_result": {
+    "affine": {
+      "score": {
+        "record": "studies/04-round-2-overlap/runs/whole-context-score-original/affine-score.json",
+        "sha256": "42dc07f9a69ce3b18bd04c5739767f09819003083bd90d7599b1109033cdeb50"
+      },
+      "total": 0.06946585582271303,
+      "complete": true,
+      "merges": 105,
+      "reference_rows": 19751,
+      "comparisons_per_channel": 2073855,
+      "terminal": {
+        "engine_answer_rows": 14592,
+        "derived_prompt_rows": 5159,
+        "layer_scale_same_rows": 19751,
+        "max_abs_state_difference_from_engine": 3.49127095375934e-05,
+        "prompt_output_norm": "derived from native raw states, not recorded engine output"
+      },
+      "correct_identity_error": 1.0414694889847528e-14
+    },
+    "mates": {
+      "score": {
+        "record": "studies/04-round-2-overlap/runs/whole-context-score-original/mates-score.json",
+        "sha256": "95ba205af9c00e5c5251eb60e074ea4ec684ebbba5fd45696fe1c13a74bfec00"
+      },
+      "total": 0.06749373873811056,
+      "complete": true,
+      "merges": 105,
+      "reference_rows": 19751,
+      "comparisons_per_channel": 2073855,
+      "terminal": {
+        "engine_answer_rows": 14592,
+        "derived_prompt_rows": 5159,
+        "layer_scale_same_rows": 19751,
+        "max_abs_state_difference_from_engine": 3.49127095375934e-05,
+        "prompt_output_norm": "derived from native raw states, not recorded engine output"
+      },
+      "correct_identity_error": 1.0414694889847528e-14
+    }
+  },
+  "failures_only": {
+    "limits": [
+      "Original model and identical histories only; no changed-model or changed-history native qualification.",
+      "Terminal prompt features are derived; engine output_norm is retained for answer rows only.",
+      "The scored target fields remain withdrawn as primary native objectives."
+    ]
+  },
+  "what_this_changes": "The direct-state reader is bound to the complete contextual scoring arithmetic; no target is reinstated and no weights change."
+}

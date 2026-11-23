@@ -1,0 +1,1479 @@
+{
+ "run": "overlap-chain-29-34-original",
+ "standing": "bounded fitting-cohort native reading complete; partial energy-calculation gains with correct-member damage, not established whole-path repair or transfer",
+ "model_sha256": "23cf7472b0665e1833cad988ca92b9e4ed3ec5a45d209dd41bde0c6ec51ef84a",
+ "native_coverage": {
+  "answers": 30,
+  "prompt_and_answer_positions": 20577,
+  "merges": 105,
+  "registered_places": 480,
+  "same_history_pairs": 30,
+  "new_original_controls": 25,
+  "natural_ends": 28,
+  "limit_hits": [
+   "expanded-001-h3.own",
+   "expanded-094-h1.own"
+  ]
+ },
+ "output_checks_not_the_trace_verdict": {
+  "wrong": {
+   "members": 15,
+   "original_complete": 0,
+   "candidate_complete": 10,
+   "text_changed": 15
+  },
+  "correct": {
+   "members": 15,
+   "original_complete": 15,
+   "candidate_complete": 14,
+   "text_changed": 10
+  }
+ },
+ "changed_answers": [
+  {
+   "id": "discovery-05-channel-h1.own",
+   "group": "wrong",
+   "first_difference": 72,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 64,
+     "descentGainJ": 40,
+     "lossJ": 13,
+     "availableJ": 91,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "climb plus descent",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": false,
+     "stated": {
+      "available": 91,
+      "required": 60
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 11,
+      "required": 20
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> climb plus descent",
+     "verdict": "NO -> YES",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "discovery-10-channel-h1.own",
+   "group": "wrong",
+   "first_difference": 92,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 96,
+     "descentGainJ": 30,
+     "lossJ": 11,
+     "availableJ": 115,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 115,
+      "required": 30
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "climb plus descent",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 55,
+      "required": 60
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "climb plus descent -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "discovery-17-channel-h1.own",
+   "group": "wrong",
+   "first_difference": 128,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 128,
+     "descentGainJ": 80,
+     "lossJ": 17,
+     "availableJ": 191,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 191,
+      "required": 40
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 31,
+      "required": 40
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-001-h3.own",
+   "group": "wrong",
+   "first_difference": 18,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 16,
+     "descentGainJ": 20,
+     "lossJ": 16,
+     "availableJ": 20,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "this_model": {
+     "required": "missing",
+     "available": "missing",
+     "verdict": null,
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": null,
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 20,
+      "required": 60
+     }
+    },
+    "transition": {
+     "available": "correct -> missing",
+     "required": "correct -> missing",
+     "verdict": "None -> None",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "expanded-020-h1.own",
+   "group": "wrong",
+   "first_difference": 141,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 64,
+     "descentGainJ": 40,
+     "lossJ": 12,
+     "availableJ": 92,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "climb plus descent",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": false,
+     "stated": {
+      "available": 92,
+      "required": 60
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "climb plus descent",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 12,
+      "required": 60
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "climb plus descent -> climb plus descent",
+     "verdict": "NO -> YES",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "expanded-034-h3.own",
+   "group": "wrong",
+   "first_difference": 18,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 54,
+     "descentGainJ": 30,
+     "lossJ": 20,
+     "availableJ": 64,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "NO",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 64,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": true,
+     "complete": false,
+     "stated": {
+      "available": 4,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> NO",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-042-h3.own",
+   "group": "wrong",
+   "first_difference": 18,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 96,
+     "descentGainJ": 30,
+     "lossJ": 20,
+     "availableJ": 106,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 106,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 46,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-045-h1.own",
+   "group": "wrong",
+   "first_difference": 127,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 96,
+     "descentGainJ": 60,
+     "lossJ": 16,
+     "availableJ": 140,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 140,
+      "required": 30
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 20,
+      "required": 30
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-046-h3.own",
+   "group": "wrong",
+   "first_difference": 138,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 96,
+     "descentGainJ": 60,
+     "lossJ": 20,
+     "availableJ": 136,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 136,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 16,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-068-h1.own",
+   "group": "wrong",
+   "first_difference": 132,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 128,
+     "descentGainJ": 80,
+     "lossJ": 12,
+     "availableJ": 196,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 196,
+      "required": 40
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 36,
+      "required": 40
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-070-h1.own",
+   "group": "wrong",
+   "first_difference": 128,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 128,
+     "descentGainJ": 80,
+     "lossJ": 20,
+     "availableJ": 188,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 188,
+      "required": 40
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 28,
+      "required": 40
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-087-h3.own",
+   "group": "wrong",
+   "first_difference": 73,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 90,
+     "descentGainJ": 100,
+     "lossJ": 24,
+     "availableJ": 166,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "climb plus descent",
+     "available": "descent omitted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 66,
+      "required": 250
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": -34,
+      "required": 150
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> descent omitted",
+     "required": "correct -> climb plus descent",
+     "verdict": "NO -> NO",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "expanded-092-h1.own",
+   "group": "wrong",
+   "first_difference": 73,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 160,
+     "descentGainJ": 100,
+     "lossJ": 12,
+     "availableJ": 248,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 248,
+      "required": 50
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 48,
+      "required": 50
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-094-h1.own",
+   "group": "wrong",
+   "first_difference": 73,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 160,
+     "descentGainJ": 100,
+     "lossJ": 20,
+     "availableJ": 240,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "climb plus descent",
+     "available": "correct",
+     "verdict": null,
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 240,
+      "required": 150
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 40,
+      "required": 50
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "correct -> climb plus descent",
+     "verdict": "NO -> None",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "expanded-095-h1.own",
+   "group": "wrong",
+   "first_difference": 73,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 160,
+     "descentGainJ": 100,
+     "lossJ": 24,
+     "availableJ": 236,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 236,
+      "required": 50
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "other",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 36,
+      "required": 14
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> correct",
+     "required": "other -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> True"
+    }
+   }
+  },
+  {
+   "id": "discovery-01-channel-h1.own",
+   "group": "correct",
+   "first_difference": 150,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 16,
+     "descentGainJ": 40,
+     "lossJ": 13,
+     "availableJ": 43,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 43,
+      "required": 20
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 43,
+      "required": 20
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "discovery-00-channel-h3.own",
+   "group": "correct",
+   "first_difference": 18,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 16,
+     "descentGainJ": 20,
+     "lossJ": 9,
+     "availableJ": 27,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "this_model": {
+     "required": "other",
+     "available": "other",
+     "verdict": "YES",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 47,
+      "required": 40
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "NO",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 27,
+      "required": 60
+     }
+    },
+    "transition": {
+     "available": "correct -> other",
+     "required": "correct -> other",
+     "verdict": "NO -> YES",
+     "complete": "True -> False"
+    }
+   }
+  },
+  {
+   "id": "discovery-08-channel-h3.own",
+   "group": "correct",
+   "first_difference": 144,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 54,
+     "descentGainJ": 30,
+     "lossJ": 11,
+     "availableJ": 73,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "NO",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 73,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "NO",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 73,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "NO -> NO",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "discovery-10-channel-h3.own",
+   "group": "correct",
+   "first_difference": 144,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 96,
+     "descentGainJ": 30,
+     "lossJ": 11,
+     "availableJ": 115,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 115,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 115,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-029-h1.own",
+   "group": "correct",
+   "first_difference": 244,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 24,
+     "descentGainJ": 60,
+     "lossJ": 16,
+     "availableJ": 68,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 68,
+      "required": 30
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 68,
+      "required": 30
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "discovery-11-channel-h3.own",
+   "group": "correct",
+   "first_difference": 25,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 96,
+     "descentGainJ": 60,
+     "lossJ": 15,
+     "availableJ": 141,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 141,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 141,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-064-h1.own",
+   "group": "correct",
+   "first_difference": 333,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 128,
+     "descentGainJ": 40,
+     "lossJ": 12,
+     "availableJ": 156,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 156,
+      "required": 40
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 156,
+      "required": 40
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-071-h1.own",
+   "group": "correct",
+   "first_difference": 112,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 128,
+     "descentGainJ": 80,
+     "lossJ": 24,
+     "availableJ": 184,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 184,
+      "required": 40
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 184,
+      "required": 40
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-039-h3.own",
+   "group": "correct",
+   "first_difference": 111,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 54,
+     "descentGainJ": 60,
+     "lossJ": 24,
+     "availableJ": 90,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 90,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 90,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  },
+  {
+   "id": "expanded-078-h1.own",
+   "group": "correct",
+   "first_difference": 388,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 40,
+     "descentGainJ": 100,
+     "lossJ": 20,
+     "availableJ": 120,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 120,
+      "required": 50
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 120,
+      "required": 50
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "YES -> YES",
+     "complete": "True -> True"
+    }
+   }
+  }
+ ],
+ "same_history_weight_effect": {
+  "first_moving_merge_in_every_answer": [
+   29,
+   "feedforward"
+  ],
+  "sum_of_row_costs_by_original_group": {
+   "wrong": 0.21370932429462167,
+   "correct": 0.11706069309082974
+  },
+  "not_a_target_error": true,
+  "sign_tally": {
+   "wrong": {
+    "answers": 15,
+    "with_no_such_place": 1,
+    "with_no_control": 0,
+    "first_rows_read": 14,
+    "first_sign_a_plus": 14,
+    "of_those_the_originals_own_answer_had_a_minus": 13,
+    "at_the_plus_rows": {
+     "feedforward_29_to_34_favours_the_plus": 14,
+     "feedforward_29_to_34_larger_in_size_than_layers_0_to_8": 14,
+     "the_originals_weights_on_this_text_favour_the_minus": 12,
+     "the_originals_weights_on_this_text_favour_the_plus": 2
+    }
+   },
+   "correct": {
+    "answers": 15,
+    "with_no_such_place": 5,
+    "with_no_control": 5,
+    "first_rows_read": 5,
+    "first_sign_a_plus": 5,
+    "of_those_the_originals_own_answer_had_a_minus": 0,
+    "at_the_plus_rows": {
+     "feedforward_29_to_34_favours_the_plus": 5,
+     "feedforward_29_to_34_larger_in_size_than_layers_0_to_8": 5,
+     "the_originals_weights_on_this_text_favour_the_minus": 1,
+     "the_originals_weights_on_this_text_favour_the_plus": 4
+    }
+   }
+  },
+  "missing_sign_rows": [
+   "expanded-046-h3.own",
+   "discovery-01-channel-h1.own",
+   "discovery-08-channel-h3.own",
+   "discovery-10-channel-h3.own",
+   "expanded-071-h1.own",
+   "expanded-039-h3.own"
+  ],
+  "reconstruction_check": {
+   "rebuilt": 0.00018457279532313464,
+   "sum": 9.935606097855043e-7
+  },
+  "interpretation": "At twelve of fourteen covered wrong-member first-sign rows, original weights on the candidate's own text favour minus and edited weights favour plus. This isolates a conditional weight effect after rewording; it is not a complete calculation or original-model free continuation."
+ },
+ "pooled_original_reference_description": {
+  "L": 0.2996108622690582,
+  "direction": 0.10390483631975439,
+  "size": 0.1957060259493038,
+  "by_group": {
+   "wrong": {
+    "L": 0.22061663737586668,
+    "direction": 0.08410443648255575,
+    "size": 0.13651220089331093
+   },
+   "correct": {
+    "L": 0.07899422489319154,
+    "direction": 0.01980039983719864,
+    "size": 0.059193825055992896
+   }
+  },
+  "same_card_original_L": 0.24663741365365,
+  "same_card_original_by_group": {
+   "wrong": {
+    "L": 0.244110200837154,
+    "direction": 0.11175371030672997,
+    "size": 0.13235649053042403
+   },
+   "correct": {
+    "L": 0.002527212816496002,
+    "direction": 0.00006829318214222451,
+    "size": 0.0024589196343537774
+   }
+  },
+  "candidate_over_same_card_original": 1.2147826959043537,
+  "reference_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+  "last_merge_read_as": "what the output norm passes on (correction.passed_on)",
+  "not_the_acceptance_rule": true,
+  "identity_note": "Legacy candidate L/member exports leave model/card fields empty. Identity is bound through the native capture index and exported source; no missing field is invented."
+ },
+ "per_member_full_axis_description": {
+  "what": "Descriptive per-member means over all 480 registered places and all 105 merges against the fixed original correct centre; not the fitting objective, semantic correspondence or an acceptance test.",
+  "summary": {
+   "wrong": {
+    "members": 15,
+    "closer_in_full_axis_mean_direction": 11,
+    "closer_in_full_axis_mean_log_size": 10
+   },
+   "correct": {
+    "members": 15,
+    "closer_in_full_axis_mean_direction": 7,
+    "closer_in_full_axis_mean_log_size": 10
+   }
+  },
+  "not_an_acceptance_test": true
+ },
+ "fixed_original_input": [
+  {
+   "link": 29,
+   "wrong": {
+    "rows": 14,
+    "median_added_relative": 0.2808696976304931,
+    "toward_plus": 14
+   },
+   "correct": {
+    "rows": 14,
+    "median_added_relative": 0.14869351370162592,
+    "toward_plus": 14
+   }
+  },
+  {
+   "link": 30,
+   "wrong": {
+    "rows": 14,
+    "median_added_relative": 0.034839030029071835,
+    "toward_plus": 14
+   },
+   "correct": {
+    "rows": 14,
+    "median_added_relative": 0.02680929610108456,
+    "toward_plus": 14
+   }
+  },
+  {
+   "link": 31,
+   "wrong": {
+    "rows": 14,
+    "median_added_relative": 0.11317606781359038,
+    "toward_plus": 14
+   },
+   "correct": {
+    "rows": 14,
+    "median_added_relative": 0.047957027055084214,
+    "toward_plus": 5
+   }
+  },
+  {
+   "link": 32,
+   "wrong": {
+    "rows": 14,
+    "median_added_relative": 0.1362417731404143,
+    "toward_plus": 14
+   },
+   "correct": {
+    "rows": 14,
+    "median_added_relative": 0.057212433433103595,
+    "toward_plus": 12
+   }
+  },
+  {
+   "link": 33,
+   "wrong": {
+    "rows": 14,
+    "median_added_relative": 0.22320807824468153,
+    "toward_plus": 14
+   },
+   "correct": {
+    "rows": 14,
+    "median_added_relative": 0.10767681834031946,
+    "toward_plus": 5
+   }
+  },
+  {
+   "link": 34,
+   "wrong": {
+    "rows": 14,
+    "median_added_relative": 0.0664119262017708,
+    "toward_plus": 1
+   },
+   "correct": {
+    "rows": 14,
+    "median_added_relative": 0.0373204005845475,
+    "toward_plus": 0
+   }
+  }
+ ],
+ "prediction_vs_result": {
+  "broader_computation": "Ten originally wrong answers have complete energy fields and verdicts, versus none for the original primary and single-site candidates. The later six-support and corrected-primary-prefix chains each complete two; they are assessed separately in 2026-11-13-closed-sign-chains-astra.md. Same-history controls establish conditional weight effects on twelve covered wrong first-sign rows. This does not resolve every registered cell's semantic correspondence.",
+  "correct_members": "Originally correct discovery-00-channel-h3 acquires two wrong energy fields and a wrong YES. Ten of fifteen correct histories change; full movement fields are retained, not treated as zero when output stays correct.",
+  "expanded_001": "The declared hoped-for reach to expanded-001-h3 is not established: it hits the existing limit without available/required fields, where the original had both fields before its own incomplete ending.",
+  "numerical_limits": "Correction: links 29, 32 and 33 selected before second-ridge domination; links 30 and 31 did not select under it. Only link 34 selected with a second ridge above the stage ridge in folds 0 and 2, not in its final solve. Holding rounding errors reproduces link 29's three-fold selection (2^4, round 1, held ratio 0.6458) and link 34's fold-0 path (59.1 versus recorded 59.4 damping units). These checks do not support attributing the candidate selection to the primary link-33 rounding defect. Link 34 folds 1 and 2 were not re-walked; the distinct above-unit stopping budget and later held-error rises remain."
+ },
+ "failures_only": [
+  {
+   "id": "discovery-05-channel-h1.own",
+   "group": "wrong",
+   "expected": {
+    "initialKineticJ": 64,
+    "descentGainJ": 40,
+    "lossJ": 13,
+    "availableJ": 91,
+    "requiredJ": 20,
+    "answer": "YES"
+   },
+   "observed": {
+    "required": "climb plus descent",
+    "available": "correct",
+    "verdict": "YES",
+    "verdict_right": true,
+    "complete": false,
+    "stated": {
+     "available": 91,
+     "required": 60
+    }
+   }
+  },
+  {
+   "id": "expanded-001-h3.own",
+   "group": "wrong",
+   "expected": {
+    "initialKineticJ": 16,
+    "descentGainJ": 20,
+    "lossJ": 16,
+    "availableJ": 20,
+    "requiredJ": 60,
+    "answer": "NO"
+   },
+   "observed": {
+    "required": "missing",
+    "available": "missing",
+    "verdict": null,
+    "verdict_right": false,
+    "complete": false,
+    "stated": {
+     "available": null,
+     "required": null
+    }
+   }
+  },
+  {
+   "id": "expanded-020-h1.own",
+   "group": "wrong",
+   "expected": {
+    "initialKineticJ": 64,
+    "descentGainJ": 40,
+    "lossJ": 12,
+    "availableJ": 92,
+    "requiredJ": 20,
+    "answer": "YES"
+   },
+   "observed": {
+    "required": "climb plus descent",
+    "available": "correct",
+    "verdict": "YES",
+    "verdict_right": true,
+    "complete": false,
+    "stated": {
+     "available": 92,
+     "required": 60
+    }
+   }
+  },
+  {
+   "id": "expanded-087-h3.own",
+   "group": "wrong",
+   "expected": {
+    "initialKineticJ": 90,
+    "descentGainJ": 100,
+    "lossJ": 24,
+    "availableJ": 166,
+    "requiredJ": 150,
+    "answer": "YES"
+   },
+   "observed": {
+    "required": "climb plus descent",
+    "available": "descent omitted",
+    "verdict": "NO",
+    "verdict_right": false,
+    "complete": false,
+    "stated": {
+     "available": 66,
+     "required": 250
+    }
+   }
+  },
+  {
+   "id": "expanded-094-h1.own",
+   "group": "wrong",
+   "expected": {
+    "initialKineticJ": 160,
+    "descentGainJ": 100,
+    "lossJ": 20,
+    "availableJ": 240,
+    "requiredJ": 50,
+    "answer": "YES"
+   },
+   "observed": {
+    "required": "climb plus descent",
+    "available": "correct",
+    "verdict": null,
+    "verdict_right": false,
+    "complete": false,
+    "stated": {
+     "available": 240,
+     "required": 150
+    }
+   }
+  },
+  {
+   "id": "discovery-00-channel-h3.own",
+   "group": "correct",
+   "expected": {
+    "initialKineticJ": 16,
+    "descentGainJ": 20,
+    "lossJ": 9,
+    "availableJ": 27,
+    "requiredJ": 60,
+    "answer": "NO"
+   },
+   "observed": {
+    "required": "other",
+    "available": "other",
+    "verdict": "YES",
+    "verdict_right": false,
+    "complete": false,
+    "stated": {
+     "available": 47,
+     "required": 40
+    }
+   }
+  }
+ ],
+ "storage": {
+  "native_archive": "own/native-archive.json",
+  "native_archive_sha256": "31e0c9f88ce444346db233a184da94dc490197642a601f862141dea524045a95",
+  "remote_files_verified": 498,
+  "local_arrays_released": 197,
+  "local_bytes_released": 14705646488,
+  "declarations_checked_before_release": 46,
+  "compact_assessment_retained": true
+ },
+ "what_this_changes": "Broader coverage reaches complete energy calculations the sign-row constructions missed, with real conditional weight effects, but also damages a correct calculation and leaves five wrong answers incomplete. The pooled whole-trace discrepancy rises, and scalar/member averages do not establish semantic closure. The frozen candidate, reference, stopping policy and data roles are unchanged; no refit or reselection follows from these results.",
+ "unresolved": [
+  "Semantic correspondence across the twenty-five reworded histories is not certified by numerical registration or a scalar improvement.",
+  "No-fit transfer, broader own-path spillover and reserved evaluation were not opened.",
+  "Intermediate card-0 history checks after links 33 and 34 were refused by the disk guard; final-state measurements do not supply them.",
+  "The above-unit stopping budget and held-error rises limit this construction; the available held-rounding walks do not support the earlier blanket rounding-confounding claim (correction-objective README:727, 776, 793, 810). Link 34 folds 1 and 2 were not re-walked."
+ ],
+ "sources": {
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/declaration.json": "be7307df98ee9d1d2fddd0a80682b8cd520872ed4ede9d0dea49fdae82911f5e",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/model/written.json": "744078557550b5cc41495c4076c08633b916e9bf0f8d3c31f2f9f9e4039e83c5",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/model/archive.json": "426e6032f01393b56a671379301db381765b31f86c2bff28ef83f5406603e93a",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/cases/index.json": "0b6d32f8cce5347622ce3bb7f59c56a72c81b2ef70a88d1b08b8d199d6231ed4",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/record/own.json": "89596c23a57f0a5151d0254ec7e1fcbf4fb319b6958ad9c9e88eb883aaef9793",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/paired/paired.json": "e002a009023871d8707a2e2b116aef1d01c569ed188c6fa961d54c1551630692",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/direct/own-direct.json": "fbba579948b7a31d6807e446796dbcdd68a2a2130774e42e2435845f93d80c49",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/direct-control/own-direct-control.json": "4289759674d449d45776db019149c95b7832328a4176df1dc191d64ec380c90a",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/whole-model/l.json": "9d4f072a9d2388e477938b39d0d14a210e4fcbedb257a46848d5810230f962f5",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/members.npz": "dded356a3266376af7734cdff1a4f4d39d405d1da2688ecbf97b467fa486cbf3",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/member-description.json": "182a2c16fcb7b1d4077214170bf3fe91aee2fda8a4287c135ff945c6c62260b2",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/row-map/beside.json": "359d70c1cb28854c960fe3111666f0570e143599bf810335da9204774e6edd54",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/continuation-scratch-2026-11-13/instruments/index.json": "97bd3bde2d4ecdcc35c66ff80491d03c4d8e0f205d2d9d9e61f3c2efd35bf4d6",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/fixed-input/feedforward-29/movement.json": "3d01fa36de64b9b8c965b2c3572a7e43f3b882bb8a6426a7766ea5a8f1da820c",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/fixed-input/feedforward-30/movement.json": "a885ca447bc1938263d4090cf23edc48129567d0ce28c084fe14573589e8cd50",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/fixed-input/feedforward-31/movement.json": "3d03c4ea21170468a7966ab6967591afd353320bdce700687668fb607856913f",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/fixed-input/feedforward-32/movement.json": "d64c835446311bd766c2c42cabf09ccfb688a8a50615bcccfc373924d110086a",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/fixed-input/feedforward-33/movement.json": "a29335c17c62dccc725920aee520da8f51259527612749716c3922fe07b8e1ea",
+  "studies/04-round-2-overlap/runs/overlap-chain-29-34-original/own/fixed-input/feedforward-34/movement.json": "24e59380ffc21478339c874b09c1d93e7ce895aff6e591c8d123addeb3a62340",
+  "studies/04-round-2-overlap/runs/correction-at-19/own/controls/original/whole-model-l/l.json": "3bd0f6e5a003f6a5a409e083044fa35ec6db936e9e13f8aa226dbee747a07d44",
+  "studies/04-round-2-overlap/runs/correction-at-19/own/controls/original/members-passed-on.npz": "4f3816af24051dcacbeed4b08d39d118a0313d0d4d2bd564bbeabd47ebca9af3"
+ }
+}

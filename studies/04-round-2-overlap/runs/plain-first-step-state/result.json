@@ -1,0 +1,1518 @@
+{
+ "declaration_sha256": "eb98f25a5810dd5a9ab18878338c6e770bdd5f1bc7ee020381552e4c4ae4d2d6",
+ "prediction_vs_result": "The step's prediction did not hold to the digit. Taken again from the same texts, anchor and card, it read 0.058046461771 on the texts held (the loop 0.058046461772), took 2^-1.971529 (the loop 2^-1.971453), read 0.05375870 there, 0.9261 of its start (the loop 0.05375856), and moved 5,426,269 stored weights (the loop 5,425,946); 6,179 cells of the correct answers stood over the tolerance where the loop had 6,186. The state is a reconstruction of the one the loop's first step reached, near it and not shown to be it; it writes the loop's kept step-2 texts all the same, 30 of 30 token for token. The prediction of the readings (revision 1) held: on its own path, by its own weights, the wrong answers read 0.0478 and the correct answers 0.0495 through the direct overlap (declared: both between 0.044 and 0.055), a wrong answer over a correct one in 0.489 of the pairs (declared: about half), where the original on its own texts reads 0.0710 and 0.0467 (0.711); and the same texts read nearly alike under the original's weights (0.0487 and 0.0503). The prediction of revision 2 held: with the words held at the original's own texts the state's weights read 0.0682 and 0.0459 (declared: 0.0668 to 0.0695 and 0.0450 to 0.0467), a wrong answer over a correct one in 0.729 of the pairs, where the original's weights read those texts at 0.0695 and 0.0467 (0.733). The prediction of revision 3 held: at the places where the texts part, the state's token is the state's first choice at 30 of 30 and stands over the original's token by 0.417 at the median (declared: under one unit of score); the step moved the difference by 1.223 at the median and by less than two units at 26 of 30 places (declared: at most places).",
+ "failures_only": "No repair is shown. What fell on the own path came with a change of text, not of the computation on a text: every one of the thirty answers was written anew after the step (0 of 30 token for token the text the step started on; the texts leave it at steps [3, 3, 11, 11, 15, 29, 68, 68, 68, 69, 69, 72, 72, 73, 76] for the wrong answers and [11, 11, 11, 11, 11, 17, 29, 68, 68, 68, 71, 71, 71, 71, 76] for the correct ones), and with the words held the step moved both groups alike, the wrong answers to 0.9812 of what the original's weights read and the correct answers to 0.9839 (14 of 15 and 13 of 15 answers lower), which leaves the wrong group 1.484 times the correct one where the original's weights leave it 1.488 times. The step taken on the envelope loss did not bring the wrong answers' computation toward the correct answers' where the words are the same. How the texts changed: the thirty part at 9 choices between two tokens, at places 3 to 76 of the answer, 6 of them shared by wrong and correct questions (26 of the thirty; the three commonest hold [8, 6, 5] questions). There the original chose its token by 0.334 of a unit of score at the median (0.005 to 1.897), the state's token being its second choice at 24 of 30; the step moved the difference by 1.223 at the median (0.070 to 2.196), the wrong questions' by 1.191 and the correct ones' by 1.228. It tipped a few choices of form common to the cohort that stood near a tie, and nothing particular to the wrong questions. On the own path 12 of the 15 wrong answers read lower than under the original and 7 of the 15 correct answers read higher, 0 of them above the highest of the original's correct answers (0.1015); the largest rises are discovery-15-channel-h1 0.0512 to 0.0968; discovery-01-channel-h1 0.0199 to 0.0613; discovery-06-channel-h1 0.0463 to 0.0765, and expanded-001-h3 stays the farthest (0.1563 to 0.1588). The declared step did not repeat to the digit. One reading (the own path) was first made by other bytes of the overlap program than the ones bound, was set aside under a name that says so and made again by the bound bytes; the two agree (0.0478092905 and 0.0478092905). No answer's text was read, nothing here is the engine's trace, and no answer outside the thirty was touched.",
+ "what_this_changes": "What the readings establish: the pooled departure of the direct overlap follows the text an answer is written in. The original's weights read the state's texts as the state's own weights do, and what sets the original's wrong answers apart in it is that their texts run longer and off the correct answers' route: 528 steps against 445, with 0.261 of their steps laid on a step of a correct answer that another of their steps shares, against 0.151; over the first 373 steps, which every answer has, a step reads 0.0838 against 0.0620. On the state's own texts the same three read 440 against 448, 0.148 against 0.157, and 0.0646 against 0.0641. What they do not establish: that the texts the state now writes for the wrong questions are a repair, or that they are not. A repair through another wording stays admissible under the trace and the transfer test (settled for a2-path), and neither test is made here; this reading cannot make the first, because it reads the route of a text under either set of weights. It is therefore no closure and cannot be a loop's loss as it stands: its weight, how far the correct answers agree at a place, is over one half at 0.994 of the cells of the original's answers (its median 0.952), so it asks almost everywhere, also at the rows where the correct answers were given different tokens (0.27 of a correct answer's rows against its mate), and a loop lowering it is paid for writing texts of the correct answers' kind. With the token held (Performance's tables of these readings), a wrong question's answer stands 1.147 times as far from a correct question's as two correct questions' stand, under the original; 1.143 times under the state's weights on the same texts; and 1.001 and 1.003 times on the state's texts under the original's weights and under its own. The step's weights left the difference where it was with the wording held; what changed is which text is written, and the unchanged weights compute those texts as they compute a correct answer. What a loss may ask, by the definition relayed on November 15, is the departure at places where the correct answers agree with one another, measured against how far they stand from one another there. That definition is Astra's and is not made here. For any loop that writes the answers again this adds: an own path is decided by a few choices within the first 77 places of an answer that stood 0.33 of a unit of score from a tie at the median (the furthest 1.9), so a reading of the own path moves with the text after a step whether or not the computation was corrected, and a loop cannot tell a correction from a tipped tie unless what it reads on the own path is also read with the words held. Of the closed loop this adds: its first step rewrote every answer and left the two groups at one level; the texts written after its second step read 0.0963 and 0.1024 under the original's weights. That step was taken on answers laid on their own original's rows and not on the correct answers; whether the rise is that or another tipping of choices is not read. The state is kept whole (its file, its float32 copy, its texts and every table by correct answer); nothing is stepped from it on the envelope loss, and on this evidence no engine pass or no-fit reading is asked for it.",
+ "the_step_beside_the_loop_s": {
+  "loss_on_the_texts_held": {
+   "here": 0.05804646177143821,
+   "the_loop": 0.058046461772407215
+  },
+  "cells_over_tolerance": {
+   "here": {
+    "wrong": 174211,
+    "members": 6179,
+    "other_successes": 0
+   },
+   "the_loop": {
+    "wrong": 174211,
+    "members": 6186,
+    "other_successes": 0
+   }
+  },
+  "unit_length": {
+   "here": 0.9160984837522084,
+   "the_loop": 0.9158994812623509
+  },
+  "slope": {
+   "here": 0.06336268731030774,
+   "the_loop": 0.0633764544690034
+  },
+  "trials": [
+   {
+    "here": {
+     "power": 0.0,
+     "objective": 0.11382433190010488,
+     "weights_moved": 19409925
+    },
+    "the_loop": {
+     "power": 0.0,
+     "objective": 0.11381834396161139,
+     "weights_moved": 19407695
+    }
+   },
+   {
+    "here": {
+     "power": -1.9715289561361178,
+     "objective": 0.05375870411444339,
+     "weights_moved": 5426269
+    },
+    "the_loop": {
+     "power": -1.971453058487487,
+     "objective": 0.05375855965394294,
+     "weights_moved": 5425946
+    }
+   },
+   {
+    "here": {
+     "power": -2.478035664728342,
+     "objective": 0.054239126860920805,
+     "weights_moved": 3879016
+    },
+    "the_loop": {
+     "power": -2.477970897870572,
+     "objective": 0.05423917738698947,
+     "weights_moved": 3878691
+    }
+   }
+  ],
+  "taken": {
+   "here": {
+    "power": -1.9715289561361178,
+    "length": 0.23358922792827777,
+    "objective": 0.05375870411444339,
+    "over_the_start": 0.9261323166625013,
+    "weights_moved": 5426269
+   },
+   "the_loop": {
+    "power": -1.971453058487487,
+    "length": 0.23355077211628572,
+    "objective": 0.05375855965394294,
+    "over_the_start": 0.9261298279423715,
+    "weights_moved": 5425946
+   }
+  }
+ },
+ "texts": {
+  "record": "studies/04-round-2-overlap/runs/plain-first-step-state/texts/own.npz.json",
+  "token_for_token_the_loop_s_step_2": 30,
+  "of": 30,
+  "token_for_token_the_text_the_step_started_on": 0,
+  "first_step_at_which_a_text_leaves_the_text_the_step_started_on": {
+   "wrong": [
+    3,
+    3,
+    11,
+    11,
+    15,
+    29,
+    68,
+    68,
+    68,
+    69,
+    69,
+    72,
+    72,
+    73,
+    76
+   ],
+   "right": [
+    11,
+    11,
+    11,
+    11,
+    11,
+    17,
+    29,
+    68,
+    68,
+    68,
+    71,
+    71,
+    71,
+    71,
+    76
+   ]
+  },
+  "what": "acquisition information: where a text is another token than the one before it, read for no other purpose"
+ },
+ "readings": {
+  "original": {
+   "folder": "records/development/2026-11-12-path-forward/overlap-step/original",
+   "weights": "the original's",
+   "texts": "the original's own, the engine's writing",
+   "wrong": 0.07099939763072323,
+   "right": 0.046685225439510765,
+   "wrong_over_right": 1.5208108553040172,
+   "told_apart": 0.7111111111111111,
+   "program_sha256": "92bc2a8af8fa835e10de7b31bde5fede75780efe06235c4864309e4c80ae9467",
+   "overlap_sha256": "9016ea1d4e38e2a6573b3ffdd8ef21f92fdf35d87288380658ddf794204da19c"
+  },
+  "original_on_torch_texts": {
+   "folder": "records/development/2026-11-12-path-forward/overlap-step/original-weights-on-plain-step-1",
+   "weights": "the original's",
+   "texts": "the original's own, torch's writing (the texts the step was taken on)",
+   "wrong": 0.06945378074360069,
+   "right": 0.04666464157163294,
+   "wrong_over_right": 1.488359888867572,
+   "told_apart": 0.7333333333333333,
+   "program_sha256": "92bc2a8af8fa835e10de7b31bde5fede75780efe06235c4864309e4c80ae9467",
+   "overlap_sha256": "9525ac1b80508af3891734083a39e04e4bf719b03c6ad4069e4c6a42bf13a9f7"
+  },
+  "state_on_the_original_s_texts": {
+   "folder": "studies/04-round-2-overlap/runs/plain-first-step-state/overlap/own-weights-on-the-original-s-texts",
+   "weights": "the state's",
+   "texts": "the original's own, torch's writing (the texts the step was taken on)",
+   "wrong": 0.06815033281806461,
+   "right": 0.04591247868663562,
+   "wrong_over_right": 1.4843531599155866,
+   "told_apart": 0.7288888888888889,
+   "program_sha256": "8b2dfa8ca58fef03cba7f8c5d0234934e051f1476875cf4c5b7426d5cb76d4fb",
+   "overlap_sha256": "9f704544cd0cae57fd3d05cc90134aa102739d87c6cd6e6e99a3aae83090f4d6"
+  },
+  "state_own_path": {
+   "folder": "studies/04-round-2-overlap/runs/plain-first-step-state/overlap/own-weights-own-texts",
+   "weights": "the state's",
+   "texts": "the state's own",
+   "wrong": 0.047809290456782734,
+   "right": 0.049471947262326794,
+   "wrong_over_right": 0.9663919271920355,
+   "told_apart": 0.4888888888888889,
+   "program_sha256": "8b2dfa8ca58fef03cba7f8c5d0234934e051f1476875cf4c5b7426d5cb76d4fb",
+   "overlap_sha256": "bda8ad83848ce0233d2eee584369afca4a933bd9a3caf30ce324d93578e30cfe"
+  },
+  "state_own_path_by_the_earlier_bytes": {
+   "folder": "studies/04-round-2-overlap/runs/plain-first-step-state/overlap/own-weights-own-texts-by-the-earlier-bytes",
+   "weights": "the state's",
+   "texts": "the state's own",
+   "wrong": 0.047809290478654,
+   "right": 0.04947194726747484,
+   "wrong_over_right": 0.9663919275335672,
+   "told_apart": 0.4888888888888889,
+   "program_sha256": "92bc2a8af8fa835e10de7b31bde5fede75780efe06235c4864309e4c80ae9467",
+   "overlap_sha256": "560d3ea4606bd5d9c7449a0dd6a0eccaa83edb6155f04dcdd4cf3caa1f2c8672"
+  },
+  "original_on_the_state_s_texts": {
+   "folder": "studies/04-round-2-overlap/runs/plain-first-step-state/overlap/original-weights-own-texts",
+   "weights": "the original's",
+   "texts": "the state's own",
+   "wrong": 0.04873101087246821,
+   "right": 0.0503494225429386,
+   "wrong_over_right": 0.9678564005557324,
+   "told_apart": 0.4888888888888889,
+   "program_sha256": "8b2dfa8ca58fef03cba7f8c5d0234934e051f1476875cf4c5b7426d5cb76d4fb",
+   "overlap_sha256": "7bb244b5f47530faa567d2922b1388078c62c7db5cffb04a24149025d2256642"
+  },
+  "state_on_the_loop_s_step_2": {
+   "folder": "studies/04-round-2-overlap/runs/plain-first-step-state/overlap/own-weights-on-plain-step-2",
+   "weights": "the state's",
+   "texts": "the loop's kept step-2 texts (token for token the state's own)",
+   "wrong": 0.047809290458122496,
+   "right": 0.04947194726303342,
+   "wrong_over_right": 0.9663919272053134,
+   "told_apart": 0.4888888888888889,
+   "program_sha256": "8b2dfa8ca58fef03cba7f8c5d0234934e051f1476875cf4c5b7426d5cb76d4fb",
+   "overlap_sha256": "30bd3c3900ed4c57f2a11a3f36f5966a5bcc3bc12f42038b8ecaae06eab8e9b9"
+  },
+  "original_on_the_loop_s_step_2": {
+   "folder": "records/development/2026-11-12-path-forward/overlap-step/original-weights-on-plain-step-2",
+   "weights": "the original's",
+   "texts": "the loop's kept step-2 texts",
+   "wrong": 0.04873101087125175,
+   "right": 0.050349422535525504,
+   "wrong_over_right": 0.9678564006740725,
+   "told_apart": 0.4888888888888889,
+   "program_sha256": "92bc2a8af8fa835e10de7b31bde5fede75780efe06235c4864309e4c80ae9467",
+   "overlap_sha256": "1fa4478212b45cbc6c33d0e2d8f56bc2fff9e707255b4b1155e5bbdd30976a77"
+  },
+  "original_on_the_loop_s_step_3": {
+   "folder": "records/development/2026-11-12-path-forward/overlap-step/original-weights-on-plain-step-3",
+   "weights": "the original's",
+   "texts": "the loop's kept step-3 texts, written after its second step",
+   "wrong": 0.09628970063782383,
+   "right": 0.1024079241172959,
+   "wrong_over_right": 0.9402563470336105,
+   "told_apart": 0.4222222222222222,
+   "program_sha256": "92bc2a8af8fa835e10de7b31bde5fede75780efe06235c4864309e4c80ae9467",
+   "overlap_sha256": "bb3fcd57619cfef907f192ffc7d3ada06c8addad6fff6a741cff97758e3238c4"
+  }
+ },
+ "where_the_texts_part": {
+  "what": "The scores at the place where each text the state writes parts from the text the step started on, under both sets of weights\n(Performance's parting_places.py): acquisition information about one decision per answer.",
+  "under_the_original": {
+   "record": "records/development/2026-11-12-path-forward/overlap-step/parting-original-to-first-step.json",
+   "sha256": "80e36fef8d2236efb3ecbc7f15dcee526237df880d8620409165f6b820f4d439",
+   "by": "weight-research-perfomance",
+   "summed": {
+    "parted": 30,
+    "the_same_text": 0,
+    "a_over_b": {
+     "least": 0.005283355712890625,
+     "median": 0.3335838317871094,
+     "most": 1.89715576171875
+    },
+    "a_is_the_model_s_first_choice": 30,
+    "b_is_the_model_s_first_choice": 0,
+    "b_is_its_second_choice": 24,
+    "a_is_its_second_choice": 0,
+    "places": [
+     3,
+     3,
+     11,
+     11,
+     11,
+     11,
+     11,
+     11,
+     11,
+     15,
+     17,
+     29,
+     29,
+     68,
+     68,
+     68,
+     68,
+     68,
+     68,
+     69,
+     69,
+     71,
+     71,
+     71,
+     71,
+     72,
+     72,
+     73,
+     76,
+     76
+    ]
+   }
+  },
+  "under_the_state": {
+   "record": "studies/04-round-2-overlap/runs/plain-first-step-state/parting/under-the-state-s-weights.json",
+   "sha256": "3f3c9731a23e2358639e16f75a704466431e691a3596b01521fc8f4d895a4138",
+   "program_sha256": "ab36e4f985692ef9beb6a282dfaf7c77429ff5a0bb71a7ff6d65a004d31fc44d",
+   "model_sha256": "9d666de816c6d89911b3b37d066d764bd367cfd364b00e9912f10b87808cf607",
+   "summed": {
+    "parted": 30,
+    "the_same_text": 0,
+    "a_over_b": {
+     "least": -1.3188896179199219,
+     "median": -0.41713428497314453,
+     "most": -0.014799118041992188
+    },
+    "a_is_the_model_s_first_choice": 0,
+    "b_is_the_model_s_first_choice": 30,
+    "b_is_its_second_choice": 0,
+    "a_is_its_second_choice": 20,
+    "places": [
+     3,
+     3,
+     11,
+     11,
+     11,
+     11,
+     11,
+     11,
+     11,
+     15,
+     17,
+     29,
+     29,
+     68,
+     68,
+     68,
+     68,
+     68,
+     68,
+     69,
+     69,
+     71,
+     71,
+     71,
+     71,
+     72,
+     72,
+     73,
+     76,
+     76
+    ]
+   }
+  },
+  "moved_by": {
+   "least": 0.07026290893554688,
+   "median": 1.2230825424194336,
+   "most": 2.1962995529174805,
+   "under_two_units": 26,
+   "of": 30
+  },
+  "by_group": {
+   "wrong": {
+    "the_original_s_over_under_the_original_median": 0.3073596954345703,
+    "moved_by_median": 1.1911144256591797
+   },
+   "right": {
+    "the_original_s_over_under_the_original_median": 0.35980796813964844,
+    "moved_by_median": 1.2275962829589844
+   }
+  },
+  "choices_between_two_tokens": {
+   "kinds": 9,
+   "questions_in_the_three_commonest": [
+    8,
+    6,
+    5
+   ],
+   "kinds_holding_wrong_and_correct_questions": 6,
+   "questions_in_those": 26,
+   "by_kind": [
+    {
+     "questions": 8,
+     "wrong": 2,
+     "correct": 6,
+     "places": [
+      11,
+      17
+     ]
+    },
+    {
+     "questions": 6,
+     "wrong": 2,
+     "correct": 4,
+     "places": [
+      71,
+      72
+     ]
+    },
+    {
+     "questions": 5,
+     "wrong": 3,
+     "correct": 2,
+     "places": [
+      68
+     ]
+    },
+    {
+     "questions": 3,
+     "wrong": 2,
+     "correct": 1,
+     "places": [
+      68,
+      69
+     ]
+    },
+    {
+     "questions": 2,
+     "wrong": 2,
+     "correct": 0,
+     "places": [
+      3
+     ]
+    },
+    {
+     "questions": 2,
+     "wrong": 1,
+     "correct": 1,
+     "places": [
+      29
+     ]
+    },
+    {
+     "questions": 2,
+     "wrong": 1,
+     "correct": 1,
+     "places": [
+      76
+     ]
+    },
+    {
+     "questions": 1,
+     "wrong": 1,
+     "correct": 0,
+     "places": [
+      15
+     ]
+    },
+    {
+     "questions": 1,
+     "wrong": 1,
+     "correct": 0,
+     "places": [
+      73
+     ]
+    }
+   ]
+  },
+  "by_answer": [
+   {
+    "answer": "discovery-05-channel-h1",
+    "correct": false,
+    "place": 68,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 1.7253341674804688,
+     "under_the_state": -0.23724365234375
+    },
+    "moved_by": 1.9625778198242188,
+    "the_state_s_token_rank_under_the_original": 2,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "discovery-10-channel-h1",
+    "correct": false,
+    "place": 11,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.3073596954345703,
+     "under_the_state": -0.8837547302246094
+    },
+    "moved_by": 1.1911144256591797,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "discovery-17-channel-h1",
+    "correct": false,
+    "place": 72,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.6334733963012695,
+     "under_the_state": -0.8883256912231445
+    },
+    "moved_by": 1.521799087524414,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 3
+   },
+   {
+    "answer": "expanded-001-h3",
+    "correct": false,
+    "place": 15,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.18142318725585938,
+     "under_the_state": -0.05709648132324219
+    },
+    "moved_by": 0.23851966857910156,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-020-h1",
+    "correct": false,
+    "place": 68,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 1.812540054321289,
+     "under_the_state": -0.2757396697998047
+    },
+    "moved_by": 2.0882797241210938,
+    "the_state_s_token_rank_under_the_original": 2,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-034-h3",
+    "correct": false,
+    "place": 3,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.049854278564453125,
+     "under_the_state": -0.02040863037109375
+    },
+    "moved_by": 0.07026290893554688,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-042-h3",
+    "correct": false,
+    "place": 3,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.05567741394042969,
+     "under_the_state": -0.014799118041992188
+    },
+    "moved_by": 0.07047653198242188,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-045-h1",
+    "correct": false,
+    "place": 11,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.005283355712890625,
+     "under_the_state": -1.2235050201416016
+    },
+    "moved_by": 1.2287883758544922,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-046-h3",
+    "correct": false,
+    "place": 29,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.2975044250488281,
+     "under_the_state": -0.11092758178710938
+    },
+    "moved_by": 0.4084320068359375,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-068-h1",
+    "correct": false,
+    "place": 69,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.01263427734375,
+     "under_the_state": -0.12349319458007812
+    },
+    "moved_by": 0.13612747192382812,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-070-h1",
+    "correct": false,
+    "place": 72,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.47751712799072266,
+     "under_the_state": -0.9256982803344727
+    },
+    "moved_by": 1.4032154083251953,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 2
+   },
+   {
+    "answer": "expanded-087-h3",
+    "correct": false,
+    "place": 68,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 1.8780899047851562,
+     "under_the_state": -0.10336685180664062
+    },
+    "moved_by": 1.9814567565917969,
+    "the_state_s_token_rank_under_the_original": 2,
+    "the_original_s_token_rank_under_the_state": 2
+   },
+   {
+    "answer": "expanded-092-h1",
+    "correct": false,
+    "place": 73,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.8778820037841797,
+     "under_the_state": -1.3184175491333008
+    },
+    "moved_by": 2.1962995529174805,
+    "the_state_s_token_rank_under_the_original": 3,
+    "the_original_s_token_rank_under_the_state": 6
+   },
+   {
+    "answer": "expanded-094-h1",
+    "correct": false,
+    "place": 69,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.06406211853027344,
+     "under_the_state": -0.0785675048828125
+    },
+    "moved_by": 0.14262962341308594,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-095-h1",
+    "correct": false,
+    "place": 76,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.45731353759765625,
+     "under_the_state": -0.1689167022705078
+    },
+    "moved_by": 0.6262302398681641,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "discovery-01-channel-h1",
+    "correct": true,
+    "place": 68,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 1.6004486083984375,
+     "under_the_state": -0.46444129943847656
+    },
+    "moved_by": 2.064889907836914,
+    "the_state_s_token_rank_under_the_original": 2,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "discovery-06-channel-h1",
+    "correct": true,
+    "place": 11,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.21558570861816406,
+     "under_the_state": -0.9677276611328125
+    },
+    "moved_by": 1.1833133697509766,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "discovery-15-channel-h1",
+    "correct": true,
+    "place": 71,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.25553226470947266,
+     "under_the_state": -1.3188896179199219
+    },
+    "moved_by": 1.5744218826293945,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 5
+   },
+   {
+    "answer": "discovery-00-channel-h3",
+    "correct": true,
+    "place": 17,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 1.334329605102539,
+     "under_the_state": -0.3698272705078125
+    },
+    "moved_by": 1.7041568756103516,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-004-h1",
+    "correct": true,
+    "place": 68,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 1.89715576171875,
+     "under_the_state": -0.1836376190185547
+    },
+    "moved_by": 2.0807933807373047,
+    "the_state_s_token_rank_under_the_original": 2,
+    "the_original_s_token_rank_under_the_state": 2
+   },
+   {
+    "answer": "discovery-08-channel-h3",
+    "correct": true,
+    "place": 11,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.20995140075683594,
+     "under_the_state": -1.0086174011230469
+    },
+    "moved_by": 1.2185688018798828,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "discovery-10-channel-h3",
+    "correct": true,
+    "place": 11,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.35980796813964844,
+     "under_the_state": -0.8677883148193359
+    },
+    "moved_by": 1.2275962829589844,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-029-h1",
+    "correct": true,
+    "place": 71,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.5824079513549805,
+     "under_the_state": -0.9135055541992188
+    },
+    "moved_by": 1.4959135055541992,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 3
+   },
+   {
+    "answer": "discovery-11-channel-h3",
+    "correct": true,
+    "place": 11,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.06069374084472656,
+     "under_the_state": -1.1483097076416016
+    },
+    "moved_by": 1.2090034484863281,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-064-h1",
+    "correct": true,
+    "place": 11,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.1945362091064453,
+     "under_the_state": -0.9661312103271484
+    },
+    "moved_by": 1.1606674194335938,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-071-h1",
+    "correct": true,
+    "place": 76,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.5136814117431641,
+     "under_the_state": -0.10475730895996094
+    },
+    "moved_by": 0.618438720703125,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-039-h3",
+    "correct": true,
+    "place": 29,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.3691730499267578,
+     "under_the_state": -0.05180168151855469
+    },
+    "moved_by": 0.4209747314453125,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 1
+   },
+   {
+    "answer": "expanded-076-h1",
+    "correct": true,
+    "place": 71,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.5160446166992188,
+     "under_the_state": -0.8815927505493164
+    },
+    "moved_by": 1.3976373672485352,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 3
+   },
+   {
+    "answer": "expanded-078-h1",
+    "correct": true,
+    "place": 71,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.24281883239746094,
+     "under_the_state": -1.237548828125
+    },
+    "moved_by": 1.480367660522461,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 5
+   },
+   {
+    "answer": "expanded-023-h1",
+    "correct": true,
+    "place": 68,
+    "the_original_s_token_over_the_state_s": {
+     "under_the_original": 0.058559417724609375,
+     "under_the_state": -0.06586456298828125
+    },
+    "moved_by": 0.12442398071289062,
+    "the_state_s_token_rank_under_the_original": 1,
+    "the_original_s_token_rank_under_the_state": 2
+   }
+  ]
+ },
+ "with_the_token_held": {
+  "what": "From Performance's one-question-in-two-wordings tables (overlap_wordings.py): at steps given the same token, how far a wrong\nquestion's answer stands from a correct question's, over how far two correct questions' answers stand.",
+  "tables_by": "weight-research-perfomance",
+  "the_original_on_the_texts_the_step_was_taken_on": {
+   "record": "records/development/2026-11-12-path-forward/overlap-step/wordings-original-weights-on-plain-step-1.json",
+   "sha256": "41fd22dd16ccfcccd5f5cf277ab0f8e859c4798a26c96d0838b7c88906ab1b32",
+   "a_wrong_and_a_correct": 0.03348381263579147,
+   "two_correct": 0.029190199194087666,
+   "ratio": 1.147090926415242
+  },
+  "the_state_on_the_texts_the_step_was_taken_on": {
+   "record": "records/development/2026-11-12-path-forward/overlap-step/first-step-state-on-the-original-s-texts.json",
+   "sha256": "66a8a26f82fb8727f51addbda6fc658dd40f628f9482a303ad753039a167504f",
+   "a_wrong_and_a_correct": 0.032298144611853596,
+   "two_correct": 0.028246389526164727,
+   "ratio": 1.143443291466887
+  },
+  "the_original_on_the_state_s_texts": {
+   "record": "records/development/2026-11-12-path-forward/overlap-step/first-step-original-on-the-state-s-texts.json",
+   "sha256": "6093330171305d8f4091475f094efa7d75934cc9ea34309f30401b5237724633",
+   "a_wrong_and_a_correct": 0.024990876677498716,
+   "two_correct": 0.024954551731282287,
+   "ratio": 1.0014556441088418
+  },
+  "the_state_on_its_own_texts": {
+   "record": "records/development/2026-11-12-path-forward/overlap-step/first-step-state-on-own-texts.json",
+   "sha256": "5e80c482f131aa77b0b134b26a9e218799dddcc6d409b20e7b7ea9a8837a09cd",
+   "a_wrong_and_a_correct": 0.02429697870192209,
+   "two_correct": 0.02422144318762943,
+   "ratio": 1.0031185389618418
+  }
+ },
+ "the_weight_of_the_pooled_departure": {
+  "on": "the original's own texts",
+  "cells": 1532160,
+  "share_over_one_half": 0.9941820697577276,
+  "median": 0.9523037075996399,
+  "rows_of_a_correct_answer_given_another_token_than_its_mate": 0.2674094658478011
+ },
+ "the_weights_part_with_a_text_held": {
+  "on_the_state_s_texts": {
+   "wrong": 0.9810855469816199,
+   "right": 0.9825722871029259
+  },
+  "on_the_original_s_texts": {
+   "wrong": 0.9812328729756562,
+   "right": 0.9838815244333827
+  },
+  "answers_lower_on_the_original_s_texts": {
+   "wrong": 14,
+   "right": 13
+  },
+  "revision_2_bounds": {
+   "low": {
+    "wrong": 0.06682642019795326,
+    "right": 0.04503812562012236
+   },
+   "high": {
+    "wrong": 0.06945378074360069,
+    "right": 0.04666464157163294
+   }
+  }
+ },
+ "own_path_beside_the_original": {
+  "wrong_answers_lower": 12,
+  "of_wrong": 15,
+  "correct_answers_higher": 7,
+  "of_correct": 15,
+  "correct_answers_above_the_original_s_highest_correct": 0,
+  "the_original_s_highest_correct": 0.1014669065433777,
+  "correct_answers_higher_by_rise": [
+   "discovery-15-channel-h1",
+   "discovery-01-channel-h1",
+   "discovery-06-channel-h1",
+   "discovery-11-channel-h3",
+   "expanded-004-h1",
+   "expanded-039-h3",
+   "expanded-078-h1"
+  ],
+  "the_farthest_wrong_answer": "expanded-001-h3"
+ },
+ "along_the_answer": {
+  "steps_every_answer_has": 373,
+  "what": "per group, from the kept tables: the departure of a step is the mean over the 105 merges of how far the correct answers agree there times one less the cosine with what they share",
+  "original": {
+   "wrong": {
+    "steps_mean": 527.7333333333333,
+    "departure_a_step_over_the_steps_every_answer_has": 0.08377638384699822,
+    "departure_summed_over_the_steps_after_them_mean": 22.118202106157938,
+    "share_of_steps_laid_where_another_of_its_steps_is": 0.260877421817051
+   },
+   "right": {
+    "steps_mean": 445.06666666666666,
+    "departure_a_step_over_the_steps_every_answer_has": 0.06195453231533368,
+    "departure_summed_over_the_steps_after_them_mean": 6.509742031494777,
+    "share_of_steps_laid_where_another_of_its_steps_is": 0.15097467180076732
+   }
+  },
+  "state_own_path": {
+   "wrong": {
+    "steps_mean": 439.73333333333335,
+    "departure_a_step_over_the_steps_every_answer_has": 0.06458664660652479,
+    "departure_summed_over_the_steps_after_them_mean": 7.268507818380992,
+    "share_of_steps_laid_where_another_of_its_steps_is": 0.14849799339408448
+   },
+   "right": {
+    "steps_mean": 448.06666666666666,
+    "departure_a_step_over_the_steps_every_answer_has": 0.06405277028679848,
+    "departure_summed_over_the_steps_after_them_mean": 7.505192458629608,
+    "share_of_steps_laid_where_another_of_its_steps_is": 0.1574418356283717
+   }
+  }
+ },
+ "by_answer": {
+  "discovery-05-channel-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 68,
+   "steps": {
+    "original": 406,
+    "original_on_torch_texts": 406,
+    "state_own_path": 373
+   },
+   "departure": {
+    "original": 0.035377046073708784,
+    "original_on_torch_texts": 0.03537728403193361,
+    "state_on_the_original_s_texts": 0.034964827416981675,
+    "state_own_path": 0.03358035207256379,
+    "original_on_the_state_s_texts": 0.03407615689173474,
+    "state_on_the_loop_s_step_2": 0.033580352071165026,
+    "original_on_the_loop_s_step_2": 0.03407615691592007,
+    "original_on_the_loop_s_step_3": 0.12035047225903928
+   }
+  },
+  "discovery-10-channel-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 11,
+   "steps": {
+    "original": 489,
+    "original_on_torch_texts": 491,
+    "state_own_path": 411
+   },
+   "departure": {
+    "original": 0.052399105530783294,
+    "original_on_torch_texts": 0.0458553247677728,
+    "state_on_the_original_s_texts": 0.044962832198474245,
+    "state_own_path": 0.0335858517987009,
+    "original_on_the_state_s_texts": 0.034235099442149655,
+    "state_on_the_loop_s_step_2": 0.03358585172060117,
+    "original_on_the_loop_s_step_2": 0.03423509940845095,
+    "original_on_the_loop_s_step_3": 0.09930487094113176
+   }
+  },
+  "discovery-17-channel-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 72,
+   "steps": {
+    "original": 530,
+    "original_on_torch_texts": 530,
+    "state_own_path": 427
+   },
+   "departure": {
+    "original": 0.06030879572906653,
+    "original_on_torch_texts": 0.06030566899707976,
+    "state_on_the_original_s_texts": 0.05890362278185662,
+    "state_own_path": 0.03739151735269388,
+    "original_on_the_state_s_texts": 0.0380981567907689,
+    "state_on_the_loop_s_step_2": 0.03739151734815299,
+    "original_on_the_loop_s_step_2": 0.038098156791373246,
+    "original_on_the_loop_s_step_3": 0.12196444845239102
+   }
+  },
+  "expanded-001-h3": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 15,
+   "steps": {
+    "original": 768,
+    "original_on_torch_texts": 768,
+    "state_own_path": 736
+   },
+   "departure": {
+    "original": 0.15632382405125464,
+    "original_on_torch_texts": 0.12421861859390425,
+    "state_on_the_original_s_texts": 0.12213475126278094,
+    "state_own_path": 0.15881256331909127,
+    "original_on_the_state_s_texts": 0.1624619795835477,
+    "state_on_the_loop_s_step_2": 0.15881256332398547,
+    "original_on_the_loop_s_step_2": 0.16246197958908934,
+    "original_on_the_loop_s_step_3": 0.07285272901581233
+   }
+  },
+  "expanded-020-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 68,
+   "steps": {
+    "original": 621,
+    "original_on_torch_texts": 621,
+    "state_own_path": 419
+   },
+   "departure": {
+    "original": 0.08505596793099875,
+    "original_on_torch_texts": 0.08505618735010935,
+    "state_on_the_original_s_texts": 0.08305176791770408,
+    "state_own_path": 0.0379781227702818,
+    "original_on_the_state_s_texts": 0.03874879517897872,
+    "state_on_the_loop_s_step_2": 0.03797812278428047,
+    "original_on_the_loop_s_step_2": 0.03874879514950991,
+    "original_on_the_loop_s_step_3": 0.10333168630132465
+   }
+  },
+  "expanded-034-h3": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 3,
+   "steps": {
+    "original": 548,
+    "original_on_torch_texts": 548,
+    "state_own_path": 408
+   },
+   "departure": {
+    "original": 0.09276375761843826,
+    "original_on_torch_texts": 0.09276091372824201,
+    "state_on_the_original_s_texts": 0.09002412472263983,
+    "state_own_path": 0.03719950269393996,
+    "original_on_the_state_s_texts": 0.037884289723266414,
+    "state_on_the_loop_s_step_2": 0.037199502722722724,
+    "original_on_the_loop_s_step_2": 0.03788428970398642,
+    "original_on_the_loop_s_step_3": 0.08614540938488656
+   }
+  },
+  "expanded-042-h3": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 3,
+   "steps": {
+    "original": 623,
+    "original_on_torch_texts": 568,
+    "state_own_path": 388
+   },
+   "departure": {
+    "original": 0.09844625854869264,
+    "original_on_torch_texts": 0.08230646191058552,
+    "state_on_the_original_s_texts": 0.08055923761576075,
+    "state_own_path": 0.03552856715343364,
+    "original_on_the_state_s_texts": 0.03614560100839197,
+    "state_on_the_loop_s_step_2": 0.035528567167762724,
+    "original_on_the_loop_s_step_2": 0.03614560099286274,
+    "original_on_the_loop_s_step_3": 0.08310053639123875
+   }
+  },
+  "expanded-045-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 11,
+   "steps": {
+    "original": 412,
+    "original_on_torch_texts": 655,
+    "state_own_path": 445
+   },
+   "departure": {
+    "original": 0.03316769545309084,
+    "original_on_torch_texts": 0.08377603002452566,
+    "state_on_the_original_s_texts": 0.08304878859850343,
+    "state_own_path": 0.04180545402357364,
+    "original_on_the_state_s_texts": 0.042617148785468385,
+    "state_on_the_loop_s_step_2": 0.041805454012844,
+    "original_on_the_loop_s_step_2": 0.04261714880909993,
+    "original_on_the_loop_s_step_3": 0.08455488188325033
+   }
+  },
+  "expanded-046-h3": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 29,
+   "steps": {
+    "original": 411,
+    "original_on_torch_texts": 411,
+    "state_own_path": 446
+   },
+   "departure": {
+    "original": 0.03485598836848588,
+    "original_on_torch_texts": 0.034854718289026795,
+    "state_on_the_original_s_texts": 0.03412110876124022,
+    "state_own_path": 0.04559154585924317,
+    "original_on_the_state_s_texts": 0.04634230850394268,
+    "state_on_the_loop_s_step_2": 0.04559154589549867,
+    "original_on_the_loop_s_step_2": 0.0463423084931322,
+    "original_on_the_loop_s_step_3": 0.08524732501131425
+   }
+  },
+  "expanded-068-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 69,
+   "steps": {
+    "original": 442,
+    "original_on_torch_texts": 463,
+    "state_own_path": 432
+   },
+   "departure": {
+    "original": 0.044790348612249904,
+    "original_on_torch_texts": 0.04896709293606242,
+    "state_on_the_original_s_texts": 0.04907208602697404,
+    "state_own_path": 0.043343723350793326,
+    "original_on_the_state_s_texts": 0.04404047653342094,
+    "state_on_the_loop_s_step_2": 0.043343723371215906,
+    "original_on_the_loop_s_step_2": 0.04404047656453302,
+    "original_on_the_loop_s_step_3": 0.0948780925049357
+   }
+  },
+  "expanded-070-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 72,
+   "steps": {
+    "original": 410,
+    "original_on_torch_texts": 410,
+    "state_own_path": 417
+   },
+   "departure": {
+    "original": 0.05270788177220433,
+    "original_on_torch_texts": 0.05270804157206677,
+    "state_on_the_original_s_texts": 0.05137180479715538,
+    "state_own_path": 0.039179110351789045,
+    "original_on_the_state_s_texts": 0.04003535279594942,
+    "state_on_the_loop_s_step_2": 0.03917911034607876,
+    "original_on_the_loop_s_step_2": 0.04003535279688351,
+    "original_on_the_loop_s_step_3": 0.11383717176751529
+   }
+  },
+  "expanded-087-h3": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 68,
+   "steps": {
+    "original": 740,
+    "original_on_torch_texts": 758,
+    "state_own_path": 453
+   },
+   "departure": {
+    "original": 0.12854620208328402,
+    "original_on_torch_texts": 0.1315006295838851,
+    "state_on_the_original_s_texts": 0.1290836733577875,
+    "state_own_path": 0.06820290056639206,
+    "original_on_the_state_s_texts": 0.06936554911147841,
+    "state_on_the_loop_s_step_2": 0.06820290056478169,
+    "original_on_the_loop_s_step_2": 0.06936554908584815,
+    "original_on_the_loop_s_step_3": 0.1232892312736742
+   }
+  },
+  "expanded-092-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 73,
+   "steps": {
+    "original": 409,
+    "original_on_torch_texts": 380,
+    "state_own_path": 395
+   },
+   "departure": {
+    "original": 0.04374073433369321,
+    "original_on_torch_texts": 0.03398629633510968,
+    "state_on_the_original_s_texts": 0.03314659506799815,
+    "state_own_path": 0.027135104088446157,
+    "original_on_the_state_s_texts": 0.027535513012894478,
+    "state_on_the_loop_s_step_2": 0.027135104077903364,
+    "original_on_the_loop_s_step_2": 0.027535513011627114,
+    "original_on_the_loop_s_step_3": 0.0929608703720157
+   }
+  },
+  "expanded-094-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 69,
+   "steps": {
+    "original": 513,
+    "original_on_torch_texts": 513,
+    "state_own_path": 422
+   },
+   "departure": {
+    "original": 0.06848861625516031,
+    "original_on_torch_texts": 0.06848220606773339,
+    "state_on_the_original_s_texts": 0.06729606588793807,
+    "state_own_path": 0.039706610620176684,
+    "original_on_the_state_s_texts": 0.040574122359040225,
+    "state_on_the_loop_s_step_2": 0.039706610617487384,
+    "original_on_the_loop_s_step_2": 0.04057412238083976,
+    "original_on_the_loop_s_step_3": 0.08127137431840233
+   }
+  },
+  "expanded-095-h1": {
+   "correct": false,
+   "text_leaves_the_step_s_at": 76,
+   "steps": {
+    "original": 594,
+    "original_on_torch_texts": 435,
+    "state_own_path": 424
+   },
+   "departure": {
+    "original": 0.07801874209973682,
+    "original_on_torch_texts": 0.061651236965973466,
+    "state_on_the_original_s_texts": 0.0605137058571743,
+    "state_own_path": 0.03809843083062188,
+    "original_on_the_state_s_texts": 0.0388046133659905,
+    "state_on_the_loop_s_step_2": 0.038098430847356944,
+    "original_on_the_loop_s_step_2": 0.03880461337561985,
+    "original_on_the_loop_s_step_3": 0.08125640969042504
+   }
+  },
+  "discovery-01-channel-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 68,
+   "steps": {
+    "original": 388,
+    "original_on_torch_texts": 388,
+    "state_own_path": 556
+   },
+   "departure": {
+    "original": 0.01990586456431307,
+    "original_on_torch_texts": 0.01990411874347626,
+    "state_on_the_original_s_texts": 0.019984678480388266,
+    "state_own_path": 0.06131717131537946,
+    "original_on_the_state_s_texts": 0.06191696714987974,
+    "state_on_the_loop_s_step_2": 0.06131717132022468,
+    "original_on_the_loop_s_step_2": 0.06191696718306228,
+    "original_on_the_loop_s_step_3": 0.0800141450334896
+   }
+  },
+  "discovery-06-channel-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 11,
+   "steps": {
+    "original": 409,
+    "original_on_torch_texts": 409,
+    "state_own_path": 547
+   },
+   "departure": {
+    "original": 0.04626678421307273,
+    "original_on_torch_texts": 0.04626320178579425,
+    "state_on_the_original_s_texts": 0.0451240837539739,
+    "state_own_path": 0.07646970466954806,
+    "original_on_the_state_s_texts": 0.07802508001321971,
+    "state_on_the_loop_s_step_2": 0.07646970466095035,
+    "original_on_the_loop_s_step_2": 0.07802508002167888,
+    "original_on_the_loop_s_step_3": 0.1341018245736566
+   }
+  },
+  "discovery-15-channel-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 71,
+   "steps": {
+    "original": 461,
+    "original_on_torch_texts": 461,
+    "state_own_path": 592
+   },
+   "departure": {
+    "original": 0.05117564349311535,
+    "original_on_torch_texts": 0.05117181261401266,
+    "state_on_the_original_s_texts": 0.050402465601531166,
+    "state_own_path": 0.0968031039187,
+    "original_on_the_state_s_texts": 0.09869746206265087,
+    "state_on_the_loop_s_step_2": 0.09680310391410693,
+    "original_on_the_loop_s_step_2": 0.09869746203539513,
+    "original_on_the_loop_s_step_3": 0.13784020038118142
+   }
+  },
+  "discovery-00-channel-h3": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 17,
+   "steps": {
+    "original": 627,
+    "original_on_torch_texts": 627,
+    "state_own_path": 472
+   },
+   "departure": {
+    "original": 0.1014669065433777,
+    "original_on_torch_texts": 0.10146838232848245,
+    "state_on_the_original_s_texts": 0.09931089285596853,
+    "state_own_path": 0.07780591862851371,
+    "original_on_the_state_s_texts": 0.0794208254290948,
+    "state_on_the_loop_s_step_2": 0.07780591862732028,
+    "original_on_the_loop_s_step_2": 0.07942082543526718,
+    "original_on_the_loop_s_step_3": 0.07737883026098409
+   }
+  },
+  "expanded-004-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 68,
+   "steps": {
+    "original": 388,
+    "original_on_torch_texts": 388,
+    "state_own_path": 405
+   },
+   "departure": {
+    "original": 0.019884138376421532,
+    "original_on_torch_texts": 0.019882292758826758,
+    "state_on_the_original_s_texts": 0.02000233415827294,
+    "state_own_path": 0.033387766462828136,
+    "original_on_the_state_s_texts": 0.03387230295492911,
+    "state_on_the_loop_s_step_2": 0.033387766435038616,
+    "original_on_the_loop_s_step_2": 0.033872302950776846,
+    "original_on_the_loop_s_step_3": 0.09903976397381233
+   }
+  },
+  "discovery-08-channel-h3": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 11,
+   "steps": {
+    "original": 456,
+    "original_on_torch_texts": 456,
+    "state_own_path": 416
+   },
+   "departure": {
+    "original": 0.04588776237980741,
+    "original_on_torch_texts": 0.04588253171881597,
+    "state_on_the_original_s_texts": 0.045109593455507156,
+    "state_own_path": 0.036235633735642814,
+    "original_on_the_state_s_texts": 0.03703131020074133,
+    "state_on_the_loop_s_step_2": 0.036235633742614994,
+    "original_on_the_loop_s_step_2": 0.03703131019173525,
+    "original_on_the_loop_s_step_3": 0.07739107627868937
+   }
+  },
+  "discovery-10-channel-h3": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 11,
+   "steps": {
+    "original": 491,
+    "original_on_torch_texts": 491,
+    "state_own_path": 411
+   },
+   "departure": {
+    "original": 0.05188461656291045,
+    "original_on_torch_texts": 0.051881293845690526,
+    "state_on_the_original_s_texts": 0.05100824088159382,
+    "state_own_path": 0.03447507824539358,
+    "original_on_the_state_s_texts": 0.035322623914641846,
+    "state_on_the_loop_s_step_2": 0.034475078262705385,
+    "original_on_the_loop_s_step_2": 0.035322623949916344,
+    "original_on_the_loop_s_step_3": 0.09598739869120494
+   }
+  },
+  "expanded-029-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 71,
+   "steps": {
+    "original": 414,
+    "original_on_torch_texts": 414,
+    "state_own_path": 387
+   },
+   "departure": {
+    "original": 0.03677851670882059,
+    "original_on_torch_texts": 0.03677956501028243,
+    "state_on_the_original_s_texts": 0.03597034172475232,
+    "state_own_path": 0.031796611592147875,
+    "original_on_the_state_s_texts": 0.03221281405569228,
+    "state_on_the_loop_s_step_2": 0.03179661161535943,
+    "original_on_the_loop_s_step_2": 0.03221281402369344,
+    "original_on_the_loop_s_step_3": 0.10517320040739181
+   }
+  },
+  "discovery-11-channel-h3": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 11,
+   "steps": {
+    "original": 408,
+    "original_on_torch_texts": 408,
+    "state_own_path": 434
+   },
+   "departure": {
+    "original": 0.030296371996147625,
+    "original_on_torch_texts": 0.03029288797850246,
+    "state_on_the_original_s_texts": 0.030079599615581324,
+    "state_own_path": 0.04405711998597116,
+    "original_on_the_state_s_texts": 0.04483473422578893,
+    "state_on_the_loop_s_step_2": 0.04405711993678937,
+    "original_on_the_loop_s_step_2": 0.04483473421978501,
+    "original_on_the_loop_s_step_3": 0.0771605828106964
+   }
+  },
+  "expanded-064-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 11,
+   "steps": {
+    "original": 474,
+    "original_on_torch_texts": 474,
+    "state_own_path": 414
+   },
+   "departure": {
+    "original": 0.04570076585892508,
+    "original_on_torch_texts": 0.045702759487429814,
+    "state_on_the_original_s_texts": 0.04530110092072895,
+    "state_own_path": 0.03602330119631952,
+    "original_on_the_state_s_texts": 0.03668332902713813,
+    "state_on_the_loop_s_step_2": 0.0360233012016369,
+    "original_on_the_loop_s_step_2": 0.03668332896799929,
+    "original_on_the_loop_s_step_3": 0.13010613815627275
+   }
+  },
+  "expanded-071-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 76,
+   "steps": {
+    "original": 495,
+    "original_on_torch_texts": 505,
+    "state_own_path": 423
+   },
+   "departure": {
+    "original": 0.07814148338939728,
+    "original_on_torch_texts": 0.07784415867690496,
+    "state_on_the_original_s_texts": 0.07619695245700847,
+    "state_own_path": 0.03914557131708417,
+    "original_on_the_state_s_texts": 0.03994044831906316,
+    "state_on_the_loop_s_step_2": 0.03914557129033189,
+    "original_on_the_loop_s_step_2": 0.03994044830672294,
+    "original_on_the_loop_s_step_3": 0.1235192483863271
+   }
+  },
+  "expanded-039-h3": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 29,
+   "steps": {
+    "original": 414,
+    "original_on_torch_texts": 414,
+    "state_own_path": 434
+   },
+   "departure": {
+    "original": 0.06312961515300225,
+    "original_on_torch_texts": 0.06312778859394476,
+    "state_on_the_original_s_texts": 0.06173263330572189,
+    "state_own_path": 0.06811335449350917,
+    "original_on_the_state_s_texts": 0.06920510012240275,
+    "state_on_the_loop_s_step_2": 0.06811335449993625,
+    "original_on_the_loop_s_step_2": 0.06920510011561308,
+    "original_on_the_loop_s_step_3": 0.09213561145162198
+   }
+  },
+  "expanded-076-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 71,
+   "steps": {
+    "original": 412,
+    "original_on_torch_texts": 412,
+    "state_own_path": 390
+   },
+   "departure": {
+    "original": 0.035929382677531395,
+    "original_on_torch_texts": 0.035930422779840474,
+    "state_on_the_original_s_texts": 0.03521998686869487,
+    "state_own_path": 0.03137367709916244,
+    "original_on_the_state_s_texts": 0.031548147413121855,
+    "state_on_the_loop_s_step_2": 0.03137367709684773,
+    "original_on_the_loop_s_step_2": 0.031548147384596006,
+    "original_on_the_loop_s_step_3": 0.1018501398322095
+   }
+  },
+  "expanded-078-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 71,
+   "steps": {
+    "original": 422,
+    "original_on_torch_texts": 422,
+    "state_own_path": 448
+   },
+   "departure": {
+    "original": 0.04140502691498501,
+    "original_on_torch_texts": 0.04141306634768165,
+    "state_on_the_original_s_texts": 0.04086223166088763,
+    "state_own_path": 0.0435087183581577,
+    "original_on_the_state_s_texts": 0.04463027204566349,
+    "state_on_the_loop_s_step_2": 0.04350871841876445,
+    "original_on_the_loop_s_step_2": 0.04463027205731439,
+    "original_on_the_loop_s_step_3": 0.10265037523049277
+   }
+  },
+  "expanded-023-h1": {
+   "correct": true,
+   "text_leaves_the_step_s_at": 68,
+   "steps": {
+    "original": 417,
+    "original_on_torch_texts": 417,
+    "state_own_path": 392
+   },
+   "departure": {
+    "original": 0.032425502760833926,
+    "original_on_torch_texts": 0.03242534090480876,
+    "state_on_the_original_s_texts": 0.03238204455892298,
+    "state_own_path": 0.03156647791654408,
+    "original_on_the_state_s_texts": 0.031899921210050974,
+    "state_on_the_loop_s_step_2": 0.03156647792287401,
+    "original_on_the_loop_s_step_2": 0.03189992118932642,
+    "original_on_the_loop_s_step_3": 0.10177032629140786
+   }
+  }
+ },
+ "limits": "Torch's arithmetic on card 1, not the engine's trace. The pooled departure is one descriptive reading of the kept tables: no acceptance, no closure, no rule for keeping or choosing a state. The readings on texts the state does not write are conditional readings. The fifteen correct answers are judged by the other fourteen. Nothing was read on an answer outside the thirty fitting ones.",
+ "records": {
+  "step": "studies/04-round-2-overlap/runs/plain-first-step-state/step.json",
+  "state": {
+   "what": "a reconstruction. The loop kept no state and no digest of one, so no summary can show these are its weights; and the summaries are not the loop's to the digit (the_step_beside_the_loop_s)",
+   "file": "studies/04-round-2-overlap/runs/plain-first-step-state/state/working.gguf",
+   "sha256": "9d666de816c6d89911b3b37d066d764bd367cfd364b00e9912f10b87808cf607",
+   "bytes": 9311304896,
+   "identity": "d1afbc6702ca0c83470aa2e0564d9332d964894f87f6f23fee8327caa38aed37",
+   "float32_copy": {
+    "file": "studies/04-round-2-overlap/runs/plain-first-step-state/state/float32.npz",
+    "sha256": "b56869990fda5c5fee968762b5609801f46d876c6b4ea9ced269da27d420609a",
+    "bytes": 2604682552
+   },
+   "record": {
+    "record": "studies/04-round-2-overlap/runs/plain-first-step-state/step.json",
+    "sha256": "aa855974524b59f65d53aa990b2f9600c87c9313bc59884d758d31f58355ed58"
+   },
+   "swept": {
+    "record": "studies/04-round-2-overlap/runs/plain-first-step-state/state/swept.json",
+    "sha256": "91a6f601d0e9c3360d753e33c87a4d7a8891d8fbc3c087e4068c7c6fdc20e249"
+   },
+   "program_sha256": "c8aca1a4571b412abd3ae0c08d193f402a2d5ad315240d89474f472c117a54cc",
+   "device": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "loop": "studies/04-round-2-overlap/runs/envelope-loop-plain-torch/loop.json",
+  "wordings": "records/development/2026-11-12-path-forward/overlap-step/wordings-original.json",
+  "kept": "overlap/<reading>/<answer>.npz (every table by correct answer), texts/own.npz and state/ (in the bucket under the run's path)"
+ },
+ "composed": {
+  "by": "records/development/2026-11-15-relation-reading/close_first_step_state.py",
+  "made": "2026-11-15 09:48:36 CT"
+ }
+}

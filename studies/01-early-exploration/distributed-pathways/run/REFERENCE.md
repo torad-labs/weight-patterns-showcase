@@ -5,9 +5,9 @@
 **The frozen-pattern-only account below is superseded.** Marcos's later forest,
 hidden-influence, partial-trace, and capability-focused prompt explanations are
 consolidated in the versioned
-[Residual traces of capability](~/Documents/dev/projects/qgre/qgre-main/.dev/decode-machine/RESIDUAL-TRACE-THEORY.md)
+Residual traces of capability (`~/Documents/dev/projects/qgre/qgre-main/.dev/decode-machine/RESIDUAL-TRACE-THEORY.md`)
 and its
-[short handoff](~/Documents/dev/projects/qgre/qgre-main/.dev/decode-machine/RESIDUAL-TRACE-HANDOFF.md).
+short handoff (`~/Documents/dev/projects/qgre/qgre-main/.dev/decode-machine/RESIDUAL-TRACE-HANDOFF.md`).
 
 The current target is recognizable recurring portions of how information is
 transformed through connected computation. Partial residue can be useful even
@@ -25,9 +25,9 @@ Consolidated November 6, 2026, from Marcos's Version 2 research notes, his subse
 
 This document preserves Marcos's position for future collaborators. It is a research reference, not a new project law or an instruction to agree with every hypothesis. Its purpose is to let a model begin at the actual argument instead of requiring Marcos to reconstruct it through repeated corrections.
 
-The companion [MODEL-HANDOFF.md](~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/MODEL-HANDOFF.md) is a short entry point. The original [Version 2 notes](~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/sources/beyond-the-weights-v2.md) are preserved separately. Later explanations consolidated here take precedence when describing what Marcos currently means.
+The companion MODEL-HANDOFF.md (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/MODEL-HANDOFF.md`) is a short entry point. The original Version 2 notes (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/sources/beyond-the-weights-v2.md`) are preserved separately. Later explanations consolidated here take precedence when describing what Marcos currently means.
 
-Read [Marcos's latest clarification](~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/sources/marcos-path-clarification-2026-11-06.md) if any editorial phrasing below obscures the intended meaning.
+Read Marcos's latest clarification (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/sources/marcos-path-clarification-2026-11-06.md`) if any editorial phrasing below obscures the intended meaning.
 
 ## 1. The argument to understand first
 
@@ -171,13 +171,13 @@ These records were read on November 6, 2026. No training run was repeated to pre
 | Pokémon lore, Kanto v1 | 89/300, 29.7% | 206/300, 68.7% | Gemma 4 E2B; FP4; forced-choice evaluation labeled `augmentation_holdout`; result `PASS`. |
 | Pokémon lore, Kanto anneal | 21/77, 27.3% | 54/77, 70.1% | Gemma 4 E2B; FP4; forced-choice evaluation labeled `augmentation_holdout`; result `PASS`. |
 
-Sources: [Kanto v1 evaluation](~/Documents/dev/projects/kandi-cpt/kandi-cpt-main/logs/probe_evals/h2/pokemon_lore_kanto_v1_cpt_base_vs_tuned.json), [Kanto anneal evaluation](~/Documents/dev/projects/kandi-cpt/kandi-cpt-main/logs/probe_evals/pokemon_lore_kanto_anneal_base_vs_tuned.json).
+Sources: Kanto v1 evaluation (`~/Documents/dev/projects/kandi-cpt/kandi-cpt-main/logs/probe_evals/h2/pokemon_lore_kanto_v1_cpt_base_vs_tuned.json`), Kanto anneal evaluation (`~/Documents/dev/projects/kandi-cpt/kandi-cpt-main/logs/probe_evals/pokemon_lore_kanto_anneal_base_vs_tuned.json`).
 
 These are recorded behavioral improvements under the stated probes. They are not being relabeled as unrestricted free-generation performance or as direct measurements of a particular internal geometry.
 
 ### Festival installation reference
 
-The [CPT installation working reference](~/Documents/dev/projects/kandi-cpt/kandi-cpt-main/docs/cpt_installation_best_practices.md) records:
+The CPT installation working reference (`~/Documents/dev/projects/kandi-cpt/kandi-cpt-main/docs/cpt_installation_best_practices.md`) records:
 
 - A Gemma 4 E2B-class NVFP4/FP4 installation baseline, with loss falling from 6.84 to 0.26 over 200 steps. Loss is a training measurement; the behavioral findings below supply separate evidence about retrieval.
 - A finding that varied surface forms of the same facts installed better than a small set of repeated deterministic templates.
@@ -186,7 +186,7 @@ The [CPT installation working reference](~/Documents/dev/projects/kandi-cpt/kand
 
 These festival results are recovered from a working report. They have a different provenance from the raw saved evaluation JSON files above. The report itself is evidence of what the team recorded, not a substitute for every original checkpoint or measurement artifact.
 
-The [EDC corpus import](~/Documents/dev/projects/qgre/qgre-main/trainer/corpus-import/edc-las-vegas-2026-seq512-v2.toml) also records 3,208,704 packed tokens from the Kandi producer. That total includes replay material and is not a count of new festival facts or, by itself, proof of learning.
+The EDC corpus import (`~/Documents/dev/projects/qgre/qgre-main/trainer/corpus-import/edc-las-vegas-2026-seq512-v2.toml`) also records 3,208,704 packed tokens from the Kandi producer. That total includes replay material and is not a count of new festival facts or, by itself, proof of learning.
 
 ## 5. The current local editing experiment
 
@@ -194,11 +194,11 @@ The goal is to learn whether observation-guided editing can change a reusable be
 
 Marcos chose **the local llama.cpp fork for this line of work**.
 
-An earlier position-versus-value failure occurred through QGRE. On the same twenty question strings, the llama.cpp comparison answered all twenty correctly. Consequently, that failure is not established as an intrinsic behavior of the Gemma model used through llama.cpp. The comparison did not isolate whether QGRE's conversion, numerical path, or another implementation difference caused the discrepancy. [Comparison record](~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/RESULTS.md).
+An earlier position-versus-value failure occurred through QGRE. On the same twenty question strings, the llama.cpp comparison answered all twenty correctly. Consequently, that failure is not established as an intrinsic behavior of the Gemma model used through llama.cpp. The comparison did not isolate whether QGRE's conversion, numerical path, or another implementation difference caused the discrepancy. Comparison record (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/llamacpp-lookup-comparison-2026-11-06/RESULTS.md`).
 
 The subsequent experiment instead targeted a real, observable preference: when a key appears twice with different values and no tie-breaking instruction, increase the model's default preference for the **first occurrence** while preserving explicit instructions and unique-key lookup.
 
-The saved [quantized-edit report](~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md) records:
+The saved quantized-edit report (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md`) records:
 
 - An activity-guided edit to layer 29, attention head 5's query weights, stored in Q4_K. It changed 42,377 represented scalar weights while retaining existing quantization scales and minima.
 - First-only choices on discovery prompts increased from 5/16 to 10/16; on withheld keys and values, from 7/16 to 10/16.
@@ -214,9 +214,9 @@ This is a concrete starting result for mechanism-oriented editing. It is not a c
 
 **Current phase: investigate whether the encoded paths can be recognized from capability patterns and existing observations. No training is needed to state or pursue that question, and further edits are not a substitute for identifying the target.**
 
-The earlier [offline inspection](~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/path-inspection-2026-11-06/REPORT.md) followed the effects of an existing edit through recorded operations. Its claim to have found a segment of Marcos's path was incorrect and has been withdrawn. Its measurements describe perturbation propagation. They do not identify the frozen encoded pattern constituting the capability. Collecting more stages of the same propagation trace would not, by itself, fix this conceptual error.
+The earlier offline inspection (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/path-inspection-2026-11-06/REPORT.md`) followed the effects of an existing edit through recorded operations. Its claim to have found a segment of Marcos's path was incorrect and has been withdrawn. Its measurements describe perturbation propagation. They do not identify the frozen encoded pattern constituting the capability. Collecting more stages of the same propagation trace would not, by itself, fix this conceptual error.
 
-The subsequent [original-model observation study](~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md) completed 40 discovery and 20 withheld questions without editing or training. All 60 answers were correct and their exact token sequences agreed across ordinary, plain-observer, and captured execution. Attention diagnostics and products formed from native-quantized query weights and captured inputs showed repeatable question-dependent contrasts on the withheld examples. Copying overlapped with retrieval, the contrast also existed in input activity alone, and instrumentation changed numerical logits despite preserving answers. The study therefore records useful observations but does not identify a frozen encoded path; neither its heads nor its derived product profiles are such an identification.
+The subsequent original-model observation study (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md`) completed 40 discovery and 20 withheld questions without editing or training. All 60 answers were correct and their exact token sequences agreed across ordinary, plain-observer, and captured execution. Attention diagnostics and products formed from native-quantized query weights and captured inputs showed repeatable question-dependent contrasts on the withheld examples. Copying overlapped with retrieval, the contrast also existed in input activity alone, and instrumentation changed numerical logits despite preserving answers. The study therefore records useful observations but does not identify a frozen encoded path; neither its heads nor its derived product profiles are such an identification.
 
 The research approach must preserve the following distinction between evidence and target:
 

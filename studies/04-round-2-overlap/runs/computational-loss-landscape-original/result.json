@@ -1,0 +1,18 @@
+{
+  "status": "failed",
+  "recorded_at": "2026-11-16T22:57:07.391735-06:00",
+  "phase": "case_prepare_instrumentation",
+  "error": "TypeError: Recorder.span() got an unexpected keyword argument member",
+  "executed_program": {
+    "record": "records/development/2026-11-16-computation-landscape/evaluate.py",
+    "sha256": "b3d1b921167542b5f2dc889f7150f51f10fab2712ce5275ff915a01634065272"
+  },
+  "source_commit": "874b3e2e",
+  "completed_surface_vertices": 0,
+  "completed_cases": 0,
+  "shared_grid_prepared": true,
+  "unique_weight_vertices": 81,
+  "prediction_vs_result": "No computational surface was measured. Original model/checkpoints and shared BF16 grid prepared; first case instrumentation call failed before its acquisition was read.",
+  "failures_only": "Recorder.span API expects its attributes container, not arbitrary member keywords; missing integration coverage escaped source review. Failed logs and measured weight-plane grid remain preserved.",
+  "what_this_changes": "Fix instrumentation call compatibility and exercise actual Recorder on CPU; retain numerical design and declare a separate retry. No native learner change."
+}

@@ -8,7 +8,7 @@ QGRE generated exactly **30,000 new tokens in one retained conversation over 187
 
 The initial prompt contained 86 tokens. The final request contained 39,494 input tokens, 39,442 reported as cached, and produced 78 new tokens. Its resulting context was 39,572 tokens. The workload requested a long catalogue of engineering observations and repeatedly asked for continuation. It is a sustained decode workload, not a semantic-quality benchmark.
 
-The active conversation ran from **21:00:44 to 21:41:35 CT**, a span of **2,450.948 seconds**. This excludes server startup before the first request. Every completed request and response, emitted token IDs, cache counts, stop reason, host timing, server log and 500 ms GPU telemetry sample is retained under [conversation-normal](conversation-normal/).
+The active conversation ran from **21:00:44 to 21:41:35 CT**, a span of **2,450.948 seconds**. This excludes server startup before the first request. Every completed request and response, emitted token IDs, cache counts, stop reason, host timing, server log and 500 ms GPU telemetry sample is retained under conversation-normal.
 
 | Measured scope | Result | Denominator / qualification |
 |---|---:|---|
@@ -33,7 +33,7 @@ The seven early internal recordings independently show:
 - Full-history attention tail growth: **390.007 ns per context token per full-attention layer**. Across seven such layers, that is **2.730 ms per 1,000 context tokens**.
 - Sliding-window attention tails remain around **94 µs per layer after position 512**, with negligible growth over the captured positions.
 - At position 2,183, full-attention layer 5 has **eight observed workers taking 860.6–863.3 µs**, while forty other observed workers each take less than 1 µs in that operation. There are 48 observations out of the 63 logical workers; absence of an observation is not an idle measurement.
-- The actual captured [launch tables](first-turn-tapes/launch_tables.json) contain `attention_position_slices: "1"`.
+- The actual captured launch tables contain `attention_position_slices: "1"`.
 
 Here, **tail means last recorded entry to last recorded exit**, averaged across layers of one kind. It is not the entire entry-to-exit envelope, a complete critical path, or a claim of recoverable time. Workers can enter at different times, and some entries perform almost no work.
 
@@ -53,7 +53,7 @@ The agreement between independent passes is strong evidence for choosing the nex
 
 ## What the early Nsight Compute capture adds
 
-The counter fixture uses the same initial 86-token prompt, two generated tokens and one selected persistent decode launch. It completed 21 application replay passes. QGRE's existing replay importer admitted **487 metric rows**, including device and launch attributes. The [native report](ncu-early.ncu-rep), [raw CSV](ncu-early.csv), [readable details](ncu-early-details.txt), and [SASS with source counters](ncu-early-sass.txt) are retained. These are early-context observations, not counter measurements of the entire 30k run.
+The counter fixture uses the same initial 86-token prompt, two generated tokens and one selected persistent decode launch. It completed 21 application replay passes. QGRE's existing replay importer admitted **487 metric rows**, including device and launch attributes. The native report, raw CSV, readable details, and SASS with source counters are retained. These are early-context observations, not counter measurements of the entire 30k run.
 
 | Counter observation | Recorded result | Implication to test |
 |---|---:|---|
@@ -73,11 +73,11 @@ The profiler's automatic estimated-speedup hints are not predicted or measured s
 
 The register finding also corrects an incomplete resource picture: **51.2 KB is the dynamic allocation, not total shared memory**. The run export now retains static and dynamic components separately; the counter report provides the additional driver allocation.
 
-The SASS export contains 74,048 instruction locations, 15,648 with at least one sample. The [ranked instruction evidence](instruction-sites.json) retains the top 64 by not-issued warp-stall samples, with exact PCs and no invented logical-operation binding. The three leading locations are `WARPSYNC.COLLECTIVE` instructions: `0x10018b0a7f0` (91,729 not-issued samples), `0x10018b1e490` (77,177), and `0x10018b06220` (44,015). These are sampled instruction locations, not durations, root-cause proof or removable synchronization. Their producer dependencies and operation identity are the next missing join.
+The SASS export contains 74,048 instruction locations, 15,648 with at least one sample. The ranked instruction evidence retains the top 64 by not-issued warp-stall samples, with exact PCs and no invented logical-operation binding. The three leading locations are `WARPSYNC.COLLECTIVE` instructions: `0x10018b0a7f0` (91,729 not-issued samples), `0x10018b1e490` (77,177), and `0x10018b06220` (44,015). These are sampled instruction locations, not durations, root-cause proof or removable synchronization. Their producer dependencies and operation identity are the next missing join.
 
 ## Action order from the inspection ontology
 
-These are proposed experiments, not implemented optimizations. They use the workbench's [architecture-area ontology](../../../../.dev/decode-machine/EVIDENCE-ONTOLOGY.md).
+These are proposed experiments, not implemented optimizations. They use the workbench's architecture-area ontology.
 
 | Priority and architecture area | Evidence and hypothesis | Smallest next experiment | What would refute it |
 |---|---|---|---|
@@ -96,22 +96,22 @@ Before any optimization leg, declare its quantitative expected band from the act
 
 The saved turn-64 prompt contains **22,279 tokens**. A separate cold prefill processed that complete prompt, then generated two tokens. The recorded IDs **818 and 1626** match the first two IDs in normal turn 64. This is only a sampled correspondence; it does not establish identical cache state, every intermediate value, or a full matching trajectory.
 
-The [later Nsight Systems trace](later-context/trace.nsys-rep) records a **69.645 ms CUDA decode kernel**; QGRE's host bracket around the instrumented step is **73.882 ms**. Cold prefill took about **811.4 s**, and is not compared with the normal server's cached continuation prefill. The diagnostic kernel uses **255 registers/thread**, versus 242 in the early production trace, another reason not to treat diagnostic timing as production performance.
+The later Nsight Systems trace records a **69.645 ms CUDA decode kernel**; QGRE's host bracket around the instrumented step is **73.882 ms**. Cold prefill took about **811.4 s**, and is not compared with the normal server's cached continuation prefill. The diagnostic kernel uses **255 registers/thread**, versus 242 in the early production trace, another reason not to treat diagnostic timing as production performance.
 
 During the later decode, 70 GPU samples report mean SM activity **74.1%**, issue activity **5.1%**, tensor activity **1.0%** and DRAM-read activity **2.4%**. They suggest that aggregate DRAM bandwidth alone does not explain this diagnostic's cost. They do not establish the exact waiting dependency, and the pass differs from the early production trace in context and instrumentation.
 
-The existing range reader admitted the later stored-value dump: **527 stage/layer rows covering 28,992 active blocks**, retained in [range-22279.json](range-22279.json) and the relational export. Its timing binding is explicitly absent.
+The existing range reader admitted the later stored-value dump: **527 stage/layer rows covering 28,992 active blocks**, retained in range-22279.json and the relational export. Its timing binding is explicitly absent.
 
-The phase reader rejected the internal clock tape: tap 0, layer 34, block 16 lies **202,001,458 cycles** from its block origin, beyond the receipt-derived **201,698,155-cycle** bound. The receipt records `sm_clock_khz=2730000`; the saved [device report](device.xml) lists a maximum SM clock of **3,135 MHz**. Current source explains the mismatch: `Device::sm_clock_khz_text` reads `CU_DEVICE_ATTRIBUTE_CLOCK_RATE`, and the phase reader multiplies it by the host bracket as if it were a guaranteed ceiling. Normal-run telemetry also observes clocks above 2,730 MHz.
+The phase reader rejected the internal clock tape: tap 0, layer 34, block 16 lies **202,001,458 cycles** from its block origin, beyond the receipt-derived **201,698,155-cycle** bound. The receipt records `sm_clock_khz=2730000`; the saved device report lists a maximum SM clock of **3,135 MHz**. Current source explains the mismatch: `Device::sm_clock_khz_text` reads `CU_DEVICE_ATTRIBUTE_CLOCK_RATE`, and the phase reader multiplies it by the host bracket as if it were a guaranteed ceiling. Normal-run telemetry also observes clocks above 2,730 MHz.
 
-The original tape and metadata remain unchanged. [capture-failures.json](capture-failures.json) records the failure; the viewer displays the unavailable position instead of inventing its animation. No later full-attention tail or worker-distribution claim is made from this rejected tape. The safe next repair is in capture provenance, followed by a new admitted capture, not removal of the ordering check.
+The original tape and metadata remain unchanged. capture-failures.json records the failure; the viewer displays the unavailable position instead of inventing its animation. No later full-attention tail or worker-distribution claim is made from this rejected tape. The safe next repair is in capture provenance, followed by a new admitted capture, not removal of the ordering check.
 
 NVIDIA's current [CUDA driver attribute documentation](https://docs.nvidia.com/cuda/cuda-driver-api/cuda_driver_api/group__CUDA__TYPES.html) describes `CU_DEVICE_ATTRIBUTE_CLOCK_RATE` as the **typical** clock frequency. That supports the source-level diagnosis: it is unsuitable as a guaranteed upper bound for boosted execution. The [NVML maximum-clock API](https://docs.nvidia.com/deploy/nvml-api/latest/api/group__nvmlDeviceQueries.html) is a different query and also documents small possible differences from current P0 clocks; a repaired capture must define and justify its bound rather than substitute an unexplained multiplier.
 
-- [run-evidence.json](run-evidence.json): relational projection of sources, turns, launches, counters, internal captures, CUDA memory events, text reuse and evidence-to-experiment observations.
-- [nsys-attempt-1.nsys-rep](nsys-attempt-1.nsys-rep), with [SQLite export](nsys-attempt-1.sqlite): separate first-reply production trace, not the normal conversation's timestamps.
-- [first-turn-tapes](first-turn-tapes/): instrumented positions 86, 511, 512, 1,023, 1,024, 1,085 and 2,183. All seven sampled input/output token pairs match the corresponding positions in the normal first reply. This is a sampled correspondence, not a full-trajectory comparison.
-- [checkpoint.sha256](checkpoint.sha256), [device.xml](device.xml), saved binaries under [bin](bin/), and the [capture plan](plan.md).
+- run-evidence.json: relational projection of sources, turns, launches, counters, internal captures, CUDA memory events, text reuse and evidence-to-experiment observations.
+- nsys-attempt-1.nsys-rep, with SQLite export: separate first-reply production trace, not the normal conversation's timestamps.
+- first-turn-tapes: instrumented positions 86, 511, 512, 1,023, 1,024, 1,085 and 2,183. All seven sampled input/output token pairs match the corresponding positions in the normal first reply. This is a sampled correspondence, not a full-trajectory comparison.
+- checkpoint.sha256, device.xml, saved binaries under bin, and the capture plan.
 
 The checkpoint is `models/gemma4/gemma4-e2b/tq4-e2m1-nvme`. The emitted policy SHA is `09663b7f7fe5695c5bad0390cc3e82d64334d2792263ad2ec5eadc76fab65d2b`. Observed geometry is 63 blocks, 256 threads per block, controller/loader/consumer roles 1/1/6 warps, 51,200 bytes of dynamic shared memory and ring depth 4. Static and driver shared allocations are listed above. The early trace reports 242 registers per thread. Device identity is `GPU-b6d3869b-4794-4ff4-0398-47df517a8c82`.
 
@@ -134,4 +134,4 @@ The workbench is useful for selecting a specific experiment: it connects the gro
 
 The workbench changes are committed in `5e6723207`, `842e30891` and `39d2e883b`. `bun run test` completed with 65 passing tests and exit 0; `bun run build` completed with exit 0, retaining the existing large-chunk warning. The final imported data reconciles 30,000 tokens, 187 turns, 7 sources and **1,417 relationships with no unresolved endpoint**. These validate the workbench, not the inference engine or a performance improvement.
 
-Browser checks covered the real 30,000-token dataset, reply selection, capture selection with its matching stored-value evidence, and the new scheduler/resource comparison. Captures use 3840×2050, 1440×900 and 390×844 page areas. A fresh Sonnet visual judge scored the current screenshots 6.4, 7.2 and 7.7 respectively; its [report](design-review-final.md) is retained. It flags control proportions, typography hierarchy, explanatory text and missing-data presentation. This is functional diagnostic software with unfinished visual polish, not a completed design sign-off.
+Browser checks covered the real 30,000-token dataset, reply selection, capture selection with its matching stored-value evidence, and the new scheduler/resource comparison. Captures use 3840×2050, 1440×900 and 390×844 page areas. A fresh Sonnet visual judge scored the current screenshots 6.4, 7.2 and 7.7 respectively; its report is retained. It flags control proportions, typography hierarchy, explanatory text and missing-data presentation. This is functional diagnostic software with unfinished visual polish, not a completed design sign-off.

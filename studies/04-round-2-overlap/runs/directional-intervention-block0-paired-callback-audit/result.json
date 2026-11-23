@@ -1,0 +1,244 @@
+{
+  "post_gain_branch": {
+    "anchored_motion_norm": 0.9189634364762478,
+    "native_motion_norm": 1.1142936538024817,
+    "anchored_native_gap_at_target": 0.0047796115303718805,
+    "anchored_native_gap_max_event": 0.5916542712960173,
+    "anchored_native_gap_max_causal_prefix": 0.5916542712960173,
+    "anchored_native_cosine": -0.005236991402558097
+  },
+  "residual_merge": {
+    "anchored_motion_norm": 0.9189631176621924,
+    "native_motion_norm": 1.114293821977249,
+    "anchored_native_gap_at_target": 0.00477957881000771,
+    "anchored_native_gap_max_event": 0.59165430911258,
+    "anchored_native_gap_max_causal_prefix": 0.59165430911258,
+    "anchored_native_cosine": -0.005236954610382501
+  },
+  "pre_gain_from_rounded_product_division": {
+    "anchored_motion_norm": 0.04446214826069956,
+    "native_motion_norm": 0.05242719698481388,
+    "anchored_native_gap_at_target": 0.0002638704722462604,
+    "anchored_native_gap_max_event": 0.022614044367690045,
+    "anchored_native_gap_max_causal_prefix": 0.022614044367690045,
+    "anchored_native_cosine": -0.006598520537131894
+  },
+  "native_add_matches_bitwise": 1775616,
+  "unchanged_nonzero_gain_coordinates": 1525,
+  "original_to_projected_native_embedding_change_rows": [
+    5,
+    150,
+    180,
+    189,
+    239,
+    253,
+    304,
+    346,
+    350,
+    361,
+    408,
+    437,
+    467,
+    469,
+    515,
+    558
+  ],
+  "changes_in_historical_causal_prefix": 7,
+  "original_to_projected_input_change_max": 2.9200600693002343e-07,
+  "native_changed_products_at_target_on_unchanged_gains": 1516,
+  "native_changed_products_causal_prefix_on_unchanged_gains": 431833,
+  "native_first_retained_attention_output": "attn_post_norm-0",
+  "block_zero_archive_labels": [
+    "attn_out-0",
+    "attn_post_norm-0",
+    "ffn_post_norm-0",
+    "inp_scaled",
+    "l_out-0",
+    "pe_in-0",
+    "pe_out-0",
+    "per_layer_embd_out-0"
+  ],
+  "recorder_missing": [
+    "attn_norm-0",
+    "Qcur-0",
+    "Kcur-0",
+    "Vcur-0",
+    "Qcur_normed-0",
+    "Kcur_normed-0",
+    "Vcur_normed-0",
+    "Qcur_pos-0",
+    "Kcur_pos-0",
+    "kqv_out-0"
+  ],
+  "native_group_sizes": {
+    "32": 5,
+    "13": 1,
+    "1": 405
+  },
+  "target_event": 312,
+  "events": 578,
+  "width": 1536,
+  "attn_weight_inventory": {
+    "blk.0.attn_norm.weight": {
+      "native_type": "f32",
+      "gguf_shape": [
+        1536,
+        1,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        1536
+      ],
+      "changed_coordinates": 0
+    },
+    "blk.0.post_attention_norm.weight": {
+      "native_type": "f32",
+      "gguf_shape": [
+        1536,
+        1,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        1536
+      ],
+      "changed_coordinates": 11
+    },
+    "blk.0.attn_k_norm.weight": {
+      "native_type": "f32",
+      "gguf_shape": [
+        256,
+        1,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        256
+      ],
+      "changed_coordinates": 93
+    },
+    "blk.0.attn_k.weight": {
+      "native_type": "bf16",
+      "gguf_shape": [
+        1536,
+        256,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        256,
+        1536
+      ],
+      "changed_coordinates": 3
+    },
+    "blk.0.attn_output.weight": {
+      "native_type": "bf16",
+      "gguf_shape": [
+        2048,
+        1536,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        1536,
+        2048
+      ],
+      "changed_coordinates": 10
+    },
+    "blk.0.attn_q_norm.weight": {
+      "native_type": "f32",
+      "gguf_shape": [
+        256,
+        1,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        256
+      ],
+      "changed_coordinates": 1
+    },
+    "blk.0.attn_q.weight": {
+      "native_type": "bf16",
+      "gguf_shape": [
+        1536,
+        2048,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        2048,
+        1536
+      ],
+      "changed_coordinates": 6
+    },
+    "blk.0.attn_v.weight": {
+      "native_type": "bf16",
+      "gguf_shape": [
+        1536,
+        256,
+        1,
+        1
+      ],
+      "adapter_shape": [
+        256,
+        1536
+      ],
+      "changed_coordinates": 2
+    }
+  },
+  "adapter_only_projections": {
+    "attn_k": {
+      "input_shape": [
+        578,
+        1536
+      ],
+      "output_shape": [
+        578,
+        256
+      ],
+      "reconstructed_input_max_motion": 2.445987774990499e-06,
+      "reconstructed_output_max_motion": 7.62939453125e-06
+    },
+    "attn_v": {
+      "input_shape": [
+        578,
+        1536
+      ],
+      "output_shape": [
+        578,
+        256
+      ],
+      "reconstructed_input_max_motion": 2.445987774990499e-06,
+      "reconstructed_output_max_motion": 6.036276293359834e-06
+    },
+    "attn_q": {
+      "input_shape": [
+        578,
+        1536
+      ],
+      "output_shape": [
+        578,
+        2048
+      ],
+      "reconstructed_input_max_motion": 2.445987774990499e-06,
+      "reconstructed_output_max_motion": 2.4277755459838504e-05
+    },
+    "attn_output": {
+      "input_shape": [
+        578,
+        2048
+      ],
+      "output_shape": [
+        578,
+        1536
+      ],
+      "reconstructed_input_max_motion": 0.022436207426343165,
+      "reconstructed_output_max_motion": 0.030483438604234
+    }
+  },
+  "prediction_vs_result": "The native residual addition and the adapted residual replay are tested using the original capture layout and physical weights. The first retained native branch already exhibits the mismatch.",
+  "failures_only": "Q/K/V, normalized input, attention/cache calculations, mixed operands and projection/pre-gain norm outputs are unavailable natively. Product division is approximate. An identical embedding operand does not establish identical internal operands.",
+  "what_this_changes": "Closes the residual ADD as the explanation and bounds the discrepancy before the captured weighted attention branch without claiming causal attribution to a missing internal operation."
+}

@@ -1,0 +1,79 @@
+{
+  "method_step": [
+    1
+  ],
+  "run_by": "Astra",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "amendment": {
+    "time_ct": "2026-11-09T12:51:27.224787-06:00",
+    "source": "review-existing-originals-only.json",
+    "supersedes": "design-revisions/approved-expansion-declaration.json",
+    "previous_declaration_sha256": "9f4b2c44cff06168c3c06963e4b8a6ba22355d5fe616c03307e8494a651d057b",
+    "primary_responses_complete_at_amendment": 42,
+    "new_questions_run": 0,
+    "note": "GPU0 originals started under the earlier approval at 12:39 CT. This is a post-start scope correction, not a retrospective pre-outcome declaration. Their questions, order, weights, settings and capture are unchanged. Keep completed records; do not rerun. The separate GPU1 replication is stopped and retained outside primary analysis."
+  },
+  "hypothesis": "The capability leaves a recurring structural difference between correct and incorrect computation traces. The existing questions on one arithmetic condition can expose where each failure carries that difference.",
+  "what_went_wrong_before": "Cross-card arithmetic differences were allowed to drive smaller groups, matched-cell acquisition and a statistical gate. Those choices tested population separation instead of following the recurring structural difference through the existing responses.",
+  "why_this_direction": "Run the existing originals on GPU0 to remove arithmetic-condition variation. This prepares the same questions for overlay of their correct and wrong traces, located by layer, component and answer position. It changes the condition, not the sample size.",
+  "why_it_might_be_wrong": "A visible difference may reflect numerical inputs, wording or an error already emitted. A common card removes only the hardware confound. The next overlap must inspect each failure and compare the structure directly across the existing parameter variations; pre-error support is necessary evidence, not causal proof.",
+  "repeating_pattern_check": "A setup artifact repeatedly became a reason to change the scientific question. This amendment cancels new-question acquisition, count matching and population-null gates. The existing response paths remain the object of investigation.",
+  "rule": {
+    "primary": "Finish only the 45 frozen original questions on GPU0 with the unchanged original BF16 model, greedy settings and qualified projection recorder. Use completed GPU0 records; never rerun them.",
+    "new_questions": "None. No screening, matched-cell quotas, active prefixes or enlargement. The previously generated question manifests remain historical proposal metadata and authorize no executions.",
+    "classification": "Read each complete natural response. Separate numerical successes, final-climb-includes-descent failures and other error types; report all originals. Preserve prose caveats and caps. No matching-based exclusion and no trace score determines eligibility.",
+    "first_error": "Mark the first wrong quantitative statement, first wrong mathematical token and any earlier ambiguous premise. The prediction emitting that token still has a pre-error prefix; later predictions are error-conditioned. Report each failure before, at and after the boundary, aligned to success positions; future targets require pre-error support.",
+    "next_overlap": "Overlay successes and failures, retain the recurring structural difference, and report whether each failure carries it, its layers/components and its first appearance. Check m, v and drop directly on the existing traces. Matched-cell design, Monte Carlo null and Clopper-Pearson calculations are not gates.",
+    "replication": "Stop the already-running GPU1 replication after its current completed prompt. Keep completed and any partial records, explicitly outside primary analysis; do not finish its queue.",
+    "retention": "Qualified observe-stream, projection retention, unchanged inference, natural greedy answers. All decisions retain the same residual boundaries and projection inputs named in STREAM-RECORDER.md. Reduced retention is labeled; it is not a full per-weight contribution capture.",
+    "export_qualification": "Before exporting the new cohort, read the existing qualified GPU0 projection capture; enumerate every recorded residual layer and its three ADD merges; verify incoming + branch equals merged in native float32 bytes at every prediction; compare the derived direction changes and L2 norms with the retained original full-response turns. Projection inputs stay in the unmodified native stream, indexed by label and token position. This export is data retention, not an overlap or target selection.",
+    "storage": "All outputs stay in this run folder. Use torad-research for verified R2 archival if local retention requires it. No unverified removal or shared input changes.",
+    "next_construction": "No weight edit or influence probe before a separately declared, independently accepted same-card structural-overlap analysis."
+  },
+  "prediction": {
+    "expected_observation": "One GPU0 record for every existing original, with all recorded merges and matrix inputs preserved. The already-observed procedure error is expected to recur in some responses; exact common-card outcome counts are measured, not forced by acquisition.",
+    "failures_only": "Original model only: report every target failure, numerical success, other error and cap. No repairs or regressions are claimed.",
+    "scope": "The earlier expansion prediction is superseded, not backfilled. No new native answer was generated from its candidate pool."
+  },
+  "would_weaken_it": "The existing failures do not carry a common structural difference, the difference appears only after the first wrong token, or it tracks parameters/wording rather than the erroneous procedure. Report that directly; do not expand the sample to repair the result.",
+  "design_check": {
+    "question_choice": "Exactly the existing original-question manifest; serves trace-by-trace recurrence and continuity with prior observation.",
+    "hardware": "GPU0 only for compared traces; removes arithmetic-condition variation.",
+    "grouping": "Natural procedure labels, with every original in the denominator; no matched-cell subset.",
+    "measurement": "Connected changes at the 105 recorded merges, components from native inputs and original weights, and per-failure pre-error location. No population-significance gate.",
+    "confounds": [
+      "mass, speed and descent checked directly on existing traces",
+      "loss and final rise",
+      "wording and generated history",
+      "error consequences after the first wrong token",
+      "missing aligned positions and prose inconsistencies"
+    ]
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/acquisition-single-card/original-questions.json",
+    "studies/04-round-2-overlap/inputs/observation/response-correspondence/index.json",
+    "studies/04-round-2-overlap/inputs/acquisition/stream-qualification-2026-11-08",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/acquisition-single-card"
+  ],
+  "parameters": {
+    "original_count": {
+      "value": 45,
+      "measured_from": "studies/04-round-2-overlap/runs/overlap/cross-validated/index.json",
+      "derivation": "Enumerate every eligible identity in parameters_by_case; no sampling.",
+      "scales_with": "Retained eligible population."
+    },
+    "max_tokens": {
+      "value": 768,
+      "measured_from": "studies/04-round-2-overlap/runs/acquisition-single-card/original-questions.json",
+      "derivation": "Every retained question uses this natural generation limit; hold it unchanged for comparability.",
+      "scales_with": "Source experiment generation condition."
+    }
+  },
+  "reviews": {
+    "source": "review-existing-originals-only.json",
+    "status": "Scope follows Marcos decision relayed by Claude. Revised declaration submitted; no additional original rerun or screening is authorized by submission."
+  }
+}

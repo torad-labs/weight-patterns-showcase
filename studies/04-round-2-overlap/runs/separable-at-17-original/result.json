@@ -1,0 +1,588 @@
+{
+ "status": "The declared diagnostic ran once, November 12, 2026, 5:16:36 to 6:11:56 AM CT, on card 0 under its lock, exit 0: twelve paths (four variants on three rotations of the fitting folds), each from the ridge unit x 2^23 down to 2^-3 as declared. No engine was called and no model was made. The declared prediction holds in all three folds. It is a reading of a solve at one matrix on the recordings' text: not a candidate, not a repair, and not the next objective.",
+ "written_by": "weight-research-fable, who ran it, from summary.json and paths/ (every figure below is on the answers READ of a fold, which that path's matrix was never solved on, unless it says otherwise). The objective and what a later construction takes from this are weight-research-astra's.",
+ "prediction_vs_result": {
+  "prediction": "Under `correct`, on the answers read and never solved on, in each of the three folds: (1) the wrong group's mean makes a positive part of the gap where a move is asked; and (2) a correct member's own movement per part of the gap made is smaller than on the `cells` path of the same fold at its matched stage. The prompt's positions, and the variants `prompts` and `unasked`, are read the same way and described; no prediction is made for them.",
+  "verdict": "Both parts hold in all three folds. (1) The wrong answers read make +0.272, +0.288 and +0.304 of the gap (the wrong answers solved on: +0.344, +0.358, +0.346). (2) A correct member's own movement per part of the gap made is 0.0565, 0.0621 and 0.0476, against 0.1470, 0.1403 and 0.1297 on the `cells` path at its matched stage: 2.60, 2.26 and 2.73 times smaller. Every matched stage makes at least as much of the gap as the charged path it is read beside, so none of the nine comparisons is the unmatched fallback the declaration's revision names.",
+  "declared_comparison": {
+   "correct": [
+    {
+     "fold_read": 0,
+     "gap_made": 0.2721,
+     "cells_stage": {
+      "ridge_power": 2,
+      "gap_made": 0.2803,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0565,
+      "at_cells": 0.147,
+      "times_smaller": 2.6
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0237,
+      "at_cells": 0.1077,
+      "times_smaller": 4.54
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0064,
+      "at_cells": 0.0302,
+      "times_smaller": 4.7
+     },
+     "cells_sum_read": {
+      "here": 0.0002464,
+      "at_cells": 0.0002851
+     }
+    },
+    {
+     "fold_read": 1,
+     "gap_made": 0.2877,
+     "cells_stage": {
+      "ridge_power": 2,
+      "gap_made": 0.3069,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0621,
+      "at_cells": 0.1403,
+      "times_smaller": 2.26
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0217,
+      "at_cells": 0.1021,
+      "times_smaller": 4.7
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0063,
+      "at_cells": 0.0312,
+      "times_smaller": 4.98
+     },
+     "cells_sum_read": {
+      "here": 0.0002008,
+      "at_cells": 0.00029
+     }
+    },
+    {
+     "fold_read": 2,
+     "gap_made": 0.3044,
+     "cells_stage": {
+      "ridge_power": 1,
+      "gap_made": 0.3292,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0476,
+      "at_cells": 0.1297,
+      "times_smaller": 2.73
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0213,
+      "at_cells": 0.1066,
+      "times_smaller": 5.01
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0065,
+      "at_cells": 0.035,
+      "times_smaller": 5.37
+     },
+     "cells_sum_read": {
+      "here": 0.0002224,
+      "at_cells": 0.0002297
+     }
+    }
+   ],
+   "prompts": [
+    {
+     "fold_read": 0,
+     "gap_made": 0.2762,
+     "cells_stage": {
+      "ridge_power": 2,
+      "gap_made": 0.2803,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0561,
+      "at_cells": 0.147,
+      "times_smaller": 2.62
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0176,
+      "at_cells": 0.1077,
+      "times_smaller": 6.11
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0048,
+      "at_cells": 0.0302,
+      "times_smaller": 6.3
+     },
+     "cells_sum_read": {
+      "here": 0.0002278,
+      "at_cells": 0.0002851
+     }
+    },
+    {
+     "fold_read": 1,
+     "gap_made": 0.2863,
+     "cells_stage": {
+      "ridge_power": 2,
+      "gap_made": 0.3069,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0621,
+      "at_cells": 0.1403,
+      "times_smaller": 2.26
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0165,
+      "at_cells": 0.1021,
+      "times_smaller": 6.18
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0046,
+      "at_cells": 0.0312,
+      "times_smaller": 6.71
+     },
+     "cells_sum_read": {
+      "here": 0.0002032,
+      "at_cells": 0.00029
+     }
+    },
+    {
+     "fold_read": 2,
+     "gap_made": 0.3022,
+     "cells_stage": {
+      "ridge_power": 1,
+      "gap_made": 0.3292,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0472,
+      "at_cells": 0.1297,
+      "times_smaller": 2.75
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0161,
+      "at_cells": 0.1066,
+      "times_smaller": 6.63
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0049,
+      "at_cells": 0.035,
+      "times_smaller": 7.2
+     },
+     "cells_sum_read": {
+      "here": 0.0002228,
+      "at_cells": 0.0002297
+     }
+    }
+   ],
+   "unasked": [
+    {
+     "fold_read": 0,
+     "gap_made": 0.2719,
+     "cells_stage": {
+      "ridge_power": 2,
+      "gap_made": 0.2803,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0568,
+      "at_cells": 0.147,
+      "times_smaller": 2.59
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0182,
+      "at_cells": 0.1077,
+      "times_smaller": 5.9
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0049,
+      "at_cells": 0.0302,
+      "times_smaller": 6.21
+     },
+     "cells_sum_read": {
+      "here": 0.0002158,
+      "at_cells": 0.0002851
+     }
+    },
+    {
+     "fold_read": 1,
+     "gap_made": 0.2816,
+     "cells_stage": {
+      "ridge_power": 2,
+      "gap_made": 0.3069,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0629,
+      "at_cells": 0.1403,
+      "times_smaller": 2.23
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0172,
+      "at_cells": 0.1021,
+      "times_smaller": 5.95
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0047,
+      "at_cells": 0.0312,
+      "times_smaller": 6.59
+     },
+     "cells_sum_read": {
+      "here": 0.0002129,
+      "at_cells": 0.00029
+     }
+    },
+    {
+     "fold_read": 2,
+     "gap_made": 0.2995,
+     "cells_stage": {
+      "ridge_power": 1,
+      "gap_made": 0.3292,
+      "makes_at_least_as_much": true
+     },
+     "a_correct_members_own_movement_per_part_of_the_gap_made": {
+      "here": 0.0479,
+      "at_cells": 0.1297,
+      "times_smaller": 2.71
+     },
+     "a_correct_members_prompt_position_median_per_part_of_the_gap_made": {
+      "here": 0.0165,
+      "at_cells": 0.1066,
+      "times_smaller": 6.46
+     },
+     "a_wrong_members_prompt_position_median": {
+      "here": 0.0049,
+      "at_cells": 0.035,
+      "times_smaller": 7.09
+     },
+     "cells_sum_read": {
+      "here": 0.0001931,
+      "at_cells": 0.0002297
+     }
+    }
+   ]
+  },
+  "described_without_a_prediction": {
+   "where_the_question_is_read": "Under `correct` a correct member's prompt positions move, at the median and per part of the gap made, 0.0237, 0.0217 and 0.0213 against 0.1077, 0.1021 and 0.1066 at the matched `cells` stage: 4.5 to 5.0 times less. A wrong member's prompt positions, which `correct` does not charge, move 0.0064, 0.0063 and 0.0065 at the median (a correct member's: 0.0065, 0.0062, 0.0065) against 0.0302, 0.0312 and 0.0350 at the matched `cells` stage: the two groups' prompt positions move alike whether charged or not.",
+   "prompts": "Charging the wrong members' prompt positions as well lowers their median movement from 0.0064, 0.0063, 0.0065 to 0.0048, 0.0046, 0.0049 and leaves the gap made (+0.276, +0.286, +0.302) and a correct member's own movement per part of it (0.0561, 0.0621, 0.0472) where `correct` has them.",
+   "unasked": "Charging the wrong members' own movement where their cell asks for no move as well lowers that request's sum on the answers read by 2.3, 3.6 and 6.0 times (3.03e-04, 8.08e-05, 2.74e-04 under `correct`; 1.29e-04, 2.22e-05, 4.58e-05 under `unasked`) and the part of the size gap made from +0.697, +0.464, +0.631 to +0.497, +0.368, +0.474; the gap made in direction is +0.272, +0.282, +0.299.",
+   "each_path_at_its_end": {
+    "cells": [
+     {
+      "fold_read": 0,
+      "gap_made": 0.469,
+      "gap_made_on_the_answers_solved_on": 0.533,
+      "size_gap_made": 0.802,
+      "correct_mean_along_the_gap": 0.328,
+      "a_correct_members_own_movement": 0.0482,
+      "the_same_on_the_answers_solved_on": 0.0485,
+      "a_wrong_members_own_movement": 0.069,
+      "prompt_position_median": {
+       "correct": 0.0536,
+       "wrong": 0.0535
+      },
+      "cells_sum": 0.0001183,
+      "correct_cells_beyond_radius": {
+       "direction": 223,
+       "size": 87
+      },
+      "change_over_matrix": 0.0954,
+      "seconds": 264.2
+     },
+     {
+      "fold_read": 1,
+      "gap_made": 0.508,
+      "gap_made_on_the_answers_solved_on": 0.535,
+      "size_gap_made": 0.8,
+      "correct_mean_along_the_gap": 0.387,
+      "a_correct_members_own_movement": 0.0549,
+      "the_same_on_the_answers_solved_on": 0.0475,
+      "a_wrong_members_own_movement": 0.0697,
+      "prompt_position_median": {
+       "correct": 0.0563,
+       "wrong": 0.0564
+      },
+      "cells_sum": 0.0002043,
+      "correct_cells_beyond_radius": {
+       "direction": 341,
+       "size": 213
+      },
+      "change_over_matrix": 0.097,
+      "seconds": 395.8
+     },
+     {
+      "fold_read": 2,
+      "gap_made": 0.494,
+      "gap_made_on_the_answers_solved_on": 0.529,
+      "size_gap_made": 0.742,
+      "correct_mean_along_the_gap": 0.305,
+      "a_correct_members_own_movement": 0.0471,
+      "the_same_on_the_answers_solved_on": 0.0492,
+      "a_wrong_members_own_movement": 0.0725,
+      "prompt_position_median": {
+       "correct": 0.0554,
+       "wrong": 0.0554
+      },
+      "cells_sum": 0.0001071,
+      "correct_cells_beyond_radius": {
+       "direction": 201,
+       "size": 100
+      },
+      "change_over_matrix": 0.0963,
+      "seconds": 402.9
+     }
+    ],
+    "correct": [
+     {
+      "fold_read": 0,
+      "gap_made": 0.272,
+      "gap_made_on_the_answers_solved_on": 0.344,
+      "size_gap_made": 0.697,
+      "correct_mean_along_the_gap": 0.086,
+      "a_correct_members_own_movement": 0.0154,
+      "the_same_on_the_answers_solved_on": 0.0118,
+      "a_wrong_members_own_movement": 0.0442,
+      "prompt_position_median": {
+       "correct": 0.0065,
+       "wrong": 0.0064
+      },
+      "cells_sum": 0.0002464,
+      "correct_cells_beyond_radius": {
+       "direction": 5,
+       "size": 20
+      },
+      "change_over_matrix": 0.1199,
+      "seconds": 118.0
+     },
+     {
+      "fold_read": 1,
+      "gap_made": 0.288,
+      "gap_made_on_the_answers_solved_on": 0.358,
+      "size_gap_made": 0.464,
+      "correct_mean_along_the_gap": 0.114,
+      "a_correct_members_own_movement": 0.0179,
+      "the_same_on_the_answers_solved_on": 0.0116,
+      "a_wrong_members_own_movement": 0.042,
+      "prompt_position_median": {
+       "correct": 0.0062,
+       "wrong": 0.0063
+      },
+      "cells_sum": 0.0002008,
+      "correct_cells_beyond_radius": {
+       "direction": 7,
+       "size": 10
+      },
+      "change_over_matrix": 0.1193,
+      "seconds": 169.2
+     },
+     {
+      "fold_read": 2,
+      "gap_made": 0.304,
+      "gap_made_on_the_answers_solved_on": 0.346,
+      "size_gap_made": 0.631,
+      "correct_mean_along_the_gap": 0.072,
+      "a_correct_members_own_movement": 0.0145,
+      "the_same_on_the_answers_solved_on": 0.0122,
+      "a_wrong_members_own_movement": 0.0496,
+      "prompt_position_median": {
+       "correct": 0.0065,
+       "wrong": 0.0065
+      },
+      "cells_sum": 0.0002224,
+      "correct_cells_beyond_radius": {
+       "direction": 5,
+       "size": 13
+      },
+      "change_over_matrix": 0.123,
+      "seconds": 218.1
+     }
+    ],
+    "prompts": [
+     {
+      "fold_read": 0,
+      "gap_made": 0.276,
+      "gap_made_on_the_answers_solved_on": 0.351,
+      "size_gap_made": 0.643,
+      "correct_mean_along_the_gap": 0.088,
+      "a_correct_members_own_movement": 0.0155,
+      "the_same_on_the_answers_solved_on": 0.0118,
+      "a_wrong_members_own_movement": 0.0453,
+      "prompt_position_median": {
+       "correct": 0.0049,
+       "wrong": 0.0048
+      },
+      "cells_sum": 0.0002278,
+      "correct_cells_beyond_radius": {
+       "direction": 6,
+       "size": 10
+      },
+      "change_over_matrix": 0.1218,
+      "seconds": 174.6
+     },
+     {
+      "fold_read": 1,
+      "gap_made": 0.286,
+      "gap_made_on_the_answers_solved_on": 0.357,
+      "size_gap_made": 0.44,
+      "correct_mean_along_the_gap": 0.114,
+      "a_correct_members_own_movement": 0.0178,
+      "the_same_on_the_answers_solved_on": 0.0116,
+      "a_wrong_members_own_movement": 0.0417,
+      "prompt_position_median": {
+       "correct": 0.0047,
+       "wrong": 0.0046
+      },
+      "cells_sum": 0.0002032,
+      "correct_cells_beyond_radius": {
+       "direction": 8,
+       "size": 10
+      },
+      "change_over_matrix": 0.1198,
+      "seconds": 156.0
+     },
+     {
+      "fold_read": 2,
+      "gap_made": 0.302,
+      "gap_made_on_the_answers_solved_on": 0.341,
+      "size_gap_made": 0.622,
+      "correct_mean_along_the_gap": 0.072,
+      "a_correct_members_own_movement": 0.0143,
+      "the_same_on_the_answers_solved_on": 0.0121,
+      "a_wrong_members_own_movement": 0.0488,
+      "prompt_position_median": {
+       "correct": 0.0049,
+       "wrong": 0.0049
+      },
+      "cells_sum": 0.0002228,
+      "correct_cells_beyond_radius": {
+       "direction": 5,
+       "size": 11
+      },
+      "change_over_matrix": 0.1222,
+      "seconds": 163.7
+     }
+    ],
+    "unasked": [
+     {
+      "fold_read": 0,
+      "gap_made": 0.272,
+      "gap_made_on_the_answers_solved_on": 0.345,
+      "size_gap_made": 0.497,
+      "correct_mean_along_the_gap": 0.087,
+      "a_correct_members_own_movement": 0.0154,
+      "the_same_on_the_answers_solved_on": 0.0119,
+      "a_wrong_members_own_movement": 0.0445,
+      "prompt_position_median": {
+       "correct": 0.005,
+       "wrong": 0.0049
+      },
+      "cells_sum": 0.0002158,
+      "correct_cells_beyond_radius": {
+       "direction": 5,
+       "size": 5
+      },
+      "change_over_matrix": 0.1245,
+      "seconds": 177.6
+     },
+     {
+      "fold_read": 1,
+      "gap_made": 0.282,
+      "gap_made_on_the_answers_solved_on": 0.349,
+      "size_gap_made": 0.368,
+      "correct_mean_along_the_gap": 0.113,
+      "a_correct_members_own_movement": 0.0177,
+      "the_same_on_the_answers_solved_on": 0.0116,
+      "a_wrong_members_own_movement": 0.041,
+      "prompt_position_median": {
+       "correct": 0.0048,
+       "wrong": 0.0047
+      },
+      "cells_sum": 0.0002129,
+      "correct_cells_beyond_radius": {
+       "direction": 9,
+       "size": 8
+      },
+      "change_over_matrix": 0.122,
+      "seconds": 143.1
+     },
+     {
+      "fold_read": 2,
+      "gap_made": 0.299,
+      "gap_made_on_the_answers_solved_on": 0.338,
+      "size_gap_made": 0.474,
+      "correct_mean_along_the_gap": 0.073,
+      "a_correct_members_own_movement": 0.0143,
+      "the_same_on_the_answers_solved_on": 0.0123,
+      "a_wrong_members_own_movement": 0.0484,
+      "prompt_position_median": {
+       "correct": 0.0049,
+       "wrong": 0.0049
+      },
+      "cells_sum": 0.0001931,
+      "correct_cells_beyond_radius": {
+       "direction": 5,
+       "size": 14
+      },
+      "change_over_matrix": 0.126,
+      "seconds": 125.2
+     }
+    ]
+   },
+   "by_stretch_of_the_answer": "records/development/2026-11-12-correction-objective/separable-by-place-separable-at-17-original.txt (made from paths/ by separable_by_place.py, files only). Under `correct` the wrong answers read keep the most of the movement `cells` gave them at places 172 to 259 and the least at places 0 to 141, where under `cells` both groups had moved together. Places 172 to 201, which hold 0.180 of the reference's squared gap: the wrong group makes +0.70, +0.73, +0.76 of the gap (`cells`: +0.80, +0.83, +0.82) and the correct group's mean moves +0.05, +0.07, +0.04 along it (`cells`: +0.14, +0.27, +0.09). The sign, places 169 to 171: +0.54, +0.59, +0.60 against +0.07, +0.08, +0.06 (`cells`: +0.73 in every fold against +0.16, +0.21, +0.10). Places 0 to 141, which hold 0.038 of the squared gap: the wrong group makes +0.11 in every fold and the correct group moves +0.09, +0.10, +0.09 with it (`cells`: +0.36 in every fold and +0.35, +0.34, +0.33). Places 314 to 399: +0.23, +0.18, +0.22 against +0.07, +0.12, +0.05 (`cells`: +0.41 in every fold against +0.39, +0.47, +0.38). The shares of the squared gap are those of candidate-by-place-correction-at-17-original.txt, on all thirty fitting answers.",
+   "between_the_two_groups": "Not a reading the declaration names, and derived from two that it does: the wrong group's part of the gap less the correct group's mean movement along the same gap is +0.141, +0.121, +0.189 at the end of `cells` and +0.186, +0.174, +0.232 at the end of `correct`. The cells count each group from the original, so this says how far the two groups' means have come toward each other as the changed matrix computes them, not how much of the objective is met.",
+   "stage_by_stage": "From 2^1 down to 2^-3 the `correct` paths' gap made rises (+0.168 to +0.272, +0.179 to +0.288, +0.179 to +0.304) while a correct member's own movement rises by 0.0002 to 0.0009 (0.0148 to 0.0154, 0.0170 to 0.0179, 0.0143 to 0.0145) and the correct group's mean along the gap changes by -0.008, +0.003 and -0.015 (+0.094 to +0.086, +0.111 to +0.114, +0.087 to +0.072). Every charged path was still making +0.02 to +0.03 of the gap per halving of the ridge at the ridge where the declaration ends it."
+  },
+  "the_cells_paths_beside_Bs": "The `cells` paths walk the fold paths of correction-at-17-original's candidate with the same rows, reference, folds, unit, first ridge, work and solver text. Their sums on the answers read at 2^-3 are 1.183e-04, 2.043e-04 and 1.071e-04 against B's recorded 1.306e-04, 1.889e-04 and 1.098e-04: -9.4%, +8.2% and -2.5%. records/development/2026-11-12-correction-objective/same-solve-twice-correction-at-17-original.txt reads the two side by side: identical bit for bit through 2^16 in every fold; from there to 2^1 the first round's objective differs by 7e-11 to 5e-05 of itself and the rounds taken are the same; from 2^0 down the two runs take different numbers of rounds (fold 1 at 2^-2: 39 and 5). As the declaration says, this is reported as measured and decides nothing; it is the size of difference this run cannot tell from none."
+ },
+ "failures_only": {
+  "the_separation_is_not_whole": "Under `correct` the correct group's mean still moves +0.086, +0.114 and +0.072 of the gap along it, 0.32, 0.40 and 0.24 of what the wrong group makes, and a correct member's own computation still moves 0.0154, 0.0179 and 0.0145 (`cells` at its end: 0.0482, 0.0549, 0.0471). On answers it was not solved on, a correct member moves 1.30, 1.54 and 1.18 times what a correct member solved on does (0.0118, 0.0116, 0.0122).",
+  "where_nothing_separates": "At places 0 to 141 the wrong group's move and the correct group's go together under either objective (+0.11 and +0.09 to +0.10 under `correct`). At this matrix, on these rows and with this work, the run finds no change there that moves the wrong answers without the correct ones.",
+  "less_of_the_gap_at_the_same_ridge": "At the last ridge declared the charged paths make +0.27 to +0.30 of the gap where `cells` makes +0.47 to +0.51, and under `correct` the cells' own sum on the answers read is higher in two folds (2.464e-04 against 1.183e-04, 2.224e-04 against 1.071e-04) and level in the third (2.008e-04 against 2.043e-04). The comparison at one ridge is not a matched one: a charge adds curvature, and the unit and the ridges are B's by the declared convention. The paths end at B's selected ridge by declaration, so this run does not say how much of the gap a charged path makes below it.",
+  "more_of_the_matrix": "The charged changes are larger: 0.1199, 0.1193 and 0.1230 of the matrix under `correct` against 0.0954, 0.0970 and 0.0963 under `cells` (1.26, 1.23 and 1.28 times).",
+  "stages_that_ended_otherwise": "All twelve paths reached the last ridge declared, 27 stages each. Of the 324 stages, 305 ended because the objective stopped falling at the ridge, 11 because no part of a step left less of the objective, 6 because the whole step moved no weight the file holds, and 2 (`cells`, folds 1 and 2) because the rounds allowed were used. `cells` took 112, 150 and 138 rounds (34, 52 and 60 of them below the unit); the charged paths 71 to 93 (16 to 34 below the unit).",
+  "what_the_variants_cannot_be_told_apart_on": "Between `correct`, `prompts` and `unasked` the gap made differs by at most 0.006 in a fold and a correct member's own movement per part of it by at most 0.0008. Two runs of the same declared solve differ by 2.5% to 9.4% in the sum they read here, so this run does not say that either added request costs or gains any of the gap.",
+  "not_read": "The fitting half only, on the original's recorded text, at one matrix, through no engine. Nothing here is a model's own answer or its own trace, and no answer was written or scored. No-fit answers were not read; reserved-40b is sealed."
+ },
+ "what_this_changes": {
+  "the_question_asked": "At blk.17.attn_output.weight, the movement of a correct answer's own computation and of the positions where the question is read, which B's candidate made, was left free by the declared objective and was not forced by the matrix. Charged in the same sum, the same solver with the same work finds a change that still makes the asked move on wrong answers it was not solved on, with a correct member's own computation moving 2.3 to 2.7 times less and its prompt positions 4.5 to 5.0 times less per part of the gap made.",
+  "for_the_hypothesis": "The local hypothesis the declaration added is supported at this matrix on these rows: the difference the matrix is asked to close reaches its input in directions that recur across wrong answers (the move transfers to wrong answers not solved on) and that a correct answer's own computation and the reading of the question share only in part (the correct group's mean still moves 0.24 to 0.40 of what the wrong group makes along the gap). The charged change keeps the wrong group's movement most where the reference's gap is densest (places 149 to 259 hold 0.46 of its squared length in 111 of the 480 places) and gives up the most at places 0 to 141 (0.04 of it in 142 places), where the two groups move together under either objective. That is the shape Marcos's words of November 12 ask of the training (the declaration's `authority` quotes them): the change applies where the traces differ and little where the computation already agrees. It is read here at one matrix on held text; it is not a repair and is not counted as one.",
+  "for_the_next_construction": "Astra's assessment of B says the next construction addresses unpriced movement, member-level agreement and prompt computation. This run shows that the first request of those, a correct member's own original computation at every place and at its prompt positions, can stand in the one sum at the cells' own weights with no radius and no number of ours, and that it transfers to answers not solved on. `prompts` and `unasked` have no known correct reference behind them and add nothing this run can tell from `correct` on the declared figures. A construction with such a charge needs its own cross-validated ridge: B's selected ridge is not the charged objective's, since the charged paths were still making the gap there with a correct member's own movement nearly where it was (0.0153 to 0.0154, 0.0178 to 0.0179, 0.0142 to 0.0145 over the last halving under `correct`). Its target, reference and declaration are Astra's.",
+  "for_the_solver": "The charged paths took 71 to 93 rounds where `cells` took 112 to 150, and 118 to 218 s where it took 264 to 403 s; why is not measured. The declared solve's difference between two runs of itself from the unit down (-9.4% to +8.2% on a fold's read sum at 2^-3) is a property of the solver and stands in the way of comparing candidates by small differences. A second ridge on a round's step, read from the merges themselves, is in development for it (records/development/2026-11-12-correction-objective, measured_step.py); no declared run uses it.",
+  "unchanged": "correction-at-19 and correction-at-17-original, their candidates, references, declarations and results. No figure here becomes a bound, a gate, a threshold or a preservation objective, nothing is selected by it, and it supplies no reference. It says nothing of another site, of several matrices together, or of what a model made this way would write. The earlier repairs and their transfer stand as recorded."
+ },
+ "provenance": {
+  "command": "studies/04-round-2-overlap/runs/separable-at-17-original/run.sh diagnostic (python -m pipeline.weight_edit.separable separable-at-17-original), logs/run.log and logs/diagnostic.out",
+  "started": "2026-11-12 05:16:36 CT",
+  "ended": "2026-11-12 06:11:56 CT",
+  "exit": 0,
+  "seconds_solving": 2508.4,
+  "card": "card 0 (RTX 5080) under /run/user/1000/gpu0.lock",
+  "made_with": {
+   "separable.py": "8240e4423c0697d8dbaa8e7e59f3c15ec2b9443bd6ba34b7f035c7c24b3fe803",
+   "correction.py": "4e97d6a6c972e8736aef8b4dca402ff6e1a37f9d81854e21a7069d9a5b0b4859",
+   "tube.py": "f761f1d0c14ab09979e6534a7bfa8497e86a0564d485d290aaa95bc0453da754"
+  },
+  "declared_at": "33e5c4ca; the declaration's wording revised by weight-research-astra at f079b1dd while the run was underway, with every variant, weight, target, ridge and work limit unchanged",
+  "rows": "studies/04-round-2-overlap/runs/correction-at-17-original/passes/rows-blk.17.attn_output.npz",
+  "rows_sha256": "57ee7ae213e04e1ddb94c3e67483271e5641ff463ee0f4a89ee100d9cfaa000e",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+  "unit": 1.3140701014412208e-05,
+  "first_ridge_power": 23,
+  "last_ridge_power": -3,
+  "work": {
+   "rounds": 40,
+   "iterations": 80,
+   "passes": 10,
+   "back_iterations": 40,
+   "resolved": 0.00034526698300124393,
+   "path": 1
+  },
+  "records": "summary.json and summary.txt (every stage of every path, on the answers solved on and read, apart), paths/<variant>-fold-<k>.json (every round) and .npz (the end matrix and the by-place readings; kept on this machine, not in git)",
+  "no_fit": "Not read.",
+  "reserved_40b": "Sealed."
+ }
+}

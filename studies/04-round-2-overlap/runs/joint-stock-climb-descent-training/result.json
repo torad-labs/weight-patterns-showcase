@@ -1,0 +1,24 @@
+{
+  "status": "stopped_after_control_regression",
+  "installed_updates": 3,
+  "final_state": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/final-state.json",
+    "sha256": "9de1f7d2fcd59923bc22e7674633781521ec4b0275fec8e590c33389274fccf8"
+  },
+  "exit": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/launcher-exit.json",
+    "sha256": "a087ceb69afa8a3c57e882da43b64ce6aad300c143cf643067a98d38658a631c"
+  },
+  "exit_code": 1,
+  "fresh_group_contribution": [
+    0.018396207051632342,
+    0.018378707898148404,
+    0.022417853522885774,
+    0.016528738970559908
+  ],
+  "control_regression_at": 2,
+  "control_recovered_at": 3,
+  "prediction_vs_result": "The selected development fits continued to fail through the saved third installation. The 44 J case double-counted its climb at update two and recovered at update three. Group contribution fell below stock at the final revision.",
+  "failures_only": "The 91 J response still gave 11 J and the 95 J response still required 120 J. A graceful checkpoint request during execution was honored after the in-flight installation and measurement. The launcher returned exit 1 during consumed-trace publication and retained those files locally.",
+  "what_this_changes": "This checkpoint does not meet fit selection. Leave the fresh transfer panel unopened. Proceed to the independent pure pre-choice pullback at the known early-27 endpoint."
+}

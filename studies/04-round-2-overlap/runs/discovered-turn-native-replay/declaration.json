@@ -1,0 +1,115 @@
+{
+  "method_step": 3,
+  "operation": "discovered-turn-native-replay",
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/discovered-turn-native-replay/replay.py",
+    "sha256": "3a0a30c07d2cea4ff0fec1666a7070a4c706030237ed41234344eb56b5055c14"
+  },
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "historical_intervention": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/declaration.json",
+    "sha256": "f5f4a2206cd30a6664ee7edcc7e14190f204fa1c9ae20b88e83d88bdc2abcf22"
+  },
+  "diagnostic": {
+    "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/diagnostic-spec.json",
+    "sha256": "16831ee331cc1a834261f486516ed30a3834e37258195659ebb44035e17fb9cc"
+  },
+  "reading": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "sha256": "bdcb750aa79e48c5ab34a01b010d31f7722c313e417abd5dccc621cadc9ed30b"
+  },
+  "annotations": {
+    "record": "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+    "sha256": "4172ea30ae1ccc77f11474735af07e3b8a316bc2f20a6a15c5aced613fe92361"
+  },
+  "members": {
+    "fit": "discovery-05-channel-h1",
+    "correct": "expanded-004-h1",
+    "transfer": "discovery-02-reordered-h3"
+  },
+  "observations": {
+    "fit": {
+      "original": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/measurement.json",
+        "sha256": "7ff3156dcd77fca7c47281f7ab71932a8d475ef10d0840d7e46e0ffaabfa1b20"
+      },
+      "treatment": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/measurement.json",
+        "sha256": "78055610f4578c93ac60e9cd8e7120bbffd8eebea0496e4f4df57365c03d8c9f"
+      }
+    },
+    "correct": {
+      "original": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/correct/measurement.json",
+        "sha256": "70d3c930b6dea4e6bce71f67869e502bbcad151267e71ef4151e82f2dcecbf11"
+      },
+      "treatment": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/correct/measurement.json",
+        "sha256": "96ece86a165c5a612be05898cd5d950e58edfdb248615564f6782c9553f2104f"
+      }
+    },
+    "transfer": {
+      "original": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/measurement.json",
+        "sha256": "256803d9fdbeeaf77b5c1990064b22ef22cb4b172850c5c60664b90997ed7666"
+      },
+      "treatment": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/transfer/measurement.json",
+        "sha256": "123875a42b2ec1b17879c7d2f6056d37f453d05e225b477593ea6e1da3b8e023"
+      }
+    }
+  },
+  "why_this_direction": "The downstream contrast and its fit were frozen. Check the public reader on complete native streams of the real failed edit, its successful control and the reordering.",
+  "repeating_pattern_check": "A stage can separate answer labels by matching a later repetition. Preserve all natural matches, keep the first decision out of registration and audit its chronology afterwards.",
+  "hypothesis": "The source-derived stage is readable from native incoming and outgoing operations and may register on a new route.",
+  "prediction": "The original fitted match agrees with the precomputed turn export, and post-edit matching on fresh computation reveals whether the readout shifts or disappears.",
+  "would_weaken_it": "Missing or multiple registrations, a sign opposite to the known behavior, or a match only after a decision weakens its operational interpretation.",
+  "what_went_wrong_before": "Correctly classified responses on the source template concealed false alerts elsewhere in the same response.",
+  "rule": "Read complete raw native endpoints, retain all matches, compare unique occurrences only, then independently reveal the known baseline decision times.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/discovered-turn-stage/diagnostic-spec.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/correct/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/correct/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/transfer/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/discovered-turn-native-replay/result.json"
+  ],
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "studies/04-round-2-overlap/runs/discovered-turn-native-replay/replay.py",
+    "events": "studies/04-round-2-overlap/runs/discovered-turn-native-replay/observability/events.jsonl",
+    "mode": "local-recorder",
+    "operations": [
+      "trace.native_registration"
+    ],
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/discovered-turn-native-replay/replay.py",
+        "sha256": "3a0a30c07d2cea4ff0fec1666a7070a4c706030237ed41234344eb56b5055c14"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/trace_diagnostic.py",
+        "sha256": "a27bcbe8e355d134bc22a9ef666d9be933d6dc782a087e3333b52d207cd68263"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/paired_turn_signal.py",
+        "sha256": "747fd23c06aad8f34fc006e15e8756a90ac2c0681f5386b501e2e33754fd62c4"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/final_experiment.py",
+        "sha256": "2f810ca16b9e3ce5a28f5b7219a8a9252ee130edb99e74ac68244e7ce6f5a873"
+      }
+    ]
+  },
+  "recovery": "The archive replay stopped on a missing native width before reading a result. Supply the width recorded in the frozen reader. The signal and partitions are unchanged."
+}

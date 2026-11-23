@@ -1,0 +1,250 @@
+{
+  "method_step": 5,
+  "operation": "whole-context-conditional-score",
+  "run_by": "weight-research-astra",
+  "declared_at": "2026-11-14T20:04:47.036756-06:00",
+  "why_this_direction": "Both complete own-path comparisons changed weights and history together. The completed original-weight replays supply the missing whole-domain term, through each candidate's unchanged original-computation mapping.",
+  "repeating_pattern_check": "Own-history and fixed-input results have repeatedly been conflated; a2-path and the whole-gap sign control show history and weights can each change a result. Keep primary results immutable and label this ordered conditional contrast; retain all reference mass, every member and merge.",
+  "hypothesis": "Holding the supplied history, reference and correspondence fixed permits the weight contrast to be read separately from the history contrast. Its sign is unknown and neither contrast alone establishes capability repair.",
+  "what_went_wrong_before": "A sign-row control could not separate the full objective; total own-path changes were not a weight-only measurement. Primary own-answer readers must not silently accept teacher-fed controls.",
+  "rule": "Compute L(W0,H1) once from the completed conditional arrays and the same field/mapping; use cached bound L(W0,H0) and L(W1,H1). Report all members/groups and both channels, C-B, A-C and A-B, without ranking models across different fields or regrading primary results. Original/candidate metadata suffice; no recapture, fit or no-fit data.",
+  "prediction": "All target reference rows, fitting members, prompt rows and schema merges are covered with finite direction/size terms. The ordered sum equals the primary change algebraically; no numerical significance threshold is introduced. Every consumed source matches its declared identity.",
+  "would_weaken_it": "Any source identity, shared-input check, coverage or native arithmetic mismatch prevents the decomposition. Weight terms failing to improve wrong-member field error would weaken a useful weight-correction interpretation, not justify changing the mapping or dropping failures.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "target_source": "studies/04-round-2-overlap/runs/whole-context-targets-original/affine/target.json",
+  "pre_execution_correction": "The verifier refused a prose objective record in numerical inputs before any score. It remains the unchanged target artifact's hash-bound objective provenance, as in the primary scorer; inputs name the actual field, acquisition and normalization records. No verifier rule or target binding changes.",
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+    "studies/04-round-2-overlap/runs/same-history-control-affine/check.json",
+    "studies/04-round-2-overlap/runs/same-history-control-affine/correspondence.json",
+    "studies/04-round-2-overlap/runs/same-history-control-affine/reader-protocol/controlled-bf16-2.json",
+    "studies/04-round-2-overlap/runs/same-history-control-affine/reading",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/whole-context-score-original/affine-score.json",
+    "studies/04-round-2-overlap/runs/whole-context-targets-original/affine",
+    "studies/04-round-2-overlap/runs/whole-context-targets-original/affine/target.json",
+    "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+    "studies/04-round-2-overlap/runs/whole-context-targets-original/observation-schema.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/comparison/candidate-score.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/comparison/result.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/correspondence.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-00-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-00-channel-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-01-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-01-channel-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-05-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-05-channel-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-06-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-06-channel-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-08-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-08-channel-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-10-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-10-channel-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-10-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-10-channel-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-11-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-11-channel-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-15-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-15-channel-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-17-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/discovery-17-channel-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-001-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-001-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-004-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-004-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-020-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-020-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-023-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-023-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-029-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-029-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-034-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-034-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-039-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-039-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-042-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-042-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-045-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-045-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-046-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-046-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-064-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-064-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-068-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-068-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-070-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-070-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-071-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-071-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-076-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-076-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-078-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-078-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-087-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-087-h3/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-092-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-092-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-094-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-094-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-095-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/expanded-095-h1/pairs-original.npy",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/own/text.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-00-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-01-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-05-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-06-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-08-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-10-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-10-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-11-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-15-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/discovery-17-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-001-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-004-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-020-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-023-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-029-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-034-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-039-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-042-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-045-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-046-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-064-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-068-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-070-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-071-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-076-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-078-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-087-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-092-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-094-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/answers/expanded-095-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/reading.json",
+    "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading/row-map.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-00-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-01-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-05-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-06-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-08-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-10-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-10-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-11-channel-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-15-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/discovery-17-channel-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-001-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-004-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-020-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-023-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-029-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-034-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-039-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-042-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-045-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-046-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-064-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-068-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-070-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-071-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-076-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-078-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-087-h3/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-092-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-094-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/answers/expanded-095-h1/answer.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/whole-context-conditional-affine"
+  ],
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_conditional.py",
+      "sha256": "3cc6b8478f156dd579efa172093246f6752e3aa2d2abdbce05f18fd21c1d64c9"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_score.py",
+      "sha256": "6ff608a936d698ee5caa7a14fad36c400298ab66a7c64f2eed2b6aa0e4515aab"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_compare.py",
+      "sha256": "8437e6f44f40fb7f1cbad7be67c350acb2ab92e9c2aa7c1d5578599290bf73bd"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_score.py",
+      "sha256": "d429d3c52acdb5dc5954dee9a1afc5b58474c4e85ae88bedaaa5f5d7d3a00579"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+      "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+      "sha256": "7fd1f1d4c5542841a25d587107ecbd6136a9375e4b2870f570321417f2e977b5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    }
+  ],
+  "conditional_score": {
+    "target": "studies/04-round-2-overlap/runs/whole-context-targets-original/affine",
+    "target_sha256": "50d32b89e09922265a3436a56a3c4eb52bacb49f0e4e1fb092819a548f7d240d",
+    "capture": "studies/04-round-2-overlap/runs/whole-gap-affine-original",
+    "normalization": {
+      "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+      "tensors": {
+        "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+        "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+      },
+      "reference": {
+        "record": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+        "sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36"
+      }
+    },
+    "mapping": {
+      "record": "studies/04-round-2-overlap/runs/same-history-control-affine/correspondence.json",
+      "sha256": "232a8afe27e5e3ea29dc5b105c6d752556a90a18c88ba33f17a47045e3936192"
+    },
+    "primary": {
+      "record": "studies/04-round-2-overlap/runs/whole-gap-affine-original/correspondence.json",
+      "sha256": "dbb8452f4a7a9858d8ea4264b2a12bdc189751e973f5c8ef2513dadab746114d"
+    },
+    "protocol": {
+      "record": "studies/04-round-2-overlap/runs/same-history-control-affine/reader-protocol/controlled-bf16-2.json",
+      "sha256": "3a2c6b61e9047c00a1a9281f75d3b17fb5cdc6d4cacb5c4838a08135684374f6"
+    },
+    "check": {
+      "record": "studies/04-round-2-overlap/runs/same-history-control-affine/check.json",
+      "sha256": "db9c5b5e42589cde794b124e701d7a6368cfb67aa978030c993cc4f0c66dc5bb"
+    },
+    "original_score": {
+      "record": "studies/04-round-2-overlap/runs/whole-context-score-original/affine-score.json",
+      "sha256": "42dc07f9a69ce3b18bd04c5739767f09819003083bd90d7599b1109033cdeb50"
+    },
+    "candidate_score": {
+      "record": "studies/04-round-2-overlap/runs/whole-gap-affine-original/comparison/candidate-score.json",
+      "sha256": "67b631c19892081ef84070b03c231e0944c7947b1190f0697478a5c5d407974d"
+    },
+    "primary_result": {
+      "record": "studies/04-round-2-overlap/runs/whole-gap-affine-original/comparison/result.json",
+      "sha256": "eb0d3edd473fe2e12a9e2f3f48d97112bb363869ae6aa60556d9504232c32ec3"
+    },
+    "original_reading": "studies/04-round-2-overlap/runs/whole-states-original/reading",
+    "candidate_reading": "studies/04-round-2-overlap/runs/whole-gap-affine-original/reading",
+    "conditional_reading": "studies/04-round-2-overlap/runs/same-history-control-affine/reading"
+  },
+  "parameters": {
+    "coverage": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-context-targets-original/affine/target.json",
+      "derivation": "Use the full target row map and merge inventory without a sampled subset or new normalization.",
+      "scales_with": "The declared field's native rows, members and merge schema."
+    }
+  },
+  "execution": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace CUDA_VISIBLE_DEVICES= uv run -q --with torch --with numpy --with pyyaml --with tqdm python -m pipeline.weight_edit.whole_context_conditional studies/04-round-2-overlap/runs/whole-context-conditional-affine"
+}

@@ -1,0 +1,124 @@
+{
+  "method_step": 5,
+  "run_by": "weight-research-astra (objective, site and declaration), weight-research-fable (solver and execution), weight-research-perfomance (own-trace reading)",
+  "status": "Candidate construction and native copy verification are complete, with every declared setting unchanged: candidate/record.json and model/written.json. Fable reports the solve completed at 4:40:22 AM CT and the write/check at 4:42:05 AM CT, November 12; the model SHA-256 is 89c6839a3cfbd771e90a899fb8ac0b33365a13dc75350fea99d0f477f5622592. The fitting folds selected ridge 2^-3, accepted round 25; the all-fitting refit ended naturally after 13 rounds at that ridge. The primary fitting-only own-trace comparison is complete in result.json: the declared lower-L prediction is not met (0.24664 to 0.42049), while complete answers change from 0/15 wrong and 15/15 correct to 6/15 and 12/15. These are partial repair and regression findings, not held-out generalization or a subsequent on-policy full training.",
+  "interpretation_revision": {
+    "when": "2026-11-12, after B candidate execution began and before its result was delivered",
+    "record": "records/retrospectives/2026-11-12-next-loop-astra.md",
+    "finding": "The pooled pre-sign gap mixes headings used by correct answers; a fixed projected envelope is not adopted as the later loop target. B still tests its predeclared pooled-target construction. A lower L is a lower value of that instrument, not by itself proof of capability correction.",
+    "unchanged": "No target, reference, selection rule, numerical setting or existing output changes. The one native BF16 candidate finishes and is read on its own whole trace; conditional sign-score descriptions may accompany it without selecting or tuning anything. No full sweep is authorized by this bounded result."
+  },
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "target_source": "studies/04-round-2-overlap/runs/state-overlap-2/recurrence.npz",
+  "objective": "one full-computation correction objective",
+  "specification": "records/retrospectives/2026-11-12-correction-objective-astra.md",
+  "decision_record": "records/retrospectives/2026-11-12-next-loop-astra.md",
+  "original_observations_from": "controlled-bf16-1",
+  "correction_reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "correction_reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+  "planned_starting_state": {
+    "source_run": "controlled-bf16-4",
+    "source_run_role": "Read its original-derived binding, membership, layout and baseline only. Its edited model and edited rows are not B's starting state.",
+    "matrices_written": 0,
+    "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+    "matrix": "blk.17.attn_output.weight",
+    "source_rows": "studies/04-round-2-overlap/runs/correction-at-17-original/passes/rows-blk.17.attn_output.npz"
+  },
+  "hypothesis": "A capability leaves a recurring difference between the connected traces of correct and wrong answers; editing the weights where that difference recurs can repair the capability. This bounded test constructs a native BF16 correction from the original model at a site chosen from the whole original overlap, then reads its own complete computation.",
+  "why_this_direction": "The measured own-contribution map compares all 70 editable matrix merges across all 480 registered places of the 60 original recordings. Layer 17 attention has the largest whole-answer squared group-contrast/member-mean-variance ratio, 5.96 as printed, within the later band where the contrast strengthens. Earlier round-two edits ended at or before layer 9; A examines a stalled saved state there. B asks whether the same frozen correction objective couples a locally written change to the original model's own whole-path computation at the site selected from this new map. It is motivated by the original traces, not by a bad candidate score or the outcome of A, which is not complete when this is declared.",
+  "repeating_pattern_check": "Local given-text improvement has repeatedly failed to establish repair of the model's own computation, and mean progress can hide different member outcomes. B therefore preselects one candidate using only fitting folds and reads its full own trace, members and answers without selecting again. Round two repeatedly edited the early plateau; B's site follows a whole-answer original-trace ranking instead of another early sweep or a site inherited from round one's repair. The map is descriptive, not a causal isolation of capability from wording. Comparing B with A would also mix site with starting state; B's comparator is the identical unchanged original.",
+  "what_went_wrong_before": "Separate preservation and bringing-back machinery could oppose correction, including size; that machinery is absent here. Group-mean loss and fixed-text fitting can conceal member failures and trajectory change; they remain explicit limitations of this bounded test, not problems declared solved by moving the edit later. The strong original member projection at places 172 to 201 is not a crop, success gate or new training threshold.",
+  "rule": {
+    "reference": "Read the frozen output-norm reference made by correction-at-19 from the same original model. Keep all 105 merges and all registered places. At the last merge use correction.passed_on before direction, log size and member-place means. The raw-terminal reference is historical and is not used. No reference, radius, scale or target comes from B or from A's candidate.",
+    "objective": "Use the existing correction Cells: paired original-to-current group movement versus the original correct-minus-group gap, for direction and log size, weighted in the frozen global contrast units. Both groups answer to the same original correct pattern. No static asked mask, separate protection term, old-bound veto or bringing-back phase.",
+    "site": "Choose the maximum whole-answer own-contribution contrast/spread ratio among the 70 editable matrix merges in own-part-map.txt: blk.17.attn_output.weight (printed ratio 5.96). This is a direction-based site ranking, not a combined direction/size ranking; size remains fully in the correction objective. No subpassage selects the site, and no ratio threshold classifies a cell as capability.",
+    "data_roles": "The full original cohort supplies the fixed reference and original site map. Only the existing fitting half, 15 wrong and 15 correct, supplies fitting, within-fit selection and the diagnostic own reading. Existing three folds rotate two solved/one read. No-fit answers supply no new tuning reading; reserved-40b stays sealed.",
+    "rows": "Read the fitting answers' original tokens one at a time through the original BF16 model at the declared matrix, using the source sweep's native pass conventions. Keep these rows in this run; do not reuse the after-19 rows. Rows after any generation divergence are conditional observations, not the candidate's own trajectory.",
+    "candidate": "Use the same already-specified fitting-only selection procedure as A, not A's chosen setting: one common curvature unit recomputed at B's original starting matrix on all fitting rows; three synchronized ridge paths; every accepted BF16-written state named by ridge power and accepted-round index; all three held folds required. A naturally ended fold stays at its stage-end state for later common round indices; a nonfinite linear step ends scoring. The unchanged matrix is included. Select least count-weighted held-fold mean objective, ties by smaller mean squared native matrix change, stronger ridge, then earlier round. Refit all fitting members down to the selected ridge and at most its accepted-round budget. The own-trace reading selects nothing.",
+    "numerical_work": "The parameters below specify the measured solver work policy, not scientific acceptance tolerances or an optimum certificate. Recompute matrix-dependent unit, slope and first ridge from B's rows. Record the solver hash, actual work, stop reason, last ridge and whether selection is on the explored boundary. An exhausted budget is reported as such, not as evidence against the hypothesis.",
+    "write": "Only a copy of the original inside this run may be written. The selected matrix must be exactly representable in native BF16; every byte outside that matrix must equal the original. If the unchanged state is selected, no model copy is made.",
+    "own_reading": "Read the single selected model on all thirty fitting questions, with its own generated tokens and all 105 merges. Use the same frozen L, per-group/per-form fields, members and correspondence diagnostics as the original control under correction-at-19/own/controls/original. Keep hardware and native conventions matched to that own control. Card-1 readings do not trigger the later loop's canonical card-0 refresh. Unknown correspondence is unknown, never agreement.",
+    "scope": "A bounded test against the unchanged original, not a controlled location comparison with A, a full sweep, an on-policy implementation or a held-out generalization claim. The original correct reference remains fixed. The subsequent loop's member target and correspondence handling are not silently decided by B.",
+    "storage": "All model copies, captures and other expensive outputs stay inside this run. Inputs and historical references are read-only."
+  },
+  "parameters": {
+    "site": {
+      "measured_from": "records/development/2026-11-12-correction-objective/own-part-map.txt",
+      "derivation": "For each matrix and place, obtain its own normalized contribution u/|x+u| = turn + (1-|x|/|x+u|)z from the recorded incoming direction, turn and sizes. Take the two original groups' member-place means and squared difference; divide the sum over all places by the sum of V_wrong/N_wrong + V_correct/N_correct for those contributions. Rank all 70 editable matrices; the reported maximum is layer 17 attention, 5.96. The ratio is descriptive and is not a significance threshold or a correction weight.",
+      "scales_with": "Original cohort, registration and each matrix's measured contribution; recompute for another model or dataset."
+    },
+    "original_counts": {
+      "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+      "derivation": "Use the fixed reference's source member counts and group shares. Fit membership and its three folds come from tube.picks on the existing source cohort, not a new split.",
+      "scales_with": "Original membership and source group counts."
+    },
+    "coordinates_and_target": {
+      "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+      "derivation": "Use exactly the saved direction/log-size gaps, radii, group shares and scales. For feature f, nu_f=V_wrong/N_wrong+V_correct/N_correct; radius_f^2=max(nu_f,q_f), q_f the squared signed/vector original recorded-to-native-replay full-contrast difference; S_f=sum_all_merges_places(||G_f||^2+nu_f), weight=(N_g/N_total)/S_f. The final merge uses the qualified output_norm transform; all other merges use their native states. No member-level radius is inferred from these mean radii.",
+      "scales_with": "The same original model, full original reference and native terminal transform. For a different source the reference must be recomputed rather than rescaled from B."
+    },
+    "ridge_unit": {
+      "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/declaration.json",
+      "derivation": "Reuse correction.unit_of's defined curvature calculation, not A's numeric unit: at B's starting matrix over all fitting members, trace(direction-cell input action) times mean(learned-scale squared), plus the size-cell curvature trace divided by output width, then divide by input width. This one computed unit is shared by all three folds and the all-fitting refit.",
+      "scales_with": "B's row inputs, native matrix shape, learned merge scale and frozen cell weights."
+    },
+    "first_ridge": {
+      "measured_from": "records/development/2026-11-12-correction-objective/smoke-candidate-path.json",
+      "derivation": "Compute the initial all-fitting objective E and slope s of E/2. Start at the largest power-of-two multiple of B's unit not above 2||s||^2/(RESOLVED*E), as correction.first_power does. The bound 2||s||^2/r concerns the initial linearized step with positive-semidefinite curvature, not an entire nonlinear/native stage. Do not copy A's numeric first power.",
+      "scales_with": "B's initial slope, objective, unit and arithmetic resolution."
+    },
+    "ridge_spacing": {
+      "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+      "derivation": "Use the measured correction solver's binary ridge path (tube.PATH=1): successive powers differ by one, so each stage's ridge is half its predecessor and begins at its written endpoint. This is the exploratory search granularity exercised in the calibration, not a measured optimum for B; the declared interpretation permits missing a later valley.",
+      "scales_with": "The range of ridge powers computed for B; a different granularity changes work and would be a separately declared construction."
+    },
+    "stage_work": {
+      "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+      "derivation": "Keep the measured solver work budget of at most 40 accepted rounds per ridge. RESOLVED=sqrt(float32 epsilon), about 3.45e-4. End a stage on a fall no larger than RESOLVED of the stage-round starting objective, no improving representable trial, no written movement, or the work budget. Calibration used 2 to 11 rounds per stage through 2^-2; this motivates an exploratory work budget, not a claim that 40 solves every B stage. A stage ending does not itself end the ridge path.",
+      "scales_with": "Local nonlinear/BF16 response and ridge; record actual use and any exhausted budget at B."
+    },
+    "linear_work": {
+      "measured_from": "records/development/2026-11-12-correction-objective/position19-resolved-thirds-0.json",
+      "derivation": "For a round use the existing eigenbasis preconditioned solve, at most 40 conjugate-gradient iterations per aim-refinement pass and 10 passes, with RESOLVED-relative slope/objective stopping. The revised-target calibration used 2 to 10 passes, including all 10 below the unit; continuing rounds supplied more work. These are measured numerical budgets, not scientific rejection criteria.",
+      "scales_with": "B's curvature spectrum, ridge and native nonlinear approximation; record exhausted work."
+    },
+    "step_acceptance": {
+      "measured_from": "records/retrospectives/2026-11-12-correction-objective-astra.md",
+      "derivation": "Judge each actual BF16-written trial through the native merge expression; accept only strict decrease of the solved-data correction objective. Otherwise halve the trial fraction down to no written movement, as the existing numerical search does. No old bound or held-fold reading vetoes a step; held folds select the final setting only.",
+      "scales_with": "BF16 representation and B's proposed native change."
+    },
+    "path_budget": {
+      "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/declaration.json",
+      "derivation": "Explore all stages through the unit. Below it, end at the first stage with written states where neither any fold's best new held reading nor the best new common-setting aggregate improves on its prior best. The outer floor is the last binary ridge not smaller than RESOLVED of the unit, currently 2^-11. All cells inside their radii or a nonfinite linear step also ends the specified path/scoring. Keep every accepted state; record censored settings, termination and boundary selection. Do not claim an exhaustive minimum.",
+      "scales_with": "B's fitting-fold readings, arithmetic resolution and computed unit; never A's chosen setting."
+    }
+  },
+  "prediction": "The single preselected B candidate lowers whole-model computation discrepancy L on its own fitting-question traces relative to the identical unchanged original, with the per-group direction/size and member readings showing what changed. A lower local fitting objective is expected from construction but is not this prediction.",
+  "would_weaken_it": "The local objective falls but whole-model own-trace L does not, or a lower total masks a materially worsened correct-pattern trace. An unchanged-state selection is also a result. A failure would limit this construction at this site; it would not negate earlier repairs, establish that no later site works, or license changing the reference after seeing B.",
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/input-overlap/inputs",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+    "studies/04-round-2-overlap/runs/state-overlap-2",
+    "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+    "studies/04-round-2-overlap/runs/controlled-bf16-4/reference",
+    "studies/04-round-2-overlap/runs/controlled-bf16-4/model/bindings.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference",
+    "studies/04-round-2-overlap/runs/correction-at-19/own/controls/original"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/correction-at-17-original/passes",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/candidate",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/model",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/own",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/logs",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/provenance.json",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/result.json",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/run.sh"
+  ]
+}

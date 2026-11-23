@@ -1,0 +1,341 @@
+{
+  "method_step": 5,
+  "operation": "retained-first-ffn-native-response",
+  "status": "independently reviewed; admitted CPU-only retained-transition diagnosis",
+  "declared_at": "2026-11-16T17:06:50.020227-06:00",
+  "why_this_direction": "The retained189-to190 transition localizes an abrupt tangent/native mismatch at the first FFN after close first-attention agreement. Supply the observed incoming change to isolate local finite precision from an upstream tangent-estimation error while the independently controlled learning loop continues.",
+  "repeating_pattern_check": "Repeated scalar prediction agreement concealed vector-level native mismatch, and errors measured at later FFNs did not locate their cause. Compare branch and original weighted residual, complete observed call geometry and an ordered crossed endpoint; do not treat CPU operator approximation or a local result as whole-model proof.",
+  "hypothesis": "Identity-through-BF16 activation rounding can produce a poor local JVP even when a rounded finite endpoint response follows the measured native branch, after replacing upstream tangent estimates with observed native input displacement.",
+  "what_went_wrong_before": "The retained native/JVP cosine at first FFN is0.0138993 and native/anchored-finite cosine0.973023; full residual cosine0.0735165. The full graph propagates both edges and shared dependencies, so omitted upstream connections have not been established. Earlier local/full comparisons differed in weighting, and all comparisons here retain the original residual mass.",
+  "rule": "Read exact retained189/190 layer-zero inputs and sparse BF16 weight endpoints. Use every613event in its recorded440single/one13/five32column call geometry. Evaluate baseline, changed and crossed-input endpoints and one observed-input STE JVP, with original560reference-event and105merge normalization. This is CPU-only diagnosis, with no update, native acquisition, fitted scale, new target or stopping criterion.",
+  "prediction": "With actual incoming displacement supplied, the rounded finite local response is materially closer to native than the local STE; changed BF16 activation codes expose a finite-precision mechanism. All values are reported without a threshold-selected acceptance.",
+  "would_weaken_it": "If local STE becomes as faithful as finite replay, upstream tangent error becomes the next explanation. If rounded finite replay remains poor, CPU/native reduction or operator fidelity remain unresolved and the STE alone cannot explain the error. No local replay result establishes native training progress.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-overrides.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition-recovery/recovered-transition/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/declaration.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/final-overrides.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/bf16-delta.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/held/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/held/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/held/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay"
+  ],
+  "target_source": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "parameters": {
+    "merge": {
+      "value": 1,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition-recovery/recovered-transition/result.json",
+      "derivation": "First FFN is ordered merge1, immediately after first attention; retained native/JVP cosine0.0138993 versus native/finite0.973023 motivates local diagnosis. This is a location, not an objective restriction in training.",
+      "scales_with": "Trace operator order and discrepancy evidence.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition-recovery/recovered-transition/result.json",
+        "sha256": "2369c03bcc610eb5ff2e55494fe78e092c53ce57be1b6cde2c9746b5a51e8b67"
+      }
+    },
+    "layer": {
+      "value": 0,
+      "measured_from": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+      "derivation": "Merge1 belongs to the first layer; select its gate/up/down and both norm weights.",
+      "scales_with": "Ordered architecture/tensor names.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+        "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+      }
+    },
+    "events": {
+      "value": 613,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/measurement.json",
+      "derivation": "Use every captured current event exactly once per selected native edge.",
+      "scales_with": "Complete baseline event inventory.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/measurement.json",
+        "sha256": "db17a160b2253b3bd0ddbffbf2a4c899d0e4413f4b06e1438d0fa53910a909e1"
+      }
+    },
+    "reference_events": {
+      "value": 560,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+      "derivation": "Original reference shape[0].",
+      "scales_with": "Original reference inventory.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+        "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+      }
+    },
+    "width": {
+      "value": 1536,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+      "derivation": "Original trace shape[2], checked against all selected native arrays and weight extents.",
+      "scales_with": "Model residual width.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+        "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+      }
+    },
+    "merges": {
+      "value": 105,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/measurement.json",
+      "derivation": "Retain complete objective denominator even though only merge1 is diagnosed.",
+      "scales_with": "Full trace merge count.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/measurement.json",
+        "sha256": "db17a160b2253b3bd0ddbffbf2a4c899d0e4413f4b06e1438d0fa53910a909e1"
+      }
+    },
+    "call_geometry": {
+      "value": {
+        "32": 5,
+        "13": 1,
+        "1": 440
+      },
+      "measured_from": "records/development/2026-11-16-first-ffn-native-replay/inputs.json",
+      "derivation": "Read all native positions, shapes, strides and microbatch_count values; preserve 440 single, one13-column and five32-column calls.",
+      "scales_with": "Recorded native call geometry; never a chosen batch size.",
+      "source_bindings": {
+        "before": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256": "50e5b3ddf6891de991d41ca96929202257b461c431d6413e0d40f33b0d2b1dab"
+        },
+        "after": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/held/raw/discovery-05-channel-h1/stream.jsonl",
+          "sha256": "50e5b3ddf6891de991d41ca96929202257b461c431d6413e0d40f33b0d2b1dab"
+        }
+      }
+    },
+    "cpu_threads": {
+      "value": 1,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/declaration.json",
+      "derivation": "Inherit existing producer cpu_threads=1. Set Torch and OMP/MKL to that count.",
+      "scales_with": "Declared producer runtime, not loss or fitted coefficient.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/declaration.json",
+        "sha256": "c115ec97260afdd2696e40eea04908c1f15a4215970ccf5be1cea122f1e5d91f"
+      }
+    },
+    "endpoint_coefficient": {
+      "value": 1,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+      "derivation": "Use the completed saved displacement exactly once: W190-W189. No new step size is selected.",
+      "scales_with": "Exact retained endpoints.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+        "sha256": "7400d5e0799b79b9c6e14f773bc6d61c8a132111ed792794a3cd1b3ab7732f7a"
+      }
+    },
+    "mass": {
+      "value": "1 / (reference_events * merges * reference_multiplicity)",
+      "measured_from": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+      "derivation": "Use complete computational correspondence and original mass without local renormalization.",
+      "scales_with": "Reference inventory and retained pair multiplicities.",
+      "source_bindings": {
+        "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+        "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c"
+      }
+    },
+    "chance": {
+      "value": "original merge1 slice",
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+      "derivation": "Load unchanged chance[:,1]; radius=sqrt(2*chance), existing outside residual.",
+      "scales_with": "Compiled original-success variation; not diagnostic outcome.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+        "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+      }
+    },
+    "rms_and_gelu": {
+      "value": "bound retained functions",
+      "measured_from": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "derivation": "Import existing rms and gelu functions including native model epsilon and GELU coefficients. No diagnostic epsilon chosen.",
+      "scales_with": "Existing model definition.",
+      "source_bindings": {
+        "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+        "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+      }
+    },
+    "operand_precision": {
+      "value": "BF16-valued inputs for multicolumn; FP32 single columns",
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/declaration.json",
+      "derivation": "Reproduce declared FFN operand policy on CPU using exact call geometry; do not claim native CUDA accumulation.",
+      "scales_with": "Recorded call width and existing adapter policy.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/declaration.json",
+        "sha256": "c115ec97260afdd2696e40eea04908c1f15a4215970ccf5be1cea122f1e5d91f"
+      }
+    },
+    "finite_endpoints": {
+      "value": 3,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+      "derivation": "Two exact endpoints and one crossed input endpoint produce an ordered two-leg decomposition without search.",
+      "scales_with": "Two retained states and one input/weight factorization.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+        "sha256": "7400d5e0799b79b9c6e14f773bc6d61c8a132111ed792794a3cd1b3ab7732f7a"
+      }
+    },
+    "jvps": {
+      "value": 1,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+      "derivation": "One local directional derivative from the first endpoint with observed dh and exact dW.",
+      "scales_with": "The single already-completed transition.",
+      "source_bindings": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+        "sha256": "7400d5e0799b79b9c6e14f773bc6d61c8a132111ed792794a3cd1b3ab7732f7a"
+      }
+    }
+  },
+  "plan": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/PLAN.md",
+    "sha256": "a5bac690aedbaf5db3a8d821d5ed5bef02925764d79d5f2e5565f32b6dd66f2f"
+  },
+  "hypothesis_review": {
+    "record": "records/retrospectives/2026-11-16-remaining-response-mechanism.md",
+    "sha256": "c5612f36e64896dd1f7cf534702595e1903b83f200da5e868a5ef91131709886"
+  },
+  "retention": "Read-only retained inputs; preserve all original/model/checkpoint/raw/index records. Only result.json and small observability events are written in this declared run. No model copy.",
+  "stopping": "One prescribed retained-transition local diagnosis ends after its complete comparison; no numeric search or iterative optimizer.",
+  "device": "cpu",
+  "program": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/replay.py",
+    "sha256": "799ea7a3950ff023eb63494c5358b24c326c17805f4508c1b00d7cc8a54a0a7f"
+  },
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/native_records/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/__init__.py",
+      "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/__init__.py",
+      "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/paths.py",
+      "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+      "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+      "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/reference_rule.py",
+      "sha256": "3bee52be452931486d397f5d9f6733a970a38470a1e1c2f5101b1992128b0241"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+      "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+    },
+    {
+      "record": "records/development/2026-11-16-first-ffn-native-replay/replay.py",
+      "sha256": "799ea7a3950ff023eb63494c5358b24c326c17805f4508c1b00d7cc8a54a0a7f"
+    }
+  ],
+  "diagnostic_inputs": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/inputs.json",
+    "sha256": "726f378d0f0d97ca87fefdfdd46be76719001109bac6400effece5040f89fbcd"
+  },
+  "cpu_threads": 1,
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "observability": {
+    "events": "observability/events.jsonl",
+    "organization": "research-operations/1",
+    "operations": [
+      "diagnostic.prepare",
+      "proposal.evaluate",
+      "solver.jvp",
+      "diagnostic.compare"
+    ],
+    "mode": "direct Recorder API",
+    "sources": [
+      {
+        "record": "code/signal-trace/pipeline/observability/__init__.py",
+        "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "records/development/2026-11-16-first-ffn-native-replay/replay.py",
+        "sha256": "799ea7a3950ff023eb63494c5358b24c326c17805f4508c1b00d7cc8a54a0a7f"
+      }
+    ]
+  },
+  "commands": [
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-first-ffn-native-replay/replay.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay"
+  ],
+  "research_context": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/parameters.json",
+    "sha256": "3b1e3996b2680696545384cfcc9b7e7a0e4de2b847a52a13943962e1e951c9de"
+  },
+  "declaration_note": "The research-context record and independent review bind the four supplied papers. They are review context, not consumed numerical inputs; the run keeps the established input/source/review separation.",
+  "whole_build_review": {
+    "accepted": true,
+    "record": "records/retrospectives/2026-11-16-first-ffn-replay-eli.json",
+    "sha256": "050fb4e6a889a33d921f53f827eb2a53be20b57e1f65968e5f69225f29c36f4a",
+    "reviewed_declaration_sha256": "3f2bdcba740df4acadf130a0bb95a510ea580fc41d39eea894ca41c1ae60fa1b"
+  },
+  "admitted_at": "2026-11-16T17:08:19.227901-06:00"
+}

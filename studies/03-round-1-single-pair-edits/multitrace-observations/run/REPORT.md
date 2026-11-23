@@ -10,7 +10,7 @@ The E construction and its overlap claims were withdrawn at Marcos's request. Th
 - Fully coherent explanation: 2/40 greedy; at least one successful sample on 8/40 questions.
 - Caps remain included: 2/40 greedy and 22/160 sampled. These questions are already observed evaluation data, not untouched future holdouts.
 
-[Full D sampling results](FRESH-RESULTS.md), [judgments](fresh-judgments.json), [metrics](fresh-metrics.json), [figure](../../../../publications/figures/exports/physics-multitrace-2026-11-07--fresh.png).
+[Full D sampling results](FRESH-RESULTS.md), judgments, metrics, [figure](../../../../publications/figures/exports/physics-multitrace-2026-11-07--fresh.png).
 
 ## Raw observations, not a completed hypothesis test
 

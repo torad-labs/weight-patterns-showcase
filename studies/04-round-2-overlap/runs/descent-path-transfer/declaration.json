@@ -1,0 +1,317 @@
+{
+  "method_step": 3,
+  "declared_at": "2026-11-18T01:16:37.598635-06:00",
+  "why_this_direction": "Quantify whether fitted repair and limited cross-problem transfer followed the same recurring whole-path difference at the same installed checkpoints.",
+  "repeating_pattern_check": "One-site separation and fitted scalar loss were already measured. Use every recorded transformation and two contemporaneous fitted/unfitted checkpoint comparisons. Omit both recipients and the training reference from the group means.",
+  "hypothesis": "An update that predominantly follows a feature of the selected pair can leave the direction shared by other correct executions weakly engaged, especially on the unfitted problem.",
+  "prediction": "At matched checkpoints, the fitted trajectory will move farther along the correct-minus-wrong donor contrast and closer to the frozen correct donor mean than the unfitted trajectory, relative to each recipient\u2019s own original path.",
+  "would_weaken_it": "Comparable or larger motion by the unfitted recipient toward that contrast and toward the frozen correct mean despite its known failure.",
+  "what_went_wrong_before": "An overall loss reduction could hide opposite movement in a specific computation. A group gap could shrink because both groups moved.",
+  "rule": "Use full stored computation-only dynamic-time-warping correspondence to the original axis. Average the matched transformation vectors per member at each registered event and merge. Give each donor one vote. Let d=C\u2212W be the fixed correct-minus-wrong donor contrast and u=edited\u2212original the recipient movement. Report sum(u\u00b7d)/sum(d\u00b7d), cosine, and RMS distance to the fixed C before/after. Primary scope is the whole trace. Secondary scope uses all axis places where sum of squared donor gaps across merges exceeds twice summed donor variance of the estimated gap, as in the prior registered overlap. No hand-picked sites, code paths inferred from text, or externally supplied labels in registration. The existing cohort labels identify which group performed descent correctly. This readout measures group-average geometry, not an exhaustive model of successful computation.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/descent-multiple-references-retrospective/declaration.json",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+    "studies/04-round-2-overlap/runs/descent-path-transfer/original-correspondences.npz",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/result.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-001-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-020-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-034-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-042-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-045-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-046-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-068-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-070-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-087-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-092-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-094-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-095-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-01-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-06-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-15-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-00-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-08-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-10-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-029-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-11-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-064-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-071-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-039-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-076-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-078-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-023-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-05-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-10-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/raw/discovery-10-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/raw/discovery-10-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/capture/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/capture/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/capture/raw/discovery-05-channel-h1/stream.jsonl"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/descent-path-transfer/result.json",
+    "studies/04-round-2-overlap/runs/descent-path-transfer/paths.npz",
+    "studies/04-round-2-overlap/runs/descent-path-transfer/overlap.png",
+    "studies/04-round-2-overlap/runs/descent-path-transfer/events.jsonl"
+  ],
+  "original_correspondences": {
+    "archive_sha256": "bbda41340f57d4a2720f33522c0cf80cacf4d444547cad0cf248b2b6238951b0",
+    "originals": {
+      "expanded-001-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-001-h3.npy",
+        "sha256": "efd06312510a2ab526cc6bd80bfb7fa78537ea0eee3275716693b268fdae5eb6"
+      },
+      "expanded-020-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-020-h1.npy",
+        "sha256": "fa607f943eb85d2c334a133e72092705af107d9c648f9dc78cd874c4ee7b8320"
+      },
+      "expanded-034-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-034-h3.npy",
+        "sha256": "3275068b89ecf7e9d65be10af5e00c3abe70749b7ee1def6036c78aaec010b19"
+      },
+      "expanded-042-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-042-h3.npy",
+        "sha256": "e44f4c189f26e2b5e9c85d4098b8cad7e878c41b6d69df735ce7040da6178246"
+      },
+      "expanded-045-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-045-h1.npy",
+        "sha256": "a8c8d4de88e3d8635dcdcc9f33372c00705578858c28902604b1a90dfb1bab63"
+      },
+      "expanded-046-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-046-h3.npy",
+        "sha256": "2d2f568008ecd7cadcc6791cb13439028b2ea17dee17f57234be80cfadb049a4"
+      },
+      "expanded-068-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-068-h1.npy",
+        "sha256": "7a8b776e93f240f982a16e571880fb7cd0754fcf3813bcf5918b2fb3022869aa"
+      },
+      "expanded-070-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-070-h1.npy",
+        "sha256": "3c1b4374c2710640c16a8c62462eee6df46660c64349ad7e3e7775d790688687"
+      },
+      "expanded-087-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-087-h3.npy",
+        "sha256": "94eef458600dfc47713184748d16165e1dbd7d614c326a74f83464ab66778170"
+      },
+      "expanded-092-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-092-h1.npy",
+        "sha256": "ebddf0e9468523146cc9789469e243275e514c4711ab6ed69d2fe50a33d92bfa"
+      },
+      "expanded-094-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-094-h1.npy",
+        "sha256": "dc125db74c5ebc9187316136145d7bf2d8f7134256f91867b71fbaae83d50413"
+      },
+      "expanded-095-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-095-h1.npy",
+        "sha256": "0e9dc5d428f1b428e1d542be0b258993a803f0403dc653f398853ab573fb9406"
+      },
+      "discovery-01-channel-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-01-channel-h1.npy",
+        "sha256": "4b653c92ed40b2be0dd871fbb461050a02b7fcf99992a90a2a5aa09729b2aded"
+      },
+      "discovery-06-channel-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-06-channel-h1.npy",
+        "sha256": "1eeb05223a98a96a2d9308a878607e88faa7fbd0c0dfc2ce595b94ffe2991f33"
+      },
+      "discovery-15-channel-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-15-channel-h1.npy",
+        "sha256": "9b0870066dc7709c2a68389c8ae6026605966987dbd35a8af69c9800548b8a7b"
+      },
+      "discovery-00-channel-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-00-channel-h3.npy",
+        "sha256": "74c9307a0344e9d0a29d120c44111aa0b9c4f25dedfbdff622795ddf203890a0"
+      },
+      "discovery-08-channel-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-08-channel-h3.npy",
+        "sha256": "9aaa59ef8d6c8f7c350edfb1a8704e9ac61b43376271f979499e0584ad075b00"
+      },
+      "discovery-10-channel-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-10-channel-h3.npy",
+        "sha256": "676ee2ed4cd50ec6278f0bb5a8d505827cd6cf6a9478cde94a9aed6f1dd83937"
+      },
+      "expanded-029-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-029-h1.npy",
+        "sha256": "f4f7e92350a84256d857c53166997035573bff42af93ff6d1a249cc6f84b9b85"
+      },
+      "discovery-11-channel-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-11-channel-h3.npy",
+        "sha256": "2291df4691369dbda8ef08b37df162a50a8c8fb3f49f73ea47e8c0238705b25a"
+      },
+      "expanded-064-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-064-h1.npy",
+        "sha256": "5d70cc99d7bbe6141ae0dd0d1bdb52d6329af6e6467dbed3489ce387f7728e91"
+      },
+      "expanded-071-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-071-h1.npy",
+        "sha256": "89ca931f87b0bad3b5487baf86adc14ff8020b22861a9d8f6931a97605800674"
+      },
+      "expanded-039-h3": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-039-h3.npy",
+        "sha256": "c3f7403955e9018a3c0df3fe7885f0bc5629ae94b0bcd074f6a6a03cd63a9af6"
+      },
+      "expanded-076-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-076-h1.npy",
+        "sha256": "fdb72b1637f68cc273d59381f0fd178d6cb6dbf29c134aa21ae3fff8d3b6e0aa"
+      },
+      "expanded-078-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-078-h1.npy",
+        "sha256": "15cdbce34184b9023ce7ddf2c933daa2752eb8a46d1c7bf00f7c99f85f1f5906"
+      },
+      "expanded-023-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-023-h1.npy",
+        "sha256": "81a708f880d21ca85e4036171b7ab28a8940dc95299847e6869c9e1a07dcae9d"
+      },
+      "discovery-05-channel-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-05-channel-h1.npy",
+        "sha256": "3d1af7a43aca789609ac4c93076b3118fe51795c8e703b39ad0714d2e5a88d90"
+      },
+      "discovery-10-channel-h1": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-10-channel-h1.npy",
+        "sha256": "d2147c0a661da17f4e54785b5f00cbde3d395c706b9f19d05d68bb7c9ed87961"
+      }
+    }
+  },
+  "reference": "expanded-004-h1",
+  "reference_spec": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "turns_manifest": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+  "merge_inventory": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+  "cohorts": {
+    "fitted": "discovery-05-channel-h1",
+    "unfitted": "discovery-10-channel-h1"
+  },
+  "donors": {
+    "expanded-001-h3": "wrong",
+    "expanded-020-h1": "wrong",
+    "expanded-034-h3": "wrong",
+    "expanded-042-h3": "wrong",
+    "expanded-045-h1": "wrong",
+    "expanded-046-h3": "wrong",
+    "expanded-068-h1": "wrong",
+    "expanded-070-h1": "wrong",
+    "expanded-087-h3": "wrong",
+    "expanded-092-h1": "wrong",
+    "expanded-094-h1": "wrong",
+    "expanded-095-h1": "wrong",
+    "discovery-01-channel-h1": "correct",
+    "discovery-06-channel-h1": "correct",
+    "discovery-15-channel-h1": "correct",
+    "discovery-00-channel-h3": "correct",
+    "discovery-08-channel-h3": "correct",
+    "discovery-10-channel-h3": "correct",
+    "expanded-029-h1": "correct",
+    "discovery-11-channel-h3": "correct",
+    "expanded-064-h1": "correct",
+    "expanded-071-h1": "correct",
+    "expanded-039-h3": "correct",
+    "expanded-076-h1": "correct",
+    "expanded-078-h1": "correct",
+    "expanded-023-h1": "correct"
+  },
+  "endpoints": [
+    {
+      "step": 175,
+      "role": "fitted",
+      "member": "discovery-05-channel-h1",
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/measurement.json",
+      "sha256": "b7cdc2e7de5ec12f74880097295fe5b1c39bccda2b22219926cf136989f57a90"
+    },
+    {
+      "step": 175,
+      "role": "unfitted",
+      "member": "discovery-10-channel-h1",
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/measurement.json",
+      "sha256": "d590b633f260e40b20683bd52e0255c50296832629506f8e7fafcf494390ca30"
+    },
+    {
+      "step": 189,
+      "role": "fitted",
+      "member": "discovery-05-channel-h1",
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/measurement.json",
+      "sha256": "0cddb3c3592d6ae5f8645dbad8abdcd74d8eacdceb43d8d6122a49acae6f3bda"
+    },
+    {
+      "step": 189,
+      "role": "unfitted",
+      "member": "discovery-10-channel-h1",
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint189-discovery-10-channel-h1/native/measurement.json",
+      "sha256": "acb78854f5ef25b386159d2db50128c364b3160f0c680129c7c9773eeb1e8a7d"
+    },
+    {
+      "step": 348,
+      "role": "unfitted",
+      "member": "discovery-10-channel-h1",
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/checkpoint348/measurement.json",
+      "sha256": "a092d58129313e41d813d54b149d65c767b5fb6f778b24da1fb850259623634e"
+    },
+    {
+      "step": 390,
+      "role": "fitted",
+      "member": "discovery-05-channel-h1",
+      "measurement": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/measurement.json",
+      "sha256": "41ba3948bc2dca2e89cc206f76e3898d186376730d643f9b0a0010517f551971"
+    }
+  ],
+  "comparison_limits": "Known same-template development members. Global correspondence can use later events. Checkpoints 175 and 189 are matched across recipients. The retained fitted 390 and unfitted 348 endpoints are separate observations.",
+  "observability": {
+    "record": "code/signal-trace/pipeline/observability/recorder.py",
+    "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3",
+    "events": "studies/04-round-2-overlap/runs/descent-path-transfer/events.jsonl"
+  }
+}

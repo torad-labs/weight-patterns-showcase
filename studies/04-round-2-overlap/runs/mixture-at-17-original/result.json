@@ -1,0 +1,458 @@
+{
+ "status": "The declared diagnostic ran once on November 12, 2026 (CT), on card 0 under its lock: `members` 1:47:56 PM to 1:51:42 PM (exit 0), `paths` 1:51:42 PM to 2:47:54 PM (exit 0; eight paths, 2966 s of solving; it first waited about four minutes for the card's lock, which another session's job held), `readings` 2:48:13 PM to 2:48:38 PM (exit 0). No engine was called and no model was made. Parts 1 and 3 of the declared prediction hold and part 2 does not: the mixture target does not part the four correct answers' deciding rows from the wrong answers' movement. It is a reading of solves at one matrix on the recordings' text: not a candidate, not a repair, and not the next objective.",
+ "written_by": "weight-research-fable, who declared and ran it. Every figure is read from readings/summary.json, paths/, correct-members/index.json and logs/run.log by the script that laid this record, and none was typed. The objective and what a successor takes from this are weight-research-astra's; the prediction was his, with the statistic fixed by the declaration.",
+ "prediction_vs_result": {
+  "prediction": "Astra's, stated before any path exists, with the statistic and the comparison to the same solve made twice fixed by this declaration. (1) On the original, at the merges of the model: aiming the wrong group at the nearest mixture leaves a small part of the pooled target's cost on the heading and the line (places 149 to 168) and most of it over the rows after the sign's token (169 to 201). At layer 17's attention this was already read in development for the direction (1.19e-04 to 1.77e-06, and 2.42e-04 to 2.00e-04); at the other merges it has not been read by stretch. (2) Under C's recorded work, for each of the four affected correct answers, R_i is lower on the mixture path than on the members path, on all thirty and on the fold that reads the answer without solving on it, by more than the same solve made twice differs. (3) The wrong side's request at and after the sign is still worked on: over places 169 to 201 the mixture path brings the wrong group's cost down under its own target, and the bound a search leaves is small beside the falls a round accepts.",
+  "verdict": "Part 1 holds, at every stretch and through the depth of the model. Part 2 does not hold: none of the four answers meets the declared requirement of a lower R on both the all-thirty solve and its read-only fold beyond repeat-solve variation; expanded-029-h1 is about 0.3% lower on its read-only fold, within that variation. Part 3 holds. Of what the declaration said would weaken the construction, two conditions are met: the separation is lacking, and the mixture path no longer moves the wrong answers at the heading rows where B's changed decisions lie. One is not: the mixture target keeps most of the request after the sign. The fourth, large projection uncertainty, is not met over a path (the bounds sum to under a millionth of the falls accepted) and has instances by its letter at single rounds that change almost nothing.",
+  "part_1_the_original": {
+   "over_all_105_merges": {
+    "0 to 148": {
+     "pooled": {
+      "direction": 0.005201,
+      "size": 0.006515
+     },
+     "mixture": {
+      "direction": 4.83e-05,
+      "size": 1.398e-05
+     },
+     "mixture_over_pooled": {
+      "direction": 0.009,
+      "size": 0.002
+     }
+    },
+    "149 to 168": {
+     "pooled": {
+      "direction": 0.02382,
+      "size": 0.01826
+     },
+     "mixture": {
+      "direction": 0.0004684,
+      "size": 2.821e-05
+     },
+     "mixture_over_pooled": {
+      "direction": 0.02,
+      "size": 0.002
+     }
+    },
+    "169 to 201": {
+     "pooled": {
+      "direction": 0.03735,
+      "size": 0.01579
+     },
+     "mixture": {
+      "direction": 0.0278,
+      "size": 0.001723
+     },
+     "mixture_over_pooled": {
+      "direction": 0.744,
+      "size": 0.109
+     }
+    },
+    "202 to 479": {
+     "pooled": {
+      "direction": 0.05487,
+      "size": 0.0862
+     },
+     "mixture": {
+      "direction": 0.01146,
+      "size": 0.002189
+     },
+     "mixture_over_pooled": {
+      "direction": 0.209,
+      "size": 0.025
+     }
+    }
+   },
+   "over_every_place_and_merge": {
+    "pooled": {
+     "direction": 0.121248,
+     "size": 0.126768
+    },
+    "mixture": {
+     "direction": 0.039781,
+     "size": 0.00395405
+    },
+    "bound": 6.7e-10,
+    "loops_of_a_search": "31 to 41"
+   },
+   "at_this_matrix_own_merge": {
+    "0 to 148": {
+     "pooled": {
+      "direction": 7.018e-06,
+      "size": 9.633e-06
+     },
+     "mixture": {
+      "direction": 4.586e-08,
+      "size": 5.364e-11
+     },
+     "places_with_a_cost": {
+      "pooled": 135,
+      "mixture": 19
+     },
+     "members_a_mixture_holds_where_a_cost_is_left": {
+      "least": 7,
+      "mean": 12.68421052631579,
+      "most": 22
+     }
+    },
+    "149 to 168": {
+     "pooled": {
+      "direction": 0.000119,
+      "size": 1.239e-06
+     },
+     "mixture": {
+      "direction": 1.766e-06,
+      "size": 4.51e-09
+     },
+     "places_with_a_cost": {
+      "pooled": 20,
+      "mixture": 15
+     },
+     "members_a_mixture_holds_where_a_cost_is_left": {
+      "least": 4,
+      "mean": 6.466666666666667,
+      "most": 9
+     }
+    },
+    "169 to 201": {
+     "pooled": {
+      "direction": 0.000242,
+      "size": 8.095e-05
+     },
+     "mixture": {
+      "direction": 0.0001999,
+      "size": 1.773e-06
+     },
+     "places_with_a_cost": {
+      "pooled": 33,
+      "mixture": 33
+     },
+     "members_a_mixture_holds_where_a_cost_is_left": {
+      "least": 3,
+      "mean": 6.2727272727272725,
+      "most": 10
+     }
+    },
+    "202 to 479": {
+     "pooled": {
+      "direction": 0.0003028,
+      "size": 0.000274
+     },
+     "mixture": {
+      "direction": 8.166e-05,
+      "size": 5.037e-06
+     },
+     "places_with_a_cost": {
+      "pooled": 278,
+      "mixture": 252
+     },
+     "members_a_mixture_holds_where_a_cost_is_left": {
+      "least": 2,
+      "mean": 11.13888888888889,
+      "most": 20
+     }
+    }
+   },
+   "reading": "Holds. Summed over all 105 merges the mixture target leaves 0.020 of the pooled target's direction cost and 0.002 of its size cost on places 149 to 168, and 0.744 and 0.109 over places 169 to 201. Merge by merge, direction and size together, it leaves 0 to 0.043 of the pooled cost on 149 to 168 (median 0.010) and 0.017 to 0.802 over 169 to 201 (median 0.516). At this matrix's own merge the direction cost goes from 1.190e-04 to 1.766e-06 on 149 to 168 and from 2.420e-04 to 1.999e-04 over 169 to 201, the figures the declaration cited from development.",
+   "what_it_does_not_show": "That what is kept is the computation that chooses the sign. From place 169 on the two groups have read different tokens, and the wrong answers' common difference there is present after layer 0 (records/development/2026-11-12-correction-objective/README.md, 'Answer by answer against what the correct answers span'; Astra's 2df671b7). The radii are the pooled reference's and are not shown to be the right thickness around a span of members (the declaration's rule.scope)."
+  },
+  "part_2_the_statistic": {
+   "by_answer": {
+    "discovery-15-channel-h1": {
+     "on_all_thirty": {
+      "members": {
+       "the_rows_movement": 0.04926,
+       "the_wrong_answers_at_place_169": 0.1712,
+       "R": 0.2877
+      },
+      "mixture": {
+       "the_rows_movement": 0.04155,
+       "the_wrong_answers_at_place_169": 0.1283,
+       "R": 0.3239
+      },
+      "mixture_over_members": 1.1256
+     },
+     "on_the_fold_that_reads_it": {
+      "fold": 2,
+      "members": {
+       "the_rows_movement": 0.05307,
+       "the_wrong_answers_solved_on_at_place_169": 0.183,
+       "R": 0.2901,
+       "the_wrong_answers_read_on_at_place_169": 0.1788
+      },
+      "mixture": {
+       "the_rows_movement": 0.0383,
+       "the_wrong_answers_solved_on_at_place_169": 0.1306,
+       "R": 0.2932,
+       "the_wrong_answers_read_on_at_place_169": 0.1274
+      },
+      "mixture_over_members": 1.0109
+     },
+     "the_same_solve_made_twice": {
+      "C_candidate": 0.2842,
+      "members_on_all_thirty_walked_again": 0.2877,
+      "walked_again_over_the_candidate": 1.0123
+     },
+     "under_B_candidate": 0.526
+    },
+    "expanded-029-h1": {
+     "on_all_thirty": {
+      "members": {
+       "the_rows_movement": 0.06331,
+       "the_wrong_answers_at_place_169": 0.1712,
+       "R": 0.3698
+      },
+      "mixture": {
+       "the_rows_movement": 0.05077,
+       "the_wrong_answers_at_place_169": 0.1283,
+       "R": 0.3958
+      },
+      "mixture_over_members": 1.0702
+     },
+     "on_the_fold_that_reads_it": {
+      "fold": 1,
+      "members": {
+       "the_rows_movement": 0.07551,
+       "the_wrong_answers_solved_on_at_place_169": 0.175,
+       "R": 0.4314,
+       "the_wrong_answers_read_on_at_place_169": 0.1666
+      },
+      "mixture": {
+       "the_rows_movement": 0.05778,
+       "the_wrong_answers_solved_on_at_place_169": 0.1343,
+       "R": 0.4303,
+       "the_wrong_answers_read_on_at_place_169": 0.1309
+      },
+      "mixture_over_members": 0.9975
+     },
+     "the_same_solve_made_twice": {
+      "C_candidate": 0.3661,
+      "members_on_all_thirty_walked_again": 0.3698,
+      "walked_again_over_the_candidate": 1.01
+     },
+     "under_B_candidate": 0.8288
+    },
+    "expanded-076-h1": {
+     "on_all_thirty": {
+      "members": {
+       "the_rows_movement": 0.06174,
+       "the_wrong_answers_at_place_169": 0.1712,
+       "R": 0.3606
+      },
+      "mixture": {
+       "the_rows_movement": 0.05066,
+       "the_wrong_answers_at_place_169": 0.1283,
+       "R": 0.3949
+      },
+      "mixture_over_members": 1.095
+     },
+     "on_the_fold_that_reads_it": {
+      "fold": 0,
+      "members": {
+       "the_rows_movement": 0.06404,
+       "the_wrong_answers_solved_on_at_place_169": 0.1787,
+       "R": 0.3585,
+       "the_wrong_answers_read_on_at_place_169": 0.1697
+      },
+      "mixture": {
+       "the_rows_movement": 0.04978,
+       "the_wrong_answers_solved_on_at_place_169": 0.1318,
+       "R": 0.3778,
+       "the_wrong_answers_read_on_at_place_169": 0.13
+      },
+      "mixture_over_members": 1.0539
+     },
+     "the_same_solve_made_twice": {
+      "C_candidate": 0.3568,
+      "members_on_all_thirty_walked_again": 0.3606,
+      "walked_again_over_the_candidate": 1.0108
+     },
+     "under_B_candidate": 0.8307
+    },
+    "expanded-078-h1": {
+     "on_all_thirty": {
+      "members": {
+       "the_rows_movement": 0.0618,
+       "the_wrong_answers_at_place_169": 0.1712,
+       "R": 0.361
+      },
+      "mixture": {
+       "the_rows_movement": 0.05032,
+       "the_wrong_answers_at_place_169": 0.1283,
+       "R": 0.3922
+      },
+      "mixture_over_members": 1.0866
+     },
+     "on_the_fold_that_reads_it": {
+      "fold": 1,
+      "members": {
+       "the_rows_movement": 0.07367,
+       "the_wrong_answers_solved_on_at_place_169": 0.175,
+       "R": 0.4209,
+       "the_wrong_answers_read_on_at_place_169": 0.1666
+      },
+      "mixture": {
+       "the_rows_movement": 0.05732,
+       "the_wrong_answers_solved_on_at_place_169": 0.1343,
+       "R": 0.4268,
+       "the_wrong_answers_read_on_at_place_169": 0.1309
+      },
+      "mixture_over_members": 1.0141
+     },
+     "the_same_solve_made_twice": {
+      "C_candidate": 0.3572,
+      "members_on_all_thirty_walked_again": 0.361,
+      "walked_again_over_the_candidate": 1.0106
+     },
+     "under_B_candidate": 0.8281
+    }
+   },
+   "reading": "Does not hold. On all thirty R is higher on the mixture path for all four answers, by 7.0% to 12.6% (mixture over members 1.070 to 1.126). On the fold that reads the answer without solving on it the two paths give the same R within -0.3% to +5.4% (0.997 to 1.054). The same solve made twice differs by 1.0% to 1.2% (1.010 to 1.012). Both lengths are smaller on the mixture path: on all thirty the four rows move 16% to 20% less, and the wrong answers' mean movement at place 169 is 25% less (0.1712 to 0.1283). The rows move with the wrong answers at their place under either target: 0.29 to 0.40 of the wrong answers' movement there on all thirty, 0.29 to 0.43 on the folds that read them, against 0.53 to 0.83 under B's candidate, which has no term for the correct members.",
+   "told_beside_the_four": "discovery-00-channel-h3, the correct answer C broke at a row on the heading (C's first changed step 166, place 157): the row moves 0.0201 on the mixture path against 0.0894 on the members path (0.0904 under C's candidate, 0.1631 under B's). On places 149 to 168, on all thirty, the wrong group's mean moves 0.0212 against 0.1031 (+0.074 of the gap against +0.575) and a correct answer's own mean movement is 0.0081 against 0.0231: where the request is taken off, the rows of both groups move a fifth to a third as far.",
+   "beside_it_by_stretch": "A description, not the declared statistic: over the whole of places 169 to 201 a correct answer's own mean movement per length of the wrong group's mean movement is 0.098 on the members path and 0.077 on the mixture path on all thirty, and on the answers a fold path read without solving on them 0.128 to 0.138 against 0.093 to 0.110. The stretch as a whole reads lower on the mixture path; the four deciding rows, at its first place, do not."
+  },
+  "part_3_the_request_after_the_sign": {
+   "mixture_cost_over_places_169_to_201": {
+    "where_the_original_stands": {
+     "direction": 0.0001999,
+     "size": 1.773e-06
+    },
+    "mixture_path_on_all_thirty": {
+     "direction": 6.254e-06,
+     "size": 2.583e-08
+    },
+    "fold_paths_on_the_answers_read_and_not_solved_on": [
+     {
+      "direction": 7.08e-06,
+      "size": 4.101e-08
+     },
+     {
+      "direction": 7.019e-06,
+      "size": 5.368e-08
+     },
+     {
+      "direction": 6.413e-06,
+      "size": 9.645e-08
+     }
+    ],
+    "fold_paths_on_the_answers_solved_on": [
+     {
+      "direction": 5.485e-06,
+      "size": 2.367e-08
+     },
+     {
+      "direction": 5.851e-06,
+      "size": 3.201e-08
+     },
+     {
+      "direction": 5.823e-06,
+      "size": 3.251e-08
+     }
+    ]
+   },
+   "the_wrong_groups_mean_movement_along_the_gap_169_to_201": {
+    "members_on_all_thirty": 0.806,
+    "mixture_on_all_thirty": 0.715,
+    "members_on_the_answers_read": [
+     0.785,
+     0.775,
+     0.819
+    ],
+    "mixture_on_the_answers_read": [
+     0.708,
+     0.708,
+     0.726
+    ]
+   },
+   "bounds_of_the_searches": {
+    "mixture-all": {
+     "rounds_with_a_bound": 89,
+     "the_bounds_summed_over_the_falls_summed": 5.86e-07,
+     "greatest_bound_over_the_sum_it_stood_in": 1.16e-07,
+     "greatest_bound_over_the_fall_it_stood_before": 0.928,
+     "the_fall_of_that_round": 8.96e-12,
+     "parts_of_steps_refused_inside_a_bound": 1,
+     "bound_at_the_end": 7.79e-14
+    },
+    "mixture-fold-0": {
+     "rounds_with_a_bound": 112,
+     "the_bounds_summed_over_the_falls_summed": 3.93e-07,
+     "greatest_bound_over_the_sum_it_stood_in": 8.05e-08,
+     "greatest_bound_over_the_fall_it_stood_before": 0.0784,
+     "the_fall_of_that_round": 9.59e-12,
+     "parts_of_steps_refused_inside_a_bound": 0,
+     "bound_at_the_end": 3.33e-14
+    },
+    "mixture-fold-1": {
+     "rounds_with_a_bound": 95,
+     "the_bounds_summed_over_the_falls_summed": 3.75e-07,
+     "greatest_bound_over_the_sum_it_stood_in": 8.68e-08,
+     "greatest_bound_over_the_fall_it_stood_before": 0.216,
+     "the_fall_of_that_round": 1.89e-12,
+     "parts_of_steps_refused_inside_a_bound": 0,
+     "bound_at_the_end": 4.03e-14
+    },
+    "mixture-fold-2": {
+     "rounds_with_a_bound": 109,
+     "the_bounds_summed_over_the_falls_summed": 7.25e-07,
+     "greatest_bound_over_the_sum_it_stood_in": 1.11e-07,
+     "greatest_bound_over_the_fall_it_stood_before": 0.594,
+     "the_fall_of_that_round": 1.01e-12,
+     "parts_of_steps_refused_inside_a_bound": 0,
+     "bound_at_the_end": 2.37e-14
+    }
+   },
+   "loops_of_the_search_at_each_matrix_read": {
+    "members-all": 29,
+    "mixture-all": 32,
+    "members-fold-0": 34,
+    "mixture-fold-0": 32,
+    "members-fold-1": 31,
+    "mixture-fold-1": 33,
+    "members-fold-2": 30,
+    "mixture-fold-2": 31,
+    "candidate-of-correction-members-at-17-original": 29,
+    "candidate-of-correction-at-17-original": 31
+   },
+   "reading": "Holds. Over places 169 to 201 the mixture cost goes from 2.017e-04 where the original stands to 6.280e-06 on the mixture path on all thirty, and to 6.510e-06 to 7.121e-06 on answers a fold path read and was not solved on; the wrong group's mean there makes +0.715 of the gap (0.708 to 0.726 on answers read). Over a path the bounds the rounds stood on sum to 3.7e-07 to 7.3e-07 of the falls they accepted, and no bound is over 1.2e-07 of the sum it stood in. Over a path's rounds the bound is 2.8e-06 to 3.6e-06 of the round's own fall at the median and 5.4e-05 to 3.7e-04 at the 0.9 quantile. A path's largest is 0.08 to 0.93 of the round's own fall: in every path that round is the last of a stage at a strong ridge (2^10 to 2^22 units), whose fall was 1.0e-12 to 9.6e-12, 3.6e-09 to 3.5e-08 of the sum. So by its letter the declaration's fourth condition has instances (a bound comparable to a fall, and one part of a step refused inside a bound: 0.03125 of the step, at 2^10 units on the path on all thirty), and they lie where a round changes almost nothing. The search made at each matrix read, from the mixture that weighs every member alike, ended in 29 to 34 loops of the 900 allowed."
+  },
+  "the_same_solve_made_twice": {
+   "members_on_all_thirty_walked_again": {
+    "objective": 0.00011145376866121675,
+    "change_over_matrix": 0.1944,
+    "rounds": 104,
+    "rounds_at_the_last_ridge": 11
+   },
+   "C_recorded_candidate": {
+    "objective": 9.333404207086122e-05,
+    "change_over_matrix": 0.2007
+   },
+   "weights_that_differ": 2573631,
+   "weights_of_the_matrix": 3145728,
+   "reading": "C's last solve walked again from the same start, on the same rows, with the same code and work ends at 1.114538e-04 where C's recorded candidate reads 9.333404e-05 (19.4% above), with a change of 0.1944 of the matrix against 0.2007; 2,573,631 of the matrix's 3,145,728 weights differ. Stage by stage against C's own record (candidate/record.json, refit): the two walks end every ridge at the same objective to the last digit down to 2^13 units and within a hundred-thousandth of it down to 2^3; at 2^2 the walk again took 2 rounds where C's took 6 and ends 0.71% above, and below it the round counts are (2^1: 6 against 6, 2^0: 7 against 7, 2^-1: 4 against 7, 2^-2: 9 against 2, 2^-3: 6 against 7, 2^-4: 17 against 3, 2^-5: 11 against 38); the walk again took 103 rounds in all and C's 117. R at the four rows differs by 1.0% to 1.2% between the two: the statistic is steadier than the objective the paths end at."
+  }
+ },
+ "failures_only": {
+  "no_separation_at_the_deciding_rows": "The declared first weakening condition is met. R on the mixture path is 0.324 to 0.396 on all thirty against 0.288 to 0.370 on the members path, and 0.293 to 0.430 against 0.290 to 0.431 on the folds that read the answers. The four rows lie at place 169, the first rows after the sign's token, and the mixture target keeps the request there. By the declaration: the movement at the deciding rows comes with the request that remains at and after the sign and not with the one removed. By Astra's note of 2df671b7 this is lack of observed separation under this construction and work; it is no proof that the remaining request is the only cause, or that no target at this matrix parts the two groups.",
+  "the_heading_rows_are_no_longer_moved": "The declared third weakening condition is met in its second form, on the heading. Four identical-line wrong answers have B's first changed step on the heading (discovery-17-channel-h1, expanded-045-h1, expanded-046-h3, expanded-070-h1: steps 128 and 129, places 152 and 153; B completed expanded-045-h1 and discovery-17-channel-h1 of them). There the row moves 0.0100 to 0.0105 on the mixture path, against 0.0673 to 0.0685 on the members path, 0.0679 to 0.0691 under C's candidate and 0.1168 to 0.1183 under B's; along the gap it makes 0.026 to 0.028 of it against 0.365 to 0.374. At all 7 first changed steps of wrong answers that lie on places 149 to 168 the mixture path moves the row 0.15 to 0.25 as far as the members path; at the 21 before the heading 0.29 to 0.65 as far (these rows move little under either: 0.0041 to 0.0176); at the 2 from place 169 on 0.73 to 0.74. B's three repairs on the shared line began as rewrites of the heading (Performance, 3025eade), so a solve under this target gives up the movement those repairs began with. This was named in the declaration before the run.",
+  "what_the_target_keeps_was_read_after_the_sign": "Of the mixture sum where the original stands at this merge (2.9019e-04), 0.695 lies over places 169 to 201 and 0.299 over 202 to 479: rows that have read what the answer wrote at the sign. Whether a request made of such rows is a request about the capability's own computation is not read by this run.",
+  "the_paths_do_not_end_alike": "The three members paths on two folds end between 7.2881e-05 and 9.4368e-05 on the answers solved on; the four members paths took 102 to 159 rounds and 289 to 612 s, and members-fold-2 used the forty rounds allowed at 2^-4 units and took forty at 2^-5. The three mixture paths on two folds end between 1.9177e-05 and 2.1017e-05; the four took 89 to 112 rounds and 264 to 375 s. A stopped stage or a used allowance is no certificate of an optimum, and C's last solve walked again ends 19.4% above C's own end.",
+  "a_reading_the_declaration_named_and_the_records_do_not_hold": "rule.readings names 'the loops a search used' among what a path's record gives. A path's record keeps every round's bound and the parts of steps refused inside one, and no count of the loops of the searches made inside a round or an aiming pass. What such a search left is in the round's bound, and the loops of the search made at each matrix read are in the readings.",
+  "the_readings_module": "mixture_read.py was written while the paths were walked, as the declaration says. It was tried on card 1 on the two recorded candidates before any path ended, and its reader of a path's record was made a function and given two more figures after the first two paths' records existed and before the readings command ran; the file the command ran is 49f12150b7b1b27679d59e9642b17e4d22c68e6345d55664f1fe7696e8a3f86c. No definition of a reading that the declaration fixed was changed."
+ },
+ "what_this_changes": {
+  "the_question_asked": "At blk.17.attn_output.weight, from the original, on C's rows and under C's work: aiming the wrong group at the nearest mixture of the thirty original correct answers' own states, with the reference's radii, takes the request off the heading and the line and keeps it after the sign. The solve then changes 0.1107 of the matrix where C's sum changes 0.1944, moves a correct answer's own computation less at every stretch (0.0041 against 0.0082, 0.0081 against 0.0231, 0.0101 against 0.0140, 0.0057 against 0.0110, by the declaration's four stretches), and leaves the correct members' own error at 9.447e-06 against 4.410e-05. It does not part the four correct answers' deciding rows from the wrong answers' movement at their place: those rows are the first after the sign, the request is kept there, and they move with it.",
+  "for_the_hypothesis": "Nothing here bears against it, and B's and C's repairs and the earlier transfer stand as recorded. The run limits one target at one matrix, on these rows, with these radii and this work. It does not show that the two groups cannot be parted at this matrix, and it reads no answer: no model was made.",
+  "the_two_explanations_of_C_against_B": "The analysis Marcos asked Performance for (records/development/2026-11-12-path-forward/deep-think-analysis/3-deep-think-verify.md, 'T2's attribution is open') names two: (i) C's term for the correct members opposed a push the line's rows share; (ii) the pooled target's pull before the sign is what put a shared push on those rows. This run keeps the term and changes the target, so it reads (ii): with the pull before the sign removed, the deciding rows still move with the wrong answers. It does not read (i); no arm without the term was declared and none was added.",
+  "for_a_successor": "Astra's to specify. What this run and the development reading beside it put on the table: the mixture target, as specified, is not shown to be a better wrong-side target for a native candidate at this matrix, since it keeps the coupling at the first row after the sign and gives up the heading movement B's line repairs began with. Answer by answer and with no radius, what the wrong answers have in common outside the correct answers' span is small up to the row that writes the sign and large from the first row that reads the sign's token on; after the token it is there from layer 0, and at the row that writes the sign it is absent after layer 0 and grows with depth (records/development/2026-11-12-correction-objective/README.md, 'Answer by answer against what the correct answers span'). No figure of either reading is a threshold, a mask or a target.",
+  "for_the_solver": "The mixture sum costs 264 to 375 s a path against 289 to 612 s for C's sum, with the nested search bounded at every round. The same solve made twice parts at the weak ridges; the statistic read here is steady across that. Neither the second ridge nor an earlier end was used, as the specification asked.",
+  "not_done": {
+   "no_fit": "No no-fit row was used as an editable fitting row or to evaluate a solved matrix, and no new no-fit generation was made. Read-only original observations from the full cohort, including the no-fit originals, still supplied the reference as declared.",
+   "reserved_40b": "Sealed.",
+   "model": "None was made and none was read through the engine.",
+   "selection": "Nothing was selected; every path ended at the ridge C selected.",
+   "other_runs": "No reference, declared setting or result of another run was changed."
+  }
+ },
+ "provenance": "provenance.json"
+}

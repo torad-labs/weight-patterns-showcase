@@ -1,0 +1,141 @@
+{
+ "method_step": [
+  1,
+  2
+ ],
+ "run_by": "weight-research-perfomance",
+ "status": "admitted by weight-research-astra in revision 2, November 15, 2026, 5:40 AM CT: the declared original-only capture, two/three-recorder qualification subject to its measured-room and byte-equality conditions, then file-only reading/check; no command performed by the admission, no instrument/protocol change or changed-model experiment admitted.",
+ "kind": "original-model instrument qualification: the thirty fitting answers generated once by the unchanged original on card 0 through the capture the reader protocol controlled-bf16-7 binds, with their streams kept and read; then the first ten of those answers generated again by the same recorder as two and as three processes side by side on that card. No edit, no solve, no candidate, no reference, no target, no loss, no score; no answer is read or graded.",
+ "authority": "Marcos, November 14, 2026 (relayed to this seat about 5 AM CT and again at 9:20 PM CT): this seat is to instrument a step of the loop and look at every opportunity to shorten it, and he expects a step in minutes. weight-research-astra, November 15, 2026: the engine's complete own trace is the measured loss at every step (records/retrospectives/2026-11-15-relational-gradient-specification-astra.md, 'Connected gradient and measured progress'), which makes the engine's capture of the thirty answers a part of every step; and, answering this seat's request before 5:27 AM CT that day, that this original-only instrument qualification is within scope, that she reads the committed declaration before any native admission, and that controlled-bf16-7 stays unchanged for the relational construction, a capture that starts its calls side by side and its protocol being a separate acceptance after this run's result. The recorder, the engine's passes, the instruments and the placement on cards are this seat's (STATE.md, who holds what).",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "reader_protocol": {
+  "file": "records/development/2026-11-12-path-forward/reader-protocol/controlled-bf16-7.json",
+  "sha256": "87a2f2f45d5ec4ddad36377cece93bb0f5d553af9cabc234763f18fa570c7d6e",
+  "role": "the instruments part 1 runs are the files this protocol binds, unchanged; this run makes no protocol and changes no instrument"
+ },
+ "implementation": "run.sh in this folder, one step at a time: `capture` is records/development/2026-11-12-path-forward/own_text.py (KEEP_RAW=<run>/streams, each recorder call under card 0's lock as a loop's launcher runs it); `beside:2` and `beside:3` are records/development/2026-11-10-speed-review/recorders-beside/recorders_beside.py with answers=10, the whole arrangement under card 0's lock (records/development/2026-11-12-path-forward/after-the-others.sh 0); `reading` is records/development/2026-11-12-path-forward/states_reading.py with ROLLOUTS=<run>/streams (no card); `check` is records/development/2026-11-12-path-forward/states_conditional_check.py against whole-states-original/reading (files only). result.json is written at the close from those records. The recorder is the installed code/signal-trace/recorder/observe-stream (sha256 0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060), `capture residual stream`, kernel fusion off, in every part.",
+ "hypothesis": "The project's hypothesis: a capability leaves a recurring difference between the traces of correct and wrong answers, and editing the weights where that recurring difference lives repairs the capability. This run tests no part of it. It asks two questions of the instrument every step of a correction loop pays for: whether the capture the current reader protocol binds, run on an engine as bound, gives the original's own recorded computation again; and whether the same recorder as several processes side by side on the canonical card writes each answer's files with the bytes one process alone writes, in less time.",
+ "why_this_direction": "Steps 1 and 2 of the method are the overlaps of the full traces, and step 5 measures the computation again on the current model's own answers after every update: each such measurement is the engine's capture of the thirty fitting answers. Under Astra's choice of November 15 that capture is the measured loss at every step. What it costs is on record: the one pass of the stopped loop took 273.7 s to capture (runs/success-sets-loop-from-mates/logs/capture-1-20261115-030529.log: its three recorder calls 205.1 s, exports 18.8, registrations 43.1), its reading 28.9 s, and the thirty answers' derivative 20.1 s. This seat moved the exports and registrations beside the recorder and made the registration's path search the same path in milliseconds (39821a94, 864f4c16): about 223 s a capture as arithmetic, not yet run on an engine. What is left is the recorder's own time. Measured on the processor alone on November 15 (no engine; speed review, 'The recorder's own bookkeeping, and two recorders on one card'), the recorder's bookkeeping is 2.2 to 2.4 ms of a kept token's 14.2 to 15.6, so a change of the recorder is not where a factor is. The recorder-modes record of November 14 (records/development/2026-11-10-speed-review/recorder-modes/results.txt) says where the rest goes: 7.9 ms a token is the plain decode, and the stops at the kept outputs and their read-back are the remainder; reading several tokens at once is another computation (outputs 1.3e-3 to 3.4e-3 apart at the median) and is used nowhere. One arrangement leaves every program, every case and, if each process computes what one computes alone, every byte as they are: more than one recorder process on the card at once, each with its share of the answers. A case's counters start at zero in every process (code/signal-trace/recorder/observe_stream.cpp, where a case begins), so its files do not depend on the process. What the arrangement gains has never been measured (records/KNOWN.md, 'a pass under ten minutes'). Part 1 is needed for part 2, as the solo to hold the bytes and the seconds to, and for itself: own_text.py's flow was changed twice on November 15 and has run on fixtures only, and a loop's first step should not be its first run on an engine.",
+ "repeating_pattern_check": "Four things have happened more than once. (1) An instrument first ran on an engine inside an experiment and cost it: a reader that could not keep an answer went on writing streams for eleven answers and 16 GB before it was seen (11:03 AM CT November 14), and the verifier's refusal for another run's folder held the stopped loop's first pass at 3:31 AM CT November 15. Why: the change was qualified on fixtures and files, and the first engine run was the experiment's own. Here the capture as bound runs on the original, alone, before any loop names it. (2) A faster way to read turned out to be another computation: thirty-two tokens at once (apart by 1.3e-3 to 3.4e-3 of an output's size), the second card (9 of 30 answers worded differently), the torch forward (9 of 30). Why: the engine's kernels and their order differ between the two ways, and wording is decided by near ties. Here a time counts only beside the bytes: every answer's four files are held by sha256 to the solo's, and an arrangement with one file apart is closed whatever its time. (3) A time priced as arithmetic stood where a measurement was wanted (a capture of about 223 s, two recorders 'would each compute what one computes alone'). This run measures both. (4) Engine passes were made outside a declared run after a stop (the evening of November 14, disclosed in journal/2026-11-14-iterative-gap-closure.md). This run is declared first, with its page entry before its folder, and runs nothing before Astra's admission.",
+ "what_went_wrong_before": "Every construction so far repaired some answers and broke others, and the repeated correction on state values was stopped in its first pass. A step of a loop was 1 h 35 to 2 h in the on-policy loop and 44 to 52 minutes as the stopped loop's launcher stood; Marcos expects minutes. Under the gradient step Astra specified, the capture is the largest part of a step and the recorder's generation the largest part of the capture, and nothing has shortened the generation itself with its bytes kept.",
+ "rule": "Data roles: the thirty fitting answers of the cohort controlled-bf16-1 (tube.picks) and no others. The answers no fit uses are not generated, read or listed; the reserved folder is not opened. The model is the original file, read only. Part 1 (`capture`): own_text.py generates each fitting answer from its prompt alone, greedy, up to the recordings' own limit, ten answers a recorder call, each call under card 0's lock; the streams are kept in <run>/streams. An answer whose generated tokens are the recordings', token for token, keeps the identity as its registration (an identity of inputs, as the capture has always written it); another answer is exported and laid on its original computation by the capture's rule. Part 2 (`beside:2`, then `beside:3`): the capture's first ten answers, dealt in their order (answer i to process i mod k), generated again by k recorder processes started together under one hold of card 0's lock, own_text.py's recorder call argument for argument; each answer's stream.f32, stream.jsonl, result.json and case.json are hashed against the same answer's files in <run>/streams. The comparison is written first; then each made stream whose four files are the solo's bytes is removed (the same command makes it again), and an answer with one file apart keeps its whole stream, with its process's cases and logs, beside the comparison that names the files. An arrangement is made once: what one that failed left is not touched. Three are started only if every file of two was the solo's bytes (otherwise side by side is closed and three would only repeat it) and only on a measurement: three times the most one of the two processes was read to hold must fit in what the card has free then, and a process whose memory was never read leaves the occupancy unknown, which starts nothing (parameters.processes). Part 3 (`reading`, `check`): states_reading.py keeps the state reading from <run>/streams (which removes them as it keeps them, so it comes after part 2) and states_conditional_check.py counts, with no tolerance, the rows that are the bits of whole-states-original/reading at every merge and in both terminal arrays. A comparison is a count of equal bytes or equal bits; no tolerance, threshold or score exists in this run. Nothing an answer says is compared or judged. Every step runs the research verifier first. The run writes only in its own folder. When it closes, the reading it made (bit for bit the control's, if prediction 2 holds, and so made again by one command) is removed and its records kept; whatever it finds, no instrument is changed by it.",
+ "prediction": {
+  "1_capture": "30 of 30 answers' generated tokens are the recordings' token for token, 29 ending by themselves and one at its limit, so every answer is registered by the identity and none is exported or laid: card 0, this recorder, these engine libraries and this file made the recordings, and registration by computation gave the identity for 30 of 30 on November 14 (records/development/2026-11-10-speed-review/own-export/registration-by-computation.json). The three recorder calls take about 226 s together: 205.1 s for 13,216 answer tokens in the stopped loop's pass 1 (its reading's 18,375 rows less the 5,159 question rows), times the original's 14,592 answer tokens over those; the load of the machine and the wait for the lock are in it.",
+  "2_reading": "the reading made from the kept streams holds, at all 19,751 rows of all 105 merges and in both terminal arrays, the bits of whole-states-original/reading (`the_same_bits_everywhere` true): on card 0 a generation's states are the bits a pass fed that text gives (records/development/2026-11-10-speed-review/own-export/rollout-is-the-reading.json), and each card repeats itself exactly.",
+  "3_bytes_side_by_side": "in both arrangements each of the ten answers' four files has the sha256 of the solo's: 10 of 10 and 10 of 10. Each process holds its own context and model on the card and runs the kernels one process runs, in the order one process runs them.",
+  "4_time_side_by_side": "not known before it is measured, which is why it is. What the parts on record allow (records/development/2026-11-10-speed-review/recorder-modes/results.txt and recorders-beside/bookkeeping.txt): of a kept token's 14.2 to 15.6 ms, 7.9 is the plain decode with its scores (0.76 of it the recorder's own work on the scores, so about 7.1 the card's) and the rest stops, read-back and records. If only the plain decode's 7.1 ms is serial between two processes, their two tokens take what one takes alone and two write about 2.0 times the answers a second; if half of the rest waits on the card as well (10.3 to 11.0 ms serial a token), about 1.4 times. The driver's switching between two processes' work is in neither figure, so a gain at or under 1 is possible. Three write no fewer answers a second than two unless the card is already the limit at two."
+ },
+ "would_weaken_it": "Nothing here bears on the hypothesis. On the instrument: (1) a generated token that is not the recording's would mean the capture as bound, or the execution under it, is not the one that made the recordings; it is found here, on the original, and reported to Astra and Fable before a loop's step depends on it. (2) A row that is not the control's bits would mean a reading kept from a generation is not the control's computation under this protocol; the merges and rows are named and nothing kept from it is used. (3) One file of one answer with other bytes side by side would mean a recorder process's computation depends on what else the card runs: side by side is then another computation and is closed whatever its time, and the same would have to be asked of every pass that ran while another project used the card. (4) A gain at or under 1 would mean the card, or the driver's switching, is the limit: the lever is closed with its number, and what is left under the generation is the engine's own work (outputs kept without a stop at each), which changes the engine build.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/declaration.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-17-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading"
+ ],
+ "inputs_read_for_what": "The model is read by the recorder and never written. The cohort's declaration, the registered membership, the inputs' index and the wide overlap's members give the thirty fitting answers, their prompts' tokens, their recorded tokens and their limits (ladder.cohort, tube.picks). Each fitting answer's exported folder holds the original's turns a computed registration would be laid on (hashed when the capture starts; read only if an answer's tokens are not the recordings'). whole-states-original/reading is the original's own state reading of November 14, the control part 3 counts equal bits against. The reader protocol's file and the instruments it binds are named under reader_protocol and implementation.",
+ "outputs": [
+  "studies/04-round-2-overlap/runs/recorders-beside-original/own",
+  "studies/04-round-2-overlap/runs/recorders-beside-original/streams",
+  "studies/04-round-2-overlap/runs/recorders-beside-original/beside",
+  "studies/04-round-2-overlap/runs/recorders-beside-original/reading",
+  "studies/04-round-2-overlap/runs/recorders-beside-original/qualification",
+  "studies/04-round-2-overlap/runs/recorders-beside-original/logs",
+  "studies/04-round-2-overlap/runs/recorders-beside-original/result.json"
+ ],
+ "parameters": {
+  "answers": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+   "derivation": "tube.picks over the cohort's sixty answers: every other answer of each original outcome group, in the answers' own order, 15 correct and 15 wrong; none chosen by anything read here",
+   "scales_with": "the cohort's answers and their outcome labels"
+  },
+  "answers_side_by_side": {
+   "measured_from": "records/development/2026-11-12-path-forward/own_text.py",
+   "derivation": "10: the capture's first recorder call. own_text.py gives the recorder ten answers a call, and during its first call nothing of the capture runs beside the recorder (the batch before it does not exist), so those ten answers' seconds in part 1 are one process's with no other work of the capture; the same ten are generated side by side",
+   "scales_with": "the capture's answers a call"
+  },
+  "processes": {
+   "measured_from": "records/development/2026-11-10-speed-review/README.md",
+   "derivation": "that record (under 'The floor after that is the engine's own work': a recorder holds 4.9 GB of a card during a reading, and card 0 has 15.5 GiB) allows 2 and 3 processes and not 4 (19.6 GB). 2 is read first, the least that is side by side. 3 is started only if 3 times the most one of the two processes held (this run's own beside/beside-2.json, `card_mib`) fits in the card's memory.total less memory.used as nvidia-smi gives them then (recorders_beside.room, not_started); a process nvidia-smi never listed has no reading (null, never zero), and a missing record, a missing reading or a reading of nothing is unknown occupancy and starts nothing; in each of those cases 3 is not started and that is the result for 3. No count above 3 is read: ten answers dealt to four processes leave two of them one answer with seconds of its own (a process's first answer holds the model's load), which is no measure of that process",
+   "scales_with": "the model's size on the card, the card's memory, and the answers a call"
+  },
+  "deal": {
+   "measured_from": "records/development/2026-11-10-speed-review/recorders-beside/recorders_beside.py",
+   "derivation": "answer i of the ten, in the selection's order, to process i mod k: nothing of an answer (its length, its group, its text) chooses its process",
+   "scales_with": "the number of processes"
+  },
+  "gain": {
+   "measured_from": "records/development/2026-11-10-speed-review/recorders-beside/recorders_beside.py",
+   "derivation": "read from the times each answer's result.json was written, in part 1's kept streams and in an arrangement's: an answer's seconds in a process is the time from the end of the answer before it in that process; a process's first answer has none. `slower` is an answer's seconds side by side over its seconds alone, over every answer that has both; `gain` is k over the median of `slower`. The arrangement's wall time, with every process's load, is recorded beside it and is not what `gain` is made from",
+   "scales_with": "the answers that have seconds in both, 10 less the first of each process and the first of the solo's call"
+  },
+  "card_memory_asked_every": {
+   "measured_from": "records/development/2026-11-10-speed-review/recorder-modes/results.txt",
+   "derivation": "3 s: an answer of the fitting thirty took 6.3 to 7.1 s in a whole capture, so each process's memory is read at least twice during every answer; it is a reading of memory, no measure of time. A process's end is seen within 0.05 s, against arrangements of tens of seconds",
+   "scales_with": "an answer's seconds in the recorder"
+  }
+ },
+ "admission": {
+  "by": "weight-research-astra",
+  "at": "2026-11-15T05:40:28-06:00",
+  "revision": 2,
+  "scope": "run.sh capture beside:2 beside:3 reading check, with the revised declaration's occupancy, byte-equality and evidence-retention conditions; original fitting data only; no instrument or reader-protocol change",
+  "record": "records/retrospectives/2026-11-15-recorders-beside-admission-astra.md",
+  "reader_protocol_sha256": "87a2f2f45d5ec4ddad36377cece93bb0f5d553af9cabc234763f18fa570c7d6e",
+  "run_sh_sha256": "556c9cd208756ce29c1fae720b3b07dae2bc939721f9577d6b57017501500018",
+  "recorders_beside_py_sha256": "db1a060afbfdb10e068fb610ab41c366ee82677721eeddd53fb68921ba8f99ad",
+  "prior_declaration_sha256": "5210889f2d00819362f9f6aaba6bcf1792da4c3cd5f1969e38ae6cee20f409cf"
+ },
+ "revisions": [
+  {
+   "revision": "1",
+   "made": "2026-11-15 05:39:31 CT",
+   "made_by": "weight-research-perfomance",
+   "previous": "this file at commit e264773f",
+   "previous_sha256": "14c8ed2aa208e324389c57fc1314f33cc5e4eeb3401438bd159afcc64a08f319",
+   "reason": "Before admission and before any command. weight-research-astra read the committed declaration and source and found two gaps in recorders_beside.py: a process whose card memory was never sampled was recorded as holding 0 MiB, so the room for three could pass without the measured occupancy this declaration requires; and every made stream was removed, and the comparison written only afterwards, even when an answer's bytes were not the solo's.",
+   "what": "recorders_beside.py: a process never listed has `card_mib` null; `room` and `not_started` treat a missing record, a missing reading or a reading of nothing as unknown occupancy, which starts nothing; the card must be named; the comparison is written before anything is removed, only the streams that are the solo's bytes are removed, and a divergent answer's stream stays whole with its process's cases and logs; each arrangement writes in its own folder and is made once, so what a failed one left is not touched. run.sh: three are not started when two were not the solo's bytes. `rule` and `parameters.processes` say so. Nothing else of the declaration changed: its scope, data roles, predictions and what would weaken them are as committed.",
+   "tests": "records/development/2026-11-10-speed-review/recorders-beside/test_recorders_beside.py: 10 on a stand-in for the recorder, 4 of them for these two findings."
+  },
+  {
+   "revision": "2",
+   "made": "2026-11-15T05:40:28-06:00",
+   "made_by": "weight-research-astra",
+   "previous": "this file at commit d6b7e5de",
+   "previous_sha256": "5210889f2d00819362f9f6aaba6bcf1792da4c3cd5f1969e38ae6cee20f409cf",
+   "reason": "The committed declaration and source were assessed; revision 1 resolves unmeasured occupancy and discarded mismatch evidence. Admit only the declared original-only instrument qualification under controlled-bf16-7, preserving all correction-run holds and requiring a separate decision for any later concurrent capture implementation.",
+   "what": "Add dated admission and exact launcher/instrument bindings; no command, model write, new reader protocol, fitting objective, no-fit use or restart performed by this revision."
+  }
+ ]
+}

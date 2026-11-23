@@ -1,0 +1,36 @@
+{
+  "tracking_uri": "http://127.0.0.1:5000",
+  "experiment_id": "6",
+  "run_id": "065132e9dec84329a1f4f2593c73d99c",
+  "status": "FINISHED",
+  "step": 401,
+  "metrics": {
+    "held.physical_configurations": 4,
+    "held.paired_prompts": 8,
+    "held.strict_descent_correct.390": 0,
+    "held.strict_descent_correct.401": 0,
+    "held.complete_chain_correct.390": 0,
+    "held.complete_chain_correct.401": 0,
+    "held.prefix.common_source.pairs_loss_increased": 6,
+    "held.prefix.common_source.pairs_loss_decreased": 2,
+    "held.prefix.common_source.median_percent_change": 0.532870301366822,
+    "held.prefix.raw.pairs_loss_increased": 7,
+    "held.unchanged_generations": 3,
+    "held.friction.strict_correct.primary.390": 7,
+    "held.friction.strict_correct.independent.390": 8,
+    "held.friction.numeric_correct.390": 8,
+    "held.friction.strict_correct.primary.401": 4,
+    "held.friction.strict_correct.independent.401": 6,
+    "held.friction.numeric_correct.401": 8
+  },
+  "artifacts": [
+    "README.md",
+    "behavioral-readout.md",
+    "paired-independent-audit.json",
+    "paired-outcomes.json",
+    "paired-prefix-objectives.json",
+    "prefix-transfer.svg",
+    "result.json"
+  ],
+  "scope": "Post-acquisition summary of the fixed paired endpoints. These metrics did not inform stopping or any weight update."
+}

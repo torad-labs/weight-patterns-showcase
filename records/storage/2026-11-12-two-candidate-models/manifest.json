@@ -1,0 +1,31 @@
+{
+ "what": "Two candidate model files sent to the bucket and their local copies removed, on November 12, 2026 (CT). Each is the original file with one matrix written (blk.17.attn_output.weight); the matrix and the file's record stay in the run.",
+ "why": "Disk: the chain run and its reading needed the space. Marcos pointed out that night that the research CLI uploads important checkpoints and data to Cloudflare, and that anything not important to keep and disposable can be deleted.",
+ "how": "From the repo root: TORAD_RESEARCH_TRACES=$PWD/studies torad-research traces upload <the two files>, then traces verify on the same two (the bucket's bytes read back against their .sha256 records and the local files), then the local copies removed. The log is upload-and-verify.log beside this file.",
+ "verified_ct": "2026-11-12 23:53:37 CST: 2 verified",
+ "removed_locally_ct": "2026-11-12, after the verify, before 11:55 PM",
+ "by": "weight-research-perfomance",
+ "files": [
+  {
+   "bucket_key": "04-round-2-overlap/runs/correction-at-17-original/model/correction-at-17-original.gguf",
+   "was_at": "studies/04-round-2-overlap/runs/correction-at-17-original/model/correction-at-17-original.gguf",
+   "sha256": "89c6839a3cfbd771e90a899fb8ac0b33365a13dc75350fea99d0f477f5622592",
+   "kept_locally": [
+    "studies/04-round-2-overlap/runs/correction-at-17-original/model/written.json",
+    "studies/04-round-2-overlap/runs/correction-at-17-original/candidate/blk.17.attn_output.weight.npy"
+   ],
+   "local_candidate_matrix_exists": true
+  },
+  {
+   "bucket_key": "04-round-2-overlap/runs/correction-members-at-17-original/model/correction-members-at-17-original.gguf",
+   "was_at": "studies/04-round-2-overlap/runs/correction-members-at-17-original/model/correction-members-at-17-original.gguf",
+   "sha256": "2f0eb953ecc3f996608e0e923cdf1df59c172cc2c8ca3c680bb1ce04ca401714",
+   "kept_locally": [
+    "studies/04-round-2-overlap/runs/correction-members-at-17-original/model/written.json",
+    "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate/blk.17.attn_output.weight.npy"
+   ],
+   "local_candidate_matrix_exists": true
+  }
+ ],
+ "to_get_one_back": "TORAD_RESEARCH_TRACES=$PWD/studies torad-research traces list shows it as only in the bucket; the tool's README (tools/torad-research/README.md) has the download command"
+}

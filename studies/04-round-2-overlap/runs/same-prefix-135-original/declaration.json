@@ -1,0 +1,115 @@
+{
+  "method_step": 3,
+  "run_by": "weight-research-astra (the specification, and the assessment of what the result means), weight-research-fable (this declaration, the implementation, the capture and the tables)",
+  "status": "Declared on November 12, 2026 (CT), before the capture: no prefix has been generated and no row of one read.",
+  "kind": "An original-data reading with one short original-model capture: five original answers that write the same text up to one decision, two of them the wrong way and three the right way, each generated natively by the unchanged original BF16 model through that decision and no further, with the whole trace of the question and of every answer row. No token is fed, nothing is generated twice, and no edited model, candidate, target, mask or threshold is made. It changes no reference, no cohort and no run.",
+  "authority": "Astra's decision at 27b3e014 (specification), reading B: 'This is the authorization for those controls, not for additional questions, full-answer generation, edited models or a dose search.' The specification authorizes 'the specified short original-model capture' and re-recording the two registered controls with the three new ones where their existing capture does not share the protocol. Marcos, relayed on November 12: a robust path forward is to be planned and then acted on, with no waiting on his approvals.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "specification": "records/retrospectives/2026-11-12-inherited-and-added-astra.md",
+  "builds_on": "records/development/2026-11-12-correction-objective/same-text-pool.txt",
+  "correction_reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "correction_reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+  "cases": [
+    {"id": "discovery-10-channel-h1", "group": "wrong", "loss": 11, "role": "registered original answer that subtracts the descent; a fitting answer of the cohort; recorded again here"},
+    {"id": "expanded-040-h1", "group": "wrong", "loss": 12, "role": "registered original answer that subtracts the descent; a NO-FIT answer of the cohort, recorded again here from the original model for this diagnostic only"},
+    {"id": "expanded-041-h1", "group": "successful", "loss": 16, "role": "unregistered, historically successful in the screening pool; an auxiliary diagnostic observation"},
+    {"id": "expanded-042-h1", "group": "successful", "loss": 20, "role": "unregistered, historically successful in the screening pool; an auxiliary diagnostic observation"},
+    {"id": "expanded-043-h1", "group": "successful", "loss": 24, "role": "unregistered, historically successful in the screening pool; an auxiliary diagnostic observation"}
+  ],
+  "endpoint": {
+    "screening_step": 135,
+    "tokens_generated": 136,
+    "prompt_tokens": 173,
+    "last_input_position": 307,
+    "meaning": "Screening step n is the row at input position 172 + n: it writes answer token n. Step 135 is the row that writes the first token of the line after the descent's gain: 'Kin' in the two wrong answers' screening records and 'Total' in the three successful ones'. The capture keeps that row and stops: positions 0 to 307."
+  },
+  "implementation": {
+    "module": "code/signal-trace/pipeline/overlap/same_prefix.py (commands capture, which ends with record, and read)",
+    "recorder": "code/signal-trace/pipeline/acquisition/run_a_observation.py, run: the runner that recorded the registered answers, with the same arguments (the original model, GPU0, natural, capture, residual)"
+  },
+  "hypothesis": "A capability leaves a recurring difference between the connected traces of correct and wrong answers, and editing the weights where that difference recurs can repair the capability. In the registered cohort a wrong and a correct answer have read different text by the line on which the wrong ones go wrong, so a difference between their rows there can come from what they read and not from what they compute. Astra's statement of what this reading tests: the later line-onset comparison may resolve a wrong/correct computation difference not explained by earlier answer wording or ordinary variation with the question's numbers.",
+  "why_this_direction": "The method's third step is the discrepancy along the whole path, reported where it appears. The held-member reading (460c3ebb) found it in left-out answers at every merge, and its same-text part found the two confounds that stand between that and a correction request: the first rows follow the question's speed, and wherever two registered answers had read the same text their rows differed by what the questions' numbers give. No registered wrong and correct answer share their text beyond the second heading. The screening pool holds exactly six pairs that do, all of five answers with the same m, v, drop and rise (same-text-pool.txt, lines 10 to 15): they write the same 135 tokens and part at step 135, the first token of the line after the descent's gain, 'Kin' against 'Total'. That row is where the wrong and the right computation first show in the text, and Performance's text interventions at the original's weights (dcae6979) found the label written there to carry the outcome in most fitting answers. Two of the five are registered; three are not, so their traces do not exist. Recording the five short prefixes is the one way to read the computation of a wrong and a right answer at identical wording up to the row where they part, and so to tell a difference in what is computed from a difference in what was read. It asks for five prompts through 136 tokens, no new question and no edited model.",
+  "repeating_pattern_check": "Four things have happened more than once. (1) Rows of a wrong and a correct answer were compared where the two had already read different text, and the difference was taken for the computation's (every overlap of the cohort from the sign's line on; 460c3ebb's same-text reading showed how little same-text evidence there was). Here the five answers have one text up to the row read last. (2) A difference that follows the question's numbers was read beside one that follows the outcome. Here m, v, drop and rise are the same in all five and only the loss differs (11, 12 | 16, 20, 24); every pair is reported with its two losses and the prompt tokens that differ, and a cross pair is laid beside same-kind pairs with the same loss difference and the same number of differing tokens. The two kinds are still parted by the loss, which this run cannot undo and says so. (3) A token was used as the marker of where the answers diverge (Marcos: past agents used the token as a marker of divergence, and the trace is what should define it). Here the token only fixes where the capture ends; the reading follows the trace at every position and merge before it and reports where the states part. (4) An expected text was obtained by feeding or retrying. Nothing is fed here, the batch is generated once, and a prefix that leaves its historical text is kept and reported as it is.",
+  "what_went_wrong_before": "The same-text part of 460c3ebb read the rows along one common direction only; Astra's assessment: it 'does not establish zero capability-related difference, especially in a different direction or in log size, which that particular same-prefix analysis did not read', and its six pairs 'are five answers in one numeric stratum, not six independent replications'. This reading keeps the raw states, the direction and the log size at every merge and row, and treats the five as five. The registered answers' existing recordings were made on November 9 with another build of the recorder (wide-overlap's capture names observer 73af925b...; today's is 0b4ea036...), and their raw streams were deleted after export: reusing them would mix two protocols and would have neither the question's rows nor the raw states. So all five are recorded together now, and the two registered ones are laid beside their existing recordings as a reproduction reading.",
+  "rule": {
+    "capture": "The five cases' prompts exactly as their case.json holds them (173 tokens each), in one batch, by run_a_observation.run(original model, cases, GPU0, 'natural', 'capture', 'residual'): greedy, no supplied token, GGML_CUDA_DISABLE_FUSION=1, max_tokens 136. The stream keeps every residual tensor at every position, the question's included, and the contributions each merge adds. The runner refuses a capture that exists, so the batch is made once: no retry, no second attempt for a wanted prefix, no splice.",
+    "record": "After the capture, per case: the first step at which its tokens leave its historical screening answer (none expected through step 134), the number of steps whose full scores are the historical ones to the bit (the SHA-256 of all logits a step, which both records hold), the largest change of a best token's score, and the decision at step 135 now and historically with its eight best tokens and the margin over the second. A prefix that leaves its historical text earlier is kept; the rows are then read through the first step at which the five differ, and the report says so.",
+    "pairing": "Rows are paired by position: the prompts have one length and differ at positions 44 and 45 at most (the loss), and the answers have one text before the decision. No registration of the three unregistered answers is made and no correspondence is carried past the decision.",
+    "reading": "For every one of the ten pairs, at every position (0 to 307) and each of the 105 merges: the difference of the outgoing states, raw and over the two states' mean size; of the unit states; of the log sizes; and jointly, sqrt(|direction|^2 + (w_size / w_direction) size^2) in the frozen reference's weights, which the reference itself never applied to a question's position. And where the difference comes from: what a merge adds is on record in this capture, so for two rows at one position (h+_x - h+_y) = (h-_x - h-_y) + (a_x - a_y) exactly, and the outgoing difference's length is the sum of the part that came in and the part the merge added, each taken along the outgoing difference. Tables by stretch of positions (parameters.position_groups) after each layer's last merge and, at the row of the decision, at every merge; the six cross pairs beside the wrong pair and the three successful pairs, and a cross pair beside the same-kind pairs matched to it (parameters.matched_comparisons).",
+    "reproduction": "The two registered cases' rows here beside their existing recordings: the state each attention merge and each feed-forward merge adds to (input-overlap) and the size after every merge (wide-overlap), at the answer rows 0 to 135: the greatest relative difference and the rows equal to the bit.",
+    "along_the_common_direction": "At the places the two registered cases' rows are registered at (parameters.row_places), for each merge: the reference is the registered correct answers other than a case sibling of a tested case; the builders are the registered wrong answers other than the two tested ones and a case sibling of a tested case; each builder's leftover is taken from its nearest mixture of the reference in the joint features (the frozen weights, no radius, mixture.joined, from the even mixture), and the direction is the builders' summed leftover. Each of the five cases' rows (its unit state and log size from this capture) is read the same way against the same reference and direction; each builder is read with itself and its case siblings left out of the direction, as the level the registered wrong answers themselves show. A search's bound gives each value its uncertainty as in 460c3ebb; the two wrong cases are said to lie over the three successful ones at a row and merge where the lower of the two is over the highest of the three, and that is called resolved where the gap exceeds both sides' uncertainties.",
+    "data_roles": "discovery-10-channel-h1 is a fitting wrong answer of the registered cohort and expanded-040-h1 a no-fit one: both are original answers recorded again from the original model, which is no edited-model evaluation, and expanded-040-h1 is not to be described later as untouched data. expanded-041-h1, expanded-042-h1 and expanded-043-h1 are auxiliary diagnostic observations: they are not added to the thirty correct reference members, the sixty registered answers, the fitting folds, a target's calibration or any generalization score. Their label is historical: a prefix that stops at the decision verifies no full answer, and a declared stop is no answer failure. The registered cohort's recordings are read only for the reproduction reading and the common direction. Nothing is fitted, selected, tuned or evaluated. reserved-40b is not read and stays sealed.",
+    "scope": "Five answers of one set of m, v, drop and rise: they cannot establish a broad invariance. Their questions differ in the loss, so the same answer prefix is not the same prompt and this is no identical-input causal experiment. No number of this run selects a model, a ridge, a dose or a threshold, and no reference label changes.",
+    "card": "The capture on GPU0, the one card of everything compared, under the runner's own lock on /run/user/1000/gpu0.lock; it waits until the card has the 11,000 MiB the runner asks for. The read on card 1 under /run/user/1000/gpu1.lock: it makes no engine call and reads recordings.",
+    "storage": "The capture is about 5 GB (five cases, 308 positions each): bulk data inside this run's capture/, archived with torad-research (store root <repo>/studies), verified there, ignored by git and kept locally. The read's arrays (pairs.npz, along.npz) likewise. Committed: record/ (the tokens and decisions against the historical ones, the execution record), read/summary.txt and summary.json and the searches' loops and bounds, the logs, provenance.json and result.json. Nothing is removed."
+  },
+  "parameters": {
+    "endpoint": {
+      "measured_from": "records/development/2026-11-12-correction-objective/same-text-pool.txt",
+      "derivation": "The six pairs of lines 10 to 15 first differ at screening step 135. Each case's screening result.json lists that step at input position 307 = 172 + 135 after a prompt of 173 tokens, and the recorder generates tokens 0 to max_tokens - 1, so max_tokens = 135 + 1 = 136 keeps the row of the decision and nothing after it.",
+      "scales_with": "The pool's first differing step and the prompt's length."
+    },
+    "cases": {
+      "measured_from": "records/development/2026-11-12-correction-objective/same-text-pool.txt",
+      "derivation": "The five answers of the six pairs that write the same text beyond step 110, all with m 3, v 8, drop 1 and rise 1: the two subtracting answers (loss 11 and 12, registered) and the three successful ones (loss 16, 20, 24, not registered). No other answer of the pool shares their text to that step.",
+      "scales_with": "The screening pool."
+    },
+    "protocol": {
+      "measured_from": "studies/04-round-2-overlap/runs/wide-overlap/declaration.json",
+      "derivation": "The protocol the registered answers were recorded with (pipeline/overlap/wide.py, capture): the original model, GPU0, natural greedy generation from the case's own prompt tokens, the residual stream at every position. One batch of the five, today's recorder.",
+      "scales_with": "The recorder's build and the card: a comparison across either needs its own reproduction reading."
+    },
+    "joint_weights": {
+      "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+      "derivation": "The frozen reference's scales S_direction 1268.5365669493656 and S_size 28.67797931944294: w_f = 0.5 / S_f, so the joint reading in the direction's units is |direction|^2 + 44.23381971299945 size^2. Used as the one fixed way to put a direction and a log-size difference together; the reference itself is not changed and never read a question's position.",
+      "scales_with": "The original model and its reference of all sixty answers."
+    },
+    "reference_and_builders": {
+      "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+      "derivation": "A case is an id without its ending -h1 or -h3 (and -channel). Reference: the thirty registered correct answers less discovery-10-channel-h3, the case sibling of a tested case: 29. Builders: the thirty registered wrong answers less the two tested ones and expanded-042-h3, the case sibling of a tested case: 27. The command recomputes both from the cohort and the declared cases.",
+      "scales_with": "The cohort and the tested cases."
+    },
+    "row_places": {
+      "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+      "derivation": "The two registered cases' own registration of their steps 0 to 135, which is the same for both: 136 steps on 149 places, step 135 at place 148. It annotates the rows; the command stops if the two maps differ.",
+      "scales_with": "The registration and the endpoint."
+    },
+    "search_end": {
+      "measured_from": "records/development/2026-11-12-correction-objective/members-held-out.txt",
+      "derivation": "As in 460c3ebb and merge-contributions-original: a search ends when the summed bound of its problems is at most sqrt(2.220446049250313e-16) = 1.4901161193847656e-08 of their summed cost; the last loop allowed is the square of the number of members (29^2 = 841). Every search's loops and bound are kept.",
+      "scales_with": "The arithmetic and the number of members."
+    },
+    "position_groups": {
+      "measured_from": "studies/04-round-2-overlap/inputs/acquisition",
+      "derivation": "From the cases themselves: the prompt before the first position at which two cases' tokens differ (0 to 43), the differing tokens (44 and 45), the rest of the prompt (46 to 171), the prompt's last position (172, which writes token 0), the answer's rows by the line their token is written on (a line ends with a token that ends in a newline), and the row of the decision. Reporting windows only: the arrays are kept per position.",
+      "scales_with": "The prompts and the shared text."
+    },
+    "matched_comparisons": {
+      "measured_from": "studies/04-round-2-overlap/inputs/acquisition",
+      "derivation": "A cross pair is laid beside the same-kind pairs with the same loss difference and the same number of differing prompt tokens: 12/16 beside 20/24 (4; one token), and 12/20 beside 16/24 (8; two tokens). The other four cross pairs (11/16, 11/20, 11/24, 12/24) have no such same-kind pair and are reported with their loss differences.",
+      "scales_with": "The five cases' losses and how they tokenize."
+    }
+  },
+  "prediction": "Written before the capture. (1) The prefixes reproduce: each of the five, generated natively on GPU0 by today's recorder, writes the 135 tokens of its historical screening answer and makes the historical decision at step 135. The historical margins there are small (0.01 and 0.07 in the wrong cases, 0.15, 0.41 and 0.15 in the successful ones) and the recorder has been rebuilt since the registered answers were recorded, so this can fail; then the case is reported as it is and the rows are read through the first step at which the five differ. (2) Before the first prompt position at which two cases' tokens differ, the pair's states are equal at every merge. (3) No jump between the kinds in how far apart the states are: at the row of the decision, in the joint reading, the cross pair 12/16 lies nearer together than the successful pair 16/24, which has twice its loss difference, at more than half of the 105 merges. How far apart two of the five are follows their losses, not their kind. (4) The recurring difference does part them: along what the registered wrong answers have in common, at the row of the decision (registered at place 148, where 460c3ebb read the left-out difference in 0.89 to 1.00 of the pairs from layer 6), both wrong cases lie over all three successful ones at more than half of the merges of layers 6 to 34; and at the rows before the decision they do so at fewer merges, in the mean over those rows, than at the row of the decision.",
+  "would_weaken_it": "The reading's distinction is weakened where: a prefix does not reproduce (the comparison then ends at the first row the five differ at, and what it can say shrinks with it); a cross pair is no farther apart than the same-kind pairs matched to it, so that the difference is ordinary variation with the question's number (prediction 3 expects this for the distance as a whole); along the common direction the five are ordered by their loss rather than parted by their kind, or the successful cases carry as much of it as the wrong ones, or the builders left out do not carry it either (prediction 4 failing); or the bounds leave the comparison unresolved. If prediction 3 fails and the kinds do jump apart, the difference at the row of the decision is larger than this declaration expects, which would strengthen the line-onset comparison, not weaken it. Each of these concerns five cases of one stratum whose questions differ in the loss. None bears on whether repair and transfer are possible: they are observed.",
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/inputs/acquisition",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+    "studies/04-round-2-overlap/runs/input-overlap/inputs",
+    "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/same-prefix-135-original/capture",
+    "studies/04-round-2-overlap/runs/same-prefix-135-original/record",
+    "studies/04-round-2-overlap/runs/same-prefix-135-original/read",
+    "studies/04-round-2-overlap/runs/same-prefix-135-original/logs",
+    "studies/04-round-2-overlap/runs/same-prefix-135-original/provenance.json",
+    "studies/04-round-2-overlap/runs/same-prefix-135-original/result.json",
+    "studies/04-round-2-overlap/runs/same-prefix-135-original/run.sh"
+  ]
+}

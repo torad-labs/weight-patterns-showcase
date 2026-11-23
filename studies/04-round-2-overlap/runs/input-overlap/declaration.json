@@ -1,0 +1,34 @@
+{
+ "method_step": [
+  1,
+  2,
+  3
+ ],
+ "run_by": "Claude",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "hypothesis": "Where the correct pattern and the wrong pattern diverge, the inputs arriving at each matrix differ between the two groups by more than chance, and where the patterns follow each other they do not. Both groups pass through the same weights, so the gap in what a matrix sends is the gap of its inputs carried through the matrix. The inputs are then what tells a weight change where it is.",
+ "what_went_wrong_before": "A2 (a2-sent, a2-diverge) was built from the wrong group's average inputs alone. Answering on its own, the edited model left the path at the ninth token, where the groups follow each other, and skipped the calculation; every correct answer broke. Where a matrix was asked for nothing the built edit still changed its output by a quarter to two thirds of what it did where it was asked. The correct group's inputs were never recorded, so nothing on the input side told the two groups apart.",
+ "why_this_direction": "Step 6 of the method asks for B2 to protect what A2 broke, and A2 broke every correct answer and the path of every answer where nothing needed correcting. A weight change sees only the input arriving at the matrix (Marcos, November 9: the correction may need to be overlap aware and selective about which positions of the matrices it acts on). The inputs of the matrices are part of the trace, and steps 1 to 3 have not yet been read there for both groups. This run reads them, on the same 60 answers and the same alignment, before any protection is built on them.",
+ "repeating_pattern_check": "What repeats: an edit is built on a quantity before the overlap of that quantity has been looked at (a2-pattern on the merged turn pushed through the scale; a2-sent and a2-diverge on inputs from one group only). Here the inputs of both groups are overlapped and their gap is read against chance first. What also repeats: the trace gets replaced by something easier to point at. The members, the order and the alignment are trace-overlap's, unchanged; no token, value or answer enters.",
+ "rule": {
+  "members": "The 60 answers of trace-overlap, in its order, with its alignment along the 480 places. No member is added, dropped or re-chosen.",
+  "what_is_overlapped": "For each of the 70 attention-output and feed-forward-down matrices, at every place: the input arriving at the matrix, as the original model computes it.",
+  "overlap": "trace-overlap's calculation: the mean over the correct members, the mean over the wrong members and their difference, the gap, at every place and matrix.",
+  "recurrence": "trace-overlap's two readings: the gap against what two patterns of one and the same group would differ by, and the agreement of the gap between two halves of each group that share no answer.",
+  "kept_with_it": "Every answer's own input of every matrix at every place, and its inputs at the positions of the question, because an edit that has to act on some inputs and leave others needs them."
+ },
+ "prediction": {
+  "expected_observation": "At the places and matrices where the two groups diverge in what the matrix sends, the gap between their inputs is several times chance and the two halves agree. Where the groups follow each other, the input gap is close to chance.",
+  "failures_only": "Original model only. No edit in this run."
+ },
+ "would_weaken_it": "Where the sending diverges, the gap between the two groups' inputs is no larger than chance or the halves do not agree. The inputs could then not tell a weight change which answers and places to act on.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/trace-overlap",
+  "studies/04-round-2-overlap/runs/sent-overlap",
+  "studies/04-round-2-overlap/runs/wide-overlap",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/input-overlap"
+ ]
+}

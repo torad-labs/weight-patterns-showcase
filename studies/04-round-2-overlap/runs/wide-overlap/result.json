@@ -1,0 +1,42 @@
+{
+ "run_by": "Claude",
+ "population": {
+  "failing": 30,
+  "correct": 30,
+  "question": "the block in the channel wording; mass, speed, drop, loss and climb vary on both sides",
+  "recorded": "all 60 answers came out token for token as recorded; the turns at all 105 merges are kept for every generated token (19 GB), raw streams deleted"
+ },
+ "prediction_vs_result": {
+  "predicted": "Each group's overlap agrees with its left-out members, and the two overlaps differ before the first wrong calculation. The positions that hold the questions' own numbers do not separate the groups.",
+  "observed": [
+   "No token was marked as the error. Both groups were overlaid over the whole answer and the gap read along it (figure where-the-traces-part.png).",
+   "Over the first 126 generated tokens, where all 60 answers have the same structure (the opening, the initial kinetic energy, the descent's potential energy), the two overlaps run together. The gap is about 0.14 of the spread inside a group, and a left-out answer falls on its own group's side 56% of the time, close to a coin flip. No position and merge in this stretch separates every left-out answer.",
+   "Right after that stretch the wording forks. The next line is either 'Total Energy before rough section' or 'Kinetic Energy at bottom of descent'. All 28 aligned failing answers take the second; the correct answers split 16 to 11.",
+   "At the computation that produces that word, with the same text behind it in every answer, the groups lean apart but do not separate: 0.55 on the own side in layers 0 to 5, about 0.7 from layer 6 or 7 on, with a gap of about a quarter of the spread.",
+   "From the fork to the end of the rough-section line the gap is large (about 0.9 of the spread on the median, up to 10) and 71% to 97% of left-out answers fall on their own side. It shows at every depth, including layer 0, so in this stretch the groups are also reading different words.",
+   "From the 'Final State' passage on, the groups do not separate (own side 0.45)."
+  ],
+  "not_predicted": [
+   "With the object the same and the numbers spread alike, almost nothing recurs between the groups before the wording forks. The strong separation before the first wrong token in full-overlap was mostly the object.",
+   "Eleven correct answers take the same word as the failing answers at the fork and still end right."
+  ]
+ },
+ "failures_only": {
+  "scope": "Original model only. No edit in this run."
+ },
+ "what_this_changes": [
+  "The numbers do not carry the groups apart: the prediction about the positions that hold them held.",
+  "The prediction that the overlaps differ before the first wrong calculation held only weakly: a lean of about 0.56, rising to about 0.7 at the fork from layer 6 on.",
+  "In this set the place where the traces part is the fork after the descent's potential energy, where the answer decides how that energy enters. Before it the traces are nearly the same; after it the texts differ.",
+  "The answers are greedy and the weights are the same, so before the fork the two groups can only differ through their numbers. What tips an answer to the wrong side there is small next to the spread inside a group."
+ ],
+ "records": [
+  "calculation/summary.json",
+  "calculation/member-evidence.json",
+  "members.json",
+  "source/labels-original-gpu0.json",
+  "where-the-traces-part.png",
+  "calculation/split-half.npz"
+ ],
+ "correction": "Added after the first reading, the same evening. The first reading asked whether single answers can be told apart (the share of left-out answers on their own side). That is a question about answers, not about the overlap. Asked of the overlaps themselves, the gap does recur before the fork: when each group is cut into two halves that share no answer, the gap computed from one half agrees with the gap from the other at a cosine of 0.37 over the first 126 tokens (two unrelated directions in 1,536 dimensions agree at about 0), and at 0.77 after the fork. Before the fork the agreement is as high in the first layers as in the deep ones, so part of it comes in with the questions' numbers. The statements above that almost nothing recurs before the fork are true of single answers and wrong for the overlaps."
+}

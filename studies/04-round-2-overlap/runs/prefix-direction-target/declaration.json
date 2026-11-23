@@ -1,0 +1,65 @@
+{
+  "method_step": 4,
+  "operation": "prefix-direction-target",
+  "prefix_sources": {
+    "record": "studies/04-round-2-overlap/runs/same-input-operation-comparison/prefix-declaration.json",
+    "sha256": "f81063f9edff7c308cfdbe201c05276c0ab7dcf0f86f70ae364f31dddce9c97e"
+  },
+  "why_this_direction": "Use the frozen positive pair with separation from the failed edit before feedback. Add a per-cell loss to the existing native update.",
+  "repeating_pattern_check": "Signed global distance and the later historical readout admitted wrong decisions. Include only same-input donor agreement; track coverage on fresh trajectories.",
+  "what_went_wrong_before": "Overall loss and local warning thresholds did not isolate the physical repair. Do not pick a layer, event, cutoff or direction after inspecting these contrasts.",
+  "hypothesis": "Moving under-target local projections toward the range reached by both successful donors can improve fresh computations.",
+  "prediction": "Both successful directions have positive projections on all selected cells by construction. Transfer must be judged by fresh model outcomes.",
+  "would_weaken_it": "The frozen direction is already satisfied on errors, moves on native installation without better outcomes, or damages correct friction.",
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-target/freeze.py",
+    "sha256": "1e013571e455c1ed9df99eb5965f4d0dd1ac7629193749157763b9220aa48b84"
+  },
+  "observed_prefix": {
+    "record": "studies/04-round-2-overlap/runs/same-input-operation-comparison/prefix-effects.json",
+    "sha256": "bfb02bd18fef676ffc4055af7120a6088bdc2994cb66f924a94c863ea0ab3de5"
+  },
+  "registrar": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+    "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+  },
+  "sources": [
+    {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-target/freeze.py",
+      "sha256": "1e013571e455c1ed9df99eb5965f4d0dd1ac7629193749157763b9220aa48b84"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    }
+  ],
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "studies/04-round-2-overlap/runs/prefix-direction-target/freeze.py",
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-direction-target/freeze.py",
+        "sha256": "1e013571e455c1ed9df99eb5965f4d0dd1ac7629193749157763b9220aa48b84"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      }
+    ],
+    "events": "studies/04-round-2-overlap/runs/same-input-operation-comparison/prefix-effect-observability/events.jsonl",
+    "operations": [
+      "trace.before_free_history_fork"
+    ],
+    "local_events": "studies/04-round-2-overlap/runs/prefix-direction-target/observability/events.jsonl"
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/same-input-operation-comparison/prefix-effects.json",
+    "studies/04-round-2-overlap/runs/same-input-operation-comparison/prefix-declaration.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/prefix-direction-target/objective.json",
+    "studies/04-round-2-overlap/runs/prefix-direction-target/frozen.npz",
+    "studies/04-round-2-overlap/runs/prefix-direction-target/result.json"
+  ],
+  "rule": "Each native cell with positive inner product between donor changes gets the normalized sum of their unit directions and the smaller positive donor projection. Reciprocal supported-cell count supplies unit total mass; no held-out examples define a target."
+}

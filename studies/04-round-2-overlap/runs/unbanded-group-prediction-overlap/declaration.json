@@ -1,0 +1,128 @@
+{
+  "method_step": 4,
+  "operation": "unbanded-group-prediction-overlap",
+  "why_this_direction": "The single-reference hinge can penalize natural variation and hide a bleed. Determine which shared source locations can be compared using the same causal registration across the full original answers.",
+  "repeating_pattern_check": "One-pair historical measurements missed the sign or measured an equation that followed it. Compute overlap independently of text, sign positions, single-donor distance and layer choices.",
+  "what_went_wrong_before": "An absent visit could masquerade as lower loss. Keep all donor visits and coverage.",
+  "hypothesis": "The natural correct and failing descents contain recurring computational differences on commonly registered source locations.",
+  "prediction": "Some locations have independent correct and failing witnesses within the same frozen coordinate system.",
+  "would_weaken_it": "The registered paths have no support across groups or the frozen computational contrasts fail across donor members.",
+  "sources": [
+    {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-prediction-overlap/register_group.py",
+      "sha256": "2d54db64ad25e66c14a4c5c6128a9b7310ed08e8b43e9ddd452152578668c46b"
+    },
+    {
+      "record": "records/development/2026-11-18-original-operation-witnesses/load_witnesses.py",
+      "sha256": "9b2adb1530d76299b7e22d995def6cffb1381e622fac6411b3f780194adc8bc7"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+      "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+    },
+    {
+      "record": "records/development/2026-11-18-original-operation-witnesses/witnesses.json",
+      "sha256": "6758040c344068d37fd24e24301f6be117be2de2b86cbc53a625f39bdf394b12"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    }
+  ],
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/unbanded-group-prediction-overlap/register_group.py",
+    "sha256": "2d54db64ad25e66c14a4c5c6128a9b7310ed08e8b43e9ddd452152578668c46b"
+  },
+  "witness_loader": {
+    "record": "records/development/2026-11-18-original-operation-witnesses/load_witnesses.py",
+    "sha256": "9b2adb1530d76299b7e22d995def6cffb1381e622fac6411b3f780194adc8bc7"
+  },
+  "registrar": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+    "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+  },
+  "witnesses": {
+    "record": "studies/04-round-2-overlap/runs/unbanded-group-overlap/original-witnesses.json",
+    "sha256": "6758040c344068d37fd24e24301f6be117be2de2b86cbc53a625f39bdf394b12"
+  },
+  "anchor": "expanded-004-h1",
+  "donors": [
+    "discovery-17-channel-h1",
+    "expanded-001-h3",
+    "expanded-020-h1",
+    "expanded-034-h3",
+    "expanded-042-h3",
+    "expanded-045-h1",
+    "expanded-046-h3",
+    "expanded-068-h1",
+    "expanded-070-h1",
+    "expanded-087-h3",
+    "expanded-092-h1",
+    "expanded-094-h1",
+    "expanded-095-h1",
+    "discovery-01-channel-h1",
+    "discovery-06-channel-h1",
+    "discovery-15-channel-h1",
+    "discovery-00-channel-h3",
+    "discovery-08-channel-h3",
+    "discovery-10-channel-h3",
+    "expanded-029-h1",
+    "discovery-11-channel-h3",
+    "expanded-064-h1",
+    "expanded-071-h1",
+    "expanded-039-h3",
+    "expanded-076-h1",
+    "expanded-078-h1",
+    "expanded-023-h1"
+  ],
+  "fit": "discovery-05-channel-h1",
+  "development_check": "discovery-10-channel-h1",
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/unbanded-group-prediction-overlap/register_group.py",
+        "sha256": "2d54db64ad25e66c14a4c5c6128a9b7310ed08e8b43e9ddd452152578668c46b"
+      },
+      {
+        "record": "records/development/2026-11-18-original-operation-witnesses/load_witnesses.py",
+        "sha256": "9b2adb1530d76299b7e22d995def6cffb1381e622fac6411b3f780194adc8bc7"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+        "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+      },
+      {
+        "record": "records/development/2026-11-18-original-operation-witnesses/witnesses.json",
+        "sha256": "6758040c344068d37fd24e24301f6be117be2de2b86cbc53a625f39bdf394b12"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+        "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+      }
+    ],
+    "entrypoint": "studies/04-round-2-overlap/runs/unbanded-group-prediction-overlap/register_group.py",
+    "operations": [
+      "trace.group_donor_registration"
+    ],
+    "local_events": "studies/04-round-2-overlap/runs/unbanded-group-prediction-overlap/observability/events.jsonl"
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/unbanded-group-overlap/original-witnesses.json",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/unbanded-group-prediction-overlap/registrations.json"
+  ],
+  "rule": "Use all causal prefix endpoints from the complete turn field and keep every tied endpoint; no textual phase or position determines correspondence. The 27 donor traces exclude the coordinate anchor, fitting case and separate development case. The native export separates question events from prediction events. Start every source and query at native input_position=len(prompt tokens)-1, the first prediction. The earlier registration included one extra prefill event."
+}

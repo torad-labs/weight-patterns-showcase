@@ -1,0 +1,85 @@
+{
+ "method_step": 3,
+ "run_by": "weight-research-perfomance",
+ "status": "declared November 14, 2026 (CT), before any pass of it; the time of the declaration is its commit's.",
+ "kind": "diagnostic reading of an existing swept model at one row, with the original read beside it on the same texts. Four plain passes of the declared recorder on card 0 under its lock (no capture), each a supplied text fed token by token with the engine's own eight highest scores kept at every step. No edit, no solve, no candidate, no model written; both model files are only read.",
+ "authority": "Fable's request of November 14, 2026 (about 6:40 PM CT), for the decision on the next target, which is Astra's: after the matched-context sweep all fifteen wrong answers add the descent's gain, and whether that survives a field that asks nothing outside the gap depends on whether the plus is the changed weights' or rides on the wording before the sign. The reading of candidates is this seat's (STATE.md, who holds what). Marcos, November 12, 2026: the trace, not the token, defines a divergence; a count of signs is read here as a diagnostic and never as a repair.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "read_model": "studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/working.gguf",
+ "read_model_sha256": "05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe",
+ "implementation": "run.sh in this folder: four passes of records/development/2026-11-12-path-forward/history_check.py with the cohort of controlled-bf16-1 (the matched-context run's own), each after the research verifier and through after-the-others.sh on card 0: pass:original-recordings, pass:swept-recordings, pass:original-own, pass:swept-own; then `read`, records/development/2026-11-12-path-forward/sign_on_texts.py (files only), which writes sign-rows.json. `own` is the text the swept model wrote by itself in its run's `own` step on card 0 (whole-gap-mates-original/own/<answer>/answer.json).",
+ "reading": {
+  "passes": {
+   "original": {
+    "recordings": "original-recordings",
+    "own": "original-own"
+   },
+   "edited": {
+    "recordings": "swept-recordings",
+    "own": "swept-own"
+   }
+  },
+  "recorded_rows": "studies/04-round-2-overlap/runs/same-line-sign-original/rows/index.json",
+  "own_rows": "studies/04-round-2-overlap/runs/whole-gap-mates-original/stated-numbers.json"
+ },
+ "hypothesis": "The project's hypothesis: a capability leaves a recurring difference between the traces of correct and wrong answers, and editing the weights where that recurring difference lives repairs the capability. This run reads, for the one decision every wrong fitting answer got wrong, whether the matched-context sweep's weights carry the corrected decision on the text the failure was recorded on, or whether the decision follows from the text the swept model has written by then.",
+ "why_this_direction": "Step 3 asks for the discrepancy along the whole path and reports where it appears. The matched-context sweep (whole-gap-mates-original/result.json) is the first construction after which no wrong fitting answer subtracts the descent's gain, and its record also shows the cost: the complete sum rose (0.067494 to 0.086213), all thirty texts changed and 21 of 30 answers carry a heading no original answer had. Its field asks a wrong answer's every row for its matched success's state, the rows the original already had right among them, so the same sweep changed the weights at the sign's row and the text before it, and an own answer cannot tell the two apart. The next target is Astra's decision, and one proposal on the table is the same field asking nothing at rows outside the gap. If the plus is the weights' on the wrong answers' own wording, that narrower field keeps what repaired the sign; if the plus follows from a success's wording written before the row, the narrower field removes its cause. One reading separates the two without a solve: the original's weights on the swept model's text and the swept weights on the recordings' text, at the sign's row. The same reading on a2-path (sign-route-a2-path/result.json) found the plus riding on the wording (the original's weights favoured it at 5 of 6 declared rows on a2-path's text), and on the two closed chains found it the weights' (the original favoured the minus at 5 of 6 and 8 of 9 rows on their text: records/development/2026-11-12-path-forward/README.md, 'The closed chains read whole on their own path'). Which of the two the whole-path sweep is has not been read.",
+ "repeating_pattern_check": "Three things have happened more than once. (1) A count of answers that write the right token was taken for a repaired computation and later qualified by a changed wording (a2-path's 29 of 30, correction-at-19, the six-supports chain; STATE.md, Settled). Why: an own answer differs from the recording before the decision row, so weights and history are confounded in it. This run holds the text and changes only the weights, and holds the weights and changes only the text, at the row itself, with all four cases read by one instrument on one card. (2) A row finder was widened after the text had been read (sign-route-a2-path: the declared pattern named 6 of 15 rows and a wider one was added afterwards, outside the predictions). Here both finders are fixed before any pass and are already on record as covering every answer: the thirty recorded rows of same-line-sign-original, and the pattern of whole-gap-mates-original/stated-numbers.json, which that record says finds the sign in all thirty of the swept model's answers. (3) A reading on one card was laid beside a reading on the other, which words 9 of 30 answers differently with the same weights. Every pass here is on card 0, where the recordings were made and where the swept model wrote its own text, and the original is read again there by the same instrument instead of being taken from an older record.",
+ "what_went_wrong_before": "Every construction so far repaired some answers and broke others. The matched-context sweep removed the recorded failure from all fifteen wrong answers and lost one correct answer, with the trace's complete sum up; its repair has been read in the text (stated-numbers.json) and in the complete sum, and neither says whether the corrected sign is carried by the weights or by the new wording. The one earlier reading of that question on a whole-path edit (a2-path) lost nine of fifteen rows to its own pattern.",
+ "rule": "Data roles as the owner set them: the thirty fitting answers (15 wrong, 15 correct) of the matched-context run's cohort only. The no-fit 15 + 15 are not read and reserved-40b stays sealed. This reading selects no candidate, sets no target, scores no answer as repaired and feeds no solve: a changed sign is not a repaired computation. Each text's row is found on that text and nothing is paired by offset across two texts. The sign between the numbers is read beside the sign between the names and never counted with it. The models are only read; the run writes only in its own folder; all four passes are on card 0 under its lock.",
+ "parameters": {
+  "cases": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json",
+   "derivation": "every fitting answer of that run's cohort (controlled-bf16-1), none chosen: tube.picks' fitting members of the registered sixty, as history_check.py lists them",
+   "scales_with": "the cohort: another capability or model brings its own registered members and fitting half"
+  },
+  "rows_on_the_recordings": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-line-sign-original/rows/index.json",
+   "derivation": "each fitting member's `step`: the step of its recording that writes the first sign after the initial kinetic energy (15 wrong, all ' -'; 15 correct, all ' +'); the pass must show that sign written at that step or the reading stops",
+   "scales_with": "the capability's recorded failure and the cohort's recordings: another failure is located by its own step-3 reading"
+  },
+  "rows_on_the_own_text": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-gap-mates-original/stated-numbers.json",
+   "derivation": "`patterns.sign` of that record, searched in the text of the supplied tokens' pieces; the row is the step whose piece holds the first match's first captured sign (between the names), and the step of its third captured sign (between the numbers) is read beside it; an answer with no match is named as a gap and no other pattern is tried",
+   "scales_with": "the swept model's wording: another model's text needs a pattern on record as covering its answers before it is read"
+  },
+  "scores_kept": {
+   "measured_from": "code/signal-trace/recorder/observe_stream.cpp",
+   "derivation": "the recorder writes a step's eight highest scores; a sign that is not among them lies under the eighth, so the other sign is the favoured one, and a row with neither sign among the eight is counted as neither",
+   "scales_with": "the recorder: a recorder that keeps more scores gives both at every row"
+  }
+ },
+ "prediction": "Stated before any pass. (1) On the recordings' text the swept weights favour the plus at most of the fifteen wrong answers' recorded sign rows (8 or more), although every one of those rows lies after the step where the swept model's own answer leaves the recording: the sweep's rows are the recordings' text and its field asks each wrong answer's sign row for its matched success's state. The fifteen correct answers' rows stay a plus. (2) On the swept model's own text the original's weights also favour the plus at most of the wrong answers' rows between the names (8 or more), as on a2-path's text: by that row most of these answers have written a success's wording. (3) On the swept model's own text the swept weights' score of ' +' less ' -' is above the original's at most rows where both keep both signs: the weights add toward the plus on the same text. If (1) and (2) both hold, the corrected sign is carried twice, by the weights on the old wording and by the new wording under the old weights.",
+ "would_weaken_it": "Of (1): the swept weights favouring the minus at most recorded rows says that on the wrong answers' own wording the sweep's weights do not write the plus, so the plus of the own answers needs the text changed before the row; a field that leaves the rows before the gap alone would then be expected to lose it. Of (2): the original's weights favouring the minus at most rows of the swept model's text says the wording does not carry the plus and the changed weights make it at the row, as in the two closed chains. Of (3): no difference between the two weights on the same text says the sweep changed the sign through the text alone. Rows the pattern does not find, rows whose sign is not a single token and rows where neither sign is among the eight are named and left out of the counts, and a count over few rows is reported as few.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/working.gguf",
+  "studies/04-round-2-overlap/runs/whole-gap-mates-original/own",
+  "studies/04-round-2-overlap/runs/whole-gap-mates-original/stated-numbers.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/declaration.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/rows/index.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/sign-route-whole-gap-mates/passes",
+  "studies/04-round-2-overlap/runs/sign-route-whole-gap-mates/sign-rows.json",
+  "studies/04-round-2-overlap/runs/sign-route-whole-gap-mates/logs"
+ ],
+ "revisions": [
+  {
+   "date_ct": "November 15, 2026, 12:03 AM CT, the run finished since 6:57 PM CT November 14 and nothing of it running",
+   "made_by": "weight-research-perfomance, whose declaration this is",
+   "authority": "Marcos's direction of the evening of November 14, 2026, as relayed to the seats. What this seat understood: progress is measured on the trace of computation alone, and an instrument that measures by tokens, values or words leaves the project, because one that a rule only fences is used again.",
+   "what": "This run's four passes were made by records/development/2026-11-12-path-forward/history_check.py (a supplied text fed token by token, the engine's highest scores read at every step). That program is removed from the tree with this revision's commit. The run is finished and is not made again; its result.json and its records stay as they are, a reading of one row by tokens that claims no repair. The bytes that ran are the blob of the file at the commit named here, read and hashed when this revision was made (the file was not changed between that commit and this run's declaration, 061a6b60).",
+   "retired": [
+    {
+     "file": "records/development/2026-11-12-path-forward/history_check.py",
+     "sha256": "e3d1d57aa3a5b0df3a520d97c262ce2fa782b90d90682cf8ce19a2a9ad6f59b6",
+     "held_by_commit": "2118b14d"
+    }
+   ]
+  }
+ ]
+}

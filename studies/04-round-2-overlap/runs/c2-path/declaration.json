@@ -1,0 +1,100 @@
+{
+ "method_step": [
+  6
+ ],
+ "run_by": "Claude (weight-research-fable), with Astra (weight-research-astra) as thinking partner. This declaration follows Astra's objection of November 10 to an earlier draft that fitted the damaged answers alone: step 6 says keep a2-path's action on what it repaired and cancel it on what it broke, so both are in the fit, the repaired answers softly if they cannot be kept exactly, with membership from a2-path's record, fixed references, and the correction centred at a2-path. The damaged-only form is c2-protected, declared beside this run as a reading of its own.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+ "baseline": "studies/04-round-2-overlap/runs/a2-path/baseline",
+ "protected_source": "studies/04-round-2-overlap/runs/a2-path/answers.json",
+ "matrices_source": "studies/04-round-2-overlap/runs/a2-path/edit.json",
+ "edit_source": "studies/04-round-2-overlap/runs/a2-path",
+ "hypothesis": "The capability leaves a recurring difference between the traces of correct and wrong answers, from where the two shared patterns part until they reconcile, and closing it in the weights repairs the capability. a2-path's edit repairs the calculation the difference is about (29 of the 30 answers that subtracted the descent add it, 17 complete) and breaks 12 of the 30 correct answers. C2 asks whether a correction of a2-path's own matrices can keep its action on the answers it repaired and cancel it on the answers it damaged, on the contexts where its action first shows in each of them: the damaged answers are correct again and the repaired ones stay repaired.",
+ "what_went_wrong_before": "b2-path, the B rung, built again from the original with the 12 damaged answers held: 4 of the 12 are complete, 13 of the 18 that were not held broke, and 4 of the 30 wrong answers are complete, though all 30 add the descent (runs/b2-path/result.json). Its held rows were rows of the original text, and the edited model's own answers leave that text at the fourth token in 51 of 60, where the edit shifts one preference by 0.45 to 0.68 of a score in every answer. Rows held on a text the model no longer writes did not protect its answers. In the fit itself, on the given text, the rows asked to stay moved about 0.43 times as far as the rows asked to move at each matrix, in a2-path and b2-path alike, and b2-path's held rows end 0.77 to 0.97 as far from the original as its unheld ones. Making a2-path smaller is not a way out either: at 0.268, 0.579 and 0.786 of its size 15, 8 and 9 of the 30 correct answers are complete, against 18 at full size, and 7, 5 and 8 of the wrong against 17 (runs/a2-path-steps).",
+ "why_this_direction": "Step 6 of the method: C2 keeps a2-path's action on what it repaired and cancels it on what it broke, as round one's C did with A. Round one's C took the original contexts through A's first changed token, for the repaired cases and for the damaged one, and found the smallest correction of A's single matrix that kept A's action on the first and cancelled it on the second. The same rows here, with membership from a2-path's record: the original text through the first token a2-path's own answer changes, for its 17 repaired answers (first changed steps 3 ten times, 11 three times, 15, 18, 69, 83) and its 12 damaged ones (3 seven times, 11, 15 four times). A development reading on the original model's stored rows (no native run; the build records it again at every matrix on the rows it actually reads): the part of each damaged answer's matrix input that lies outside what the repaired answers' inputs span is 0.00% at layer 0 attention (median; at most 1.1%), 0.02% at layer 0 feed-forward, 0.3% at layer 4 attention, 0.5% and 0.7% at layer 8, and at each damaged answer's own first changed step at most 0.2% at layer 0 and 0.8% at layer 8. Round one's C reported 3.9% to 21% for a related quantity (there after projecting out the positive and the earlier protected directions); that range is a comparison, not a gate. A small part outside the span does not make the separation impossible; it makes the correction that separates them large, by about the inverse of that part, and at layer 0 there is nothing outside the span at all. So the two asks of this rung meet on nearly the same inputs at the opening, and the fit is expected to compromise between them there rather than serve both. That expectation is a reading of the inputs, not of the model's own answers; the operator between a matrix and the state has more in it than the inputs (the norm, the learned scale, the merge), the fit runs on 18 matrices on fresh passes, and round one's C worked on its own answers with a quarter of A's action left on its protected inputs. The native outcome judges it. What this rung leaves unconstrained is stated in the rule.",
+ "repeating_pattern_check": "What has repeated, and what this run does about each. (a) Rows protected on a text the edited model no longer writes (b2-path). Here the protected rows are contexts the model does compute on its own: up to its first changed token the original and the edited model share their whole history, so cancelling the action there acts on the model's own answer. (b) A fit that compromises between rows asked to move and rows asked to stay (a2-path and b2-path: the staying rows moved 0.43 times as far). This fit can compromise the same way, between the repaired answers' rows and the damaged answers' rows where their inputs are alike. It is run knowing that, because step 6 names both; how far each set ends from what it was asked is recorded per matrix, and c2-protected is the same build with the damaged answers alone. (c) A reading on given text taken for a verdict, twice. The build's readings, how far the protected rows are from the original and how much of a2-path's action is left, are reported as readings; the test is the model's own answers and their traces. (d) Several things changed between runs. Against a2-path one thing changes: a correction fitted on these contexts; the matrices, the fit and the test are the same. Against b2-path two things differ, as round one's C differed from its B: this rung starts from a2-path's weights, and it protects contexts through the first changed token instead of whole answers. (e) A number chosen by eye: none. The rows, the membership and the matrices are read from a2-path's records and the ridge is chosen on the other half, as before. (f) The first changed token treated as a boundary between harmful and useful action (the risk Astra named). It is not established as one. This rung does not cancel a2-path's action on the repaired answers' contexts; it asks to keep it there. A failure of this rung says this correction failed, not where a2-path's repair lives. (g) Work to keep moving instead of the method: this is the ladder's next rung, asked for by Marcos on November 10 (go on to C2 and D2, then assess and redo the round).",
+ "rule": {
+  "members": "Fitted, every row counting the same: the 12 correct answers of the overlap that a2-path broke (complete in the original model, not complete in a2-path's own answers), each from its first generated step through the first token a2-path's own answer changes, 104 rows; and the 17 wrong answers a2-path repaired (complete in its own answers), the same way, 265 rows. Within each group the answers alternate between the two halves the ridge is chosen across. The other 31 answers of the overlap and round one's 28 enter only in the test. Left unconstrained: the positions of the question, every step after an answer's first changed token, and so the whole region where the two patterns part and the repaired calculation itself.",
+  "ask": "At each of a2-path's 18 matrices: a row of a damaged answer is asked for the direction its state had right after that matrix's merge in the original model (a2-path/baseline); a row of a repaired answer is asked for the direction its state has right after that matrix's merge in a2-path's model, read once on the same rows before any correction. Both are fixed references. What is asked of a matrix is that direction minus the one the row has now, with a2-path's edit and every earlier correction in the model.",
+  "conversion": "As a2-path and b2-path: the model's own expression for the state after the merge, the change found by the same preconditioned conjugate gradients, the ridge chosen on the other half on the edit as rounded to BF16, leaving the matrix as it is among the candidates. The matrix it starts from is a2-path's, so the ridge pulls towards a2-path's matrix and the change is a correction of it. A correction is written only if, as the model file keeps it, it leaves less over the fitted rows than the matrix it replaces.",
+  "path": "The model starts as a copy of a2-path's. The 18 matrices are corrected in path order; before each, the protected and the repaired answers' contexts go through the model as it stands and that matrix's inputs and incoming state are read.",
+  "readings": "Per matrix, against the state of the same rows in a2-path's model read once before any correction (a fixed reference): how far each set of rows is from its original state before and after the correction, and how much of a2-path's action it keeps, for the protected rows, for the same steps of the repaired answers, and for the repaired answers' later steps before their own first changed token; how much of each protected input lies outside what the repaired answers' inputs span; and how much of a2-path's change of the matrix is kept.",
+  "test": "As every rung: the edited model answers the 60 questions of the overlap and round one's 28 on its own; its 60 answers are recorded with the turns of their computation, laid on the axis by the computation alone and read against the original correct and wrong patterns, as turns and as states."
+ },
+ "parameters": {
+  "first_changed_step": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/answers",
+   "derivation": "For each answer, the first generated step at which a2-path's own answer writes another token than the original model's answer to the same question. A row is a context of the original text from the first generated step through that step.",
+   "scales_with": "the edit and the question"
+  },
+  "protected": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/answers.json",
+   "derivation": "The answers of the overlap that are complete in the original model and not complete in a2-path's own answers. 12 of 30.",
+   "scales_with": "what the A rung breaks"
+  },
+  "repaired": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/answers.json",
+   "derivation": "The answers of the overlap that are not complete in the original model and complete in a2-path's own answers. 17 of 30. Fitted, asked for a2-path's state.",
+   "scales_with": "what the A rung repairs"
+  },
+  "ridge": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/baseline/index.json",
+   "derivation": "As a2-path, per matrix on the rows its own pass reads: a candidate is fitted on one half of the damaged and of the repaired answers, rounded to BF16, and judged by what it leaves on the other half of both, read with the model's own expression. The search, the candidates kept and the rule that ends it are a2-path's. Leaving the matrix as it is is one of the candidates.",
+   "scales_with": "the matrix, its inputs with a2-path's edit and the earlier corrections in the model, and how much of the ask recurs across the protected answers"
+  },
+  "matrices": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/edit.json",
+   "derivation": "matrices_edited: the matrices the A rung, as tested, changed. 18, layers 0 to 8.",
+   "scales_with": "the A rung this rung corrects"
+  }
+ },
+ "prediction": {
+  "expected_observation": "Building: at the opening the two asks meet on the same inputs, so neither is met. The damaged answers' rows end between their original state and a2-path's, nearer a2-path's because the repaired answers have more rows (265 against 104): more than half of a2-path's action is kept on both sets alike, and the correction is a small part of a2-path's change of each matrix. Answering on its own: at the fourth token the preference for ' calculation' over ' compact' moves less than a2-path moved it and by about the same amount in the damaged and the repaired answers; most of the answers that left their text there under a2-path still do. Fewer than half of the 12 damaged answers are complete, and fewer than a2-path's 17 of the repaired ones stay complete, because a model near a2-path is not a2-path: at 0.786 of its size 8 wrong and 9 correct answers were complete. The answers that were wrong still add the descent (more than 25 of 30), and their own traces lie about as far along the gap as a2-path's (0.79) over places 142 to 313.",
+  "failures_only": "Per answer: its fields before and after, beside a2-path's; its first changed step under a2-path and under this rung; whether it adds the descent; where its own trace lies between the two patterns. The 12 protected, the 17 repaired, the other 13 wrong and 18 correct answers, and round one's 28, apart."
+ },
+ "would_weaken_it": "The hypothesis: the wrong answers' own traces lie as far along the gap as a2-path's over places 142 to 313 and those answers subtract the descent. The expectation written above, and with it the reading of the inputs: the damaged answers' rows end near their original state while the repaired answers' rows keep a2-path's action, and on its own answers the damaged are correct again while the repaired stay repaired. That would be the C rung succeeding as round one's did, and would show that the fit separates what the inputs alone seemed not to. The construction: the correction removes most of a2-path's change of the matrices, in which case this rung is close to the original model and says nothing about keeping the repair.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/state-overlap/members.json",
+  "studies/04-round-2-overlap/runs/state-overlap/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/recurrence.npz",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/full-overlap/questions.json",
+  "studies/04-round-2-overlap/runs/full-overlap/cases.json",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/a2-path/baseline",
+  "studies/04-round-2-overlap/runs/a2-path/answers.json",
+  "studies/04-round-2-overlap/runs/a2-path/edit.json",
+  "studies/04-round-2-overlap/runs/a2-path/model/a2-path.gguf",
+  "studies/04-round-2-overlap/runs/a2-path/answers",
+  "studies/04-round-2-overlap/runs/b2-path/result.json",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answers-0.268.json",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answers-0.579.json",
+  "studies/04-round-2-overlap/runs/a2-path-steps/answers-0.786.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/c2-path/passes",
+  "studies/04-round-2-overlap/runs/c2-path/reference",
+  "studies/04-round-2-overlap/runs/c2-path/build.jsonl",
+  "studies/04-round-2-overlap/runs/c2-path/edit.json",
+  "studies/04-round-2-overlap/runs/c2-path/model",
+  "studies/04-round-2-overlap/runs/c2-path/answers",
+  "studies/04-round-2-overlap/runs/c2-path/answers.json",
+  "studies/04-round-2-overlap/runs/c2-path/answers-text.json",
+  "studies/04-round-2-overlap/runs/c2-path/own",
+  "studies/04-round-2-overlap/runs/c2-path/own-traces",
+  "studies/04-round-2-overlap/runs/c2-path/overlay.npz",
+  "studies/04-round-2-overlap/runs/c2-path/overlay-states.npz",
+  "studies/04-round-2-overlap/runs/c2-path/travel.npz",
+  "studies/04-round-2-overlap/runs/c2-path/result.json"
+ ],
+ "repaired_rows": "fitted"
+}

@@ -1,0 +1,115 @@
+--- code/signal-trace/recorder/observe_stream.cpp (HEAD)
++++ code/signal-trace/recorder/observe_stream.cpp (early stop, consolidated)
+@@ -12,6 +12,7 @@
+ #include <map>
+ #include <numeric>
+ #include <regex>
++#include <set>
+ #include <stdexcept>
+ #include <unordered_map>
+ #include <vector>
+@@ -62,6 +63,16 @@
+  uint64_t stream_bytes=0,stream_events=0;
+  std::map<std::string,int> stream_counts;
+  std::unordered_map<std::string,int> stream_decision;
++ // Opt-in per case (stop_after_last_label): a compute is ended once the last output the pass asked for is written. The engine's graph is fixed by the
++ // microbatch's token count and output count (llm_graph_params::allow_reuse), so the first compute of each such shape runs whole and lists its wanted
++ // outputs in order; every later compute of that shape must write the same labels in the same order, and stops after the last of them.
++ bool stop_early=false,stopped=false,recording=false;size_t seen=0;uint64_t computes=0,stops=0,after_stop=0;
++ std::map<std::pair<int64_t,bool>,std::vector<std::string>> shapes;std::vector<std::string> *reference=nullptr;
++ void end_compute(){   // at the start of the next compute and at the end of the case
++  if(!reference)return;
++  if(recording&&reference->empty())throw std::runtime_error("stop_after_last_label: a compute holds none of the wanted outputs");
++  if(!recording&&seen!=reference->size())throw std::runtime_error("a compute wrote fewer wanted outputs than the first of its shape");
++ }
+  bool streamed(const ggml_tensor *t,std::string &label){
+   label=t->name;
+   if(t->op==GGML_OP_ADD&&t->src[0]&&t->src[1]){
+@@ -121,6 +132,8 @@
+   for(int64_t z=0;z<t->ne[2];z++)for(int64_t y=0;y<t->ne[1];y++)for(int64_t x=0;x<t->ne[0];x++){
+    float v;std::memcpy(&v,raw.data()+x*t->nb[0]+y*t->nb[1]+z*t->nb[2],sizeof(v));values.push_back(v);
+   }
++  // Stop mode computes no vocabulary scores, so their finite check is gone; the recorded outputs are checked instead.
++  if(s.stop_early)for(float v:values)if(!std::isfinite(v))throw std::runtime_error("nonfinite stream value: "+label);
+   r["offset_bytes"]=s.stream_bytes;r["values"]=values.size();
+   s.stream_file.write(reinterpret_cast<const char*>(values.data()),values.size()*sizeof(float));s.stream_bytes+=values.size()*sizeof(float);
+   s.stream_records<<r.dump()<<'\n';
+@@ -146,7 +159,15 @@
+   if(ask && name=="embd" && t->op==GGML_OP_GET_ROWS){
+    ++s.micro;s.micro_count=t->ne[1];s.micro_start=s.phase=="prefill"?s.prefill_next:s.position;
+    if(s.phase=="prefill")s.prefill_next+=s.micro_count;
++   if(s.stop_early){
++    s.end_compute();
++    // A call's last microbatch carries its one output (llama_batch_get_one, no logits array): prefill_next has reached the call's last position + 1.
++    const bool output=s.phase!="prefill"||s.prefill_next==s.position+1;
++    const auto [shape,fresh]=s.shapes.try_emplace({s.micro_count,output});
++    s.reference=&shape->second;s.recording=fresh;++s.computes;s.seen=0;s.stopped=false;
++   }
+   }
++  else if(s.stop_early&&s.stopped)++s.after_stop;   // the scheduler went on after a stop: another split follows the one that holds the wanted outputs
+   if(s.patch_on&&s.phase=="decode"&&s.position==s.patch_position){
+    std::string label;s.streamed(t,label);
+    const auto target=s.patches.find(label);
+@@ -164,7 +185,17 @@
+    return r;
+   }
+   if(!keep)return !ask;
+-  if(!ask)write_stream(s,t,label);
++  if(!ask){
++   write_stream(s,t,label);
++   if(s.stop_early){
++    if(!s.reference)throw std::runtime_error("stop_after_last_label: a wanted output came before the first compute's embd");
++    if(s.recording)s.reference->push_back(label);
++    else{
++     if(s.seen>=s.reference->size()||(*s.reference)[s.seen]!=label)throw std::runtime_error("a compute wrote other wanted outputs than the first of its shape: "+label);
++     if(++s.seen==s.reference->size()){s.stopped=true;++s.stops;return false;}   // the last wanted output of this compute: the rest of the graph is not run
++    }
++   }
++  }
+   return true;
+  }
+  if(s.retention=="trace"){
+@@ -262,6 +293,11 @@
+    if(state.retention!="stream")throw std::runtime_error("stream labels require stream retention");
+    state.stream_labels=std::regex(c.at("stream_labels").get<std::string>());
+   }
++  state.stop_early=c.value("stop_after_last_label",false);state.stopped=state.recording=false;state.seen=0;state.computes=state.stops=state.after_stop=0;
++  state.shapes.clear();state.reference=nullptr;
++  if(state.stop_early&&(mode!="capture"||state.retention!="stream"||!state.label_filter||!c.contains("teacher_tokens")||!state.trace_input_positions.empty()||!state.stream_positions.empty()
++     ||c.contains("patch")||c.contains("patch_sweep")||c.contains("watched_tokens")||c.contains("temperature")))
++   throw std::runtime_error("stop_after_last_label reads a supplied answer under stream_labels and asks nothing else of the pass");
+   // Watched tokens: their scores are saved at every decision, next to the top eight.
+   const auto watched=c.value("watched_tokens",std::vector<llama_token>{});
+   for(auto t:watched)if(t<0||t>=nv)throw std::runtime_error("watched token outside vocabulary");
+@@ -321,6 +357,14 @@
+   }
+   json steps=json::array();std::vector<int> generated;std::string content;bool ended=false;
+   for(int step=0;step<max_tokens;step++){
++   if(state.stop_early){
++    // No vocabulary scores exist: the compute ended before the output head. The supplied token is fed as it is.
++    llama_token next=teacher[step];
++    steps.push_back({{"step",step},{"input_position",state.position},{"selected",next},{"piece",piece(vocab,next)},{"piece_bytes_hex",hex(piece(vocab,next))},{"selection","teacher"}});
++    generated.push_back(next);if(llama_vocab_is_eog(vocab,next)){ended=true;break;}content+=piece(vocab,next);
++    if(step+1<max_tokens){++state.call;state.phase="decode";state.position=ids.size()+step;state.micro=-1;state.pointers.clear();if(llama_decode(ctx,llama_batch_get_one(&next,1)))throw std::runtime_error("decode");}
++    continue;
++   }
+    const float *logits=llama_get_logits_ith(ctx,-1);const llama_token greedy=std::max_element(logits,logits+nv)-logits;
+    const bool step_forced=step<int(teacher.size());
+    llama_token next=step_forced?teacher[step]:(sampler?llama_sampler_sample(sampler,ctx,-1):greedy);
+@@ -364,6 +408,16 @@
+   json result={{"id",id},{"mode",mode},{"scope",state.scope},{"fusion_disabled",std::getenv("GGML_CUDA_DISABLE_FUSION")?std::getenv("GGML_CUDA_DISABLE_FUSION"):"0"},
+    {"tokens",generated},{"content",content},{"content_bytes_hex",hex(content)},{"text_encoding","UTF-8 display replaces incomplete token-byte fragments; *_bytes_hex preserves exact original bytes"},{"ended",ended},{"stopped_limit",!ended&&int(generated.size())==max_tokens},{"prompt_tokens",ids.size()},{"vocabulary_size",nv},
+    {"score_storage","SHA256 of all native float32 logits per decision, plus top eight; all logits checked finite"},{"retained_scope","All layer exits and final norm, input-scaled, attention/feed-forward addition operands/results and per-layer embedding at layers 12-16; callback boundaries remain full"},{"capture_events",state.events},{"tensor_bytes",state.bytes},{"counts",state.counts},{"steps",steps}};
++  if(state.stop_early){
++   state.end_compute();
++   if(state.computes==0||state.stops!=state.computes-state.shapes.size())throw std::runtime_error("stop_after_last_label: a compute after the first of its shape did not stop");
++   json shapes=json::array();std::set<size_t> wanted;
++   for(const auto &[shape,labels]:state.shapes){shapes.push_back({{"tokens",shape.first},{"output",shape.second},{"wanted_outputs",labels.size()}});wanted.insert(labels.size());}
++   result["stop_after_last_label"]={{"wanted_outputs_per_compute",wanted.size()==1?json(*wanted.begin()):json(nullptr)},{"computes",state.computes},{"whole_computes",state.shapes.size()},
++    {"stopped",state.stops},{"callbacks_after_a_stop",state.after_stop},{"shapes",shapes}};
++   result["score_storage"]="none: the first compute of each microbatch shape ran whole; every later one wrote the same wanted outputs in the same order and ended at the last of them, "
++    "before the output head; recorded outputs checked finite, vocabulary scores and the layers after the stop unchecked; the supplied tokens were fed as they are";
++  }
+   result["selection"]=forced?"teacher":(prefix?"teacher-prefix-then-greedy":(sampler?"sample":"greedy"));result["teacher_completed"]=(forced||prefix)&&generated.size()>=teacher.size();
+   if(state.retention=="connected")result["retained_scope"]="15 declared connected boundaries: layer13 exit, attention/FF/exit14 and15, attention input/raw projection/normalized contribution/FF/exit16, exits24/34 and final norm. Full callback boundaries and full recorded graph unchanged.";
+   result["teacher_token_count"]=teacher.size();result["conditioned_continuation"]=prefix;

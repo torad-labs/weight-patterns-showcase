@@ -1,0 +1,208 @@
+{
+  "status": "complete",
+  "metrics": {
+    "event": {
+      "plain_adapter": {
+        "native_norm": 0.00025504353424914453,
+        "mixer_norm": 8.244746203113996e-05,
+        "error_norm": 0.0002600733168958708,
+        "relative_error": 1.0197212709647163,
+        "cosine": 0.10002662620287321
+      },
+      "original_only_k_anchor": {
+        "native_norm": 0.00025504353424914453,
+        "mixer_norm": 0.0002531034610193202,
+        "error_norm": 6.752235977783773e-06,
+        "relative_error": 0.0264748369240669,
+        "cosine": 0.9996760089031067
+      },
+      "oracle_native_k": {
+        "native_norm": 0.00025504353424914453,
+        "mixer_norm": 0.0002531031744505795,
+        "error_norm": 6.75293778995997e-06,
+        "relative_error": 0.026477588658896264,
+        "cosine": 0.9996759437354804
+      }
+    },
+    "causal_prefix": {
+      "plain_adapter": {
+        "native_norm": 0.027275743113409384,
+        "mixer_norm": 0.027610015657525046,
+        "error_norm": 0.03872773983270837,
+        "relative_error": 1.4198601178960701,
+        "cosine": 0.004276612609698361
+      },
+      "original_only_k_anchor": {
+        "native_norm": 0.027275743113409384,
+        "mixer_norm": 0.02427337221263858,
+        "error_norm": 0.012267842049748854,
+        "relative_error": 0.44977113909383093,
+        "cosine": 0.8931496623429335
+      },
+      "oracle_native_k": {
+        "native_norm": 0.027275743113409384,
+        "mixer_norm": 0.024273402694457078,
+        "error_norm": 0.012267847048428846,
+        "relative_error": 0.4497713223584984,
+        "cosine": 0.8931495656720329
+      }
+    },
+    "whole_history": {
+      "plain_adapter": {
+        "native_norm": 0.034582100130084996,
+        "mixer_norm": 0.031023668079530838,
+        "error_norm": 0.046455871202545074,
+        "relative_error": 1.343350202208523,
+        "cosine": 0.0001126244424662198
+      },
+      "original_only_k_anchor": {
+        "native_norm": 0.034582100130084996,
+        "mixer_norm": 0.032318962924891996,
+        "error_norm": 0.01240797885781398,
+        "relative_error": 0.3587977251566498,
+        "cosine": 0.9334160355852605
+      },
+      "oracle_native_k": {
+        "native_norm": 0.034582100130084996,
+        "mixer_norm": 0.032264664319910624,
+        "error_norm": 0.012268154053008712,
+        "relative_error": 0.35475445409215983,
+        "cosine": 0.9349615899358675
+      }
+    },
+    "causal_calls_1_columns": {
+      "plain_adapter": {
+        "native_norm": 0.023284072865242905,
+        "mixer_norm": 0.023053586947062346,
+        "error_norm": 0.0326108681132777,
+        "relative_error": 1.4005654552798317,
+        "cosine": 0.009451893499490811
+      },
+      "original_only_k_anchor": {
+        "native_norm": 0.023284072865242905,
+        "mixer_norm": 0.02329170939852181,
+        "error_norm": 7.108124793678047e-05,
+        "relative_error": 0.003052784121925953,
+        "cosine": 0.9999953955476336
+      },
+      "oracle_native_k": {
+        "native_norm": 0.023284072865242905,
+        "mixer_norm": 0.02329170749344009,
+        "error_norm": 7.103725585269753e-05,
+        "relative_error": 0.0030508947581390613,
+        "cosine": 0.9999954012845799
+      }
+    },
+    "causal_calls_13_columns": {
+      "plain_adapter": {
+        "native_norm": 0.0016315724797547496,
+        "mixer_norm": 0.0007314924224848526,
+        "error_norm": 0.0017282190615685363,
+        "relative_error": 1.0592352365665754,
+        "cosine": 0.0881323038129044
+      },
+      "original_only_k_anchor": {
+        "native_norm": 0.0016315724797547496,
+        "mixer_norm": 0.0004416694733423216,
+        "error_norm": 0.001574078586212921,
+        "relative_error": 0.9647616674985405,
+        "cosine": 0.26323132728302934
+      },
+      "oracle_native_k": {
+        "native_norm": 0.0016315724797547496,
+        "mixer_norm": 0.00044167686343596954,
+        "error_norm": 0.0015740665802080032,
+        "relative_error": 0.964754308950228,
+        "cosine": 0.26325767711870784
+      }
+    },
+    "causal_calls_32_columns": {
+      "plain_adapter": {
+        "native_norm": 0.014112267161518218,
+        "mixer_norm": 0.015175968249797509,
+        "error_norm": 0.020817837839785035,
+        "relative_error": 1.4751589947610815,
+        "cosine": -0.00914302797541015
+      },
+      "original_only_k_anchor": {
+        "native_norm": 0.014112267161518218,
+        "mixer_norm": 0.006818929530683165,
+        "error_norm": 0.012166230830384728,
+        "relative_error": 0.8621032107130168,
+        "cosine": 0.5073061849609127
+      },
+      "oracle_native_k": {
+        "native_norm": 0.014112267161518218,
+        "mixer_norm": 0.00681904406464779,
+        "error_norm": 0.01216623768109918,
+        "relative_error": 0.8621036961569483,
+        "cosine": 0.5073049138891855
+      }
+    }
+  },
+  "key_transitions": {
+    "event": {
+      "native": 0,
+      "predicted": 0,
+      "equal_exact_transitions": 0,
+      "shared_positions_different_after_code": 0,
+      "false_negative_positions": 0,
+      "false_positive_positions": 0,
+      "total_codes_disagree": 0
+    },
+    "causal_prefix": {
+      "native": 46,
+      "predicted": 44,
+      "equal_exact_transitions": 44,
+      "shared_positions_different_after_code": 0,
+      "false_negative_positions": 2,
+      "false_positive_positions": 0,
+      "total_codes_disagree": 2
+    },
+    "whole_history": {
+      "native": 69,
+      "predicted": 69,
+      "equal_exact_transitions": 66,
+      "shared_positions_different_after_code": 0,
+      "false_negative_positions": 3,
+      "false_positive_positions": 3,
+      "total_codes_disagree": 6
+    },
+    "causal_calls_1_columns": {
+      "native": 22,
+      "predicted": 22,
+      "equal_exact_transitions": 22,
+      "shared_positions_different_after_code": 0,
+      "false_negative_positions": 0,
+      "false_positive_positions": 0,
+      "total_codes_disagree": 0
+    },
+    "causal_calls_13_columns": {
+      "native": 1,
+      "predicted": 1,
+      "equal_exact_transitions": 1,
+      "shared_positions_different_after_code": 0,
+      "false_negative_positions": 0,
+      "false_positive_positions": 0,
+      "total_codes_disagree": 0
+    },
+    "causal_calls_32_columns": {
+      "native": 23,
+      "predicted": 21,
+      "equal_exact_transitions": 21,
+      "shared_positions_different_after_code": 0,
+      "false_negative_positions": 2,
+      "false_positive_positions": 0,
+      "total_codes_disagree": 2
+    }
+  },
+  "target_event": 312,
+  "embedding": {
+    "changed_physical_values": 6,
+    "exact_native_causal_prefix": true,
+    "exact_native_all_consumed": true
+  },
+  "prediction_vs_result": "The saved prediction uses original native pre-cache K plus the finite adapter K change computed on exact original and predicted endpoint operands. Compare its mixer displacement and FP16 transition codes against actual native and the oracle K substitution.",
+  "failures_only": "The anchored key substitution is a conditional feasibility observation at one historical pair. Both endpoints use their unmodified Torch Q/V and Torch mixer. Actual physical native cache reads and masks are not captured.",
+  "what_this_changes": "Tests a correction available from original acquisition without treating an edited native operand as a training input. Separates recovery of FP16 code crossings from remaining errors in the predicted finite key change."
+}

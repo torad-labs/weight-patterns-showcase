@@ -1,0 +1,446 @@
+{
+ "declaration_sha256": "62e079d041c0f6a432096b6250faf05b682bac50d4dfe14739471d83d0682c36",
+ "prediction_vs_result": "The anchor's check held: on the original's own texts the anchored forward read 0.05266 (the engine's 0.05266). The first own trace read 0.05805, 0.00062 of it on correct answers, as predicted. The first step took 2^-1.971 of its unit (predicted near 2^-2.5) and moved 5,425,946 stored weights; written again, 30 of 30 answers left the text before and the own trace read 0.09164, above its start, as predicted. Over steps 2 to 10 the own trace stayed above its start (least 0.07319) and fell from its highest reading (0.18283 at step 3), as predicted. It first read under its start at step 12 (0.05762), after the ten steps the prediction covered. Its lowest reading was 0.05244 at step 31 (the wrong answers' part 0.03263, the correct answers' 0.01981, against 0.05743 and 0.00062 at the start). At step 38, the last one completed, it read 0.06342 (wrong 0.03655, correct 0.02687); the own trace read when step 39 began was 0.17092 (wrong 0.07948, correct 0.09145). It was not predicted that the loss reaches nothing, and it did not.",
+ "failures_only": "What the declaration named as weakening (no coming back down from the first rise, or the correct answers' part growing step over step) did not happen as declared. What is wrong is what the declaration did not name: the loss does not read the computation apart from the words. Under the ORIGINAL's weights, on the texts the steps kept, the loss puts a wrong answer above a correct one in these shares of pairs: step 2: 0.54; step 3: 0.60; step 8: 0.34; step 13: 0.48 (step 1, the original's own writing: 1.00); and the original's weights read more on the rewritten texts than on their own (step 2: 0.0976; step 3: 0.1996; step 8: 0.0945; step 13: 0.0808, against 0.0580). On the original's own texts, before any step, 0.877 of the loss (0.04620 of 0.05266) sits at rows that were given another token than their mate's corresponding rows, and between two correct answers the distance where the tokens differ is 7.3 times in layers 0 to 14 and 9.0 times in layers 15 to 34 the distance where they are the same. A fall or a rise of this loss after the answers are written again cannot be read as the wrong answers' path closing or the correct answers' path opening. The loop was interrupted at 8:55:14 AM CT November 15 inside step 39's search (after 3 trial lengths) by Astra, with an interrupt to the loop's process, on Marcos's direction relayed at 8:48 AM CT; step 38 is the last one completed, and after it 30,176,243 of the 651,165,696 stored weights differed from the original's. The launching shell ended with the loop; 0 process of this run was found when this result was composed. The run kept no model file, as declared: the weights the steps reached ended with the process. No answer was read; these are torch's arithmetic, not the engine's trace.",
+ "what_this_changes": "Nothing is stepped further on this loss, in torch or on the engine: Astra withdrew the fixed-mate envelope as the next objective and the native declaration this seat was composing (Marcos's direction relayed at 8:48 and 8:50 AM CT November 15, journal/2026-11-15-shared-computation-not-wording.md). The shape of a step stands: the answers written again at every step and the correction made again on the trace the model then has. What changes is what the step reads. Each rewritten answer was laid on its own original's rows and judged against one mate's rows and a tolerance made once on the original's texts, by a distance between the directions of what each merge adds, which carry the word a row was given. The reference has to be what the correct answers share at a place of the computation, the overlap has to be made against the correct answers at every step, and where the correct answers do different things nothing is asked. It is not known whether any form of the relation read that way keeps right and wrong apart on a new wording; that is read on the original's weights before any loop steps on it.",
+ "steps": [
+  {
+   "step": 1,
+   "own_trace": 0.058046461772407215,
+   "wrong": 0.05743093037744984,
+   "right": 0.0006155313949573769,
+   "written_as_the_step_before": 21,
+   "length_power": -1.971453058487487,
+   "weights_moved": 5425946,
+   "on_the_texts_held_over_the_start": 0.9261298279423715
+  },
+  {
+   "step": 2,
+   "own_trace": 0.09164043085183948,
+   "wrong": 0.0488789506489411,
+   "right": 0.04276148020289838,
+   "written_as_the_step_before": 0,
+   "length_power": -2.979606415246157,
+   "weights_moved": 6808769,
+   "on_the_texts_held_over_the_start": 0.9685983693671762
+  },
+  {
+   "step": 3,
+   "own_trace": 0.18282670457847416,
+   "wrong": 0.09523382526822388,
+   "right": 0.08759287931025028,
+   "written_as_the_step_before": 0,
+   "length_power": -2.3833420722275114,
+   "weights_moved": 9004556,
+   "on_the_texts_held_over_the_start": 0.9610086139377865
+  },
+  {
+   "step": 4,
+   "own_trace": 0.11414758962928317,
+   "wrong": 0.049552742624655366,
+   "right": 0.06459484700462781,
+   "written_as_the_step_before": 0,
+   "length_power": -3.82424608088405,
+   "weights_moved": 9641576,
+   "on_the_texts_held_over_the_start": 0.9753533213015498
+  },
+  {
+   "step": 5,
+   "own_trace": 0.11032638439792208,
+   "wrong": 0.04726833530003205,
+   "right": 0.06305804909789003,
+   "written_as_the_step_before": 0,
+   "length_power": -2.517742765117172,
+   "weights_moved": 11768031,
+   "on_the_texts_held_over_the_start": 0.9857502013481663
+  },
+  {
+   "step": 6,
+   "own_trace": 0.08871831936994568,
+   "wrong": 0.042290068056900054,
+   "right": 0.04642825131304562,
+   "written_as_the_step_before": 0,
+   "length_power": -3.5703228511727105,
+   "weights_moved": 12407264,
+   "on_the_texts_held_over_the_start": 0.9729862333302054
+  },
+  {
+   "step": 7,
+   "own_trace": 0.09382212732452899,
+   "wrong": 0.04680987581377849,
+   "right": 0.0470122515107505,
+   "written_as_the_step_before": 3,
+   "length_power": -4.24423130294382,
+   "weights_moved": 13521078,
+   "on_the_texts_held_over_the_start": 0.9791293768722572
+  },
+  {
+   "step": 8,
+   "own_trace": 0.07429416303057224,
+   "wrong": 0.03479395096655935,
+   "right": 0.039500212064012885,
+   "written_as_the_step_before": 2,
+   "length_power": -4.452365958008738,
+   "weights_moved": 14096956,
+   "on_the_texts_held_over_the_start": 0.9828372545248264
+  },
+  {
+   "step": 9,
+   "own_trace": 0.07752150026499294,
+   "wrong": 0.043484914989676327,
+   "right": 0.03403658527531661,
+   "written_as_the_step_before": 6,
+   "length_power": -4.86775813388248,
+   "weights_moved": 14810350,
+   "on_the_texts_held_over_the_start": 0.9878684686262914
+  },
+  {
+   "step": 10,
+   "own_trace": 0.07318764580122661,
+   "wrong": 0.0395184502704069,
+   "right": 0.03366919553081971,
+   "written_as_the_step_before": 3,
+   "length_power": -5.033011771019708,
+   "weights_moved": 15405396,
+   "on_the_texts_held_over_the_start": 0.9893130132259275
+  },
+  {
+   "step": 11,
+   "own_trace": 0.06288568560557906,
+   "wrong": 0.03558206727029756,
+   "right": 0.0273036183352815,
+   "written_as_the_step_before": 15,
+   "length_power": -5.215724361763105,
+   "weights_moved": 15822120,
+   "on_the_texts_held_over_the_start": 0.9903310219956613
+  },
+  {
+   "step": 12,
+   "own_trace": 0.05761729332152754,
+   "wrong": 0.02950260991929099,
+   "right": 0.02811468340223655,
+   "written_as_the_step_before": 12,
+   "length_power": -5.049984921434178,
+   "weights_moved": 16475520,
+   "on_the_texts_held_over_the_start": 0.9897046591436759
+  },
+  {
+   "step": 13,
+   "own_trace": 0.05917393194977194,
+   "wrong": 0.03058707294985652,
+   "right": 0.02858685899991542,
+   "written_as_the_step_before": 16,
+   "length_power": -5.197985366213046,
+   "weights_moved": 16819682,
+   "on_the_texts_held_over_the_start": 0.9897068209917405
+  },
+  {
+   "step": 14,
+   "own_trace": 0.06332311261212453,
+   "wrong": 0.028303853468969464,
+   "right": 0.03501925914315507,
+   "written_as_the_step_before": 15,
+   "length_power": -4.888248623402194,
+   "weights_moved": 17709984,
+   "on_the_texts_held_over_the_start": 0.9888434626410043
+  },
+  {
+   "step": 15,
+   "own_trace": 0.05772378051187843,
+   "wrong": 0.028727202501613647,
+   "right": 0.028996578010264784,
+   "written_as_the_step_before": 7,
+   "length_power": -5.066595317943064,
+   "weights_moved": 17961838,
+   "on_the_texts_held_over_the_start": 0.9893674899224604
+  },
+  {
+   "step": 16,
+   "own_trace": 0.06334489997243509,
+   "wrong": 0.03428772586630657,
+   "right": 0.029057174106128514,
+   "written_as_the_step_before": 18,
+   "length_power": -4.448300016401447,
+   "weights_moved": 19409151,
+   "on_the_texts_held_over_the_start": 0.981780034248249
+  },
+  {
+   "step": 17,
+   "own_trace": 0.07769673003349453,
+   "wrong": 0.04086786089465022,
+   "right": 0.03682886913884431,
+   "written_as_the_step_before": 5,
+   "length_power": -4.786878715986477,
+   "weights_moved": 19734294,
+   "on_the_texts_held_over_the_start": 0.9868904642697434
+  },
+  {
+   "step": 18,
+   "own_trace": 0.06398898619227111,
+   "wrong": 0.03541923651937395,
+   "right": 0.02856974967289716,
+   "written_as_the_step_before": 10,
+   "length_power": -5.0986391909253905,
+   "weights_moved": 20887730,
+   "on_the_texts_held_over_the_start": 0.9875175882432569
+  },
+  {
+   "step": 19,
+   "own_trace": 0.0761813196586445,
+   "wrong": 0.04049643984762952,
+   "right": 0.03568487981101498,
+   "written_as_the_step_before": 5,
+   "length_power": -5.3846792275709054,
+   "weights_moved": 21119511,
+   "on_the_texts_held_over_the_start": 0.9906369296656712
+  },
+  {
+   "step": 20,
+   "own_trace": 0.056418116379063576,
+   "wrong": 0.03139942552661523,
+   "right": 0.025018690852448344,
+   "written_as_the_step_before": 13,
+   "length_power": -6.703972286786273,
+   "weights_moved": 21451957,
+   "on_the_texts_held_over_the_start": 0.9957230766659725
+  },
+  {
+   "step": 21,
+   "own_trace": 0.06238434335682541,
+   "wrong": 0.033150495146401227,
+   "right": 0.029233848210424185,
+   "written_as_the_step_before": 22,
+   "length_power": -4.855329379090175,
+   "weights_moved": 22843209,
+   "on_the_texts_held_over_the_start": 0.9867093040039199
+  },
+  {
+   "step": 22,
+   "own_trace": 0.09554537407530006,
+   "wrong": 0.04415379947749898,
+   "right": 0.05139157459780108,
+   "written_as_the_step_before": 2,
+   "length_power": -4.973064173964913,
+   "weights_moved": 23244311,
+   "on_the_texts_held_over_the_start": 0.9883397844558651
+  },
+  {
+   "step": 23,
+   "own_trace": 0.06327937921741977,
+   "wrong": 0.035620798356831074,
+   "right": 0.0276585808605887,
+   "written_as_the_step_before": 0,
+   "length_power": -5.921788141648142,
+   "weights_moved": 23526580,
+   "on_the_texts_held_over_the_start": 0.9922115573553861
+  },
+  {
+   "step": 24,
+   "own_trace": 0.05711415156838484,
+   "wrong": 0.036042061110492796,
+   "right": 0.021072090457892045,
+   "written_as_the_step_before": 6,
+   "length_power": -5.326563444484367,
+   "weights_moved": 24077914,
+   "on_the_texts_held_over_the_start": 0.9933808939231
+  },
+  {
+   "step": 25,
+   "own_trace": 0.0664412274636561,
+   "wrong": 0.03762808506144211,
+   "right": 0.028813142402213998,
+   "written_as_the_step_before": 16,
+   "length_power": -5.304498134982797,
+   "weights_moved": 24221798,
+   "on_the_texts_held_over_the_start": 0.9990899957970951
+  },
+  {
+   "step": 26,
+   "own_trace": 0.07162687787786126,
+   "wrong": 0.04311726603191346,
+   "right": 0.028509611845947802,
+   "written_as_the_step_before": 18,
+   "length_power": -5.209289200472757,
+   "weights_moved": 25078932,
+   "on_the_texts_held_over_the_start": 0.9916412717397415
+  },
+  {
+   "step": 27,
+   "own_trace": 0.08293210488045588,
+   "wrong": 0.03946081572212279,
+   "right": 0.04347128915833309,
+   "written_as_the_step_before": 3,
+   "length_power": -5.2749717301496055,
+   "weights_moved": 25387035,
+   "on_the_texts_held_over_the_start": 0.9915256769496886
+  },
+  {
+   "step": 28,
+   "own_trace": 0.06339174951426685,
+   "wrong": 0.036895968252792954,
+   "right": 0.026495781261473894,
+   "written_as_the_step_before": 0,
+   "length_power": -6.032771757675122,
+   "weights_moved": 25636754,
+   "on_the_texts_held_over_the_start": 0.9937734543817013
+  },
+  {
+   "step": 29,
+   "own_trace": 0.05703589360928163,
+   "wrong": 0.03694358264328912,
+   "right": 0.02009231096599251,
+   "written_as_the_step_before": 2,
+   "length_power": -6.07949836326757,
+   "weights_moved": 26047699,
+   "on_the_texts_held_over_the_start": 0.9947845089457455
+  },
+  {
+   "step": 30,
+   "own_trace": 0.09113411512225866,
+   "wrong": 0.05012440215796232,
+   "right": 0.04100971296429634,
+   "written_as_the_step_before": 7,
+   "length_power": -5.473682698183189,
+   "weights_moved": 26423612,
+   "on_the_texts_held_over_the_start": 0.9911955326847426
+  },
+  {
+   "step": 31,
+   "own_trace": 0.05243937933119014,
+   "wrong": 0.0326262271264568,
+   "right": 0.019813152204733342,
+   "written_as_the_step_before": 2,
+   "length_power": -5.7264263771425625,
+   "weights_moved": 26649803,
+   "on_the_texts_held_over_the_start": 0.9930267895372116
+  },
+  {
+   "step": 32,
+   "own_trace": 0.057404699036851525,
+   "wrong": 0.04059515375411138,
+   "right": 0.016809545282740146,
+   "written_as_the_step_before": 8,
+   "length_power": -6.448299842762972,
+   "weights_moved": 26977219,
+   "on_the_texts_held_over_the_start": 0.9954681531699863
+  },
+  {
+   "step": 33,
+   "own_trace": 0.05991014253231697,
+   "wrong": 0.04281996423378587,
+   "right": 0.0170901782985311,
+   "written_as_the_step_before": 16,
+   "length_power": -6.72691952736452,
+   "weights_moved": 27212395,
+   "on_the_texts_held_over_the_start": 0.995786746472914
+  },
+  {
+   "step": 34,
+   "own_trace": 0.05776935972971842,
+   "wrong": 0.038818784698378295,
+   "right": 0.018950575031340122,
+   "written_as_the_step_before": 21,
+   "length_power": -6.230476857294757,
+   "weights_moved": 27716907,
+   "on_the_texts_held_over_the_start": 0.9949618242532686
+  },
+  {
+   "step": 35,
+   "own_trace": 0.08161830756580457,
+   "wrong": 0.047447141201701015,
+   "right": 0.034171166364103556,
+   "written_as_the_step_before": 17,
+   "length_power": -6.473942633515933,
+   "weights_moved": 28003940,
+   "on_the_texts_held_over_the_start": 0.9949236817948778
+  },
+  {
+   "step": 36,
+   "own_trace": 0.0842997165163979,
+   "wrong": 0.0477428036974743,
+   "right": 0.03655691281892359,
+   "written_as_the_step_before": 19,
+   "length_power": -6.123819376043985,
+   "weights_moved": 28655140,
+   "on_the_texts_held_over_the_start": 0.9941709223042896
+  },
+  {
+   "step": 37,
+   "own_trace": 0.09039695531828329,
+   "wrong": 0.05373635049909353,
+   "right": 0.03666060481918976,
+   "written_as_the_step_before": 3,
+   "length_power": -5.0180690458571275,
+   "weights_moved": 28912962,
+   "on_the_texts_held_over_the_start": 0.9976814904956306
+  },
+  {
+   "step": 38,
+   "own_trace": 0.06341850041644648,
+   "wrong": 0.03654570766957477,
+   "right": 0.02687279274687171,
+   "written_as_the_step_before": 12,
+   "length_power": -5.150088023056844,
+   "weights_moved": 30176243,
+   "on_the_texts_held_over_the_start": 0.9899208114876547
+  }
+ ],
+ "interrupted": {
+  "at": "8:55:14 AM CT",
+  "step": 39,
+  "own_trace": {
+   "step": 39,
+   "own_trace": 0.170925,
+   "by_group": {
+    "wrong": 0.079478,
+    "members": 0.058927,
+    "other_successes": 0.03252
+   },
+   "active_cells": {
+    "wrong": 365587,
+    "members": 259212,
+    "other_successes": 127631
+   },
+   "as_the_step_before": 0,
+   "as_the_original": 0,
+   "sharing_a_step": 4533,
+   "seconds": 59.7
+  },
+  "trial_lengths_read": [
+   {
+    "trial": 0.0,
+    "objective": 0.39907,
+    "over_the_start": 2.33477,
+    "stepped": 34672533
+   },
+   {
+    "trial": -2.223,
+    "objective": 0.175018,
+    "over_the_start": 1.02395,
+    "stepped": 11461961
+   },
+   {
+    "trial": -3.376,
+    "objective": 0.166664,
+    "over_the_start": 0.97507,
+    "stepped": 6277229
+   }
+  ],
+  "last_completed_step": 38,
+  "by": "Astra: an interrupt (SIGINT) to the loop's process, reported by her to this seat; KeyboardInterrupt in the log",
+  "state_kept": null,
+  "processes_of_this_run_when_composed": []
+ },
+ "records": {
+  "loop": "studies/04-round-2-overlap/runs/envelope-loop-plain-torch/loop.json",
+  "log": "studies/04-round-2-overlap/runs/envelope-loop-plain-torch/logs/loop.log",
+  "anchor": "studies/04-round-2-overlap/runs/envelope-loop-plain-torch/anchor-read.json",
+  "same_history": "records/development/2026-11-15-relation-reading/same-history-paired.json",
+  "token_coincidence": "records/development/2026-11-15-relation-reading/token-coincidence.json",
+  "kept": "loop/step-<n>.npz (every answer's text, its record of pairs and every original row's loss; in the bucket)"
+ },
+ "composed": {
+  "by": "records/development/2026-11-15-relation-reading/close_plain_loop.py",
+  "made": "2026-11-15 09:00:41 CT"
+ }
+}

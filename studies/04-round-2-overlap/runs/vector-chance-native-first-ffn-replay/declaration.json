@@ -1,0 +1,347 @@
+{
+  "method_step": 5,
+  "status": "independently reviewed; admitted GPU1 paired native operator replay",
+  "declared_at": "2026-11-16T17:14:04.642405-06:00",
+  "why_this_direction": "The complete CPU first-FFN replay leaves a13-column branch reversal that originates before reference/turn transformations, while the native source uses custom MMF for13 and cuBLAS for32. Replay the two retained local native endpoints to locate the first internal discrepancy before changing a gradient or the active learner.",
+  "repeating_pattern_check": "Near-equal primal values and improved cosine have repeatedly hidden large or oppositely directed finite movements. First establish saved-native branch identity at both endpoints, then compare each internal native stage and rounded operand codes. Preserve GPU0 learning by using the reviewed GPU1 blocking lock and report its different physical hardware.",
+  "hypothesis": "Actual native first-FFN arithmetic reproduces the saved endpoints and exposes the stage where CPU finite movement diverges, with a native-versus-CPU reduction or operand-boundary difference preceding the reversed13-column response.",
+  "what_went_wrong_before": "CPU finite branch/native cosine is\u22120.92775 for13 columns, and weighted cosine\u22120.97276; this group supplies93.07% of complete finite weighted error. Both native routes use BF16 activation operands, so changing the operand-type policy is not established as a fix. Existing traces omit internal stages.",
+  "rule": "Use the exact retained thirteen inputs160\u2013172 and complete first-FFN weight endpoints189/190. Execute each endpoint once through the recorded native GGML libraries; retain all six internal/final arrays. Check both final branches bit-for-bit against saved native before attributing internal differences to the original transition. No new model update, generation, gradient, precision policy or fitting.",
+  "prediction": "Both native local endpoints reproduce the retained branches and identify an earlier CPU/native internal difference whose finite movement propagates to the reversed branch.",
+  "would_weaken_it": "Failure to reproduce either saved branch prevents attribution to the original GPU0 transition; the hardware/isolated-graph assumption remains unresolved. No stage difference explaining the branch movement weakens the proposed arithmetic-route explanation. No replay result alone validates an optimizer change.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-overrides.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay/declaration.json",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition-recovery/recovered-transition/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/declaration.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/final-overrides.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/bf16-delta.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/held/capture.json",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/held/raw/discovery-05-channel-h1/stream.f32",
+    "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/held/raw/discovery-05-channel-h1/stream.jsonl",
+    "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-native-first-ffn-replay"
+  ],
+  "target_source": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "parameters": {
+    "native_geometry": {
+      "value": {
+        "width": 1536,
+        "hidden": 6144,
+        "columns": 13,
+        "positions": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172
+        ],
+        "rms_epsilon": 9.999999974752427e-07
+      },
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/0/capture/raw/discovery-05-channel-h1/stream.jsonl",
+      "derivation": "Use the single thirteen-column call already identified by the admitted CPU result: every position160\u2013172. Width/hidden/epsilon retain bound architecture.",
+      "scales_with": "Recorded call geometry and model architecture."
+    },
+    "endpoints": {
+      "value": [
+        "189",
+        "190"
+      ],
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-native-transition/loop/1/transition-response/before-install.json",
+      "derivation": "Reuse exact selected checkpoint endpoints already validated by the admitted CPU input loader. No new step coefficient.",
+      "scales_with": "The retained transition."
+    },
+    "device": {
+      "value": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+      "measured_from": "records/development/2026-11-16-native-first-ffn-replay/device-plan.json",
+      "derivation": "GPU0 uses nonblocking lock; use independently locked same-SM-family GPU1, with explicit hardware difference and saved-branch reproduction test.",
+      "scales_with": "Available separately coordinated GPU and its actual UUID; no stopping other users."
+    },
+    "cpu_threads": {
+      "value": 1,
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay/declaration.json",
+      "derivation": "Retain the admitted CPU replay thread count.",
+      "scales_with": "Original CPU comparison environment."
+    },
+    "tensor_storage": {
+      "value": {
+        "prepared_binary_bytes": 75829248,
+        "native_output_binary_bytes": 2396160,
+        "device_tensor_bytes_per_endpoint": 58073088,
+        "note": "Exact selected binary payload sums. Small JSON/logs, library/context overhead and native workspace are additional; no arbitrary device-memory or time threshold introduced."
+      },
+      "measured_from": "records/development/2026-11-16-native-first-ffn-replay/output-estimate.json",
+      "derivation": "Sum five native weight tensors, one incoming tensor, eight intermediate tensors; prepared files include two down endpoints and saved branch values.",
+      "scales_with": "Recorded width, FFN hidden width, dtype and column count."
+    },
+    "model_rms_epsilon": {
+      "value": 9.999999974752427e-07,
+      "measured_from": "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+      "derivation": "Use the actual F32 model epsilon represented in the bound architecture, not a new diagnostic epsilon.",
+      "scales_with": "Model normalization definition."
+    }
+  },
+  "plan": {
+    "record": "records/development/2026-11-16-native-first-ffn-replay/README.md",
+    "sha256": "829958e8fd2e751f42e6fdef276c52b5ecf9bd5bde1dd83a9eb23aee8412ab29"
+  },
+  "cpu_result": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay/result.json",
+    "sha256": "22b45c797be8977e094b2bc7571b1e591f4993ece1a6087f28f99161ccc4c4cd"
+  },
+  "context_review": {
+    "record": "records/retrospectives/2026-11-16-first-ffn-replay-result-eli.md",
+    "sha256": "ea08b455d923f285f311f0e230c85d041d77bb1d1a5850939a63ffc22cb4319b"
+  },
+  "device_plan": {
+    "record": "records/development/2026-11-16-native-first-ffn-replay/device-plan.json",
+    "sha256": "243b02c13957662d699d8b945aadc558e2d79aa36d5de22cea8db8c7a5989cac"
+  },
+  "output_estimate": {
+    "record": "records/development/2026-11-16-native-first-ffn-replay/output-estimate.json",
+    "sha256": "2dbe3ce43500c9402a3d6b1c2daa378ec3e27dd18c126b54150c225baac6b995"
+  },
+  "retention": "Only the declared prepared tensors, six native outputs per endpoint, execution metadata and small records are created in this run. Original and retained model/capture data remain read-only. No full model copy.",
+  "stopping": "Two predeclared local native endpoints and one complete comparison, then exit. No search, retries or optimizer steps.",
+  "program": {
+    "record": "records/development/2026-11-16-native-first-ffn-replay/run.py",
+    "sha256": "545038e41fdd365a9c6090b53897245a16a8047e131b83595e5d27da2d1f4def"
+  },
+  "native_binary": {
+    "record": "records/development/2026-11-16-native-first-ffn-replay/build/native_ffn",
+    "sha256": "a8cbc831262d57beecf6d9e1312e10ccecc9888c872c267e5fe1ff3ad958a202"
+  },
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/native_records/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/__init__.py",
+      "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/__init__.py",
+      "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/paths.py",
+      "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+      "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+      "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/reference_rule.py",
+      "sha256": "3bee52be452931486d397f5d9f6733a970a38470a1e1c2f5101b1992128b0241"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance.py",
+      "sha256": "3d2e653dd2c211e75f6fef8dee8dbafe3a62fe0e36d0e10dc4e2c2fde34d739c"
+    },
+    {
+      "record": "dependencies/llama.cpp-f089c9c/ggml/include/ggml-alloc.h",
+      "sha256": "94e4cd069b9313b2ceb35dacec901981e0bb478d8bb31035b7126be091998c23"
+    },
+    {
+      "record": "dependencies/llama.cpp-f089c9c/ggml/include/ggml-backend.h",
+      "sha256": "0d064af35136c801f0127b1c02e10e753f0582e3dadbe4771e81a5224078a36f"
+    },
+    {
+      "record": "dependencies/llama.cpp-f089c9c/ggml/include/ggml-cuda.h",
+      "sha256": "9cbfcea49f6da4d07f41dc22fa8dbf870825faaa2a68e34e65fe30ea6c41e042"
+    },
+    {
+      "record": "dependencies/llama.cpp-f089c9c/ggml/include/ggml.h",
+      "sha256": "6c29a437572442363131428bcf8316ddf2304087e68cc5e7dfc6880235af890b"
+    },
+    {
+      "record": "dependencies/llama.cpp-f089c9c/vendor/nlohmann/json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+    },
+    {
+      "record": "records/development/2026-11-16-first-ffn-native-replay/replay.py",
+      "sha256": "799ea7a3950ff023eb63494c5358b24c326c17805f4508c1b00d7cc8a54a0a7f"
+    },
+    {
+      "record": "records/development/2026-11-16-native-first-ffn-replay/CMakeLists.txt",
+      "sha256": "3b5988339ff9fdcf3a147ca757553f717c3301745cd6a3a773bef5a7e4e6d00c"
+    },
+    {
+      "record": "records/development/2026-11-16-native-first-ffn-replay/native_ffn.cpp",
+      "sha256": "685f7a020f22a067bb28848f19c89f06a094525ac54a572b5edc1d2fd22fad62"
+    },
+    {
+      "record": "records/development/2026-11-16-native-first-ffn-replay/run.py",
+      "sha256": "545038e41fdd365a9c6090b53897245a16a8047e131b83595e5d27da2d1f4def"
+    }
+  ],
+  "cpu_declaration": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay/declaration.json",
+    "sha256": "a9d8e348073a37369153cd4b16d4f914a8c5f8d11b92bb385ba8ef55dffef51a"
+  },
+  "cpu_program": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/replay.py",
+    "sha256": "799ea7a3950ff023eb63494c5358b24c326c17805f4508c1b00d7cc8a54a0a7f"
+  },
+  "cpu_inputs": {
+    "record": "records/development/2026-11-16-first-ffn-native-replay/inputs.json",
+    "sha256": "726f378d0f0d97ca87fefdfdd46be76719001109bac6400effece5040f89fbcd"
+  },
+  "architecture": {
+    "record": "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+    "sha256": "1905c24e43a943d2c20683f13c5538944281c2a9b939001cbfc5f746cbc5afde"
+  },
+  "engine_libraries": [
+    {
+      "record": "dependencies/engine-f089c9c-sm120-kept/libggml-base.so.0.21.0",
+      "sha256": "de163ac072154fd89c4a19ec8db00c6df711570c09ba442a8ca2d9c19dd6b47d"
+    },
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libggml-cuda.so.0.21.0",
+      "sha256": "7f865cd7aeedf126ce545994c7518dd4e0ef512b574fc0e6e0788e2e37b0be74"
+    },
+    {
+      "record": "dependencies/engine-f089c9c-sm120/libggml.so.0.21.0",
+      "sha256": "a860ac65306fe35f24fb126bd56a6d78ed58f77de041459a1b52eeaf47a48260"
+    }
+  ],
+  "engine_folder": "dependencies/engine-f089c9c-sm120",
+  "engine_overlay": "dependencies/engine-f089c9c-sm120-kept",
+  "engine_build": {
+    "record": "dependencies/engine-f089c9c-sm120/BUILD",
+    "sha256": "b7882cab6da2af4a7898885d4797018f5698856d9c3a25cf5ee6b5f4454bbf55"
+  },
+  "cpu_threads": 1,
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "physical_gpu": 1,
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+  "retained_hardware": "GPU0 NVIDIA GeForce RTX 5080, compute capability 12.0; captured stderr and engine identities in the bound original capture",
+  "native_parameters": {
+    "width": 1536,
+    "hidden": 6144,
+    "columns": 13,
+    "positions": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "rms_epsilon": 9.999999974752427e-07
+  },
+  "operation": "paired-native-first-ffn-replay",
+  "observability": {
+    "events": "observability/events.jsonl",
+    "organization": "research-operations/1",
+    "operations": [
+      "diagnostic.prepare",
+      "diagnostic.wait_for_device",
+      "proposal.evaluate",
+      "diagnostic.compare"
+    ],
+    "format": "weight-patterns-observability/1",
+    "mode": "direct Recorder API",
+    "sources": [
+      {
+        "record": "code/signal-trace/pipeline/observability/__init__.py",
+        "sha256": "61c1fda4cb688c2aeaefa68bea46be385c474a4ec3b6f91aa98b927312166e28"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "records/development/2026-11-16-native-first-ffn-replay/run.py",
+        "sha256": "545038e41fdd365a9c6090b53897245a16a8047e131b83595e5d27da2d1f4def"
+      }
+    ]
+  },
+  "commands": [
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-native-first-ffn-replay/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-native-first-ffn-replay"
+  ],
+  "whole_build_review": {
+    "accepted": true,
+    "record": "records/retrospectives/2026-11-16-native-first-ffn-replay-eli.json",
+    "sha256": "6e2d8ba2514a5d9687bc43a0b8917f952bd34f6e3626a8103038a744efe1b91f",
+    "reviewed_declaration_sha256": "73f04681c21e8eb495bccf5c64639efea4b0639b305a5423fb7a675d7093b37b"
+  },
+  "admitted_at": "2026-11-16T17:15:25.176358-06:00"
+}

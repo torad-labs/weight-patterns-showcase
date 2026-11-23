@@ -1,0 +1,195 @@
+{
+  "method_step": 3,
+  "operation": "original-success-set-control",
+  "declared_at": "2026-11-15T03:31:03.686222-06:00",
+  "admission": "Astra admits this source-only original fitting-data diagnostic. It executes no model, updates no weights, changes no running-loop reference and gates no update.",
+  "why_this_direction": "The immutable successful-set reference is materialized and the admitted loop now measures its reached state. The original model has not been measured under that same objective, and successful leave-self-out coverage has not been measured under these sets. Supply those two missing descriptive scales, separately, from originals rather than interpreting edited loss or borrowing old point-field ratios.",
+  "repeating_pattern_check": "Earlier work conflated contextual donor distance with capability error, used a different objective as a baseline, and turned a partial score into a verdict. Keep the original full-reference control distinct from the successful leave-self-out reference; retain every native frame, original coefficient and merge, and publish missing mass. Neither reading supplies a threshold, subtraction or checkpoint choice.",
+  "hypothesis": "The original wrong computations have distance from the successful sets, while leaving a correct recipient out also exposes finite successful-reference/context variation. These effects need not have the same magnitude, and aggregate proximity alone is not the recurring capability defect.",
+  "what_went_wrong_before": "The earlier affine/matched leave-out ratios concerned different point fields; they never calibrated the new convex-set objective. Including a successful recipient as its own donor also cannot establish independent successful-reference coverage.",
+  "rule": "Read the canonical original fitting states only. First score all recipients against the unchanged full reference with identity correspondence. Separately score the same original states after removing each successful recipient from its own sets at every native prompt and answer frame, retaining all other individual donor points, paths, original masses, normalization and merges; wrong recipients keep the full reference. Use the unchanged set scorer/projector on card 0. Save a distinct hash-bound descriptor for the leave-self-out view; do not mutate the compiled reference. No answers are graded and no edited state, no-fit member or reserved source enters arithmetic.",
+  "prediction": "Full-reference original successes reconstruct themselves to numerical projection resolution because their own native point is included. The wrong group has nonzero distance. Successful leave-self-out distance can be nonzero. No ranking between wrong full-reference distance and successful leave-self-out distance, ratio, threshold or attainable floor is predicted.",
+  "would_weaken_it": "Missing or unresolved required comparisons prevent a complete scale. A material original-success self-distance points to a reference/identity/projection mismatch. Wrong distances comparable to successful leave-self-out variation weaken treating the scalar alone as capability-specific, not the existence of a recurring computational defect or the iterative hypothesis.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "reference": {
+    "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+    "sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38"
+  },
+  "projection_device": "cuda",
+  "implementation": [
+    {
+      "record": "records/development/2026-11-15-success-set-control/declare.py",
+      "sha256": "938f8f571db4ad4ea38df6953083db3e97859f62063eb18cfcaef8c7a96092a5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/success_set_control.py",
+      "sha256": "dc4df391f4d1896a3afeaf52c8c85a71d5895b5e95a03db1bc78498191cb16c3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/success_set_score.py",
+      "sha256": "d857f93833c7fe66ff94d42edf1bbbe012c00bc240a6845c6f4d331abfc02fe3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/success_sets.py",
+      "sha256": "71cc4d8edf8bff3a2fe07cbbcc8395a36508931bd35c6defe53d1a717bebe202"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/compile_success_sets.py",
+      "sha256": "3c3904954af438320bab4149ff8c678d28913ab95f5cb76c32a22ac1bd6530c2"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/set_points.py",
+      "sha256": "972f067990385313090a1bdbd3cc94021a1e0b766adb319019f0f13e47e52f50"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_run.py",
+      "sha256": "0b309f58c2dbd15c19719a69e8d2048df62d04c55282057aa79f01e176b4cf60"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+      "sha256": "919067f38b7764e6a098b5b8be2316e98133f4eeab439735be56785fe2f2763a"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+      "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_score.py",
+      "sha256": "6ff608a936d698ee5caa7a14fad36c400298ab66a7c64f2eed2b6aa0e4515aab"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_compare.py",
+      "sha256": "8437e6f44f40fb7f1cbad7be67c350acb2ab92e9c2aa7c1d5578599290bf73bd"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    }
+  ],
+  "inputs": [
+    "studies/04-round-2-overlap/runs/success-set-reference-original/reference",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/source-records/objective.md",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-05-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-10-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-17-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-17-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-001-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-020-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-034-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-042-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-045-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-046-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-068-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-070-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-087-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-092-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-094-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-095-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-01-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-06-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-15-channel-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-00-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-004-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-08-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-10-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-029-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-11-channel-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-064-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-071-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-039-h3/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-076-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-078-h1/question.npy",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy",
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-023-h1/question.npy"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/success-set-control-original/"
+  ],
+  "inventory": {
+    "members": 30,
+    "donors": 15,
+    "rows": 19751,
+    "merges": 105
+  },
+  "parameters": {
+    "domains": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+      "derivation": "All original native prompt and answer frames, every source merge, identity correspondence; no rows or layers selected.",
+      "scales_with": "Original fitting inventory and architecture"
+    },
+    "membership": {
+      "measured_from": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+      "derivation": "The full artifact unchanged; in the diagnostic only, remove donor rows whose original member equals their successful recipient. Preserve every other mapped point and every wrong member set, without remapping.",
+      "scales_with": "Original successful donors and recipient membership"
+    },
+    "mass": {
+      "measured_from": "studies/04-round-2-overlap/runs/success-set-reference-original/source-records/objective.md",
+      "derivation": "The same original-frame weight 1/(represented groups * group members * member prompt-plus-answer rows * merges), unchanged after donor omission.",
+      "scales_with": "Original group, member, native-row and merge counts"
+    },
+    "projection": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/set_points.py",
+      "derivation": "Use the frozen shared float64 nearest-point arithmetic and its own dimension/epsilon-derived accuracy certificate, not a capability tolerance.",
+      "scales_with": "Feature width, per-frame donor count and arithmetic precision"
+    },
+    "card": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+      "derivation": "Project on physical card 0 under its existing lock, matching the native source and the loop measurement; CUDA_VISIBLE_DEVICES=0.",
+      "scales_with": "The canonical capture and comparison device"
+    }
+  },
+  "limits": [
+    "The successful leave-self-out view is not the running loop objective and is not a lower bound on any wrong member.",
+    "No mean, quantile, ratio or maximum becomes a closure threshold or training adjustment.",
+    "Original answer identities and frozen labels identify computation only; no new outcome grade is made.",
+    "The original incoming-state archive is not needed; complete native states and compiled memberships are already retained."
+  ],
+  "revisions": [
+    {
+      "made": "2026-11-15T03:32:54.714153-06:00",
+      "reason": "Before any diagnostic output, the declarer prints the input count from its local input list rather than a heterogeneous dictionary lookup, resolving its static typing warning. Diagnostic arithmetic and inputs are unchanged.",
+      "previous": {
+        "record": "studies/04-round-2-overlap/runs/success-set-control-original/declaration-before-print-typing.json",
+        "sha256": "df88f2407f02d5b7d3add655d0fa609e80152121e0048360d4ba3846a4c37055"
+      }
+    }
+  ]
+}

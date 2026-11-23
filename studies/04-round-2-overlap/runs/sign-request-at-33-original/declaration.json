@@ -1,0 +1,224 @@
+{
+ "method_step": 5,
+ "run_by": "weight-research-astra (the objective, the request construction and the reading contract), weight-research-fable (the step-3 reading, this declaration, the solver and the execution), weight-research-perfomance (the candidate's readings: the fixed-input site reading, the own answers and the same-history control)",
+ "status": "Declared on November 12, 2026 (CT), before this run's rows are read and before any solve at this matrix. What was seen before it: same-line-sign-original's kept reading and request (its read/), Performance's direct-term table for the supports and builders (records/development/2026-11-12-path-forward/sign-direct/sign-direct.json, relayed to this seat before this declaration), and the solver's tests on made-up rows. No row of this matrix has been read through the engine for this run, no solve has run at it, and no candidate exists.",
+ "kind": "A bounded native test from the original model at one matrix: one candidate, at most one model copy. It is the first link of a correction along the late feed-forward merges, not a site sweep and not the on-policy loop.",
+ "authority": "Marcos, November 12 (journal/2026-11-12-correction-not-protection.md): the training should know where the overlap exists and that nothing should be applied where the computation already agrees; and, relayed the same night, a robust path forward is to be planned and then acted on, with no waiting on his approvals. Astra admitted feed-forward 33 as the site of one bounded sign request (3b1138b5), named the deliverable as the supported measured request and an executable declaration for one candidate (records/retrospectives/2026-11-12-sign-counterexamples-result-astra.md), and wrote the reading contract this declaration points to (records/development/2026-11-12-path-forward/READING-OF-FEEDFORWARD-33.md, 8b233784: 'Fable writes the request/declaration and finalized candidate ... Neither waits for another methodological permission round').",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.npz",
+ "objective": "one computation objective at member granularity, with no group cells: the fourteen subtracting answers' rows that write the sign are each asked, at feed-forward 33's merge, for the movement that takes their features to the measured feature-increment target T^phi; every correct fitting member's own error against its original computation stands in the same sum at every place and every prompt position, direction and size; every other row of a wrong member is an unsupported cell and carries no term",
+ "specification": "records/retrospectives/2026-11-12-fork-request-decision-astra.md",
+ "decision_record": "records/retrospectives/2026-11-12-sign-counterexamples-result-astra.md",
+ "reading_contract": "records/development/2026-11-12-path-forward/READING-OF-FEEDFORWARD-33.md",
+ "original_observations_from": "controlled-bf16-1",
+ "correction_reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+ "correction_reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+ "planned_starting_state": {
+  "source_run": "controlled-bf16-4",
+  "source_run_role": "Read its original-derived binding, membership, layout and baseline only. Its edited model and edited rows are not this run's starting state.",
+  "matrices_written": 0,
+  "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "matrix": "blk.33.ffn_down.weight",
+  "matrix_binding": {
+   "shape": [
+    12288,
+    1536
+   ],
+   "native_type": "bf16",
+   "offset_bytes": 8548982752,
+   "bytes": 37748736,
+   "note": "the feed-forward's output projection alone; the post-feed-forward norm's weight and the layer's output scale stay the original's bytes"
+  },
+  "source_rows": "studies/04-round-2-overlap/runs/sign-request-at-33-original/passes/rows-blk.33.ffn_down.npz",
+  "source_rows_role": "This run keeps its own: the thirty fitting answers' recorded text once through the original BF16 model at this matrix (`rows`), the matrix's input (12288 wide) and the state its merge adds to, at every answer row and prompt position."
+ },
+ "correct_members": {
+  "requests": [
+   "correct_places",
+   "correct_prompt"
+  ],
+  "replaces_the_correct_groups_cells": true,
+  "members": [
+   "discovery-01-channel-h1",
+   "discovery-06-channel-h1",
+   "discovery-15-channel-h1",
+   "discovery-00-channel-h3",
+   "expanded-004-h1",
+   "discovery-08-channel-h3",
+   "discovery-10-channel-h3",
+   "expanded-029-h1",
+   "discovery-11-channel-h3",
+   "expanded-064-h1",
+   "expanded-071-h1",
+   "expanded-039-h3",
+   "expanded-076-h1",
+   "expanded-078-h1",
+   "expanded-023-h1"
+  ],
+  "read_by": "correction.candidate, which hands them to correction.chosen (charges, replaced): each correct member's own movement from its original computation, at every registered place and every prompt position, at feed-forward 33's merge and at layer 33's last merge behind it. A known-correct reference on the same history: zero displacement is justified there."
+ },
+ "row_requests": {
+  "target_source_sha256": "c099b76457bfbcf3ad82b498118e1255621e6eab1d261635ddb6b0889f2555a6",
+  "index": "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.json",
+  "index_sha256": "7172033a2f8d66b5d84977ec14d5bfc1a588abfb99fab87902b50870dbcd9640",
+  "answers": [
+   "discovery-05-channel-h1",
+   "discovery-10-channel-h1",
+   "discovery-17-channel-h1",
+   "expanded-020-h1",
+   "expanded-034-h3",
+   "expanded-042-h3",
+   "expanded-045-h1",
+   "expanded-046-h3",
+   "expanded-068-h1",
+   "expanded-070-h1",
+   "expanded-087-h3",
+   "expanded-092-h1",
+   "expanded-094-h1",
+   "expanded-095-h1"
+  ],
+  "place": 168,
+  "forms": [
+   "direction",
+   "size"
+  ],
+  "replaces_the_wrong_groups_cells": true,
+  "construction": "feature-increment (Astra's T^phi). Not the raw-state alternative: the two are different constructions and their evidence is not mixed.",
+  "site": "feed-forward 33's merge: the state after blk.33.ffn_down.weight's output is merged. Nothing is asked of a builder at layer 33's last merge.",
+  "support": [
+   "discovery-15-channel-h1",
+   "discovery-00-channel-h3",
+   "expanded-029-h1",
+   "expanded-071-h1",
+   "expanded-039-h3",
+   "expanded-076-h1",
+   "expanded-078-h1"
+  ],
+  "correspondence": "alpha in the request file at this merge's incoming state: each builder's nearest mixture of the seven supports in the joint features, measured, held fixed through the merge. By builder, the supports with a weight of 0.005 or more: discovery-05-channel-h1: discovery-15-channel-h1 0.659, expanded-078-h1 0.307, discovery-00-channel-h3 0.029; discovery-10-channel-h1: discovery-15-channel-h1 0.9, expanded-071-h1 0.097; discovery-17-channel-h1: discovery-15-channel-h1 0.976, discovery-00-channel-h3 0.024; expanded-020-h1: discovery-15-channel-h1 0.736, expanded-078-h1 0.2, expanded-071-h1 0.044, discovery-00-channel-h3 0.019; expanded-034-h3: discovery-00-channel-h3 0.708, discovery-15-channel-h1 0.268, expanded-078-h1 0.024; expanded-042-h3: discovery-00-channel-h3 0.599, discovery-15-channel-h1 0.401; expanded-045-h1: discovery-15-channel-h1 0.759, expanded-078-h1 0.22, discovery-00-channel-h3 0.022; expanded-046-h3: discovery-15-channel-h1 0.688, expanded-078-h1 0.29, discovery-00-channel-h3 0.022; expanded-068-h1: discovery-15-channel-h1 0.97, discovery-00-channel-h3 0.03; expanded-070-h1: discovery-15-channel-h1 1.0; expanded-087-h3: discovery-15-channel-h1 0.849, discovery-00-channel-h3 0.083, expanded-078-h1 0.057, expanded-071-h1 0.011; expanded-092-h1: discovery-15-channel-h1 0.989, discovery-00-channel-h3 0.011; expanded-094-h1: discovery-15-channel-h1 0.898, discovery-00-channel-h3 0.094, expanded-071-h1 0.008; expanded-095-h1: discovery-15-channel-h1 0.884, discovery-00-channel-h3 0.108, expanded-071-h1 0.008",
+  "exclusions": "No case has two answers among the builders and supports. discovery-10-channel-h1 (a builder, fold 1) and discovery-10-channel-h3 (a correct member, fold 0) answer one question: when the builder's fold is read, its sibling's own-error term is among the terms solved on. Named, not removed: the folds are the solver's.",
+  "unsupported_cells": "Every registered place and prompt position of the fifteen wrong fitting members except the fourteen builders' sign rows: no target is known there and none is invented; they carry no term and are not called agreement. Among them the sign row of expanded-001-h3: registered wrong, it writes the minus on the recording and its card-1 own answer treats the descent correctly, so its correctness is unresolved. The supports' and the other correct members' sign rows are held by their own-error terms like every other row of theirs.",
+  "read_by": "correction.rows_asked and correction.dressed: for each builder the movement asked of its mean unit state at the place is minus through[:1536] and of the log of its size minus through[1536] over the root of the weights' ratio (6.6508510517827295); the command refuses an answer that is not one of the file's builders and a term that is undetermined there."
+ },
+ "solver": {
+  "file": "code/signal-trace/pipeline/weight_edit/correction.py",
+  "sha256": "5a87beca8e55b4266b203f48d62aabb92451decb71f6d15d8a0afaa8d073c149",
+  "tube_sha256": "f761f1d0c14ab09979e6534a7bfa8497e86a0564d485d290aaa95bc0453da754",
+  "tests": "code/signal-trace/tests/test_correction.py, 34 passed on the CPU: among them that a part is dressed with the requests of the answers it holds, each weighed by the reference's own wrong-group cell over the part's wrong members, that a part with nothing asked is as charged alone, that a row is not asked to stay and to move, and that a member standing at its target costs nothing",
+  "the_command_records": "candidate/record.json keeps the hashes of correction.py and tube.py as they are when the command starts, the requests asked with each one's direction length and size, and every stage of every path"
+ },
+ "hypothesis": "Marcos's, for round two: a capability leaves a recurring difference between the traces of correct and wrong answers, and editing the weights where that recurring difference lives repairs the capability. Here, for the one decision the readings have isolated and at one of the merges where the step-3 reading finds the difference: what feed-forward 33 adds at the row that writes the sign differs between the subtracting answers and correct answers on a line of the same label by a part the subtracting answers have in common. If that part is carried by what the matrix reads (its input) and not by each answer alone, then a change of the matrix solved on some of the subtracting answers also takes the others' rows toward their measured targets, while every correct member's own computation stays where it is.",
+ "why_this_direction": "Step 3 is read for this decision and step 5 asks for the edit where the recurring difference lives. same-line-sign-original (its read/summary.json; the result record is laid from it while this run solves) read the thirty fitting answers at the sign's row at every merge with the correspondence held fixed. At the feed-forward merges of layers 29 to 34 the share of the 98 builder-over-left-out-support pairs that are ordered is 0.959, 1.000, 1.000, 1.000, 1.000, 0.888 against the twelve deals' largest 0.643, 0.643, 0.796, 0.776, 0.714, 0.673; at feed-forward 33 every pair is ordered and resolved. There the two answers that write the minus below the regime stand with the builders (1.003 and 1.255, between 0 at the supports below and 1 at the builders above), the support above the regime with the supports (0.115), and the other label's eight plus rows at the supports (0.043 and 0.010). The request this reading keeps for the fourteen builders at that merge has lengths 0.062 to 0.195 in the joint features and a mean pairwise cosine of 0.61: a common part. Astra admitted this site for one bounded request before the reading (3b1138b5, from Performance's attribution 365de92f), so the reading did not choose it. What is not known and what this run tests: whether a change of the one matrix that writes this merge meets the requests of builders it was not solved on, and what it does to every correct member's rows. It is the next step because the request now exists as measured arrays, and no solve has yet been made on a member-level request with the correct members' own error in the same sum and no group cells. It is not chosen because an earlier run's numbers were bad.",
+ "repeating_pattern_check": "What has happened more than once. (1) A correction built on whole-state group cells against the full correct cohort repaired some answers and broke others (correction-at-19, correction-at-17-original, correction-members-at-17-original), and same-prefix-contributions-original showed that right-going answers on one text carry most of what the cohort's direction reads. Here no group cell is in the sum: a wrong member is asked only at the row and merge where its own residual against same-line correct answers is measured. (2) A target carried the question's numbers with it. That is not removed here and is named before the solve: twelve of the fourteen builders' correspondence rests on discovery-15-channel-h1 at 0.66 to 1.00 (expanded-034-h3, expanded-042-h3 rest on discovery-00-channel-h3). That support is 8 J under the regime's boundary; in the step-3 pairs reading it stands at 0.39 of the way to the builders at this merge and at 0.23 to 0.59 at every feed-forward merge from layer 23 to 33 (the other five supports below: -0.28 to 0.04; the lowest builder 0.54), and Performance's card-1 direct terms put its feed-forward-33 term at -1.70 beside -2.73 to -5.03 for the other six. So the measured target for those twelve is mostly a near-boundary increment and may ask for less than a clear plus. Astra has the support in front of him (kept as specified, or the near-boundary support left out on the trace reading); this run keeps his specification of seven. (3) One site was taken for the whole path. The step-3 reading shows the recurrence at each feed-forward merge from layer 29 to 34 and Performance's table says the sign's margin is written by them together. This run is declared as the first link; what one link does to the sign is an outcome and no verdict on a correction along the path. (4) A reading was taken for a verdict (a local objective for a repair, a failed search for a failed technique). Here the solve's readings are construction readings; the result is the candidate's own answers and their traces under Astra's contract, and a path that stops is reported as stopped. (5) A number was borrowed. The unit, the first ridge and the setting taken are computed here from this run's rows; the solver's work limits are its own constants, named as that under `parameters`, and a stage that ends at one is reported as work not finished. (6) Two runs of one declared solve differ by 2.5% to 9.4% on a fold's read sum at a weak ridge (records/development/2026-11-12-correction-objective/same-solve-twice-correction-at-17-original.txt): one candidate is made by the declared rule and none is made again.",
+ "what_went_wrong_before": "The first attempt at round two was deleted because it never built on the overlap. In this line: B and C at attention 17 asked the wrong group's mean for the cohort's whole-state difference and three, then other, correct answers acquired errors; my claim that a key at the sign's row leaves correct answers alone was withdrawn after Performance read it (132b27a6); the joined reading's prediction of specificity was not met (9dc203f8); the same-line reading's first read crashed before any reading on a reference whose members are one point at the model's first state, and was fixed; and this request's known weakness, the near-boundary support, was found by Performance from the direct terms after I named the concentration, not by my reading's own predictions.",
+ "rule": {
+  "reference": "The frozen output-norm reference correction-at-19 made from the original model, read only, with the index hash above. Its direction and size weights are the request's and the members' weights. Its group cells are left out of the sum by a view made in memory (correction.without_groups); the saved arrays are untouched and its role as the original full-cohort reference does not change. The seven supports are a local comparison for the fourteen sign rows, not a replacement cohort or reference.",
+  "objective": "With u the unit state and l the log of its size after a merge, d the movement of a member's own mean from the original's computation on the same recorded text, w_f = 0.5/S_f the reference's weight of a form, n_w and n_c the wrong and correct members among the answers summed over: E = sum over the builders i among them of (w_direction/n_w) ||d_u(i, sign row) - q_i||^2 + (w_size/n_w) (d_l(i, sign row) - s_i)^2 at feed-forward 33's merge, with q_i = -through_i[:1536] and s_i = -through_i[1536] over the root of the weights' ratio; plus, at feed-forward 33's merge and at layer 33's last merge, sum over forms f, over the correct members i and over every registered place p and every prompt position t of (w_f/n_c) ||d_f(i, p or t)||^2. Nothing else: no cell of either group, no term on a wrong member's other rows, no separate protection term, no bound and no bringing-back phase.",
+  "request": "T^phi_i = phi(h_i-) + sum_k alpha_ik [phi(H_k+) - phi(H_k-)] over the seven supports at their own sign rows, with alpha measured at the incoming features and held fixed; through_i = phi(h_i+) - T^phi_i is its initial residual, within the recorded reconstruction discrepancy. The request is minus that. It is a least-squares request: no claim that the target can be attained, no dose, and no number of it taken from a score.",
+  "counted_from": "Every row is counted from the original file's own output at the same row (tube.counted_from on controlled-bf16-4's original-derived baseline): a member's movement at a place is the mean over its steps there of each row's own movement, and a prompt position's is that row's. Each builder has one row at place 168.",
+  "data_roles": "The fitting half only, 15 wrong and 15 correct, in the solver's three folds (wrong 5, 5, 5; correct 5, 5, 5; builders 4, 5, 5): two folds solved on and the third read, in rotation, and all thirty for the last solve. A fold is read on its own builders' requests and its own correct members' terms, which no solve it is scored on has seen. No no-fit answer supplies anything; the twelve auxiliary replays are not read; reserved-40b stays sealed. The registered card-0 recordings supply the request and this run's rows; no card-1 state is combined with them.",
+  "rows": "The fitting answers' recorded tokens one at a time through the original BF16 model at the declared matrix, with the source sweep's native pass conventions, on card 0 under its lock. Kept in this run.",
+  "candidate": "correction.chosen with the fourteen requests, the two correct-member requests, and both groups' cells left out (members_only). Three paths go down the ridges in step from the first ridge; every written state a path accepts is a setting, named by its ridge and its round; a setting's score is the mean, each fold by its number of answers, of the whole sum E read on the fold it was not solved on; the least score is taken, the unchanged matrix among the settings, with the existing ties. All thirty are then solved on once down the same ridges to that setting. One candidate; none is made again whatever it reads. Nothing of an edited answer, a score or an auxiliary case enters the choice.",
+  "numerical_work": "The existing solver with nothing of the solve changed: halving ridges, BF16-written trials read through the native merge expression and taken only when the whole sum on the answers solved on is strictly less. The record keeps the unit, the first ridge, every stage and round, each stop's reason, the last ridge made and whether the setting taken lies there. The pace at a 12288-wide input is not known before this run: it is read from the log, and if the declared path cannot finish in the card time the night has, the run is stopped and reported as stopped, with no candidate taken from an unfinished path.",
+  "write": "Only a copy of the original inside this run is written (correction.write): the candidate at blk.33.ffn_down.weight, each value one the file's BF16 holds, checked value for value, and every other byte of the copy checked equal to the original's. model/written.json is laid after those checks and is the signal the reading is keyed on. If the selection keeps the unchanged matrix, that is the result and no copy is made.",
+  "own_reading": "Astra's contract (records/development/2026-11-12-path-forward/READING-OF-FEEDFORWARD-33.md), implemented by weight-research-perfomance: A, the fixed-input site reading over the kept card-1 positions from candidate/blk.33.ffn_down.weight.npy; B, the candidate's own answers and full traces on all thirty prompts on card 1, the primary result; C, the original on the candidate's changed text. Nothing in those readings selects or changes the candidate. The manifest that contract asks of this declaration is `row_requests` (the request file and its index with their hashes, the site, the coordinates, the supports and correspondence, the exclusions, the unsupported cells), `correct_members` (the known-agreement references) and `correction_reference` (the frozen weights).",
+  "scope": "One matrix, from the original, on the recordings' text. It does not correct the other merges where the step-3 reading shows the difference, does not solve the correspondence of a model's own changed text to the original computation, and is not the on-policy loop. It does not open the no-fit or reserved evaluations.",
+  "storage": "The rows (about 1.2 GB), the candidate's records and the one model copy (9.3 GB) stay inside this run. Inputs and other runs' records are only read. The disk is read before each command."
+ },
+ "parameters": {
+  "coordinates_and_weights": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "The frozen reference's scales S_direction 1268.5365669493656 and S_size 28.67797931944294: a form weighs w_f = 0.5/S_f, 3.9415e-04 for the direction and 1.7435e-02 for the size, the same at every merge and place. The request file was made in these weights (the command stops otherwise).",
+   "scales_with": "The original model, its full original reference and the native terminal transform. Another source needs its own reference."
+  },
+  "request_target": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.json",
+   "derivation": "The step-3 run's kept arrays (read/request.npz, sha256 c099b76457bfbcf3ad82b498118e1255621e6eab1d261635ddb6b0889f2555a6): for each builder, minus `through` at the step feedforward-33, of 1536 unit-state coordinates and one log-size coordinate times the root of the weights' ratio. At this merge the fourteen have lengths 0.062 to 0.195 (mean 0.119) and the searches leave at most 6.0e-06 open. Nothing of it is scaled, capped or rounded here.",
+   "scales_with": "The supports, the correspondence measured at the incoming state, the merge and the text of the answers."
+  },
+  "request_rows": {
+   "value": 168,
+   "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+   "derivation": "The frozen registration lays each of the fourteen builders' sign rows alone at place 168 (same-line-sign-original's declaration, checked by its command against the recordings): at that place a builder's mean is its one row, so the request asked of the member there is the row's own.",
+   "scales_with": "The registration and the text."
+  },
+  "request_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "A request weighs what a member's own term weighs: the reference's own cell of the wrong group at that merge and place, w_f, over the number of wrong members among the answers summed over (10 on the two folds a path is solved on, 5 on the fold it is read on, 15 for the last solve), so that a part's wrong members together weigh at most what their group's cell weighed there. The cell it stands in the place of is left out, so nothing is counted twice. No number of ours is in it.",
+   "scales_with": "The reference's weights and the number of wrong members in each sum."
+  },
+  "correct_member_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "A correct member's squared own error at a place weighs w_f/n_c with n_c the number of correct members among the answers summed over (10, 5 and 15), as in correction-members-at-17-original: since |mean d|^2 <= mean |d|^2, the members together weigh at least what the group's mean would have weighed with no radius, and the group's own cell is left out so that this is counted once.",
+   "scales_with": "The reference's weights and the number of correct members in each sum."
+  },
+  "prompt_position_weight": {
+   "measured_from": "studies/04-round-2-overlap/runs/separable-at-17-original/summary.json",
+   "derivation": "One prompt position of a correct member weighs what one registered answer place of that member weighs, w_f/n_c: the convention that diagnostic exercised and Astra's specification of the member objective kept. It is a convention between two units, named as one, and no multiplier to tune.",
+   "scales_with": "The reference's weights, the number of correct members summed over, and each prompt's number of positions."
+  },
+  "ridge_unit": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "correction.unit_of on the reference's unmodified cells at the original matrix over all thirty fitting answers' rows kept by this run: the trace of the direction cells' action on the inputs times the mean squared learned scale, plus the size cells' curvature trace over the output width, over the input width. Computed by the command from this run's rows and recorded; no value from another matrix is used. It is a scale the search is counted in, not a claim about this sum's curvature.",
+   "scales_with": "The rows' inputs, the matrix's shape (12288 by 1536), the learned merge scale and the reference's weights."
+  },
+  "first_ridge": {
+   "measured_from": "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.json",
+   "derivation": "The largest power of two times the unit not above 2||s||^2/(RESOLVED x E), with E the whole sum on all thirty at the start, which is the fourteen requests' weighed squared lengths (no correct member has moved), and s the slope of E/2 there (correction.strongest). Computed by the command and recorded with its inputs.",
+   "scales_with": "The requests, the initial slope, the unit and the arithmetic's resolution."
+  },
+  "ridge_spacing": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/correction.py",
+   "derivation": "The solver halves the ridge from one stage to the next (PATH = 1), each stage starting from the last written state. It is the search's grain, the same for every matrix, and a later valley between two powers can be missed; the record keeps every stage.",
+   "scales_with": "Nothing of the data: a finer grain costs proportionally more stages."
+  },
+  "work_limits": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+   "derivation": "The solver's own constants as its record keeps them (tube.EFFORT: at most 40 accepted rounds a stage, 80 conjugate-gradient iterations a pass, 10 passes; RESOLVED, the root of float32's rounding, ends a stage whose round falls by no more than that part of its starting sum). They were set on the solver's calibration at another matrix and are not measured for this one: they limit work and do not shape the sum. Whether they bind here is recorded per stage; a stage or path that ends at a limit is reported as work not finished and is no statement about what a longer solve would reach.",
+   "scales_with": "The local curvature at this matrix and the ridge. If a limit binds at the setting taken, the limit is measured on this matrix before any reading leans on that setting."
+  },
+  "step_acceptance": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/correction.py",
+   "derivation": "Each BF16-written trial is read through the native merge expression and taken only when the whole sum E on the answers solved on is strictly less; otherwise the part of the step is halved down to no written movement. No bound and no held reading vetoes a step; held folds choose the setting only.",
+   "scales_with": "The file's BF16 grid and the proposed change."
+  },
+  "path_end": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/correction.py",
+   "derivation": "correction.chosen's rule, unchanged: every ridge from the first down to the unit is made; below the unit the paths end at the first ridge at which states were written and neither any fold's best new held reading nor the folds' best new mean improves on what it had read before, or at the last halved ridge not smaller than RESOLVED of the unit, or where nothing of any fold's sum is left, or at a linear solve that gives no finite step. Where this run's paths end is its own outcome and is recorded.",
+   "scales_with": "This run's held readings, the arithmetic's resolution and the computed unit."
+  },
+  "solve_geometry": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "The eigenbasis that speeds a round's linear solves and the measure a writing is nearest in are made from the reference's unmodified cells on the rows solved on (correction.basis_of). They change how fast a solve arrives and which BF16 neighbour a writing prefers, not what is solved.",
+   "scales_with": "The rows solved on and the reference's weights."
+  }
+ },
+ "prediction": "Stated before the rows are read and apart from the candidate's selection. (1) The difference recurs in what the matrix reads. At the setting taken, in each of the three folds, the request terms of the builders the path was not solved on read less than at the start: a change solved on nine or ten builders takes the other four or five toward their own measured targets. (2) It is made where the traces differ. At the setting taken, in each of the three folds, the correct members the path was not solved on move less, in the sum's own units, than that fold's held requests fall (the held sum falls in every fold, not only in the folds' mean); and in Performance's fixed-input reading the candidate moves feed-forward 33's output more at the fourteen wrong sign rows than at the correct members' sign rows and than at the other kept positions, row by row. Both are reported as numbers; neither is a gate. (3) On the model's own answers, read under Astra's contract: the descent's sign and both uses of energy in every one of the thirty. No count of repairs is predicted for this link. Performance's direct terms, seen before this declaration, say that the near-boundary target leaves most builders' sign margin on the minus side by the direct path alone; what layer 34 makes of the changed state is not in that arithmetic. What is predicted: the builders' sign margins move toward the plus, and no originally correct fitting answer acquires an error in either energy use.",
+ "would_weaken_it": "Of (1): held requests that do not fall in any fold, or a selection that keeps the unchanged matrix, say that this residual, with this support and correspondence, is not carried by what this matrix reads in a form the solve finds on these rows: a limit of this request at this matrix, and a reason to read the keys (the matrix's inputs at the sign rows) before another solve. Of (2): correct members' rows or correct sign rows that move as much as the wrong sign rows say the change is not local at this matrix. Of (3): builders' margins that do not move, or a correct answer that acquires an error. Each limits this request at this one matrix on these rows with this work. None negates the earlier repairs, shows that the difference cannot be corrected, or says anything about a correction along the merges that write the sign together; a met trace prediction with unchanged answers is a local construction result, as Astra's contract names it, not a repair and not a failure of the technique.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/reference",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/model/bindings.json",
+  "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.npz",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/read/request.json",
+  "studies/04-round-2-overlap/runs/same-line-sign-original/read/summary.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/passes",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/candidate",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/model",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/own",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/logs",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/provenance.json",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/result.json",
+  "studies/04-round-2-overlap/runs/sign-request-at-33-original/run.sh"
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "run_by": "Claude",
+ "edit": {
+  "matrices": 70,
+  "asked": "57% of the places and matrices, carrying 96% of the squared move a2-sent asked. The ask is 9.4% (attention) and 10.2% (feed-forward) of the matrix output at the median.",
+  "change_over_matrix": "attention-output: median 2.9%. Feed-forward-down: median 2.8%. As a2-sent.",
+  "share_of_asked_change_reached": "45% (attention) and 56% (feed-forward) on the average inputs it was built from"
+ },
+ "prediction_vs_result": {
+  "predicted": "If asking only at the divergence spares the computation where the groups follow each other, the edited model writes the calculation again instead of leaving the path at the ninth token as a2-sent's did, its traces stay as alike to the axis as the original ones before place 142, and the answers that were wrong move towards the correct pattern from place 142 to 304. My own expectation is that it still leaves the path early, because the same matrices carry almost the same change and act on inputs every place shares.",
+  "observed": [
+   "The edited model still leaves the path at about the ninth token. Its answers to the 60 questions are 40 tokens long at the median (37 to 56), where the originals are 438 (correct) and 529 (wrong). It states the final fields without the calculation.",
+   "Its own traces, laid along the axis by the computation alone, are alike to it at 0.60 where the original ones were at 0.86, from the start of the path (0.63 against 0.92 before place 142).",
+   "Set against the original patterns, the answers that were wrong and the ones that were correct both lie about 4 gaps away, together (3.98 and 4.01 over the whole path). With an answer of 40 steps laid along 480 places these distances say only that the path was left.",
+   "Measured on the built edit before it ran: where a matrix was asked for nothing, it still changes its output on the wrong group's average input by a quarter to two thirds of what it does where it was asked (attention layers 0, 4, 8, 12, 16, 20, 24, 28 and 34: 1.5 to 4.1% of the output where the groups follow each other, 2.6 to 10.5% where they diverge)."
+  ],
+  "not_predicted": []
+ },
+ "failures_only": {
+  "overlap_wrong_30": "0 repaired. 28 state another available energy, 2 have no fields.",
+  "overlap_correct_30": "30 broken of 30. 2 state the right available energy with a wrong required energy.",
+  "round_one_wrong_21": "0 repaired. The 3 that had the available energy right lose it.",
+  "round_one_correct_7": "7 broken of 7.",
+  "per_answer": "answers.json"
+ },
+ "what_this_changes": [
+  "The run does not test whether the correction belongs only where the patterns diverge. Where a change is asked does not decide where the built edit acts: a weight change sees only the input arriving at the matrix, and the fit keeps the input directions nearly every place shares.",
+  "Where the edit acts has to be decided on the input side of each matrix: it must be fitted to act on the inputs of the wrong answers where they diverge and to leave the inputs of the correct answers, and of the places where the groups follow each other, as they are. The correct group's matrix inputs have to be recorded for that. This is the protection of the ladder's next rung.",
+  "The test of an edit is the edited model's own answers and their traces (Marcos, November 9). The replay of the original text is dropped."
+ ],
+ "records": [
+  "edit.json",
+  "ask.out",
+  "answers.json",
+  "score.out",
+  "own.out",
+  "overlay.out",
+  "overlay.npz"
+ ]
+}

@@ -1,0 +1,32 @@
+{
+  "status": "acquired_and_reduced_separately",
+  "native_passes": {
+    "old": {
+      "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/old/receipt.json",
+      "sha256": "c5729741707fabfb1cc76914be875d2773d0f153434f2ebdd50bf59afae3cbde"
+    },
+    "new": {
+      "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/new/receipt.json",
+      "sha256": "b3df7ff84757036428f6fcfe7686932af6189beb0ac02791d92a3a1f6ebc7419"
+    },
+    "sham": {
+      "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/sham/receipt.json",
+      "sha256": "50fc416223ca285aea144e2e177898fdbadb75494b7d598c33c67095219e26a0"
+    },
+    "mixed": {
+      "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/mixed/receipt.json",
+      "sha256": "1a485e64ae2a48d9a69125d4f707b8dfd97addfa7004ab74538850e129cd8da7"
+    }
+  },
+  "qualified_result": {
+    "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/result.json",
+    "sha256": "9ae84607d5e8d5630172b3a767d12eed033960cb3e8dead5888b757504164ffd"
+  },
+  "tracking": {
+    "record": "studies/04-round-2-overlap/runs/same-input-failed-repair/readout/mlflow.json",
+    "sha256": "d2314d4156d4ad0f5580d9bd5aaa5a390e6ad71d483b005f43f1fc2bdaf80cbd"
+  },
+  "prediction_vs_result": "All four native passes completed. The qualified reader recovered all 105 same-input effects and emitted stage scores on every tied registered mate. The primary descent and friction projections both became farther from the reference.",
+  "failures_only": "The initial acquisition process attempted to read an unused partial vocabulary-output record as a complete hidden state and ended with an error after writing all four verified captures. A source-bound separate reader excludes that record and uses the native chance radius. The original and edited histories remain different, and the attention K/V producers supply fixed context.",
+  "what_this_changes": "All raw native results remain bound to the original receipts. The qualified numerical report and its FINISHED tracking run are separate from the initial acquisition session status."
+}

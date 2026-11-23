@@ -1,0 +1,239 @@
+{
+ "run": "controlled-bf16-2",
+ "model": "none finished: model/controlled-bf16-2.partial is left as the build left it, for inspection (sha256 77e2468d8592c3f39480ac976ce79581af5496a4325a5cbf71ed8f82da59065e). In it layer 0's attention matrix is changed by 0.29% and layer 0's feed-forward matrix by 2.13% of the matrix; every other tensor is the original.",
+ "chronology": "November 11, 8:10 to 10:01 AM CT. Reference 8:10 to 8:13 and own-start 8:13 to 8:21, both from the original file's saved observations, no model run. The recorder's byte comparison 8:22 to 8:26. Start 8:28. Build 8:28 to 10:01: layer 0's attention 293 s, layer 0's feed-forward 5,290 s (of which the bringing back about 5,000), then the read at layer 1's attention, where it ended.",
+ "what_this_sweep_established": [
+  "What a solve reads of a written matrix is what the engine reads. At both matrices written, the engine's own output at the matrix's merge gives the tube loss the solve gave to all sixteen digits (0.7727011965876796 at layer 0's attention, 0.9109786639356681 at its feed-forward) and the furthest parts to four digits (0.8949 and 0.2387 against 0.8949 and 0.2386; 0.9881 and 0.9483 against 0.9882 and 0.9483). The misreading that ended controlled-bf16-1 is gone, on a second and a third case.",
+  "The first matrix trains. Layer 0's attention, changed by 0.29% of the matrix with every bound of its own merge held on every third of the fitting answers and on all together, leaves the fitting answers 0.7727 of their tube loss there (15 stages of the ridge path, to 2^-9 of the unit). In controlled-bf16-1 the same matrix was changed by 3.6e-6 and left 0.99976: there one direction cell at the answers' first place, read in the wrong form, stopped the pull.",
+  "A merge left outside is brought back in the file's BF16 at a matrix 6144 wide. Layer 0's attention left the feed-forward's merge 35.2 past its bounds in all (furthest part 4.89 times its bound); the feed-forward's own solve brought every bound of every third and of all together back inside, in 22 rounds, with the matrix changed by 2.13%. Read there, the fitting answers are left 0.911 of their tube loss (0.907 before the bringing back).",
+  "The recorder's early stop: a build pass at layer 0 took 5 to 16 s where controlled-bf16-1's took 117."
+ ],
+ "where_it_ended": {
+  "at": "position 2, the read before layer 1's attention: the engine's own output at layer 0's last merge, which is in no solve, has four direction parts and one size part past their bounds, with the feed-forward's merge inside every bound. The feed-forward's change was a bringing back alone, which is not taken back, so there was no pull of the matrix before to take back, and the command ends there as declared. The sweep is not accepted and is not finished; the replay, the own answers and the verdict were not run.",
+  "the_parts_at_layer_0s_last_merge": [
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 151,
+    "of_its_bound": 1.1057,
+    "a_move_is_asked_there": true,
+    "bound": 0.00010493648733245209,
+    "median_bound_of_the_merge": 0.0008131676586344838,
+    "common_to_the_groups_answers": 0.999
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 0,
+    "of_its_bound": 1.0389,
+    "a_move_is_asked_there": false,
+    "bound": 3.274298832067757e-09,
+    "median_bound_of_the_merge": 0.0008131676586344838,
+    "common_to_the_groups_answers": 0.061
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 150,
+    "of_its_bound": 1.0386,
+    "a_move_is_asked_there": true,
+    "bound": 0.00019753909145947546,
+    "median_bound_of_the_merge": 0.0008131676586344838,
+    "common_to_the_groups_answers": 0.999
+   },
+   {
+    "family": "direction",
+    "group": "correct",
+    "place": 0,
+    "of_its_bound": 1.004,
+    "a_move_is_asked_there": false,
+    "bound": 3.658166214393077e-09,
+    "median_bound_of_the_merge": 0.0007131460006348789,
+    "common_to_the_groups_answers": 0.073
+   },
+   {
+    "family": "direction",
+    "group": "correct",
+    "place": 267,
+    "of_its_bound": 0.9749,
+    "a_move_is_asked_there": true,
+    "bound": 2.1177180315135047e-05,
+    "median_bound_of_the_merge": 0.0007131460006348789,
+    "common_to_the_groups_answers": 0.943
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 37,
+    "of_its_bound": 0.9718,
+    "a_move_is_asked_there": false,
+    "bound": 0.00023443515237886459,
+    "median_bound_of_the_merge": 0.0008131676586344838,
+    "common_to_the_groups_answers": 0.978
+   },
+   {
+    "family": "direction",
+    "group": "correct",
+    "place": 478,
+    "of_its_bound": 0.9694,
+    "a_move_is_asked_there": true,
+    "bound": 6.039856998540927e-06,
+    "median_bound_of_the_merge": 0.0007131460006348789,
+    "common_to_the_groups_answers": 0.966
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 24,
+    "of_its_bound": 0.9611,
+    "a_move_is_asked_there": true,
+    "bound": 3.849836048175348e-06,
+    "median_bound_of_the_merge": 0.0008131676586344838,
+    "common_to_the_groups_answers": 0.981
+   },
+   {
+    "family": "size",
+    "group": "wrong",
+    "place": 150,
+    "of_its_bound": 1.113,
+    "a_move_is_asked_there": true,
+    "bound": 4.584309863275848e-06,
+    "median_bound_of_the_merge": 1.8826736777555197e-05,
+    "common_to_the_groups_answers": 1.0
+   },
+   {
+    "family": "size",
+    "group": "wrong",
+    "place": 0,
+    "of_its_bound": 0.9104,
+    "a_move_is_asked_there": false,
+    "bound": 4.137490003386368e-11,
+    "median_bound_of_the_merge": 1.8826736777555197e-05,
+    "common_to_the_groups_answers": 0.093
+   }
+  ],
+  "the_same_parts_at_the_feed_forwards_merge": [
+   {
+    "family": "direction",
+    "group": "correct",
+    "place": 0,
+    "of_its_bound": 0.9881,
+    "a_move_is_asked_there": false,
+    "bound": 3.5489560179513546e-09,
+    "median_bound_of_the_merge": 0.0007039193878881633,
+    "common_to_the_groups_answers": 0.075
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 151,
+    "of_its_bound": 0.9851,
+    "a_move_is_asked_there": true,
+    "bound": 0.00010779702279251069,
+    "median_bound_of_the_merge": 0.0008100888808257878,
+    "common_to_the_groups_answers": 0.999
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 150,
+    "of_its_bound": 0.982,
+    "a_move_is_asked_there": true,
+    "bound": 0.00019869858806487173,
+    "median_bound_of_the_merge": 0.0008100888808257878,
+    "common_to_the_groups_answers": 0.999
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 0,
+    "of_its_bound": 0.9805,
+    "a_move_is_asked_there": false,
+    "bound": 3.1809967993012833e-09,
+    "median_bound_of_the_merge": 0.0008100888808257878,
+    "common_to_the_groups_answers": 0.059
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 148,
+    "of_its_bound": 0.9655,
+    "a_move_is_asked_there": true,
+    "bound": 7.254112279042602e-05,
+    "median_bound_of_the_merge": 0.0008100888808257878,
+    "common_to_the_groups_answers": 0.949
+   },
+   {
+    "family": "direction",
+    "group": "correct",
+    "place": 267,
+    "of_its_bound": 0.9649,
+    "a_move_is_asked_there": true,
+    "bound": 2.1483863747562282e-05,
+    "median_bound_of_the_merge": 0.0007039193878881633,
+    "common_to_the_groups_answers": 0.942
+   },
+   {
+    "family": "direction",
+    "group": "wrong",
+    "place": 37,
+    "of_its_bound": 0.9579,
+    "a_move_is_asked_there": false,
+    "bound": 0.00023517008230555803,
+    "median_bound_of_the_merge": 0.0008100888808257878,
+    "common_to_the_groups_answers": 0.978
+   },
+   {
+    "family": "direction",
+    "group": "correct",
+    "place": 478,
+    "of_its_bound": 0.9537,
+    "a_move_is_asked_there": true,
+    "bound": 6.079424565541558e-06,
+    "median_bound_of_the_merge": 0.0007039193878881633,
+    "common_to_the_groups_answers": 0.966
+   },
+   {
+    "family": "size",
+    "group": "wrong",
+    "place": 150,
+    "of_its_bound": 0.9483,
+    "a_move_is_asked_there": true,
+    "bound": 5.38827407581266e-06,
+    "median_bound_of_the_merge": 1.7844855392468162e-05,
+    "common_to_the_groups_answers": 1.0
+   }
+  ],
+  "read_by": "records/development/2026-11-10-controlled-training/bf16-2-layer0-as-left.json (inspect_merges.py: one pass through the model the build left, pass inspect-layer0-as-the-build-left-it-2, nothing written; the pass without the -2 is the same reading with the common part counted on the whole movement). common_to_the_groups_answers is |mean of the answers' movements|^2 over the mean of their squared movements at that part, of the movement the bound counts (for the wrong group where a move is asked, after the shared movement along the gap is taken out): 1 when every answer of the group moved the same way, near 0 when each moved its own way."
+ },
+ "what_the_parts_say": [
+  "Two kinds of parts fill, and they are different things. At places 148 to 151, 267, 478, 37 and 24 the group's answers moved together (0.94 to 1.00 common): that is the group's pattern moving to the side, which the bound exists to limit, with bounds at 0.005 to 0.3 of the merge's median. At the answers' first place the answers each moved their own way (0.06 to 0.09 common): the group's pattern there moved by about 0.06 of the bound (2e-10 squared), and what fills the bound is the mean of the single rows' squared movements, 3.4e-9, held to the sampling variance of the group's mean, 3.3e-9. The answers of a group differ from each other there by thirty times that (the bound is their variance over 30), so each row moved by about 0.035 of what two answers of its group differ by.",
+  "After the bringing back the feed-forward's matrix stands at its bounds by construction (the least change that holds them): the read third's furthest part is at 0.9997 (the first place, direction), and no part of any pull step, at any ridge, held every bound and left less tube loss. A matrix that had to be brought back gained nothing after it, here as at layer 1's attention on the rows kept from controlled-bf16-1 (0.9552 against 0.9592).",
+  "Layer 0's last merge reads 2 to 17% further along its bounds than the feed-forward's merge does at the same parts (place 151 direction 0.985 to 1.106, place 150 size 0.948 to 1.113, the first place 0.981 to 1.039). A feed-forward solve that holds its own merge at its bounds therefore leaves the layer's last merge outside, at every layer where its solve ends at a bound. This was declared as the open risk (repeating_pattern_check, l) and is what ended the sweep."
+ ],
+ "prediction_vs_result": {
+  "the_reference": "As declared, and recorded in the declaration's second revision: only the first place of the 70 matrix merges differs from controlled-bf16-1's reference; the size's expression floor fell at 16 cells by up to 430 times, which the prediction did not size.",
+  "layer_0_attention": "Declared (first prediction): left as it stands or changed by millionths. Revised after the reference: left as it stands. Result: changed by 0.29%, 0.7727 of the tube loss left. Both were wrong, and for the same reason: they were read off controlled-bf16-1's record, whose solve misread the first place. The tighter size cells at the first place did not stop it (the furthest size part read 0.24).",
+  "layer_0_feed_forward": "Declared: gains at its own merge, near the first sweep's 0.727. Revised: gains less, or nothing. Result: it had to be brought back first and gained nothing after (0.911 left). The revision was nearer; neither said it would stand outside as the attention's change left it.",
+  "the_engine_reads_what_the_solve_read": "As predicted, at both matrices, more closely than predicted (the same tube loss to sixteen digits; 0.6% was the largest difference expected).",
+  "the_layers_last_merge": "As predicted: outside after a feed-forward matrix. Predicted as pulls taken back there at some layers and, as the likely end, a feed-forward matrix with no pull left to take back. That is what happened, at the first layer.",
+  "the_sweep_ends_early": "As predicted in the first prediction and in the revision. The revision named the first place's size cells as the likely cause: wrong. The size part at the first place stands at 0.91 at layer 0's last merge and is not what ended it."
+ },
+ "failures_only": [
+  "The sweep ended at its third of 70 matrices, not accepted.",
+  "The bringing back at layer 0's feed-forward took 22 rounds and about 83 minutes, every round but the last at its cap of 80 passes: its steps were cut short, and the amount outside fell from 35.2 to 0.0002 over 21 rounds (5.4, 2.8, 1.7, 1.2 after the first four). The build prints nothing inside a matrix, so for 88 minutes nothing said where it stood.",
+  "A taking back reaches one matrix and only its pull. With layer 0's last merge outside after a bringing back, nothing could be taken back, though the attention's pull two positions before is what moved it.",
+  "Two predictions of layer 0's attention were wrong (above)."
+ ],
+ "what_this_changes": [
+  "The solver's part, which is this session's: (1) the layer's last merge has to be held by the feed-forward's solve, not found outside one position later; (2) a matrix that is brought back to its bounds has no room to pull, so the bringing back and the pull have to be one solve, or the pull has to start with room; (3) the bringing back's steps have to be aimed within their passes, or it costs an hour and a half a matrix; (4) the build has to say where it stands.",
+  "The allowance's part, which is Astra's and this session's to decide (the dispatch of November 11 on the what-worked study's decision 1): at the answers' first place the bound holds single rows' movement to the sampling variance of the group's mean. On this sweep's model the rows moved 0.035 of what two answers of the group differ by and the pattern 0.06 of its bound, and the part stands at 1.04. Holding the pattern to the variance of the mean and the rows to the variance of the answers is the study's recommended option; this is its measurement 3 taken on a real case, and it is evidence for the choice, not the choice.",
+  "Nothing here bears on whether the trace difference carries the capability: the earlier repairs and their transfer stand as they are recorded. This sweep is a finding about the configuration: what in it now works (the reading, the first matrix, the bringing back) and what in it stops a sweep at the first layer."
+ ],
+ "records": {
+  "build.jsonl": "one line per position: 0 and 1 written, 2 the read where it ended",
+  "reference, reference-against-controlled-bf16-1.json, own/start.json": "what the original model fixes for this run, and what changed against the first sweep's",
+  "recorder-qualification": "the byte comparison of the recorder's early stop (45 of 45)",
+  "records/development/2026-11-10-controlled-training/bf16-2-layer0-as-left.json": "the parts at layer 0's three merges, read after the sweep"
+ }
+}

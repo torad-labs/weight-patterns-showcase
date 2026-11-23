@@ -1,0 +1,75 @@
+{
+ "run": "controlled-bf16-1",
+ "model": "none finished: model/controlled-bf16-1.partial is left as the build left it, for inspection. In it 1,515 bytes of blk.0.attn_output.weight and 1,931,224 bytes of blk.0.ffn_down.weight differ from the original file; every other tensor is the original.",
+ "chronology": "November 10, 9:06 PM CT to November 11, 2:53 AM CT. Baseline, reference, reproduced and own-start read the original file alone (own-start twice: stopped at 1:05 AM CT by a rule Astra then corrected, made at 1:51 AM CT from the same captures). The build ran from 1:07 to 1:19 AM CT (stopped by a fault of the solver, corrected in commit 3daf1433) and from 1:39 to 2:53 AM CT, when it ended at its third matrix. The replay, the own answers and the verdict were not run: there is no finished model.",
+ "what_was_built": "The first sweep of the controlled training ended at its third matrix, not accepted, as the command is declared to end when a bound is outside and nothing brings it back. Layer 0 attention was changed by 3.6e-6 of the matrix. Layer 0 feed-forward was changed by 0.0071 of the matrix and left the fitting answers 0.727 of their tube loss at its own merge with every bound held there (largest 0.987 of a bound). Read through the engine before layer 1 attention, that change left one direction cell of the layer's last merge at 1.35 of its bound; 0.852 of the change was kept (12 halvings, a pass each), after which the engine's own output holds every bound (largest 0.9996) with 0.762 and 0.766 of the tube loss left at the two merges. Layer 1 attention's own merge then stood outside 14 size cells and 5 direction cells (largest 23.0 of a bound). Its own solve changed nothing that brought them back, and no part of the layer 0 feed-forward change down to 1/4096 of it did (12 more halvings).",
+ "original_only_readings": {
+  "reference": "No bound is raised by a floor at any of the 105 merges: read twice one token at a time, the original file gives the same rows at every attention and feed-forward merge and rows at most 3e-7 apart at the layer merges.",
+  "reproduced": "The original file read a second time holds every bound at all 105 merges; its tube loss left is 0.9999999 to 1.0000002 of the whole.",
+  "own_start": "60 complete observations under the recordings' own protocol, three still cut at the 768-token limit as their recordings are. The second answers repeat all 60 recordings token for token. No floor is above its sampling term in any of 100,800 cells of any of the four quantities; with nothing changed the tube loss reads 1.00000001 of the whole."
+ },
+ "after_the_sweep_ended": {
+  "how": "Two readings of the model the build left, the way the build reads a matrix, and one of the bounds themselves (records/development/2026-11-10-controlled-training/: inspect_position.py, inspect-2-attention.json, inspect-2-attention-position0-only.json, bounds_spread.py, bounds-spread.out). They inspect; nothing is chosen from them.",
+  "the_cells_outside_at_layer_1_attention": "19. Fourteen are at places 0, 1, 2, 3, 10, 17, 18 and 21, the opening steps of the answers, where the answers of a group hardly differ: their bounds are 2e-5 to 5e-3 of the median bound of the merge (the smallest, the wrong group's size at place 3, is 4.3e-10 against a median of 2.1e-5; the cell furthest past its bound, the wrong group's size at place 2, has 5.9e-10) and they are 1.0 to 23.0 times past them. Five are at places 149 to 151, where the wrong answers begin to diverge and a move is asked: bounds 0.06 to 0.4 of the median, 1.3 to 2.75 times past. In absolute terms the movements are small: the cell furthest past its bound moved 1.4e-8, and the largest movement among the sizes of the opening cells, the correct group's at place 18, is 1.1e-7, which is 0.0053 of the median size bound.",
+  "with_layer_0_feed_forward_put_back_to_the_original": "In a scratch copy of that model (removed after the reading) only the first matrix's change is left, 1,515 bytes of layer 0 attention, which held every bound at its own merge at 0.988. Layer 1 attention's merge is then still outside one bound: the wrong group's size at place 2 reads 1.38 of 5.9e-10. So taking back the feed-forward change alone, in any part, could not have ended inside, and the cell that ends the sweep is past its bound two matrices downstream of a change of millionths of one matrix. It does not show that no other correction of the two matrices together would have held it.",
+  "how_the_bounds_are_spread": "On stored rows of the original model the bounds of one merge span seven to eight orders of magnitude over its 960 cells. At layer 0 feed-forward the size bound runs from 2.9e-12 (place 2) to 4.1e-4 with a median of 1.7e-5, and the direction bound from 4.7e-11 to 2.9e-3 with a median of 7.6e-4; at layer 1 attention 30 size cells and 14 direction cells are under a hundredth of the median. The tightest are places 0 to 3 in both groups at every merge read (layer 0 attention and feed-forward, layer 1 attention, layer 3 attention). The floor that was to keep a bound from being less than what the model does not repeat is nothing there, because the engine repeats itself.",
+  "the_original_answers_at_those_cells": "Read on stored rows of the original model after the sweep, by Astra's formulas (records/retrospectives/2026-11-11-cell-allowance-review-astra.md; records/development/2026-11-10-controlled-training/allowance-reading.out, .jsonl, .npz), at layer 0 attention and feed-forward, layer 1 attention and layer 3 attention; no bound, target, floor or verdict is changed by it. At places 0 to 3 every answer of a group has generated the same text before the decision; the between-answer variance there is 1e-10 to 2e-7 for the size and 1e-9 to 5e-6 for the direction, against medians of 3e-4 to 8e-4 and 7e-3 to 4e-2. With any one answer left out they stay small at those places, between 0.21 and 1.04 of themselves (1.04, 29/28, is the most any 30 answers can read, so it shows nothing; at 0.21 one answer carries about four fifths of the scatter). That describes these 30 recordings and is not a statement about a population's variance. No variance and no left-out variance is exactly zero, and a floor is above the sampling term in one cell per group and merge (the size at place 0, by the expression of the merge) and nowhere by the second reading. In all 19 cells outside at layer 1 attention the rows moved less than the original answers differ from each other there (0.03 to 0.77 of the between-answer variance); what they are past is that variance over 30. Where both groups are outside at one place they moved by nearly the same amounts (the size at place 1: 4.96e-8 and 5.04e-8; at place 3: 4.08e-9 and 4.14e-9); equal amounts do not show one movement common to both, since the signs and directions are not on record. The scalar moderation of the size variances over a group's places, a naive model in which the places are exchangeable, fits a prior worth 0.86 to 1.34 degrees of freedom against the 29 of a cell's own answers: the places' log variances vary 44 to 90 times more than sampling alone would make them, which that model's prior takes as differences between places and does not reject; what it adds to every cell (5.6e-8 to 2.2e-7) is set by all the places together. The concern with using it as a floor is that the places with one generated prefix are a different kind of place from the others, which the model ignores (Astra). It is a diagnostic and is passed to nothing. The rows of the edited model were not kept by the build, so the movement itself is not decomposed. Astra's reading of this comparison, which adopts no floor and changes no allowance, is the section 'Interpretation of the completed comparison' of his review (commit 146905c2)."
+ },
+ "the_solver_at_the_bound": {
+  "in_the_build": "At layer 0 feed-forward, from the ridge at which cells stand at 0.95 to 1.00 of their bound, a linear solve ends with more slope than it started with (8.6, 12.7, 4.7, 6.3, 18.6, 20.9, 30.6, 7.4 times; under 0.15 at the ridges before), the parts of steps taken fall to 0.12 to 0.5, and 9 of the last 15 solves take no step. The written matrix is still one that holds every bound and leaves less tube loss, because each part of a step is read before it is kept.",
+  "in_layer_1_attentions_restoration": "With cells outside, each of them is weighed at the solver's largest weight; 10 of the 12 ridges took no step and the two rounds that did left 316 of 388 outside. That the solve found no restoration is a statement about this search, as the record says; the reading above shows one cell that no restoration by this matrix alone was shown able to reach.",
+  "on_card_1_after_marcos_cleared_two_cards": "Layer 3 attention on stored rows through the corrected solver leaves the fitting answers 0.4689 of their tube loss at 80 iterations of a linear solve and 0.4693 at 320 (62,245 iterations in place of 15,200): more iterations of the linear solve buy nothing there. The 0.4432 read at 160 iterations before the correction is not repeated. A probe of the linear system through other preconditioners is running."
+ },
+ "prediction_vs_result": {
+  "the_original_files_readings": "As predicted: the reading lies far inside the sampling bounds, a second reading repeats the first, and the floors raise nothing. Not predicted: the second answers repeat the recordings in all 60, where \"most\" was expected.",
+  "layer_0_attention": "As predicted: changed by millionths of the matrix (3.6e-6).",
+  "the_build_works_at_its_bounds_from_the_first_matrix_that_fills_one": "It did, and went no further: the first matrix that had room (layer 0 feed-forward) filled its bounds to 0.987, part of its change was taken back for the engine's own output, and the next matrix could not be brought inside.",
+  "the_last_matrixs_merge_the_replay_and_the_own_answers": "Not reached. Nothing is known from this run about the replay, the own answers or how the model's own traces move.",
+  "what_would_weaken_it": "The declaration names this outcome under the construction, not the hypothesis: \"the sweep ends outside a bound within the first layers ... means the bounds as built do not carry from the fitted rows to the model's own computation, or leave the solver no room in the file's format, and the run then does not test the hypothesis.\" That is what happened, and the readings after it say which bounds: those of the cells where the original answers do not vary."
+ },
+ "failures_only": {
+  "the_run": [
+   "The sweep ended at its third of 70 matrices, not accepted.",
+   "The solver kept one matrix of the writing measure in float32 and the build stopped at 1:19 AM CT (20 minutes lost; corrected).",
+   "The rule for a whole answer asked what three recordings never did (corrected by Astra before any edited answer existed).",
+   "A take-back costs 12 passes through the model, about 25 minutes, and two were needed at one matrix.",
+   "The build takes back one matrix and no further, restart or not: at layer 1 attention only layer 0 feed-forward could be taken back, never layer 0 attention, and a restart loses even the one. The reading with the feed-forward put back shows the first matrix's change alone leaves a cell outside at layer 1 attention. This is a limit of the search, not a showing that no feasible change exists."
+  ],
+  "not_done": [
+   "The replay, the own answers and the verdict.",
+   "Which cells were outside at each trial of the two take-backs is not on record: the rows of a trial are not kept.",
+   "Whether layer 1 attention can restore the five cells at places 149 to 151 with a solver that works at the bound is not known."
+  ]
+ },
+ "what_this_changes": [
+  "The bound of a cell is its own variance over 30 with no floor that bites, and the cells where the answers do not vary (the opening steps, and a few places later where every answer writes the same) get bounds four to seven orders of magnitude under a typical cell. A change that holds them at its own merge leaves them past their bound at a later merge, in a format whose smallest step is one part in 256 of a weight. This sweep's search did not pass them: its solve took no step where they bind and it can take back one matrix and no more. That no edit in the file's format holds them is not shown.",
+  "That is a statement about how the allowance is defined, which is the method's step 5 and Marcos's to change; he said on November 10 that the training might be \"too sensitive to the small discrepancies at certain moments\" and might need a way to normalize. What the floor or normalization is, derived and not picked, is Astra's domain and is open.",
+  "The solver does not work where the bounds bind: its linear solve diverges there and its restoration takes no step. More iterations are not the remedy (80 against 320 at layer 3). Astra's answer on a well-posed subproblem at a binding bound is in records/retrospectives/2026-11-10-stable-training-review-astra.md.",
+  "Layer 0 feed-forward alone, inside every bound of its own merge on the fitting answers, took the wrong pattern's tube loss there to 0.727 of what it was: the training moves the trace where the bounds give it room.",
+  "The hypothesis is not tested by this run."
+ ],
+ "corrections": [
+  {
+   "at_ct": "2026-11-11T03:50:00-06:00",
+   "by": "weight-research-fable",
+   "what": [
+    "The smallest size bound at layer 1 attention is the wrong group's at place 3 (4.254e-10), not place 2's 5.94e-10, which is the bound of the cell furthest past.",
+    "The 1.4e-8 is the movement at the cell furthest past its bound, not the largest movement among the opening cells' sizes (the correct group's at place 18: 1.135e-7, 0.0053 of the median size bound).",
+    "'The sweep cannot pass them as they are' said more than the records show. They show that this search failed and that taking back the second matrix alone does not remove the violation; they do not show that no edit in BF16 holds those cells.",
+    "The take-back is one matrix deep with or without a restart; the record said only that the restart lost it.",
+    "Added after_the_sweep_ended.the_original_answers_at_those_cells from the reading Astra asked for."
+   ],
+   "from": "Astra's review, records/retrospectives/2026-11-11-cell-allowance-review-astra.md (commit 90470b6a)"
+  },
+  {
+   "at_ct": "2026-11-11T04:05:00-06:00",
+   "by": "weight-research-fable",
+   "from": "Astra's interpretation, records/retrospectives/2026-11-11-cell-allowance-review-astra.md (commit 146905c2)",
+   "what": [
+    "The left-out ratio's upper end of 1.04 is algebraic (29/28) and shows nothing; the reading describes these 30 recordings, not a population's variance.",
+    "The excess of the log variances does not reject the moderation's model; the concern with its floor is the prefix structure it ignores.",
+    "Nearly equal squared movements of the two groups do not establish a movement common to both."
+   ]
+  }
+ ]
+}

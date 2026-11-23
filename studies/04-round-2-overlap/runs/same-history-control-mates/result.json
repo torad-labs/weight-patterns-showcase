@@ -1,0 +1,133 @@
+{
+ "status": "finished 7:20 PM CT November 14: the reading, the record and the check are made. The conditional score is not made here: it is the scorer's (weight-research-astra).",
+ "prediction_vs_result": {
+  "1_the_reading_is_whole": {
+   "met": true,
+   "answers": 30,
+   "rows": 18375,
+   "merges": 105,
+   "rows_whose_add_was_made_again": 1929375,
+   "of": 1929375,
+   "recorder_seconds": 199.1,
+   "seconds": 203.0,
+   "started": "2026-11-14 19:16:40 CST",
+   "card": "NVIDIA GeForce RTX 5080",
+   "load_at_start": [
+    "9.01",
+    "7.76",
+    "11.21"
+   ]
+  },
+  "2_where_the_original_leaves_the_text": {
+   "met": true,
+   "answers_whose_first_step_not_its_own_is_where_the_text_leaves_the_recording": 30,
+   "of": 30,
+   "answers_whose_text_is_not_the_originals_own": 30,
+   "first_such_step": {
+    "least": 3,
+    "median": 68.0,
+    "most": 99
+   }
+  },
+  "3_the_same_bits_as_the_original_control_where_given_one_input": {
+   "met": true,
+   "rows_compared": 6750,
+   "answer_rows": 1591,
+   "question_rows": 5159,
+   "merges": 105,
+   "merges_with_a_row_not_the_same_bits": [],
+   "terminal": {
+    "l_out": {
+     "rows_compared": 6750,
+     "rows_not_the_same_bits": 0,
+     "largest_difference": 0.0
+    },
+    "result_norm": {
+     "rows_compared": 1591,
+     "rows_not_the_same_bits": 0,
+     "largest_difference": 0.0
+    }
+   }
+  },
+  "4_the_record": {
+   "met": true,
+   "format": "whole-gap-conditional-correspondence/1",
+   "answers_changed": 30,
+   "unchanged": 0,
+   "through": {
+    "format": "whole-gap-correspondence/2",
+    "sha256": "14dfa4ac17c3cbf883aa34c4923343522f136498339329e900d0e8e59358cbf1",
+    "reading_sha256": "ccfaef0bf9d905b06dd0ca819ba58887304748802bbc80b0babdac284895b5ef",
+    "protocol_sha256": "8d764d299bcdbaa804cd301a2d9a90d59095b3f47edf78b0a6920b436f687530"
+   }
+  },
+  "all_four_met": true
+ },
+ "read_beside_the_predictions": {
+  "what": "at how many of the candidate's steps the supplied token is not the token the original's weights would have chosen there, given the candidate's text before it (the reader's own count, from the engine's scores at every decision). A count of tokens, described and not judged: the trace is the judge, and this says nothing of how far the states stand from any target.",
+  "all_steps": 13216,
+  "steps_whose_supplied_token_is_not_the_originals_own_choice": 949,
+  "share": 0.0718,
+  "by_group": {
+   "wrong": {
+    "answers": 15,
+    "steps": 6517,
+    "steps_whose_supplied_token_is_not_the_originals_own_choice": 470,
+    "share": 0.0721,
+    "first_such_step": {
+     "least": 3,
+     "median": 59,
+     "most": 69
+    }
+   },
+   "correct": {
+    "answers": 15,
+    "steps": 6699,
+    "steps_whose_supplied_token_is_not_the_originals_own_choice": 479,
+    "share": 0.0715,
+    "first_such_step": {
+     "least": 6,
+     "median": 68,
+     "most": 99
+    }
+   }
+  }
+ },
+ "failures_only": "None of the instrument: no row failed the ADD, no shared row differs from the original control, no answer was refused by the record. What the run does not hold: no score, no loss and no split of the candidate's result; the primary scorer refuses this reading by design, and a conditional loader in the scorer is Astra's to write. The check compares only rows computed from one input; it says nothing of the rows after each answer leaves the recording, which are the ones the control exists for.",
+ "what_this_changes": "The term the candidate's comparison could not separate can now be scored: the original's weights on the candidate's own text, at every row and every merge, through the candidate's own mapping, on the execution of the original control and of the candidate (held by bytes at the rows given one input). With it L(W1,H1) - L(W0,H0) splits into what the text does under the original's weights and what the weights do on that text. Nothing about the candidate's result changes, and nothing is claimed of the hypothesis until that score exists.",
+ "provenance": {
+  "reading_sha256": "edf71a3fdf2f8aee941d854174397345856d10f104e3bc06961def44658645d6",
+  "correspondence_sha256": "298c470ff553643cc831bd29d5a227e83a6b672a651f5b773e174e25d0b03a06",
+  "check_sha256": "cc18166d4c34039d399b7ba9fd449280462e9d97a9c7c95022622184fc389a62",
+  "declaration_sha256": "4cf7eada0d1a33846f4bb976f91a5805521c7efcdecf2fd970c87275061c3507",
+  "protocol_sha256": "3a2c6b61e9047c00a1a9281f75d3b17fb5cdc6d4cacb5c4838a08135684374f6",
+  "original_control_reading_sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf",
+  "candidate": {
+   "run": "studies/04-round-2-overlap/runs/whole-gap-mates-original",
+   "model_sha256": "05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe",
+   "capture_text_json_sha256": "4155834adcac31460baa24769f60d8c918a335a2a259755e639754c55677d367",
+   "correspondence_sha256": "14dfa4ac17c3cbf883aa34c4923343522f136498339329e900d0e8e59358cbf1",
+   "reading_sha256": "ccfaef0bf9d905b06dd0ca819ba58887304748802bbc80b0babdac284895b5ef",
+   "target_sha256": "b09153baf5b6fe665b1cb990acccd7bddc7e5e131bb1a3491c2d765078c7cd20",
+   "read_here": "its own answers' tokens (own/<id>/answer.json), the pairs its capture bound (own/<id>/pairs-original.npy, own/text.json) and its primary record (correspondence.json). Its model file is not opened: the weights read here are the original's."
+  },
+  "made_with": {
+   "states_reading.py": "e493e1805b339853043068a08781eb32075c42240784e6bf10e95501720365bb",
+   "whole_reading.py": "1045550c0829522ed2db6d6099bbab78b6e08842692ea0be937078ba13c20509",
+   "reading_identity.py": "fed8fcbd3779a9cdb02bdb165eff71b6ac4ce4a99630b3ba7170bd8b8f596969"
+  },
+  "execution": {
+   "recorder_sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+   "libraries_sha256": "06ffecec44d083a66efdf4b7b2d97567a5c262de5acddc85150a60890fec8df5",
+   "card": "NVIDIA GeForce RTX 5080",
+   "driver": "615.71.10",
+   "visible": "0",
+   "fusion_disabled": "1",
+   "recorder_arguments": [
+    "capture",
+    "residual",
+    "stream"
+   ]
+  }
+ }
+}

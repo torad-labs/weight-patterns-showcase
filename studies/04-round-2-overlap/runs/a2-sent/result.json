@@ -1,0 +1,48 @@
+{
+ "run_by": "Claude",
+ "edit": {
+  "matrices": 70,
+  "asked_change_over_output": "attention-output: median 9.6% of the matrix output (4 to 16%). Feed-forward-down: median 10.3% (7 to 18%). a2-pattern asked 64% and 33%.",
+  "change_over_matrix": "attention-output: median 3.0% of the matrix (1.1 to 6.1%). Feed-forward-down: median 2.9% (1.3 to 6.0%). a2-pattern changed them by 15% and 8.5%.",
+  "share_of_asked_change_reached": "48% (attention) and 57% (feed-forward) on the average inputs it was built from"
+ },
+ "prediction_vs_result": {
+  "predicted": "The change asked of each matrix is a small part of its output, of the order of the shared move, and the matrices change several times less than in a2-pattern. At the first matrix, inside places 150 to 265, the wrong group's sending moves along the gap by most of what was asked and less than half a gap sideways. The correct group's sending moves about as far as the wrong group's. Deeper along the path the travel is larger than at the first matrix.",
+  "observed": [
+   "The ask is about a tenth of each matrix's output and the matrices change five times less than in a2-pattern.",
+   "First matrix (layer 0 attention, nothing edited before it), places 150 to 265: asked 0.85 of the gap, the wrong group's sending moved 0.36 along it and 0.29 gaps sideways. The direction is right and the amount is short, in line with the fit reaching about half of what was asked. The correct group's sending moved 0.34 gaps.",
+   "Deeper, the earlier edits add to each matrix's own: the wrong group's sending has moved 0.81 to 0.87 of the gap by layer 2, 1.55 to 1.70 in layer 16, 1.2 to 1.4 in layer 24 and 0.9 to 1.2 in layer 34. Over all matrices 1.10 (attention) and 1.12 (feed-forward) against 0.88 asked, with 1.1 to 1.2 gaps sideways.",
+   "The correct group's sending moved as far as the wrong group's: 1.14 and 1.22 gaps.",
+   "In the turns, replayed token for token: inside places 150 to 265 the wrong pattern moved 1.04 of the way to the correct one (a2-pattern: 0.50), about 1.1 gaps sideways (a2-pattern: about 3.4), and the gap between the two patterns fell to 0.73 of its size (a2-pattern: it grew to 1.28). By layer the move along the gap is 0.02 in layer 0, about 0.8 in layers 8 to 13, 1.5 in layers 15 to 19 and about 1.1 at the end.",
+   "Reading the recorded answers, the edited model would choose the recorded token at 83% of the steps (73 to 88% per answer; a2-pattern: 41%). The first step where it would choose another token is step 9 at the median (3 to 12)."
+  ],
+  "not_predicted": [
+   "Answering on its own, the edited model writes the same opening line and then, at about the ninth token, goes straight to the final fields without writing the calculation: the 60 block answers are 35 tokens long at the median, where the originals are about 400 to 500. The numbers it states are wrong."
+  ]
+ },
+ "failures_only": {
+  "note": "The answers were read although the pattern was still off by about one gap sideways and overshot in the middle layers, as a first reading of a model that still follows its own text. It is information, not a pass.",
+  "overlap_wrong_30": "0 repaired. All 30 state an available energy that is neither correct nor one of the known failures.",
+  "overlap_correct_30": "30 broken of 30: 28 state another available energy, 2 have no fields.",
+  "round_one_wrong_21": "0 repaired. The 3 that had the available energy right lose it.",
+  "round_one_correct_7": "7 broken of 7.",
+  "per_answer": "answers.json",
+  "judge": "Counted after the judge was fixed on November 9 to read a number written as $124.0$ J, which it had taken for a missing field. No original answer's judgment changed with the fix."
+ },
+ "what_this_changes": [
+  "The conversion is right in kind: asked as a part of what each matrix sends, the wrong pattern moves towards the correct one and not away, with a weight change five times smaller.",
+  "Two things remain off in the pattern and both were named before the run. Each matrix is sized as if no other were edited, and the earlier edits add up to 1.5 times the gap in the middle layers. And the edit acts on inputs both groups share, so the correct pattern travels with the wrong one.",
+  "The replay holds the text fixed and so cannot show what the edited model does on its own (Marcos, November 9: it is not a real scenario). On its own this model leaves the path at the ninth token, where the two groups follow each other and nothing needed correcting, and never reaches the stretch where they diverge. An edit has to leave the computation alone where the patterns follow each other before its effect on the divergence can be read from answers.",
+  "This run does not test the hypothesis: the model skips the calculation, so whether the descent enters differently was not observed."
+ ],
+ "records": [
+  "edit.json",
+  "ask.out",
+  "moved.out",
+  "moved-sent.npz",
+  "moved.npz",
+  "answers.json",
+  "score.out",
+  "how-far-the-patterns-moved.png"
+ ]
+}

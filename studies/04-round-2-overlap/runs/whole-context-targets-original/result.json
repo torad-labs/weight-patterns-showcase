@@ -1,0 +1,836 @@
+{
+  "prediction_vs_result": {
+    "targets": {
+      "affine": {
+        "target": {
+          "record": "studies/04-round-2-overlap/runs/whole-context-targets-original/affine/target.json",
+          "sha256": "50d32b89e09922265a3436a56a3c4eb52bacb49f0e4e1fb092819a548f7d240d"
+        },
+        "members": {
+          "discovery-05-channel-h1": {
+            "correct": false,
+            "direction": 0.0031493929103481914,
+            "size": 8.039212850900865e-05,
+            "resolved": [
+              60690,
+              60690
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-10-channel-h1": {
+            "correct": false,
+            "direction": 0.003576598939104337,
+            "size": 9.893750045490723e-05,
+            "resolved": [
+              69405,
+              69405
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-17-channel-h1": {
+            "correct": false,
+            "direction": 0.0038073670276558545,
+            "size": 0.00010586170419548325,
+            "resolved": [
+              73710,
+              73710
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-001-h3": {
+            "correct": false,
+            "direction": 0.007847829414598722,
+            "size": 0.000225490139114107,
+            "resolved": [
+              98700,
+              98700
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-020-h1": {
+            "correct": false,
+            "direction": 0.007102441514667889,
+            "size": 0.00027842694153969806,
+            "resolved": [
+              83265,
+              83265
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-034-h3": {
+            "correct": false,
+            "direction": 0.004844281273804692,
+            "size": 0.00012862031772190968,
+            "resolved": [
+              75600,
+              75600
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-042-h3": {
+            "correct": false,
+            "direction": 0.005060216975873909,
+            "size": 0.00012699812140579613,
+            "resolved": [
+              83475,
+              83475
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-045-h1": {
+            "correct": false,
+            "direction": 0.002389165464858318,
+            "size": 6.39640970399263e-05,
+            "resolved": [
+              61320,
+              61320
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-046-h3": {
+            "correct": false,
+            "direction": 0.002291629940646955,
+            "size": 6.965466840017559e-05,
+            "resolved": [
+              61215,
+              61215
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-068-h1": {
+            "correct": false,
+            "direction": 0.0032873352391392923,
+            "size": 9.058923165314078e-05,
+            "resolved": [
+              64470,
+              64470
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-070-h1": {
+            "correct": false,
+            "direction": 0.0025156603117525212,
+            "size": 6.222710047119846e-05,
+            "resolved": [
+              61110,
+              61110
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-087-h3": {
+            "correct": false,
+            "direction": 0.008604543797824904,
+            "size": 0.00027377868652146757,
+            "resolved": [
+              95760,
+              95760
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-092-h1": {
+            "correct": false,
+            "direction": 0.002985085677092235,
+            "size": 7.354061742261891e-05,
+            "resolved": [
+              61005,
+              61005
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-094-h1": {
+            "correct": false,
+            "direction": 0.004249130989191799,
+            "size": 0.00013651604878797498,
+            "resolved": [
+              71925,
+              71925
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-095-h1": {
+            "correct": false,
+            "direction": 0.005754355426496374,
+            "size": 0.0001858236109523184,
+            "resolved": [
+              80430,
+              80430
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-01-channel-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              58800,
+              58800
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-06-channel-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61005,
+              61005
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-15-channel-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              66465,
+              66465
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-00-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              83790,
+              83790
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-004-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              58800,
+              58800
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-08-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              65940,
+              65940
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-10-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              69615,
+              69615
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-029-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61530,
+              61530
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-11-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              60900,
+              60900
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-064-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              67830,
+              67830
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-071-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              70035,
+              70035
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-039-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61530,
+              61530
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-076-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61320,
+              61320
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-078-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              62370,
+              62370
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-023-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61845,
+              61845
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          }
+        },
+        "direction": 0.067465034903056,
+        "size": 0.002000820914189731,
+        "unknown": [
+          0,
+          0
+        ]
+      },
+      "mates": {
+        "target": {
+          "record": "studies/04-round-2-overlap/runs/whole-context-targets-original/mates/target.json",
+          "sha256": "b09153baf5b6fe665b1cb990acccd7bddc7e5e131bb1a3491c2d765078c7cd20"
+        },
+        "members": {
+          "discovery-05-channel-h1": {
+            "correct": false,
+            "direction": 0.0021985471454103143,
+            "size": 5.516958462856971e-05,
+            "resolved": [
+              60690,
+              60690
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-10-channel-h1": {
+            "correct": false,
+            "direction": 0.0034232915848456365,
+            "size": 9.477642883367643e-05,
+            "resolved": [
+              69405,
+              69405
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-17-channel-h1": {
+            "correct": false,
+            "direction": 0.0034666494715550394,
+            "size": 9.615055086931397e-05,
+            "resolved": [
+              73710,
+              73710
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-001-h3": {
+            "correct": false,
+            "direction": 0.008134288535985672,
+            "size": 0.00026455205092930194,
+            "resolved": [
+              98700,
+              98700
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-020-h1": {
+            "correct": false,
+            "direction": 0.005251787723692592,
+            "size": 0.00018139355213079192,
+            "resolved": [
+              83265,
+              83265
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-034-h3": {
+            "correct": false,
+            "direction": 0.005281338977563376,
+            "size": 0.0001576162614879587,
+            "resolved": [
+              75600,
+              75600
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-042-h3": {
+            "correct": false,
+            "direction": 0.0060574486166664575,
+            "size": 0.00016145286119282387,
+            "resolved": [
+              83475,
+              83475
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-045-h1": {
+            "correct": false,
+            "direction": 0.0007146586808772418,
+            "size": 1.3999235111656836e-05,
+            "resolved": [
+              61320,
+              61320
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-046-h3": {
+            "correct": false,
+            "direction": 0.002924097212150456,
+            "size": 9.16980143412103e-05,
+            "resolved": [
+              61215,
+              61215
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-068-h1": {
+            "correct": false,
+            "direction": 0.002906755255549593,
+            "size": 6.820336948959093e-05,
+            "resolved": [
+              64470,
+              64470
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-070-h1": {
+            "correct": false,
+            "direction": 0.004017574312262382,
+            "size": 0.000101602744233986,
+            "resolved": [
+              61110,
+              61110
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-087-h3": {
+            "correct": false,
+            "direction": 0.008229493204310663,
+            "size": 0.0002497460683947386,
+            "resolved": [
+              95760,
+              95760
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-092-h1": {
+            "correct": false,
+            "direction": 0.00250724012111098,
+            "size": 6.771528989436737e-05,
+            "resolved": [
+              61005,
+              61005
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-094-h1": {
+            "correct": false,
+            "direction": 0.004797538644654173,
+            "size": 0.00016269134941868858,
+            "resolved": [
+              71925,
+              71925
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-095-h1": {
+            "correct": false,
+            "direction": 0.005631445969731608,
+            "size": 0.0001848159156193387,
+            "resolved": [
+              80430,
+              80430
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-01-channel-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              58800,
+              58800
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-06-channel-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61005,
+              61005
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-15-channel-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              66465,
+              66465
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-00-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              83790,
+              83790
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-004-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              58800,
+              58800
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-08-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              65940,
+              65940
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-10-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              69615,
+              69615
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-029-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61530,
+              61530
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "discovery-11-channel-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              60900,
+              60900
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-064-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              67830,
+              67830
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-071-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              70035,
+              70035
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-039-h3": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61530,
+              61530
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-076-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61320,
+              61320
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-078-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              62370,
+              62370
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          },
+          "expanded-023-h1": {
+            "correct": true,
+            "direction": 0.0,
+            "size": 0.0,
+            "resolved": [
+              61845,
+              61845
+            ],
+            "unknown": [
+              0,
+              0
+            ]
+          }
+        },
+        "direction": 0.06554215545636619,
+        "size": 0.0019515832765760138,
+        "unknown": [
+          0,
+          0
+        ]
+      }
+    },
+    "merges": 105,
+    "rows": 19751,
+    "members": 30,
+    "interpretation": "Two constructed original-context fields, not a repair result; numerical context support is not native realizability."
+  },
+  "failures_only": {
+    "unknown": {
+      "affine": [
+        0,
+        0
+      ],
+      "mates": [
+        0,
+        0
+      ]
+    },
+    "limitations": [
+      "Native corrected-model computation and no-fit transfer have not run.",
+      "Affine and mate-context transport and complete DTW correspondence remain hypotheses.",
+      "Leave-one-success-out trace reconstruction was not scored; context-span support alone is reported."
+    ]
+  },
+  "what_this_changes": "The contextual field is explicit and serialized. This compilation selects no candidate or ridge and authorizes no model run."
+}

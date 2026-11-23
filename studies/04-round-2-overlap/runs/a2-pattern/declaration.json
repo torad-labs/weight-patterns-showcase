@@ -1,0 +1,51 @@
+{
+ "method_step": [
+  5
+ ],
+ "run_by": "Claude",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/trace-overlap/recurrence.npz",
+ "hypothesis": "The correct answers share a pattern in how the signal turns along the path and the wrong answers share another. Bringing the wrong pattern's direction towards the correct one, at the places where the gap between them is shared, repairs the capability. The token, the value and the answer at those places are irrelevant.",
+ "what_went_wrong_before": "a2 asked each of 750 inputs to reach its own target at every place and merge, whether the gap there was shared or not. The weight change was several times larger than the gap and the model stopped reading the question.",
+ "why_this_direction": "trace-overlap lines the 60 traces up by the computation alone and shows the two shared patterns travelling the same path, apart by 5 to 18 times chance along one stretch and by about twice chance elsewhere, with two halves that share no answer agreeing on the gap. Marcos, November 9: this is the overlap he expected; bring the pattern or direction closer to the correct answer at the places that have significant gaps, without caring about the token or the value there.",
+ "repeating_pattern_check": "What repeats: a step gets put between the gap and the edit, and the target becomes a word or a field. Here the gap goes into the weights directly and the target is the turn of the signal. What repeated in a2: fitting what is particular to single answers. Here every quantity that enters the edit is an average over the wrong group at a place, and the gap is shrunk to its shared part. One risk carries over from a2 and is not removed: every matrix closes its own part of the gap on the original inputs and all are applied together, although a later part is partly caused by earlier ones. The edited model's traces will show whether the wrong pattern passes the correct one.",
+ "rule": {
+  "members": "The 30 wrong answers of wide-overlap, with the patterns and the alignment of trace-overlap.",
+  "where_and_how_much": "At every place of the axis and every attention and feed-forward merge, the gap between the correct and the wrong pattern's turn is multiplied by its shared part, 1 minus chance over gap, and by zero where chance is larger. No place, layer or merge is picked by hand.",
+  "target": "Each wrong answer's own merged signal is turned by that shared move, at the nearest size. The change this asks of the matrix output is averaged over the 30 answers at each place, together with their average input.",
+  "edit": "For each of the 70 matrices, the smallest change that makes the average input of every place produce the average change asked there. Full strength. All 70 together in one copy of the original model, in its native BF16 storage.",
+  "test": "The edited model answers the 60 questions of the overlap and round one's 28 on GPU0, greedy. Fields are judged original beside edited. The edited model's traces are then overlaid on both patterns."
+ },
+ "parameters": {
+  "shared_part": {
+   "measured_from": "studies/04-round-2-overlap/runs/trace-overlap/recurrence.npz",
+   "derivation": "max(0, 1 - chance / gap) at each place and merge. The squared gap between two group means is, on average, the squared shared gap plus what chance adds; chance is the sum over the two groups of the members' spread divided by their count. So this is the part of the observed gap that is shared.",
+   "scales_with": "the number of members in each group and their spread at that place and merge"
+  },
+  "singular_value_floor": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-pattern/edit-first-build.json",
+   "derivation": "the largest singular value of (average input of one half of the wrong group minus average input of the other half) / 2, per matrix. That difference holds nothing the group shares, only what differs between answers. An input direction is kept if it is stronger than this.",
+   "scales_with": "the number of wrong answers and how much their inputs differ at each place"
+  },
+  "raw_output_size": {
+   "measured_from": "studies/04-round-2-overlap/runs/trace-overlap/result.json",
+   "derivation": "s = <y, u> / <u, u>: the norm after the matrix discards the size of its output, so the size asked is the one nearest to the present output.",
+   "scales_with": "each input"
+  }
+ },
+ "prediction": {
+  "expected_observation": "The weight change is far smaller than a2's and the edited model still reads the question. Some of the 30 wrong answers now add the descent, with their own numbers. Most of the 30 correct answers keep their fields. Round one's 28 are not predicted.",
+  "failures_only": "Per field, original beside edited, for the 60 and for round one's 28. Damage to correct answers separately."
+ },
+ "would_weaken_it": "The edited model reads the question and writes the calculation, and no wrong answer changes how the descent enters.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/trace-overlap",
+  "studies/04-round-2-overlap/runs/wide-overlap",
+  "studies/04-round-2-overlap/runs/full-overlap",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/a2-pattern"
+ ],
+ "revision": "Revised November 9 after the first build and before any answer of the edited model. The first build kept every input direction down to float32 rounding. Its matrices changed by 1.6 to 15 times their own size (attention) and 0.16 to 2.2 times (feed-forward), so it was not run. Measured on that build: in layer 16's attention matrix one input direction carries 58% of the asked change at a 1.75% change of the matrix, and the last 5% costs 340%. The rounding floor fitted what is particular to single places, against this run's own rule that only what is shared enters. The floor is now what two halves of the wrong group do not agree on. The first build's report is kept as edit-first-build.json."
+}

@@ -1,0 +1,554 @@
+{
+ "prediction_vs_result": "All 15 fitting successes have zero direct hinge on their original rows; wrong members retain loss sum 0.0526552862736 across 138187 active cells. This is empirical calibration, not validation.",
+ "failures_only": {
+  "discovery-05-channel-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 578,
+   "cells": 60690,
+   "loss": 0.000780510487212796,
+   "mean_calibration_loss": 0.01977508920421975,
+   "active_cells": 3154,
+   "mean_calibration_active_cells": 21816
+  },
+  "discovery-10-channel-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-064-h1",
+   "original_rows": 661,
+   "cells": 69405,
+   "loss": 0.0020602907299354495,
+   "mean_calibration_loss": 0.023300143983466116,
+   "active_cells": 4005,
+   "mean_calibration_active_cells": 28052
+  },
+  "discovery-17-channel-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-071-h1",
+   "original_rows": 702,
+   "cells": 73710,
+   "loss": 0.0020143050847276365,
+   "mean_calibration_loss": 0.03395503848644528,
+   "active_cells": 7014,
+   "mean_calibration_active_cells": 32386
+  },
+  "expanded-001-h3": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-004-h1",
+   "original_rows": 940,
+   "cells": 98700,
+   "loss": 0.01093542071775582,
+   "mean_calibration_loss": 0.07938835219042044,
+   "active_cells": 24708,
+   "mean_calibration_active_cells": 78397
+  },
+  "expanded-020-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 793,
+   "cells": 83265,
+   "loss": 0.0024754651068448277,
+   "mean_calibration_loss": 0.04040630710280384,
+   "active_cells": 7628,
+   "mean_calibration_active_cells": 43924
+  },
+  "expanded-034-h3": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 720,
+   "cells": 75600,
+   "loss": 0.006728484098076724,
+   "mean_calibration_loss": 0.044656034521998386,
+   "active_cells": 17897,
+   "mean_calibration_active_cells": 60390
+  },
+  "expanded-042-h3": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-071-h1",
+   "original_rows": 795,
+   "cells": 83475,
+   "loss": 0.007949663113666907,
+   "mean_calibration_loss": 0.04722547622758627,
+   "active_cells": 19469,
+   "mean_calibration_active_cells": 62574
+  },
+  "expanded-045-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 584,
+   "cells": 61320,
+   "loss": 0.000531275003007335,
+   "mean_calibration_loss": 0.019815349649157793,
+   "active_cells": 3214,
+   "mean_calibration_active_cells": 27824
+  },
+  "expanded-046-h3": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "discovery-11-channel-h3",
+   "original_rows": 583,
+   "cells": 61215,
+   "loss": 0.000571177710086486,
+   "mean_calibration_loss": 0.019473090591122816,
+   "active_cells": 2917,
+   "mean_calibration_active_cells": 25626
+  },
+  "expanded-068-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-064-h1",
+   "original_rows": 614,
+   "cells": 64470,
+   "loss": 0.0015914258480739635,
+   "mean_calibration_loss": 0.02432513952573577,
+   "active_cells": 4143,
+   "mean_calibration_active_cells": 34183
+  },
+  "expanded-070-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 582,
+   "cells": 61110,
+   "loss": 0.0030071737603757005,
+   "mean_calibration_loss": 0.026449187290044127,
+   "active_cells": 5937,
+   "mean_calibration_active_cells": 31785
+  },
+  "expanded-087-h3": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-004-h1",
+   "original_rows": 912,
+   "cells": 95760,
+   "loss": 0.008238309368904788,
+   "mean_calibration_loss": 0.06856790229296422,
+   "active_cells": 20638,
+   "mean_calibration_active_cells": 72380
+  },
+  "expanded-092-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 581,
+   "cells": 61005,
+   "loss": 0.0019615983597985635,
+   "mean_calibration_loss": 0.023057885574792623,
+   "active_cells": 5689,
+   "mean_calibration_active_cells": 34545
+  },
+  "expanded-094-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 685,
+   "cells": 71925,
+   "loss": 0.0013111116863893351,
+   "mean_calibration_loss": 0.02833478698923668,
+   "active_cells": 4996,
+   "mean_calibration_active_cells": 39491
+  },
+  "expanded-095-h1": {
+   "group": "wrong",
+   "bank_member": false,
+   "mate": "expanded-023-h1",
+   "original_rows": 766,
+   "cells": 80430,
+   "loss": 0.0024990751987405044,
+   "mean_calibration_loss": 0.03328475909579194,
+   "active_cells": 6778,
+   "mean_calibration_active_cells": 39133
+  }
+ },
+ "what_this_changes": "The maximum envelope is frozen separately. Original mate assignments and their route limitations remain; no model, native pass, repair or closure is claimed.",
+ "declaration_sha256": "fbd72ec69dc332aad0300d5fe11b82a820b72e6ae0d7a3918c21497f5453c598",
+ "reference": {
+  "folder": "studies/04-round-2-overlap/runs/relation-envelope-original/reference",
+  "reference_json_sha256": "937ff3ec2f53b17e6a9a42bba0cc3f4edc7a6ec7b93c6fbd240486d881ebea50",
+  "tolerance_sha256": "d60f280c645bd15d70a00a6938c7e0e77fae6cc86fc53240da5889e1d68fb4d7"
+ },
+ "original": {
+  "objective": 0.052655286273596835,
+  "groups": {
+   "wrong": {
+    "members": 15,
+    "loss_sum": 0.052655286273596835,
+    "mean_calibration_loss_sum": 0.5320145427257861,
+    "active_cells": 138187,
+    "cells": 1102080
+   },
+   "all_successes": {
+    "members": 15,
+    "loss_sum": 0.0,
+    "mean_calibration_loss_sum": 0.2866945943729895,
+    "active_cells": 0,
+    "cells": 971775
+   },
+   "bank_members": {
+    "members": 10,
+    "loss_sum": 0.0,
+    "mean_calibration_loss_sum": 0.15589754178143586,
+    "active_cells": 0,
+    "cells": 636300
+   },
+   "other_successes": {
+    "members": 5,
+    "loss_sum": 0.0,
+    "mean_calibration_loss_sum": 0.1307970525915536,
+    "active_cells": 0,
+    "cells": 335475
+   }
+  },
+  "by_answer": {
+   "discovery-05-channel-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 578,
+    "cells": 60690,
+    "loss": 0.000780510487212796,
+    "mean_calibration_loss": 0.01977508920421975,
+    "active_cells": 3154,
+    "mean_calibration_active_cells": 21816
+   },
+   "discovery-10-channel-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-064-h1",
+    "original_rows": 661,
+    "cells": 69405,
+    "loss": 0.0020602907299354495,
+    "mean_calibration_loss": 0.023300143983466116,
+    "active_cells": 4005,
+    "mean_calibration_active_cells": 28052
+   },
+   "discovery-17-channel-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-071-h1",
+    "original_rows": 702,
+    "cells": 73710,
+    "loss": 0.0020143050847276365,
+    "mean_calibration_loss": 0.03395503848644528,
+    "active_cells": 7014,
+    "mean_calibration_active_cells": 32386
+   },
+   "expanded-001-h3": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-004-h1",
+    "original_rows": 940,
+    "cells": 98700,
+    "loss": 0.01093542071775582,
+    "mean_calibration_loss": 0.07938835219042044,
+    "active_cells": 24708,
+    "mean_calibration_active_cells": 78397
+   },
+   "expanded-020-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 793,
+    "cells": 83265,
+    "loss": 0.0024754651068448277,
+    "mean_calibration_loss": 0.04040630710280384,
+    "active_cells": 7628,
+    "mean_calibration_active_cells": 43924
+   },
+   "expanded-034-h3": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 720,
+    "cells": 75600,
+    "loss": 0.006728484098076724,
+    "mean_calibration_loss": 0.044656034521998386,
+    "active_cells": 17897,
+    "mean_calibration_active_cells": 60390
+   },
+   "expanded-042-h3": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-071-h1",
+    "original_rows": 795,
+    "cells": 83475,
+    "loss": 0.007949663113666907,
+    "mean_calibration_loss": 0.04722547622758627,
+    "active_cells": 19469,
+    "mean_calibration_active_cells": 62574
+   },
+   "expanded-045-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 584,
+    "cells": 61320,
+    "loss": 0.000531275003007335,
+    "mean_calibration_loss": 0.019815349649157793,
+    "active_cells": 3214,
+    "mean_calibration_active_cells": 27824
+   },
+   "expanded-046-h3": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "discovery-11-channel-h3",
+    "original_rows": 583,
+    "cells": 61215,
+    "loss": 0.000571177710086486,
+    "mean_calibration_loss": 0.019473090591122816,
+    "active_cells": 2917,
+    "mean_calibration_active_cells": 25626
+   },
+   "expanded-068-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-064-h1",
+    "original_rows": 614,
+    "cells": 64470,
+    "loss": 0.0015914258480739635,
+    "mean_calibration_loss": 0.02432513952573577,
+    "active_cells": 4143,
+    "mean_calibration_active_cells": 34183
+   },
+   "expanded-070-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 582,
+    "cells": 61110,
+    "loss": 0.0030071737603757005,
+    "mean_calibration_loss": 0.026449187290044127,
+    "active_cells": 5937,
+    "mean_calibration_active_cells": 31785
+   },
+   "expanded-087-h3": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-004-h1",
+    "original_rows": 912,
+    "cells": 95760,
+    "loss": 0.008238309368904788,
+    "mean_calibration_loss": 0.06856790229296422,
+    "active_cells": 20638,
+    "mean_calibration_active_cells": 72380
+   },
+   "expanded-092-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 581,
+    "cells": 61005,
+    "loss": 0.0019615983597985635,
+    "mean_calibration_loss": 0.023057885574792623,
+    "active_cells": 5689,
+    "mean_calibration_active_cells": 34545
+   },
+   "expanded-094-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 685,
+    "cells": 71925,
+    "loss": 0.0013111116863893351,
+    "mean_calibration_loss": 0.02833478698923668,
+    "active_cells": 4996,
+    "mean_calibration_active_cells": 39491
+   },
+   "expanded-095-h1": {
+    "group": "wrong",
+    "bank_member": false,
+    "mate": "expanded-023-h1",
+    "original_rows": 766,
+    "cells": 80430,
+    "loss": 0.0024990751987405044,
+    "mean_calibration_loss": 0.03328475909579194,
+    "active_cells": 6778,
+    "mean_calibration_active_cells": 39133
+   },
+   "discovery-01-channel-h1": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "expanded-004-h1",
+    "original_rows": 560,
+    "cells": 58800,
+    "loss": 0.0,
+    "mean_calibration_loss": 1.1661773981526341e-05,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 811
+   },
+   "discovery-06-channel-h1": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "discovery-01-channel-h1",
+    "original_rows": 581,
+    "cells": 61005,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.024348182844296972,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 34628
+   },
+   "discovery-15-channel-h1": {
+    "group": "correct",
+    "bank_member": false,
+    "mate": "discovery-01-channel-h1",
+    "original_rows": 633,
+    "cells": 66465,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.025598216128292318,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 30983
+   },
+   "discovery-00-channel-h3": {
+    "group": "correct",
+    "bank_member": false,
+    "mate": "expanded-004-h1",
+    "original_rows": 798,
+    "cells": 83790,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.04917207122844021,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 63312
+   },
+   "expanded-004-h1": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "discovery-01-channel-h1",
+    "original_rows": 560,
+    "cells": 58800,
+    "loss": 0.0,
+    "mean_calibration_loss": 1.1661512281165598e-05,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 809
+   },
+   "discovery-08-channel-h3": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "discovery-10-channel-h3",
+    "original_rows": 628,
+    "cells": 65940,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.003269993741788323,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 5929
+   },
+   "discovery-10-channel-h3": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "discovery-08-channel-h3",
+    "original_rows": 663,
+    "cells": 69615,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.006757794660054339,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 8779
+   },
+   "expanded-029-h1": {
+    "group": "correct",
+    "bank_member": false,
+    "mate": "expanded-004-h1",
+    "original_rows": 586,
+    "cells": 61530,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.017605562889264063,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 23494
+   },
+   "discovery-11-channel-h3": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "expanded-064-h1",
+    "original_rows": 580,
+    "cells": 60900,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.009148482633514561,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 27850
+   },
+   "expanded-064-h1": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "discovery-11-channel-h3",
+    "original_rows": 646,
+    "cells": 67830,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.01539460254046424,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 33382
+   },
+   "expanded-071-h1": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "expanded-064-h1",
+    "original_rows": 667,
+    "cells": 70035,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.04631915898640112,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 50321
+   },
+   "expanded-039-h3": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "expanded-004-h1",
+    "original_rows": 586,
+    "cells": 61530,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.033920338740784116,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 41743
+   },
+   "expanded-076-h1": {
+    "group": "correct",
+    "bank_member": false,
+    "mate": "expanded-004-h1",
+    "original_rows": 584,
+    "cells": 61320,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.01626386531215585,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 25290
+   },
+   "expanded-078-h1": {
+    "group": "correct",
+    "bank_member": false,
+    "mate": "expanded-004-h1",
+    "original_rows": 594,
+    "cells": 62370,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.022157337033401163,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 32582
+   },
+   "expanded-023-h1": {
+    "group": "correct",
+    "bank_member": true,
+    "mate": "discovery-11-channel-h3",
+    "original_rows": 589,
+    "cells": 61845,
+    "loss": 0.0,
+    "mean_calibration_loss": 0.01671566434786951,
+    "active_cells": 0,
+    "mean_calibration_active_cells": 34017
+   }
+  }
+ },
+ "coverage": {
+  "recipients": 30,
+  "witnesses": 15,
+  "rows": 19751,
+  "merges": 105,
+  "cells": 2073855
+ },
+ "squared_distance_arithmetic": {
+  "negative_stored_cells": 9835,
+  "least_stored_value": -3.814697265625e-06,
+  "interpretation": "The cached squared-moment expansion is clipped at its exact algebraic lower bound zero for witness calibration; no tolerance increment."
+ }
+}

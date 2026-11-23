@@ -1,0 +1,43 @@
+{
+  "status": "finished: run.sh compare, started 6:44:54 AM CT November 15, 2026 (the comparison itself 6:45:08) and exited 0 at 6:52:43 AM CT (logs/compare.log); admitted by Astra in revision 2 (6a055b4e). Every stream was the same bytes on both sides, so none is kept; the calls' records, cases and logs are.",
+  "written_by": "weight-research-perfomance, from the run's own records: compare/deferred.json, compare/call-0.json, call-1.json, call-2.json and the processes' logs under compare/installed and compare/deferred",
+  "prediction_vs_result": {
+    "1_bytes": {
+      "predicted": "30 of 30 answers' four files the same sha256 on both sides",
+      "result": "30 of 30 (stream.f32, stream.jsonl, result.json and case.json of each of the thirty fitting answers, 14,592 answer steps; 10 of 10 in each of the three calls). Each process ran the library its side names: the installed side mapped dependencies/engine-f089c9c-sm120/libggml-base.so.0.21.0 (1dbfd54200c1…) and the deferred side dependencies/engine-f089c9c-sm120-deferred/libggml-base.so.0.21.0 (16c89177a03c…), each held to the declaration's sha256 before and after its call and to the hashed file by its inode; the scheduler's line is in every deferred log and in no installed one.",
+      "held": "yes"
+    },
+    "2_time": {
+      "predicted": "installed about 15.6 ms a step; deferred between 9.3 and 15.0 ms a step, the lower end if launching 212 ranges a token costs nothing once no wait stands between them, the upper end if the waits were never the cost and the launches are",
+      "result": "installed 13.972 ms a step and deferred 13.432 (the 27 answers with seconds on both sides, 13,320 steps: 186.11 s and 178.91 s). An answer's deferred seconds over its installed seconds: median 0.9732, least 0.8439, most 1.044; 20 of the 27 were faster deferred. The three calls took 76.12, 70.61 and 62.85 s installed (209.58 s) and 71.93, 68.75 and 61.37 s deferred (202.05 s), each with its model load.",
+      "held": "the deferred side is inside the predicted range, near its upper end: taking the 212 waits once is worth 0.54 ms of a step's 13.97, about 4%. The installed side was faster than predicted (13.97 against 15.6): the machine's load average was 4.58 at this run's launch and 8.83 at its exit, and 5.94 and 12.32 at the launch and exit of recorders-beside-original, the run the 15.6 came from (the launching shell's own lines, repeated under provenance)."
+    }
+  },
+  "failures_only": [
+    "The gain is 4%, not the 40% the lower end of the range allowed: the waits at the kept outputs are not what a kept token pays for. What it pays for is launching 212 separate ranges of nodes a token where the plain decode launches one graph: about 4 ms of a step by subtraction (13.43 less the plain decode's 7.9 and the recorder's records' 1.4 to 1.6), which this run does not measure directly.",
+    "The installed side's time was predicted from one earlier run at a higher load and came out 10% lower: a recorder's milliseconds a step move with the machine's load, and only the two sides of one run, alternated, compare."
+  ],
+  "what_this_changes": [
+    "A copy of each wanted output taken on the card's own queue, with one wait a split, is the same computation as the installed stop at each output: 30 of 30 answers' files are the same bytes. Reading the outputs back without stopping is established as byte-exact on this card, engine and model; it is the base any further change of how the outputs are kept stands on.",
+    "By itself it is not worth adopting: 4% of the generation (about 8 s of a capture) for a second engine library and a new reader protocol. No capture, reading or protocol is changed; controlled-bf16-7 and the installed engine stay.",
+    "What is left of a kept token above the plain decode is the scheduler's 212 launches of small ranges. Removing it means computing a split as one graph, as the plain decode does, with the wanted outputs kept from reuse and read after it: a change of how the scheduler allocates the graph (the wanted outputs must survive to the end), which this patch does not make. Whether the engine computes the same bytes when a split is one graph and not 212 ranges is not known and is the next question; it is a separate declaration.",
+    "Nothing here bears on the hypothesis; no model was changed and no answer's content was compared or judged."
+  ],
+  "provenance": {
+    "declaration": "studies/04-round-2-overlap/runs/recorder-deferred-original/declaration.json (revision 2, Astra's admission; revision 1 bound the comparison's expected identities to the declaration)",
+    "run_sh_sha256": "9e34903391ae7de7b9335d47e510cac7ac70769d1e2b7ce0fc2089d50fd9f7b5",
+    "recorder_deferred_py_sha256": "f7d03d1fdddc20380aa1467577a1d775a62a39d84105c0f2fd94ffde1ab040d0",
+    "patch_sha256": "ea95d3a297a949964490d57dc69355ab822b69e1ab4eacd8b2b90d3a4a760557",
+    "deferred_library_sha256": "16c89177a03c3270666d038a763e885943ebae82f6a692cd45dfc567813ea073",
+    "installed_library_sha256": "1dbfd54200c1d3d4cffc72da14693bc413f1e4eaecdded8ce01a9f489c80172b",
+    "recorder_sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+    "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+    "card": "card 0 (CUDA_VISIBLE_DEVICES=0), under its lock for the whole comparison",
+    "load_average": {
+      "this_run": "launched 2026-11-15 06:44:54 CST, load 4.58 5.46 8.27; exit 0 at 2026-11-15 06:52:43 CST, load 8.83 7.22 7.92",
+      "recorders_beside_original": "launched 2026-11-15 05:43:10 CST, load 5.94 7.70 8.19; exit 0 at 2026-11-15 05:57:41 CST, load 12.32 10.83 9.5",
+      "source": "the lines the launching shell printed around each run.sh; they are kept here and in no other committed file"
+    },
+    "the_7_9_and_the_records": "the plain decode's 7.9 ms a token and the recorder's records' 1.4 to 1.6 are the speed review's measurements of November 14 and 15 at other loads (records/development/2026-11-10-speed-review/README.md, 'The recorder's own bookkeeping, and two recorders on one card'); the 4 ms left for the launches is their difference from this run's 13.43, not a measurement"
+  }
+}

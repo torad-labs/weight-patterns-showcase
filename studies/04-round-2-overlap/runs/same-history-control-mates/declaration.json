@@ -1,0 +1,101 @@
+{
+ "method_step": 5,
+ "run_by": "weight-research-perfomance (the acquisition, the record and the check). The scoring of a conditional reading and what is read from it are weight-research-astra's; the candidate, its sweep and its declaration are weight-research-fable's and are not changed.",
+ "status": "declared November 14, 2026, 7:15 PM CT, before any pass of its reading and before any of its arrays exists.",
+ "kind": "original-model conditional acquisition for a step-5 comparison: the unchanged original read once on card 0 on the thirty fitting answers as whole-gap-mates-original wrote them, token by token, with the engine's own state kept at every merge and every row. No edit, no solve, no new answer, no target, no score. The candidate's result is not regraded and nothing is subtracted from it.",
+ "authority": "weight-research-astra, whose domain the objective, the scorer and acceptance are, in records/retrospectives/2026-11-14-whole-gap-native-assessment-astra.md (a266b646) and its message to this seat of about 6:46 PM CT November 14: an original-weight replay on each frozen candidate's complete fitting histories, on canonical card 0, all thirty members, every native prompt and answer position and every merge, with the candidate's existing original-reference mapping, target, coefficient mass, terminal convention and supplied text held fixed; a conditional teacher-fed control with a contract of its own, never the original's own answer, never another success count, and the primary scorer's own-answer requirement left as it is. Acquisition and reader preparation are this seat's; the scoring interpretation is Astra's. Behind it, Marcos's direction of November 14 (journal/2026-11-14-whole-gap-restart.md): what is corrected and judged is the gap between the wrong and the right answers' traces of computation wherever it lies, and the trace is the judge, not the token.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/whole-context-targets-original/mates/target.json",
+ "candidate": {
+  "run": "studies/04-round-2-overlap/runs/whole-gap-mates-original",
+  "model_sha256": "05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe",
+  "capture_text_json_sha256": "4155834adcac31460baa24769f60d8c918a335a2a259755e639754c55677d367",
+  "correspondence_sha256": "14dfa4ac17c3cbf883aa34c4923343522f136498339329e900d0e8e59358cbf1",
+  "reading_sha256": "ccfaef0bf9d905b06dd0ca819ba58887304748802bbc80b0babdac284895b5ef",
+  "target_sha256": "b09153baf5b6fe665b1cb990acccd7bddc7e5e131bb1a3491c2d765078c7cd20",
+  "read_here": "its own answers' tokens (own/<id>/answer.json), the pairs its capture bound (own/<id>/pairs-original.npy, own/text.json) and its primary record (correspondence.json). Its model file is not opened: the weights read here are the original's."
+ },
+ "implementation": "records/development/2026-11-12-path-forward/states_reading.py (the pass and what is kept, format whole-gap-reading/1: the reader of the original control and of the candidate, unchanged and bound by the protocol), given `original` and the candidate's run folder; records/development/2026-11-12-path-forward/states_conditional.py (the record, format whole-gap-conditional-correspondence/1, files only; commit 4d7166fa); records/development/2026-11-12-path-forward/states_conditional_check.py (the comparison with the original control, files only). Run by run.sh in this folder: `bash run.sh reading`, then `bash run.sh record`, then `bash run.sh check`. The recorder is the installed code/signal-trace/recorder/observe-stream, `capture residual stream`.",
+ "acquisition": {
+  "protocol": {
+   "record": "studies/04-round-2-overlap/runs/same-history-control-mates/reader-protocol/controlled-bf16-2.json",
+   "sha256": "3a2c6b61e9047c00a1a9281f75d3b17fb5cdc6d4cacb5c4838a08135684374f6",
+   "the_bytes_of": "records/development/2026-11-12-path-forward/reader-protocol/controlled-bf16-2.json",
+   "why_a_copy": "The research verifier takes a declared input only from a run, the read-only inputs or the original model: the protocol is copied into this run byte for byte, so its sha256 is the one its maker gave.",
+   "beside_the_candidates": "The candidate was captured and read under controlled-bf16-1 (8d764d299bcdbaa804cd301a2d9a90d59095b3f47edf78b0a6920b436f687530). controlled-bf16-2 is that protocol made again on November 14 after the lock's helper changed: the same original control, execution, cohort, reference, registration and original computations, and 13 instruments the same bytes in both; after-the-others.sh and reader_protocol.py changed and after_the_others.py is new (a card's lock is waited on in one wait). The reader, the recorder and tube.py are the same bytes in both."
+  },
+  "original_control": "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "original_control_reading_sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf",
+  "execution": {
+   "recorder_sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+   "libraries_sha256": "06ffecec44d083a66efdf4b7b2d97567a5c262de5acddc85150a60890fec8df5",
+   "card": "NVIDIA GeForce RTX 5080",
+   "driver": "615.71.10",
+   "visible": "0",
+   "fusion_disabled": "1",
+   "recorder_arguments": [
+    "capture",
+    "residual",
+    "stream"
+   ]
+  },
+  "capture": "<run>/reading (states_reading.py on the candidate's tokens), then <run>/correspondence.json (states_conditional.py), then <run>/check.json (states_conditional_check.py)"
+ },
+ "hypothesis": "The project's hypothesis: a capability leaves a recurring difference between the traces of correct and wrong answers, and editing the weights where that recurring difference lives repairs the capability. The matched-context sweep tested it on the model's own answers, where two things changed at once: the weights and the text the model writes. This run supplies the reading that separates them and tests one thing of its own, about the instrument: that the original's weights can be read on the candidate's text by the same reader under the same execution as the original control and the candidate, so that with the mapping, the reference and the target held fixed L(W1,H1) - L(W0,H0) = [L(W0,H1) - L(W0,H0)] + [L(W1,H1) - L(W0,H1)], the first bracket being what the changed text alone does under the original's weights and the second what the changed weights do on that text.",
+ "why_this_direction": "Step 5 judges an edit by the computation discrepancy over the whole original-registered trace on the edited model's own answers. Both whole-gap comparisons are finished and assessed (the matched-context one: 0.067494 to 0.086213 in all (the wrong members 0.067494 to 0.049883, the correct members 1.04e-14 to 0.036329)), and Astra's assessment could not say how much of either group's change is the weights and how much the reworded history read through the mapping: all thirty texts changed in both candidates. The records already hold that the difference matters: a2-path's own-answer plus rode on its wording (the original's weights favour the plus at 5 of 6 rows on a2-path's text), a rise of the own-trace L has been the wording three times of three, and at the sign's row of this cohort the matched-context model's plus is the weights' at 12 of 15 wrong answers and the wording's at 10 of 15. Those are single rows or single sums. Astra's next target decision (an original-state variant, a row assignment) needs the split at every row and every merge, and the one reading that gives it is the original's weights on the candidate's own text. It is the next step because both candidates are frozen, their captures and mappings exist, card 0 is free of this repository's jobs, and nothing else Astra asked of this seat can be scored without it.",
+ "repeating_pattern_check": "Four things have happened more than once. (1) An own-answer result was read as the weights' when part of it was the text's: a2-path's sign count, the own-trace L's rises, and this evening's sign row. This run reads the text's part directly at every row, with the weights held at the original's. (2) Two readings were compared that were not made the same way (the two cards word 9 of 30 answers differently; a text read 32 tokens at once is another computation; a reading without its libraries' hash is not found). Here the reader, recorder, engine, card and driver are the protocol's, the record refuses anything else, and the check counts by bytes that this reading and the original control agree wherever they were given one input. (3) A contract was stretched to let a new kind of reading through, or a check rested on shape instead of content (the file-time shortcut of November 14; a capture's pairs bound after the fact). The primary scorer refuses a reading whose text is not the reading model's own, and that refusal stays: the control has another format name, and its mapping is not laid again but taken from the candidate's own record and held to it by sha256 and by value. (4) A capture stopped on the disk's margin mid-way. The reader refuses to start unless what it may hold at once leaves the 40 GiB margin, and this seat reads the free space before each of the two readings.",
+ "what_went_wrong_before": "Each whole-gap comparison read the candidate on its own text against the original on its own text, and its two sums cannot be told apart into text and weights. The one reading that held the weights fixed on a changed text was made at one row (the sign's), for one candidate, with eight scores a step and no states. Before that, every control of a candidate's own-path reading was a count of signs or a single sum of L, and three constructions were assessed without knowing which part of their own-trace movement the wording was.",
+ "rule": "Data roles: the thirty fitting answers of the cohort (tube.picks) and no others. The answers no fit uses are not read, the reserved folder is not opened, and no answer is generated: each answer's prompt is read as every pass reads it, then the candidate's own tokens are supplied one at a time, and every decision's scores say whether the supplied token is the original's own first choice; where it is not, that is recorded and the feed is not changed. One recorder process on card 0 under the card's lock (after-the-others.sh), the installed recorder and engine, fusion disabled as in every pass. Before a row is kept the engine's ADD is made again from the two operands the same pass recorded and must give the kept row bit for bit; a row that does not is an error and the reading stops. Nothing is derived, normalized or rounded in what is kept. The record lays no pair: it takes the candidate's own mapping from the candidate's capture and primary record and refuses where the two differ. The check invents no tolerance: it counts rows that are the same bits. The reading is conditional and is named so everywhere: it is not the original's own answer, it is no success count, and the candidate's primary result stands as it was scored. Everything is written inside this run's folder. Nothing here makes a target, selects, scores, fits or writes a model.",
+ "prediction": "Counted by the three commands. (1) The reading is whole: 30 answers and 18,375 rows a merge (13,216 answer steps of the candidate's text and 5,159 question positions) at each of the 105 merges, the ADD made again at every one of them. (2) In 30 of 30 answers the first supplied token that is not the original's own first choice is the first token of the candidate's text that is not the recording's (steps 3 to 99, 68 at the median, counted from the two token lists before any pass), so no answer is the original's own whole text and all thirty are conditional. (3) At the rows computed from one input in both readings, the 5,159 question rows and the 1,591 answer rows up to and at that step, 6,750 rows, this reading holds the bits whole-states-original/reading holds, at all 105 merges and in both terminal arrays. (4) The conditional record is written through the candidate's own mapping: 30 answers changed and none unchanged, every pair, text and original computation the one the candidate's primary record holds. No loss is predicted: the conditional score is the scorer's. What this seat's own records lead it to expect of that score, written here before any pass so it can be held against it and never as this run's prediction: sign-route-whole-gap-mates read the original's weights on this candidate's text at the sign's row and found them favouring the plus at 10 of the 15 wrong answers, and text-pairs.json found each wrong answer moved onto its matched success's text (0.65 of its lines shared where 0.27 were). So a part of the wrong members' fall should already stand under the original's weights on the candidate's text, and a part of the correct members' rise should be the reworded text read through the mapping. How large either part is, this seat does not know.",
+ "would_weaken_it": "(1) A row the ADD does not reproduce would mean the stream's records of a merge are not one engine operation: nothing kept is used. (2) A first departure anywhere else than where the candidate's text leaves the recording would mean the recordings are not the original's own answers under this recorder, engine and card, which every reading of this cohort assumes; the table says which answer and step. (3) A row given one input that is not the same bits as the original control's would mean the two terms of the split are not one model on one execution: a difference of execution would then sit inside the term read as the text's, and the split is not usable as it stands. The check says at which merges and how many rows, and Astra is told what was found; no tolerance is set to pass it. (4) A refusal of the record would mean the candidate's capture and its primary record do not hold one mapping, which would put the candidate's own comparison in question before this one. Nothing here can weaken or strengthen the research hypothesis by itself: that is read from the score Astra makes of this reading beside the candidate's and the original's.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/whole-gap-mates-original/own",
+  "studies/04-round-2-overlap/runs/whole-gap-mates-original/correspondence.json",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/mates/target.json",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/mates/row-map.json",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+  "studies/04-round-2-overlap/runs/whole-context-targets-original/observation-schema.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/declaration.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "studies/04-round-2-overlap/runs/same-history-control-mates/reader-protocol/controlled-bf16-2.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/same-history-control-mates/"
+ ],
+ "parameters": {
+  "answers": {
+   "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+   "derivation": "tube.picks over the cohort's sixty answers: every other answer of each original outcome group, in the answers' own order: 15 correct and 15 wrong, the thirty the candidate was fitted and read on. No answer is chosen by anything read here.",
+   "scales_with": "the cohort's answers and their outcome labels"
+  },
+  "rows": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-gap-mates-original/own/text.json",
+   "derivation": "over the fitting answers, the sum of the steps of the candidate's own answers as its capture holds them (13,216) and of their question positions (5,159): 18,375 rows a merge, ordered all answers' answer rows then all answers' question rows, the order of the candidate's own reading",
+   "scales_with": "the lengths of the candidate's own answers and the cohort's prompts"
+  },
+  "merges": {
+   "measured_from": "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+   "derivation": "three merges a layer (the attention's, the feed-forward's, the per-layer embedding's) over the 35 layers the index lists: 105, numbered 3L, 3L+1, 3L+2",
+   "scales_with": "the model's layers and the merges the engine makes in each"
+  },
+  "rows_given_one_input": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-gap-mates-original/own/text.json",
+   "derivation": "for each fitting answer, the first step at which the candidate's own tokens are not the cohort's recorded tokens (d), counted from the two token lists; the rows 0 to d of each answer (1,591 together) and every question row (5,159): 6,750 rows. Row d is computed from the recording's tokens alone; every later row has the candidate's token in its input and is not compared.",
+   "scales_with": "where each of the candidate's answers leaves the recording, and the prompts' lengths"
+  },
+  "room": {
+   "measured_from": "code/signal-trace/pipeline/overlap/fed_replay.py",
+   "derivation": "the reader starts only if free space less what it may hold at once leaves fed_replay.MARGIN_GIB (40 GiB, the machine's disk rule): the arrays, (18,375 x 106 + 13,216) x 1,536 x 4 bytes (11.22 GiB), and the raw streams of KEEPERS + 2 answers at the longest answer's size, positions x 247 recorded outputs x 1,536 x 4 bytes: 18.1 GiB at most",
+   "scales_with": "rows, merges, the state's width, the longest answer and the number of keepers"
+  },
+  "keepers": {
+   "measured_from": "records/development/2026-11-12-path-forward/README.md",
+   "derivation": "four keeping processes on processor threads 4, 5, 12 and 13, beside the recorder's own, as the original control was read ('The engine's own state at every merge and every row'); they change when an answer's rows are kept, never what is kept",
+   "scales_with": "the processor threads left free by the other seats' jobs"
+  }
+ }
+}

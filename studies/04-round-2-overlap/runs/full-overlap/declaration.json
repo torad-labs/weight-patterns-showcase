@@ -1,0 +1,34 @@
+{
+ "method_step": [
+  1,
+  2,
+  3
+ ],
+ "run_by": "Claude",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "hypothesis": "Answers that use the same capability leave a recurring trace as each token's signal passes through the weights. Overlapping the traces of the correct answers and, separately, of the wrong answers shows a recurring discrepancy along the path. That discrepancy says what a weight change has to close.",
+ "what_went_wrong_before": "The invalid attempts restricted observation, averaged passages, selected one layer's projection or built on each failure's pairwise difference. Earlier today this round repeated three of those: traces at a few tokens only, matched pairs, and a proposal to edit round one's single matrix. Those runs (frame-decisions, frame-gap, gap-patch-test) are not the method and nothing is built on them.",
+ "why_this_direction": "Steps 1 to 3 as the journal of November 7 states them, on round one's own physics questions so the two rounds compare like for like: the full trace of every answer, the overlap of each group, and the difference that recurs.",
+ "why_it_might_be_wrong": "Round one's set is small, so a failure group may hold two or three answers and what recurs in it may be weak. Answers branch after their first difference, so later positions compare different histories; the alignment and the branch points stay visible in the record.",
+ "repeating_pattern_check": "Agents narrowing the observation or swapping the overlap for something easier to compute. Here every token and all 105 merges are recorded, groups are whole groups, and where to edit is not chosen before the discrepancy is seen.",
+ "rule": {
+  "questions": "Round one's 28 physics questions: the 16 of its main set, its 8 confirmation questions and its 4 new ones. No others.",
+  "capture": "Original BF16 model, GPU0, greedy, natural answers, 768-token limit, the projection stream at every token: all 105 merges with incoming state, contribution and result, and the inputs of the attention-output and feed-forward-down matrices.",
+  "groups": "Correct answers: both fields and the verdict right. Wrong answers are grouped by their first incorrect calculation, and the subtypes stay separate.",
+  "overlap": "Answers are aligned passage by passage to a reference grid. At each aligned position and merge the turns of each group are overlaid: recurring direction, size change, agreement with each member left out, and dispersion.",
+  "discrepancy": "The difference between the two overlaps, keeping what recurs across members. Where it appears along the path is reported, not chosen in advance.",
+  "storage": "Raw streams and arrays stay out of Git and go to R2."
+ },
+ "prediction": {
+  "expected_observation": "Each group's overlap agrees with its left-out members over the shared passages, and the two overlaps differ before the first wrong calculation of the failure group, at some stretch of merges rather than everywhere.",
+  "failures_only": "Original model only. No edit in this run."
+ },
+ "would_weaken_it": "The overlaps of correct and wrong answers do not differ before the first wrong calculation beyond what leaving a member out changes, or the difference does not recur across members.",
+ "inputs": [
+  "studies/04-round-2-overlap/inputs/acquisition",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/full-overlap"
+ ]
+}

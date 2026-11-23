@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-11-16T17:34:17.694514-06:00",
+  "status": "stopped_after_normal_handoff",
+  "prediction_vs_result": "Complete accumulated192 state resumed exactly and new minima appeared through203; severe204 excursion and incomplete205 recovery weaken accumulation as a sufficient stability remedy. No matched control exists after192.",
+  "failures_only": [
+    "Native204loss0.01278856650022006 despite predicted actual-displacement decrease;205remains95.997% above203 with103/105merges worse.",
+    "Identity STE response is not an exact derivative of discrete BF16 behavior; earlier local tests do not establish the cause of the204full-path excursion.",
+    "No capability preservation or no-fit transfer result."
+  ],
+  "what_this_changes": "Continue research from complete current205 native plus remainder using one fixed-start full-response comparison; do not roll back to the earlier observed minimum.",
+  "continuation_observations": 14,
+  "continuation_installed_updates": 13,
+  "full_accumulation_observations": 16,
+  "start": {
+    "accumulation_step": 0,
+    "historical_step": 190,
+    "objective": 4.259148719158746e-05,
+    "events": 613,
+    "merges": 105,
+    "complete": true,
+    "measurement": "studies/04-round-2-overlap/runs/vector-chance-fp32-remainder/loop/0/measurement.json",
+    "sha256": "fbfe9a8945182aec14068b5c53e42154f02eac70291ed4a8baed57ec650c8b8b"
+  },
+  "best": {
+    "accumulation_step": 13,
+    "historical_step": 203,
+    "objective": 4.162763526526834e-05,
+    "events": 613,
+    "merges": 105,
+    "complete": true,
+    "measurement": "studies/04-round-2-overlap/runs/vector-chance-fp32-remainder-continue/loop/11/measurement.json",
+    "sha256": "9ff8a890ba592842b5cb29250d472394163911a8d58baf1b34760d4b65acfe57"
+  },
+  "last": {
+    "accumulation_step": 15,
+    "historical_step": 205,
+    "objective": 8.158903128824282e-05,
+    "events": 612,
+    "merges": 105,
+    "complete": true,
+    "measurement": "studies/04-round-2-overlap/runs/vector-chance-fp32-remainder-continue/loop/13/measurement.json",
+    "sha256": "d083b935c8492151823f288997d0afb023dad0d2db58516cd25b3477b570e190"
+  },
+  "best_fraction_below_accumulation_start": 0.02263015428372961,
+  "final_fraction_above_accumulation_start": 0.9156182765169572,
+  "checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-fp32-remainder-continue/final-state.json",
+    "sha256": "f082ef4fe55fe9e29c8f7addd29fa3e796bd22359883049d176f42c3e874e6df"
+  },
+  "evidence": [
+    "learning-progress.json",
+    "new-minimum-203.json",
+    "excursion-204-recovery-205.json",
+    "checkpoint-verification.json",
+    "launcher-exit.json",
+    "records/retrospectives/2026-11-16-excursion-204-eli.md"
+  ]
+}

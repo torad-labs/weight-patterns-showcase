@@ -1,0 +1,89 @@
+{
+  "method_step": 5,
+  "operation": "read-only-installed-update-replay",
+  "status": "completed-diagnostic",
+  "declared_at": "2026-11-16T05:41:55.414280-06:00",
+  "why_this_direction": "Fresh computational loss increased sharply on local updates6\u20138 after five reductions. Reproduce the actual saved full-size derivative/update calculations from the retained starting weights and compare the final encoded weights with the frozen working file, then separately test native sensitivity on held numerical inputs.",
+  "repeating_pattern_check": "Anchored starting values and Torch self-consistency have repeatedly been mistaken for native derivative validation. This diagnostic labels them separately, checks actual endpoint bytes, preserves native observations and makes no training or success claim.",
+  "hypothesis": "The implemented update arithmetic and native installation reproduce the recorded sequence; any mismatch must be separated from the finite and native response of that update.",
+  "what_went_wrong_before": "Local linear predictions decreased while actual fresh computational loss rose; saved scalar proposals alone cannot distinguish rounding, write/residency defects, reconstruction sensitivity or refreshed correspondence.",
+  "rule": "Read-only diagnostic from admitted saved computation. No native weight writes, new generation judge, candidate search, floor, damping or changed reference. Preserve preupdate anchors for finite held-graph checks. Every discrepancy is reported without a guessed tolerance.",
+  "prediction": "The actual recorded gradient moments, response scales, changed-entry counts and final70-matrix BF16 bytes reproduce. Finite unrounded and rounded held-graph loss measurements at the first bad transition distinguish those graph effects but do not prove native sensitivity.",
+  "would_weaken_it": "A recorded arithmetic mismatch, mismatched endpoint bytes, independently recomputed native loss mismatch, or disagreement between native held-input response and the modeled response would weaken the corresponding implementation assumption.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/replay-progress.json",
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/replay-report.json",
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/replay.log",
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-held",
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/same-card",
+    "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad"
+  ],
+  "target_source": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "source_run": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3",
+  "source_declaration": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/declaration.json",
+    "sha256": "13aab30b94bd3e247537bc750750aad5a98562b4bab644ba3aeb4ced95fb3307"
+  },
+  "replay_updates": 9,
+  "first_bad_update": 6,
+  "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/weight-patterns-vector-working.service",
+  "hardware": {
+    "replay_card": 1,
+    "replay_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+    "native_card": 0,
+    "reason": "Training remains frozen and resident on card0. Replay uses available card1; exact numerical and endpoint differences will be reported, never assumed absent."
+  },
+  "parameters": {
+    "replay_updates": {
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/calculation-hold.json",
+      "derivation": "Frozen complete working generation9; replay every intervening update from retained generation0.",
+      "scales_with": "The actual frozen installed generation."
+    },
+    "first_bad_update": {
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/7/measurement.json",
+      "derivation": "The first native loss increase follows update6.",
+      "scales_with": "The first observed non-improving transition in this saved sequence."
+    }
+  },
+  "replay_program": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/replay_updates.py",
+    "sha256": "169e5c73139adcda9ccbab073219966b11ab4d7cf1aff7ea39a3cd725d7d4239"
+  },
+  "native_held_inputs": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-held/inputs.json",
+    "sha256": "4d925865fe54fe66f3b578613e78fbe5eb994d903c16cdd0cb91cb4582c2b53c"
+  },
+  "native_attempts": {
+    "failed_stop_mode": "native-held/failed-stop-mode/archive.json",
+    "retry_reason": "Qualified kept scheduler rejects callback early-stop; use its unchanged complete fixed-input path and consume only computational tensors.",
+    "incomplete_library_watch": "native-held/failed-library-watch/archive.json",
+    "current_retry_reason": "Observe an actual complete native library map before accepting its runtime identity; preserve all existing engine checks."
+  },
+  "same_card_replay": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/same-card/declaration.json",
+    "sha256": "ae38a05ff2f1f150ede234936213317c8743f327e55a2cc59e4d3c902d228777"
+  },
+  "native_first_bad": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/declaration.json",
+    "sha256": "797175f2afadcc31688a957b8e4599164b04209b1da794b0b0f94f9e7dd689dd"
+  },
+  "native_fresh_prescribed_six": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/fresh-candidate-6/declaration.json",
+    "sha256": "0078a25c6ffe2ad142a7d7b4d9346e4897906792b42ec38516cf312dec614a08"
+  },
+  "native_fresh_prescribed_five": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/fresh-candidate-5/declaration.json",
+    "sha256": "638c7050f601cc6af04d0d29688e117f29b6f9ca325d2da729b969bef289c060"
+  },
+  "result": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/result.json",
+    "sha256": "6d73d3460380865a071a51e6d8a5f88942a98e8ede349a5f34c853dc6b1869d2"
+  }
+}

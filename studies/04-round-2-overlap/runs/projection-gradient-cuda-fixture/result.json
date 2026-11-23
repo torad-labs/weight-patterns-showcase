@@ -1,0 +1,68 @@
+{
+  "product": {
+    "primal_bits_exact": true,
+    "tangent_max_abs_error": 0.0,
+    "input_adjoint_max_abs_error": 0.0,
+    "weight_adjoint_max_abs_error": 3.725290298461914e-09,
+    "weight_adjoint_expected_max": 0.03270629793405533,
+    "adjoint_lhs": -0.010945324066599585,
+    "adjoint_rhs": -0.010945320812070048,
+    "adjoint_absolute_error": 3.25452953649219e-09,
+    "tangent_dtype": "torch.float32",
+    "input_adjoint_dtype": "torch.float32",
+    "weight_adjoint_dtype": "torch.float32"
+  },
+  "graph": {
+    "merges": 12,
+    "events": 46,
+    "pairs": 47,
+    "projection_replays": 1,
+    "factor_shape": [
+      46,
+      64
+    ],
+    "factor_gradient_max_abs_error": 1.4551915228366852e-11,
+    "full_objective": 0.025988476705296006,
+    "response_objective": 0.02598847670529601,
+    "objective_sum_absolute_error": 3.469446951953614e-18,
+    "direct_slope": -3.311582980894502e-06,
+    "response_slope": -3.3115829548338772e-06,
+    "slope_absolute_error": 2.6060624571690432e-14
+  },
+  "status": "complete",
+  "synthetic": true,
+  "research_result": false,
+  "program": {
+    "record": "records/development/2026-11-16-projection-gradient-adapter/cuda_fixture.py",
+    "sha256": "a82128e190d59ec2e6dbc32b2bce2b88ac5754359a4802fe8d1af73c7394fb25"
+  },
+  "fixture": {
+    "record": "records/development/2026-11-16-projection-gradient-adapter/fixture.py",
+    "sha256": "1045dbe7270c33e5d1ed70da9323a68e82fae9925b586ac2bc98458f5d84dc93"
+  },
+  "fixture_spec": {
+    "width": 64,
+    "events": 46,
+    "groups": [
+      32,
+      13,
+      1
+    ],
+    "layers": 4,
+    "seed": 0,
+    "generated_only": true,
+    "cpu_primal_fallback": false
+  },
+  "precision": {
+    "threads": 1,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": false,
+    "torch_version": "2.15.0+cu132"
+  },
+  "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "prediction_vs_result": "Explicit F32 derivative identities checked on generated CUDA inputs; measured discrepancies retained.",
+  "failures_only": "No native fidelity, training improvement or retained transition was tested.",
+  "what_this_changes": "Qualifies this implementation for later independent experimental review; does not adopt it in the learner."
+}

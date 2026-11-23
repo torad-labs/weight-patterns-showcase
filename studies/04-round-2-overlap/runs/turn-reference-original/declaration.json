@@ -1,0 +1,224 @@
+{
+  "method_step": 3,
+  "operation": "single-original-turn-reference",
+  "status": "admitted_original_only; no native correction or post-closure evaluation",
+  "declared_at": "2026-11-15T20:23:44.330940-06:00",
+  "why_this_direction": "The supplied guide defines the existing trace as unit(output)-unit(input), and the path paper supplies complete chronological turn correspondence. The latest one-pair experiment needs one fixed original correct trace and original-derived variation before any joint inverse update. The retired Taylor rule compared a different object; these source-tested primitives bind the paper's actual turns without importing its old token-selected support or post-merge state targets.",
+  "repeating_pattern_check": "Repeated revisions followed words, state values, self-inclusive envelopes or a conditional Taylor remainder; later cleanup also mistakenly removed the paper's own turn machinery. This compilation uses the restored complete turn correspondence, full incoming/outgoing native edges, all original fitting successes and a nonself component variation scale. No wrong/edited observation chooses the reference or tolerance. RMS and coordinate-box limitations are declared rather than tuned away from a wrong baseline.",
+  "hypothesis": "An observed original success with the smallest mean nonself full-turn departure, together with its component-wise nonself RMS variation, supplies a fixed experimental reference and divergence boundary for the separately declared one-prompt correction.",
+  "what_went_wrong_before": "The withdrawn one-reference rule substituted current context into both sides and measured a Taylor remainder; its reference was also chosen from prompt similarity. Both are abandoned. The native input arrays are reused only as original observations, not their old state-target calibration, correspondence or verdict.",
+  "rule": "Read every original fitting-success native history in causal order, every prompt/answer event and all 105 merges. T is float64 unit(merged)-unit(incoming), retaining amount. For each observed reference candidate, align every nonself success by complete DTW using cosine similarity of whole-event flattened turn fields. At each reference event/merge/component average squared departure over the mapped events of each witness, then equally over the nonself witnesses. Score by averaging the full squared-coordinate sum over reference events and merges. Choose the observed candidate of least score; exact ties retain source inventory order. Freeze the square root of its squared-departure array and every path/source identity. No generation, wrong-trace measurement, model edit, synthetic average target, token equality, no-fit use or new output grading. After selection, report complete original witness coverage under the frozen box and under an RMS omitting each assessed witness. Reference selection and paths remain fixed from the full population, so this is not independent validation. Neither diagnostic retunes or gates the selection, tolerance, or eventual same-boundary closure.",
+  "prediction": "Every original fitting success supplies a complete naturally ended native trace; every candidate is scored and one actual original is selected, with a finite nonnegative tolerance covering every event, merge and coordinate.",
+  "would_weaken_it": "Incomplete/nonfinite originals or undefined full-event direction leave compilation incomplete. A medoid can still average incompatible routes; RMS does not cover every original success, and coordinate boxes can admit combinations absent from any witness. Complete chronological pairing is not proof of shared reasoning. These limitations remain recorded; no wrong/edited observation retunes this artifact.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "source_definition": {
+    "record": "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "sha256": "efd390a5fafeff948940bcf541ed43fef1821f9530279898cbe24d7ba449731b"
+  },
+  "forward": {
+    "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+    "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+  },
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/export_stream_traces.py",
+      "sha256": "c0ec25ce2c21b6f2f6f48b208002fef5de54cb14184423bfee51bde9a012a75b"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/run_a_baseline.py",
+      "sha256": "3c53b20317332d1f8ed4797ec0220fcb916dc573d97bb4211ca186d63af62ff6"
+    },
+    {
+      "record": "code/signal-trace/pipeline/acquisition/run_a_observation.py",
+      "sha256": "33990f82d6f22a10bde5f3cd7c8122fb33da606532353ac8ad7d45782ef463be"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/compare_occurrences.py",
+      "sha256": "330c8201b63dd67b2d8963685eaafdcf0ec2fbed5df7ad926eb7575d6f47a2e0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/group_observation.py",
+      "sha256": "bd4c687514083a345feb364dfcb07cb172ab95606ac784538ede61be9bec034c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/__init__.py",
+      "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/fed_replay.py",
+      "sha256": "87dac142d2f396f40a5fd653cb293e4371e2d94d645505c010a1b733092aee97"
+    },
+    {
+      "record": "code/signal-trace/pipeline/paths.py",
+      "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+      "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+      "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_layout.py",
+      "sha256": "f411405196a3be873be6fe63b755d6880e030c65f51688d0073ebebd887a9250"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reading.py",
+      "sha256": "d2a3a3c4840ef78c03dfd2ab3b8fe4f15855d87b226fd998c6ce1fd7a2446f8e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reference.py",
+      "sha256": "ca4b2a5a2d61b355ef000668f92344cce7a3dfa8b081236aabfc3ac02d5602ed"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/reference_rule.py",
+      "sha256": "2c44148ce49285f6bb46bb6507f1a7b07f71b9b9e521a5ab445bae13376e4e46"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "188544b2365a03697809d7e08ca5f5cf870e3f9219719d2e96e700d3ae55411c"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference.py",
+      "sha256": "886ed110f646d966fb287afc1eb4f468161a7551ed8d12263db8ae1ed68b04a0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference_run.py",
+      "sha256": "352e8d0e26aae28c04ffdb2fba6e5bc234fffdf0eb10ade73786d307ef54c129"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+    }
+  ],
+  "implementation_inventory": {
+    "method": "AST transitive closure of the compiler plus the separately named dynamic forward, including pipeline package initializers and the research guard",
+    "files": 29,
+    "computed_load": "turn_reference_run.py loads only the declared forward after checking its sha256; no other computed import was found"
+  },
+  "original_successes": [
+    "discovery-01-channel-h1",
+    "discovery-06-channel-h1",
+    "discovery-15-channel-h1",
+    "discovery-00-channel-h3",
+    "expanded-004-h1",
+    "discovery-08-channel-h3",
+    "discovery-10-channel-h3",
+    "expanded-029-h1",
+    "discovery-11-channel-h3",
+    "expanded-064-h1",
+    "expanded-071-h1",
+    "expanded-039-h3",
+    "expanded-076-h1",
+    "expanded-078-h1",
+    "expanded-023-h1"
+  ],
+  "device": "cpu",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/turn-reference-original"
+  ],
+  "parameters": {
+    "population": {
+      "measured_from": "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+      "derivation": "All members whose immutable original fitting group is correct; every candidate uses all remaining members as witnesses. The source inventory contains fifteen successes and fourteen nonself witnesses per candidate.",
+      "scales_with": "The complete declared original fitting-success inventory."
+    },
+    "trace": {
+      "measured_from": "records/retrospectives/2026-11-15-papers-reconciliation-astra.md",
+      "derivation": "At each native merge T=merged/||merged||_2-incoming/||incoming||_2; include all events of each complete history and three merges per architecture layer.",
+      "scales_with": "Recorded native event counts, architecture layers and stream width."
+    },
+    "correspondence": {
+      "measured_from": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "derivation": "Existing unit_steps normalizes the flattened whole-event turn field in float32; distance_path minimizes cumulative 1-clipped cosine over a complete chronological path, preserving its diagonal/vertical/horizontal tie order. No window or selected position.",
+      "scales_with": "Both original native event inventories and every merge/coordinate."
+    },
+    "tolerance": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+      "derivation": "epsilon_a[i,k,d]^2=mean_{b!=a} mean_{j in J_ab(i)} (T_b[j,k,d]-T_a[i,k,d])^2; epsilon is its nonnegative square root, with no multiplier or quantile.",
+      "scales_with": "Observed nonself successful turn variation at each reference event, merge and coordinate."
+    },
+    "reference": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+      "derivation": "argmin_a sum_{i,k,d} epsilon_a[i,k,d]^2/(events_a*merges); choose the actual original trace, not a mean. Exact ties retain definition.json member order.",
+      "scales_with": "The measured complete original-success trace population."
+    },
+    "precision_and_device": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/turn_reference_run.py",
+      "derivation": "Original BF16 model bytes remain unchanged; recorded edges are float32, normalization/turn difference/RMS are float64, existing whole-turn correspondence features are float32 and DTW accumulation float64. CPU only: this is reading original arrays and arithmetic, not generation or a GPU experiment. cache=float16 is the bound reader's historical constructor setting, unused by this file-only extraction.",
+      "scales_with": "Original observation/storage dtypes and the existing overlap implementation; no fitted numeric floor."
+    },
+    "coverage": {
+      "measured_from": "records/retrospectives/2026-11-15-turn-pair-binding-astra.md",
+      "derivation": "Count every mapped component, event/merge cell and unique current event outside the frozen boundary. Also recompute RMS from all other nonself witnesses with positive prefix/suffix sums, holding selected reference and paths fixed. No pass rate, probabilistic assumption, quantile or secondary stopping threshold is introduced.",
+      "scales_with": "All original nonself witnesses, mapped events, merges and coordinates; leave-one-witness-out exists only with another nonself witness."
+    },
+    "boundary_semantics": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "derivation": "Direct residual is sign(delta)*max(abs(delta)-epsilon,0); equality lies inside. Zero and near-zero epsilon are literal, with no additional floor. The identical per-pair component boundary supplies the complete closure indicator, not an aggregate rank.",
+      "scales_with": "Observed original component variation and native numerical arithmetic."
+    },
+    "event_mass": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "derivation": "Each original event/merge has mass 1/(reference_events*merges), divided among its corresponding current events. Inserted detours therefore share reference mass in the gradient, but every current event still enters the closure indicator.",
+      "scales_with": "Both complete event inventories and the number of mapped current events per original event."
+    }
+  },
+  "authorization_scope": "Astra admits only this original-only compilation and diagnostic after Eli's corrected independent source assessment, recorded in records/retrospectives/2026-11-15-turn-pair-binding-astra.md. No native correction loop, wrong-trace evaluation or post-closure evaluation is admitted.",
+  "commands": {
+    "compile": "uv run -q --directory code/signal-trace --with torch --with numpy python -m pipeline.weight_edit.turn_reference_run ../../studies/04-round-2-overlap/runs/turn-reference-original"
+  }
+}

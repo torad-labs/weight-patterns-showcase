@@ -1,0 +1,38 @@
+{
+ "method_step": [
+  1,
+  2,
+  3
+ ],
+ "run_by": "Claude",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "hypothesis": "Answers that strongly use the same capability share a trace, and the gap between the shared trace of the correct answers and of the wrong answers belongs to the capability. When the two groups answer the same kind of question and only the numbers vary, on both sides alike, what is particular to a question does not recur and what recurs is the capability.",
+ "what_went_wrong_before": "full-overlap's groups were thin and lopsided: the correct answers that aligned were four versions of the block question, and the failures were cart, sled, bead and coaster, so the discrepancy carried the object. Its capture also kept about eight times more than the trace: the question's own tokens, the signal seven times per layer, and matrix inputs for every answer at every token.",
+ "why_this_direction": "Marcos asked on November 9 for the capture to be done again with only what is needed, and for the questions to be chosen by what the hypothesis asks of them. It asks that each answer uses the whole energy chain, that members travel the same path so they align, that the situation varies inside each group and in the same way in both, and that a failure group shares its first wrong calculation. The recorded answers that meet all four are the block question in the channel wording: 30 subtract the descent and 119 are correct, with mass, speed, drop, loss and climb varying on both sides.",
+ "repeating_pattern_check": "What repeats: observation gets narrowed to make it cheaper (a few tokens, one layer). Here what is dropped is not observation of the answer. Every generated token and all 105 merges are kept for every member. Dropped are the question's own tokens, copies of the same signal, and matrix inputs, which only an edit needs and only for failing answers where the discrepancy is; those are recorded when the edit is built.",
+ "rule": {
+  "members": "Failing group: every recorded answer of the channel wording whose available energy subtracts the descent (30). Correct group: for each of them, the unused correct answer that shares the most of its five numbers (30). No answer outside the recorded ones.",
+  "capture": "Original BF16 model, GPU0, greedy, natural answers. The residual stream (the signal coming in, the contribution and the result at each of the three merges of every layer) at every generated token. Each answer must come out token for token as recorded.",
+  "kept": "The turn of the signal at all 105 merges for every generated token of every member, and each answer's text. The raw stream is deleted once its turns are exported.",
+  "overlap": "As in full-overlap: answers aligned passage by passage, each group overlaid, agreement with each member left out, and the discrepancy that recurs, before the first wrong calculation."
+ },
+ "parameters": {
+  "group_size": {
+   "measured_from": "studies/04-round-2-overlap/inputs/acquisition",
+   "derivation": "30: the count of recorded channel-wording answers that subtract the descent. The correct group takes the same count, one per failing answer, so neither overlap rests on more members than the other.",
+   "scales_with": "the number of recorded failures of the kind"
+  }
+ },
+ "prediction": {
+  "expected_observation": "Each group's overlap agrees with its left-out members, and the two overlaps differ before the first wrong calculation. Unlike in full-overlap, the positions that hold the questions' own numbers do not separate the groups.",
+  "failures_only": "Original model only. No edit in this run."
+ },
+ "would_weaken_it": "With the object the same and the numbers varying on both sides, the two overlaps no longer differ before the first wrong calculation beyond what leaving a member out changes.",
+ "inputs": [
+  "studies/04-round-2-overlap/inputs/acquisition",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/wide-overlap"
+ ]
+}

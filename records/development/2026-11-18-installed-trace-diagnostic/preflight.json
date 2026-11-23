@@ -1,0 +1,77 @@
+{
+  "historical_start": 390,
+  "eligible_tensors": 538,
+  "storage_needed_bytes": 60467688720,
+  "storage_available_bytes": 58163544064,
+  "storage_ready": false,
+  "implementation_files": 187,
+  "at": "2026-11-18T06:48:11.893634-06:00",
+  "format": "installed-trace-diagnostic-preflight/1",
+  "source": "Public final_experiment prepare and check from measured historical 390; read-only draft.",
+  "program": {
+    "record": "records/development/2026-11-17-final-experiment/run.py",
+    "sha256": "82bc41608df09dfcfb424b2920b1a16f99edd3d48d805810bb0b3f6e9e4d2408"
+  },
+  "sources": [
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/final_experiment.py",
+      "sha256": "2f810ca16b9e3ce5a28f5b7219a8a9252ee130edb99e74ac68244e7ce6f5a873"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/paired_turn_signal.py",
+      "sha256": "747fd23c06aad8f34fc006e15e8756a90ac2c0681f5386b501e2e33754fd62c4"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/retired_admission.py",
+      "sha256": "21760140e88887d4b4dffabbd4ccd55e01963cb592f14864b7ff14ea2162ee32"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/trace_diagnostic.py",
+      "sha256": "a27bcbe8e355d134bc22a9ef666d9be933d6dc782a087e3333b52d207cd68263"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/validation_driver.py",
+      "sha256": "01e286c023db6597004cdf7722be00c2b3ed1156fabb5cff0144955ee6a34488"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/validation_stopping.py",
+      "sha256": "64b3bc3d063e0da233cfadc425a23d5d3b91a970fc97e5b9a895124049f33fbe"
+    }
+  ],
+  "loader_project_sources": 80,
+  "loader_project_sources_missing": [],
+  "diagnostic": {
+    "policy": {
+      "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/diagnostic-spec.json",
+      "sha256": "16831ee331cc1a834261f486516ed30a3834e37258195659ebb44035e17fb9cc"
+    },
+    "driver": {
+      "record": "code/signal-trace/pipeline/weight_edit/validation_driver.py",
+      "sha256": "01e286c023db6597004cdf7722be00c2b3ed1156fabb5cff0144955ee6a34488"
+    },
+    "bindings": [
+      {
+        "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/diagnostic-spec.json",
+        "sha256": "16831ee331cc1a834261f486516ed30a3834e37258195659ebb44035e17fb9cc"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/signal.json",
+        "sha256": "eee6b82b9b23fa8cda90099a82a7267b05c484e4abcdd241c0011bfd610f2b6b"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/declaration.json",
+        "sha256": "46b5cdbf97f2ea037284063becc38b9bf8b50b69dd273377191e658548e81021"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/discovered-turn-stage/result.json",
+        "sha256": "d6e64a0f0f8150d4949222d761d309ec67cb3737b0418d30964bd6a39695d3f2"
+      }
+    ]
+  },
+  "verification": "29 bounded CPU tests. The public driver and paired-turn reader exercised both graph JVPs and an installed update. The physics-panel test read real native-format ADD streams, checked both per-site values, and rejected a mismatched width. Scientific training was not run.",
+  "capacity": "Available space is a point-in-time observation. A new native launch repeats the check.",
+  "previous_preflight": {
+    "commit": "f66d877e",
+    "sha256": "1fa7298a4eb1402f7f5fa4f7ba3f907269ba51651eaad2e5408921d6da967b7a"
+  }
+}

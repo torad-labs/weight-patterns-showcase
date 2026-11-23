@@ -1,0 +1,71 @@
+{
+  "method_step": 3,
+  "operation": "original-context-score",
+  "why_this_direction": "The qualified direct-state capture now supplies the absolute outgoing states and prompt rows missing from the older turns reader. Bind that existing original-only data to the complete contextual score rather than repeat acquisition or use a local solver score.",
+  "repeating_pattern_check": "Earlier preparation progressed without a concrete target, and captured coverage was confused with a usable objective. The targets are now compiled but scientifically withdrawn; this operation closes only the explicit reader/scorer data connection, keeps that distinction in its result, and selects no estimator.",
+  "hypothesis": "The source-bound raw-state reading can be evaluated against every row and merge of the fixed diagnostic artifacts with the exact pairwise loss, preserving reference mass and composing terminal normalization once.",
+  "what_went_wrong_before": "Rounded turn reconstruction and prompt movement summaries could not supply exact outgoing absolute features; zero assigned correct-member target error did not test contextual prediction. This run neither uses those substitutes nor reinstates the withdrawn estimators.",
+  "rule": "Read only the already qualified original card-0 whole-gap-reading/1 and the two immutable fitting-only whole-gap-targets/1 artifacts. Check file descriptors, complete row/merge membership, prompt/history identity and own-answer endings. Derive float64 features from raw states, use actual target coefficients without renormalization, and compose the original terminal normalization exactly once. Record terminal comparisons against native answer-only result_norm; prompt terminal features remain explicitly derived. No new native pass, changed model, no-fit data, candidate choice or target change.",
+  "prediction": "Both complete original-control scores cover 30 fitting members, 19,751 reference rows and 105 source merges. All required original observations are finite; correct identity error can be nonzero because raw float64 features differ from the historical float32-derived reference. This difference is described, not made into a threshold.",
+  "would_weaken_it": "Missing or changed array/row/merge identities, incomplete own histories, lost reference mass or an incorrect terminal space defeat reader/scorer qualification. A numerically small score does not support the withdrawn target's scientific validity.",
+  "reading": "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "targets": {
+    "affine": "studies/04-round-2-overlap/runs/whole-context-targets-original/affine",
+    "mates": "studies/04-round-2-overlap/runs/whole-context-targets-original/mates"
+  },
+  "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "tensors": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "terminal": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+  "specification": "records/retrospectives/2026-11-14-direct-state-score-astra.md",
+  "outputs": [
+    "studies/04-round-2-overlap/runs/whole-context-score-original/"
+  ],
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/whole_context_score.py",
+      "sha256": "6ff608a936d698ee5caa7a14fad36c400298ab66a7c64f2eed2b6aa0e4515aab"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_score.py",
+      "sha256": "d429d3c52acdb5dc5954dee9a1afc5b58474c4e85ae88bedaaa5f5d7d3a00579"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+      "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+      "sha256": "7fd1f1d4c5542841a25d587107ecbd6136a9375e4b2870f570321417f2e977b5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    }
+  ],
+  "parameters": {
+    "loss": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+      "derivation": "Use each artifact's serialized per-row/per-merge/channel coefficient exactly; no new normalization. Each original frame's weight is divided over its complete correspondence matches.",
+      "scales_with": "The bound target's full group/member/row/merge inventory."
+    },
+    "precision": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+      "derivation": "Float64 direction and natural log norm computed from the direct native float32 states; targets retain their stored float64 values.",
+      "scales_with": "The native source representation and original target representation."
+    },
+    "terminal": {
+      "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+      "derivation": "Compose original output_norm.weight and final layer output scale with the recorded epsilon exactly once from raw terminal state; compare with retained engine outputs only where they were recorded.",
+      "scales_with": "Original model's terminal operator and the capture's answer/prompt row inventory."
+    }
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/whole-states-original/reading",
+    "studies/04-round-2-overlap/runs/whole-context-targets-original/affine",
+    "studies/04-round-2-overlap/runs/whole-context-targets-original/mates",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json"
+  ]
+}

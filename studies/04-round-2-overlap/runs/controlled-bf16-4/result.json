@@ -1,0 +1,1366 @@
+{
+ "run": "controlled-bf16-4",
+ "model": "none finished: model/controlled-bf16-4.partial is left as the build left it, for inspection (sha256 6d5dcb65494653a2dc6997a65c68bccf9f14f7dea69e3ac3b9619ef129858dfb). In it the attention and feed-forward matrices of layers 0 to 8 and layer 9's attention are changed, by 0.68, 0.16, 0.46, 0.18, 0.14, 0.41, 0.43, 0.50, 0.33, 0.52, 3.16, 0.40, 1.12, 1.30, 0.40, 0.61, 1.04, 8.87, 3.77% of the matrix in path order; every other tensor is the original (weight-research-perfomance compared the bytes: records/development/2026-11-10-speed-review/as-we-go/kept-matrices/controlled-bf16-4/matrices.json, 0 differences outside the matrices). Since November 11 at about 10 PM CT the file is in the bucket, verified against its hash, and the local copy is removed (records/round-two-traces-release-2026-11-10.json).",
+ "chronology": "November 11, 3:39 to 9:07 PM CT. Reference 3:39 to 3:43 and own-start 3:43 to 3:52, both from the original file's saved observations. Start was refused at 3:52 (49 GB free on root, it needs 50) and made at 4:13 with 59 GB free. One revision of the declaration before any matrix was written (the aim of a bringing back, solver eeb5e17b). The build started at 5:23:15 and had eighteen matrices on record when the machine stopped without a shutdown at 7:36:58, inside position 18, with both cards loaded (the build on card 0 and a development solve of this session on card 1). The machine started again at 8:37:47. The build was run again at 8:50:06 on card 0 alone: it put the two matrices of the cut-off position back as they stood, went on from its record, wrote position 18 and ended at 9:07:45 at position 19 with exit 1. Positions 0 to 18 took 7,996 s on record; 1,860 s of that, within positions 1 to 8, the build's passes waited for card 0 while jobs of two sessions of another project held it.",
+ "what_this_sweep_established": [
+  "Nineteen matrices in path order were written, layers 0 to 8 whole and layer 9's attention, where the sweeps before it wrote 2, 2 and 8. At every merge the engine itself read after a written matrix, 28 merges (the attention's merge, the feed-forward's merge and the layer's last merge of layers 0 to 8, and layer 9's attention), its own output holds every bound of the rows and of the means, the furthest part at 0.568 to 0.997 of its bound. No bound was drawn in and no matrix was chosen a second time.",
+  "With the mean and the rows held apart the pull has room at ten of the nineteen matrices. The tube loss left at each matrix's own merge, in path order: 0.629, 0.837, 0.658, 0.799, 0.871, 0.956, 0.971, 0.984, 0.911, 0.845, 0.691, 0.796, 0.710, 0.620, 0.633, 0.712, 0.746, 0.806, 0.838. Under the first allowance (controlled-bf16-3) every matrix after the first layer left 0.976 to 0.996. Beyond where their paths started, the matrices at positions 0, 1, 2, 3, 8, 9, 10, 12, 13 and 14 kept 0.371, 0.018, 0.306, 0.008, 0.075, 0.119, 0.160, 0.092, 0.191 and 0.027 of the tube loss at their own merges, each with every bound held on every third and on all the fitting answers together.",
+  "Through layer 7 a bringing back is cheap. Every matrix after the first arrived with a mean past its limit: at position 4 on one third only, at the others on all the fitting answers together, the furthest 2.1 to 30.8 times its limit at the matrix's own merge. A row part was past its limit at six of them (positions 2, 5, 8, 11, 17 and 18: one to three parts, at most 2.12 times). Positions 1 to 15 were brought back inside every bound of every third and of all together in 1 to 10 rounds and 9 to 221 s with 0.14% to 0.61% of the matrix changed, where the first allowance took 2.1% to 6.8%.",
+  "From layer 8 it is not. Layer 8's attention took 14 rounds and 1.04% of the matrix, the ridge stepped down to 2^-18 of the unit; layer 8's feed-forward, which arrived with 10 direction means and 25 size means past their limits (the furthest 28.5 times at its own merge and 33.6 at the layer's last) and one to three row parts, took 24 rounds, 561 s and 8.87% of the matrix with the ridge at its floor, 2^-23; layer 9's attention, with 31 size means past (9.2 times), took 16 rounds and 3.77% at 2^-19. All three ended inside every bound and were written. A bringing back gives back part of what arrives: layer 8's feed-forward arrived at 0.789 of its tube loss and was left at 0.806.",
+  "Where the pulls end. Of the eighteen paths after a bringing back, fifteen ended with every branch's read third past a bound and three with no solve taking a step (positions 11, 15 and 17: layers 5, 7 and 8's feed-forward). Nine matrices kept under 0.0001 of the tube loss beyond their bringing back: positions 4 to 7, 11 and 15 to 18."
+ ],
+ "where_it_ended": {
+  "at": "position 19, layer 9's feed-forward (6144 wide). It arrived at 0.861 of its tube loss with no row part outside and with 7 direction means and 20 size means past their limits at its own merge (the furthest 3.32 and 6.41 times) and 8 and 21 at the layer's last merge (3.33 and 8.54 times); 482.3 outside in all, a sum. The bringing back took that to 3.82, 0.537, 0.390, 0.315, 0.246 and 0.122 in six whole steps and went on with the ridge halved to its floor, 2^-23 of the unit: nineteen rounds, fourteen taken. It ended with one part 0.07% past its limit and all the fitting answers together inside (0.9933). The matrix it stood at, never written, differs from the original by 4.11% of the matrix. The pull of the matrix before it (layer 9's attention, 0.00007 of its tube loss) was then halved back twelve times, each read through the engine; at none did this matrix's merge come back inside, and layer 9's attention stands in the left model as it was written. The sweep ended as declared: not accepted, not finished. The replay, the own answers and the verdict have no finished model to read and were not run.",
+  "which_part": {
+   "family": "size_mean",
+   "over": 1.000693917274475,
+   "bound": 1.5908110526652308e-06,
+   "group": "wrong",
+   "place": 160,
+   "a_move_is_asked_there": true,
+   "merge": "the layer's last",
+   "read": 1,
+   "meaning": "the mean of the wrong group's log of the state's size at place 160 of the axis, at the layer's last merge, on the second fitting third (third 1), a place where a move of the wrong pattern is asked; 1.000694 of a limit of 1.59e-6"
+  },
+  "the_bringing_back": {
+   "rounds": 19,
+   "rounds_taken": 14,
+   "outside_before_each_round": [
+    482.26662,
+    3.8248,
+    0.53707,
+    0.38974,
+    0.31502,
+    0.24644,
+    0.1224,
+    0.06383,
+    0.06383,
+    0.06136,
+    0.016,
+    0.01063,
+    0.0009,
+    0.0009,
+    0.0009,
+    0.0009,
+    0.00079,
+    0.00079,
+    0.00069
+   ],
+   "parts_of_the_steps_taken": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.001953125,
+    0.015625,
+    1.0,
+    0.875,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0625,
+    0.0,
+    0.0078125,
+    0.0
+   ],
+   "ridge_halvings": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    3,
+    4,
+    5,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "passes": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3
+   ],
+   "seconds": 443,
+   "status": "no part of a step left less outside",
+   "outside_left": 0.0006939172744750977,
+   "largest_over_its_bound": 1.000693917274475,
+   "all_together_largest_over_its_bound": 0.9932956099510193,
+   "change_over_matrix": 0.041096825152635574
+  },
+  "the_end_of_that_solve": "In the last seven rounds the solve's own first-order model of the merges ended each round with nothing more than 1e-5 past a bound (the record's past_a_bound_in_the_model, -4e-5 to 1e-5), and the matrix written in the file's BF16 read 0.0007 to 0.0009 outside. That is the same kind of end as controlled-bf16-3's at layer 4's attention, now in a mean of the size: what is left is of the size of what one writing adds. Whether another run of the same solve ends inside there, as three of three did then, has not been read.",
+  "taken_back": [
+   {
+    "tensor": "blk.9.attn_output.weight",
+    "why": "nothing brought this matrix's own merge back inside",
+    "halvings": 12,
+    "part_of_its_pull_kept": null,
+    "taken_back_toward": "the matrix as it was brought back"
+   }
+  ]
+ },
+ "by_position": [
+  {
+   "position": 0,
+   "matrix": "layer 0's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 1.0,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.0,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.001,
+    "direction_mean_parts_past": 0,
+    "furthest_direction_mean_part_of_its_bound": 0.0,
+    "size_mean_parts_past": 0,
+    "furthest_size_mean_part_of_its_bound": 0.001
+   },
+   "brought_back": null,
+   "path": {
+    "stages": 14,
+    "ridge_powers": [
+     3,
+     2,
+     1,
+     0,
+     -1,
+     -2,
+     -3,
+     -4,
+     -5,
+     -6,
+     -7,
+     -8,
+     -9,
+     -10
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 3
+   },
+   "tube_loss_left_where_the_path_started": 1.0,
+   "selected": "the last matrix inside of the branch that read group 1, before it left a bound",
+   "change_over_matrix": 0.00676,
+   "tube_loss_left_at_its_merge": 0.6288,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 394.1,
+   "pull_kept_in_tube_loss": 0.371191
+  },
+  {
+   "position": 1,
+   "matrix": "layer 0's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.8439,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.165,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.297,
+    "direction_mean_parts_past": 3,
+    "furthest_direction_mean_part_of_its_bound": 4.783,
+    "size_mean_parts_past": 3,
+    "furthest_size_mean_part_of_its_bound": 8.612,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.8461,
+     "direction_parts_past": 0,
+     "size_parts_past": 0,
+     "direction_mean_parts_past": 3,
+     "size_mean_parts_past": 2,
+     "furthest_direction_part_of_its_bound": 0.173,
+     "furthest_size_part_of_its_bound": 0.337,
+     "furthest_direction_mean_part_of_its_bound": 5.004,
+     "furthest_size_mean_part_of_its_bound": 9.78
+    }
+   },
+   "brought_back": {
+    "rounds": 2,
+    "rounds_taken": 2,
+    "seconds": 58,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9878,
+    "change_over_matrix": 0.00148
+   },
+   "path": {
+    "stages": 5,
+    "ridge_powers": [
+     0,
+     -1,
+     -2,
+     -3,
+     -4
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 0
+   },
+   "tube_loss_left_where_the_path_started": 0.8548,
+   "selected": "the last matrix inside of the branch that read group 1, before it left a bound",
+   "change_over_matrix": 0.00158,
+   "tube_loss_left_at_its_merge": 0.837,
+   "tube_loss_left_at_the_layers_last_merge": 0.8393,
+   "seconds": 576.9,
+   "pull_kept_in_tube_loss": 0.017751
+  },
+  {
+   "position": 2,
+   "matrix": "layer 1's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.9646,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.152,
+    "size_parts_past": 1,
+    "furthest_size_part_of_its_bound": 1.189,
+    "direction_mean_parts_past": 6,
+    "furthest_direction_mean_part_of_its_bound": 1.687,
+    "size_mean_parts_past": 12,
+    "furthest_size_mean_part_of_its_bound": 30.831
+   },
+   "brought_back": {
+    "rounds": 10,
+    "rounds_taken": 8,
+    "seconds": 50,
+    "ridge_power_at_the_end": -13,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9951,
+    "change_over_matrix": 0.00193
+   },
+   "path": {
+    "stages": 6,
+    "ridge_powers": [
+     1,
+     0,
+     -1,
+     -2,
+     -3,
+     -4
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 1
+   },
+   "tube_loss_left_where_the_path_started": 0.9642,
+   "selected": "the end of the branch that read group 0",
+   "change_over_matrix": 0.00455,
+   "tube_loss_left_at_its_merge": 0.6579,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 214.3,
+   "pull_kept_in_tube_loss": 0.306276
+  },
+  {
+   "position": 3,
+   "matrix": "layer 1's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.7984,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.159,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.331,
+    "direction_mean_parts_past": 3,
+    "furthest_direction_mean_part_of_its_bound": 4.615,
+    "size_mean_parts_past": 2,
+    "furthest_size_mean_part_of_its_bound": 7.666,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.7986,
+     "direction_parts_past": 0,
+     "size_parts_past": 0,
+     "direction_mean_parts_past": 3,
+     "size_mean_parts_past": 2,
+     "furthest_direction_part_of_its_bound": 0.159,
+     "furthest_size_part_of_its_bound": 0.334,
+     "furthest_direction_mean_part_of_its_bound": 4.612,
+     "furthest_size_mean_part_of_its_bound": 6.968
+    }
+   },
+   "brought_back": {
+    "rounds": 2,
+    "rounds_taken": 2,
+    "seconds": 49,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9952,
+    "change_over_matrix": 0.00173
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     2,
+     1
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 2
+   },
+   "tube_loss_left_where_the_path_started": 0.8071,
+   "selected": "the last matrix inside of the branch that read group 2, before it left a bound",
+   "change_over_matrix": 0.00181,
+   "tube_loss_left_at_its_merge": 0.7989,
+   "tube_loss_left_at_the_layers_last_merge": 0.7992,
+   "seconds": 463.1,
+   "pull_kept_in_tube_loss": 0.008181
+  },
+  {
+   "position": 4,
+   "matrix": "layer 2's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.8709,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.174,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.508,
+    "direction_mean_parts_past": 0,
+    "furthest_direction_mean_part_of_its_bound": 0.949,
+    "size_mean_parts_past": 0,
+    "furthest_size_mean_part_of_its_bound": 0.268
+   },
+   "brought_back": {
+    "rounds": 2,
+    "rounds_taken": 2,
+    "seconds": 18,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9804,
+    "change_over_matrix": 0.00143
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     8,
+     7
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 8
+   },
+   "tube_loss_left_where_the_path_started": 0.8709,
+   "selected": "the last matrix inside of the branch that read group 2, before it left a bound",
+   "change_over_matrix": 0.00143,
+   "tube_loss_left_at_its_merge": 0.8709,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 103.2,
+   "pull_kept_in_tube_loss": 3.8e-05
+  },
+  {
+   "position": 5,
+   "matrix": "layer 2's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.9552,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.358,
+    "size_parts_past": 1,
+    "furthest_size_part_of_its_bound": 1.594,
+    "direction_mean_parts_past": 2,
+    "furthest_direction_mean_part_of_its_bound": 2.344,
+    "size_mean_parts_past": 6,
+    "furthest_size_mean_part_of_its_bound": 7.692,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.9552,
+     "direction_parts_past": 0,
+     "size_parts_past": 1,
+     "direction_mean_parts_past": 2,
+     "size_mean_parts_past": 6,
+     "furthest_direction_part_of_its_bound": 0.358,
+     "furthest_size_part_of_its_bound": 1.586,
+     "furthest_direction_mean_part_of_its_bound": 2.341,
+     "furthest_size_mean_part_of_its_bound": 7.778
+    }
+   },
+   "brought_back": {
+    "rounds": 6,
+    "rounds_taken": 6,
+    "seconds": 122,
+    "ridge_power_at_the_end": -12,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9993,
+    "change_over_matrix": 0.00413
+   },
+   "path": {
+    "stages": 1,
+    "ridge_powers": [
+     11
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 11
+   },
+   "tube_loss_left_where_the_path_started": 0.9558,
+   "selected": "the last matrix inside of the branch that read group 2, before it left a bound",
+   "change_over_matrix": 0.00413,
+   "tube_loss_left_at_its_merge": 0.9558,
+   "tube_loss_left_at_the_layers_last_merge": 0.9558,
+   "seconds": 1667.0,
+   "pull_kept_in_tube_loss": 1.3e-05
+  },
+  {
+   "position": 6,
+   "matrix": "layer 3's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.9709,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.434,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.411,
+    "direction_mean_parts_past": 5,
+    "furthest_direction_mean_part_of_its_bound": 5.45,
+    "size_mean_parts_past": 10,
+    "furthest_size_mean_part_of_its_bound": 11.584
+   },
+   "brought_back": {
+    "rounds": 4,
+    "rounds_taken": 4,
+    "seconds": 32,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9992,
+    "change_over_matrix": 0.00429
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     10,
+     9
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 10
+   },
+   "tube_loss_left_where_the_path_started": 0.9709,
+   "selected": "the last matrix inside of the branch that read group 1, before it left a bound",
+   "change_over_matrix": 0.00429,
+   "tube_loss_left_at_its_merge": 0.9709,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 206.1,
+   "pull_kept_in_tube_loss": 2.3e-05
+  },
+  {
+   "position": 7,
+   "matrix": "layer 3's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.9834,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.414,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.672,
+    "direction_mean_parts_past": 2,
+    "furthest_direction_mean_part_of_its_bound": 2.511,
+    "size_mean_parts_past": 5,
+    "furthest_size_mean_part_of_its_bound": 2.747,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.9836,
+     "direction_parts_past": 0,
+     "size_parts_past": 0,
+     "direction_mean_parts_past": 2,
+     "size_mean_parts_past": 5,
+     "furthest_direction_part_of_its_bound": 0.414,
+     "furthest_size_part_of_its_bound": 0.672,
+     "furthest_direction_mean_part_of_its_bound": 2.515,
+     "furthest_size_mean_part_of_its_bound": 2.706
+    }
+   },
+   "brought_back": {
+    "rounds": 6,
+    "rounds_taken": 6,
+    "seconds": 152,
+    "ridge_power_at_the_end": -12,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9993,
+    "change_over_matrix": 0.00499
+   },
+   "path": {
+    "stages": 3,
+    "ridge_powers": [
+     3,
+     2,
+     1
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 3
+   },
+   "tube_loss_left_where_the_path_started": 0.9836,
+   "selected": "the end of the branch that read group 2",
+   "change_over_matrix": 0.00499,
+   "tube_loss_left_at_its_merge": 0.9835,
+   "tube_loss_left_at_the_layers_last_merge": 0.9837,
+   "seconds": 509.9,
+   "pull_kept_in_tube_loss": 1.1e-05
+  },
+  {
+   "position": 8,
+   "matrix": "layer 4's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.987,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.075,
+    "size_parts_past": 1,
+    "furthest_size_part_of_its_bound": 1.042,
+    "direction_mean_parts_past": 0,
+    "furthest_direction_mean_part_of_its_bound": 0.828,
+    "size_mean_parts_past": 5,
+    "furthest_size_mean_part_of_its_bound": 14.657
+   },
+   "brought_back": {
+    "rounds": 2,
+    "rounds_taken": 2,
+    "seconds": 26,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9903,
+    "change_over_matrix": 0.00228
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     0,
+     -1
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 0
+   },
+   "tube_loss_left_where_the_path_started": 0.9865,
+   "selected": "the last matrix inside of the branch that read group 1, before it left a bound",
+   "change_over_matrix": 0.00327,
+   "tube_loss_left_at_its_merge": 0.9114,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 92.3,
+   "pull_kept_in_tube_loss": 0.07504
+  },
+  {
+   "position": 9,
+   "matrix": "layer 4's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.9643,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.074,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.512,
+    "direction_mean_parts_past": 0,
+    "furthest_direction_mean_part_of_its_bound": 0.831,
+    "size_mean_parts_past": 5,
+    "furthest_size_mean_part_of_its_bound": 14.781,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.9648,
+     "direction_parts_past": 0,
+     "size_parts_past": 0,
+     "direction_mean_parts_past": 0,
+     "size_mean_parts_past": 5,
+     "furthest_direction_part_of_its_bound": 0.074,
+     "furthest_size_part_of_its_bound": 0.481,
+     "furthest_direction_mean_part_of_its_bound": 0.822,
+     "furthest_size_mean_part_of_its_bound": 13.903
+    }
+   },
+   "brought_back": {
+    "rounds": 9,
+    "rounds_taken": 6,
+    "seconds": 221,
+    "ridge_power_at_the_end": -14,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9969,
+    "change_over_matrix": 0.00262
+   },
+   "path": {
+    "stages": 5,
+    "ridge_powers": [
+     0,
+     -1,
+     -2,
+     -3,
+     -4
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 0
+   },
+   "tube_loss_left_where_the_path_started": 0.9644,
+   "selected": "the end of the branch that read group 1",
+   "change_over_matrix": 0.0052,
+   "tube_loss_left_at_its_merge": 0.8455,
+   "tube_loss_left_at_the_layers_last_merge": 0.8461,
+   "seconds": 381.2,
+   "pull_kept_in_tube_loss": 0.118856
+  },
+  {
+   "position": 10,
+   "matrix": "layer 5's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.8506,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.054,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.248,
+    "direction_mean_parts_past": 0,
+    "furthest_direction_mean_part_of_its_bound": 0.794,
+    "size_mean_parts_past": 1,
+    "furthest_size_mean_part_of_its_bound": 2.069
+   },
+   "brought_back": {
+    "rounds": 1,
+    "rounds_taken": 1,
+    "seconds": 9,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9453,
+    "change_over_matrix": 0.00352
+   },
+   "path": {
+    "stages": 7,
+    "ridge_powers": [
+     0,
+     -1,
+     -2,
+     -3,
+     -4,
+     -5,
+     -6
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 0
+   },
+   "tube_loss_left_where_the_path_started": 0.8506,
+   "selected": "the end of the branch that read group 0",
+   "change_over_matrix": 0.03156,
+   "tube_loss_left_at_its_merge": 0.6906,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 67.9,
+   "pull_kept_in_tube_loss": 0.160007
+  },
+  {
+   "position": 11,
+   "matrix": "layer 5's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.7949,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.112,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.274,
+    "direction_mean_parts_past": 5,
+    "furthest_direction_mean_part_of_its_bound": 3.178,
+    "size_mean_parts_past": 10,
+    "furthest_size_mean_part_of_its_bound": 3.402,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.7969,
+     "direction_parts_past": 0,
+     "size_parts_past": 1,
+     "direction_mean_parts_past": 5,
+     "size_mean_parts_past": 13,
+     "furthest_direction_part_of_its_bound": 0.113,
+     "furthest_size_part_of_its_bound": 2.122,
+     "furthest_direction_mean_part_of_its_bound": 3.189,
+     "furthest_size_mean_part_of_its_bound": 7.629
+    }
+   },
+   "brought_back": {
+    "rounds": 4,
+    "rounds_taken": 4,
+    "seconds": 64,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9997,
+    "change_over_matrix": 0.004
+   },
+   "path": {
+    "stages": 1,
+    "ridge_powers": [
+     4
+    ],
+    "ended": "no solve took a step",
+    "starts_passed_over": 4
+   },
+   "tube_loss_left_where_the_path_started": 0.7956,
+   "selected": "the bringing back alone: no candidate that holds every bound on every group and on all the fitting answers together leaves them less tube loss than where the path started",
+   "change_over_matrix": 0.004,
+   "tube_loss_left_at_its_merge": 0.7956,
+   "tube_loss_left_at_the_layers_last_merge": 0.7977,
+   "seconds": 225.4,
+   "pull_kept_in_tube_loss": 0.0
+  },
+  {
+   "position": 12,
+   "matrix": "layer 6's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.8043,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.085,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.617,
+    "direction_mean_parts_past": 1,
+    "furthest_direction_mean_part_of_its_bound": 1.012,
+    "size_mean_parts_past": 14,
+    "furthest_size_mean_part_of_its_bound": 17.874
+   },
+   "brought_back": {
+    "rounds": 7,
+    "rounds_taken": 6,
+    "seconds": 27,
+    "ridge_power_at_the_end": -12,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9975,
+    "change_over_matrix": 0.00435
+   },
+   "path": {
+    "stages": 5,
+    "ridge_powers": [
+     0,
+     -1,
+     -2,
+     -3,
+     -4
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 0
+   },
+   "tube_loss_left_where_the_path_started": 0.802,
+   "selected": "the last matrix inside of the branch that read group 2, before it left a bound",
+   "change_over_matrix": 0.0112,
+   "tube_loss_left_at_its_merge": 0.7096,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 175.8,
+   "pull_kept_in_tube_loss": 0.09239
+  },
+  {
+   "position": 13,
+   "matrix": "layer 6's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.81,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.122,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.968,
+    "direction_mean_parts_past": 5,
+    "furthest_direction_mean_part_of_its_bound": 1.781,
+    "size_mean_parts_past": 6,
+    "furthest_size_mean_part_of_its_bound": 27.865,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.8145,
+     "direction_parts_past": 0,
+     "size_parts_past": 0,
+     "direction_mean_parts_past": 5,
+     "size_mean_parts_past": 5,
+     "furthest_direction_part_of_its_bound": 0.121,
+     "furthest_size_part_of_its_bound": 0.56,
+     "furthest_direction_mean_part_of_its_bound": 1.781,
+     "furthest_size_mean_part_of_its_bound": 16.074
+    }
+   },
+   "brought_back": {
+    "rounds": 4,
+    "rounds_taken": 4,
+    "seconds": 40,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9966,
+    "change_over_matrix": 0.00327
+   },
+   "path": {
+    "stages": 6,
+    "ridge_powers": [
+     0,
+     -1,
+     -2,
+     -3,
+     -4,
+     -5
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 0
+   },
+   "tube_loss_left_where_the_path_started": 0.8109,
+   "selected": "the end of the branch that read group 0",
+   "change_over_matrix": 0.01304,
+   "tube_loss_left_at_its_merge": 0.6199,
+   "tube_loss_left_at_the_layers_last_merge": 0.6297,
+   "seconds": 1042.5,
+   "pull_kept_in_tube_loss": 0.190952
+  },
+  {
+   "position": 14,
+   "matrix": "layer 7's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.6608,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.121,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.515,
+    "direction_mean_parts_past": 0,
+    "furthest_direction_mean_part_of_its_bound": 0.927,
+    "size_mean_parts_past": 7,
+    "furthest_size_mean_part_of_its_bound": 14.798
+   },
+   "brought_back": {
+    "rounds": 4,
+    "rounds_taken": 4,
+    "seconds": 21,
+    "ridge_power_at_the_end": -11,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.999,
+    "change_over_matrix": 0.00346
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     0,
+     -1
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 0
+   },
+   "tube_loss_left_where_the_path_started": 0.6596,
+   "selected": "the end of the branch that read group 1",
+   "change_over_matrix": 0.00404,
+   "tube_loss_left_at_its_merge": 0.6328,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 67.7,
+   "pull_kept_in_tube_loss": 0.026781
+  },
+  {
+   "position": 15,
+   "matrix": "layer 7's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.7096,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.161,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.365,
+    "direction_mean_parts_past": 11,
+    "furthest_direction_mean_part_of_its_bound": 2.771,
+    "size_mean_parts_past": 9,
+    "furthest_size_mean_part_of_its_bound": 10.522,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.7122,
+     "direction_parts_past": 0,
+     "size_parts_past": 0,
+     "direction_mean_parts_past": 11,
+     "size_mean_parts_past": 7,
+     "furthest_direction_part_of_its_bound": 0.161,
+     "furthest_size_part_of_its_bound": 0.355,
+     "furthest_direction_mean_part_of_its_bound": 2.808,
+     "furthest_size_mean_part_of_its_bound": 10.215
+    }
+   },
+   "brought_back": {
+    "rounds": 4,
+    "rounds_taken": 4,
+    "seconds": 111,
+    "ridge_power_at_the_end": -12,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9997,
+    "change_over_matrix": 0.00612
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     7,
+     6
+    ],
+    "ended": "no solve took a step",
+    "starts_passed_over": 7
+   },
+   "tube_loss_left_where_the_path_started": 0.7121,
+   "selected": "the bringing back alone: no candidate that holds every bound on every group and on all the fitting answers together leaves them less tube loss than where the path started",
+   "change_over_matrix": 0.00612,
+   "tube_loss_left_at_its_merge": 0.7121,
+   "tube_loss_left_at_the_layers_last_merge": 0.7143,
+   "seconds": 407.8,
+   "pull_kept_in_tube_loss": 0.0
+  },
+  {
+   "position": 16,
+   "matrix": "layer 8's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.7475,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.196,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.218,
+    "direction_mean_parts_past": 6,
+    "furthest_direction_mean_part_of_its_bound": 1.479,
+    "size_mean_parts_past": 9,
+    "furthest_size_mean_part_of_its_bound": 4.371
+   },
+   "brought_back": {
+    "rounds": 14,
+    "rounds_taken": 13,
+    "seconds": 54,
+    "ridge_power_at_the_end": -18,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9998,
+    "change_over_matrix": 0.01042
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     11,
+     10
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 11
+   },
+   "tube_loss_left_where_the_path_started": 0.7465,
+   "selected": "the last matrix inside of the branch that read group 2, before it left a bound",
+   "change_over_matrix": 0.01042,
+   "tube_loss_left_at_its_merge": 0.7465,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 148.5,
+   "pull_kept_in_tube_loss": 2e-06
+  },
+  {
+   "position": 17,
+   "matrix": "layer 8's feed-forward",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.7889,
+    "direction_parts_past": 1,
+    "furthest_direction_part_of_its_bound": 1.129,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.994,
+    "direction_mean_parts_past": 10,
+    "furthest_direction_mean_part_of_its_bound": 4.46,
+    "size_mean_parts_past": 25,
+    "furthest_size_mean_part_of_its_bound": 28.459,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.798,
+     "direction_parts_past": 1,
+     "size_parts_past": 2,
+     "direction_mean_parts_past": 11,
+     "size_mean_parts_past": 25,
+     "furthest_direction_part_of_its_bound": 1.65,
+     "furthest_size_part_of_its_bound": 2.035,
+     "furthest_direction_mean_part_of_its_bound": 5.927,
+     "furthest_size_mean_part_of_its_bound": 33.603
+    }
+   },
+   "brought_back": {
+    "rounds": 24,
+    "rounds_taken": 23,
+    "seconds": 561,
+    "ridge_power_at_the_end": -23,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9997,
+    "change_over_matrix": 0.08871
+   },
+   "path": {
+    "stages": 3,
+    "ridge_powers": [
+     8,
+     7,
+     6
+    ],
+    "ended": "no solve took a step",
+    "starts_passed_over": 8
+   },
+   "tube_loss_left_where_the_path_started": 0.8057,
+   "selected": "the end of the branch that read group 0",
+   "change_over_matrix": 0.08871,
+   "tube_loss_left_at_its_merge": 0.8056,
+   "tube_loss_left_at_the_layers_last_merge": 0.8074,
+   "seconds": 1029.9,
+   "pull_kept_in_tube_loss": 2.9e-05
+  },
+  {
+   "position": 18,
+   "matrix": "layer 9's attention",
+   "written": true,
+   "arrived": {
+    "tube_loss_left": 0.8445,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.706,
+    "size_parts_past": 1,
+    "furthest_size_part_of_its_bound": 1.447,
+    "direction_mean_parts_past": 6,
+    "furthest_direction_mean_part_of_its_bound": 2.944,
+    "size_mean_parts_past": 31,
+    "furthest_size_mean_part_of_its_bound": 9.223
+   },
+   "brought_back": {
+    "rounds": 16,
+    "rounds_taken": 15,
+    "seconds": 148,
+    "ridge_power_at_the_end": -19,
+    "every_bound_inside": true,
+    "furthest_part_after_of_its_bound": 0.9995,
+    "change_over_matrix": 0.03765
+   },
+   "path": {
+    "stages": 2,
+    "ridge_powers": [
+     1,
+     0
+    ],
+    "ended": "every branch left a bound",
+    "starts_passed_over": 1
+   },
+   "tube_loss_left_where_the_path_started": 0.8384,
+   "selected": "the end of the branch that read group 0",
+   "change_over_matrix": 0.03765,
+   "tube_loss_left_at_its_merge": 0.8383,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 222.6,
+   "pull_kept_in_tube_loss": 7.2e-05
+  },
+  {
+   "position": 19,
+   "matrix": "layer 9's feed-forward",
+   "written": false,
+   "arrived": {
+    "tube_loss_left": 0.8611,
+    "direction_parts_past": 0,
+    "furthest_direction_part_of_its_bound": 0.88,
+    "size_parts_past": 0,
+    "furthest_size_part_of_its_bound": 0.873,
+    "direction_mean_parts_past": 7,
+    "furthest_direction_mean_part_of_its_bound": 3.321,
+    "size_mean_parts_past": 20,
+    "furthest_size_mean_part_of_its_bound": 6.414,
+    "at_the_layers_last_merge": {
+     "tube_loss_left": 0.8619,
+     "direction_parts_past": 0,
+     "size_parts_past": 0,
+     "direction_mean_parts_past": 8,
+     "size_mean_parts_past": 21,
+     "furthest_direction_part_of_its_bound": 0.876,
+     "furthest_size_part_of_its_bound": 0.834,
+     "furthest_direction_mean_part_of_its_bound": 3.328,
+     "furthest_size_mean_part_of_its_bound": 8.543
+    }
+   },
+   "brought_back": {
+    "rounds": 19,
+    "rounds_taken": 14,
+    "seconds": 443,
+    "ridge_power_at_the_end": -23,
+    "every_bound_inside": false,
+    "furthest_part_after_of_its_bound": 1.0007,
+    "change_over_matrix": 0.0411
+   },
+   "path": null,
+   "tube_loss_left_where_the_path_started": null,
+   "selected": "no change: a bound is outside and no feasible restoration was found under this search",
+   "change_over_matrix": 0.0,
+   "tube_loss_left_at_its_merge": null,
+   "tube_loss_left_at_the_layers_last_merge": null,
+   "seconds": 833.3,
+   "pull_kept_in_tube_loss": null
+  }
+ ],
+ "the_engines_own_output_after_each_written_matrix": {
+  "attention-0": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.6288,
+   "furthest_part_of_its_bound": 0.9522,
+   "read": [
+    "above position 1"
+   ]
+  },
+  "feedforward-0": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.837,
+   "furthest_part_of_its_bound": 0.8661,
+   "read": [
+    "behind position 1",
+    "above position 2"
+   ]
+  },
+  "layer-0": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8393,
+   "furthest_part_of_its_bound": 0.9273,
+   "read": [
+    "behind position 1",
+    "above position 2"
+   ]
+  },
+  "attention-1": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.6579,
+   "furthest_part_of_its_bound": 0.878,
+   "read": [
+    "above position 3"
+   ]
+  },
+  "feedforward-1": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7989,
+   "furthest_part_of_its_bound": 0.8034,
+   "read": [
+    "behind position 3",
+    "above position 4"
+   ]
+  },
+  "layer-1": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7992,
+   "furthest_part_of_its_bound": 0.8032,
+   "read": [
+    "behind position 3",
+    "above position 4"
+   ]
+  },
+  "attention-2": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8709,
+   "furthest_part_of_its_bound": 0.9484,
+   "read": [
+    "above position 5"
+   ]
+  },
+  "feedforward-2": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9558,
+   "furthest_part_of_its_bound": 0.9894,
+   "read": [
+    "behind position 5",
+    "above position 6"
+   ]
+  },
+  "layer-2": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9558,
+   "furthest_part_of_its_bound": 0.9883,
+   "read": [
+    "behind position 5",
+    "above position 6"
+   ]
+  },
+  "attention-3": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9709,
+   "furthest_part_of_its_bound": 0.9415,
+   "read": [
+    "above position 7"
+   ]
+  },
+  "feedforward-3": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9835,
+   "furthest_part_of_its_bound": 0.965,
+   "read": [
+    "behind position 7",
+    "above position 8"
+   ]
+  },
+  "layer-3": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9837,
+   "furthest_part_of_its_bound": 0.9664,
+   "read": [
+    "behind position 7",
+    "above position 8"
+   ]
+  },
+  "attention-4": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.9114,
+   "furthest_part_of_its_bound": 0.5683,
+   "read": [
+    "above position 9"
+   ]
+  },
+  "feedforward-4": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8455,
+   "furthest_part_of_its_bound": 0.9072,
+   "read": [
+    "behind position 9",
+    "above position 10"
+   ]
+  },
+  "layer-4": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8461,
+   "furthest_part_of_its_bound": 0.9026,
+   "read": [
+    "behind position 9",
+    "above position 10"
+   ]
+  },
+  "attention-5": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.6906,
+   "furthest_part_of_its_bound": 0.9436,
+   "read": [
+    "above position 11"
+   ]
+  },
+  "feedforward-5": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7956,
+   "furthest_part_of_its_bound": 0.9932,
+   "read": [
+    "behind position 11",
+    "above position 12"
+   ]
+  },
+  "layer-5": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7977,
+   "furthest_part_of_its_bound": 0.9967,
+   "read": [
+    "behind position 11",
+    "above position 12"
+   ]
+  },
+  "attention-6": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7096,
+   "furthest_part_of_its_bound": 0.688,
+   "read": [
+    "above position 13"
+   ]
+  },
+  "feedforward-6": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.6199,
+   "furthest_part_of_its_bound": 0.7795,
+   "read": [
+    "behind position 13",
+    "above position 14"
+   ]
+  },
+  "layer-6": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.6297,
+   "furthest_part_of_its_bound": 0.7783,
+   "read": [
+    "behind position 13",
+    "above position 14"
+   ]
+  },
+  "attention-7": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.6328,
+   "furthest_part_of_its_bound": 0.8332,
+   "read": [
+    "above position 15"
+   ]
+  },
+  "feedforward-7": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7121,
+   "furthest_part_of_its_bound": 0.9844,
+   "read": [
+    "behind position 15",
+    "above position 16"
+   ]
+  },
+  "layer-7": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7143,
+   "furthest_part_of_its_bound": 0.9731,
+   "read": [
+    "behind position 15",
+    "above position 16"
+   ]
+  },
+  "attention-8": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.7465,
+   "furthest_part_of_its_bound": 0.9803,
+   "read": [
+    "above position 17"
+   ]
+  },
+  "feedforward-8": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8056,
+   "furthest_part_of_its_bound": 0.9812,
+   "read": [
+    "behind position 17",
+    "above position 18"
+   ]
+  },
+  "layer-8": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8074,
+   "furthest_part_of_its_bound": 0.9786,
+   "read": [
+    "behind position 17",
+    "above position 18"
+   ]
+  },
+  "attention-9": {
+   "holds_every_bound": true,
+   "tube_loss_left": 0.8383,
+   "furthest_part_of_its_bound": 0.9654,
+   "read": [
+    "above position 19"
+   ]
+  }
+ },
+ "prediction_vs_result": {
+  "the_reference": "As predicted (reference-against-controlled-bf16-3.json): the gap, the chance and the questions' bounds equal controlled-bf16-3's at all 105 merges; the means' limits equal that run's limits at all 100,800 parts of each family; the rows' limits are 29.0 times those at the median place of every merge and nowhere less.",
+  "layer_0_attention": "Predicted about 0.68 left with about 0.5% changed; result 0.629 with 0.68%.",
+  "layer_0_feed_forward": "Predicted: outside in the means and not in the rows, back inside both merges in 2 to 4 rounds with about 0.1% changed, a pull of 0.01 to 0.02 kept, the path ending where a read third's mean leaves a bound. Result: 3 direction means and 3 size means outside and no row part, 2 rounds, 0.15%, 0.018 kept, every branch ended by its read third.",
+  "the_engines_own_output": "Predicted inside every bound above each written matrix, at once or after the bounds are drawn in. Result: inside at once at all 28 merges read.",
+  "the_later_matrices": "Predicted from the kept rows: matrices arrive outside in the mean families, a bringing back changes well under 1% of a matrix, and a pull is kept after it. Result: as predicted at positions 1 to 15 for the arrival and the cost (0.14% to 0.61%); a pull beyond 0.0001 was kept at nine of those fifteen. Not as predicted from layer 8 on: 1.04%, 8.87% and 3.77% of the matrix, and a fourth bringing back that reached 4.11% without ending inside.",
+  "what_matrices_three_to_eight_leave": "The split was to be tested by whether they leave less than 0.976 to 0.996. Result: 0.658, 0.799, 0.871, 0.956, 0.971 and 0.984. All six leave less than the same matrix did under the first allowance (0.976, 0.984, 0.990, 0.996, 0.995, 0.995); the last two are above the 0.97 the declaration named.",
+  "whether_the_sweep_reaches_its_last_matrix": "Declared as not known. It did not: it ended at the twentieth of 70. The 12288-wide feed-forwards were not reached.",
+  "the_time": "Predicted about five minutes a matrix at the narrow widths. Result: 68 to 577 s at sixteen positions; 1,667 s at position 5 (1,191 s of it waits for the card), 1,042 s at position 13 and 1,030 s at position 17; 7,996 s for nineteen matrices.",
+  "the_replay_and_the_own_answers": "Not run: no finished model."
+ },
+ "failures_only": [
+  "The sweep ended at its twentieth of 70 matrices, not accepted. There is no finished model, so the replay, the own answers and the verdict were not run.",
+  "The bringing back at layer 9's feed-forward ended with one part outside after 19 rounds, 14 taken, with the ridge at its floor: size_mean, wrong group, place 160 (a move is asked there), the layer's last merge, third 1, at 1.000694 of a limit of 1.59e-6. The solver's claim that the stepped ridge brings back what arrives outside is weakened as the declaration said it would be: this bringing back and layer 8's feed-forward's both used their rounds down to the smallest ridge, and this one did not end inside.",
+  "From layer 8 on a bringing back changed 1.04%, 8.87%, 3.77% and (unwritten) 4.11% of a matrix, against 0.14% to 0.61% before. The split's premise is weakened in the part the declaration named: the groups' means themselves arrive several times past their limits at every matrix (up to 30.8 times at a matrix's own merge and 33.6 at a layer's last), and from layer 8 they need a few percent of a matrix to come back.",
+  "Nine of the eighteen matrices after the first kept under 0.0001 of the tube loss beyond their bringing back (positions 4 to 7, 11, 15 to 18). Fifteen paths ended on the read third's bounds, three with no step taken at all.",
+  "Six bringing backs had rounds of which no part was taken (positions 2, 9, 12, 16, 17 and 18: 2, 3, 1, 1, 1 and 1 rounds). The declaration's revision reported every step taken whole on the kept rows it was read on.",
+  "The machine stopped without a shutdown at 7:36:58 PM CT with both cards loaded. Position 18 was cut off and made again from the record; nothing on record was lost. A matrix written before a restart can no longer be taken back; that did not bear on the end, because the matrix taken back at position 19 was written after the restart.",
+  "The build's passes waited 1,860 s for card 0 at positions 1, 3, 5, 7 and 8 while other sessions' jobs held it."
+ ],
+ "what_this_changes": [
+  "This run does not test the hypothesis: it has no finished model, and by its own declaration a sweep that ends early says the configuration is not there yet. It is this configuration's result at layer 9's feed-forward. The earlier repairs and their transfer stand as recorded.",
+  "The split, which Marcos approved on November 11, does what it was tested for at the first sixteen matrices: with the rows held to their own scale a bringing back changes 0.14% to 0.61% of a matrix where it changed 2.1% to 6.8%, the engine's own output stays inside every bound at every merge read, and ten matrices pull, to 0.62 of the tube loss at layer 6's feed-forward. What it leaves open is the means: every pull upstream moves the groups' means at the merges downstream, each matrix after has to bring them back, and at layers 8 and 9 that takes 1% to 9% of a matrix. The limits on the means and what they are counted from are Astra's to weigh; nothing here changes a bound.",
+  "The solver, which is this session's. (1) The bringing back at layers 8 and 9: read on rows kept from the left model at layer 9's feed-forward whether the same solve ends inside on another run, and which earlier matrices' changes put the 20 to 31 size means outside there. (2) The pull: fifteen of eighteen paths end on the third that is only read. A pull that holds all three thirds' bounds in its step went past that end at the one matrix it was read on in development (records/development/2026-11-10-controlled-training/README.md, position8-joint-*). It changes a declared part of step 5, so it is Marcos's to approve: Astra put it to him on November 11 (records/retrospectives/2026-11-11-all-fitting-constraints-method-check-astra.md) and no answer is on record. (3) The three paths that took no step are a separate case: whether the steps refused there fail a bound, fail to lower the tube loss, or both, is to be read on kept rows. (4) A ladder whose every ridge ends on the same read part (positions 3 to 7 and 11, weight-research-perfomance's reading) spends its time without telling more; a stop for it belongs in the next declaration.",
+  "The machine: this stop came with both cards loaded; the stop of November 10 at 8:28 PM CT did not (card 1 idle at 2% and 28 W, card 0 stepping between 44 W and 364 to 382 W: hostshield's telemetry, weight-research-perfomance's reading in records/development/2026-11-10-speed-review/README.md). What the two share is card 0's load stepping by hundreds of watts; no cause is shown. Until Marcos says otherwise this work loads one card at a time."
+ ],
+ "records": {
+  "build.jsonl": "one line per position: 0 to 18 written, 19 where it ended",
+  "logs/build.out, build-2.out, run.log": "the build before the machine's stop, the build run again after it, and the run's commands with their times",
+  "reference, reference-against-controlled-bf16-3.json, own/start.json": "what the original model fixes for this run, and its comparison with the sweep before",
+  "passes": "the engine's readings of the model as it stood at each position (not in Git)",
+  "records/development/2026-11-10-speed-review/as-we-go": "weight-research-perfomance's readings of this record and of the model after each written matrix on card 1, and the nineteen written matrices kept by themselves; development, not this run's verdict",
+  "records/retrospectives/2026-11-11-thirds-pool-and-mean-estimators-astra.md, 2026-11-11-intermediate-answer-accounting-astra.md, 2026-11-11-all-fitting-constraints-method-check-astra.md": "Astra's assessments of this sweep's records while it ran"
+ },
+ "read_after_the_run": [
+  "Development on the rows kept at layer 9's feed-forward (passes/inspect-19-feedforward-1-rows.npz), November 11 and 12; no bound, reference or model file was changed and nothing here regrades the run (records/development/2026-11-10-controlled-training/README.md, the position 19 rows).",
+  "The bringing back that ended this sweep, run again five times on card 0 with the build's solver, ends inside every bound five times of five: 12, 16, 13, 15 and 20 rounds, 4.11% to 4.16% of the matrix changed. The build's own is the one of six that ended outside.",
+  "The end was one round: at the smallest ridge a round of which no part left less outside ended the solve. Of 59 rounds played at that ridge from two states kept late in a solve, one was such a round; its whole step, 0.05% of the matrix, brought the one part outside back in and put two others 0.04% and 0.0006% past their limits. From the state kept there, of eighteen replays the first round took no part in six; ending there, three of four solves end outside; with the round made again with the margins it has just grown, fourteen of fourteen end inside in one to four rounds. The solver makes the round again from the commit that records this. It does not reach a state where the least step is too small for the file to hold, which only a solve begun again from the matrix it stood on produced (card 1: no part taken in 13 rounds of 15, then in 26 of 26 at the smallest ridge, twice).",
+  "The first step of that bringing back (3.72% of the matrix, from 482.3 outside) answers to the reading of each third beside all the answers together, not to one family of bounds: with a family or both means not held in the script's memory it is 2.56% to 3.72%; with all the fitting answers together brought back alone, 0.83%. One state and one round: the changed search's outcome, not a decomposition of the cost and not a reading of whether the thirds' limits are needed. Astra keeps the approved readings and bounds (records/retrospectives/2026-11-11-thirds-pool-and-mean-estimators-astra.md).",
+  "That first step is not the least step at the ten passes a round has: 3.72% at pass 10, 3.16% at 20, 3.00% at 40, 2.89% at 80 and still falling; with the linear solves resolved (160 iterations a pass) 3.54%, 3.09%, 2.98%, 2.90%. The splitting is what is slow. Neither figure is a minimum certificate (Astra).",
+  "With the wrong group's mean-size limit set, in the script's memory, to the two full groups' squared difference at the asked places where the sizes differ, the bringing back changes 4.05% of the matrix in 16 rounds: holding the size where it stood is not what this bringing back costs."
+ ]
+}

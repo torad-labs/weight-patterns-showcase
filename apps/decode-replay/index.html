@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>QGRE · Decode replay</title><style>/*REPLAY_STYLE*/
+/*WORLD_STYLE*/
+</style></head>
+<body>
+<header class="masthead"><div class="wordmark">QGRE<span> / Decode replay</span></div><div class="header-actions"><span id="local-state">Local · offline</span><button id="help-toggle" aria-expanded="false" aria-controls="help">Import guide</button><button id="open-bundle" class="primary">Open bundle</button><input id="file" type="file" accept=".json,application/json" hidden></div></header>
+<section id="help" hidden><h2>Bring a recorded decode into view</h2><p>Generate this page from your source checkout and existing captures. Nothing is uploaded and no GPU work is launched.</p><pre>qgre dev decode-replay --output runs/legs/replay/my-decode \
+  --nsys capture.nsys-rep --ncu capture.ncu-rep \
+  --phase-tape phase-report.json</pre><p>Open the generated <code>index.html</code> directly, or load its <code>bundle.json</code> above. Nsight Systems records launches; a phase tape exposes instrumented work inside the megakernel. NCU metrics stay attached to their own recording, not guessed positions in another trace.</p></section>
+<div id="error" role="alert" hidden></div>
+<main>
+<section id="internal" aria-label="Recorded internal execution"></section>
+<details class="supporting"><summary>Supporting evidence · source assembly, Nsight launches and counters</summary>
+<section class="workspace-heading"><div><h1>Inside the decode</h1><p id="run-title">Source composition, with recorded execution when available.</p></div><div class="recipe-controls"><label>Model recipe<select id="model"></select></label><label>Layer<select id="layer"></select></label></div></section>
+<div class="workbench">
+<section class="assembly" aria-label="3D megakernel composition">
+<div class="canvas-toolbar"><div><strong id="assembly-title">Megakernel assembly</strong><span id="assembly-subtitle">Static composition · not SM placement</span></div><div class="scene-controls"><label>View<select id="view"><option value="source">Source assembly</option><option value="recorded">Recorded activity</option></select></label><label>Explode<input id="explode" type="range" min="0" max="100" value="50"></label><button id="reset">Reset view</button></div></div>
+<div class="scene-wrap"><canvas id="scene" tabindex="0" aria-label="Rotatable 3D architecture. Drag to orbit, scroll to zoom, or use arrow keys. The component list below provides keyboard selection."></canvas><div class="scene-caption"><span id="scene-caption">Source-derived pieces. No invented internal timings.</span><span>Drag to orbit · scroll to zoom</span></div></div>
+<div class="component-strip" id="components" aria-label="Select an architecture component"></div>
+<div class="source-strip"><span id="revision"></span><span id="graph-count"></span></div>
+</section>
+<aside class="inspector"><div class="inspector-heading"><h2>Inspector</h2><span id="evidence-label">Source</span></div><div id="inspection"></div></aside>
+</div>
+<section class="replay">
+<div class="replay-heading"><div><h2>Execution replay</h2><p id="clock-note">Load a capture to replay measured events.</p></div><label>Recording<select id="capture"></select></label></div>
+<div class="transport"><button id="previous" aria-label="Previous event">Previous</button><button id="play" class="primary">Play</button><button id="next" aria-label="Next event">Next</button><output id="time">No timeline</output><label class="speed-label">Playback<select id="speed"><option value="30">30 s / capture</option><option value="10">10 s / capture</option><option value="60">60 s / capture</option></select></label><span id="event-count"></span><button id="focus-time">Focus selected event</button><button id="full-time">Full recording</button></div>
+<div id="timeline-wrap"><canvas id="timeline" aria-label="Recorded event timeline; use the time slider for keyboard navigation."></canvas><input id="scrubber" type="range" min="0" max="10000" value="0" aria-label="Replay time"><div class="axis"><span>0</span><span id="duration">—</span></div></div>
+<div class="evidence-tabs" role="tablist" aria-label="Evidence"><button id="events-tab" role="tab" aria-selected="true">Recorded events</button><button id="counters-tab" role="tab" aria-selected="false">NCU counters</button><button id="limits-tab" role="tab" aria-selected="false">What this can tell you</button></div>
+<div id="events-panel" role="tabpanel"><div class="table-toolbar"><label>Find event<input id="search" type="search" placeholder="Kernel, phase, or API name"></label><label>Order<select id="event-order"><option value="time">Time order</option><option value="duration">Longest first</option></select></label><span id="table-count"></span><button id="page-back">Earlier</button><button id="page-next">Later</button></div><div class="table-scroll"><table><thead><tr><th>Event</th><th>Kind / lane</th><th>Start</th><th>Duration</th><th>Evidence</th></tr></thead><tbody id="events"></tbody></table></div></div>
+<div id="counters-panel" role="tabpanel" hidden><p class="panel-note">These are measured aggregates from separate NCU launches, not an internal execution timeline. Kernel names alone do not establish a match to the selected recording.</p><label>Profiled launch<select id="counter"></select></label><div class="table-scroll"><table><thead><tr><th>Metric</th><th>Value</th><th>Unit</th></tr></thead><tbody id="metrics"></tbody></table></div></div>
+<div id="limits-panel" role="tabpanel" hidden><div id="limitations"></div></div>
+</section>
+</details></main><footer><span>QGRE / Source → composition → observed execution</span><span>No inference is simulated. Missing evidence remains visible.</span></footer>
+<script id="bundle" type="application/json">/*REPLAY_DATA*/</script>
+<script type="module">
+/*REPLAY_MODEL*/
+/*REPLAY_SCENE*/
+/*INTERNAL_MODEL*/
+/*DECODE_SEQUENCE*/
+/*MECHANISM_MODEL*/
+/*WORLD_LIFECYCLE*/
+/*WORLD_MODEL*/
+/*WORLD_SCENE*/
+/*INTERNAL_APP*/
+/*REPLAY_APP*/
+</script></body></html>

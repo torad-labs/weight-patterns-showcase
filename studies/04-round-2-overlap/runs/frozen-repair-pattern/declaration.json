@@ -1,0 +1,45 @@
+{
+ "method_step": 3,
+ "why_this_direction": "Two separate fitted interventions recovered the same arithmetic. Learn one signed reference-grid pattern from their common native changes, then apply it to each unlabelled whole execution to assess repeatability and selectivity.",
+ "repeating_pattern_check": "Reading the arithmetic after the event can suggest a special detector for every operation. Here the field and cutoff use the early and both repaired donor maps alone; no other labels, hand-chosen merge, token or operation enters extraction or application.",
+ "hypothesis": "A common spatial pattern in two measured fitted interventions follows an equivalent repair on another question and produces fewer misleading requests on computations that remain valid.",
+ "prediction": "The known fitted early state projects above both fitted transplants. The complete, natural new 5 m/s\u20131 m channel repair moves toward the rescued side of the same projection from original to 390. Check all other paired movements, flags on true and failed operations, and cap effects. This is a retrospective diagnostic: all behavioral outcomes were known and some aggregate baseline loss values were observed, but no new maps were used to set the rule.",
+ "would_weaken_it": "A reversal of the new repair relative to the donor direction, failure to separate correct from wrong cases, or a similar signal in unchanged errors makes the pattern unsuitable for automatically targeting updates.",
+ "what_went_wrong_before": "A separate rule for each physics operation cannot establish a general training method. Here all eligible values in the common computational coordinate system use a single fixed calculation.",
+ "rule": "Each cell is the registered squared local training excess on the common frozen reference. Subtract each individually sufficient repair map from its shared early map. Use the sign and smaller absolute effect where both agree, zero otherwise. Project each new full map on this one unit vector. Calibrate the midpoint between early and the larger repaired projection. Compute direction cosine on paired original-minus-390 maps. Report all 8 pairs and conditional prefix readings; a scalar excess map is not the hidden vector or a gradient.",
+ "program": {
+  "record": "studies/04-round-2-overlap/runs/frozen-repair-pattern/measure.py",
+  "sha256": "45d56c4269c7884b890bde9ea4ace707c2258547f86762ff4c1715d9e757b191"
+ },
+ "panel": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/panel.json",
+  "sha256": "a00b977894ad8c612030ecc59af8a65b96da7beb3d036d52c1018c3a3dd88f33"
+ },
+ "paired_declaration": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/declaration.json",
+  "sha256": "6b83131b639848fc46aa961cc1f8890e8a2ba17f75066c6d650feb06ec3bb8ec"
+ },
+ "donors": {
+  "early": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/measurement.json",
+   "sha256": "9fce69ddc63af413c56ca588c10fed01b3fa0ac0b59f42506ae2cd30a0569e1f"
+  },
+  "late_attention": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/measurement.json",
+   "sha256": "6f0a870cee3375043c892a417ede8ce80c07693cf25c00d81cc12bae8cbd2dff"
+  },
+  "late_ffn": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/measurement.json",
+   "sha256": "e7b1c20fd54ced716ea46fd8f437d903c5fae24a2b6c95fcf493fa6303f4ba4c"
+  }
+ },
+ "inputs": [
+  "studies/04-round-2-overlap/runs/frozen-energy-generalization/panel.json",
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/declaration.json",
+  "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/declaration.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/frozen-repair-pattern/result.json",
+  "studies/04-round-2-overlap/runs/frozen-repair-pattern/common-signed-field.npy"
+ ]
+}

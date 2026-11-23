@@ -1,0 +1,1387 @@
+{
+ "method_step": 5,
+ "operation": "iterative-success-sets",
+ "run_by": "weight-research-fable (this declaration, the solver, the request toward a set, the pass command and the execution), weight-research-astra (the objective, the reference of sets and its compilation, the measurement and its bindings, the start, the assessment and what closure is), weight-research-perfomance (the recorder, the readers, the reader protocol, the record of pairs and the card placement)",
+ "status": "Stopped November 15, 2026 at 3:48:56 AM CT in its first pass (revision 2), on Marcos's decision relayed at 3:46 AM CT and Astra's withdrawal of the execution admission: interrupted between two writes at 42 of pass 1's 70 matrices, not converged, not completed, not started again, no next pass. One loss was measured, at the loop's start (0.021198); none after an update of this loop exists, the half-swept file is no candidate, and no answer was read. Declared November 15, 2026 at 2:43 AM CT; admitted by Astra at 2:51:03 AM CT by revision 1.",
+ "admission": {
+  "record": "records/retrospectives/2026-11-15-success-set-native-admission-astra.md",
+  "made": "2026-11-15 02:51:03 CT",
+  "by": "weight-research-astra",
+  "scope": "The declared repeated correction on card 0, with single-precision proposals and unchanged native BF16 measurement; no automatic double-precision comparison, no no-fit evaluation and no closure claim."
+ },
+ "revisions": [
+  {
+   "revision": 1,
+   "made": "2026-11-15 02:51:03 CT",
+   "record": "records/retrospectives/2026-11-15-success-set-native-admission-astra.md",
+   "previous": "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/declaration-before-native-admission.json",
+   "reason": "The actual reference, reader protocol, acquisition and measurement bindings are complete. Admit this loop and clarify that a diagnostic comparison in double precision requires its own prospective scope, rather than becoming an automatic restart after a rising loss. No executable source or frozen objective is changed."
+  },
+  {
+   "revision": 2,
+   "made": "2026-11-15 03:56:57 CT",
+   "made_by": "weight-research-fable",
+   "record": "journal/2026-11-15-computation-not-state-values.md",
+   "previous": "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/declaration-before-stop.json",
+   "previous_sha256": "b6bf354add16283fb3fdcf1b2b1c67f84300cd61ac1718cdff8bd86723dd4669",
+   "reason": "The loop is stopped in its first pass and is not started again: its loss is measured on state values, and the trace the method corrects is what each merge does to its own input. Only this file's status changes; every binding, the rule, the parameters, the prediction and what would weaken it stand as declared and as executed.",
+   "authority": "Marcos's decision of November 15, 2026, relayed to the seats by the claude-research session as his at 3:46 AM CT, after that session's note of 3:44 AM CT with his correction of what the trace is; and weight-research-astra's withdrawal of this run's execution admission, the objective being Astra's (journal/2026-11-15-computation-not-state-values.md, which states what was understood and is no wording to match).",
+   "what": "The loop is stopped in pass 1 and is not started again; no pass 2 began. Pass 1's capture, reading, record of pairs and measurement were made (3:05:29 AM CT to 3:15:24 AM CT), and its correction ran in two parts. The first (3:15:25 AM CT to 3:31:10 AM CT) ended at 30 of 70 matrices when the method's verifier refused the next late pass for drift in the tree: another run's folder existed before its line on ROUND-2.md, and nothing of this run was at fault. It was taken up where it stood at 3:33:11 AM CT, once the verifier was clean. The second part was ended by this seat's interrupt signal to the sweep's process at 3:48:56 AM CT, sent as soon as the record of matrix 42 of 70 (blk.20.ffn_down.weight, written 3:48:55 AM CT) was on disk, while the process was binding the late start's seeds for the next matrix: no recorder pass, no solve and no write to the working file was under way. The process was gone within a second and the command exited with 130; the driver began no pass 2 and its hold is in place.",
+   "why": "What was understood of the correction (Marcos, November 15, as relayed; the journal page): the trace of computation the hypothesis is about is what each merge does to its own input, the relation between what a layer is given and what it passes on, and not the values the stream holds. This loop's loss is made of values: the direction and log size of the state after each merge, against what the successes' states span at the corresponding rows (pipeline/weight_edit/success_sets.py, native_points; records/retrospectives/2026-11-15-success-set-loop-freeze-astra.md). A correction toward other answers' state values drives the values and can carry those answers' content into an answer, which is the error of measuring by tokens made one level down. What stands of this construction: the loss is the trace and nothing an answer says, it is measured again on the edited model after every update, and no answer is read. What the loss is on the relation between a merge's input and its output is open design work (the objective is Astra's); nothing is declared in its place by this revision.",
+   "preserved": "Every binding, the rule, the parameters, the prediction and what would weaken it, as declared and as executed. This file's bytes as they stood while the run executed are kept beside it (declaration-before-stop.json), since pass 1's records were made under them. Everything the run wrote is kept: loop/1/capture, loop/1/reading, loop/1/correspondence.json, loop/1/set-score.json, loop/1/sweep (sweep.json, the 42 matrix records, working.gguf and its state record), loop/1/late-start/held.json, the recorder's passes and the logs.",
+   "the_state_it_stands_at": "loop/1/sweep/working.gguf: the seed with 42 of the 70 matrices written once each (blk.0.attn_output.weight to blk.20.ffn_down.weight in path order), identity sha256 394b3bd4246a37e256d63cc198ab6135e7dfa57622aa5ab7af6f7f5ef97cdc03, whole-file sha256 c62281503b2a6e1747dfd811abba9f00ae24939246ecc33d7400b11beff33080, begun from 05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe. Its own state record names no write under way. No capture, reading or measurement was made of it: it is a state between two measurements of a stopped loop, no candidate, and nothing reads it.",
+   "seen_before_this_revision": "The measurement of pass 1, which is the loop's start and the only loss this run measured: 0.021198 (the wrong members' sum 0.011499, the correct members' 0.009699; complete). The 42 matrix records as they were written: every one written, in single precision, none read again in double; the change over the matrix 0.174 at the median (0.042 to 0.504). The sweep's own account on the captured text at the 63 merges those matrices ask at (0.014599 measured at the start, 0.006166 when each was solved, 0.004130 after each write), which is a proposal's reading with the nearest points held and not a loss. Astra's original-only control as read from its file (studies/04-round-2-overlap/runs/success-set-control-original/full-score.json: the original's wrong members 0.020562 under the full reference). No loss after an update of this loop exists; no answer was read.",
+   "predictions_as_they_stand": "(1) held at the start: the wrong members' sum (0.011499) is above the correct members' (0.009699). (2) and (3) are about losses measured after updates, which do not exist: neither confirmed nor weakened. (4) not met on the 42 matrices written: the change over the matrix is 0.174 at the median where the prediction names the matched sweep's 0.057; whether the writes shrink from pass to pass was not seen. None of the four cases of would_weaken_it was reached.",
+   "was": "Declared November 15, 2026 at 2:43 AM CT; admitted by Astra at 2:51:03 AM CT by revision 1, before the first native command. The admission lifts the November 14 hold only for this declared loop; stopped constructions and no-fit evaluation remain held. No native execution or loss measurement is claimed by the admission."
+  }
+ ],
+ "kind": "A correction that is repeated, of one model toward one fixed reference. It starts from the model the matched-context sweep reached (05b169076ada…) and is made of passes. A pass captures the state it starts from on that state's own answers, reads its states at every merge, lays those rows on the reference's by their computation, measures the whole distance that is left (the loss), and then sweeps all 70 attention-output and feed-forward-down matrices once in path order, each solved against requests made where its rows now stand. The pass ends in a new state, and the next pass begins by capturing and measuring that state: a pass's loss is the loss after the pass before it. No pass is an experiment with a verdict, no state is chosen among passes, and no answer is read or graded while the loop runs.",
+ "authority": "Marcos's direction of the evening of November 14, 2026 (journal/2026-11-14-iterative-gap-closure.md, which states what was understood and is no wording to match): the correction is a loop, the loss is the gap of computation along the whole path of divergence measured again on the edited model after every pass, the closing of that gap is the verification, and answers are read only once it has closed. Astra, the owner of the objective, fixed what is measured, what the reference is, where the loop starts and what a request covers (records/retrospectives/2026-11-15-success-set-loop-freeze-astra.md), and built the reference and the measurement (records/retrospectives/2026-11-15-success-set-implementation-astra.md). This seat builds and executes the solver against it. A declaration admits nothing by itself (status).",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+ "objective": "Astra's, one loss for both groups with direction and size together (records/retrospectives/2026-11-15-success-set-loop-freeze-astra.md). At every reference row and merge the reference holds a set: every mixture, with coefficients that are not negative and add to one, of the points the 15 original fitting successes' own computation has at the rows laid there (each point a state's unit direction with the log of its size; 317,773 points over 19,751 reference rows, each at 105 merges). The loss is, summed over every row of the model's own answers, every reference row it is laid on and every merge, that reference row's original coefficient over the number of own rows laid on it, times the squared distance from the own row's point to the nearest point of the set. A correct answer and a wrong one are measured by the same sum: there is no separate term that keeps the correct ones, no row, layer or merge is cropped or weighed away, and no answer is left out. The sets are made once from the original model and never from an edited one.",
+ "specification": "records/retrospectives/2026-11-15-success-set-loop-freeze-astra.md",
+ "decision_records": [
+  "journal/2026-11-14-iterative-gap-closure.md",
+  "records/retrospectives/2026-11-15-success-set-loop-freeze-astra.md",
+  "records/retrospectives/2026-11-15-success-set-implementation-astra.md",
+  "records/retrospectives/2026-11-15-first-pass-acquisition-astra.md",
+  "records/retrospectives/2026-11-15-loop-semantics-astra.md",
+  "records/retrospectives/2026-11-15-native-acquisition-binding-astra.md",
+  "records/retrospectives/2026-11-14-iterative-gap-strategy-astra.md",
+  "records/retrospectives/2026-11-14-whole-gap-native-assessment-astra.md",
+  "records/retrospectives/2026-11-14-conditional-score-astra.md",
+  "records/retrospectives/2026-11-14-whole-gap-native-rule-astra.md",
+  "records/retrospectives/2026-11-14-late-start-admission-astra.md",
+  "records/retrospectives/2026-11-14-identical-input-correspondence-astra.md",
+  "records/development/2026-11-14-whole-gap-solver/README.md",
+  "records/development/2026-11-10-speed-review/README.md"
+ ],
+ "passes_read": "as generated",
+ "stop_after_last_label": true,
+ "recorder_revision": {
+  "passes_read_with": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+  "late_passes_read_with": "13cc39349560a22519da8b14457049cc36cd4bd14b7cd45368c817d4cba12843",
+  "note": "observe-stream is the recorder of every ordinary pass and of the readers (the reader protocol binds it); observe-stream-late runs only the passes a sweep starts late (parameters.late_start). Both are the programs the matched sweep declared."
+ },
+ "sweep": {
+  "target": "studies/04-round-2-overlap/runs/success-set-reference-original/reference",
+  "target_sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38",
+  "capture_protocol_sha256": "243a7ea7209e363aaddc3271b967d2f4bdd58bd399ac17bd9ee43d635a9872ff",
+  "start": {
+   "file": "studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/working.gguf",
+   "kept": {
+    "identity": {
+     "kind": "original+tensors/1",
+     "sha256": "ff042737d950d1c9df482bb0eb170b866729518a5cd4719057f33bcde9fd64da",
+     "original_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+     "tensors": [
+      "blk.0.attn_output.weight",
+      "blk.0.ffn_down.weight",
+      "blk.1.attn_output.weight",
+      "blk.1.ffn_down.weight",
+      "blk.10.attn_output.weight",
+      "blk.10.ffn_down.weight",
+      "blk.11.attn_output.weight",
+      "blk.11.ffn_down.weight",
+      "blk.12.attn_output.weight",
+      "blk.12.ffn_down.weight",
+      "blk.13.attn_output.weight",
+      "blk.13.ffn_down.weight",
+      "blk.14.attn_output.weight",
+      "blk.14.ffn_down.weight",
+      "blk.15.attn_output.weight",
+      "blk.15.ffn_down.weight",
+      "blk.16.attn_output.weight",
+      "blk.16.ffn_down.weight",
+      "blk.17.attn_output.weight",
+      "blk.17.ffn_down.weight",
+      "blk.18.attn_output.weight",
+      "blk.18.ffn_down.weight",
+      "blk.19.attn_output.weight",
+      "blk.19.ffn_down.weight",
+      "blk.2.attn_output.weight",
+      "blk.2.ffn_down.weight",
+      "blk.20.attn_output.weight",
+      "blk.20.ffn_down.weight",
+      "blk.21.attn_output.weight",
+      "blk.21.ffn_down.weight",
+      "blk.22.attn_output.weight",
+      "blk.22.ffn_down.weight",
+      "blk.23.attn_output.weight",
+      "blk.23.ffn_down.weight",
+      "blk.24.attn_output.weight",
+      "blk.24.ffn_down.weight",
+      "blk.25.attn_output.weight",
+      "blk.25.ffn_down.weight",
+      "blk.26.attn_output.weight",
+      "blk.26.ffn_down.weight",
+      "blk.27.attn_output.weight",
+      "blk.27.ffn_down.weight",
+      "blk.28.attn_output.weight",
+      "blk.28.ffn_down.weight",
+      "blk.29.attn_output.weight",
+      "blk.29.ffn_down.weight",
+      "blk.3.attn_output.weight",
+      "blk.3.ffn_down.weight",
+      "blk.30.attn_output.weight",
+      "blk.30.ffn_down.weight",
+      "blk.31.attn_output.weight",
+      "blk.31.ffn_down.weight",
+      "blk.32.attn_output.weight",
+      "blk.32.ffn_down.weight",
+      "blk.33.attn_output.weight",
+      "blk.33.ffn_down.weight",
+      "blk.34.attn_output.weight",
+      "blk.34.ffn_down.weight",
+      "blk.4.attn_output.weight",
+      "blk.4.ffn_down.weight",
+      "blk.5.attn_output.weight",
+      "blk.5.ffn_down.weight",
+      "blk.6.attn_output.weight",
+      "blk.6.ffn_down.weight",
+      "blk.7.attn_output.weight",
+      "blk.7.ffn_down.weight",
+      "blk.8.attn_output.weight",
+      "blk.8.ffn_down.weight",
+      "blk.9.attn_output.weight",
+      "blk.9.ffn_down.weight"
+     ]
+    },
+    "model_sha256": "05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe",
+    "changed": {
+     "blk.0.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "cd7247daa9676739e10e0b0311e2a51d1986a9c5b15eb7b6645cc4c0def075d9"
+     },
+     "blk.0.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "5fb37722106bfd84c3d903624e2258d1709915e2bf4907665fa90c67c0c91e47"
+     },
+     "blk.1.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "90ede7e1ff29b37f5cc7421b993174269e13bad0960def6baecb75069065fd7f"
+     },
+     "blk.1.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "a34775e12c82da422fda2e623f89afc027f09aab669555f3dc71dd42a12d2e82"
+     },
+     "blk.2.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "c7dd4bdaf4d3a7a6818c36e93decfb6b867d8cf242a7f0a23e5a4aca470f6c0f"
+     },
+     "blk.2.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "7d164e9982b8d25dc4953edb7f6429c8d87798c49ca5e2dbbdb20feee8b6b76d"
+     },
+     "blk.3.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "c5956876597082515abca50ddd49b1cd2271bc62ae68ba6c39394392b22b5925"
+     },
+     "blk.3.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "1a10100eaf0dcb88cbafbec4f3f9ea429711ef41f68383ae80627cefe7cacd9f"
+     },
+     "blk.4.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       4096,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 12582912,
+      "sha256": "2cdc033df061dbcea86b3d729b2987c42d40548fff199bcb1a5d7481f767d205"
+     },
+     "blk.4.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "93de14a701dc1467b1d1573f5ea9b520da4a6dd7b76716a6fafb3232204c96a6"
+     },
+     "blk.5.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "5b77479f20c017f8614391e6885c14dd4d38c672921b3f1d4280db0b89b0f3b1"
+     },
+     "blk.5.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "54646aefa9527924a9cc0d88d0a1e1f851d8911a4171c8d000182ab821a3b8e0"
+     },
+     "blk.6.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "235768d2f477187919c879cb079ae7fc95d359a38f5dfcce105f563e44f4e340"
+     },
+     "blk.6.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "c963571207456e5b5c822cbb418a6589fbb29a43d60832d20dbe25ec36769d3f"
+     },
+     "blk.7.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "cd5b08aba6e7a5c1160b45e1b8f52c5a66c2eed8a35056bb3ac4e7079c6a518a"
+     },
+     "blk.7.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "fcfea55bcc85371b5019e68d686439545aaf457ca4b16072ff771f84c38ee6c1"
+     },
+     "blk.8.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "33a6daff3941305eda908788bf2569ac66c07626b689c23b52ff7c5c507121be"
+     },
+     "blk.8.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "2824634a7633a49865058a89c68a029f3097cfaa648c9f5ef1f48231669c19f4"
+     },
+     "blk.9.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       4096,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 12582912,
+      "sha256": "9008d7a31b89285be88570ef2971853586797c9d43e4f18022825c6fdfb119f4"
+     },
+     "blk.9.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "ef868f1fae547921efbd5b7f00e74c6fd1ff160c83913cbea46b41e21e1655d4"
+     },
+     "blk.10.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "ad66c48362811f7d39362f4e719e1d1810875fa080fcc28c9bc20682a5a32dc4"
+     },
+     "blk.10.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "14d1727fed3ef26c99e9876ed1ee1a7300c369c455a34006bb31858f41983340"
+     },
+     "blk.11.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "51644331a502aa9bf647053599c941d51d90dca6a0c85d8f7fb125a8eec932ef"
+     },
+     "blk.11.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "e32f1831e445c21c7d56fd72dad4dbfaca594ef9eeb15bba5d02b08e3a748142"
+     },
+     "blk.12.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "b7d3567686b76daead8668dbcbed668bc38af940eeae1b266080eb98bd4fbd2e"
+     },
+     "blk.12.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "c5d839f155ac842b9f9cb1f16674232c6bf3a5fe971464c8f8eb7ee3550419e8"
+     },
+     "blk.13.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "86c64c32910b407d75008650558d1984bd2c24989f0d81742e47f22e5631295c"
+     },
+     "blk.13.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "d7fb55b98992fcc84d43a838f43376b71e12d2393544e248c0e53db53c32899f"
+     },
+     "blk.14.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       4096,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 12582912,
+      "sha256": "154e979b265e177a6c3a4cb58cf9b4c6a8afd607ad26e5e748a107c5c65445e2"
+     },
+     "blk.14.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       6144,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 18874368,
+      "sha256": "4e88a243f10b9a954d53d1a8fffd4312d1c89975b0fd0572a3a4219655e47ec2"
+     },
+     "blk.15.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "296a305e5afe16f153a3fff2c51be1a924d6e7ced2b461d47cf1d41748c8b41b"
+     },
+     "blk.15.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "17934337b4e196a89d8c4739d995d19ee2012eb94756a7f9a4e7269aed6bc345"
+     },
+     "blk.16.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "007f7219c91fcc49b1df750b7d3c84c725c3486ace3762847a7cec72b7940e5b"
+     },
+     "blk.16.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "77f7207089e14d0b010965b2ee9cc37e375f0b0ed1ff85e5c0cedb22dccccbaf"
+     },
+     "blk.17.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "3c53a67aaed0c6345ccf0bcf580b00a575ea279eb5686283753cf96d9112f4cf"
+     },
+     "blk.17.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "4069c9828fc56eaa82e9e14fcbf5b9f999269fa4dcde3004de84e4bdb44001c1"
+     },
+     "blk.18.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "db442689642529756f45db33b86204370b5e661a12cf42ca5456815ba90c78b1"
+     },
+     "blk.18.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "740c2435daaf08119e3be324270889a8bf21e4eb84103e425a64e6088669b006"
+     },
+     "blk.19.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       4096,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 12582912,
+      "sha256": "8a1f68cd06165a03d23a977e23577394a114bd81e67cd56ef0433657a8c29e4a"
+     },
+     "blk.19.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "673199f3a2008fd0069780fb533ae3f3a66cea488e560a5d7591a200e4fa3eef"
+     },
+     "blk.20.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "9b817b66efb4e5896dc2fe55ae390bd9d9ce32e4ce6f5d359d4b910ae7b5de1a"
+     },
+     "blk.20.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "823dcd7b269e5c6f6a7badadc227b75f0995eb4f61762a532e3adac754ab3ed0"
+     },
+     "blk.21.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "4259c9ea0bb6bd99946992a5884d45b0a39f4768b6e88515dcccd26bf53eb0c1"
+     },
+     "blk.21.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "ce7c2497e64b9e8068e0899ff83054d30be1265952ac40018a9efc972a482fd6"
+     },
+     "blk.22.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "488d4ee69448317855f50a041981260ee1b989b967f13549ed3696e40ec3c811"
+     },
+     "blk.22.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "cd1b40b21242718bb5a5a522eb9d423a34f7c1e352bd804acfbb3a35424d7434"
+     },
+     "blk.23.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "0bc271d0695a2dbdbec5c8a8eaf9db2e698109c8307135e032b56f0dbad678db"
+     },
+     "blk.23.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "9791aa66d58c0949a7c9041114c5798b02e7909aa6771d8d5edd0a0b947efe90"
+     },
+     "blk.24.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       4096,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 12582912,
+      "sha256": "7fa45e76fcb4c2634bc63c7d640f6e36038d00cd46ffcd37a3c7944e9678434b"
+     },
+     "blk.24.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "2fc6c98c4741984b754c90514f82c67da70ef87bbd65efc1380b356d0dcfaeda"
+     },
+     "blk.25.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "9e57a2af5614705f04507d9421933dfac9d6a4ed211048656ac2dfc862e36452"
+     },
+     "blk.25.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "83c3388d2da0ef2fc8edff689b33fd680f55d63ea57cf1338b8beb2998ab9e81"
+     },
+     "blk.26.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "8650efe223a10a1aac5d14a9979ed91bcfba60158ce5c50b5482377e1ca47a0d"
+     },
+     "blk.26.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "ff3e9e92f4efb5b7467e9807fc19d4a922c508636ca14ea56b2046d6424d1eef"
+     },
+     "blk.27.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "a31a23f38a852c5400ccb5ae42cc1f49ea358a12e3497f4a5983dc20569857d9"
+     },
+     "blk.27.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "1cd019c9e1a94e5dfc06723b3acc047ed58866938f8d49396014df57ed33b1e3"
+     },
+     "blk.28.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "542780aee7a04f56fb2618177b21ca987072e840af0918ea503e5044874c2c61"
+     },
+     "blk.28.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "c43ba1e7cd2e141dcb5f3ae2a0efaf3e973313b3c66386e6ec6a8ccfc3e53e7e"
+     },
+     "blk.29.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       4096,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 12582912,
+      "sha256": "2463022520d74d48c114434a6676d792d5b0baf7b30349d49e9c4a0a955983f3"
+     },
+     "blk.29.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "0700ea9093fc67a1d1ca2296e9805e4ee6b0b83fa60d87a3c0aa0ae3d091b628"
+     },
+     "blk.30.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "d693664edaeae7af60b0eb8f24e1938dc20194c52f7bf99be8fd3d8f5f22c680"
+     },
+     "blk.30.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "2885af3966e9e47f72f2f0efae761f8e42dacd50cd50ebcf1216ff48f8d6b13c"
+     },
+     "blk.31.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "89e857f70e90bd627be0efa174b9d206f22f1bfd3906791be0ae23ea2a83b766"
+     },
+     "blk.31.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "8e83ab3c21c77503ddcd4f3088162b07055a3d4fffc538f5c0c4328608642a06"
+     },
+     "blk.32.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "a5dcf06c7409d82590de877730fa6e3e170b624dae38962062d83ab944a8dde8"
+     },
+     "blk.32.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "ab1c63b9f6c0e7e78aa8653bea9aea24571192373b40abc6c2c9f7963c2ca468"
+     },
+     "blk.33.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       2048,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 6291456,
+      "sha256": "4a059b7bb5e8275297bc978bfc532146b136833b96ae9b66c5544e23cbb829ef"
+     },
+     "blk.33.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "c3bceab512fbd0675b0f521fef75a7571c70731fb04f67127d5a6c71408d24d8"
+     },
+     "blk.34.attn_output.weight": {
+      "native_type": "bf16",
+      "shape": [
+       4096,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 12582912,
+      "sha256": "d72c47c564404e335ec37c271c99d59ae4aa3c54b509bd7696de08807e6d9ae1"
+     },
+     "blk.34.ffn_down.weight": {
+      "native_type": "bf16",
+      "shape": [
+       12288,
+       1536,
+       1,
+       1
+      ],
+      "bytes": 37748736,
+      "sha256": "9b079362c645c5dd7660e6ff96537e7c0365278cb8876aa7cf4c283e69d696aa"
+     }
+    },
+    "every_other_byte_is_the_originals": true
+   }
+  },
+  "matrices": "path order",
+  "rule": "least held",
+  "cohort": "studies/04-round-2-overlap/runs/controlled-bf16-1",
+  "read_as": {
+   "merge": "residual",
+   "last_merge_of_the_model": "output_norm"
+  },
+  "late_start": {
+   "program": "observe-stream-late",
+   "sha256": "13cc39349560a22519da8b14457049cc36cd4bd14b7cd45368c817d4cba12843"
+  },
+  "arithmetic": "single"
+ },
+ "set_measurement": {
+  "implementation": [
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/success_set_score.py",
+    "sha256": "d857f93833c7fe66ff94d42edf1bbbe012c00bc240a6845c6f4d331abfc02fe3"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/success_sets.py",
+    "sha256": "71cc4d8edf8bff3a2fe07cbbcc8395a36508931bd35c6defe53d1a717bebe202"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/compile_success_sets.py",
+    "sha256": "3c3904954af438320bab4149ff8c678d28913ab95f5cb76c32a22ac1bd6530c2"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/set_points.py",
+    "sha256": "972f067990385313090a1bdbd3cc94021a1e0b766adb319019f0f13e47e52f50"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/gap_run.py",
+    "sha256": "0b309f58c2dbd15c19719a69e8d2048df62d04c55282057aa79f01e176b4cf60"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+    "sha256": "919067f38b7764e6a098b5b8be2316e98133f4eeab439735be56785fe2f2763a"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+    "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/whole_context_score.py",
+    "sha256": "6ff608a936d698ee5caa7a14fad36c400298ab66a7c64f2eed2b6aa0e4515aab"
+   },
+   {
+    "record": "code/signal-trace/pipeline/weight_edit/whole_context_compare.py",
+    "sha256": "8437e6f44f40fb7f1cbad7be67c350acb2ab92e9c2aa7c1d5578599290bf73bd"
+   },
+   {
+    "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+    "sha256": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d"
+   },
+   {
+    "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+    "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+   },
+   {
+    "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+    "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+   }
+  ],
+  "protocol": {
+   "record": "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/reader-protocol/controlled-bf16-6.json",
+   "sha256": "243a7ea7209e363aaddc3271b967d2f4bdd58bd399ac17bd9ee43d635a9872ff"
+  },
+  "history_before": "recordings",
+  "projection_device": "cuda",
+  "note": "Astra's entry point (pipeline.weight_edit.success_set_score <run> <pass>): it measures the state a pass starts from, reads <run>/loop/<n>/reading and the pass's record of pairs, and writes <run>/loop/<n>/set-score.json once. Pass 1 measures the declared start; a later pass the state the pass before it reached. Its nearest points are found by set_points, the arithmetic the solver's requests use, on card 0 under that card's lock, the card the requests' own points are found on."
+ },
+ "acquisition": {
+  "protocol": {
+   "record": "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/reader-protocol/controlled-bf16-6.json",
+   "sha256": "243a7ea7209e363aaddc3271b967d2f4bdd58bd399ac17bd9ee43d635a9872ff",
+   "the_bytes_of": "records/development/2026-11-12-path-forward/reader-protocol/controlled-bf16-6.json",
+   "why_a_copy": "The research verifier takes a declared input only from a run, the read-only inputs or the original model, and the measurement takes the protocol only from a declared input: the protocol Performance made is copied into this run byte for byte, so its sha256 is the one Performance gave, and no second protocol exists."
+  },
+  "original_control": "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "original_control_reading_sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf",
+  "execution": {
+   "recorder_sha256": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+   "libraries_sha256": "06ffecec44d083a66efdf4b7b2d97567a5c262de5acddc85150a60890fec8df5",
+   "card": "NVIDIA GeForce RTX 5080",
+   "driver": "615.71.10",
+   "visible": "0",
+   "fusion_disabled": "1",
+   "recorder_arguments": [
+    "capture",
+    "residual",
+    "stream"
+   ]
+  },
+  "how_a_pass_is_captured": "one-generation",
+  "capture": "<run>/loop/<n>/capture/own (own_text.py: every answer generated from its prompt by the state the pass starts from, each generated answer's stream kept under <run>/loop/<n>/streams), then <run>/loop/<n>/reading (states_reading.py from those streams: no second pass, each stream removed as it is kept), then <run>/loop/<n>/correspondence.json (states_correspondence.py, whole-gap-correspondence/2, against the reference of sets)",
+  "pass_1": "Pass 1 captures the start anew under this protocol (Astra's decision, records/retrospectives/2026-11-15-first-pass-acquisition-astra.md). The capture and the reading the matched run made of the same model on November 14 stay as they are and are not taken: they were made by the readers as they then stood, and the measurement holds a capture to the protocol its declaration names. So every pass of this run, the first included, is captured, read and measured by one set of instruments, and nothing made earlier is given a new name.",
+  "what_no_capture_measures": "own_text.py generates and registers; it runs no check of a text and counts no wording. An answer whose generated history is the original recording's token for token keeps the identity on the original's steps, as acquisition correspondence (records/retrospectives/2026-11-14-identical-input-correspondence-astra.md); nothing asks an answer to have the reference's wording.",
+  "cases": {
+   "role": "fitting",
+   "of": "the fitting answers (tube.picks); the answers no fit uses are not read",
+   "manifest_sha256": null
+  },
+  "instruments": {
+   "records/development/2026-11-12-path-forward/own_text.py": "5bb105a4546473b062c82069f0aff08e9feb65aeab439d1f60cb631d6b5b97a5",
+   "records/development/2026-11-12-path-forward/capture_bound.py": "0bad0d37905273568fc632ecb2d3b1c167993edcf6bc6a0e9c5340ecfa1470bd",
+   "records/development/2026-11-12-path-forward/own_export.py": "5e387f2e25bc89c4c4bcbc81440c4004a7a078ce28a9e8fe32e40fa3675c5afa",
+   "records/development/2026-11-12-path-forward/states_reading.py": "b347f681dff368b10e42eb8d98a3e7bcc7d44d669e576a59047b53712240be9a",
+   "records/development/2026-11-12-path-forward/whole_reading.py": "17a88e0290cb15c8a52b579ca993d7e41ce399b5a646d6e5cd9110817a193862",
+   "records/development/2026-11-12-path-forward/reading_identity.py": "fed8fcbd3779a9cdb02bdb165eff71b6ac4ce4a99630b3ba7170bd8b8f596969",
+   "records/development/2026-11-12-path-forward/states_correspondence.py": "9015e3f814c535516f721d72b14bd2427643b42a301618bb4ff8df5df664cca6",
+   "records/development/2026-11-12-path-forward/reader_protocol.py": "00ef49ba750dd70d132c3edd517c321bcedddfe643b01e364ef205c2f9a6ecba",
+   "records/development/2026-11-12-path-forward/after-the-others.sh": "e8b1f20fe40b19f23a6c64d291889f8060a9f475498e61526543b73ac60dcebe",
+   "records/development/2026-11-12-path-forward/after_the_others.py": "6d86f85dbfb2632fe27902925b3c89aa44439d0277dd6599f99b2fdd2715e453",
+   "records/development/2026-11-12-path-forward/cases.py": "3752b9b65d72d39f7f1e1198908d089888b531a5456bc9c5d6c9f3a795bc7712",
+   "records/development/2026-11-12-path-forward/states_conditional.py": "93a181ecc0b45d76dedc9d2d56589a108febfda071ff81dcf1b025950c3d7fbd",
+   "records/development/2026-11-12-path-forward/states_conditional_check.py": "b3c5a27d72020405a657479dc5da1c9bbdcc789e004f7f23be524f58796a73b6",
+   "code/signal-trace/recorder/observe-stream": "0b4ea036c2c33711e76586d28f773bbfa5ba5463671656ec46869908e74fe060",
+   "code/signal-trace/pipeline/weight_edit/tube.py": "ec1701d642c41a07c5f3d976d4d76ee3a241ecc2babfc52c05ee0b976338e946",
+   "code/signal-trace/pipeline/weight_edit/ladder.py": "99a28aebceca2191fb25f93dd403dbbb0368a85f101c056321fc8a9cd187079e",
+   "code/signal-trace/pipeline/weight_edit/gap_targets.py": "919067f38b7764e6a098b5b8be2316e98133f4eeab439735be56785fe2f2763a",
+   "code/signal-trace/pipeline/overlap/complete_overlap.py": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d",
+   "code/signal-trace/pipeline/acquisition/export_stream_traces.py": "c0ec25ce2c21b6f2f6f48b208002fef5de54cb14184423bfee51bde9a012a75b"
+  }
+ },
+ "execution": {
+  "made_from": "code/signal-trace",
+  "python": "uv run -q --with torch --with numpy --with pyyaml --with tqdm python -u",
+  "order": [
+   "capture <n>",
+   "reading <n>",
+   "correspondence <n>",
+   "measure <n>",
+   "correct <n>",
+   "pass <n>"
+  ],
+  "commands": {
+   "capture <n>": "bash studies/04-round-2-overlap/runs/success-sets-loop-from-mates/run.sh capture <n>   # PASS=<n> KEEP_RAW=<run>/loop/<n>/streams records/development/2026-11-12-path-forward/own_text.py success-sets-loop-from-mates controlled-bf16-1 <the state pass n starts from> recordings <run>/loop/<n>/capture/own; card 0, RECORDER_UNDER=\"bash records/development/2026-11-12-path-forward/after-the-others.sh 0\"",
+   "reading <n>": "bash studies/04-round-2-overlap/runs/success-sets-loop-from-mates/run.sh reading <n>   # ROLLOUTS=<run>/loop/<n>/streams PASS=<n> records/development/2026-11-12-path-forward/states_reading.py success-sets-loop-from-mates controlled-bf16-1 <that state> <run>/loop/<n>/capture; no pass and no card: the reading is kept from the capture's own streams; writes <run>/loop/<n>/reading",
+   "correspondence <n>": "bash studies/04-round-2-overlap/runs/success-sets-loop-from-mates/run.sh correspondence <n>   # records/development/2026-11-12-path-forward/states_correspondence.py <run>/loop/<n>/reading <run>/loop/<n>/capture studies/04-round-2-overlap/runs/success-set-reference-original/reference <run>/loop/<n>/correspondence.json <run>/reader-protocol/controlled-bf16-6.json; files only",
+   "measure <n>": "bash studies/04-round-2-overlap/runs/success-sets-loop-from-mates/run.sh measure <n>   # python -m pipeline.weight_edit.success_set_score <run> <n>; card 0 under its lock; writes <run>/loop/<n>/set-score.json",
+   "correct <n>": "bash studies/04-round-2-overlap/runs/success-sets-loop-from-mates/run.sh correct <n>   # python -m pipeline.weight_edit.gap_run <run> <n>: the 70 matrices; CUDA_VISIBLE_DEVICES=0; every solve and every pass on card 0 under its lock; writes <run>/loop/<n>/sweep",
+   "pass <n>": "bash studies/04-round-2-overlap/runs/success-sets-loop-from-mates/run.sh pass <n>   # the five steps above for pass n, in that order, each ending before the next begins"
+  },
+  "a_pass": "capture, reading, correspondence, measure, correct, for pass n; then the same for pass n + 1 from the state pass n's sweep ended in (<run>/loop/<n>/sweep/working.gguf, bound by that sweep's swept.json). A step is not begun before the step before it has ended, and a pass is not begun before the pass before it is swept to its last matrix.",
+  "before_each": "The research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before every step. The capture (own_text.py, before the recorder starts), the sweep's passes (pipeline.acquisition.run_a_observation.run), states_reading.py and the measurement call it again through pipeline.native_records.run_declaration.check_native_run, which also refuses a run whose archived inputs are not back on this disk. The capture also refuses a model that is not the state its pass starts from (gap_run.begins), an output that is not the pass's own capture folder, a cohort other than sweep.cohort and a history other than the measurement's. states_correspondence.py does not call the verifier: it rests on the run run.sh makes immediately before it.",
+  "processor_threads": "OMP_NUM_THREADS=4 in every command of run.sh, the matched sweep's setting (studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json, execution.processor_threads). It was that run's choice from no record and is no number of the correction: it sets no size, cap or threshold on what is solved or written.",
+  "memory": "No command of this run is started under a memory ceiling of its own: memory protection is hostshield's and work a session starts is not capped (the President's ruling of November 14, in studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json, execution.memory_scope).",
+  "cards": "Every capture, every recorder pass and every solve on card 0 (RTX 5080), the canonical card: the solves under its lock (/run/user/1000/gpu0.lock), which the command gives up around every pass and takes again after (tube.Card.given: what it holds on the card is moved off first), the passes and the readers under the same lock. The llama.cpp project's sessions take that lock too and are not stopped; a reader waits on the lock and keeps its place (after-the-others.sh). The two cards word answers differently and do not give the same sums, so a loop is captured, measured and solved on one card throughout (STATE.md, walls).",
+  "taken_up": "A sweep that stops is taken up by the same command where it stood (gap_run.taken_up: the records that follow one another, the working file held to the state the last record ends in, a stop undone to the bytes the pass started from); it is never started from another state, and a folder that holds another sweep is refused. A measurement that exists is never written again (success_set_score), and a capture or a reading that exists is refused by its reader."
+ },
+ "solver": {
+  "commit": "b7866818",
+  "files": {
+   "code/signal-trace/pipeline/weight_edit/field.py": "641619baa4a4959eded52907c2154525ef976828907ed95825b7e31edea16f7b",
+   "code/signal-trace/pipeline/weight_edit/gap_state.py": "7986dedac77faa49ad7aed20945e69c18438edee97c0ab2fa7f1d4ac51db845e",
+   "code/signal-trace/pipeline/weight_edit/gap_targets.py": "919067f38b7764e6a098b5b8be2316e98133f4eeab439735be56785fe2f2763a",
+   "code/signal-trace/pipeline/weight_edit/gap_requests.py": "9844a0ccf63069f6b02c9caadb1b578c7c24ae9b87800f3642282ffb0b110a7f",
+   "code/signal-trace/pipeline/weight_edit/gap_rows.py": "e1e608adf7e969a52f602f46a6a28a73b5b2c39eb1ca8a891c9575117be3e273",
+   "code/signal-trace/pipeline/weight_edit/gap_sets.py": "ac05cdc4d510470f9c41e915c0e5e5dc75c175e05c66339ffba20eb1e4c47e0a",
+   "code/signal-trace/pipeline/weight_edit/gap_sweep.py": "1374eb4bed648047136e13064f56d9908515e23df3f44d915542957e6b33c8ee",
+   "code/signal-trace/pipeline/weight_edit/gap_run.py": "0b309f58c2dbd15c19719a69e8d2048df62d04c55282057aa79f01e176b4cf60",
+   "code/signal-trace/pipeline/weight_edit/gap_late.py": "40ba298a423ec4bbb25597cbae51ce05b3a90755b16cb55722176c110ddd8c52",
+   "code/signal-trace/pipeline/weight_edit/set_points.py": "972f067990385313090a1bdbd3cc94021a1e0b766adb319019f0f13e47e52f50",
+   "code/signal-trace/pipeline/weight_edit/success_sets.py": "71cc4d8edf8bff3a2fe07cbbcc8395a36508931bd35c6defe53d1a717bebe202",
+   "code/signal-trace/pipeline/weight_edit/tube.py": "ec1701d642c41a07c5f3d976d4d76ee3a241ecc2babfc52c05ee0b976338e946",
+   "code/signal-trace/pipeline/weight_edit/correction.py": "1e644f8b8fcf2c46c10dadb5a698fc2200276b895191e270c3a8f9cb2add7587",
+   "code/signal-trace/pipeline/weight_edit/ladder.py": "99a28aebceca2191fb25f93dd403dbbb0368a85f101c056321fc8a9cd187079e",
+   "code/signal-trace/pipeline/weight_edit/a2.py": "029a901990923d0e332b0abbc4118d2e3281482ca1116dda937b110eaf20df2f",
+   "code/signal-trace/pipeline/acquisition/late_start.py": "fdf4f5fde81b5f2072b32faebf41b372689106c193b4f57bc0907eb3051e73f8",
+   "code/signal-trace/pipeline/acquisition/run_a_observation.py": "33990f82d6f22a10bde5f3cd7c8122fb33da606532353ac8ad7d45782ef463be",
+   "code/signal-trace/pipeline/acquisition/export_stream_traces.py": "c0ec25ce2c21b6f2f6f48b208002fef5de54cb14184423bfee51bde9a012a75b",
+   "code/signal-trace/pipeline/overlap/complete_overlap.py": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d"
+  },
+  "parameters_record": {
+   "record": "records/development/2026-11-14-whole-gap-solver/solver-parameters.json",
+   "sha256": "32c32459d0e4bfa8d046980efddcc6a4bd181c29075402c53b95415683742094"
+  },
+  "tests": "848 tests and 115 subtests of the pipeline pass on these files (records/development/2026-11-14-whole-gap-solver/tests-before-sets-loop.log): the solver, the request toward a set, the nearest point, the pass command, the reference and the measurement, and the solver's request against the measurement on the measurement's own fixture; made-up models and a made-up recorder only",
+  "since_the_matched_sweep": {
+   "run": "studies/04-round-2-overlap/runs/whole-gap-mates-original",
+   "its_solver_commit": "df25a3ff",
+   "files_with_the_bytes_it_declared": [
+    "code/signal-trace/pipeline/acquisition/export_stream_traces.py",
+    "code/signal-trace/pipeline/acquisition/late_start.py",
+    "code/signal-trace/pipeline/weight_edit/correction.py",
+    "code/signal-trace/pipeline/weight_edit/tube.py"
+   ],
+   "files_changed": {
+    "code/signal-trace/pipeline/acquisition/run_a_observation.py": [
+     "caffced9"
+    ],
+    "code/signal-trace/pipeline/weight_edit/a2.py": [
+     "9a901ba1"
+    ],
+    "code/signal-trace/pipeline/weight_edit/field.py": [
+     "4fbb5238"
+    ],
+    "code/signal-trace/pipeline/weight_edit/gap_late.py": [
+     "db5bf176"
+    ],
+    "code/signal-trace/pipeline/weight_edit/gap_rows.py": [
+     "db5bf176"
+    ],
+    "code/signal-trace/pipeline/weight_edit/gap_run.py": [
+     "4fbb5238",
+     "23b91eae",
+     "a6a51232",
+     "db5bf176"
+    ],
+    "code/signal-trace/pipeline/weight_edit/gap_state.py": [
+     "db5bf176"
+    ],
+    "code/signal-trace/pipeline/weight_edit/gap_sweep.py": [
+     "4fbb5238",
+     "db5bf176"
+    ],
+    "code/signal-trace/pipeline/weight_edit/gap_targets.py": [
+     "17df612a"
+    ],
+    "code/signal-trace/pipeline/weight_edit/ladder.py": [
+     "9a901ba1"
+    ]
+   },
+   "files_it_did_not_name": [
+    "code/signal-trace/pipeline/overlap/complete_overlap.py",
+    "code/signal-trace/pipeline/weight_edit/gap_requests.py",
+    "code/signal-trace/pipeline/weight_edit/gap_sets.py",
+    "code/signal-trace/pipeline/weight_edit/set_points.py",
+    "code/signal-trace/pipeline/weight_edit/success_sets.py"
+   ],
+   "what": "The least squares of one matrix, its ridges and its write (field.py) are the matched sweep's but for what was added since: the sums and the decompositions can be made in single precision (field.Matrix.in_single, parameters.solve_arithmetic), which this run asks for (sweep.arithmetic). The rule that takes a ridge (gap_sweep.least_held) is that sweep's. What changed is around them, each file with the commits that changed it (files_changed) (records/development/2026-11-14-whole-gap-solver/README.md, \"The loop's second half\" and \"The request toward a reference that is a set\"): a pass begins from a state another sweep reached and is undone to that state; its rows are the rows of the model's own answers; a row's request is made where the row stands, from the nearest points of the sets of the reference rows it is laid on, where it was one stored point a row; the older solver's answer-judging commands left a2.py and ladder.py; and a pass reads its model file through as it starts. The files it did not name are new since, or were not listed then."
+  }
+ },
+ "hypothesis": "Marcos's, for round two: a capability leaves a recurring difference between the traces of correct and wrong answers, and editing the weights where that recurring difference lives repairs the capability. This run's own, in what it measures: that repetition does what one sweep did not. With each pass's requests made on the answers the model itself now writes, toward what the successes' computation spans and not toward one point a row, and with every write taken only as far as answers left out of its fit are helped by it, the measured distance of the wrong answers' computation from the successes' falls pass over pass and the correct answers' does not rise to meet it. What a write keeps of a request is the part that carries to the answers left out, which is what recurs across answers; a wrong answer's distance that no other answer shares is not expected to be written. The loop is predicted to come to rest where no matrix's write helps the answers left out of it. Whether that rest is a closed gap is not this run's to say (rule.closure).",
+ "why_this_direction": "Steps 5 and 6 of the method are the correction on the whole computation discrepancy, measured again on both groups' own current answers after every update, and continued from the model reached against the same original-derived reference. What the records hold. (1) One sweep is one step, and the one step was read as a verdict. The matched-context sweep (studies/04-round-2-overlap/runs/whole-gap-mates-original/result.json) left the wrong members' sum under its field at 0.049883 on the model's own answers where the original's is 0.067494, and the correct members' at 0.036329 from nothing; Astra's control on the same histories (studies/04-round-2-overlap/runs/whole-context-conditional-mates/result.json; records/retrospectives/2026-11-14-conditional-score-astra.md) puts the correct members' rise in their answers' changed history (+0.041075) and not in the weights at a fixed history (-0.004746). So a pass moved the wrong answers' computation toward the successes' and reworded every answer, and the model it reached was never measured again and corrected again (journal/2026-11-14-iterative-gap-closure.md). (2) A point a row asks more than the gap. Given to answers that are right, each success made from the other fourteen, the two fields read 0.607 (matched) and 0.564 (affine) of what the wrong answers stand at (records/development/2026-11-14-whole-gap-solver/target-floor/readings.json): most of a wrong answer's distance to such a point is the distance any other answer has to it. Astra's reference of November 15 is a set, what the successes' own points span at each row, the answer's own among them where it is a success: a row is asked only for the nearest point of that. (3) The difference the hypothesis names is there on the fitting thirty alone: with the other correct answers' nearest mixture as the reference, a wrong answer left out has more of what the wrong answers share than a correct one left out in 0.728 of pairs, against 0.504 ± 0.061 for the thirty dealt at random (records/development/2026-11-14-whole-gap-solver/fitting-recurrence/tables.txt; records/development/2026-11-14-whole-gap-solver/README.md). (4) The loop's parts exist and agree: a pass from a reached state on the rows of the model's own answers, the request toward a set found where each row stands, and Astra's measurement, which on its own fixture sums at every merge what the solver's request reads there (records/development/2026-11-14-whole-gap-solver/README.md; records/retrospectives/2026-11-15-success-set-implementation-astra.md). The state the loop starts from is Astra's choice: the model that one pass reached, measured anew under the new reference and not counted as a first pass of it. What no record shows is whether the measured distance falls when the correction is made again from where the model stands: that is what this run asks, and it is the next step of the method because everything before it is built and nothing after it can be read without it.",
+ "repeating_pattern_check": "What has happened more than once, why, and what this run does about it. (1) A matrix's readings on the answers left out fell and the whole sum on the model's own answers rose: both whole-gap sweeps, the matched one at all 70 matrices (its whole sum 0.086213 from 0.067494; the affine one 0.127162 from 0.069466). Why, as far as the records go: the readings were on the recordings' text and at a matrix's own merges, the whole sum on the text the swept model wrote, where every answer was reworded and a point field counts every rewording as distance. This run changes both: a pass's rows are the model's own current answers, and a reworded answer is measured against what the successes span. It keeps the rule. If the whole sum still rises pass after pass, the rule's pass is no descent of the measured loss, and what stands accused is the size of what one pass writes before anything is measured again, not the reference (would_weaken_it, 1). (2) Writes of 1% of a matrix or more over several matrices changed the answers' text: the dose record (records/retrospectives/2026-11-11-what-made-the-edits-work/notes/compare-dose-and-geometry/notes.md; records/KNOWN.md, \"dose versus breakage\") and both sweeps (the matched one wrote 0.000 to 0.310 of a matrix, 0.057 at the median, 1% or more at 53 of 70, and all 30 answers changed: records/development/2026-11-14-whole-gap-solver/loop-connection/laid-real.json). Nothing here caps a write: no record derives a cap, and a pass that rewords the answers is measured on the reworded answers and followed by another. Each matrix's record holds its size, so what the writes do as the loop goes on is read, not assumed. (3) One step read as an experiment with a verdict, and the next construction started again from the original: November 12 to 14, this seat's runs included. Here no pass has a verdict, each starts from the state the one before reached, and nothing is restarted from the original. (4) Words, tokens or values used to say how the work stands, after each correction back to the trace. This run holds none: no command of it reads what an answer says, its measurement is the trace distance alone, and its prediction is stated in that distance only. (5) A target that asks for more than the gap (both fields asked every row for a counterpart; 0.607 and 0.564 above). The set asks less, and no part of it is cropped to ask less still: that would be this seat choosing where the gap is. (6) A request narrowed until it no longer covers the path (14 to 52 rows at a sign, at most six matrices, November 12 to 14). Here every row of every answer at every merge is in the sum and all 70 matrices are visited every pass. (7) A difference between two runs read as the thing varied when the runs differed in more. This run is laid beside no other: it is one loop, read against its own earlier passes, on one card with one set of instruments. (8) This seat said more than a reading showed. The prediction below is in what the measurement writes, and the result is composed from the records by script. (9) A next step taken because the last number was bad. This is not taken because a sum rose: it is the step the method names after a first update, with the reference its owner fixed before any of it ran.",
+ "what_went_wrong_before": "The first attempt at round two was deleted because it never built on the overlap. The constructions of November 12 to 14 each edited at most six matrices and none repaired the wrong group. The two whole-gap sweeps of November 14 were each one step from the original, read by their answers and by one sum, and not followed by a second measurement and correction; a third was begun from the original against another field and stopped at ten matrices (journal/2026-11-14-iterative-gap-closure.md; records/retrospectives/2026-11-14-whole-gap-native-assessment-astra.md). And for five days the work was put back on the trace and went back to measuring by tokens, until the instruments that did so were removed.",
+ "rule": {
+  "reference": "The original model (6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c) and the reference of sets compiled from it (studies/04-round-2-overlap/runs/success-set-reference-original/reference, manifest 370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38), both unchanged throughout; the cohort controlled-bf16-1's 30 fitting answers (15 wrong, 15 correct).",
+  "objective": "Astra's, as `objective` states it. Nothing of it is subtracted, shrunk, thresholded, cropped or weighed again.",
+  "start": "The file the matched-context sweep ended in (studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/working.gguf, sha256 05b169076ada9b058a2dc0d0d4ebba094dc597a9dc98c566cf9fe5160fc33ebe, bound by studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/swept.json): Astra's choice (records/retrospectives/2026-11-15-success-set-loop-freeze-astra.md). It is this loop's starting state and not its first pass: its loss under the new reference is measured before anything is written (pass 1's measurement).",
+  "a_pass": "For pass n, in this order. (a) Capture: the state the pass starts from writes its own answers from the prompts, on card 0, and each is registered on the original's recording of the same question by its computation alone. (b) Reading: that state's own state at every merge, at every row of those answers and their questions. (c) Record of pairs: each changed answer's steps laid on the reference's rows, bound to the reading, the capture, the reference and the reader protocol. (d) Measurement: the loss, by Astra's entry point, written once. (e) Correction: one sweep (rule.proposal). The state it ends in is what pass n + 1 captures.",
+  "proposal": "One sweep (pipeline.weight_edit.gap_run), each of the 70 matrices once, in path order. For each matrix: one recorder pass of the working file as it then stands gives the matrix's rows on the capture's answers, every answer step and question position of the 30 answers; every own row's state is read as the matrix about to be solved leaves it, at the matrix's own merge and, for a feed-forward, at its layer's last merge (the model's last merge read as the output norm passes it on); for every pair of an own row and a reference row it is laid on, the nearest point of that reference row's set is found at that state, and a row's pairs are reduced to one request with the reference row's mass, the mean of the points not brought back to unit length and both dispersion terms kept (gap_requests); the points are held while the matrix is solved, so what the solve lowers bounds the set's own sum from above; the matrix is solved as one least squares over all rows with each output coordinate counted by the block's learned scale (pipeline/weight_edit/field.py); its ridges are the least squares' own unit times powers of two, from a ridge that moves no weight of the file down to the decomposition's numerical resolution, here a decomposition in single precision (parameters.solve_arithmetic); three paths, each with one of the case families' three groups left out, are read on the group left out; the rule `least held` takes the power at which the three groups left out together are left least (the larger ridge on a tie) and leaves the matrix as it stands where no power reads under it; at that power the matrix is solved on all 30 answers and written into the working file's BF16 weight by weight. Then the next matrix, on the file as it now is. This is the matched sweep's rule (records/retrospectives/2026-11-14-whole-gap-native-rule-astra.md); what differs is what a row is asked and whose rows they are.",
+  "rows": "A pass's rows are on the answers the state it starts from wrote (the capture's text, fed token by token), never on the recordings' text. What the state a pass reaches writes is read by the next pass's capture and by nothing before it.",
+  "held_readings": "A matrix's readings on the groups left out construct its proposal and are kept in its record. They are construction diagnostics on the capture's text with the nearest points held: every fitting answer has entered the matrices written before, and the sets are made from all fifteen successes. They accept nothing and measure no state.",
+  "the_loop": "Passes are made one after another, each from the state the one before reached, whatever its loss: as a training step is followed by the loss computed again and not by a choice among models. No state is selected by its loss, none is averaged with another, no pass is made again from an earlier state, and no number of passes is set beforehand.",
+  "ends": "The loop ends when a pass's sweep retains no BF16 matrix change under the declared proposal rule (not a proof that every possible matrix change is unhelpful), when the closing criterion of rule.closure, once it exists, is met by a measurement, or when Marcos or Astra stops it. A command that refuses is reported as it is and nothing is forced past one. A stop is none of: a convergence, a closure, a repair. Each is said by a dated revision with what stood.",
+  "closure": "No number here says the gap has closed. Finite successful references may charge legitimate context, but neither a strictly positive minimum for every wrong member nor a leave-one-success-out closure threshold is established. Astra states a supported closure criterion before any state is called closed (records/retrospectives/2026-11-15-success-set-loop-freeze-astra.md), by a dated revision. Until then every measurement is a loss and no more.",
+  "answers": "No answer is read, graded, counted or compared while the loop runs, by this run or by this seat. They are read once the loss has closed, to see what it corrected and what it did not (journal/2026-11-14-iterative-gap-closure.md).",
+  "what_is_not_done": "No cap on a write, no step size or rate, no schedule, no chosen subset of matrices, rows, layers or merges, no refit or rescale of a written matrix, no ridge family beside the one above, no selection of a state by its loss or by an answer, no restart from the original, no second reference, no use of the no-fit answers or of reserved-40b, and no reading of what an answer says.",
+  "late_start": "parameters.late_start, compared anew in every pass: each pass reads another text from another state (gap_late, kept under <run>/loop/<n>/late-start).",
+  "cards": "execution.cards and parameters.solve_card.",
+  "write": "pipeline/weight_edit/gap_state.Working: one working file a pass under <run>/loop/<n>/sweep, begun as a copy of the state the pass starts from, each written matrix put where its binding lies with every other byte the original's; one record a matrix (the states before and after, every ridge's reading, the rule's ridge, what was written, how the rows were read, what its requests carried: the sum where its rows stood, the mass, the dispersion, the rows with no whole set, how the nearest points were found; the solver's files as the process read them); swept.json binds the pass's last state to the whole file's sha256, and the next pass starts from that record.",
+  "scope": "The fitting cohort only. No no-fit evaluation, no transfer claim and no repair claim is made from this run; reserved-40b is never opened. Transfer is read after an actual freeze of a model and a protocol, which is a declaration of its own.",
+  "storage": "A pass holds its working file (9.31 GB), its reading (about 12 GB) and, while the capture is made, its streams (about 30 GB with the one-generation capture, each removed as the reading keeps it); the state the pass started from stays until the pass is swept to its last matrix, since a stop is undone to it. So two states' files, one reading and one capture's streams stand at most at once. A reading refuses under 60 GiB free and the machine keeps 40 GB free. What leaves this disk and when is the disk pass's (Performance), through archive_inputs.py and Astra's naming, after its copy in the bucket is read back; no state of the loop is deleted, since each is what the next was made from."
+ },
+ "parameters": {
+  "ridge_unit": {
+   "kind": "identity",
+   "measured_from": "code/signal-trace/pipeline/weight_edit/field.py",
+   "derivation": "field.Shared.unit: the trace of the least squares' own matrix over the input width. That matrix is the sum, over the rows solved on, of pull^2 x x', with x a row of the matrix's input as the engine multiplies it and pull the row's weight times how much of an output change reaches its state to first order (field.reaches; for a feed-forward the root of its two merges' squares). It is a sum over the rows and not a mean, so one power of two of it stands in the same proportion to the rows' sums on the two thirds of the rows a reading is solved on and on all the rows the written matrix is solved on. Computed for each matrix and each least squares from its own rows and recorded (`unit`); no value of another matrix is used.",
+   "scales_with": "The matrix's rows as the working file computes them, the rows' weights (the target's), the block's learned scale, the input width."
+  },
+  "ridge_family": {
+   "kind": "search choice",
+   "measured_from": "code/signal-trace/pipeline/weight_edit/field.py",
+   "derivation": "field.Shared.powers and field.path: the ridges are the unit times powers of two, from the power of the decomposition's largest value (ceil(log2(top/unit))) down to the power of its numerical resolution (floor(log2(resolved/unit)), with resolved = max(rows, input width) x float64's epsilon x top, under which a value of a symmetric decomposition in double precision is rounding), and upward from the first until a ridge moves no weight of the file's BF16, so every family begins at a matrix that is written as it stands. Both ends are the matrix's own; nothing is set. On the stand-in at all 70 matrices a group read 55 to 68 ridges, from powers 26 to 39 down to -27 to -30 (records/development/2026-11-14-whole-gap-solver/gap-map-counted/ridge-grid.json).",
+   "scales_with": "The spectrum of the matrix's rows, the number of rows, the input width, and what the file's BF16 can hold of a change."
+  },
+  "ridge_spacing": {
+   "kind": "search choice",
+   "value": 2,
+   "measured_from": "records/development/2026-11-14-whole-gap-solver/gap-map-counted/ridge-grain.json",
+   "derivation": "(Counted by ridge_grain.py from gap_map.py's 70 records, the stand-in's request with each matrix alone on the original's stored rows; ridge-grid.json beside it holds the readings one step to either side of each group's own least.) The step between two ridges is held to the grain at which the fitting answers themselves place a ridge. A ridge is taken by what three groups of those answers, each left out in turn, are left at (ridge_taken); each group also has a least ridge of its own, and how far those three stand apart is how finely these answers say where the ridge is. Counted at all 70 matrices on the family as it was read: the three groups' own least ridges stand 1 step of the family apart at the median (42 matrices; none at 13, two at 15), which with each group's unit counted in is 1.1 powers of two of the ridge itself (0.094 to 2.12). The value is two to that median count of steps: 2. A finer step would choose among ridges the groups place differently: one whole step beside the rule's ridge moves the three groups' summed reading by at most 0.016 of what the matrix as it stands leaves (0.0064 at the median), less than the three groups' own readings at that ridge stand apart (0.042 of what stands at the median) at 70 of the 70 matrices. What this does not reach: the count is of whole steps of the family it was read on and is no proof that 2 is the only step these readings allow. Of the ridges read, every second one (a factor of 4) would at its worst placement have left at most 0.0086 more and every fourth (a factor of 16) at most 0.027, more than the groups stand apart at 0 and 2 matrices: a coarser family is not shown to cost what the groups could tell. It is counted on the stand-in's request and not on a field a sweep is declared on; every group's every ridge is recorded for every matrix of a sweep, so the same count is read from a sweep's own records, where it is reported and changes nothing in the run. Nothing is claimed of a ridge between two of the family's: what such a ridge would leave is not read, the differences beside a least do not bound it (a reading that dips between two ridges shows nothing of the dip at either), no shape of the reading in the ridge is derived, and a matrix is written to the file's BF16, so the reading is not continuous in the ridge. No group's least is its family's first or last ridge (ridge-grid.json, 210 groups). The family lays out a declared, discrete set of proposals and is no size of a correction.",
+   "scales_with": "How many fitting answers a group holds and how alike the groups are (the more alike, the finer a step they could tell apart), the request, and the matrix's spectrum; a finer grain costs proportionally more readings and no more decompositions."
+  },
+  "ridge_taken": {
+   "kind": "search choice",
+   "measured_from": "records/retrospectives/2026-11-14-whole-gap-native-rule-astra.md",
+   "derivation": "gap_sweep.least_held: of the powers every group's path read, the one at which what the groups left out are left at, summed over the groups, is least (the rows that ask and the rows that ask nothing in one sum); the larger ridge where two read the same; and no change of the matrix where no power reads under the matrix as it stands. The matrix is then written from all the fitting rows at that power of their own unit (field.written_at). A power is counted in each least squares' own unit: a matrix's three groups' units stand 1.06 to 1.08 apart, largest over least, on the stand-in (ridge-grid.json), so one power is one ridge in the three readings to 0.12 of a power of two. Accepted by Astra as proposal machinery: it proposes a matrix and judges no candidate. No number enters it.",
+   "scales_with": "The target's requests and the fitting answers' three groups (correction.case_folds)."
+  },
+  "coordinate_counts": {
+   "kind": "identity",
+   "measured_from": "records/development/2026-11-14-whole-gap-solver/ignored",
+   "derivation": "field.Matrix.counts: each coordinate of a matrix's output is counted in the least squares by the square of the block's learned scale there over the scale's mean square (the scale is the file's own tensor, post_attention_norm or post_ffw_norm). An output change reaches the state through that scale, and a fit that counts every coordinate alike spends the matrix's change where the state hardly feels it: of the squared change the rows' goals ask, counted by the scale over counted alike, 0.069 at the median attention output and 0.13 at the median feed-forward (ignored/, 70 records).",
+   "scales_with": "The model's learned scales, one vector a block."
+  },
+  "norm_epsilon": {
+   "kind": "identity",
+   "value": 1e-06,
+   "measured_from": "code/signal-trace/pipeline/weight_edit/a2.py",
+   "derivation": "The engine's RMS-norm epsilon, the model's own constant: a block's norm divides an output by the root of its mean square plus this. It is the engine's and is not set here. The solver's reconstruction of a merge with it is held to the engine's recorded states: on the original's stored rows the driver's reading of five merges against the affine compiled field is the compilation's own to between 7.3e-10 and 1.6e-08 of it (merges 25, 26, 48, 103, 104; real-fields/).",
+   "scales_with": "The model."
+  },
+  "search_stop": {
+   "kind": "search choice",
+   "measured_from": "records/development/2026-11-14-whole-gap-solver/search-stop/compare-8.json",
+   "derivation": "field.unheld(width, error) = width x eps32^2 + 2 sqrt(width) eps32 sqrt(error): what a float32 state of that width cannot hold of a row's error where the row stands. A row's search for its goal stops when a pass gains it less. It follows from float32's epsilon, the state's width and the row's own error; no number is set. What it costs is measured: on 1,030 wrong rows of blk.8.ffn_down.weight against the affine compiled field, 0.65% more of what was left than a search stopped at width x eps32^2 alone (0.0094% of what was asked), in 248 passes for 43,505; on requests a row can meet exactly the worst row ends at 0.0022 of what it asked behind a layer's merge (blk.8.ffn_down.weight) and at 0.036 through the output norm, 0.0025 at the median (reach/).",
+   "scales_with": "The state's width (1536 here) and each row's error; a model in another float format has its own epsilon."
+  },
+  "step_shortening": {
+   "kind": "search choice",
+   "value": {
+    "a_trial_that_does_not_lower_the_rows_error_is_multiplied_by": 0.5,
+    "after_a_pass_that_gained_the_part_is_multiplied_by": 2
+   },
+   "measured_from": "code/signal-trace/pipeline/weight_edit/field.py",
+   "derivation": "(Algebra on field._on_the_sphere as it is written; no record is read for it.) A row's trial at part p of its aimed step is the ellipsoid's nearest point to where that part leads. The aimed step is minus the row's slope over twice its bend, so along the ellipsoid the row's error e falls at first: its slope in p at p = 0 is s = -2 x bend x |along|^2, with `along` the aimed step's part along the ellipsoid, below nothing wherever there is a step to try. A trial that does not lower the error shows e(p) >= e(0). The one parabola through e(0), that slope and e(p) has its least at -s p^2 / (2 (e(p) - e(0) - s p)), and because e(p) - e(0) >= 0 that is at most p / 2: p / 2 exactly where the trial left the error as it was, and less the worse the trial. So 0.5 is the largest part a failed trial leaves standing whatever it failed by; the search takes it and uses nothing of the trial but that it failed, until a trial lowers the error or the part no longer moves the row's state in double precision (float64's epsilon times the state's size). At a matrix's own merge, after a pass that gained, the row stands elsewhere and its last failure says nothing certain of the new place: the part goes back by the same factor (2, the half undone), never past the whole aimed step, so a part is always the whole step over a power of two. Behind a last merge each pass begins from the secant's part (the last step's length squared over how much the slope changed along it) or from the whole bound's step where the last step showed no bend. What the factors can change is which trials a row's search makes, and so, within what the stop leaves (search_stop), where the row ends; no trial is taken that raises a row's error. What this does not reach: the parabola is a reading of three numbers and no bound on the error between them, and a part shorter than the half would also be allowed by it; what other factors would leave has not been read.",
+   "scales_with": "Nothing of the data: the half is the parabola's bound for any error that falls at first from the row's place, and the doubling is its inverse."
+  },
+  "written_format": {
+   "kind": "identity",
+   "measured_from": "code/signal-trace/pipeline/weight_edit/field.py",
+   "derivation": "field.written: a matrix is written weight by weight to the nearest value the file's BF16 holds, by the engine's own rounding (tube.bf16), and every reading is of the matrix as written. A change under half a step of a weight is lost; each ridge's record says how many weights moved and how large the written change is beside the asked one.",
+   "scales_with": "The file's format and each weight's size."
+  },
+  "memory_blocks": {
+   "kind": "work partition",
+   "value": {
+    "BLOCK": 2048
+   },
+   "measured_from": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+   "derivation": "(The model's own tensor shapes, and the solver's text, code/signal-trace/pipeline/weight_edit/field.py.) field.BLOCK, the rows multiplied or summed at once, is the narrowest input among the matrices a sweep solves. Of the model's 70 attention-output and feed-forward-down matrices, 28 take an input 2,048 wide, 7 take an input 4,096 wide, 15 take an input 6,144 wide, 20 take an input 12,288 wide: the narrowest is 2,048. With that number no block of rows (BLOCK x input width) is larger at any matrix than the sums it is added into (input width x input width), and no larger number has that at every matrix. A sweep holds the number to its own matrices and refuses to start where their narrowest input is another (gap_run.block_held; a test holds the refusal). One block of the widest input, 12,288 wide, is 0.19 GiB in double precision. The solver's second size (the rows whose last merge's stretch is found at once, 256 until commit 24607439) is no number of the solver's now: field.Final.stretch reads as many rows at once as the per-layer gate's output is wide (gate.shape[1]: 256 in every layer of this model, the width of the matrices it decomposes there), which is the number it held. Neither puts a row into a sum or takes one out, and neither changes what a row's bound is computed from. BLOCK does cut the sums: a sum made block by block adds its rows in another order than one made at once, so another size can change a sum in its last digits, as another card does (records/development/2026-11-10-speed-review/README.md, \"What is left of a solve\": the two cards do not give the same sums). The number stood at 2,048 before this rule was written, taken as a size that kept the work inside a 16 GB card; the rule gives the same number for this model, so no sum of an earlier record is another. A matrix's record names the solver's file it ran, which holds the number.",
+   "scales_with": "The narrowest input among the matrices swept, which is the model's; for the stretch, the per-layer gate's output width. The order of a sum's additions follows the first."
+  },
+  "ends_of_the_one_dimensional_search": {
+   "kind": "search choice",
+   "value": null,
+   "measured_from": "records/development/2026-11-14-whole-gap-solver/real-fields/affine-feedforward-8-field-c727e047.jsonl",
+   "derivation": "Replaced: the solver holds no number here now (code/signal-trace/pipeline/weight_edit/field.py, field.nearest). Until commit 24607439 field.nearest ended Newton's steps when a step was under 4 of float64's epsilon times the unknown and began its bracket 32 of them wide, two small multiples no record derived. Now Newton's steps are taken until a step no longer raises the double that holds the unknown; the two ends begin one last place of that double to either side and are moved out, twice as far each time, until the length says they hold the root; and the bisection ends when a double holds no point between the two ends. That is one binary search, outward and then inward, in the double's own places: its doubling and its halving are the bisection's, and it has no number of its own. Where the search ends is what it was: the length never rises with the unknown as it is computed, so there is one pair of neighbouring doubles at which the output stops being longer than the radius, and the search ends on it wherever it began (tests.test_field holds the output to the bisection's alone bit for bit at every size of step, and a row nothing pulls at its least-scaled coordinate is left to the bisection). On the model's own rows: feed-forward 8's 19,751 rows against the affine field (real_fields.py, every row's goal sought at its own merge and behind its layer's last merge) give with this search the record the search before gave, every field of it but the seconds: 253 passes, the same largest step left and the same sums of what the matrix as it stands leaves. What this does not reach: records/development/2026-11-10-speed-review/solve-arithmetic/nearest_by_newton.py read the earlier form at four sizes of step and was not run again on this one; how many readings of the length the search now makes is not counted; and one matrix's rows are one matrix's.",
+   "scales_with": "Nothing of the data."
+  },
+  "matrices_swept": {
+   "kind": "identity",
+   "value": 70,
+   "measured_from": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+   "derivation": "Every attention-output and feed-forward-down matrix of the model's 35 layers, in path order (gap_run.path_order: each layer's attention output, then its feed-forward down, first layer to last), each visited once. None is chosen and none is left out: the method's step 5 sweeps the whole path, and the number of matrices is an outcome only in how many the rule writes.",
+   "scales_with": "The model's layers.",
+   "as_declared_in": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json"
+  },
+  "groups_left_out": {
+   "kind": "search choice",
+   "value": [
+    9,
+    11,
+    10
+   ],
+   "measured_from": "records/development/2026-11-12-correction-objective/README.md",
+   "derivation": "correction.case_folds on tube.picks' three groups of the 30 fitting answers (15 wrong, 15 correct): the case families' folds, as in every solve since November 12, so that an answer and its family's other answers are left out together. Each is left out in turn to read a ridge (ridge_taken); the matrix is then written from all 30. They are construction data and no test (Astra, records/retrospectives/2026-11-14-whole-gap-native-rule-astra.md).",
+   "scales_with": "The cohort's case families and how many answers each holds.",
+   "as_declared_in": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json",
+   "on_own_answers": "The same three groups of answers. A pass's rows are the rows of those answers as the state it starts from wrote them (gap_rows.on_own), so a group's count of rows is the capture's and changes from pass to pass; which answers a group holds does not."
+  },
+  "late_start": {
+   "kind": "work partition",
+   "value": "observe-stream-late, only for kinds of step this sweep has compared whole across a real write",
+   "measured_from": "records/retrospectives/2026-11-14-late-start-admission-astra.md",
+   "derivation": "Astra's admission (774a4c04) and Performance's installation (2e7a7707, 273eb8d3): a pass may be started late from the two outputs the pass before recorded. In this sweep it supplies rows only for a kind of step (pipeline/acquisition/late_start.kinds) that the sweep itself has first read both ways across a real write, the ordinary pass supplying the rows and the late pass compared with it whole, every answer (gap_late.Late.plan: 'both' until the kind has held, then 'late'); a kind that does not hold keeps the ordinary pass for the rest of the sweep, and each seed is handed over only while every matrix before it holds the same bytes and its own file the bytes its pass gave. No sampled-position schedule and no timing is promised from it; every matrix's record names the recorder and the seeds.",
+   "scales_with": "The kinds of step of the path order and what the working file holds before each matrix.",
+   "as_declared_in": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json"
+  },
+  "solve_card": {
+   "kind": "work partition",
+   "value": "card 0 (RTX 5080)",
+   "measured_from": "records/development/2026-11-12-path-forward/README.md",
+   "derivation": "Performance's placement (\"Where the two experiments run\"): every recorder pass and the swept model's readings on card 0 under its lock (the reader protocol refuses a reading on another card), this experiment's solves on card 0 (RTX 5080) under its lock (/run/user/1000/gpu0.lock), which the command gives up around every pass and takes again after (tube.Card.given: what it holds on the card is moved off first). Every solve of this run is on that one card because the two cards do not give the same sums (3.8e-10 apart at the largest value of one matrix's decomposition; each repeats itself: records/KNOWN.md, \"one matrix's sums made on card 0 and on card 1\"). Nothing of what is asked depends on the card.",
+   "scales_with": "The cards of this machine and what else holds them.",
+   "as_declared_in": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json"
+  },
+  "nearest_point_ends": {
+   "kind": "search choice",
+   "value": null,
+   "measured_from": "records/development/2026-11-14-whole-gap-solver/set-request/size-card-0.json",
+   "derivation": "set_points.nearest (the one arithmetic the comparison and the solver's requests both call): a pair's search for the nearest point of its set ends when the number that bounds how far its point can still be from the nearest one (g = max r - l.r) is under what rounding alone makes of products of that size, 2 (n + 2 P) eps (1 + |b| / spread) in the set's own squared spread, with n the points' width, P the set's points, eps float64's epsilon and b the row's point about the set's mean; or when a whole round no longer lowers the sum, which exact arithmetic never reaches before the nearest point. Every step is an exact solve of a small system: no step length, rate, count or tolerance is set. Counted on made-up sets at the matched capture's 21,138 pairs (records/development/2026-11-14-whole-gap-solver/set-request/size-card-0.json): 0 pairs ended over their bound, the widest gap 2.4e-16; and by Performance on the seed's own states with stand-in sets (records/development/2026-11-10-speed-review/set-cost/card-1.json): 0 pairs over their bound at the 5 merges timed. A pair of the comparison that ends over its own bound is counted unresolved there and not as measured (Astra's scorer); a matrix's record counts such pairs among its requests (`nearest.over_its_bound`).",
+   "scales_with": "The points' width (1,537: the state's unit direction and the log of its size), how many points a set holds, and the double format."
+  },
+  "nearest_point_blocks": {
+   "kind": "work partition",
+   "value": {
+    "ROOM": 1073741824
+   },
+   "measured_from": "records/development/2026-11-10-speed-review/set-cost/card-1.json",
+   "derivation": "set_points.ROOM, 1,073,741,824 bytes: the bytes of sets' points held at once while pairs whose sets are the same size are worked together (a block of pairs x the set's points x the width, twice). A pair's point is found from its own points alone, so the number orders nothing a result depends on; it only bounds the card's memory beside a solve. Measured: 2.11 GiB held at most on card 0 with made-up sets (records/development/2026-11-14-whole-gap-solver/set-request/size-card-0.json), and 2.35 GiB at most on card 1 on the seed's own states with stand-in sets of up to 562 points (records/development/2026-11-10-speed-review/set-cost/card-1.json). The real sets' sizes are the reference's: 15 to 144 points a reference row, 15.0 at the median.",
+   "scales_with": "The card's memory beside a matrix's rows, and the largest set."
+  },
+  "solve_arithmetic": {
+   "kind": "arithmetic",
+   "value": "single",
+   "measured_from": "records/development/2026-11-14-whole-gap-solver/single-arithmetic/both-ways-card-0.json",
+   "derivation": "field.Matrix.in_single, asked by sweep.arithmetic: every matrix's sums are multiplied and its four least squares decomposed in single precision, which a card does several times faster than double (the seconds below); each ridge's division, every reading and the write are what they were. A path then ends where single precision stops resolving the sums and no longer at the double decomposition's end: at the larger of float32's epsilon times the decomposition's largest value (the bound LAPACK states for a symmetric decomposition's values) and the size of a value found under nothing (the sums have none), where the double path ends at max(rows, input width) x float64's epsilon x the largest value (parameters.ridge_family). Read both ways by records/development/2026-11-14-whole-gap-solver/single_arithmetic.py on the matched field's request at the original model's own state, at 9 matrices of the input widths 2,048, 4,096, 6,144, 12,288, files and NVIDIA GeForce RTX 5080's arithmetic only: the rule took the same power at 7 of 9, and at the 2 others a neighbouring one (blk.34.attn_output.weight: -5 where double precision took -6, the double path's own summed readings at the two powers 3.6e-04 of the reading apart, the single path's reading at the double one's power 6.5e-04 from the double one's, and the change written 0.511 of the matrix's size where the double one's is 0.722; blk.34.ffn_down.weight: 3 where double precision took 2, the double path's own summed readings at the two powers 1.1e-04 of the reading apart, the single path's reading at the double one's power 1.4e-04 from the double one's, and the change written 0.070 of the matrix's size where the double one's is 0.103; 2 of 2 toward the larger ridge): where a path's readings at two neighbouring powers lie closer than single precision reads them, the rule's ridge is either of the two. At the double path's power the single path's summed reading on the groups left out lay within 6.5e-04 of the double one's at every matrix (5.8e-05 where the powers agree); the two matrices written at that power left of every row's request sums within 3.7e-04 of each other, and wrote 1.7% to 80.3% of the weights to another value of the file's BF16; the single change left at most 6.6e-05 of its own normal equations (field.unsolved); the single paths ended at powers -15 to -12 where the double ones ended at -30 to -27, and the rule's power lay 8 or more powers of two above the single path's end. Toward that end a single path's readings rise above the double one's (to 3.4 times the double reading over it at the last power both read), so what single precision does not resolve reads as worse held and moves the rule toward larger ridges; where the rule's ridge is the single path's end itself the matrix is read again in double precision and written from that reading (gap_sweep.sweep). At those matrices the paths and writes took 205 s in double and 50 s in single: over the 70 matrices, as arithmetic on each width's mean, 31.1 minutes and 7.4. Every matrix's record says how its path ended (`resolved`, `top`, `unit`) and how far its written change is from solving its own least squares (`written.unsolved`).",
+   "scales_with": "The largest value of a matrix's sums over their unit (two to the 8.4 to 11.3 at the matrices read: it sets where a single path ends), the input width (the time a decomposition takes), and how far above that end the answers left out place the ridge: the nearer, the less a single path's readings are the least squares' own."
+  }
+ },
+ "prediction": "Stated before any command of this run, in what the measurement writes (<run>/loop/<n>/set-score.json: the loss, per member and per group) and in the sweeps' own records. (1) The start: at pass 1's measurement the wrong members' sum is above the correct members'. (2) The first update: the loss measured at pass 2 (the state pass 1 reached, on its own answers) is below the loss measured at pass 1, and the wrong members' sum is below its own at pass 1. Known beforehand against it: under their point fields both earlier sweeps left the whole sum higher on the model's own answers, and this run keeps the rule that wrote them. (3) Repetition: over the first three updates the loss falls at each, and the correct members' sum does not rise by as much as the wrong members' falls over them. (4) The writes: pass 1's are smaller at the median than the matched sweep's 0.057 of a matrix, and they shrink from pass to pass, since each pass is asked what the one before left; a pass in which the rule leaves some matrices as they stand is expected before a pass in which it leaves them all. Not predicted: by how much anything falls, how many passes it takes, which layers carry it, where the loss comes to rest, or anything an answer says. A lower loss is not a repair.",
+ "would_weaken_it": "(1) The loss rises at the first update and again at the second. The rule's pass is then no descent of the measured loss even with its requests made on the model's own answers and toward a set: what one pass writes before anything is measured again is too much, or the matrices' separate solves do not add up along the path. That accuses the step and not yet the hypothesis; the next thing tried is then a smaller, faster step measured more often, and it is declared with its reason. This run's solves are in single precision (parameters.solve_arithmetic), the one thing in a matrix's solve that is not the matched sweep's: a rising loss alone does not separate the proposal rule from its arithmetic. A double-precision comparison, if needed to distinguish them, is a separately scoped prospective diagnostic from retained inputs, not an automatic rerun, replacement checkpoint or condition for continued correction. (2) The wrong members' sum falls only as the correct members' rises as much or more, update after update. What is written is then a general pull on every answer and not the wrong answers' own difference, which speaks against the difference living where these writes are made, or against the set as its measure. (3) The loop comes to rest, the rule writing nothing or the loss no longer falling, with the wrong members still standing well above the correct ones. No correcting change was retained by this proposal family under this reference; that limits this construction and does not rule out other matrix changes. (4) The loss closes by Astra's criterion and the answers, read then, are still wrong in the same way. The trace distance to the successes' span is then not the capability. An unfavorable result is kept and reported as it is.",
+ "limits": [
+  "The reference is fifteen successes' points at each row: a finite set from the fitting thirty. Its nothing is not shown to be the correct pattern, and a lower loss under it is not a repair (Astra's limits, in the freeze and in the reference run's result).",
+  "The three groups left out choose every ridge and every fitting answer is in every write: the folds are construction data, not a test. No answer outside the fitting thirty is read.",
+  "A matrix's solve holds its rows' nearest points fixed. Its reading is the set's own sum where the rows stood and an upper bound of it elsewhere, at that matrix's merges only; what a change does to the merges after it reaches the later matrices as their rows and is measured by the next pass.",
+  "A pass's rows are on the text the state it started from wrote. The text the state it reaches writes differs, and only the next capture reads it.",
+  "A changed answer is laid on the reference by the least summed distance between the turns of its computation and the original's: a whole, monotonic path, which is a hypothesis of which rows correspond and no proof that paired rows are the same reasoning.",
+  "One loop is one draw. A solve does not repeat bit for bit on a card (STATE.md, walls), and nothing here measures how far two loops of one declaration stand apart.",
+  "A pass costs what a path-order sweep costs, an hour and a half to two and a half as priced from measured parts with the solves in double precision (records/development/2026-11-10-speed-review/README.md, \"The first step under the success-set objective\"). Solving every matrix from one state's rows is another step, is not built, and is not this run's rule.",
+  "With the sums and decompositions in single precision the 70 matrices' paths and writes come to 7.4 minutes where double precision takes 31.1, as arithmetic on the matrices read both ways (parameters.solve_arithmetic); the rows, every row's goal, the late passes and the measurement are what they were, and no pass has been timed this way.",
+  "The solves' sums and decompositions are in single precision (parameters.solve_arithmetic). That was read beside double precision on the matched field's request at the original's own state, not on a request toward the sets and not at a state this loop reaches: there each matrix's own record is what says how far its written change is from solving its least squares (`written.unsolved`) and how far its ridge lay above the end of what single precision resolves. A sweep in single precision keeps no double path beside its own: where its ridge is the neighbour of the one double precision would take, as at 2 of the 9 matrices read both ways, its record does not say so, and the two are not the same correction. Astra accepted single-precision proposals for this construction on November 15 on those terms (its message to this seat after 4fbb5238: the native measurement unchanged, a neighbouring ridge disclosed and not called equivalent).",
+  "The factor of two between ridges is held to a count made on a stand-in's request (parameters.ridge_spacing), and the search behind the model's last merge steps in the state's own metric and not the output norm's (records/development/2026-11-14-whole-gap-solver/README.md): both as in the matched sweep.",
+  "A defect the run finds in the driver is fixed by a dated revision of this declaration that names the files changed. The readers and the measurement are bound by sha256: a change to one of them is a new protocol or a revision by its owner before the next step that uses it."
+ ],
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/working.gguf",
+  "studies/04-round-2-overlap/runs/whole-gap-mates-original/sweep/swept.json",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/reference",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/declaration.json",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/result.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/declaration.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-17-channel-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-001-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-020-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-034-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-042-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-045-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-046-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-068-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-070-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-087-h3",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-092-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-094-h1",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-095-h1",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/reader-protocol/controlled-bf16-6.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/success-sets-loop-from-mates/"
+ ]
+}

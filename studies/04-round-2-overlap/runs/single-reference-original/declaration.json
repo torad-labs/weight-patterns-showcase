@@ -1,0 +1,165 @@
+{
+  "method_step": 3,
+  "operation": "single-reference-original-envelope",
+  "status": "withdrawn_incomplete; stopped after Eli audit c4882734; no restart, no complete reference and no model update",
+  "source_retirement": "studies/04-round-2-overlap/runs/single-reference-original/retired-sources.json",
+  "declared_at": "2026-11-15T18:26:13.470860-06:00",
+  "why_this_direction": "Marcos's one-pair direction requires one fixed original reference and original tolerance before training; the 6:17 PM CT correction rejects the inherited turn/token-carrying correspondence. The original computational rule and exact joint inverse have CPU fixtures. This run compiles that one rule and its envelope using the same full relation to pair all events, rather than another target ensemble.",
+  "repeating_pattern_check": "Earlier readings mixed input wording into correspondence and proliferated axes/probes/mixtures, causing memory failures and hours of work. This uses one reference, no mixture and no saved turn paths, with one current event against the whole reference as the operand batch. Its all-pair relation cost is still quadratic, not asserted cheap; actual per-witness time and complete coverage are retained.",
+  "hypothesis": "The nonself original-success variation around the selected conditional query rule supplies a fixed experimental tolerance for the later one-wrong-prompt correction. The rule accepts actual current context rather than copying donor memory or state values.",
+  "what_went_wrong_before": "A raw gradient direction was not the joint inverse, and a clean loss alone did not remove token-carrying pairing. The inverse is implemented separately; this compiler replaces pairing at its source. The withdrawn fifteen-axis construction and all stopped models remain historical.",
+  "rule": "One fixed reference discovery-10-channel-h3; every other original fitting success is a witness, none is omitted. For every reference/current event pair evaluate the full normalized fixed-rule discrepancy at all 105 merges. Pair by complete chronological minimum total squared relation cost, with no token comparison, turn cosine or prompt/answer segmentation. At each reference event/merge take the largest full relative discrepancy over every mapped nonself success event. Freeze native offset arrays and radii. No wrong acquisition is numerically evaluated, no generation, no weight edit and no no-fit data.",
+  "prediction": "Every reference event and merge receives a finite radius from all fourteen nonself original witnesses. The resulting artifact fixes the rule's offsets, tolerance, source hashes, and complete computation-only correspondence.",
+  "would_weaken_it": "Missing or nonfinite original support, unresolved acquisition, memory failure or impractical full pairing cost leaves compilation incomplete. A complete envelope can still be too permissive or correspond unlike reasoning events; it is not a capability or repair verdict and is not retuned from the first wrong baseline.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "reference_member": "discovery-10-channel-h3",
+  "source_definition": {
+    "record": "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "sha256": "efd390a5fafeff948940bcf541ed43fef1821f9530279898cbe24d7ba449731b"
+  },
+  "forward": {
+    "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+    "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+  },
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/single_reference.py",
+      "sha256": "8865090310cfbd9a41b7a919ba57285466023c81918e0f2b6dbb1a648eeaaa92"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/relation_correspondence.py",
+      "sha256": "8b6e6441042a58707295fef09afdb2de7aebb021fe2c4d3f272cbac083a2415e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/model_reference_rule.py",
+      "sha256": "443d33d04b41dc1b96924217b5f65ac610fff0163deed8ab8f8c16a02070acd8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/reference_rule.py",
+      "sha256": "bdf7ba2ad9706a669a0b2a12dec2acd65484e58ba298e8369bbe65fca43b6f4f"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/local_affine.py",
+      "sha256": "618952fcc4170cd54ae6e42dc79816612a112f9af43d237bbf1880b2dbdda453"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/model_local_affine.py",
+      "sha256": "932b022f46537ad16d899cdc0720178a790418543aff6f8fc70e53c0fa55e858"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/native_graph.py",
+      "sha256": "127de7e16bbdc48e1f3646dcb4f119ea832df80d11d70a799503f0025f838acf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reading.py",
+      "sha256": "d2a3a3c4840ef78c03dfd2ab3b8fe4f15855d87b226fd998c6ce1fd7a2446f8e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reference.py",
+      "sha256": "ca4b2a5a2d61b355ef000668f92344cce7a3dfa8b081236aabfc3ac02d5602ed"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_layout.py",
+      "sha256": "f411405196a3be873be6fe63b755d6880e030c65f51688d0073ebebd887a9250"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+      "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    }
+  ],
+  "inputs": [
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+    "studies/04-round-2-overlap/runs/whole-states-original/reading/row-map.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-05-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-10-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-17-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/expanded-001-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/expanded-020-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-034-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-042-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-045-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-046-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-068-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-070-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-087-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-092-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-094-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-095-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-01-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-06-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-15-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-00-channel-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/expanded-004-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/discovery-08-channel-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/discovery-10-channel-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/expanded-029-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/discovery-11-channel-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/expanded-064-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-071-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-039-h3/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-076-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-078-h1/case.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-023-h1/case.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/single-reference-original"
+  ],
+  "parameters": {
+    "reference": {
+      "measured_from": "records/retrospectives/2026-11-15-single-reference-rule-astra.md",
+      "derivation": "The fitting correct variant of the only shared question stem; input inspection verifies only the destination height differs, 3 m versus the wrong prompt's 1 m. Original labels, never new grading, supply role.",
+      "scales_with": "The original fitting inventory and closest declared problem context."
+    },
+    "radius": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+      "derivation": "At each reference event/merge, maximum over all nonself original-success paired events of ||current_native_output - R_reference(current_input,current_context)||_2 / ||reference_native_output||_2.",
+      "scales_with": "The complete original witness and event inventories, reference output units and model merges."
+    },
+    "alignment": {
+      "measured_from": "records/retrospectives/2026-11-15-single-reference-rule-astra.md",
+      "derivation": "Full matrix of mean-over-merges squared normalized rule discrepancy. Complete chronological minimum cumulative cost; ties diagonal, vertical, horizontal. Every event of both sides is covered. No old paths.",
+      "scales_with": "Reference and current native event counts and every model merge."
+    },
+    "batching": {
+      "measured_from": "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+      "derivation": "One current event evaluated against the complete original reference event operand; no sampled pair, truncated merge, probe bank or selected rank.",
+      "scales_with": "The actual two native event inventories and model width."
+    },
+    "precision": {
+      "measured_from": "records/development/2026-11-12-path-forward/torch-forward/check-original.json",
+      "derivation": "Original BF16 stored weights and float32 native observations/conditional actions, float16 reconstructed cache, float64 discrepancy/norm/radius/path reductions; TF32 disabled. Original native cache/Jacobian are not claimed observed.",
+      "scales_with": "The original model/reader arithmetic and actual tensor shapes."
+    }
+  },
+  "revisions": [
+    {
+      "revision": 1,
+      "date": "2026-11-15",
+      "made_by": "weight-research-astra",
+      "previous": "studies/04-round-2-overlap/runs/single-reference-original/declaration-before-revision-1.json",
+      "previous_sha256": "62499160e95065e151210512782849935b1ffa3f9c79803632c59fcfe128acc5",
+      "record": "records/retrospectives/2026-11-15-reference-rule-withdrawal-astra.md",
+      "reason": "The independent audit establishes that the supposed computational relation is a Taylor remainder under current context. Its pairing and tolerance inherit that defect, and the reference was selected by prompt similarity. The compiler and dependent native objective paths are retired; source identities and uncommitted source bytes are retained in retired-sources.json, and every original partial stays. Original parameter definitions, predictions and hashes remain historical, not corrected after the outcomes. Performance separately removed the unused turn pairing from torch_forward.py; this declaration keeps the earlier hash and does not requalify the changed file. No replacement observable, pair, tolerance or execution is admitted."
+    }
+  ]
+}

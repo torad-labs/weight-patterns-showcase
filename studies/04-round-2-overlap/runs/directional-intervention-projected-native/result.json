@@ -1,0 +1,568 @@
+{
+  "observations": {
+    "held_fit": {
+      "case": "discovery-05-channel-h1",
+      "fixed_history": true,
+      "naturally_ended": false,
+      "complete": true,
+      "events": 578,
+      "all_merges": 105,
+      "native_model_identity": {
+        "kind": "frozen-private-native-update/1",
+        "original": {
+          "record": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+          "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+        },
+        "installed_update": {
+          "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.json",
+          "sha256": "8bc9ecc18a771758443188817a720762a10eb5cf59a21dfc963ee34ad057d2e2"
+        }
+      },
+      "consumed_history_equal": true,
+      "same_output_ids": true,
+      "same_full_callback_index": true,
+      "held_native_merge_geometry": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/raw/discovery-05-channel-h1/stream.jsonl",
+        "sha256": "b7e277ff9e1ecc35bf0bd90a0b9dfd3153ce9045a247ddb6f24f287c6bb78756",
+        "bytes_read": 44090340,
+        "file_identity": [
+          66306,
+          4461905,
+          44090340,
+          1795006625953566244,
+          1795006625953566244
+        ],
+        "geometry_sha256": "a5caff790eecf3c2fa3ff96459edbdd68310931519c7a0bd7b948ce9a104a8be",
+        "records": 101517,
+        "records_by_label": {
+          "attn_out-0": 411,
+          "attn_out-1": 411,
+          "attn_out-10": 411,
+          "attn_out-11": 411,
+          "attn_out-12": 411,
+          "attn_out-13": 411,
+          "attn_out-14": 411,
+          "attn_out-15": 411,
+          "attn_out-16": 411,
+          "attn_out-17": 411,
+          "attn_out-18": 411,
+          "attn_out-19": 411,
+          "attn_out-2": 411,
+          "attn_out-20": 411,
+          "attn_out-21": 411,
+          "attn_out-22": 411,
+          "attn_out-23": 411,
+          "attn_out-24": 411,
+          "attn_out-25": 411,
+          "attn_out-26": 411,
+          "attn_out-27": 411,
+          "attn_out-28": 411,
+          "attn_out-29": 411,
+          "attn_out-3": 411,
+          "attn_out-30": 411,
+          "attn_out-31": 411,
+          "attn_out-32": 411,
+          "attn_out-33": 411,
+          "attn_out-34": 411,
+          "attn_out-4": 411,
+          "attn_out-5": 411,
+          "attn_out-6": 411,
+          "attn_out-7": 411,
+          "attn_out-8": 411,
+          "attn_out-9": 411,
+          "attn_post_norm-0": 411,
+          "attn_post_norm-1": 411,
+          "attn_post_norm-10": 411,
+          "attn_post_norm-11": 411,
+          "attn_post_norm-12": 411,
+          "attn_post_norm-13": 411,
+          "attn_post_norm-14": 411,
+          "attn_post_norm-15": 411,
+          "attn_post_norm-16": 411,
+          "attn_post_norm-17": 411,
+          "attn_post_norm-18": 411,
+          "attn_post_norm-19": 411,
+          "attn_post_norm-2": 411,
+          "attn_post_norm-20": 411,
+          "attn_post_norm-21": 411,
+          "attn_post_norm-22": 411,
+          "attn_post_norm-23": 411,
+          "attn_post_norm-24": 411,
+          "attn_post_norm-25": 411,
+          "attn_post_norm-26": 411,
+          "attn_post_norm-27": 411,
+          "attn_post_norm-28": 411,
+          "attn_post_norm-29": 411,
+          "attn_post_norm-3": 411,
+          "attn_post_norm-30": 411,
+          "attn_post_norm-31": 411,
+          "attn_post_norm-32": 411,
+          "attn_post_norm-33": 411,
+          "attn_post_norm-34": 411,
+          "attn_post_norm-4": 411,
+          "attn_post_norm-5": 411,
+          "attn_post_norm-6": 411,
+          "attn_post_norm-7": 411,
+          "attn_post_norm-8": 411,
+          "attn_post_norm-9": 411,
+          "ffn_post_norm-0": 411,
+          "ffn_post_norm-1": 411,
+          "ffn_post_norm-10": 411,
+          "ffn_post_norm-11": 411,
+          "ffn_post_norm-12": 411,
+          "ffn_post_norm-13": 411,
+          "ffn_post_norm-14": 411,
+          "ffn_post_norm-15": 411,
+          "ffn_post_norm-16": 411,
+          "ffn_post_norm-17": 411,
+          "ffn_post_norm-18": 411,
+          "ffn_post_norm-19": 411,
+          "ffn_post_norm-2": 411,
+          "ffn_post_norm-20": 411,
+          "ffn_post_norm-21": 411,
+          "ffn_post_norm-22": 411,
+          "ffn_post_norm-23": 411,
+          "ffn_post_norm-24": 411,
+          "ffn_post_norm-25": 411,
+          "ffn_post_norm-26": 411,
+          "ffn_post_norm-27": 411,
+          "ffn_post_norm-28": 411,
+          "ffn_post_norm-29": 411,
+          "ffn_post_norm-3": 411,
+          "ffn_post_norm-30": 411,
+          "ffn_post_norm-31": 411,
+          "ffn_post_norm-32": 411,
+          "ffn_post_norm-33": 411,
+          "ffn_post_norm-34": 411,
+          "ffn_post_norm-4": 411,
+          "ffn_post_norm-5": 411,
+          "ffn_post_norm-6": 411,
+          "ffn_post_norm-7": 411,
+          "ffn_post_norm-8": 411,
+          "ffn_post_norm-9": 411,
+          "inp_scaled": 411,
+          "l_out-0": 411,
+          "l_out-1": 411,
+          "l_out-10": 411,
+          "l_out-11": 411,
+          "l_out-12": 411,
+          "l_out-13": 411,
+          "l_out-14": 411,
+          "l_out-15": 411,
+          "l_out-16": 411,
+          "l_out-17": 411,
+          "l_out-18": 411,
+          "l_out-19": 411,
+          "l_out-2": 411,
+          "l_out-20": 411,
+          "l_out-21": 411,
+          "l_out-22": 411,
+          "l_out-23": 411,
+          "l_out-24": 411,
+          "l_out-25": 411,
+          "l_out-26": 411,
+          "l_out-27": 411,
+          "l_out-28": 411,
+          "l_out-29": 411,
+          "l_out-3": 411,
+          "l_out-30": 411,
+          "l_out-31": 411,
+          "l_out-32": 411,
+          "l_out-33": 411,
+          "l_out-34": 411,
+          "l_out-4": 411,
+          "l_out-5": 411,
+          "l_out-6": 411,
+          "l_out-7": 411,
+          "l_out-8": 411,
+          "l_out-9": 411,
+          "pe_in-0": 411,
+          "pe_in-1": 411,
+          "pe_in-10": 411,
+          "pe_in-11": 411,
+          "pe_in-12": 411,
+          "pe_in-13": 411,
+          "pe_in-14": 411,
+          "pe_in-15": 411,
+          "pe_in-16": 411,
+          "pe_in-17": 411,
+          "pe_in-18": 411,
+          "pe_in-19": 411,
+          "pe_in-2": 411,
+          "pe_in-20": 411,
+          "pe_in-21": 411,
+          "pe_in-22": 411,
+          "pe_in-23": 411,
+          "pe_in-24": 411,
+          "pe_in-25": 411,
+          "pe_in-26": 411,
+          "pe_in-27": 411,
+          "pe_in-28": 411,
+          "pe_in-29": 411,
+          "pe_in-3": 411,
+          "pe_in-30": 411,
+          "pe_in-31": 411,
+          "pe_in-32": 411,
+          "pe_in-33": 411,
+          "pe_in-34": 411,
+          "pe_in-4": 411,
+          "pe_in-5": 411,
+          "pe_in-6": 411,
+          "pe_in-7": 411,
+          "pe_in-8": 411,
+          "pe_in-9": 411,
+          "pe_out-0": 411,
+          "pe_out-1": 411,
+          "pe_out-10": 411,
+          "pe_out-11": 411,
+          "pe_out-12": 411,
+          "pe_out-13": 411,
+          "pe_out-14": 411,
+          "pe_out-15": 411,
+          "pe_out-16": 411,
+          "pe_out-17": 411,
+          "pe_out-18": 411,
+          "pe_out-19": 411,
+          "pe_out-2": 411,
+          "pe_out-20": 411,
+          "pe_out-21": 411,
+          "pe_out-22": 411,
+          "pe_out-23": 411,
+          "pe_out-24": 411,
+          "pe_out-25": 411,
+          "pe_out-26": 411,
+          "pe_out-27": 411,
+          "pe_out-28": 411,
+          "pe_out-29": 411,
+          "pe_out-3": 411,
+          "pe_out-30": 411,
+          "pe_out-31": 411,
+          "pe_out-32": 411,
+          "pe_out-33": 411,
+          "pe_out-34": 411,
+          "pe_out-4": 411,
+          "pe_out-5": 411,
+          "pe_out-6": 411,
+          "pe_out-7": 411,
+          "pe_out-8": 411,
+          "pe_out-9": 411,
+          "per_layer_embd_out-0": 411,
+          "per_layer_embd_out-1": 411,
+          "per_layer_embd_out-10": 411,
+          "per_layer_embd_out-11": 411,
+          "per_layer_embd_out-12": 411,
+          "per_layer_embd_out-13": 411,
+          "per_layer_embd_out-14": 411,
+          "per_layer_embd_out-15": 411,
+          "per_layer_embd_out-16": 411,
+          "per_layer_embd_out-17": 411,
+          "per_layer_embd_out-18": 411,
+          "per_layer_embd_out-19": 411,
+          "per_layer_embd_out-2": 411,
+          "per_layer_embd_out-20": 411,
+          "per_layer_embd_out-21": 411,
+          "per_layer_embd_out-22": 411,
+          "per_layer_embd_out-23": 411,
+          "per_layer_embd_out-24": 411,
+          "per_layer_embd_out-25": 411,
+          "per_layer_embd_out-26": 411,
+          "per_layer_embd_out-27": 411,
+          "per_layer_embd_out-28": 411,
+          "per_layer_embd_out-29": 411,
+          "per_layer_embd_out-3": 411,
+          "per_layer_embd_out-30": 411,
+          "per_layer_embd_out-31": 411,
+          "per_layer_embd_out-32": 411,
+          "per_layer_embd_out-33": 411,
+          "per_layer_embd_out-34": 411,
+          "per_layer_embd_out-4": 411,
+          "per_layer_embd_out-5": 411,
+          "per_layer_embd_out-6": 411,
+          "per_layer_embd_out-7": 411,
+          "per_layer_embd_out-8": 411,
+          "per_layer_embd_out-9": 411,
+          "result_norm": 411
+        },
+        "records_by_phase": {
+          "decode": 100035,
+          "prefill": 1482
+        },
+        "additional_labels": [
+          "l_out-34",
+          "result_norm"
+        ],
+        "payload_bytes_read": 0
+      },
+      "held_computational_correspondence_unchanged": true,
+      "archived_pairs_equal": true,
+      "standard": {
+        "objective": 0.00029169280909028807,
+        "outside": 6004,
+        "pair_merge_cells": 61320
+      },
+      "capped": {
+        "objective": 0.00029169578198691215,
+        "outside": 6005,
+        "pair_merge_cells": 61320
+      },
+      "site": {
+        "current_rows": [
+          312
+        ],
+        "projections": [
+          0.39340189213845417
+        ],
+        "excess": [
+          0.0132214341694471
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.39340367602681575
+        ],
+        "limit": 0.38018045796900707
+      },
+      "original_standard": {
+        "objective": 0.00029245703627089436,
+        "outside": 5761,
+        "pair_merge_cells": 61320
+      },
+      "original_capped": {
+        "objective": 0.00029245995972935026,
+        "outside": 5762,
+        "pair_merge_cells": 61320
+      },
+      "original_site": {
+        "current_rows": [
+          312
+        ],
+        "projections": [
+          0.393291497485534
+        ],
+        "excess": [
+          0.013111039516526923
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.39329286887467246
+        ],
+        "limit": 0.38018045796900707
+      },
+      "capture": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/capture.json",
+        "sha256": "9384a3c14dfb0ca576b35bea60fc7a778b0c7b214bdbd7aedb99a196079e77d5"
+      },
+      "raw": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/raw/discovery-05-channel-h1/result.json",
+        "sha256": "68e76033db4e4e9418b0e87553673e2e1b109d4b9d0ad338c22407d8ce2b4413"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/pairs.npy",
+        "sha256": "3d1af7a43aca789609ac4c93076b3118fe51795c8e703b39ad0714d2e5a88d90"
+      },
+      "local_loss": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/capped-cell-squared.npy",
+        "sha256": "ac607be9150b9c94f4e35ebe404c023ca0a56d7c5782742b1a1505e26cf6d106"
+      }
+    },
+    "fresh_fit": {
+      "case": "discovery-05-channel-h1",
+      "fixed_history": false,
+      "naturally_ended": true,
+      "complete": true,
+      "events": 716,
+      "all_merges": 105,
+      "native_model_identity": {
+        "kind": "frozen-private-native-update/1",
+        "original": {
+          "record": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+          "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+        },
+        "installed_update": {
+          "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.json",
+          "sha256": "8bc9ecc18a771758443188817a720762a10eb5cf59a21dfc963ee34ad057d2e2"
+        }
+      },
+      "consumed_history_equal": false,
+      "same_output_ids": false,
+      "same_full_callback_index": false,
+      "held_native_merge_geometry": null,
+      "held_computational_correspondence_unchanged": null,
+      "archived_pairs_equal": false,
+      "standard": {
+        "objective": 0.0016223320938856646,
+        "outside": 20808,
+        "pair_merge_cells": 76860
+      },
+      "capped": {
+        "objective": 0.0016223360220175482,
+        "outside": 20809,
+        "pair_merge_cells": 76860
+      },
+      "site": {
+        "current_rows": [
+          325
+        ],
+        "projections": [
+          0.39537829185263096
+        ],
+        "excess": [
+          0.01519783388362389
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.43437632288064804
+        ],
+        "limit": 0.38018045796900707
+      },
+      "original_standard": {
+        "objective": 0.00029245703627089436,
+        "outside": 5761,
+        "pair_merge_cells": 61320
+      },
+      "original_capped": {
+        "objective": 0.00029245995972935026,
+        "outside": 5762,
+        "pair_merge_cells": 61320
+      },
+      "original_site": {
+        "current_rows": [
+          312
+        ],
+        "projections": [
+          0.393291497485534
+        ],
+        "excess": [
+          0.013111039516526923
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.39329286887467246
+        ],
+        "limit": 0.38018045796900707
+      },
+      "capture": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/capture.json",
+        "sha256": "0a66c48d2d2773515e60a95424559645d5d5b6d092a1edd723ec6dc3d2cf3d85"
+      },
+      "raw": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/result.json",
+        "sha256": "2549d89ad9b8a5cae4b9665a6de68e1b6ef12c37615097600a2759c3c6e31dc6"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/pairs.npy",
+        "sha256": "167810ebecf884e8cc91dd43272351c7f5e0b9ec9f0259948c488839f374f22d"
+      },
+      "local_loss": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/capped-cell-squared.npy",
+        "sha256": "95e21a6472726bfb06acaff6016d15909868ff0cd42e0562952e4b664ee9aaa7"
+      }
+    },
+    "fresh_correct": {
+      "case": "expanded-004-h1",
+      "fixed_history": false,
+      "naturally_ended": true,
+      "complete": true,
+      "events": 560,
+      "all_merges": 105,
+      "native_model_identity": {
+        "kind": "frozen-private-native-update/1",
+        "original": {
+          "record": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+          "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+        },
+        "installed_update": {
+          "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.json",
+          "sha256": "8bc9ecc18a771758443188817a720762a10eb5cf59a21dfc963ee34ad057d2e2"
+        }
+      },
+      "consumed_history_equal": true,
+      "same_output_ids": true,
+      "same_full_callback_index": true,
+      "held_native_merge_geometry": null,
+      "held_computational_correspondence_unchanged": null,
+      "archived_pairs_equal": true,
+      "standard": {
+        "objective": 2.4227326708128706e-07,
+        "outside": 1538,
+        "pair_merge_cells": 58800
+      },
+      "capped": {
+        "objective": 2.4227326708128706e-07,
+        "outside": 1538,
+        "pair_merge_cells": 58800
+      },
+      "site": {
+        "current_rows": [
+          312
+        ],
+        "projections": [
+          0.00016413883004681186
+        ],
+        "excess": [
+          0.0
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.0010772615228413333
+        ],
+        "limit": 0.38018045796900707
+      },
+      "original_standard": {
+        "objective": 1.3002743385995776e-07,
+        "outside": 1344,
+        "pair_merge_cells": 58800
+      },
+      "original_capped": {
+        "objective": 1.3002743385995776e-07,
+        "outside": 1344,
+        "pair_merge_cells": 58800
+      },
+      "original_site": {
+        "current_rows": [
+          312
+        ],
+        "projections": [
+          5.0703394715779476e-05
+        ],
+        "excess": [
+          0.0
+        ],
+        "radius": 0.5060302460432016,
+        "radial_distances": [
+          0.0008289543151163127
+        ],
+        "limit": 0.38018045796900707
+      },
+      "capture": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-correct/capture.json",
+        "sha256": "83044cf5124c4ba6bc70ac1e1f3694cf8c3caaaf53420b8dcbb85ed03e6a377b"
+      },
+      "raw": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-correct/raw/expanded-004-h1/result.json",
+        "sha256": "5e4515f1048db0c2d7f87dd3aef6f40ebebabcc5f68d3245b1e577b4094e760d"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-correct/pairs.npy",
+        "sha256": "4b653c92ed40b2be0dd871fbb461050a02b7fcf99992a90a2a5aa09729b2aded"
+      },
+      "local_loss": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-correct/capped-cell-squared.npy",
+        "sha256": "d2c141abb6ecbe0d3c439bcf09cb70c84453da078530b0387d1750ebce3e7a1b"
+      }
+    }
+  },
+  "candidate": {
+    "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/candidate/update.json",
+    "sha256": "8bc9ecc18a771758443188817a720762a10eb5cf59a21dfc963ee34ad057d2e2"
+  },
+  "expected_first_order": {
+    "projection": -4.91336935967619e-06,
+    "global_loss": -8.254645861398334e-07,
+    "norm_squared": 4.2410924154725674e-09
+  },
+  "actual_held_signed_projection_change": 0.00011039465292017603,
+  "actual_held_capped_loss_change": -7.641777424381127e-07,
+  "prediction_vs_result": "Compare the signed projection and whole native loss on fixed-history replay with the frozen first-order forecast, then read the two naturally generated controls separately.",
+  "failures_only": "Historical positive control at one known cell and one fixed comparison direction. If a fresh read hits its cap it is a prefix measurement. This test says nothing about automatic site selection or transfer.",
+  "what_this_changes": "Measure an exact projected candidate in the original native engine with unchanged fitting computational correspondence and independently registered fresh responses."
+}

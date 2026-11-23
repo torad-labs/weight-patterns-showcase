@@ -1,0 +1,443 @@
+{
+ "run": "sign-chain-29-34-original",
+ "standing": "bounded native fitting-cohort reading complete with explicit correspondence and numerical limitations; no established full-path repair, with an originally correct calculation regressed",
+ "model_sha256": "93c5bb40c2a706bd7530f25ae262cac5d1bfaf4596782238b28e1461cb36b411",
+ "native_coverage": {
+  "answers": 30,
+  "prompt_and_answer_positions": 20212,
+  "merges": 105,
+  "registered_places": 480,
+  "same_history_pairs": 30,
+  "new_original_controls": 5,
+  "natural_ends": 29,
+  "limit_hits": [
+   "expanded-001-h3.own"
+  ]
+ },
+ "output_checks_not_the_trace_verdict": {
+  "wrong": {
+   "members": 15,
+   "original_complete": 0,
+   "candidate_complete": 0,
+   "text_changed": 4
+  },
+  "correct": {
+   "members": 15,
+   "original_complete": 15,
+   "candidate_complete": 14,
+   "text_changed": 1
+  }
+ },
+ "changed_answers": [
+  {
+   "id": "discovery-05-channel-h1.own",
+   "group": "wrong",
+   "first_differing_token": 141,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 64,
+     "descentGainJ": 40,
+     "lossJ": 13,
+     "availableJ": 91,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "descent omitted",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": false,
+     "stated": {
+      "available": 51,
+      "required": 20
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 11,
+      "required": 20
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> descent omitted",
+     "required": "correct -> correct",
+     "verdict": "NO -> YES",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "expanded-001-h3.own",
+   "group": "wrong",
+   "first_differing_token": 657,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 16,
+     "descentGainJ": 20,
+     "lossJ": 16,
+     "availableJ": 20,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": null,
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 20,
+      "required": 60
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": null,
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 20,
+      "required": 60
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> correct",
+     "verdict": "None -> None",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "expanded-020-h1.own",
+   "group": "wrong",
+   "first_differing_token": 289,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 64,
+     "descentGainJ": 40,
+     "lossJ": 12,
+     "availableJ": 92,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 12,
+      "required": 20
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "climb plus descent",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 12,
+      "required": 60
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> descent subtracted",
+     "required": "climb plus descent -> correct",
+     "verdict": "NO -> NO",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "expanded-046-h3.own",
+   "group": "wrong",
+   "first_differing_token": 141,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 96,
+     "descentGainJ": 60,
+     "lossJ": 20,
+     "availableJ": 136,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "correct",
+     "available": "descent omitted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 76,
+      "required": 90
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "descent subtracted",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 16,
+      "required": 90
+     }
+    },
+    "transition": {
+     "available": "descent subtracted -> descent omitted",
+     "required": "correct -> correct",
+     "verdict": "NO -> NO",
+     "complete": "False -> False"
+    }
+   }
+  },
+  {
+   "id": "discovery-01-channel-h1.own",
+   "group": "correct",
+   "first_differing_token": 503,
+   "fields": {
+    "expected": {
+     "initialKineticJ": 16,
+     "descentGainJ": 40,
+     "lossJ": 13,
+     "availableJ": 43,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "this_model": {
+     "required": "climb plus descent",
+     "available": "correct",
+     "verdict": "NO",
+     "verdict_right": false,
+     "complete": false,
+     "stated": {
+      "available": 43,
+      "required": 60
+     }
+    },
+    "the_original_on_this_card": {
+     "required": "correct",
+     "available": "correct",
+     "verdict": "YES",
+     "verdict_right": true,
+     "complete": true,
+     "stated": {
+      "available": 43,
+      "required": 20
+     }
+    },
+    "transition": {
+     "available": "correct -> correct",
+     "required": "correct -> climb plus descent",
+     "verdict": "YES -> NO",
+     "complete": "True -> False"
+    }
+   }
+  }
+ ],
+ "same_history_weight_effect": {
+  "first_moving_merge_in_every_answer": [
+   29,
+   "feedforward"
+  ],
+  "sum_of_row_costs_by_original_group": {
+   "wrong": 0.002686911200537097,
+   "correct": 0.0005924074877842911
+  },
+  "not_a_target_error": true,
+  "two_changed_first_signs": "Candidate weights cause both flips on identical prefixes, but ensuing arithmetic omits the nonzero descent gain."
+ },
+ "pooled_original_reference_description": {
+  "L": 0.21580803314814895,
+  "direction": 0.09447168717256894,
+  "size": 0.12133634597558002,
+  "by_group": {
+   "wrong": {
+    "L": 0.21343672537660235,
+    "direction": 0.09440342269840793,
+    "size": 0.11903330267819444
+   },
+   "correct": {
+    "L": 0.002371307771546588,
+    "direction": 0.00006826447416100807,
+    "size": 0.00230304329738558
+   }
+  },
+  "reference_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+  "last_merge_read_as": "what the output norm passes on (correction.passed_on)",
+  "not_the_acceptance_rule": true,
+  "identity_note": "Legacy L/member model/card fields are empty; identity is bound through the native capture index, own record and export source."
+ },
+ "prediction_vs_result": {
+  "correct_members": "Prediction 4 is contradicted: discovery-01-channel-h1 includes descent in required climb energy (60 J rather than 20 J), changing YES to NO.",
+  "whole_path": "No complete energy repair among the fifteen originally wrong members; lower pooled L and two sign flips do not establish full-path repair.",
+  "local_link_scores": "The distinct local held-fold scores are retained, not multiplied into a whole-model error. Link 33 is numerically stalled, so its near-unit residual is not evidence about the site's or target's attainable correction.",
+  "local_requests": "At links 29–33 all thirteen exactly corresponding builders improve relative to original weights; at link 34 nine improve and four worsen. The same fourteenth builder is unsupported at every link. This is final-chain request realization, not a causal contribution of each matrix or a full-trace repair."
+ },
+ "unresolved": [
+  "Wrong-member computation outside the declared request rows has no supplied correct target.",
+  "No-fit transfer, broader own-path spillover and reserved evaluation were not opened.",
+  "Link 33's measured second-ridge stall confounds interpretation of the intended six-site correction; the observed native result belongs to the actual written chain, not an adequately solved counterfactual.",
+  "Exact source-history correspondence is absent for one builder at every link; six requested cells are unmeasured, not zero.",
+  "Card-0 history checks after links 31–34 were refused by the disk guard; the missing intermediate states are not reconstructed or inferred from the final reading."
+ ],
+ "sources": {
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/model/written.json": "3faffd19b09a1ce4f28f04befc37b6ff54add31179b5dae228e2ae6abf56ddc4",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/model/archive.json": "abde6b8d62ba102bee3d017810b5e2d739ffe3306a68fad7658826c525a7b198",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/declaration.json": "62d7fe799aab1e4d14d74d52fb7d0afd912a2afe5c3e4558f4b6d363f2f96a43",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/cases/index.json": "030364427e7f713e646974cc484b18d3ea9c6b7cbaae74f5c42c63e1e2a01b33",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/record/own.json": "c506b9e07b33ad6ce32eff7570c4d21655dfcdb0f0f13c86ef6102cabc170e79",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/paired/paired.json": "98fb5baa54c0ce94ac36d823753fa06e558a322f768c49eb205f2e64cee886a3",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/direct/own-direct.json": "ff811246f843eb34a60329a89ad75ab3367ccd9413681d7b40ca63e760ab20d6",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/direct-control/own-direct-control.json": "5959db2f44a04b36d3ca7902013c1c163c31f9ad2a96bb58f675e2c09168d1f9",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/whole-model/l.json": "6bd1eb532d57f3f398a564db2322ed57cb0d797e226ef2224d81225050d73a2e",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/members.npz": "43b04748f7a0f868c747a92723a3e216994db89010650b1daa541a8a3213a8d0",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/row-map/beside.json": "1dee0bf0c76bdff06d95259a38b74c5aebd153e2bb63f25c65f0e6ad74fd3626",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/fixed-input/feedforward-29/movement.json": "46224c03ef2bacf262a9b023783487ca5a2c7277a1531095f5c7592e1102d1b8",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/fixed-input/feedforward-30/movement.json": "bb2eb73ebdc9bf9dbe0d211a5ea8ec5ff2d8c641a0387ec82887286c594d8bed",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/fixed-input/feedforward-31/movement.json": "d867953cee564066758ed6ab38442a065ca89a1453312bb5c1863cce222ddfee",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/fixed-input/feedforward-32/movement.json": "bdb929af1dc0f9b8a35a75aa8f8b135039d6e9176d5836eda3eeb3c916f85272",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/fixed-input/feedforward-33/movement.json": "a6f05adfff1028949cdc5a7a05a52c285f5559b730851adf093794ba32fc0d02",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/fixed-input/feedforward-34/movement.json": "218f7d5466d1589665bc3d562399cc928f4a1c9879888341f66db85aad360834",
+  "studies/04-round-2-overlap/runs/sign-chain-29-34-original/own/request-realization/record.json": "b37dea48d4989534609619191898a28bab740cbf1ee6502443203a4f9d1b97dc"
+ },
+ "failures_only": [
+  "Both weight-caused first-sign flips still omit the nonzero descent gain; no originally wrong fitting answer has a complete repaired energy calculation.",
+  "Originally correct discovery-01-channel-h1 now includes the descent in required climb energy (60 J instead of 20 J) and changes YES to NO.",
+  "expanded-001-h3 reaches its existing 768-token limit without a verdict.",
+  "expanded-068-h1 differs from the declared source history before the decision at every link; its six request residuals remain unknown."
+ ],
+ "what_this_changes": "The saved native reading now establishes per-link target realization as well as conditional weight effects and a correct-member regression. It does not establish full-path repair or test what an unstalled link 33 could do. No target, ridge, dose, candidate or method is revised from this outcome.",
+ "solver_limitation": {
+  "link": 33,
+  "standing": "numerically stalled link; no inference that the site or target needed little correction",
+  "mechanism": "Measured second ridge rose to about 23,800 reference units at stage 2^15 and could only rise thereafter; later fold stages took approximately 1.3e-6 of the matrix or no step.",
+  "observed_selected_ratio": 0.9999699701307189,
+  "changed_weights": 1019,
+  "source": "records/development/2026-11-12-correction-objective/README.md:654",
+  "not_established": "How much correction feedforward 33 could realize in this chain with a numerical path that resolves that curvature."
+ },
+ "request_realization": {
+  "requested_cells": 84,
+  "exact_history_cells_read": 78,
+  "improved_cells": 74,
+  "worsened_cells": 4,
+  "unknown_cells": 6,
+  "unknown_member": "expanded-068-h1",
+  "wrong_members_in_denominator": 15,
+  "per_link": [
+   {
+    "link": 29,
+    "requested": 14,
+    "exact_history_read": 13,
+    "unknown": [
+     "expanded-068-h1"
+    ],
+    "partial_sum_before": 0.000002272312064133434,
+    "partial_sum_after": 1.2528884832472039e-7,
+    "partial_ratio": 0.05513716637001634,
+    "improved": 13,
+    "worsened": []
+   },
+   {
+    "link": 30,
+    "requested": 14,
+    "exact_history_read": 13,
+    "unknown": [
+     "expanded-068-h1"
+    ],
+    "partial_sum_before": 0.000004376430502374554,
+    "partial_sum_after": 1.2837202378072407e-7,
+    "partial_ratio": 0.029332585930719628,
+    "improved": 13,
+    "worsened": []
+   },
+   {
+    "link": 31,
+    "requested": 14,
+    "exact_history_read": 13,
+    "unknown": [
+     "expanded-068-h1"
+    ],
+    "partial_sum_before": 0.000007420280672607912,
+    "partial_sum_after": 1.8898810446635107e-7,
+    "partial_ratio": 0.02546913153352861,
+    "improved": 13,
+    "worsened": []
+   },
+   {
+    "link": 32,
+    "requested": 14,
+    "exact_history_read": 13,
+    "unknown": [
+     "expanded-068-h1"
+    ],
+    "partial_sum_before": 0.00001020752757145249,
+    "partial_sum_after": 1.914426440516807e-7,
+    "partial_ratio": 0.018755045500645086,
+    "improved": 13,
+    "worsened": []
+   },
+   {
+    "link": 33,
+    "requested": 14,
+    "exact_history_read": 13,
+    "unknown": [
+     "expanded-068-h1"
+    ],
+    "partial_sum_before": 0.000013286057633773528,
+    "partial_sum_after": 0.0000017059402522229625,
+    "partial_ratio": 0.1284007866928422,
+    "improved": 13,
+    "worsened": []
+   },
+   {
+    "link": 34,
+    "requested": 14,
+    "exact_history_read": 13,
+    "unknown": [
+     "expanded-068-h1"
+    ],
+    "partial_sum_before": 0.00000968990641496513,
+    "partial_sum_after": 0.0000052531980434017026,
+    "partial_ratio": 0.5421309369189203,
+    "improved": 9,
+    "worsened": [
+     {
+      "answer": "discovery-17-channel-h1",
+      "before": 0.0000012891799577474893,
+      "after": 0.0000018898750871076774
+     },
+     {
+      "answer": "expanded-042-h3",
+      "before": 0.000009225193190144807,
+      "after": 0.000009377705048800575
+     },
+     {
+      "answer": "expanded-070-h1",
+      "before": 0.000001510777817809906,
+      "after": 0.0000022524910674479965
+     },
+     {
+      "answer": "expanded-087-h3",
+      "before": 0.000003272956953717648,
+      "after": 0.000007389114825053293
+     }
+    ]
+   }
+  ],
+  "before_is": "Original weights on the exactly corresponding recorded history, not each link's own starting prefix.",
+  "after_is": "The final written chain at each declared feedforward merge. Earlier links' inherited movement is included; these are not isolated causal effects of each matrix.",
+  "not_a_complete_request_sum": true
+ }
+}

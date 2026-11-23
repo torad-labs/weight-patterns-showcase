@@ -1,0 +1,39 @@
+{
+ "run_by": "Claude",
+ "population": {
+  "questions": 28,
+  "correct": 7,
+  "descent_subtracted_first": 8,
+  "other_failures_listed_not_mixed": 13,
+  "labels": "labels-original-gpu0.json"
+ },
+ "prediction_vs_result": {
+  "predicted": "Each group's overlap agrees with its left-out members, and the two overlaps differ before the first wrong calculation at some stretch of merges rather than everywhere.",
+  "observed": [
+   "Before the first wrong token there are 120 reference positions with at least two answers in each group (opening 5, initial state 65, descent 50). 115 of them hold main-wording answers only: the four correct block answers and seven failures (cart, sled, bead, coaster). The other-wording answers align at 7 to 18 positions and add almost nothing.",
+   "Each group's overlap is strong: a left-out answer agrees with its own group's overlap at cosine 0.96 to 0.98 at every depth.",
+   "The discrepancy between the two overlaps keeps its direction when any member is left out (cosine 0.95 to 0.96 at every depth).",
+   "A left-out answer falls on its own side of the discrepancy in 59 to 62 percent of position-and-merge cells for the failures and, in the main wording, 0.80 to 0.89 for three block answers and 0.31 for block-m2-changed; sled 0.76, coaster 0.81, cart 0.63, bead-changed 0.39.",
+   "In 2,914 of 12,600 cells every left-out answer falls on its own side. They sit at 81 positions, 40 in the initial state and 41 in the descent. At some positions nearly all 105 merges qualify: the header of the state after the descent, and the statement that names the descent's potential energy, which the correct answers call gained and the failures call lost.",
+   "By depth the discrepancy is largest at the feed-forward merges of layers 9 to 13 and the attention merge of layer 14. Left-out answers fall on their own side most often around layers 14 to 17 (0.55 to 0.57). There is no sharp location."
+  ],
+  "not_predicted": [
+   "The naming of the descent energy as lost comes before the first wrong operator and already separates the groups.",
+   "Positions that hold the questions' own numbers also qualify as fully separating, which shows question content inside the discrepancy."
+  ]
+ },
+ "failures_only": {
+  "scope": "Original model only. No edit in this run."
+ },
+ "what_this_changes": [
+  "Steps 1 to 3 exist for round one's questions in the form the method asks for: full traces, group overlaps, the discrepancy with each member left out.",
+  "On round one's own questions the discrepancy cannot be told apart from the object: every main-wording correct answer is the block question and every failure of this group is another object. What recurs across members is therefore partly the question."
+ ],
+ "records": [
+  "pre-error/summary.json",
+  "pre-error/member-evidence.json",
+  "calculation/summary.json",
+  "labels-original-gpu0.json",
+  "questions.json"
+ ]
+}

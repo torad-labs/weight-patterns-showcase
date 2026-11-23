@@ -1,0 +1,39 @@
+{
+ "run_by": "Claude",
+ "population": {
+  "correct": 30,
+  "wrong": 30,
+  "axis_steps": 480,
+  "note": "Every member is present at every place of the axis. Matched steps are alike at a mean cosine of 0.86; the least alike member at 0.79."
+ },
+ "prediction_vs_result": {
+  "predicted": "The gap between the two shared patterns is several times what chance would give along a connected stretch of the path, the two halves agree there, the stretch begins before the place where the token alignment showed the wording fork, and it is not the same at every depth.",
+  "observed": [
+   "Along one connected stretch, from about place 150 to about place 265 of 480, the gap between the two shared patterns is 5 to 18 times what chance would give, and the gap computed from two halves that share no answer agrees at 0.8 to 0.93.",
+   "Before that stretch (places 10 to 139) the gap is already about twice chance and the two halves agree at about 0.6, rising to 0.84 around places 50 to 69. So the patterns differ, more faintly, well before they part widely.",
+   "After the stretch (places 280 to 469) the gap falls back to about 1.8 times chance and the halves agree at about 0.37. It rises again over the last ten places.",
+   "By depth the gap is spread over all 35 layers. It is somewhat larger in layers 14 to 18 everywhere along the path: 10.2 times chance against about 8.2 inside the stretch, 2.5 against 1.8 after it, where the halves also agree better (0.43 to 0.48 against 0.37).",
+   "The three kinds of merge (attention, feed-forward, per-layer embedding) carry the gap about equally."
+  ],
+  "not_predicted": [
+   "The gap is present from the first layers on, not built up with depth."
+  ]
+ },
+ "failures_only": {
+  "scope": "Original model only. No edit in this run."
+ },
+ "what_this_changes": [
+  "Read from the trace alone, with no word, number or field marking anything, the two shared patterns part along one stretch of the path, places 150 to 265, after differing faintly from early on.",
+  "That stretch, at all depths and somewhat more in layers 14 to 18, is where the wrong pattern has to be brought to the right one.",
+  "Lining the traces up by the computation keeps every member at every place. The token alignment lost members wherever the words differed."
+ ],
+ "records": [
+  "members.json",
+  "aligned.npy",
+  "likeness.npy",
+  "recurrence.npz",
+  "correct-pattern.npy",
+  "wrong-pattern.npy",
+  "where-the-patterns-part.png"
+ ]
+}

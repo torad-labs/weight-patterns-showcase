@@ -1,0 +1,648 @@
+{
+ "form": "recorded-losses/1",
+ "what": "Round-two files that left this disk on the evening of November 19, 2026 and are in no store: not in git, not in the bucket under their own key, not in the November 18 publication archive, not in the local MLflow store, and with no byte-identical file under another path. Declarations and archive records that name them are historical and unchanged; each absence is known only to the records its entry names, as the bytes it names.",
+ "account": "records/maintenance-runs/2026-11-19-evening-studies-deletion/README.md",
+ "records_as_of": "commit 7640dc022f780ef7650297f5d327e59641480c49, the last before the deletion: every declaration and archive record named below is byte for byte the file that commit holds",
+ "made_by": "records/maintenance-runs/2026-11-19-evening-studies-deletion/build_recorded_losses.py",
+ "paths": {
+  "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/cases/expanded-004-h1.json": {
+   "sha256": "8a7e6642618c733a045511b2d0e5f5bc24fe672d7f39329e953c699802c1ad59",
+   "why": "small run record of calibrated-descent-development-outcome, never committed and in no store after the November 19, 2026 deletion; a declared input of 1 run(s)",
+   "declared_by": {
+    "unbanded-group-orthonormal-target": "c3d8c62b9c6561126cbf7f5050bd503542c73321ab88c89577ff54a5639492f2"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/original/raw/discovery-05-channel-h1/stream.f32": {
+   "sha256": "1de669f1b5aa59b0b8da457c083d0452a18eea882cb49165a9aa34eba072ff2c",
+   "why": "captured native stream of directional-intervention-block0-native-projection-replay, never committed and in no store after the November 19, 2026 deletion; a declared input of 4 run(s)",
+   "declared_by": {
+    "directional-intervention-block0-native-k-anchor": "99c55f2f4df64c18adb0635b00fafc3056f8fd72ad18c023192333b77a73a206",
+    "directional-intervention-block0-qkv-factorial": "6bb826514dfe5c4c6afc645fb919fef5230314314d7bc4dda62665f5f1fb8aee",
+    "directional-intervention-block0-recorded-qkv-mixer": "e6db01ddb5742e98b5e54cee9a3878390b70bbd72d4eeffcbb5e0f69c13d18ec",
+    "directional-intervention-original-producer-keys": "5e419150e78109fa0c39c35c15aa7c87d1975b5a38332a224283573cac032827"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/original/raw/discovery-05-channel-h1/stream.jsonl": {
+   "sha256": "51f492136c83e438bf21b84b50a42f97df748e0074ed7bf0c65ba725f260d091",
+   "why": "index of a captured native stream of directional-intervention-block0-native-projection-replay, never committed and in no store after the November 19, 2026 deletion; a declared input of 4 run(s)",
+   "declared_by": {
+    "directional-intervention-block0-native-k-anchor": "99c55f2f4df64c18adb0635b00fafc3056f8fd72ad18c023192333b77a73a206",
+    "directional-intervention-block0-qkv-factorial": "6bb826514dfe5c4c6afc645fb919fef5230314314d7bc4dda62665f5f1fb8aee",
+    "directional-intervention-block0-recorded-qkv-mixer": "e6db01ddb5742e98b5e54cee9a3878390b70bbd72d4eeffcbb5e0f69c13d18ec",
+    "directional-intervention-original-producer-keys": "5e419150e78109fa0c39c35c15aa7c87d1975b5a38332a224283573cac032827"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/original/stderr.log": {
+   "sha256": "87cf26df3cd114160d2fc04fcc694466936e160f3a7bfec29e691dbae5a0ad2e",
+   "why": "process log of directional-intervention-block0-native-projection-replay, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "directional-intervention-block0-native-k-anchor": "99c55f2f4df64c18adb0635b00fafc3056f8fd72ad18c023192333b77a73a206",
+    "directional-intervention-block0-qkv-factorial": "6bb826514dfe5c4c6afc645fb919fef5230314314d7bc4dda62665f5f1fb8aee",
+    "directional-intervention-block0-recorded-qkv-mixer": "e6db01ddb5742e98b5e54cee9a3878390b70bbd72d4eeffcbb5e0f69c13d18ec"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/projected/raw/discovery-05-channel-h1/stream.f32": {
+   "sha256": "579ce8b217cec4d4077be40d14b7129496f85c1353c612bb5777da5260598a78",
+   "why": "captured native stream of directional-intervention-block0-native-projection-replay, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "directional-intervention-block0-native-k-anchor": "99c55f2f4df64c18adb0635b00fafc3056f8fd72ad18c023192333b77a73a206",
+    "directional-intervention-block0-qkv-factorial": "6bb826514dfe5c4c6afc645fb919fef5230314314d7bc4dda62665f5f1fb8aee",
+    "directional-intervention-block0-recorded-qkv-mixer": "e6db01ddb5742e98b5e54cee9a3878390b70bbd72d4eeffcbb5e0f69c13d18ec"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/projected/raw/discovery-05-channel-h1/stream.jsonl": {
+   "sha256": "51f492136c83e438bf21b84b50a42f97df748e0074ed7bf0c65ba725f260d091",
+   "why": "index of a captured native stream of directional-intervention-block0-native-projection-replay, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "directional-intervention-block0-native-k-anchor": "99c55f2f4df64c18adb0635b00fafc3056f8fd72ad18c023192333b77a73a206",
+    "directional-intervention-block0-qkv-factorial": "6bb826514dfe5c4c6afc645fb919fef5230314314d7bc4dda62665f5f1fb8aee",
+    "directional-intervention-block0-recorded-qkv-mixer": "e6db01ddb5742e98b5e54cee9a3878390b70bbd72d4eeffcbb5e0f69c13d18ec"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-block0-native-projection-replay/projected/stderr.log": {
+   "sha256": "c504ddf084095c215897d84dd1934d2d897c7fbab80204cccd507a93655f5eb5",
+   "why": "process log of directional-intervention-block0-native-projection-replay, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "directional-intervention-block0-native-k-anchor": "99c55f2f4df64c18adb0635b00fafc3056f8fd72ad18c023192333b77a73a206",
+    "directional-intervention-block0-qkv-factorial": "6bb826514dfe5c4c6afc645fb919fef5230314314d7bc4dda62665f5f1fb8aee",
+    "directional-intervention-block0-recorded-qkv-mixer": "e6db01ddb5742e98b5e54cee9a3878390b70bbd72d4eeffcbb5e0f69c13d18ec"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-original-producer-keys/original/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "675071607e89d664d4675e3507e97e17b13ce812e673a6e378deeedae19715a7",
+   "why": "small run record of directional-intervention-original-producer-keys, never committed and in no store after the November 19, 2026 deletion; a declared input of 4 run(s)",
+   "declared_by": {
+    "directional-intervention-full-native-k-qualification": "23255a75128849a2113f06038f3243aaa0aaee2a1d543bcec1493b7d256d203c",
+    "directional-intervention-full-native-k-qualification-retry": "77f182093e6cd7c328577e1a63f404585e3a3450be5e184fc11fb465892cc551",
+    "directional-intervention-native-k-second-displacement": "4441b417802e534163bee345aa81f4ad95c588807b0df7e17b8b7ab356dd8f95",
+    "finite-installed-diagnostic-replay": "5b6e20e402f274f6cfe5791af9074ee969fb350b07ebeefe466b52a5cb28df91"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-original-producer-keys/original/raw/discovery-05-channel-h1/stream.f32": {
+   "sha256": "708aa7be7dd8158d76e3e2c96556accf96209088fb9e631fe1c7bf8f67691f6e",
+   "why": "captured native stream of directional-intervention-original-producer-keys, never committed and in no store after the November 19, 2026 deletion; a declared input of 4 run(s)",
+   "declared_by": {
+    "directional-intervention-full-native-k-qualification": "23255a75128849a2113f06038f3243aaa0aaee2a1d543bcec1493b7d256d203c",
+    "directional-intervention-full-native-k-qualification-retry": "77f182093e6cd7c328577e1a63f404585e3a3450be5e184fc11fb465892cc551",
+    "directional-intervention-native-k-second-displacement": "4441b417802e534163bee345aa81f4ad95c588807b0df7e17b8b7ab356dd8f95",
+    "finite-installed-diagnostic-replay": "5b6e20e402f274f6cfe5791af9074ee969fb350b07ebeefe466b52a5cb28df91"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-original-producer-keys/original/raw/discovery-05-channel-h1/stream.jsonl": {
+   "sha256": "977b9e4fc5b688f95690b7969761b6dffb7cb00c43a06d2dcca26a4545744dfa",
+   "why": "index of a captured native stream of directional-intervention-original-producer-keys, never committed and in no store after the November 19, 2026 deletion; a declared input of 4 run(s)",
+   "declared_by": {
+    "directional-intervention-full-native-k-qualification": "23255a75128849a2113f06038f3243aaa0aaee2a1d543bcec1493b7d256d203c",
+    "directional-intervention-full-native-k-qualification-retry": "77f182093e6cd7c328577e1a63f404585e3a3450be5e184fc11fb465892cc551",
+    "directional-intervention-native-k-second-displacement": "4441b417802e534163bee345aa81f4ad95c588807b0df7e17b8b7ab356dd8f95",
+    "finite-installed-diagnostic-replay": "5b6e20e402f274f6cfe5791af9074ee969fb350b07ebeefe466b52a5cb28df91"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "2549d89ad9b8a5cae4b9665a6de68e1b6ef12c37615097600a2759c3c6e31dc6",
+   "why": "small run record of directional-intervention-projected-native, never committed and in no store after the November 19, 2026 deletion; a declared input of 2 run(s)",
+   "declared_by": {
+    "same-input-failed-repair": "29c3885a0532efb916fae72fe003d39e22424932103bb5968df6c119b8926504",
+    "same-input-operation-comparison": "5ad7eccf70fb1d88792b4709b8a1a2372babffa4092d359ce4eaee564074e494"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/directional-intervention-projected-native/held-fit/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "68e76033db4e4e9418b0e87553673e2e1b109d4b9d0ad338c22407d8ce2b4413",
+   "why": "small run record of directional-intervention-projected-native, never committed and in no store after the November 19, 2026 deletion; a declared input of 4 run(s)",
+   "declared_by": {
+    "directional-intervention-anchored-replay": "5b6d1e339fcda63b5ec543419881e340019bb6cd001415c2dd453dcfd9e8148f",
+    "directional-intervention-full-native-k-qualification": "23255a75128849a2113f06038f3243aaa0aaee2a1d543bcec1493b7d256d203c",
+    "directional-intervention-full-native-k-qualification-retry": "77f182093e6cd7c328577e1a63f404585e3a3450be5e184fc11fb465892cc551",
+    "finite-installed-diagnostic-replay": "5b6e20e402f274f6cfe5791af9074ee969fb350b07ebeefe466b52a5cb28df91"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/original/novel-v5-d1-channel/native/capture.json": {
+   "sha256": "cdc183c7424ec6488c8bdade1e22762d7c982102de18ed85abe46fe11a7d8de4",
+   "why": "capture receipt of a native acquisition of frozen-energy-paired-overlap, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "dda290575c00-stream.jsonl.json": "e0b985d38f198a6b44d43ff32fcb56cd1a3ac07042e52996c583e0d95e559eb2"
+   }
+  },
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/original/novel-v5-d1-reordered/native/capture.json": {
+   "sha256": "aeb2f9e3feb7b6db920db56c6714d444661ee8862c6cb0ba9fba8c55da89659d",
+   "why": "capture receipt of a native acquisition of frozen-energy-paired-overlap, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "02896ebd3b51-stream.jsonl.json": "7c035f88038b1d8ccf897ea3d61118703a7b20084eb40dc413db82fcdb2631b2"
+   }
+  },
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/original/novel-v5-d2-channel/native/capture.json": {
+   "sha256": "fe11708fc8d0ff6db3fd84cca4542680457afea10ef183f6fa8a5605f95fe2e6",
+   "why": "capture receipt of a native acquisition of frozen-energy-paired-overlap, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "e1403984c25c-stream.jsonl.json": "ca26077c7ebbff337e9a47765a3fd17e14650a0c993121a7d051a1c03ac315d4"
+   }
+  },
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/original/novel-v5-d2-reordered/native/capture.json": {
+   "sha256": "f7054b4dd31ffb0386a9bfc9f66567c56ac1d71e9139a496bf286d6645913d64",
+   "why": "capture receipt of a native acquisition of frozen-energy-paired-overlap, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "f770cdaf7792-stream.jsonl.json": "255721f711b04de473b5c52806273ce1efb4b955d35fabb42a71541a340a93d1"
+   }
+  },
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/original/novel-v7-d1-channel/native/capture.json": {
+   "sha256": "144dc68424085caeebd7961e88100ccf89553867279c73d34ab8b6842d04c954",
+   "why": "capture receipt of a native acquisition of frozen-energy-paired-overlap, never committed and in no store after the November 19, 2026 deletion; a bound source of 2 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "1f82211946a1-stream.jsonl.json": "2974276383d680c4778b0415c16be6c0f3b94fcca3b9950cca99468fb483f6b7",
+    "9f0c4ef78c62-stream.f32.json": "db2c3e5fb6a974539ea2e8d68dc355e14c658e6967ca866198081f5aa5a969ab"
+   }
+  },
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/original/novel-v7-d1-reordered/native/capture.json": {
+   "sha256": "0e43417324b93df2bdb544ffc7efb7d5915c80bafe304e95d54a1181d9417ce5",
+   "why": "capture receipt of a native acquisition of frozen-energy-paired-overlap, never committed and in no store after the November 19, 2026 deletion; a bound source of 2 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "8b87a8d2f293-stream.f32.json": "1fa30d4c93c85e41fef0cfe9bf186a6228258e13989502b6db6526925a426a2a",
+    "f3d9e2ad0666-stream.jsonl.json": "9bd94a801df9cf4270719739529b21cf13b3d344ba35849b08deb183e70154c9"
+   }
+  },
+  "studies/04-round-2-overlap/runs/frozen-energy-paired-overlap/original/novel-v7-d2-channel/native/capture.json": {
+   "sha256": "0da96324990c02b2fb628a93328c01cfc66d2b3e680fdcdafda95879af904188",
+   "why": "capture receipt of a native acquisition of frozen-energy-paired-overlap, never committed and in no store after the November 19, 2026 deletion; a bound source of 2 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "c86e71f5f2eb-stream.f32.json": "29c27bf78ed0f3a830b4607d52e24b483b1738cc60c4dcf91de9cf2010550767",
+    "f81301332197-stream.jsonl.json": "a2a5e65be2647f11f02bf32767729820d8511aec9302067501b66549f8781fd6"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/final-checkpoint/state.json": {
+   "sha256": "e224761e5bf14f127350312c90075fa3ab340d32b8175ad845273b2557995c51",
+   "why": "small run record of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 2 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "86b9721597b7-native.bin.json": "e528bd5ef8cf23b095e0647f792f54c7b6c46bd832e14b38425843a6fe60ba10",
+    "e7a449e870e1-remainder.f32.json": "c860eb3158216f814105a98909abdf3db6efdc6114e369bf768b4375dae5f542"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/discovery-13-channel-h1/loop/0/capture/capture.json": {
+   "sha256": "637a75f06dda3db7988d3410c3f659e162c0d22b8b71e31d68da53bbdd760cb1",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-target": "38d8589be77b7e00ea96cb9751d1b1c0bc05d2f5b0b035039b8a84bc7c2d715a",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/discovery-13-channel-h1/loop/0/capture/raw/discovery-13-channel-h1/result.json": {
+   "sha256": "45f99250abb377db880a027ca0a90b53c6b65e87286597dd5997ed22ce82ad5d",
+   "why": "small run record of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-target": "38d8589be77b7e00ea96cb9751d1b1c0bc05d2f5b0b035039b8a84bc7c2d715a",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/discovery-13-channel-h1/loop/0/pairs.npy": {
+   "sha256": "d01a7f92333fb4200058bee630b3bc18d3b3c1ac10e5bb0c694e9322973ece33",
+   "why": "derived array of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-target": "38d8589be77b7e00ea96cb9751d1b1c0bc05d2f5b0b035039b8a84bc7c2d715a",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/discovery-13-channel-h1/loop/2/capture/capture.json": {
+   "sha256": "2a3e5b107425dc0fff1f4bb643afad802dffca3998d005f00062f464042106de",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "3c2d24dc5ab5-stream.f32.json": "5fb7704d213b09e0b255f24c4d7c0776dc485fffd5e00a0c4da8781d1a541cc9"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/discovery-13-channel-h1/loop/3/capture/capture.json": {
+   "sha256": "b01f2126b9c023631ecb7255f712fe53674aeac33af5f90f281ba7dd26790237",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "271361f33e98-stream.f32.json": "d90c3526c864aba3bcf15515019863c02dfaf473f21047e9d3cb5b357a2e6985"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/expanded-004-h1/loop/0/capture/capture.json": {
+   "sha256": "eb4c674f0d222407e42c314097c212496d1be28e2f4cd90f29a1663414617589",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-target": "38d8589be77b7e00ea96cb9751d1b1c0bc05d2f5b0b035039b8a84bc7c2d715a",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/expanded-004-h1/loop/0/capture/raw/expanded-004-h1/result.json": {
+   "sha256": "9e4d2441a255d0fd802189aed603d81dda85cf1bab6de09b1dec2275e6653c7b",
+   "why": "small run record of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-target": "38d8589be77b7e00ea96cb9751d1b1c0bc05d2f5b0b035039b8a84bc7c2d715a",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/expanded-004-h1/loop/2/capture/capture.json": {
+   "sha256": "fddf746f78b2aa7be177d4ac268bf54c95cddcb4ee3fb02b865e104534563d65",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "0df444f7e6c3-stream.f32.json": "948a1b1231a4e6919bcf7edba1308e44f9a1ec3bcdf62dd6461633446320b813"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/group-members/expanded-004-h1/loop/3/capture/capture.json": {
+   "sha256": "0e11f7073ef0dda6b20d0525cb67e9e6904386e890db2ed3437cf52eb00d25c4",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "bb74b63680fa-stream.f32.json": "893999a1412905477e5f5787921fc50911fb83aacff392af722a733aa314c6ec"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/loop/0/capture/capture.json": {
+   "sha256": "fc06d61969c96e1e17408c8b6850c64918664e1231ceb79751f345b895412049",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-target": "38d8589be77b7e00ea96cb9751d1b1c0bc05d2f5b0b035039b8a84bc7c2d715a",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/loop/0/capture/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "09ce9c2fc2193ed1545cc2ddb0dc84360acc5df1d39b31c8dd809f408cb78d05",
+   "why": "small run record of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-target": "38d8589be77b7e00ea96cb9751d1b1c0bc05d2f5b0b035039b8a84bc7c2d715a",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/loop/2/capture/capture.json": {
+   "sha256": "1f5d0583b291088f6bbca3855cda9adcb72969614b6fc4ac10231211ea46a564",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "cfd7d03789ec-stream.f32.json": "840aa71621f9ba3c44fa89eb6eb9ee0f1512baf80ff5524b1ea97a3c76da50ad"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-climb-descent-training/loop/3/capture/capture.json": {
+   "sha256": "0f4e71715182b054fca0cd0663d8e6f411c5333bdc66ef45ae2aaa13d68d1ede",
+   "why": "capture receipt of a native acquisition of joint-stock-climb-descent-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "476d7c0dd37f-stream.f32.json": "9a3c339ab95e1b5d1d737dc018ed47aa60ffdf95068541f5cb1d0bd7432b7c03"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-disk-recovery-2/group-members/discovery-13-channel-h1/loop/0/capture/capture.json": {
+   "sha256": "921e59b55805f201973ec092a4029d3968699717828486e08ea9caa9b55d48fb",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-disk-recovery-2, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "c303b2b93015-stream.f32.json": "5f31d7655f8cd162e4d03c28cdd1d9103050c8f2564e56635b48fe1409e8db45"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-disk-recovery-2/group-members/expanded-004-h1/loop/0/capture/capture.json": {
+   "sha256": "35cf2be882fc0bdf7400cea957342fd693a7cba3822c56c9baf7cede774c1125",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-disk-recovery-2, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "3d3f296f4c8f-stream.f32.json": "37c45c700f9f2be5be94db347e272d0ba209627c8e94024921592afd3bf93011"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-disk-recovery-2/loop/0/capture/capture.json": {
+   "sha256": "c8f20f33c0c358de5906ec1dc585d2a2a31774c745469ccefdc8529aa6decce9",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-disk-recovery-2, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "321cefa9b3a3-stream.f32.json": "209ef0802d42e08edf24fc234f240f474c8e03863b3db42395f673741fa9637c"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-disk-recovery/group-members/discovery-13-channel-h1/loop/0/capture/capture.json": {
+   "sha256": "c28a670f101e33de9c9a000f7d5c3384a9f6fe42ff355dad3fd8f58cca7b2f44",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-disk-recovery, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "488599635da9-stream.f32.json": "8670ed1f625fe78341e13f9b4ae19c30f19aeb4bf0e34c7bfd6321e398379d82"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-disk-recovery/group-members/expanded-004-h1/loop/0/capture/capture.json": {
+   "sha256": "16121a4edf60a8ae3d00eb7c242db8e7f4e2a6a238b50f8a3ef39de0d46e2062",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-disk-recovery, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "d86dce52f05a-stream.f32.json": "a7c8a3a013a236ac487becc3e8b0f3e7f68f9d1d1fc173b50c3b1093d17800b0"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-disk-recovery/loop/0/capture/capture.json": {
+   "sha256": "a12ef83d26ab7f9c98f4918135c7b1196f99e27c216393acba7afadf32453ac7",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-disk-recovery, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "71c31a862636-stream.f32.json": "216dd4fec0d9d4c68c97bb8d6b039c7826b7ce463414608f5899de339073e86d"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-loss-continuation/group-members/discovery-13-channel-h1/loop/3/capture/capture.json": {
+   "sha256": "406cd029d6a7af820bb4929d9e810ce93bd56a6055c21e3b8846e61fcb60b222",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-loss-continuation, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "3716f1d741a3-stream.f32.json": "fa254ee2c31548d2c8ac704951fa8bc90f11d852ee68ae2eff2fbb71ed24187c"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-loss-continuation/group-members/discovery-13-channel-h1/loop/4/capture/capture.json": {
+   "sha256": "d91dd4543e5f32c8f93b71e6573323f35d3742afb16d1111f3e6aeadcd6c001e",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-loss-continuation, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "87829f9d2db5-stream.f32.json": "17c1b7b841ecf616adb0332968a436b71d0ca4d313f4213a211660a1389d50e1"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-loss-continuation/group-members/expanded-004-h1/loop/3/capture/capture.json": {
+   "sha256": "af18ceb7b151666e0b06b58b99938a66b7ea0dffbb2b73b64c94102ac582db9f",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-loss-continuation, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "4ac3758c8469-stream.f32.json": "3bac16be63ce6724433528c4d4fd4a2fd20df4b1edee5b02c3e346a9d177c118"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-loss-continuation/group-members/expanded-004-h1/loop/4/capture/capture.json": {
+   "sha256": "4088219cf612900b7fef47ce212a261d2ebc2e7ee77661b9b800add8a5f28362",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-loss-continuation, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "ed22de59faa8-stream.f32.json": "683416877b64084e4eab39104eebd7719a9865615a34b8463b4a991d10fc8a10"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-loss-continuation/loop/3/capture/capture.json": {
+   "sha256": "e055584fbd2739c5e9c105161f37a506d978c701d5b9e802b2c537897d576eb0",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-loss-continuation, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "b0170dd5911e-stream.f32.json": "4f7e2590ae6dd7085e57e9c650d62da0904ce17766a511357dfaac0272eaba28"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-loss-continuation/loop/4/capture/capture.json": {
+   "sha256": "366c30012272282b6cfd20701283e88c98e3614b29e9e2998262657c701b5b74",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-loss-continuation, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "4a4c84501009-stream.f32.json": "0b4a3c7f94c816255e227b2ed3a3aa248f68d2d02de6e897b8c1aae1c349ba52"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/final-checkpoint/native.bin": {
+   "sha256": "d62a59b40fc03dd6a5c90f52c2ca3bae51be0bf0752638c8f1b455ad56221578",
+   "why": "checkpoint weights of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 8 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/final-checkpoint/remainder.f32": {
+   "sha256": "9a486eeba6584e9d77645c4d503c72ba6b684a5ede9eb54d1b656d2807fe9fae",
+   "why": "checkpoint optimizer remainder of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 8 run(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/discovery-13-channel-h1/loop/2/capture/capture.json": {
+   "sha256": "367bdb7516b1b8044953efc20af97d1384180a501125cd431f6d80566d2d3a61",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 1 run(s)",
+   "declared_by": {
+    "joint-stock-numeric-phase-read": "e95d762ce6648cdc474c51b16c622ce3df7a07058d664957eab2e83d456201c2"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/discovery-13-channel-h1/loop/2/capture/raw/discovery-13-channel-h1/result.json": {
+   "sha256": "d68da7acbe842bb5299cf8c8267b3b8a353e5555fdcd7f5ee8fb393fae5d571b",
+   "why": "small run record of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 1 run(s)",
+   "declared_by": {
+    "joint-stock-numeric-phase-read": "e95d762ce6648cdc474c51b16c622ce3df7a07058d664957eab2e83d456201c2"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/discovery-13-channel-h1/loop/3/capture/capture.json": {
+   "sha256": "967a719a8b221c57d4364ad12bea40946b6f0fa48c11f09942943e297045701d",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "6b87b08bdeea-stream.f32.json": "13c81d9638034af8ad7d96ff1cd4ebeed83401ef4e0d2a9592886c6c9b4e028d"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/expanded-004-h1/loop/3/capture/capture.json": {
+   "sha256": "fc938a6c2475dc4a2335b296f91c61cc48a69e8eeec6e0b4803b29ce77320394",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "f413252930c6-stream.f32.json": "594126cc59f508b1f855111f0519dee0a2ab7e7c30b218d8d9cace129b4f63ab"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/2/capture/capture.json": {
+   "sha256": "fa552178fef5e87d481a20a78a97aafac10a3edf6c639019fe11857e154ea0f0",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 1 run(s)",
+   "declared_by": {
+    "joint-stock-numeric-phase-read": "e95d762ce6648cdc474c51b16c622ce3df7a07058d664957eab2e83d456201c2"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/2/capture/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "8b334dad2f1a07bc6044a3c9017bcd7839bc872a5e48212ee76215c1e69592dd",
+   "why": "small run record of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 1 run(s)",
+   "declared_by": {
+    "joint-stock-numeric-phase-read": "e95d762ce6648cdc474c51b16c622ce3df7a07058d664957eab2e83d456201c2"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/3/capture/capture.json": {
+   "sha256": "f61a090c1b8b380d801a16a651df580f96e185c31becb41fb14647394d0bc1b3",
+   "why": "capture receipt of a native acquisition of joint-stock-prechoice-training, never committed and in no store after the November 19, 2026 deletion; a declared input of 8 run(s) and a bound source of 1 archive record(s)",
+   "declared_by": {
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9"
+   },
+   "bound_by": {
+    "e8ce5d58a645-stream.f32.json": "c12d3419636920df04bd1191bb0f685ce5dfeb6d2248e6980ef10e7b84bd96d5"
+   }
+  },
+  "studies/04-round-2-overlap/runs/joint-stock-target/fields.npz": {
+   "sha256": "33edf1a00796158deec3e083576da1a03dbb1d6598b794274ce24d651cccbf8a",
+   "why": "derived array of joint-stock-target, never committed and in no store after the November 19, 2026 deletion; a declared input of 10 run(s)",
+   "declared_by": {
+    "joint-stock-climb-descent-training": "679d83b4cb784b5381491142b0e6e3e31d12cbe496112c84d3bbc038d554906d",
+    "joint-stock-prechoice-disk-recovery": "e1f0120ee77665e04b8062c17b594119306a058343623c7c45410d304572d687",
+    "joint-stock-prechoice-disk-recovery-2": "1280c779a5bc5a9fb3d49589fbe8b14910bcec33e32092361ab209d5c1c500f6",
+    "joint-stock-prechoice-loss-continuation": "ecc92d86262e7923960d2f8577afbc6e9993bb35e4e6785a5893a67b2486529e",
+    "joint-stock-prechoice-streamed-recovery": "e65dbfa0a14f82b9dadb6dec33e711973ad900f6cafafe1b79b2f431712931ee",
+    "joint-stock-prechoice-streamed-recovery-2": "428bf8d61bdc04e4554568f207687df7c385761b489ed52ba7b9903134daf5fe",
+    "joint-stock-prechoice-streamed-recovery-3": "2145504f2cc20ced0136f00fd73af152c30d5c6f297392ef8400594dec80ed1d",
+    "joint-stock-prechoice-streamed-recovery-4": "e563b37e51a9537bec002ac29077c0afa8f9f07d546b9019e307a7f9f8c1810c",
+    "joint-stock-prechoice-streamed-recovery-5": "858088427594affa0923d4d2893db8d407411c1ac350ff25497f70886d1248c9",
+    "joint-stock-prechoice-training": "3f5e480e4f9442541e413243dc9ce28f73187f229701168ddb83d5a8a31490d3"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/prefix-direction-target/frozen.npz": {
+   "sha256": "0e7d239eca6aba3edd90849492938025f8a4b49fb3b02a150906fb4f0f6d0c77",
+   "why": "derived array of prefix-direction-target, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "prefix-direction-training-390": "04f28fcce689b9e081addc56f1cde5e44e45c790ee5ada8bc032322be84f8255",
+    "prefix-direction-training-390-retry": "da7ffdb82e51af633e58539bca202e659b3de92266b3d9cd3389c4e162b34fd0",
+    "prefix-direction-training-397-continuation": "3773ca7d6e7e05960aa1fd41468affc127955b2a98310535f33478bfa198c354"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/same-input-successful-repairs/early/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "43dd51022062f3df4177e9fad5f680f0387ad2beecbdb6bc57407e2db576f804",
+   "why": "small run record of same-input-successful-repairs, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "prefix-direction-training-390": "04f28fcce689b9e081addc56f1cde5e44e45c790ee5ada8bc032322be84f8255",
+    "prefix-direction-training-390-retry": "da7ffdb82e51af633e58539bca202e659b3de92266b3d9cd3389c4e162b34fd0",
+    "prefix-direction-training-397-continuation": "3773ca7d6e7e05960aa1fd41468affc127955b2a98310535f33478bfa198c354"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_attention/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "e341b84c16e72bc3a41ba862132c16b275f65f746a569868ee39d38c3e74907e",
+   "why": "small run record of same-input-successful-repairs, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "prefix-direction-training-390": "04f28fcce689b9e081addc56f1cde5e44e45c790ee5ada8bc032322be84f8255",
+    "prefix-direction-training-390-retry": "da7ffdb82e51af633e58539bca202e659b3de92266b3d9cd3389c4e162b34fd0",
+    "prefix-direction-training-397-continuation": "3773ca7d6e7e05960aa1fd41468affc127955b2a98310535f33478bfa198c354"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/same-input-successful-repairs/late_ffn/raw/discovery-05-channel-h1/result.json": {
+   "sha256": "de4325ba1b87914c9f85a4c38e039e57a4ad8d92897adced5cf3325a5366bace",
+   "why": "small run record of same-input-successful-repairs, never committed and in no store after the November 19, 2026 deletion; a declared input of 3 run(s)",
+   "declared_by": {
+    "prefix-direction-training-390": "04f28fcce689b9e081addc56f1cde5e44e45c790ee5ada8bc032322be84f8255",
+    "prefix-direction-training-390-retry": "da7ffdb82e51af633e58539bca202e659b3de92266b3d9cd3389c4e162b34fd0",
+    "prefix-direction-training-397-continuation": "3773ca7d6e7e05960aa1fd41468affc127955b2a98310535f33478bfa198c354"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/frozen.npz": {
+   "sha256": "f13671d3d8383e271a6d57c1bbab7c2f818026fbc7e51b7461091d194f873c71",
+   "why": "derived array of unbanded-group-orthonormal-target, never committed and in no store after the November 19, 2026 deletion; a declared input of 1 run(s)",
+   "declared_by": {
+    "unbanded-group-training-27": "00760d3b7532c68c8e56372e23abca63904b371a8217b8b53d09c2f2b404dda0"
+   },
+   "bound_by": {}
+  },
+  "studies/04-round-2-overlap/runs/unbanded-group-training-27/final-checkpoint/state.json": {
+   "sha256": "c74242c174600cc67203174376528322e4a5d183b10fdc8a70dc06c2e9d3a54e",
+   "why": "small run record of unbanded-group-training-27, never committed and in no store after the November 19, 2026 deletion; a bound source of 2 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "56ede4a6c80c-native.bin.json": "e9f57f34bf7fdc89efb3a6658fedb1067f6bb80666f7eada05d4c732d46f0fd1",
+    "ab68e8da1fcd-remainder.f32.json": "4e0f5c1283270256f97f978c4ffb5655d25b7799f25d2961bad523b267e69549"
+   }
+  },
+  "studies/04-round-2-overlap/runs/unbanded-group-training-27/group-members/expanded-004-h1/loop/2/capture/capture.json": {
+   "sha256": "a89fd4230c6e4f89a336aea67c377daf6410f79a6bedb59ec2496e9edcfbc2fa",
+   "why": "capture receipt of a native acquisition of unbanded-group-training-27, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "29ae47ad0fd7-stream.f32.json": "6f35af58f41bece70fe738a4f10d961ebfb9c2e210068b9d76784d52a9c9337c"
+   }
+  },
+  "studies/04-round-2-overlap/runs/unbanded-group-training-27/loop/2/capture/capture.json": {
+   "sha256": "269df36f1ecc41d86acedd1dfc522bc6cc422b7caaef0c85bbe30df962b67a1a",
+   "why": "capture receipt of a native acquisition of unbanded-group-training-27, never committed and in no store after the November 19, 2026 deletion; a bound source of 1 archive record(s)",
+   "declared_by": {},
+   "bound_by": {
+    "59ea9c519043-stream.f32.json": "732ba904d3e99e936292679b3ebc987172ffb36f8964f6912dc98cf35cde0826"
+   }
+  }
+ }
+}

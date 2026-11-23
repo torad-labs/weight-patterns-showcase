@@ -1,0 +1,197 @@
+{
+  "fits": {
+    "discovery-05-channel-h1": {
+      "maximum": 0.6269765834366443,
+      "events": [
+        330
+      ],
+      "qualifies": false,
+      "paired_proposal": [
+        [
+          197,
+          330
+        ]
+      ],
+      "paired_score": 0.606315046540995,
+      "independent_audit": {
+        "first_mixed_expression": {
+          "event": 330,
+          "score": 0.6269765834366443,
+          "rank": 1
+        },
+        "first_explicit_numeric_substitution": {
+          "event": 344,
+          "score": 0.5657419488970775,
+          "rank": 4
+        },
+        "first_simplified_subtraction": {
+          "event": 378,
+          "score": 0.5018427227941902,
+          "rank": 362
+        },
+        "valid_friction": {
+          "event": 489,
+          "score": 0.4610264634269697,
+          "rank": 697
+        }
+      }
+    },
+    "discovery-13-channel-h1": {
+      "maximum": 0.5892318489120394,
+      "events": [
+        572
+      ],
+      "qualifies": false,
+      "paired_proposal": [
+        [
+          197,
+          572
+        ]
+      ],
+      "paired_score": 0.5875130552464156,
+      "independent_audit": {
+        "first_mixed_expression": {
+          "event": 348,
+          "score": 0.5594152699522807,
+          "rank": 4
+        },
+        "first_explicit_numeric_substitution": {
+          "event": 362,
+          "score": 0.5202190988885641,
+          "rank": 21
+        },
+        "first_simplified_subtraction": {
+          "event": 396,
+          "score": 0.47871586045425363,
+          "rank": 915
+        },
+        "repeated_mixed_expression": {
+          "event": 558,
+          "score": 0.535680684630929,
+          "rank": 6
+        },
+        "repeated_numeric_substitution": {
+          "event": 572,
+          "score": 0.5892318489120394,
+          "rank": 1
+        },
+        "valid_friction": {
+          "event": 838,
+          "score": 0.47680832890363684,
+          "rank": 919
+        }
+      }
+    }
+  },
+  "prior_panel": {
+    "m2-v5-d1-q6-h2-chronological": {
+      "maximum": 0.5219357758762301,
+      "events": [
+        567
+      ],
+      "qualifies": false,
+      "paired_proposal": [
+        [
+          259,
+          567
+        ]
+      ],
+      "paired_score": 0.5380471445022962,
+      "previous_audit": "local downhill update omitted",
+      "operator_pair": null,
+      "numeric_target": null
+    },
+    "m2-v7-d1-q8-h3-endpoint-first": {
+      "maximum": 0.5312804309908642,
+      "events": [
+        448
+      ],
+      "qualifies": false,
+      "paired_proposal": [
+        [
+          345,
+          448
+        ]
+      ],
+      "paired_score": 0.5494197898563038,
+      "previous_audit": "alternative global elevation account without local bottom update",
+      "operator_pair": null,
+      "numeric_target": null
+    },
+    "m2-v7-d2-q30-h3-endpoint-first": {
+      "maximum": 0.524685897339157,
+      "events": [
+        505
+      ],
+      "qualifies": false,
+      "paired_proposal": [
+        [
+          417,
+          505
+        ]
+      ],
+      "paired_score": 0.5414379939133609,
+      "previous_audit": "explicit wrong downhill sign",
+      "operator_pair": [
+        551,
+        600
+      ],
+      "numeric_target": {
+        "event": 600,
+        "score": 0.5087884635701575,
+        "rank": 73
+      }
+    },
+    "m2-v5-d2-q24-h2-endpoint-first": {
+      "maximum": 0.5216444934762327,
+      "events": [
+        495
+      ],
+      "qualifies": false,
+      "paired_proposal": [
+        [
+          636,
+          780
+        ]
+      ],
+      "paired_score": 0.5438285401438656,
+      "previous_audit": "local downhill update omitted in a naturally ended answer",
+      "operator_pair": null,
+      "numeric_target": null
+    },
+    "m2-v7-d1-q8-h3-chronological": {
+      "maximum": 0.5602832219138171,
+      "events": [
+        556
+      ],
+      "qualifies": false,
+      "paired_proposal": [
+        [
+          259,
+          556
+        ]
+      ],
+      "paired_score": 0.5576765925866587,
+      "previous_audit": "local downhill update omitted in a naturally ended answer",
+      "operator_pair": null,
+      "numeric_target": null
+    }
+  },
+  "calibration": {
+    "originals": 25,
+    "families": 14,
+    "threshold": 0.6683255407615306,
+    "balanced_accuracy": 0.96,
+    "unique_top_at_audited": 24,
+    "passed_at_audited": 23,
+    "off_target_at_or_above": 0,
+    "numeric_friction_audited": 25,
+    "numeric_friction_at_or_above": 0,
+    "top_numeric_friction": 0,
+    "min_true": 0.5956649543288889,
+    "max_friction": 0.47631436055309884
+  },
+  "prediction_vs_result": "The numeric-only score independently reproduces the second event of each staged proposal. One is the earliest mixed downhill subtraction; the other is a later numeric repetition. See the calibrated decisions for each.",
+  "failures_only": "Ordering between symbolic and numeric scores did not explain either fitted maximum. The two first explicit numerical substitutions ranked fourth and twenty-first. An operator embedded in a later repetition differs from the first failing choice. Numeric score and phase confidence say nothing about which sign is arithmetically correct.",
+  "what_this_changes": "Treat the numeric-only reading as an observed phase diagnostic. It supplies no replacement for the verified whole-trace plus staged registration in the live learner."
+}

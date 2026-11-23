@@ -1,0 +1,196 @@
+{
+  "method_step": 4,
+  "operation": "stock-joint-fit-climb-read",
+  "why_this_direction": "Before using the two selectively tested group fields in one learner, check the climb field on the independently identified historical climb fit, where the original model correctly adds downhill energy.",
+  "repeating_pattern_check": "Previously a preservation case counted as a putative repair, and a final answer changed while leaving intrinsic arithmetic incorrect. Acquire the specified original model on the actual earlier fitting prompt and compare the frozen field on identical source cells.",
+  "what_went_wrong_before": "The earlier two-update descent run had no failing climb in its gradient. A field learned on wrong descents could reflect the surrounding history instead of a portable climb contrast.",
+  "hypothesis": "The registered climb contrast applies also to a wrong climb preceded by a correct downhill operation.",
+  "prediction": "The stock 95/120/NO fit shows a larger climb residual than the two development correct-climb routes on common cells.",
+  "would_weaken_it": "A conflicting independently audited computation, absent stage coverage, or a climb score typical of the valid controls weakens this training target.",
+  "rule": "Fully capture on the original stock checkpoint using the qualified GPU1 worker. Bind existing native records for physical scoring, acquire unrestricted text, and use only the full computational trace for correspondence and residuals.",
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/read.py",
+    "sha256": "e230a412041e53f840e8c154397f71897500965f8668a965f037a546dffa7694"
+  },
+  "model": {
+    "record": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  },
+  "prior_case": {
+    "record": "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-13-channel-h1/discovery-13-channel-h1/case.json",
+    "sha256": "a2d4eb8add546593e9860945c3a7a40e55bf96cc8194844897a693806789517f"
+  },
+  "prior_generation": {
+    "record": "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-13-channel-h1/discovery-13-channel-h1/result.json",
+    "sha256": "2a92416df88e2b53979446daaaf8d3714dc89798e387777711a730cc5e9d638b"
+  },
+  "comparison": {
+    "record": "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/compare.py",
+    "sha256": "e2f51231e7331e197f8e59ce554e60ca35e9d43ac6d6c7d460734c578da661ea"
+  },
+  "reference": {
+    "index": {
+      "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/index.json",
+      "sha256": "66f2b8e0bfdbebd43ef5b2465ff5bc12c2ad58b8b08894c8a4ce72978d0c2887"
+    }
+  },
+  "stream_reader": {
+    "record": "records/development/2026-11-12-path-forward/states_reading.py",
+    "sha256": "8b60abdc42f039636279c9f4338c193ba4d9edb22e81f87925944f19c1433025"
+  },
+  "reader_adapter": {
+    "record": "records/development/2026-11-18-unbanded-control-readback/compare.py",
+    "sha256": "9aecbb489f689209a017dc389efadf5536ccb0d2c4fbe0dca94e73cd6e2e9548"
+  },
+  "registrar": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+    "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+  },
+  "geometry": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "sha256": "bdcb750aa79e48c5ab34a01b010d31f7722c313e417abd5dccc621cadc9ed30b"
+  },
+  "prior_scores": {
+    "record": "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/measurements.json",
+    "sha256": "85f6620d8d6c96eaa3e2c0df4a438871b1bb2fed7d9262001ee729af3eacb6aa"
+  },
+  "climb_field": {
+    "record": "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/field.npz",
+    "sha256": "9f655b544c5965e52798b7693aea6449502a2880057ad81dd8f8ac3afd6ec8b5"
+  },
+  "evaluator": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+    "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+  },
+  "gpu_protocol": {
+    "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/declaration.json",
+    "sha256": "e9b0b3ade8873e7becd24d86d31ab5effee44cba6819aa60a2d51e20de440340"
+  },
+  "capture_protocol": {
+    "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field-protocol.json",
+    "sha256": "9f1a4e0e40f29bb78239a7b16d217b0820a48ecbbd8160c132084348ccd4eb6e"
+  },
+  "sources": [
+    {
+      "record": "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/compare.py",
+      "sha256": "e2f51231e7331e197f8e59ce554e60ca35e9d43ac6d6c7d460734c578da661ea"
+    },
+    {
+      "record": "records/development/2026-11-18-unbanded-control-readback/compare.py",
+      "sha256": "9aecbb489f689209a017dc389efadf5536ccb0d2c4fbe0dca94e73cd6e2e9548"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+      "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+    },
+    {
+      "record": "records/development/2026-11-12-path-forward/states_reading.py",
+      "sha256": "8b60abdc42f039636279c9f4338c193ba4d9edb22e81f87925944f19c1433025"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+      "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/native_key_driver.py",
+      "sha256": "617b34d8bcb0d183e5161ea3f8c7a8c14601eb5f4b35e2bda019a9f89b5c9773"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/read.py",
+      "sha256": "e230a412041e53f840e8c154397f71897500965f8668a965f037a546dffa7694"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+      "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+    },
+    {
+      "record": "records/development/2026-11-17-reference-preservation/run.py",
+      "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+    },
+    {
+      "record": "records/development/2026-11-16-factor-direction/native.py",
+      "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+    }
+  ],
+  "inputs": [
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-13-channel-h1/discovery-13-channel-h1/case.json",
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-13-channel-h1/discovery-13-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+    "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/measurements.json",
+    "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/field.npz",
+    "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/declaration.json",
+    "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field-protocol.json",
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-004-h1/index.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/result.json",
+    "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/stock/capture.json"
+  ],
+  "observability": {
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/compare.py",
+        "sha256": "e2f51231e7331e197f8e59ce554e60ca35e9d43ac6d6c7d460734c578da661ea"
+      },
+      {
+        "record": "records/development/2026-11-18-unbanded-control-readback/compare.py",
+        "sha256": "9aecbb489f689209a017dc389efadf5536ccb0d2c4fbe0dca94e73cd6e2e9548"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/register.py",
+        "sha256": "fcc7fcd669faf76944d729d24f009b4e6cc9ef30ff45bfcb52088ccb314f7204"
+      },
+      {
+        "record": "records/development/2026-11-12-path-forward/states_reading.py",
+        "sha256": "8b60abdc42f039636279c9f4338c193ba4d9edb22e81f87925944f19c1433025"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/turn_pair.py",
+        "sha256": "10fcff9402105e6ed0aa76c88d75df7b6f134b502493f7c62979ea9774dca3ec"
+      },
+      {
+        "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+        "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/native_key_driver.py",
+        "sha256": "617b34d8bcb0d183e5161ea3f8c7a8c14601eb5f4b35e2bda019a9f89b5c9773"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/read.py",
+        "sha256": "e230a412041e53f840e8c154397f71897500965f8668a965f037a546dffa7694"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+        "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+      },
+      {
+        "record": "records/development/2026-11-17-reference-preservation/run.py",
+        "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+      },
+      {
+        "record": "records/development/2026-11-16-factor-direction/native.py",
+        "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+      }
+    ],
+    "entrypoint": "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/read.py",
+    "operations": [
+      "native.capture"
+    ],
+    "local_events": "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/observability/events.jsonl"
+  },
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+}

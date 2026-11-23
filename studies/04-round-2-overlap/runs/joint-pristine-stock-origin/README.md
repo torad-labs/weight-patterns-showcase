@@ -1,0 +1,7 @@
+# Measured stock origin for the joint fit
+
+The published BF16 model was read and verified against SHA-256 `6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c`. The qualified GPU 0 reader generated the original fitted prompt from a sealed descriptor and measured all 105 merges on 578 events. The answer ended naturally. It computed `64 − 40 = 24 J`, then correctly applied the 13 J dissipation on that input to give 11 J. It used the correct 20 J climb and gave the wrong NO verdict. The physical sequence is `64 + 40 = 104 J`, then `104 − 13 = 91 J`, so the answer should be YES. Native measurement · Arithmetic readback
+
+The typed checkpoint takes all 538 eligible native tensors directly from the verified stock descriptor. Its one 9,257,704,584-byte native payload completes the existing continuation schema. The original GGUF remains the seed for other model bytes. There is no second persistent GGUF copy. The remainder payload is empty and every tensor explicitly has a zero remainder. The run installed zero updates. Stock binding · Typed manifest · Clean exit
+
+The existing Final Experiment preparation consumed this origin at historical generation zero in a read-only integration check. Four focused tests covered the valid origin, the wrong predecessor folder, a nonzero generation, and a nonzero optimizer remainder. The ordinary reference measurement is used for continuation admission. The joint learner independently declares and acquires its full case panel and computes its multi-operation objective. Final-state receipt · Joint case inventory

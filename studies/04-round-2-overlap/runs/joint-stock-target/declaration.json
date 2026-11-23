@@ -1,0 +1,119 @@
+{
+  "method_step": 4,
+  "operation": "joint-stock-operation-target",
+  "why_this_direction": "A single installed model needs local requests for the stock fitted climb and downhill errors. Selectively tested separate group directions and an operation-specific matcher allow the shared native loop to combine their gradients.",
+  "repeating_pattern_check": "The previous run skipped a measured precursor after weights changed and froze out new matched cells. Match downhill with its corrected donor neighborhoods, regenerate every active case, include newly matched cells and keep missing operations visibly unresolved.",
+  "what_went_wrong_before": "Climb was absent from the loss, and the earlier downhill matcher sometimes confused legitimate friction with wrong downhill subtraction. A correct final verdict could conceal arithmetic regression.",
+  "hypothesis": "The shared weights can follow both conditional computational corrections while retaining valid operations on the active cohort.",
+  "prediction": "Both targets and the affine friction field can be bound to the same measured 44 J reference, with downhill stages reproducing the reference audit and no tolerance applied.",
+  "would_weaken_it": "Missing or displaced stages on a fitted operation, divergence of one fitted physical chain, preservation failure or no transfer weaken the training procedure.",
+  "rule": "The corrected downhill field uses the same learned matcher during construction and on each fresh answer. The climb field uses its whole-prefix registration. Both are local signed squared residuals. Every declared protected computation also regenerates. The fixed 44 J reference is read-only. Normal native stop supports independent research judgment; zero loss is unnecessary.",
+  "anchor": "expanded-004-h1",
+  "context": 2048,
+  "repair": {
+    "discovery-05-channel-h1": "downhill",
+    "discovery-13-channel-h1": "climb"
+  },
+  "cases": {
+    "discovery-05-channel-h1": {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/discovery-05-channel-h1-full-context.json",
+      "sha256": "1791d71d5cd36d839f9110440e730bf2815dee2752f96628a82ee68fd3fe70c8"
+    },
+    "expanded-004-h1": {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/expanded-004-h1-full-context.json",
+      "sha256": "bf14e75e75c0069589c9363881f5d4f99f557326a938d33c4844029c73781adb"
+    },
+    "discovery-13-channel-h1": {
+      "record": "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-13-channel-h1/discovery-13-channel-h1/case.json",
+      "sha256": "a2d4eb8add546593e9860945c3a7a40e55bf96cc8194844897a693806789517f"
+    }
+  },
+  "sources": [
+    {
+      "record": "studies/04-round-2-overlap/runs/joint-stock-target/build.py",
+      "sha256": "aab02f395730cef52e0b783cb855dca3fbedd75a0ae5886412d4abc48d74b297"
+    },
+    {
+      "record": "records/development/2026-11-18-downhill-operation-field/matcher.py",
+      "sha256": "8c8bb9a45bfb106445d0a343a5b823a40120fa3165414357380f43eba3b6fde3"
+    },
+    {
+      "record": "code/signal-trace/pipeline/observability/recorder.py",
+      "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+    }
+  ],
+  "learned_matcher": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-target/source/matcher.json",
+    "sha256": "e3bfb955e5845eaee9b14276736da9d855489f39224323df30f61d3531b40506"
+  },
+  "downhill_controls": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-target/source/evaluation.json",
+    "sha256": "7681d9f1ea6407e1ad757efad09de5c50bc2db600f12ac484eb77ee9b42a6a6e"
+  },
+  "downhill_field": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-target/source/field.npz",
+    "sha256": "60aaa128952ed3696a23a63d2ea17d196d321f7c856d2745811c08bc1bc306d1"
+  },
+  "older_group": {
+    "record": "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/training-group.json",
+    "sha256": "4bbee34dc8c6d8a3f85700c1e12d6d6aab2b881743b473c3d90e51b0aad94a0e"
+  },
+  "matcher_program": {
+    "record": "records/development/2026-11-18-downhill-operation-field/matcher.py",
+    "sha256": "8c8bb9a45bfb106445d0a343a5b823a40120fa3165414357380f43eba3b6fde3"
+  },
+  "climb_field": {
+    "record": "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/field.npz",
+    "sha256": "9f655b544c5965e52798b7693aea6449502a2880057ad81dd8f8ac3afd6ec8b5"
+  },
+  "climb_result": {
+    "record": "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/result.json",
+    "sha256": "f04ca9576066e05932196b30ff72dd496f375d3f8f6f2d0770575db77ecd983d"
+  },
+  "stock_read": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/result.json",
+    "sha256": "b1457aa0f5353368ebc937e71fe033cbecbbe1ce0ecdb9ee59736c702369b8dd"
+  },
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-target/build.py",
+    "sha256": "aab02f395730cef52e0b783cb855dca3fbedd75a0ae5886412d4abc48d74b297"
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/inputs/acquisition/cohort-original/discovery-13-channel-h1/discovery-13-channel-h1/case.json",
+    "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/field.npz",
+    "studies/04-round-2-overlap/runs/joint-climb-conditional-overlap/result.json",
+    "studies/04-round-2-overlap/runs/joint-stock-climb-fit-reading/result.json",
+    "studies/04-round-2-overlap/runs/joint-stock-target/source/evaluation.json",
+    "studies/04-round-2-overlap/runs/joint-stock-target/source/field.npz",
+    "studies/04-round-2-overlap/runs/joint-stock-target/source/matcher.json",
+    "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/discovery-05-channel-h1-full-context.json",
+    "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/expanded-004-h1-full-context.json",
+    "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/training-group.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/joint-stock-target/fields.npz",
+    "studies/04-round-2-overlap/runs/joint-stock-target/policy.json",
+    "studies/04-round-2-overlap/runs/joint-stock-target/result.json"
+  ],
+  "observability": {
+    "entrypoint": "studies/04-round-2-overlap/runs/joint-stock-target/build.py",
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/joint-stock-target/build.py",
+        "sha256": "aab02f395730cef52e0b783cb855dca3fbedd75a0ae5886412d4abc48d74b297"
+      },
+      {
+        "record": "records/development/2026-11-18-downhill-operation-field/matcher.py",
+        "sha256": "8c8bb9a45bfb106445d0a343a5b823a40120fa3165414357380f43eba3b6fde3"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      }
+    ],
+    "local_events": "studies/04-round-2-overlap/runs/joint-stock-target/observability/events.jsonl",
+    "operations": [
+      "joint.target_freeze"
+    ]
+  }
+}

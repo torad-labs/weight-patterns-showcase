@@ -1,0 +1,14 @@
+{
+  "declared_at": "2026-11-18T03:51:36.096068-06:00",
+  "motivation": "The registered primary catches 13/13 failures but intervenes on two valid cases, exactly those whose donor anchors are late; the first-warning donor comparison misses 6/13. Is timing of the donor comparison alone sufficient to explain the errors?",
+  "rules": {
+    "computational_consensus": "Retain known 18-member development cohort. For every outer energy group and donor, exclude both configurations in constructing its FF20 gate and the template set. Of its consecutive-positive event endings choose the two-event FF20 turn pair with smallest median distance to the registered pair of the OTHER eligible donor energy configurations. Distance sums squared turn distance at previous and current event. Each energy configuration contributes its median member distance, bounding duplicate influence. A tie takes the first event. All decoding events are eligible, including off-phase events. The donor assignment can use its saved whole history; query scores only use its current and earlier computation. Every other part of primary score remains frozen.",
+    "timing_oracle": "As a retrospective diagnosis only, substitute every donor's previously annotated actual pre-descent event. Only two anchors change relative to registered. Query scoring remains computation-only. Report identifiability if correct donor timing were given. Never use this annotation variant to propose or apply a weight edit.",
+    "interpretation": "Report original cohorts, actual 387\u2192388, 175\u2192189, four swap arms and reordered response under both variants. Report where each source ended up as well as alert counts. Compare with actual annotated friction subtraction on the saved successful fitted controls. Do not choose a winning rule as validated on these same examples."
+  },
+  "depends_on": [
+    "declaration.json",
+    "result.json"
+  ],
+  "output": "registration-results.json"
+}

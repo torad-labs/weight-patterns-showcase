@@ -1,0 +1,120 @@
+{
+  "method_step": 3,
+  "operation": "prefix-balance-known-error-origin",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "why_this_direction": "The historical transplant donor has an exact working BF16 reconstruction and a verified incorrectly signed descent. A typed checkpoint makes those same weights usable with full-state restoration.",
+  "repeating_pattern_check": "A wrong loss or generated history does not reconstruct native weights. Use the exact verified seed and sparse overlay bytes, preserve model identity, and disclose that the prior learner carried no rounding state.",
+  "hypothesis": "The legacy early donor can be packaged under the current complete typed tensor inventory without changing a native value.",
+  "what_went_wrong_before": "The observed 387/388 reversal has no matching saved native and remainder payloads. Do not infer those payloads from saved traces.",
+  "rule": "Rebuild private seed and verified sparse overrides using the historical loader. Use the canonical full-state inventory and exporter. Each optimizer remainder starts at exact zero because the older native learner used no accumulator. Preserve the legacy measurement and identity, then validate admission through the current origin reader.",
+  "prediction": "All 538 canonical tensor entries survive complete native packaging, with a zero-byte remainder payload and the same legacy identity and source measurement.",
+  "would_weaken_it": "A native byte mismatch, changed seed or overlay, loss identity mismatch, or incomplete measured legacy source invalidates the origin.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/declaration.json",
+    "studies/04-round-2-overlap/runs/functional-layout-original/source-records/architecture.json",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-overrides.npz",
+    "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-state.json",
+    "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/loop/27/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/declaration.json",
+    "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+    "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/declaration.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/prefix-balance-known-error-origin"
+  ],
+  "parameters": {
+    "storage": {
+      "measured_from": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/state.json",
+      "derivation": "Keep the inherited 40 GB free floor plus summed canonical native tensor spans and one recent upper-sized checkpoint manifest.",
+      "scales_with": "native tensor inventory, manifest size and existing disk floor"
+    }
+  },
+  "reference": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+  },
+  "lineage": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/declaration.json",
+    "sha256": "263c175e4e3d51333c96a4913df2c14b47425fda8be42b460abe721c1fda7a58"
+  },
+  "legacy_checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-state.json",
+    "sha256": "58bcabb5b2c78423aae268068676cda29da6d2c8452f4030c54e6c3e01f9955f"
+  },
+  "legacy_measurement": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/loop/27/measurement.json",
+    "sha256": "6de1603af278de16e0fe5fb66d57634a37e225791b556b3a674b0cb5ca704268"
+  },
+  "development_declaration": {
+    "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/declaration.json",
+    "sha256": "e9b0b3ade8873e7becd24d86d31ab5effee44cba6819aa60a2d51e20de440340"
+  },
+  "free_floor_bytes": 40000000000,
+  "manifest_bytes_reserve": 637848,
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/prefix-balance-known-error-origin/materialize.py",
+    "sha256": "e55fb4c73c57033375900a1d252f37b4c37d811f35a5ab81c860b622d031c16b"
+  },
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "organization": "research-operations/1",
+    "mode": "direct Recorder API",
+    "entrypoint": "studies/04-round-2-overlap/runs/prefix-balance-known-error-origin/materialize.py",
+    "events": "observability/events.jsonl",
+    "operations": [
+      "state.restore",
+      "state.checkpoint"
+    ],
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-balance-known-error-origin/materialize.py",
+        "sha256": "e55fb4c73c57033375900a1d252f37b4c37d811f35a5ab81c860b622d031c16b"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/calibrated-descent-development-outcome/run.py",
+        "sha256": "cd636670206628c745c3408dddbd9c19c9490aa175207a660a80ca55a9c865f4"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/evaluate.py",
+        "sha256": "28cd1b594d89886f85c71ac45ee03ed107ee3d13cdc9cbf07140d16756707d9c"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/full_state.py",
+        "sha256": "937736168ebc21f7f2d4f9986441df992b23001b99f86c8bf9d52b8b3731be80"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/full_parameters.py",
+        "sha256": "c320dac25d60b8d7cba8928b4c6a35c234c52e496f59658e7ee9eb502b962355"
+      },
+      {
+        "record": "code/signal-trace/pipeline/weight_edit/group_development_origin.py",
+        "sha256": "3a1b781b804354af0cdbecf8815612008018f56a2d361847f21e6ee06f2b3fc7"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      },
+      {
+        "record": "records/development/2026-11-17-final-experiment/run.py",
+        "sha256": "82bc41608df09dfcfb424b2920b1a16f99edd3d48d805810bb0b3f6e9e4d2408"
+      },
+      {
+        "record": "records/development/2026-11-17-reference-preservation/run.py",
+        "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+      },
+      {
+        "record": "records/development/2026-11-16-factor-direction/native.py",
+        "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/native-first-bad/replay.py",
+        "sha256": "3bab1f6fccc57676e2eed0a85dabf4fc8a0be232c32468e3dd99892d235a0092"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_v3.py",
+        "sha256": "a7cd560f943232a37126d980b1220b590137dee3ce2135279c2b985a6d72a610"
+      }
+    ]
+  }
+}

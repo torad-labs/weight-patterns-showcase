@@ -1,0 +1,248 @@
+{
+ "method_step": 5,
+ "run_by": "weight-research-astra (the objective and this diagnostic's specification), weight-research-fable (this declaration, the solver, the execution and the readings)",
+ "status": "Declared on November 12, 2026 (CT), before the members' reference is made and before any path is walked.",
+ "kind": "A development diagnostic at one matrix, on rows already kept. It makes no candidate and no model, reads no model through the engine, changes no reference and no declared setting of any run, and selects nothing. The BF16 matrices its paths end on are kept in this folder as diagnostic artifacts; none is written into a model file or read natively under this declaration.",
+ "authority": "Marcos, November 12 (journal/2026-11-12-correction-not-protection.md): the training should know where the overlap exists and that nothing should be applied where the computation already agrees; and, relayed the same night, a robust path forward is to be planned and then acted on, with no waiting on his approvals. Astra's specification of this diagnostic (specification, commit 2dc2cc89) says no new approval is required for work within the established method, and fixes its scope: one declared kept-row diagnostic, no new GGUF, no native run, C not replaced.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/state-overlap-2/recurrence.npz",
+ "objective": "C's sum with one thing changed: the wrong group's cells are aimed, at every place, at the nearest mixture of the original correct answers' own registered states (one set of coefficients for the direction and the log of the size together, with the cells' own radii and weights) and not at the correct answers' mean. Each correct member's own error at every place and prompt position stands exactly as in C. Read beside C's own sum under C's recorded numerical work.",
+ "specification": "records/retrospectives/2026-11-12-correct-mixture-astra.md",
+ "original_observations_from": "controlled-bf16-1",
+ "correction_reference": "studies/04-round-2-overlap/runs/correction-at-19/reference",
+ "correction_reference_index_sha256": "74d1eafe5b782532f4ced45d1a46ee13efaa3627e208b1232405e0996e579c36",
+ "planned_starting_state": {
+  "source_run": "controlled-bf16-4",
+  "source_run_role": "Read its original-derived binding, membership, layout and baseline only. Its edited model and edited rows are not this run's starting state.",
+  "matrices_written": 0,
+  "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "matrix": "blk.17.attn_output.weight",
+  "source_rows": "studies/04-round-2-overlap/runs/correction-at-17-original/passes/rows-blk.17.attn_output.npz",
+  "source_rows_sha256": "57ee7ae213e04e1ddb94c3e67483271e5641ff463ee0f4a89ee100d9cfaa000e",
+  "source_rows_role": "The rows correction-at-17-original kept and correction-members-at-17-original was solved on: the 30 fitting answers' recorded text once through the original BF16 model at this matrix, 14,592 answer rows and 5,159 rows at the prompts' positions. This run reads no rows of its own and no model through the engine."
+ },
+ "correct_members": {
+  "requests": [
+   "correct_places",
+   "correct_prompt"
+  ],
+  "replaces_the_correct_groups_cells": true,
+  "read_by": "mixture.walked, which charges them to every path's answers (correction.charged) and leaves the correct group's cells out of both sums (correction.without_correct), as C's candidate command did."
+ },
+ "matched_work": {
+  "run": "correction-members-at-17-original",
+  "read_from_its_record": "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate/record.json: the unit of the ridge (1.3140701010706966e-05), the first ridge (2^23 units), the ridge it selected (2^-5 units) and its work (at most 40 rounds a ridge, 10 aiming passes of at most 40 conjugate-gradient iterations, RESOLVED = sqrt(float32 epsilon), each ridge half the one before)",
+  "checked_by_the_command": "the same model, matrix, kept rows, requests and reference as that run; that run's recorded work equal to tube.EFFORT; the unit computed again on these rows within RESOLVED of the recorded one. Any difference stops the command.",
+  "what_matched_means": "The same rule and the same allowance for both sums, not the same count: every stage is run to its own end by the solver's own stops, and the rounds a stage takes are each path's own and are recorded."
+ },
+ "deciding_rows": {
+  "of_the_prediction": [
+   {
+    "id": "discovery-15-channel-h1",
+    "step": 150,
+    "place": 169
+   },
+   {
+    "id": "expanded-029-h1",
+    "step": 145,
+    "place": 169
+   },
+   {
+    "id": "expanded-076-h1",
+    "step": 146,
+    "place": 169
+   },
+   {
+    "id": "expanded-078-h1",
+    "step": 146,
+    "place": 169
+   }
+  ],
+  "told_beside": [
+   {
+    "id": "discovery-00-channel-h3",
+    "step": 166,
+    "place": 157,
+    "why": "complete in the original and at the token limit under C; not one of the four that leave the descent out"
+   }
+  ],
+  "every_fitting_answer": "Each fitting answer's first step at which C's own answer, and B's, leaves the original's own answer, read from weight-research-perfomance's captures as rows_at_the_break.py reads them (the committed record lists them); the readings command reads them again from the same captures and stops if the four above are not what it finds.",
+  "what_a_row_is": "A row is the computation that writes its token. In the answers on this line the sign is written at step 141 or 142, registered at place 168; place 169 holds the rows after it. Three of the four rows above write the first word after '+ \\text{' ('Work' in the original, 'Energy' under C); discovery-15-channel-h1's writes 'negl' in the original and '0' under C. They lie three to nine tokens after the sign.",
+  "source": "records/development/2026-11-12-correction-objective/rows-at-the-break-correction-members-at-17-original.txt (commit 99edd068)"
+ },
+ "stretches": [
+  {
+   "first": 0,
+   "last": 148,
+   "name": "before the heading"
+  },
+  {
+   "first": 149,
+   "last": 168,
+   "name": "the heading and the line as far as the row that writes the sign"
+  },
+  {
+   "first": 169,
+   "last": 201,
+   "name": "the rows after the sign's token"
+  },
+  {
+   "first": 202,
+   "last": 479,
+   "name": "the rest"
+  }
+ ],
+ "solver": {
+  "files": {
+   "code/signal-trace/pipeline/weight_edit/mixture.py": "f11424f16bdb7c347efe5ae79e72e10444cab81b28b9ac11c256445b44d08ba7",
+   "code/signal-trace/pipeline/weight_edit/correction.py": "ad7c3697eec7882a072a2f28b8865d3a152ebd0fc62e24d1dc456d406fc91044",
+   "code/signal-trace/pipeline/weight_edit/tube.py": "f761f1d0c14ab09979e6534a7bfa8497e86a0564d485d290aaa95bc0453da754"
+  },
+  "what_changed_in_correction_py": "Four places, none of which changes a reading or a solve of the cells that file had (the 21 tests of test_correction.py pass unchanged): Cells.weighed, which without_correct now calls so that cells of another class stay what they are; read passes a bound on where a merge's cells give one; solve takes a written part of a step only below the standing reading less its bound, which without a bound is the comparison it made before; a round's and a stage's record keep the bound where there is one.",
+  "tests": "code/signal-trace/tests/test_mixture.py, 13 passed on the CPU with the 21 of test_correction.py: the coefficients are the joint ones (against a grid of the simplex, with the bound bracketing the least cost), identical members give C's cell exactly, a cell stands at the wrong group's reference plus its movement, the correct members' charges and the rest of the sum are as they were, and cells with their coefficients held are never under the reprojected reading and equal it where they were taken.",
+  "checked_on_the_card": "Before this declaration, on the same kept rows and with nothing kept (records/development/2026-11-12-correction-objective/README.md, the section on the search): two rounds at each of four ridges of fold 0's path. With C's sum the start read C's recorded 0.001036689990519734 and 0.001036689920171574 to the last digit. With the mixture target the start read 2.9019e-04 with a bound of 3.4e-13, and after those eight rounds 3.219e-05 on the answers solved on and 5.350e-05 on the fold read (C's sum: 1.715e-04 and 3.811e-04 after the same eight rounds, each sum read by itself). That is a check that the code runs. No path was walked to an end and no row's movement was read.",
+  "the_commands_record": "correct-members/index.json and every path's record keep the hashes of mixture.py, correction.py and tube.py as they are when the command starts; the readings' record keeps its own module's.",
+  "readings_module": "code/signal-trace/pipeline/weight_edit/mixture_read.py, written while the paths are walked, to the definitions fixed in rule.readings and parameters; it reads kept matrices and fits nothing."
+ },
+ "hypothesis": "A capability leaves a recurring difference between the connected traces of correct and wrong answers, and editing the weights where that difference recurs can repair the capability. This diagnostic concerns what the recurring difference is where the correct answers differ from one another. The correct answers' overlap at a place is not one point: they word a step in more than one way and are right in each. A wrong answer that stands where some correct answers stand shows, there and at that merge, no difference that recurs across the correct answers. Aiming the wrong group at the correct answers' MEAN asks it to cross a difference that lies among the correct answers; aiming it at the nearest point of what the correct answers span asks only for what no mixture of them shows. A span holds combinations no answer was observed at, so a cell inside it shows no discrepancy this relaxation can see, which is not a statement that the computation there is correct.",
+ "why_this_direction": "C (correction-members-at-17-original, result.json at 476808aa) kept B's count of six complete repairs, but only two of B's six; five originally complete correct answers are no longer complete, four of them leaving the descent out. Read row by row on the kept rows (the development README, 'rows at the break' and 'members in the gap', corrected in the commit that declares this run): those four are the four correct fitting answers that write the wrong answers' own line, they stand among the wrong answers' states from the heading to the row that writes the sign, and their first changed decision lies at place 169, three to nine tokens after the sign, where C moved their rows by 0.050 to 0.064 in B's direction (B: 0.092 to 0.146). On that heading and line the wrong fitting mean lies 0.05 from a mixture of the correct fitting answers where the correct mean lies 0.17 from it, and from place 169 on 0.92 of the gap lies beyond any mixture; the same reading from the first sweep's recordings holds at every one of the 105 merges (0.28 to 0.43 of the gap on the heading and line, 0.62 to 0.93 over places 169 to 201). B's first changed token in the identical-line wrong answers lies on the heading itself (steps 128 and 129, places 152 and 153: 'at the bottom of the rough section' for 'at bottom of descent', in expanded-045-h1, expanded-046-h3, discovery-17-channel-h1 and expanded-070-h1 alike), before the sign it then writes. So the pooled target asks, on the heading and the line, for a move between two wordings that correct answers already occupy on both sides, and the solves made it. Step 5 of the method asks for no or minimal correction where the current computation agrees. The correct members' own error (C) says that of each correct answer; nothing yet says it of a wrong answer that stands among correct ones. This run measures, on the same rows and under C's recorded work, what the solve does when the wrong side's target says it. It is the next step because C's row-by-row reading and the original's own map located the request that is not a difference between the groups, not because C's counts were bad: C's counts met their narrow predictions.",
+ "repeating_pattern_check": "A solve does what its objective asks and spends what it leaves free. Every construction so far asked the wrong group for more than the difference that recurs: a2-path fitted the wrong answers' rows to the correct pattern everywhere and broke 12 of the 30 correct answers; correction-at-19, B and C aimed the wrong group's mean at the correct mean at every place, and each one's candidate changed correct answers too (correction-at-19: the correct group's complete count fell; B: three correct answers acquired a required-energy error; C: five no longer complete, four of them the correct answers on the wrong answers' own line). Why we think it recurs: the reference has been one pattern a group, and a mean is not what recurs when the members differ among themselves. This run tests that reason and nothing else: only the wrong side's target changes, with the reference's weights, radii, rows, folds, solver and work as C had them. A second repeated pattern is this session's own reading taken further than it went: it named place 169 the sign's place before checking the registration (the sign is written at 168), and wrote that the difference 'begins where the capability is used' and that two thirds of the gap is wording; the three are corrected in the README in this commit. Here the rows are named by answer, step and place from the committed record, the statistic is fixed below before any path exists, and what a reading does not show is said beside it. A third is the solver's own: two runs of one declared solve differ by 2.5% to 9.4% on a fold's read sum at the weakest ridge (records/development/2026-11-12-correction-objective/same-solve-twice-correction-at-17-original.txt). The unchanged sum's path on all thirty is C's own last solve walked again, so what the same solve made twice gives for every figure of this run is measured inside it. A fourth is a search's leftover read as a result: the mixture is found by a finite search, every reading carries the bound of what it left, and a step is taken only below that bound.",
+ "what_went_wrong_before": "C kept B's wrong-side target and stated the correct side member by member. The correct members' own error did lower their movement per part of the wrong group's progress (R 2.00 to 0.67), and the four correct answers on the wrong answers' line were still moved at the rows that decided them. The fitting-only reading that suggested the mixture (members_in_the_gap.py) took the fitting groups' own means, not the reference's full cohort, and no radius: its 0.550 and 0.423 are not measurements of replacing C's target (Astra's assessment). Here the members are the full original correct cohort as the frozen reference reads it, the cost is the cells' own with their radii, and the coefficients are found from that cost, not from the direction alone. This session walked kept-row solves in development without a declaration earlier today; a scientific solve needs one even with no engine call (Astra), so this one is declared and the verifier runs before it.",
+ "rule": {
+  "reference": "The frozen output-norm reference correction-at-19 made from the original model, read only, with the index hash above: the same patterns, gaps, radii, group shares and scales as B and C. Nothing of it changes.",
+  "members_reference": "The `members` command (mixture.members), written once into correct-members and only read after. From the original recordings as correction.reference reads them (tube.recorded, the size as the engine recorded it, the model's last merge as the output norm passes it on): each of the thirty original correct answers' registered direction and log of the size at each of the 480 places of each of the 105 merges. The command stops at any merge where either group's mean made this way is not the reference's pattern within float32's rounding. At every merge it keeps, where the wrong group's reference stands with nothing moved: the coefficients of the nearest mixture at every place with the members' ids, the cost attained in both forms, its bound, the distance to the mixture, and beside them the same cells' cost with the pooled target. The members' features themselves are kept at the one merge the solve reads (89 MB); at any other merge the command makes them again from the same recordings in the seconds a merge takes.",
+  "objective": "With c_jk and l_jk original correct member k's registered direction and log size at place j, b_j and s_j the wrong group's frozen reference there, d_j(W) and h_j(W) the wrong group's mean paired movement on the rows read, counted as C counts it, u_j = b_j + d_j and v_j = s_j + h_j: F_j(W, alpha_j) = w_direction max(||u_j - sum_k alpha_jk c_jk|| - r_direction,j, 0)^2 + w_size max(|v_j - sum_k alpha_jk l_jk| - r_size,j, 0)^2 over alpha_jk >= 0 with sum_k alpha_jk = 1, and E_mix(W) = sum_j min_alpha_j F_j(W, alpha_j) + C_correct_members(W), at the matrix's own merge. C_correct_members is C's second and third terms exactly: each correct member's own squared error at every place and prompt position, direction and size, weighed w_correct,f/n_correct. The weights w and the radii r are the reference's own. The mixed direction is not made a unit vector again. Where every member has the same features this is C's wrong-side term. No added correct-group ball, wrong-prompt freeze, preservation term, new weight, crop to the sign or selector by answers. Beside it, C's own sum E_C, with the wrong group's cells aimed at the pooled target.",
+  "counted_from": "Every row is counted from the original file's own output at the same row, as B's and C's rows were (tube.counted_from on controlled-bf16-4's original-derived baseline).",
+  "data_roles": "The members of the mixture are the full original correct cohort, thirty answers, as the frozen reference's correct pattern is their mean: their ORIGINAL recordings only. The rows solved on and read are the fitting half's, 15 wrong and 15 correct, in the existing three folds. No row of a no-fit answer is solved on or read through any matrix here, and no answer is generated. Because every fitting correct answer's own recording is among the members, a fold's read sum is not a reading on a target the path never saw. reserved-40b stays sealed.",
+  "paths": "The `paths` command (mixture.walked): from the original matrix, eight paths, each down the same ridges from 2^23 to 2^-5 units, every stage run to its own end from where the stage before ended. For each of the two sums (members: E_C; mixture: E_mix), one path solved on all thirty fitting answers, and three solved on two folds and read on the third. The members path on all thirty is C's own last solve walked again; its matrix is compared with C's candidate weight for weight. Nothing is selected: every path ends at the ridge C selected, whatever it reads. Every path starts its searches from the mixture that weighs every member alike, and no search starts from another path's coefficients. A path whose record exists is not walked again.",
+  "numerical_work": "C's solver, with nothing of the solve changed and no second ridge on a step. The unit of the ridge, what speeds the linear solves and what a writing is nearest in are made from the reference's unmodified cells, the same for both sums. A round's step is solved with the mixture's coefficients found where the round's cells stand and found again at each aiming pass, as the aims are; a written BF16 trial is read through the merge with its coefficients found again there, and it is taken only when the whole sum it attains is under the standing attained sum less the standing bound, so that the nested sum itself has fallen whatever the search left. A part of a step that leaves less only inside the bound is refused and recorded. A stopped stage or an exhausted allowance is reported as that and is no certificate of an optimum.",
+  "readings": "The `readings` command (solver.readings_module). For each matrix M among the eight paths' ends, C's candidate and B's candidate, through the merge itself on the fitting answers' kept rows: (a) both sums and their parts, on all thirty fitting answers and, for a fold path, on the twenty it was solved on and the ten it was read on apart: the wrong group's cells under the pooled target (direction, size) and under the mixture target (direction, size, as attained, with the bound), the correct members' places (direction, size) and their prompt positions (direction, size); (b) for every fitting answer and place, the length of the answer's mean movement of the unit state, its part along the reference's gap as a part of the gap, and its mean change of the log of the size; (c) for every place, on the wrong group of the answers read: the mean movement's length and its part along the gap, the pooled and the mixture cost in both forms, the bound, the distance left to the mixture and the thirty coefficients by member id; (d) for every row of every fitting answer, the length of its unit state's movement; and at each fitting answer's first changed step under C and under B (deciding_rows.every_fitting_answer), that length, its part along the gap, the places the step is registered at and whether the original's own text is the recording up to it; (e) the statistic of the prediction (parameters.comparison_statistic), with its two lengths apart. From every path's record: the rounds each stage took and why it ended, each round's bound against the fall it accepted, the parts of steps refused inside a bound and the loops a search used. From the members' reference: both targets' cost by merge and stretch, and how many members a mixture holds. Figures are told by the stretches (parameters.stretches) and every array is kept per place and member, so that no passage average hides which members a mixture holds. None of these becomes a threshold, a selector or a target.",
+  "scope": "One matrix, from the original, on the recordings' text, at the one merge the matrix writes. No candidate, no model copy, no engine call, no own answers: whether an answer changes is not read here, and a lower statistic is not a repair. The radii kept from the reference were derived as the resolution of a pooled mean's difference and are not shown to be the right thickness around a span of members; they are kept so that the target is the one thing changed. A native successor is a separate specification after this result and C's completed reading.",
+  "storage": "Under 1 GB, all inside this run: the members' reference (about 110 MB), eight matrices with their records (about 110 MB) and the readings. Inputs and other runs' records are only read. Nothing is removed."
+ },
+ "parameters": {
+  "coordinates_and_weights": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+   "derivation": "The saved direction and log-size patterns, gaps, radii (r^2 = max(nu, q)), group shares (0.5 and 0.5 of 60) and scales (S_direction 1268.5365669493656, S_size 28.67797931944294) exactly as B and C used them. A wrong cell weighs 0.5/S_f (3.9415e-04 for the direction, 1.7435e-02 for the size) under either target. The radius under the mixture target is the same cell's radius.",
+   "scales_with": "The original model, its full original reference and the native terminal transform. Another source needs its own reference."
+  },
+  "mixture_members": {
+   "measured_from": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+   "derivation": "Every answer of the registered cohort marked correct, thirty of sixty: the answers whose mean is the reference's correct pattern, each with its own registered features from the same recordings by the same reading. No answer is left out or added and none is weighed beforehand; the coefficients are what the cost's own least value gives at each place.",
+   "scales_with": "The cohort and its registration. Another cohort gives another span."
+  },
+  "mixture_target": {
+   "measured_from": "records/retrospectives/2026-11-12-correct-mixture-astra.md",
+   "derivation": "Astra's F_j, as written in rule.objective: one set of coefficients a place for the direction and the log size together, least for the whole cost with its radii; the origin u = b + d and v = s + h, the frozen wrong reference plus the paired movement C counts; mixtures in the registered features, not renormalized.",
+   "scales_with": "The reference's cells and the members' features at the merge read."
+  },
+  "mixture_search": {
+   "measured_from": "records/development/2026-11-12-correction-objective/README.md",
+   "derivation": "A search ends when the summed bound of a merge's places (sum_k alpha_k slope_k - min_k slope_k, each place) is at most float32's rounding, 1.1920929e-07, of the summed cost attained: the cells are read in float32, and a difference under its rounding is not one a reading holds. The arithmetic of the search is float64. A last loop stands at the square of the number of members (900), a stop no search is meant to reach: a loop can admit one member, so that many loops fill a face from empty as many times as there are members. On the original's recordings a search from the mixture that weighs every member alike ended in 31 to 40 loops at six merges, and from a neighbouring search's coefficients in 12. A search that did reach the last loop would be told by its bound, which enters every acceptance; nothing is hidden by the stop.",
+   "scales_with": "The arithmetic the cells are read in and the number of members."
+  },
+  "step_acceptance": {
+   "measured_from": "records/retrospectives/2026-11-12-correct-mixture-astra.md",
+   "derivation": "A written BF16 trial is taken only when the whole sum it attains is strictly under the standing attained sum less the standing bound; since an attained sum is never under the nested sum and the standing nested sum is never under the attained one less its bound, the nested sum has then fallen. Otherwise the part of the step is halved down to no written movement, as C's search does. With C's sum there is no bound and this is C's own rule. No held reading vetoes a step.",
+   "scales_with": "The file's BF16 grid, the proposed change and what a search leaves."
+  },
+  "ridge_unit": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate/record.json",
+   "derivation": "C's recorded unit, 1.3140701010706966e-05 (correction.unit_of on the reference's unmodified cells at the original matrix over all thirty fitting answers' rows), read from C's record by the command and used for both sums and all eight paths. It holds no target: only the cells' weights on the rows' inputs. The command computes it again on these rows and stops if it is not within RESOLVED of the recorded value; the check before this declaration read 1.3140701012545314e-05, since the card's arithmetic does not repeat to the last digit.",
+   "scales_with": "The rows' inputs, the matrix's shape, the learned merge scale and the reference's weights."
+  },
+  "ridges": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate/record.json",
+   "derivation": "From C's first ridge, 2^23 units, to the ridge C selected, 2^-5 units, each half the one before (tube.PATH = 1): 29 stages a path, as C's last solve had. The first ridge is C's for both sums and is not computed again from the mixture sum, whose start is lower; a stage too strong to write an improving step leaves the matrix where it was and the path goes on. Nothing below 2^-5 is walked, so no reading of this run decides where a path ends.",
+   "scales_with": "C's computed first ridge and C's selection; another matched run has its own."
+  },
+  "stage_and_linear_work": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate/record.json",
+   "derivation": "C's recorded work: at most 40 rounds a ridge; a round's step by at most 10 aiming passes of at most 40 preconditioned conjugate-gradient iterations, each stopped at RESOLVED of its first slope; RESOLVED = sqrt(float32 epsilon) = 0.00034526698300124393. A stage ends on a fall no larger than RESOLVED of the round's starting sum, no improving written part of a step, no written movement, or the rounds allowed. C's last solve was allowed its selected round, 40, at its last ridge, which is the stage's own allowance, and took 38. The command stops if this file's work is not C's recorded work.",
+   "scales_with": "The local nonlinear and BF16 response at each ridge; the record keeps what each stage used and any exhausted allowance."
+  },
+  "solve_geometry": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-members-at-17-original/declaration.json",
+   "derivation": "The eigenbasis that speeds a round's linear solves and the measure a writing is nearest in are made from the reference's unmodified cells on the rows solved on (correction.basis_of), as in C, and are the same for both sums. They change how fast a solve arrives and which BF16 neighbour a writing prefers, not what is solved.",
+   "scales_with": "The rows solved on and the reference's weights."
+  },
+  "correct_members_terms": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-members-at-17-original/declaration.json",
+   "derivation": "C's two requests unchanged (its parameters correct_member_weight and prompt_position_weight): a correct member's squared own error at a place, and at a prompt position, weighs w_correct,f/n_correct with w_correct,f = 0.5/S_f and n_correct the correct members among the answers summed over (10 on two folds, 5 on the fold read, 15 on all thirty).",
+   "scales_with": "The reference's weights and the number of correct members in each sum."
+  },
+  "folds": {
+   "measured_from": "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate/record.json",
+   "derivation": "The existing three folds of the fitting half (tube.picks), five wrong and five correct each, as C's record lists the answers each fold reads. Of the four answers of the prediction, fold 0 reads expanded-076-h1, fold 1 expanded-029-h1 and expanded-078-h1, fold 2 discovery-15-channel-h1.",
+   "scales_with": "The cohort's frozen split."
+  },
+  "deciding_rows": {
+   "measured_from": "records/development/2026-11-12-correction-objective/rows-at-the-break-correction-members-at-17-original.txt",
+   "derivation": "For each fitting answer, the first step at which C's own answer leaves the original's own answer (weight-research-perfomance's captures), where the original's own text is the recording up to that step, so that the kept row is the row the changed model read. The four originally complete correct answers that leave the descent out under C: discovery-15-channel-h1 step 150, expanded-029-h1 145, expanded-076-h1 146, expanded-078-h1 146, each registered at place 169. Fixed from the committed record before any path; not chosen from this run's readings.",
+   "scales_with": "C's own answers and the registration; another candidate has other rows."
+  },
+  "stretches": {
+   "measured_from": "records/development/2026-11-12-correction-objective/members-in-the-gap-correction-members-at-17-original.txt",
+   "derivation": "Reporting windows only, read off the registration axis for the earlier reading and joined here into four so that this run's figures stand beside it: places 0 to 148; 149 to 168, the heading (149 to 159) and the line as far as the row that writes the sign (160 to 168); 169 to 201, the three places after the sign's token and the thirty after them that the earlier reading took; 202 to 479. Place 201 is where that earlier window ends and is no measured boundary. Every array is kept per place, so any other window can be read from this run.",
+   "scales_with": "The registration axis and where the line lies on it."
+  },
+  "comparison_statistic": {
+   "measured_from": "records/retrospectives/2026-11-12-correct-mixture-astra.md",
+   "derivation": "Astra's specification asks whether the target change reduces the four affected correct members' deciding-row movement relative to the wrong members' movement, not merely both lengths together. For answer i of the four and a matrix M: R_i(M) = |the unit state's movement at i's deciding row under M| over the mean, over the wrong fitting answers W(M), of |each one's mean movement at place 169 under M|, the place the four rows are registered at. W(M) is the fifteen wrong fitting answers for a path on all thirty and for B's and C's candidates, and the ten a fold path was solved on, with the five it was read on told beside. Compared, for each of the four: the mixture path against the members path on all thirty, and on the fold that reads the answer and is not solved on it. Beside each comparison stands what the same solve made twice gives: R_i of C's recorded candidate against R_i of the members path on all thirty. No ratio is formed where the wrong members have not moved. It is a description and no threshold or selector.",
+   "scales_with": "The deciding rows, the place they are registered at and the answers a path is solved on."
+  }
+ },
+ "prediction": "Astra's, stated before any path exists, with the statistic and the comparison to the same solve made twice fixed by this declaration. (1) On the original, at the merges of the model: aiming the wrong group at the nearest mixture leaves a small part of the pooled target's cost on the heading and the line (places 149 to 168) and most of it over the rows after the sign's token (169 to 201). At layer 17's attention this was already read in development for the direction (1.19e-04 to 1.77e-06, and 2.42e-04 to 2.00e-04); at the other merges it has not been read by stretch. (2) Under C's recorded work, for each of the four affected correct answers, R_i is lower on the mixture path than on the members path, on all thirty and on the fold that reads the answer without solving on it, by more than the same solve made twice differs. (3) The wrong side's request at and after the sign is still worked on: over places 169 to 201 the mixture path brings the wrong group's cost down under its own target, and the bound a search leaves is small beside the falls a round accepts.",
+ "would_weaken_it": "R_i not lower on the mixture path, or lower by no more than the same solve made twice differs: then the movement at the deciding rows comes with the request that remains at and after the sign and not with the one removed (lack of the separation). Or the mixture target leaves little at and after the sign as well, at this merge or through the depth; or the mixture path no longer moves the wrong answers at the rows where B's and C's changed decisions lie (loss of the recurring wrong-side request; the second form is this session's reading of that phrase and is reported whichever way it falls). Or bounds comparable to the falls accepted, parts of steps refused inside a bound, or a search at its last loop (large projection uncertainty). Any of these limits this target at this matrix, on these rows, with these radii and this work. None would negate the earlier repairs, B's or C's, or show that the difference cannot be separated. A lower R_i is not a repair: no model is made here.",
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/state-overlap-2",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/reference",
+  "studies/04-round-2-overlap/runs/controlled-bf16-4/model/bindings.json",
+  "studies/04-round-2-overlap/runs/correction-at-19/reference",
+  "studies/04-round-2-overlap/runs/correction-at-19/own/controls/original",
+  "studies/04-round-2-overlap/runs/correction-at-17-original/passes",
+  "studies/04-round-2-overlap/runs/correction-at-17-original/candidate",
+  "studies/04-round-2-overlap/runs/correction-at-17-original/own",
+  "studies/04-round-2-overlap/runs/separable-at-17-original/summary.json",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/candidate",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/declaration.json",
+  "studies/04-round-2-overlap/runs/correction-members-at-17-original/own"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/mixture-at-17-original/correct-members",
+  "studies/04-round-2-overlap/runs/mixture-at-17-original/paths",
+  "studies/04-round-2-overlap/runs/mixture-at-17-original/readings",
+  "studies/04-round-2-overlap/runs/mixture-at-17-original/logs",
+  "studies/04-round-2-overlap/runs/mixture-at-17-original/provenance.json",
+  "studies/04-round-2-overlap/runs/mixture-at-17-original/result.json",
+  "studies/04-round-2-overlap/runs/mixture-at-17-original/run.sh"
+ ],
+ "revisions": [
+  {
+   "revision": 1,
+   "made": "2026-11-15 14:34:50 CT",
+   "made_by": "weight-research-fable",
+   "record": "studies/04-round-2-overlap/runs/mixture-at-17-original/retired-programs.json",
+   "previous": "studies/04-round-2-overlap/runs/mixture-at-17-original/declaration-before-revision-1.json",
+   "previous_sha256": "76075f9a47205d8a75fc97c88f1921298cf2dab1d773f5db0b91b029de85a65d",
+   "reason": "This run's readings module, mixture_read.py, read each fitting answer at its first changed step under two candidates, found by comparing the tokens the captures wrote: a token decided which rows it read. The solver's mixture.py stays in the tree. Marcos's direction of November 14, 2026 is that an instrument that measures by tokens, values or words is taken out of the project, not fenced by a rule, and on November 15 he asked again whether tokens were being compared (relayed at 1:44 PM CT). weight-research-astra, who holds the loss and the loop, asked at 1:55 PM CT November 15 that in the older solver files the token, word and value measurements and their consumers be removed, with acquisition, provenance and plain matrix arithmetic kept. From this revision on the programs under `retired` are not in the tree: they leave with the commit that carries it, or left before it. Every hash this declaration binds still names the bytes that ran: each is the blob of that file at the commit named beside it, read and hashed when this revision was made. No outcome, no number and no other binding changes, and every record of the run stays. The run's commands cannot be started from the tree.",
+   "retired": [
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/mixture_read.py",
+     "sha256": "49f12150b7b1b27679d59e9642b17e4d22c68e6345d55664f1fe7696e8a3f86c",
+     "held_by_commit": "6e9bacc347db6536021700a13ec0ac6ce706c6ca",
+     "bound_as": "by its name, with no hash: these are its last bytes"
+    }
+   ]
+  }
+ ]
+}

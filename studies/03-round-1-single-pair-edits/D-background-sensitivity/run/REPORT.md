@@ -41,7 +41,7 @@ Visible prose or numbers do not by themselves label where hidden physics computa
 
 ## Stored candidate D: quieter background, preserved repairs
 
-The predeclared mean criterion passed. The one fixed inverse-second-moment adjustment and its native BF16 dry calculation are documented in [CANDIDATE-PLAN.md](CANDIDATE-PLAN.md) and [the independent review](CANDIDATE-REVIEW.md). D was saved as a separate BF16 checkpoint, then used by ordinary native inference. The complete 9,311,304,896-byte model comparison found zero changes outside the selected tensor. Its full SHA is `5c33e46d51db6d2ac8dc1551078663ab97b7eebc67b51b493f9bdea8b2f805f2`.
+The predeclared mean criterion passed. The one fixed inverse-second-moment adjustment and its native BF16 dry calculation are documented in CANDIDATE-PLAN.md and the independent review. D was saved as a separate BF16 checkpoint, then used by ordinary native inference. The complete 9,311,304,896-byte model comparison found zero changes outside the selected tensor. Its full SHA is `5c33e46d51db6d2ac8dc1551078663ab97b7eebc67b51b493f9bdea8b2f805f2`.
 
 The intended read is q = (M + lambda I)^−1 k, normalized so q^T k = 1, with lambda = 0.05 trace(M) / 2048. The actual lambda is 0.00921740181182784. The same donor output difference and original design input used for A remain fixed. No controls, held-out background requests or other physics contexts fit this read key. There was one candidate, with no ridge, amplitude or layer sweep.
 
@@ -80,7 +80,7 @@ Across all 52 cases, D has 40 original-identical continuations, 50 C-identical c
 
 All sixteen D captures qualify against ordinary D execution on 3,807 decisions, with identical selected tokens and full vocabulary-score hashes. Original/D internal comparisons cover 3,228 common-history decisions: 1,419 across the four physics cases and 1,809 across controls. Input vectors at the edited projection match exactly throughout those comparisons. At target decision 269, native projection change is 0.45033% and final-state change 0.09337%; at protected decision 438 they are 0.61852% and 0.44508%. These are vector-norm changes, not token probabilities. The protected continuation still remains exactly original.
 
-[All twelve native controls including D](../../../../publications/figures/exports/physics-background-sensitivity-2026-11-07--four-edit-controls.png) and [native D qualification summary](candidate-native-summary.json) retain the complete comparison.
+[All twelve native controls including D](../../../../publications/figures/exports/physics-background-sensitivity-2026-11-07--four-edit-controls.png) and native D qualification summary retain the complete comparison.
 
 ![Candidate D](../../../../publications/figures/exports/physics-background-sensitivity-2026-11-07--candidate-D.png)
 
@@ -96,11 +96,11 @@ ROME's [primary input-vector implementation](https://github.com/kmeng01/rome/blo
 
 ## Evidence
 
-- [Frozen plan](PLAN.md), [prepared design](design.json), [run commands](COMMANDS.md).
-- [All background requests and responses](BACKGROUND-RESPONSES.md).
-- [Native control summary](control-summary.json), [qualified control traces](controls-index.json).
-- [Background analysis](background-analysis.json), [background source positions](background-index.json), [physics source positions](physics-index.json).
-- [D's actual stored action](background-analysis-with-D.json), [complete response assessment](candidate-assessment.json), [all original/D responses](CANDIDATE-RESPONSES.md), [native D traces](candidate-index.json), [checkpoint and instrument provenance](provenance.json).
-- [Sources and spike context](SOURCES.md), [acquisition review](PRE-RUN-REVIEW.md).
+- Frozen plan, prepared design, run commands.
+- All background requests and responses.
+- Native control summary, qualified control traces.
+- Background analysis, background source positions, physics source positions.
+- D's actual stored action, complete response assessment, all original/D responses, native D traces, checkpoint and instrument provenance.
+- Sources and spike context, acquisition review.
 
 Raw tensor captures and original-input exports remain local under this study. Code and publication figures are in the research collection. No production QGRE change, training, inference-time activation replacement, or model scaling is part of this study.

@@ -1,0 +1,118 @@
+{
+  "method_step": 3,
+  "operation": "signed-residual-contrast",
+  "why_this_direction": "The withdrawn contextual fields did not distinguish their reconstruction error from the recurring computation gap. The next original-only step measures signed full-state residuals with the same outside-fold successful donors for both outcomes, rather than fitting another unexamined target.",
+  "repeating_pattern_check": "Individual squared losses, correct identity targets and unequal donor treatment repeatedly made complete fields look scientifically sufficient. All existing fitting folds, native rows and merges remain; the statistic removes same-member squared terms, keeps registration error separately and admits no model edit.",
+  "hypothesis": "A wrong-minus-correct signed residual recurs among distinct fitting members under common held-out donors, beyond the individual reconstruction loss and registration round-trip distortion.",
+  "what_went_wrong_before": "Scalar successful reconstruction losses were compared with wrong losses under a different donor count, and no signed recurrent component was identified.",
+  "rule": "Execute exactly the bound source-only signed-residual specification, using all inherited fitting folds and both fixed diagnostic recipes; keep independent unknown channels and original source mass. Publish full-domain diagnostic fold vectors, distinct-member products, native losses and source bindings. Never write targets or weights, execute the model or select a candidate.",
+  "prediction": "Every fitting member is reconstructed only from outside-fold fitting successes; signed differences and distinct-member products are reported across the complete source schema. Positive recurrence is not by itself capability isolation.",
+  "would_weaken_it": "Unknown contextual support, opposed or weak distinct-member products, dependence on round-trip distortion or contradictory fold/estimator signs weaken the signed recurring construction. Group-correlated wording remains a possible cause even when recurrence is present.",
+  "parent": "studies/04-round-2-overlap/runs/whole-context-targets-original",
+  "objective": "records/retrospectives/2026-11-14-signed-residual-contrast-astra.md",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/whole-context-targets-original",
+    "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+    "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered",
+    "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/signed-residual-contrast-original/"
+  ],
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/residual_contrast.py",
+      "sha256": "6df9e87637053c8821bfd56cfffa989fe6860e300c0b19524d7b425e12d6f5db"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/compile_residual_contrast.py",
+      "sha256": "a5697d44838fb5942cdf9b4f130cad4a77c9bab95d9623b6421d8e00fb9023d2"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+      "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/compile_context_targets.py",
+      "sha256": "3f239d5b4e9419bfc07cbd08db9e24ef45ebc911a71ca271372f1763752eb693"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    }
+  ],
+  "bindings": [
+    {
+      "record": "records/retrospectives/2026-11-14-signed-residual-contrast-astra.md",
+      "sha256": "326a04ff0683bac9e593f4b91bd9665af5325c7108010683b391d2ad1bd87466"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+      "sha256": "fc8adc4cccdc54e8352fe2aadc410fbdc1b8ef841b189c01f33622f52f8bc0b9"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/whole-context-targets-original/observation-schema.json",
+      "sha256": "e087d38964c568893dae8929c228aea668d84c5beba4a6f9a95bd41ae54a62da"
+    }
+  ],
+  "revisions": [
+    {
+      "reason": "First invocation stopped in source-metadata preparation with KeyError: tokens, before factory.json or any computed field was written. Preserve run.log; the loader now retains tokens and recorded_tokens required by the existing row mapper, with a focused fixture and twelve tests passing. Scientific recipes, split, metric and sources are unchanged.",
+      "previous_compiler_sha256": "dc92ee1f3531bd83a4d0d81018500cd998f98029090fee264578ad5db1dd6300",
+      "compiler_sha256": "a5697d44838fb5942cdf9b4f130cad4a77c9bab95d9623b6421d8e00fb9023d2",
+      "next_log": "run-2.log"
+    }
+  ],
+  "parameters": {
+    "fitting": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+      "derivation": "Import the exact fitting IDs and existing tube.picks folds; each recipient is held once and its donors are all successes outside its fold.",
+      "scales_with": "Original membership and fold inventory."
+    },
+    "estimators": {
+      "measured_from": "records/retrospectives/2026-11-14-contextual-targets-astra.md",
+      "derivation": "Exact rational affine coefficients and maximal exact parameter matches; apply the same outside-fold donor IDs to both outcomes.",
+      "scales_with": "Question contexts, donor design rank and source registration."
+    },
+    "recurrence": {
+      "measured_from": "records/retrospectives/2026-11-14-signed-residual-contrast-astra.md",
+      "derivation": "Squared difference of group mean vectors minus each group's within-group sum of squared deviations divided by n*(n-1); retain negative and unknown values.",
+      "scales_with": "Source group counts and full feature dimensions."
+    },
+    "mass": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+      "derivation": "Each original row contributes 1/native_member_rows divided equally among its registered matches; average across fitting members and source merges.",
+      "scales_with": "Every original row, registered correspondence and merge count."
+    },
+    "native_loss": {
+      "measured_from": "records/retrospectives/2026-11-14-contextual-targets-astra.md",
+      "derivation": "Same 1/(groups*group_members*member_native_rows*merges) per channel; missing rows retain their denominator.",
+      "scales_with": "Source counts including missing rows."
+    },
+    "precision": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-context-targets-original/factory.json",
+      "derivation": "Float64 derived arithmetic and arrays; original fitting-slice hashes checked against the completed compilation before terminal transformation.",
+      "scales_with": "Native source representation and declared relative-state features."
+    },
+    "storage": {
+      "measured_from": "studies/04-round-2-overlap/runs/whole-context-targets-original/observation-schema.json",
+      "derivation": "Keep all fold gaps and scalar recurrence/member diagnostics at every place/merge; wide per-member residuals are recomputable intermediates. Logical output bytes counted from exact source shapes and dtype before execution.",
+      "scales_with": "Members, folds, places, width, merges and fixed diagnostic variants."
+    },
+    "disk_floor": {
+      "value_bytes": 40000000000,
+      "measured_from": "STATE.md",
+      "derivation": "Existing machine minimum of 40 GB free, expressed in bytes; not an experimental threshold.",
+      "scales_with": "Machine requirement; output demand scales with the source schema."
+    }
+  }
+}

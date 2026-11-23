@@ -1,0 +1,97 @@
+{
+  "format": "original-success-set-control/1",
+  "original_reading_sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf",
+  "original_model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "reference_sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38",
+  "leave_self_out_sha256": "6b5a8355dfff8d8776f66602b300f1ef3eade707c434ef77756e9c299e23b2b0",
+  "prediction_vs_result": {
+    "full_reference": {
+      "complete": true,
+      "total": 0.02056196633077416,
+      "groups": {
+        "wrong": {
+          "members": 15,
+          "complete": true,
+          "direction": 0.020269638447886134,
+          "size": 0.00029232788288802424,
+          "mass": 0.5000000000000006,
+          "missing_mass": 0.0,
+          "total": 0.02056196633077416
+        },
+        "correct": {
+          "members": 15,
+          "complete": true,
+          "direction": 4.848181021245653e-35,
+          "size": 0.0,
+          "mass": 0.4999999999999996,
+          "missing_mass": 0.0,
+          "total": 4.848181021245653e-35
+        }
+      },
+      "rows": 19751,
+      "merges": 105,
+      "mass": 1.0000000000000002,
+      "missing_mass": 0.0
+    },
+    "leave_self_out": {
+      "complete": true,
+      "total": 0.027843271738386292,
+      "groups": {
+        "wrong": {
+          "members": 15,
+          "complete": true,
+          "direction": 0.020269638447886134,
+          "size": 0.00029232788288802424,
+          "mass": 0.5000000000000006,
+          "missing_mass": 0.0,
+          "total": 0.02056196633077416
+        },
+        "correct": {
+          "members": 15,
+          "complete": true,
+          "direction": 0.007186241809435791,
+          "size": 9.506359817633936e-05,
+          "mass": 0.4999999999999996,
+          "missing_mass": 0.0,
+          "total": 0.007281305407612131
+        }
+      },
+      "rows": 19751,
+      "merges": 105,
+      "mass": 1.0000000000000002,
+      "missing_mass": 0.0
+    }
+  },
+  "failures_only": {
+    "closure_threshold": null,
+    "limits": [
+      "The full reference contains each original success itself; its zero is in-reference reconstruction, not held-out capability validation.",
+      "The successful leave-self-out reading changes each successful recipient's set, not the loop's fixed reference; it is not a floor or a loss subtraction.",
+      "Finite reference coverage and contextual variation do not identify every remaining capability defect.",
+      "No no-fit computation, edited-state diagnostic, answer inspection or native model execution occurs here."
+    ]
+  },
+  "what_this_changes": {
+    "loop_reference_changed": false,
+    "thresholds_created": false,
+    "meaning": "Original-model scale and successful contextual coverage are now reported separately; the admitted loop continues unchanged."
+  },
+  "bindings": {
+    "declaration": {
+      "record": "studies/04-round-2-overlap/runs/success-set-control-original/declaration.json",
+      "sha256": "345b1d615435d98358317c75df6a30320ce65e1b1f81cf2dd6aa6ee4ab68a123"
+    },
+    "full_score": {
+      "record": "studies/04-round-2-overlap/runs/success-set-control-original/full-score.json",
+      "sha256": "6a57584a9290c9f2888984e9cd46331ad5862e979baec6acea76a05b5ae3ec74"
+    },
+    "leave_self_out_score": {
+      "record": "studies/04-round-2-overlap/runs/success-set-control-original/leave-self-out-score.json",
+      "sha256": "a361eb9fa3c4d57cea67073fe70542bc55c3781f4432be28b7ab5512987d782f"
+    },
+    "leave_self_out_view": {
+      "record": "studies/04-round-2-overlap/runs/success-set-control-original/leave-self-out.json",
+      "sha256": "6b5a8355dfff8d8776f66602b300f1ef3eade707c434ef77756e9c299e23b2b0"
+    }
+  }
+}

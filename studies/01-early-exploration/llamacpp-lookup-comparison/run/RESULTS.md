@@ -46,15 +46,15 @@ The fork loader also recorded warnings for control-looking tokens 50 and 212 and
 
 ## Artifacts
 
-- [Relational comparison and identities](comparison.json)
-- [Original frozen questions](cases.json)
+- Relational comparison and identities
+- Original frozen questions
 - [Execution plan](PLAN.md)
-- [Execution script](run.sh)
-- [Model repository metadata](model-source.json)
-- [Binary, model and corpus hashes](inputs.sha256)
-- [Raw short requests and responses](short/)
-- [Raw extended requests and responses](extended/)
-- [Prompt tokenization and matching checks](tokenization/)
-- [Server output](server.stderr.txt)
+- Execution script
+- Model repository metadata
+- Binary, model and corpus hashes
+- Raw short requests and responses
+- Raw extended requests and responses
+- Prompt tokenization and matching checks
+- Server output
 
 Model source: [bartowski/google_gemma-4-E2B-it-GGUF](https://huggingface.co/bartowski/google_gemma-4-E2B-it-GGUF/tree/81012ba3538e061d5ee003f11f25335b17f82e2d). Fork build: f089c9cb4bc285a11e510e1c4336b95aca449b08. The run script completed with exit 0 and its owned server was stopped. No performance claim is made.

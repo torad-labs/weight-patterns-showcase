@@ -1,0 +1,53 @@
+{
+  "continuous": {
+    "global_gradient_norm": 0.014160160740623274,
+    "signed_target_gradient_norm": 35.60062884470435,
+    "target_loss_gradient_norm": 1.587623304748738e-05,
+    "signed_gradient_dot_proposed_direction": 0.007021811306563093,
+    "signed_gradient_dot_proposed_displacement": 3.5550372156879895e-05,
+    "target_loss_gradient_dot_proposed_direction": 3.1314029087736275e-09,
+    "target_loss_gradient_dot_proposed_displacement": 1.585382089034329e-11,
+    "cosine_with_joint_descent_direction": 0.013929107881791646,
+    "signed_gradient_dot_other_objective_gradient": -0.007587015186738721,
+    "applied_length": 0.005062849257092959,
+    "removed_component_direction_coefficient": 5.540306814243024e-06,
+    "original_step_norm": 7.169075928598143e-05,
+    "min_weight_displacement_norm": 9.985883202219915e-07,
+    "min_weight_displacement_fraction": 0.013929107881791646,
+    "projected_step_norm": 7.168380422638888e-05,
+    "joint_first_order_before": -1.0151526751068276e-06,
+    "joint_first_order_projected": -1.014955715137718e-06,
+    "first_order_progress_cost": 1.969599691096372e-10,
+    "first_order_progress_cost_fraction": 0.00019402004638259017,
+    "historical_signed_jvp_displacement": 3.555028371132751e-05,
+    "tensors_without_signed_route": 199,
+    "tensors_with_signed_gradient": 339
+  },
+  "projected_after_direction_cast": {
+    "projection": 3.1217672477072815e-12,
+    "global_loss": -1.014955712284129e-06,
+    "norm_squared": 5.1385677592975515e-09
+  },
+  "projected_after_native_rounding": {
+    "projection": -4.91336935967619e-06,
+    "global_loss": -8.254645861398334e-07,
+    "norm_squared": 4.2410924154725674e-09
+  },
+  "rounded_changed_native_values": 31552,
+  "original_rounded": {
+    "signed_projection_change": 3.606777136111461e-05,
+    "global_first_order": -8.256902660697125e-07,
+    "changed_native_values": 31564
+  },
+  "origin_cell": {
+    "projection": 0.39329149748553405,
+    "distance": 0.39329286887467246
+  },
+  "historical_site": {
+    "reference_row": 312,
+    "merge": 61
+  },
+  "prediction_vs_result": "The full proposal's signed gradient product is compared with the exact Euclidean half-space projection and the archived native endpoint conversion of that projected direction.",
+  "failures_only": "This is a local first-order feasibility calculation on a single audited historical cell. Native precision preview supplies a new induced linear prediction without installing a model or measuring a finite native execution.",
+  "what_this_changes": "Quantifies the first-order competition between local and full objectives, its minimum correction under the original parameter metric, and the loss or retention of the corrected signed direction after actual storage rounding."
+}

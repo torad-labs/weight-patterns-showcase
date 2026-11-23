@@ -1,0 +1,100 @@
+{
+  "method_step": 3,
+  "operation": "original-context-targets",
+  "why_this_direction": "The November 14 stop returns to the full contextual computation gap. Prior local increment targets retained incoming error, pooled targets confounded context, and narrow sign requests omitted most of the path. The prospective specification now defines two full-state counterparts from original successful fitting traces before any target values are computed.",
+  "repeating_pattern_check": "Repeated narrowing to selected rows and late matrices, local improvement without whole-path repair, and postponing target identification behind instrument preparation. This compilation covers all native answer and prompt rows at all source merges, preserves member context, labels unknown channels, and writes no weights.",
+  "hypothesis": "A context-conditioned successful full trajectory supplies a useful absolute counterpart for each wrong original trajectory. Affine question dependence and closest-context mate transport are separate hypotheses; neither construction establishes native realizability or isolated causality.",
+  "what_went_wrong_before": "Successful local transformations added to current incoming states retained inherited discrepancy. Broad source capture alone did not provide contextual targets. Unknown correspondence and correct-member movement were previously hidden by sparse or pooled objectives.",
+  "rule": "Compile exactly the two recipes and relative-state loss in the bound objective. Use tube.picks for fitting membership, only fitting successes as donors, all fitting wrong and correct rows, original complete answer registration and prompt template registration. Correct members target their own native original trajectories. Terminal rows pass through original output normalization before averaging. Float64 derived arrays. Never read excluded members' numeric slices. Publish manifests only after every source merge is written. No model execution, solve, ridge selection, no-fit evaluation or reserved data access.",
+  "prediction": "The compiler emits two source-bound whole-gap-targets/1 artifacts with the complete source row/merge inventory. Correct identity requests have zero original discrepancy, supported wrong contexts have explicit nonzero or zero discrepancies at every resolved row, and unsupported channels are disclosed rather than treated as no error.",
+  "would_weaken_it": "Outside-span contexts, undefined directions/sizes, unstable affine coefficients or context mismatch weaken the target proposal. This source-only compilation cannot establish repair: failure of native whole-path correction, correct-member damage or absent transfer would weaken the scientific hypotheses in a separately declared edited-model test.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+    "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered",
+    "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+    "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+    "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/whole-context-targets-original/"
+  ],
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "sources": {
+    "baseline": "studies/04-round-2-overlap/runs/controlled-bf16-1/baseline",
+    "native_rows": "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+    "registration": "studies/04-round-2-overlap/runs/trace-overlap-complete-registered",
+    "members": "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+    "terminal": "studies/04-round-2-overlap/runs/correction-at-19/reference/index.json",
+    "tensors": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+    "model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+  },
+  "objective": "records/retrospectives/2026-11-14-contextual-targets-astra.md",
+  "context_parameters": [
+    "m",
+    "v",
+    "drop",
+    "loss",
+    "rise"
+  ],
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/context_targets.py",
+      "sha256": "eb4994f10704de600dd4797a81f51771a2812ba1f53d0aa488ed6af524e694b1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/compile_context_targets.py",
+      "sha256": "3f239d5b4e9419bfc07cbd08db9e24ef45ebc911a71ca271372f1763752eb693"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/tube.py",
+      "sha256": "76e08b422bf4c2a42dacc340e1efa364dcff292cd3b9887a365252a83ccbe266"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "13e78c49c726bfafe1dcee7af7ffef6d721d61edfb2ef124f831f53d5c3c0e3d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+      "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/gap_targets.py",
+      "sha256": "5060d035b98c1da5a80d6590c8a3a51a76f103c85c0f6f888475744d1ae9bf6b"
+    }
+  ],
+  "parameters": {
+    "fitting": {
+      "measured_from": "code/signal-trace/pipeline/weight_edit/tube.py",
+      "derivation": "picks: every other original member in each outcome group; fitting folds are every third of those. Original order is retained.",
+      "scales_with": "Original member inventory and group labels; no new split."
+    },
+    "affine": {
+      "measured_from": "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+      "derivation": "Exact rational minimum-norm alpha under X^T alpha=x, including intercept and all five question parameters; inconsistent constraints remain unknown.",
+      "scales_with": "Fitting-success question design rank and each recipient context."
+    },
+    "mates": {
+      "measured_from": "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+      "derivation": "All fitting-success maximal exact parameter matches; equal mass per observed changed-parameter set, equal within set.",
+      "scales_with": "Original fitting-success contexts and recipient question."
+    },
+    "loss": {
+      "measured_from": "records/retrospectives/2026-11-14-contextual-targets-astra.md",
+      "derivation": "1/(number of outcome groups * members in recipient group * recipient answer-plus-question rows * merges), separately for direction and log size under relative-state geometry.",
+      "scales_with": "Source group, member, row and merge counts, including unknown rows in denominators."
+    },
+    "precision": {
+      "measured_from": "records/retrospectives/2026-11-14-contextual-targets-astra.md",
+      "derivation": "Derived feature and coefficient arithmetic/serialization float64; original native directions are normalized in float64; unknown status int32.",
+      "scales_with": "Native source representation, full field dimensions and numerical operation."
+    },
+    "disk_floor": {
+      "value_bytes": 40000000000,
+      "measured_from": "STATE.md",
+      "derivation": "The existing machine requirement of 40 GB free, expressed in bytes. Full output cost is counted from source shapes and actual NumPy header size.",
+      "scales_with": "The existing machine floor; artifact storage scales with source rows, widths, merges and two declared estimators."
+    }
+  }
+}

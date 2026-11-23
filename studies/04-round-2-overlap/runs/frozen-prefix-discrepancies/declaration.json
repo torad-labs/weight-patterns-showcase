@@ -1,0 +1,91 @@
+{
+  "operation": "frozen-prefix-discrepancies",
+  "method_step": 3,
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "why_this_direction": "Whole-prefix correspondence located stages where a local matcher abstained; read the discrepancy without changing the fitted models.",
+  "repeating_pattern_check": "Previous aligned separation appeared after the operator or failed on alternative valid routes. Keep every matching prefix, compare chronology and valid-route flags separately.",
+  "hypothesis": "Replacing registration alone can expose a useful frozen residual on independently generated cases.",
+  "prediction": "At least one already-frozen mode flags both held mistakes by their prechoice, while the corresponding correct execution stays within the original threshold. Inspect the reordered route separately.",
+  "would_weaken_it": "Late-only flags, correct-case exceedance, missed mistakes or absent sites limit that explanation.",
+  "what_went_wrong_before": "Retrospective or template-specific matches were confused with on-time predictors.",
+  "rule": "Use every exact endpoint visit, original case-group exclusion, saved banks, original scores and cutoffs. Borrow stored human audit only after determining and scoring the visits. No extra fit or weight update.",
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/frozen-prefix-discrepancies/score.py",
+    "sha256": "b20e98210cd16a29711a90c975bcdb5eb0c16510957836971a902183d2fcc603"
+  },
+  "reader": {
+    "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/measure.py",
+    "sha256": "af62f1d4b4d7181fd16fad361b9cf528233206c79d16930f44981cb17597c0b3"
+  },
+  "conditional_declaration": {
+    "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/declaration.json",
+    "sha256": "0235b6a1e1c653cc88ce1cee982e4862dadf76cc9a36f4b63d2b0892e581365c"
+  },
+  "sites": {
+    "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-sites.json",
+    "sha256": "80220ea5b40ded7683d787b1f215b6b0215c0be945e234a90fc8ecf8a4ea91c6"
+  },
+  "bank": {
+    "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-banks.npz",
+    "sha256": "b4be1b7af7a1163f2bdb429af6fb8d4dd235a3dec21a1eef1618fbe5a22082e3"
+  },
+  "endpoints": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/prefix-endpoints.json",
+    "sha256": "007cf337ef2e7b0d6a43724c35219a126e6308043092127ee8e355eb9740bf53"
+  },
+  "prefix_declaration": {
+    "record": "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/declaration.json",
+    "sha256": "4f0bee4415c9c342434a7033543a592c37b18784cd9d3821353541cf5fa9c9ce"
+  },
+  "original_timing": {
+    "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/registrations.json",
+    "sha256": "ed07aa298d4b21a0213bb08f9ca6b538cbae35231966444e9c0f878d605a595d"
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/frozen-prefix-discrepancies/score.py",
+    "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/measure.py",
+    "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/declaration.json",
+    "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-sites.json",
+    "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/frozen-banks.npz",
+    "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/prefix-endpoints.json",
+    "studies/04-round-2-overlap/runs/whole-prefix-frozen-stages/declaration.json",
+    "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/registrations.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/frozen-prefix-discrepancies/result.json"
+  ],
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "studies/04-round-2-overlap/runs/frozen-prefix-discrepancies/score.py",
+    "events": "studies/04-round-2-overlap/runs/frozen-prefix-discrepancies/observability/events.jsonl",
+    "operations": [
+      "trace.frozen_discrepancy"
+    ],
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/frozen-prefix-discrepancies/score.py",
+        "sha256": "b20e98210cd16a29711a90c975bcdb5eb0c16510957836971a902183d2fcc603"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/measure.py",
+        "sha256": "af62f1d4b4d7181fd16fad361b9cf528233206c79d16930f44981cb17597c0b3"
+      },
+      {
+        "record": "studies/04-round-2-overlap/runs/conditional-whole-trace-stage/convex.cc",
+        "sha256": "3b75e6712adf185408b21521c91d6cafc4492aa26943de0adfff92958965c420"
+      },
+      {
+        "record": "records/development/2026-11-12-path-forward/turns_reading.py",
+        "sha256": "b072b0de9ff588985eccb7834a97d48d1ee62b4043b64349502dc596e45065e9"
+      },
+      {
+        "record": "records/development/2026-11-12-path-forward/states_reading.py",
+        "sha256": "8b60abdc42f039636279c9f4338c193ba4d9edb22e81f87925944f19c1433025"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      }
+    ]
+  }
+}

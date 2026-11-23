@@ -1,0 +1,451 @@
+{
+ "method_step": 5,
+ "operation": "direct-overlap-loop-in-torch",
+ "run_by": "weight-research-fable",
+ "declared_at": "2026-11-15T12:17:29.863086-06:00",
+ "status": "stopped for good: paused at 12:56:38 PM CT November 15 inside step 12's length search, before any weight of that step changed, 11 updates taken, every state and record kept; not resumed, on Astra's decision, and its driver left the tree by revision 2; no result.json",
+ "kind": "a development loop in torch: files and one card's arithmetic. No engine, no recorder, no pass, no model file written (every state reached is kept as its BF16 bits beside the float32 weights), no answer read, graded or counted. Its readings are the torch forward's on answers torch writes: they are never the engine's own trace, and no closure, repair or verdict on the hypothesis follows from them.",
+ "authority": "Marcos's direction of November 15, 2026 as relayed at 11:36 AM CT: the step he has described (the answers written again, overlapped with the correct answers, the divergence read where they agree, the step taken on it, the answers written again) is the only step, and what was missing was taking it; and as relayed at 8:48 and 8:50 AM CT: the words an answer uses must not enter the measure, both groups are read at every step, and what is wrong is written down (journal/2026-11-15-shared-computation-not-wording.md). Astra's decision of the measure and her admission scope for a torch loop from the original (records/retrospectives/2026-11-15-direct-overlap-step-astra.md).",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+ "objective": "records/retrospectives/2026-11-15-direct-overlap-step-astra.md",
+ "specification": {
+  "record": "records/retrospectives/2026-11-15-direct-overlap-step-astra.md",
+  "sha256": "7722b70556125cc449f2c757f28f88a6a449811ad4ce39290cf0c707fa01107e"
+ },
+ "decision_records": [
+  {
+   "record": "records/retrospectives/2026-11-15-direct-overlap-step-astra.md",
+   "sha256": "7722b70556125cc449f2c757f28f88a6a449811ad4ce39290cf0c707fa01107e"
+  },
+  {
+   "record": "records/retrospectives/2026-11-15-first-step-state-assessment-astra.md",
+   "sha256": "7d09eba89b6074901b6cdb10148689aef219a3175b10f7134d811908024a4094"
+  },
+  {
+   "record": "journal/2026-11-15-shared-computation-not-wording.md",
+   "sha256": "b7822819b80777da295614a54246bf66182ef9cdad21d7dbe559cbfdea5179aa"
+  },
+  {
+   "record": "journal/2026-11-15-computation-not-state-values.md",
+   "sha256": "7f7f0d85766a4f1687d0dda1f1291fcc3b9959bb7273fe7086d5223cc069aeed"
+  },
+  {
+   "record": "journal/2026-11-15-follow-the-changing-trace.md",
+   "sha256": "19adc946442f9dc02f92070a943e957069ea75f569547496420a6ef332893e15"
+  }
+ ],
+ "why_this_direction": "Step 5 is the correction made again on the model's own trace until the gap has closed, and step 6 measures again from the model reached. The loop that did that this morning (studies/04-round-2-overlap/runs/envelope-loop-plain-torch/result.json) stepped on a loss that followed the words an answer uses: each rewritten answer was laid on its own original's rows and judged against one mate's rows, so a fall or a rise after the answers were written again could not be read as a path closing or opening. Since then three things exist that did not. Performance's direct overlap lays every answer of both groups on each of the fifteen original correct answers by the computation (records/development/2026-11-12-path-forward/overlap_step.py). Four constructions of what the correct answers share were read on that overlap (records/development/2026-11-15-relation-reading/resolved/seen.json, records/development/2026-11-15-relation-reading/resolved/result.json): among the correct answers given a row's token, and by component, the wrong answers read above every correct one on the stretch for 12 of 15 on the original's own texts (0.982 of pairs), and the six parts bound before the texts written anew were read all held (6 of 6). And Astra selected the full form of that construction as the measure (the turn as it is and the log gain, the nearest point of what the same-input correct answers span between them) and admitted a torch loop from the original on it. Nothing stands between that and the step any more: this run takes the step and repeats it, measuring both groups again on the answers the model writes after every step.",
+ "repeating_pattern_check": "Five things have happened more than once. (1) A step read lower on the text it was fitted on and higher on the text the stepped model then writes: four fixed-text steps, the two whole-path sweeps, and the closed loop's first step, after which 30 of 30 answers were written differently. It keeps happening because an answer's wording hangs on near ties, a step that moves stored weights tips them, and the measure then read the new words. This run does not avoid the rewriting: its length is read on the step's texts held, as the specification states. It tests whether a measure that asks nothing where fewer than two correct answers were given a row's token, and compares by component, still reads the computation after a rewriting; and it keeps what tells a rewriting from a correction at every step: the own path and the same state with the words held, both groups, by answer. (2) An interim reading was taken for a verdict: a first rise was called damage, and a scalar fall was called repair (the first-step state read \"at the correct answers' level\" on its own path, which was the text: studies/04-round-2-overlap/runs/plain-first-step-state/result.json). This loop draws no verdict from a rise, a fall, a spike of the derivative or an answer's length; it records and goes on. (3) A sum hid what it was made of: a lost reference or a shortened answer read as progress. Every answer's reading here is over all its cells with the unresolved ones counted, and the mean over the resolved cells and their share stand beside it, by domain and segment. (4) The weights a reading came from were gone: the closed loop left texts from states that no longer exist. Every state this loop reaches is kept. (5) The readings were made and the step was not taken, which is what Marcos's direction of 11:36 AM CT names. This run is the step.",
+ "hypothesis": "That bringing down the distance of each answer's full relation (what each merge does to its input: the turn and the log gain) to what the correct answers given the same input span between them, measured again on the answers the model writes after every step, brings the wrong questions' computation onto what the correct answers share along the whole path while the correct questions' answers stay on it. It is a hypothesis about this construction in torch's arithmetic, and the metric is part of it (Astra's record): it does not claim that an equal input token makes the later computation comparable, nor that a fall is a repair. Closure is measured on the engine's own trace and has to carry to answers no fit used.",
+ "what_went_wrong_before": "The closed loop's loss followed the words an answer uses, in its own result's words (studies/04-round-2-overlap/runs/envelope-loop-plain-torch/result.json): \"Under the ORIGINAL's weights, on the texts the steps kept, the loss puts a wrong answer above a correct one in these shares of pairs: step 2: 0.54; step 3: 0.60; step 8: 0.34; step 13: 0.48 (step 1, the original's own writing: 1.00); and the original's weights read more on the rewritten texts than on their own (step 2: 0.0976; step 3: 0.1996; step 8: 0.0945; step 13: 0.0808, against 0.0580). On the original's own texts, before any step, 0.877 of the loss (0.04620 of 0.05266) sits at rows that were given another token than their mate's corresponding rows, and between two correct answers the distance where the tokens differ is 7.3 times in layers 0 to 14 and 9.0 times in layers 15 to 34 the distance where they are the same. A fall or a rise of this loss after the answers are written again cannot be read as the wrong answers' path closing or the correct answers' path opening.\" Its states were not kept. The first-step state made again read the wrong answers at the correct answers' level on its own path, and that was the text it wrote, not its weights (studies/04-round-2-overlap/runs/plain-first-step-state/result.json). This seat's first candidate after that took one scalar spread as the tolerance, which can hide a departure in a component every correct answer shares (Astra's assessment, records/retrospectives/2026-11-15-first-step-state-assessment-astra.md). Four readings were then made on the overlap without a step being taken.",
+ "rule": {
+  "start": "the original model's 70 matrices, held in float32 beside the model, which holds them rounded to BF16 as a file would",
+  "a_step": [
+   "the model as it stands writes its thirty answers in torch (the vocabulary's first choice at each position until the ending token or the limit, both the recorder's)",
+   "each written answer is overlapped with the fifteen original correct answers by the computation (overlap_step.read_answers: the question's positions and the answer's steps; a correct question's answer with the other fourteen)",
+   "at every cell (every question position and answer step, all 105 merges) the measure is read: with each reference answer's mean turn and mean log gain at its rows laid on mine, among the reference answers whose rows there were all given my row's token, the squared distance of my point [turn, log gain] to the nearest point of their convex mixtures (one mixture for both parts; the turn not brought back to unit length); fewer than two such reference answers: the cell is unresolved, asks nothing, and is counted",
+   "an answer's reading is its mean over ALL its cells; the objective is the mean of the thirty answers' readings, both groups in it, with no weight, mask or separate term for either",
+   "the derivative of the objective in the 70 matrices is taken through the whole path, both sides of every merge and attention differentiated, the paths and each cell's nearest point held as they were found",
+   "a length is searched along the derivative (`length`)",
+   "the weights move by the length taken; the state reached is kept; the next step starts from it by writing the answers again, whatever was read"
+  ],
+  "direction": "the derivative as it is: every matrix moves against its own part of the derivative of the one objective. Nothing weighs one group, one segment or one matrix against another.",
+  "length": "on the step's texts and paths held fixed. The first length is the unit: the objective over the squared size of its derivative, the length at which the objective's straight line along the step reaches nothing (from the second step on, that step's unit times the share of its unit the step before took, or the unit itself where that moves no stored weight). A trial at h reading L(h) gives the next length as the least point of the parabola through the start, the start's slope and (h, L(h)). The search ends when a trial does not read under the lowest so far, when the parabola has no least point or gives a length already read, or when a length moves no stored weight; the length taken is the lowest reading under the start. No factor, count or fraction is set.",
+  "read_beside": "at every step, for both groups and for every answer: the own path (the texts the state writes, overlapped again), and the state the step reached on the texts and paths the step started from (the words held); the mean over all cells, the mean over the cells that have a reference and their share, the turn's part and the gain's, each domain, each band of five layers and each segment of the correct answers' own rows; how many answers were written as before and as the original wrote them; the sizes of the two groups' parts of the derivative and their cosine; the weights moved. The segments and the groups are how the record is laid out and enter no objective, mask or rule.",
+  "kept": "every step: each answer's written tokens, its paths to the correct answers in both domains and the measure at each of its cells (loop/step-<n>.npz); the state reached, as its BF16 bits less the original's (loop/state-<n>.npz), and the float32 weights of the latest step (loop/float32.npz). No state is kept or dropped by its reading.",
+  "ends": "when a step's search finds no length under its start (a stall, which is no closure), when the objective on the own path is nothing, or when it is stopped by hand, which a dated revision records. No count of steps is set. None of the three is closure: that is measured on the engine's own trace."
+ },
+ "prediction": "Declared before any reading of the thirty answers by this measure. What had been seen: the four direction-only constructions on the original and on the kept texts written anew (records/development/2026-11-15-relation-reading/resolved/seen.json, records/development/2026-11-15-relation-reading/resolved/result.json), and a check of the program on four answers in a scratch folder (records/development/2026-11-15-relation-reading/path-step/program-check.json: two steps along a four-answer derivative; no reading of the thirty, but seen: after its first step 27 of the thirty answers were written differently, and its four answers read higher on the texts written again). (1) At the start, on the texts torch writes under the original's weights, the wrong questions' answers read above the correct questions': a larger mean over resolved cells, and a wrong answer above a correct one in more than half of the 225 pairs. (On the original's own texts the direction-only part outside the same-input span reads 0.0538 against 0.0209 over resolved rows, 0.849 of pairs.) (2) The wrong questions' part of the derivative is larger than the correct questions' by more than 1.36 times and the cosine of the two parts is under 0.891: the two numbers the pooled departure, which follows the text, read on these texts (records/development/2026-11-15-relation-reading/path-step/original-weights-torch-texts/result.json; the first candidate read 2.03 and 0.623). (3) The first step reads under its start with the words held (the rule takes nothing else), and more than half of the thirty answers are then written differently. (4) Written again after the first step, both groups read above their start on the own path and the share of resolved cells is lower: a rewritten answer loses reference answers given its tokens. (Under the original's own weights the texts the first-step state wrote put 9 of the fifteen correct questions' answers over every original correct answer on the stretch, where none stood on their own texts.) (5) Of the continuation, which is what the run is for: from that rise the wrong questions' answers' own-path mean over resolved cells comes back down and passes under its start; the correct questions' answers' comes back down toward its start and stays under the wrong questions' start; and the share of resolved cells returns toward the start's. It is not predicted that the objective reaches nothing: what fourteen or fewer answers span in 1537 dimensions is a thin set, and every answer stands off it.",
+ "would_weaken_it": "(1) failing: by the full relation the wrong answers do not read above the correct ones at the start, and a loop on it has no divergence of the wrong answers' own to close. (2) failing (a cosine at or over 0.891 with a ratio at or under 1.36): the step asks of both groups alike, as a reading of the text does. Of the continuation: the wrong questions' own-path mean over resolved cells never coming back under its start while every step reads lower with the words held (the measure then falls at fixed words only, and follows the text again); both groups falling alike in proportion on the own path (what is lowered is what all answers have in common with no reference, not the wrong answers' departure); the correct questions' reading staying above the wrong questions' start; or the share of resolved cells falling as the mean falls (a fall by lost reference). None of these stops the loop: a rise, a spike of the derivative or a rewritten answer is no verdict before the loop has run (Marcos's direction relayed at 5:41 AM CT, journal/2026-11-15-follow-the-changing-trace.md); they are what the outcome is held against. A state's reading with the words held that is not the next step's start reading for an answer written as before would mean the torch forward does not repeat itself.",
+ "limits": [
+  "A development loop in torch. The engine words answers differently from torch at near ties (9 of the 30 answers leave the recorded text) and differently on its two cards; nothing here is the engine's own trace, and the native loop and no-fit transfer are not opened by this run.",
+  "The construction's own uncertainties, as the objective owner states them: an equal input token does not establish equal computation later in the path; laying many of a reference answer's rows on one of mine averages them; a convex mixture can stand between two routes that do not mix; a new wording can lose reference answers or read as departure; and an original correct answer can itself hold computation outside what the others share.",
+  "What fourteen or fewer points span in 1537 dimensions is thin: every answer, correct ones included, stands off it at every resolved cell (direction only, on the original's own texts: 0.0209 for the correct answers against 0.0538 for the wrong ones). So the correct questions' answers carry part of the objective and of the derivative from the first step, and nothing in the objective leaves them alone. Whether their part is ordinary difference between answers or error in them is not known.",
+  "A cell with fewer than two same-input reference answers asks nothing. A fall of the all-cell mean by lost reference is not closure: the resolved cells and their mean are read beside it at every step.",
+  "A step moves a stored weight only where its part of the step passes half a unit of that weight's last place in BF16; what is left stays in the float32 copy for later steps. The state the model holds is therefore not the float32 step, and the record says how many weights moved.",
+  "Fitting answers only: the thirty of controlled-bf16-1. Nothing of the no-fit answers or the reserved set is read; of the cohort's capture and exports only the thirty fitting ids.",
+  "The reference is the frozen bytes of the fifteen original correct answers' turns and log gains on their own recorded texts; it is not made again or adjusted from anything this run reads.",
+  "No model file is written, no engine runs, and no closure, repair or verdict on the hypothesis follows from this run."
+ ],
+ "execution": {
+  "made_from": "code/signal-trace",
+  "order": [
+   "loop"
+  ],
+  "commands": {
+   "loop": "bash studies/04-round-2-overlap/runs/shared-relation-loop-torch/run.sh loop   # studies/04-round-2-overlap/runs/shared-relation-loop-torch/loop.json rewritten at every step; studies/04-round-2-overlap/runs/shared-relation-loop-torch/loop/step-<n>.npz, state-<n>.npz and float32.npz beside it; studies/04-round-2-overlap/runs/shared-relation-loop-torch/logs/loop.log"
+  },
+  "before_each": "the research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before the command; the loop itself refuses to start unless this declaration names the program's bytes, the bytes of every repository file it loads and its options, and stops before any weight moves if what it loaded is not that list",
+  "card": "card 0 under its lock (/run/user/1000/gpu0.lock), held for the command: arithmetic only, no recorder and no engine",
+  "storage": "a state is at most 1.3 GB (its BF16 bits less the original's, packed) and the float32 copy 2.6 GB, the latest only; the states go to the bucket (torad-research traces upload, then verify) and stay on this disk while anything reads them",
+  "memory": "no command is started under a memory ceiling of its own: memory protection is hostshield's",
+  "processor_threads": "OMP_NUM_THREADS=4, the setting of this seat's earlier runs; it sets no size, cap or threshold"
+ },
+ "step": {
+  "program": "records/development/2026-11-15-relation-reading/path_step.py",
+  "program_sha256": "8253c8555c1c5716c245aed3a206d39ad4e53e303023e4b3d156416dc84d63b5",
+  "measure": "shared_relation",
+  "length": "text",
+  "steps": null,
+  "chunk": 24,
+  "start": null,
+  "model": null,
+  "sources": {
+   "code/signal-trace/pipeline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "code/signal-trace/pipeline/acquisition/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "code/signal-trace/pipeline/acquisition/export_stream_traces.py": "c0ec25ce2c21b6f2f6f48b208002fef5de54cb14184423bfee51bde9a012a75b",
+   "code/signal-trace/pipeline/acquisition/run_a_baseline.py": "3c53b20317332d1f8ed4797ec0220fcb916dc573d97bb4211ca186d63af62ff6",
+   "code/signal-trace/pipeline/acquisition/run_a_observation.py": "33990f82d6f22a10bde5f3cd7c8122fb33da606532353ac8ad7d45782ef463be",
+   "code/signal-trace/pipeline/native_records/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "code/signal-trace/pipeline/native_records/compare_occurrences.py": "330c8201b63dd67b2d8963685eaafdcf0ec2fbed5df7ad926eb7575d6f47a2e0",
+   "code/signal-trace/pipeline/native_records/group_observation.py": "bd4c687514083a345feb364dfcb07cb172ab95606ac784538ede61be9bec034c",
+   "code/signal-trace/pipeline/native_records/native_trace.py": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2",
+   "code/signal-trace/pipeline/native_records/run_declaration.py": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf",
+   "code/signal-trace/pipeline/overlap/__init__.py": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e",
+   "code/signal-trace/pipeline/overlap/complete_overlap.py": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15",
+   "code/signal-trace/pipeline/overlap/fed_replay.py": "817c4226eb96024540570c5b3ce622dbb33ce42bb62d67dfc8437c257b2a10b2",
+   "code/signal-trace/pipeline/paths.py": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d",
+   "code/signal-trace/pipeline/research_guard/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "code/signal-trace/pipeline/research_guard/forbidden_bytes.py": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe",
+   "code/signal-trace/pipeline/research_guard/input_archives.py": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d",
+   "code/signal-trace/pipeline/research_guard/parameter_sources.py": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8",
+   "code/signal-trace/pipeline/research_guard/storage_archives.py": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513",
+   "code/signal-trace/pipeline/research_guard/verify_round2.py": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1",
+   "code/signal-trace/pipeline/weight_edit/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "code/signal-trace/pipeline/weight_edit/set_points.py": "972f067990385313090a1bdbd3cc94021a1e0b766adb319019f0f13e47e52f50",
+   "code/signal-trace/pipeline/weight_edit/shared_relation.py": "66285e11b32b454f854828bc80ee44e1278e33d0492403ccbca35ca58b18e458",
+   "records/development/2026-11-12-path-forward/overlap_step.py": "ae6115ebfb0b50198b25f246e34f6a9ea98febf6c584c67211af729dff82e195",
+   "records/development/2026-11-12-path-forward/torch_forward.py": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e",
+   "records/development/2026-11-15-relation-reading/path_step.py": "8253c8555c1c5716c245aed3a206d39ad4e53e303023e4b3d156416dc84d63b5"
+  }
+ },
+ "implementation": [
+  {
+   "record": "code/signal-trace/pipeline/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "record": "code/signal-trace/pipeline/acquisition/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "record": "code/signal-trace/pipeline/acquisition/export_stream_traces.py",
+   "sha256": "c0ec25ce2c21b6f2f6f48b208002fef5de54cb14184423bfee51bde9a012a75b"
+  },
+  {
+   "record": "code/signal-trace/pipeline/acquisition/run_a_baseline.py",
+   "sha256": "3c53b20317332d1f8ed4797ec0220fcb916dc573d97bb4211ca186d63af62ff6"
+  },
+  {
+   "record": "code/signal-trace/pipeline/acquisition/run_a_observation.py",
+   "sha256": "33990f82d6f22a10bde5f3cd7c8122fb33da606532353ac8ad7d45782ef463be"
+  },
+  {
+   "record": "code/signal-trace/pipeline/native_records/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "record": "code/signal-trace/pipeline/native_records/compare_occurrences.py",
+   "sha256": "330c8201b63dd67b2d8963685eaafdcf0ec2fbed5df7ad926eb7575d6f47a2e0"
+  },
+  {
+   "record": "code/signal-trace/pipeline/native_records/group_observation.py",
+   "sha256": "bd4c687514083a345feb364dfcb07cb172ab95606ac784538ede61be9bec034c"
+  },
+  {
+   "record": "code/signal-trace/pipeline/native_records/native_trace.py",
+   "sha256": "0fe263c05cbd654e17289b4caa3d7eb914d853235c10b95680029c7c6154e4c2"
+  },
+  {
+   "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+   "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+  },
+  {
+   "record": "code/signal-trace/pipeline/overlap/__init__.py",
+   "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+  },
+  {
+   "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+   "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+  },
+  {
+   "record": "code/signal-trace/pipeline/overlap/fed_replay.py",
+   "sha256": "817c4226eb96024540570c5b3ce622dbb33ce42bb62d67dfc8437c257b2a10b2"
+  },
+  {
+   "record": "code/signal-trace/pipeline/paths.py",
+   "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+  },
+  {
+   "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+   "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+  },
+  {
+   "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+   "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+  },
+  {
+   "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+   "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+  },
+  {
+   "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+   "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+  },
+  {
+   "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+   "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/set_points.py",
+   "sha256": "972f067990385313090a1bdbd3cc94021a1e0b766adb319019f0f13e47e52f50"
+  },
+  {
+   "record": "code/signal-trace/pipeline/weight_edit/shared_relation.py",
+   "sha256": "66285e11b32b454f854828bc80ee44e1278e33d0492403ccbca35ca58b18e458"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/overlap_step.py",
+   "sha256": "ae6115ebfb0b50198b25f246e34f6a9ea98febf6c584c67211af729dff82e195"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch_forward.py",
+   "sha256": "ab0abc44eaa38fd28a215b7ec9f1060543eb9d878452c0e875a2d8df86ac241e"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/path_step.py",
+   "sha256": "8253c8555c1c5716c245aed3a206d39ad4e53e303023e4b3d156416dc84d63b5"
+  },
+  {
+   "record": "records/development/2026-11-15-relation-reading/declare_shared_relation_loop.py",
+   "sha256": "7333f06e8fb45a81d42549832a388c0de0cf05ede83bdbfb67e2c66459100809"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch-forward/architecture.json",
+   "sha256": "1905c24e43a943d2c20683f13c5538944281c2a9b939001cbfc5f746cbc5afde"
+  },
+  {
+   "record": "records/development/2026-11-12-path-forward/torch-forward/write-original.json",
+   "sha256": "7df9711401bd30bd236c894ba746618a4956055b073533867fcd8d78887f93e3"
+  },
+  {
+   "record": "records/development/2026-11-14-whole-gap-solver/fitting-recurrence/marks.json",
+   "sha256": "280b1271e8246f5c3a645cc81f75eb61f62347927ce2f388efe618eb36b308bc"
+  }
+ ],
+ "bindings": {
+  "reference": {
+   "turns": {
+    "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+    "sha256": "af21cb435e5fa6610e7e0c72199682226b0ce1e121b417e569f0fc71b2549923"
+   },
+   "memberships": {
+    "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/manifest.json",
+    "sha256": "370eba55f7a8dfc2d3f6418a21debbfce78246aeb0f45d024084f6c9fca7dd38"
+   },
+   "row_map": {
+    "record": "studies/04-round-2-overlap/runs/success-set-reference-original/reference/row-map.json",
+    "sha256": "dcf243669ed3e7aedd8378874e352dab62e699c87eac953e25508fa6dd6589b7"
+   },
+   "gains": {
+    "file": "studies/04-round-2-overlap/runs/relation-reference-original/arrays/growth.npy",
+    "sha256": "afea2184e883659a4e4713a86f653266e743100507cc1b3f3507cbda69e42bc7",
+    "what": "the original's log gain at every row of the reference and every merge"
+   }
+  },
+  "original_reading": {
+   "record": "studies/04-round-2-overlap/runs/whole-states-original/reading/reading.json",
+   "sha256": "c027fe345cf80ae5efe414b9eb4df1fb04f6b1bade5e6f3ce9450f97f86203cf"
+  },
+  "tensors_index": {
+   "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+   "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+  },
+  "preparation": [
+   {
+    "record": "records/development/2026-11-15-relation-reading/path-step/program-check.json",
+    "sha256": "f83cf3577c9b72c574b92def037472de5b3a4f59a1594a2af985f5d7f53a2bde"
+   },
+   {
+    "record": "records/development/2026-11-15-relation-reading/resolved/seen.json",
+    "sha256": "e1867222dad46d22a938910c0627cedb563b858bc02c9bb29d4ee6360a7f5876"
+   },
+   {
+    "record": "records/development/2026-11-15-relation-reading/resolved/result.json",
+    "sha256": "d02302c7d078b10a3cf6763abfe336bcd73515bb5efba8ba9a0e3d4743dcb4b1"
+   },
+   {
+    "record": "records/development/2026-11-15-relation-reading/resolved/bound.json",
+    "sha256": "bb94b1bbfb51583de0c1541bb8949da07b4fb19c473e10c27f2495622a8b1875"
+   },
+   {
+    "record": "records/development/2026-11-15-relation-reading/path-step/original-weights-torch-texts/result.json",
+    "sha256": "54bdb1dc298e9b73b82dbaf1d4f3afeff1093825d0c00e1657049003493bbfa9"
+   },
+   {
+    "record": "studies/04-round-2-overlap/runs/envelope-loop-plain-torch/result.json",
+    "sha256": "79ef68bdd2ef86e891d0534200e0f978af055aa718aa03718b99cd90e629a3a7"
+   },
+   {
+    "record": "studies/04-round-2-overlap/runs/plain-first-step-state/result.json",
+    "sha256": "41a77084ff251d7c68c860e9438814e3058fd40a34a721ce648c87602c40ba40"
+   },
+   {
+    "record": "records/development/2026-11-10-speed-review/path-step-read/profile.json",
+    "sha256": "444c94179a00be08f191c93a44f03aa83e1887f49a6abc9c794856ed1f619bd3"
+   }
+  ]
+ },
+ "parameters": {
+  "reference": {
+   "measured_from": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json",
+   "derivation": "the fifteen original fitting successes' turns (unit(merged) - unit(incoming)) and log gains at every row of their own recorded texts, as that run holds them; the answer itself left out when it is one of them; loaded as frozen bytes",
+   "scales_with": "the cohort's correct answers and the model they were recorded on"
+  },
+  "reference_answers_at_a_cell": {
+   "measured_from": "records/retrospectives/2026-11-15-direct-overlap-step-astra.md",
+   "derivation": "two: the least number of reference answers given my row's token at which what they share can differ from what one of them does; with fewer the cell is unresolved and asks nothing (the objective owner's definition)",
+   "scales_with": "nothing: it is what agreement means"
+  },
+  "unit_length": {
+   "measured_from": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json",
+   "derivation": "each step: the objective the step starts from over the squared size of its derivative",
+   "scales_with": "the objective and its derivative at the state the step starts from",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/path_step.py"
+  },
+  "trial_lengths": {
+   "measured_from": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json",
+   "derivation": "the least points of parabolas through the readings, as `rule.length` states them; no factor, count or fraction is set",
+   "scales_with": "the readings of the objective along the step",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/path_step.py"
+  },
+  "first_length_of_a_later_step": {
+   "measured_from": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json",
+   "derivation": "the step's own unit times the share of its unit the step before took; the unit itself when that share moves no stored weight",
+   "scales_with": "the step before",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/path_step.py"
+  },
+  "stored_format": {
+   "measured_from": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+   "derivation": "the 70 matrices are held as the file holds them, BF16; what a step leaves under the rounding stays in the float32 copy for the next",
+   "scales_with": "the format a model file holds its weights in"
+  },
+  "writing": {
+   "measured_from": "records/development/2026-11-12-path-forward/torch-forward/write-original.json",
+   "derivation": "the recorder's limit of tokens (768) and its ending token, as that record holds them (`written.limit`, `written.ending_tokens`)",
+   "scales_with": "the cohort's capture"
+  },
+  "steps": {
+   "measured_from": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json",
+   "derivation": "no count: the loop ends at a stall, at an objective of nothing or by hand, and a stop by hand is recorded by a dated revision",
+   "scales_with": "nothing set",
+   "measured_from_as_declared": "records/development/2026-11-15-relation-reading/path_step.py"
+  },
+  "steps_read_at_a_time": {
+   "measured_from": "records/development/2026-11-15-relation-reading/path-step/program-check.json",
+   "derivation": "24 of an answer's steps beside the reference answers' rows at a time, the setting the program's check ran with (12.39 GiB of the card at most there); a cell is read from its own rows alone, so this bounds the card's memory and changes nothing a cell reads beyond the last digits of arithmetic done many cells at once",
+   "scales_with": "the card's memory and the model's width"
+  },
+  "processor_threads": {
+   "measured_from": "studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json",
+   "derivation": "the same setting, 4; it changes how long a step takes and nothing it reads",
+   "scales_with": "the machine's processors"
+  }
+ },
+ "inventory": {
+  "answers": 30,
+  "wrong": 15,
+  "successes": 15,
+  "merges": 105,
+  "matrices": 70,
+  "width": 1536
+ },
+ "inputs": [
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/reference",
+  "studies/04-round-2-overlap/runs/success-set-reference-original/turns",
+  "studies/04-round-2-overlap/runs/relation-reference-original/arrays",
+  "studies/04-round-2-overlap/runs/whole-states-original/reading",
+  "studies/04-round-2-overlap/runs/wide-overlap/capture",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/shared-relation-loop-torch/"
+ ],
+ "revisions": [
+  {
+   "revision": 1,
+   "made": "2026-11-15 12:59:16 CT",
+   "made_by": "weight-research-fable",
+   "record": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/loop.json",
+   "previous": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/declaration-before-revision-1.json",
+   "previous_sha256": "0971cbf0716dc19ca5b09a33a221d675394f8e459419c4f655dc66e3018f4f68",
+   "reason": "Marcos decided (relayed at 12:54 PM CT November 15) that the loss, the step and the loop pass to Astra, and that this seat stops; Astra then decided to pause this loop cleanly before another weight update and to keep everything it reached. The loop's own Python process was signalled at 12:56:38 PM CT inside step 12's length search and saved its record whole. Only the status changes: every binding, the rule, the parameters, the prediction and what would weaken it stand as declared. The run is paused, not closed: it has no result.json."
+  },
+  {
+   "revision": 2,
+   "made": "2026-11-15 13:59:51 CT",
+   "made_by": "weight-research-fable",
+   "record": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json",
+   "previous": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/declaration-before-revision-2.json",
+   "previous_sha256": "79835d8ee0c4c280d9311c1f2c35114d7d4a47147aaf4280969f584c9180bfaf",
+   "reason": "This run's driver, path_step.py, marks for every row the correct answers given the same token and takes them as the row's reference, and it records how many answers were written as at the step before: its loss is counted token by token. The run is stopped for good: Astra decided it is not resumed under its old objective (journal/2026-11-15-astra-loss-and-loop.md). It has no result.json: what it read is in loop.json and in records/development/2026-11-15-relation-reading/README.md. Marcos's direction of November 14, 2026 is that an instrument that measures by tokens, values or words is taken out of the project, not fenced by a rule, and on November 15 he asked again whether tokens were being compared (relayed at 1:44 PM CT). weight-research-astra, who holds the loss and the loop since 12:54 PM CT November 15, said at 1:55 PM CT that the replacement needs none of these programs and asked for them to be retired by dated revisions that keep every record of the run and the identity of every source. From this revision on the programs under `retired` are not in the tree: they left before it, leave with the commit that carries it, or are being removed by the seat that holds them. Every hash this declaration binds still names the bytes that ran: each is the blob of that file at the commit named beside it, read and hashed when this revision was made. The parameters that named a retired program as their source now name `retired-programs.json` in this folder, which says where those bytes are; what each named before is under `parameters_cited_again` and in the previous declaration. No outcome, no number and no other binding changes. The run's commands cannot be started from the tree.",
+   "retired": [
+    {
+     "file": "records/development/2026-11-15-relation-reading/path_step.py",
+     "sha256": "8253c8555c1c5716c245aed3a206d39ad4e53e303023e4b3d156416dc84d63b5",
+     "held_by_commit": "46e0858730752a2c857d1ece1e714f311ceba3e6",
+     "bound_as": "by its sha256"
+    },
+    {
+     "file": "records/development/2026-11-15-relation-reading/declare_shared_relation_loop.py",
+     "sha256": "7333f06e8fb45a81d42549832a388c0de0cf05ede83bdbfb67e2c66459100809",
+     "held_by_commit": "180677dc0dd7c4a2d0154e72f00f34ad23399f6b",
+     "bound_as": "by its sha256"
+    },
+    {
+     "file": "code/signal-trace/pipeline/weight_edit/shared_relation.py",
+     "sha256": "66285e11b32b454f854828bc80ee44e1278e33d0492403ccbca35ca58b18e458",
+     "held_by_commit": "1257bd913ca5f7fb8955ccd13b8bb29ac6055362",
+     "bound_as": "by its sha256"
+    }
+   ],
+   "parameters_cited_again": {
+    "unit_length": {
+     "was": "records/development/2026-11-15-relation-reading/path_step.py",
+     "now": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json"
+    },
+    "trial_lengths": {
+     "was": "records/development/2026-11-15-relation-reading/path_step.py",
+     "now": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json"
+    },
+    "first_length_of_a_later_step": {
+     "was": "records/development/2026-11-15-relation-reading/path_step.py",
+     "now": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json"
+    },
+    "steps": {
+     "was": "records/development/2026-11-15-relation-reading/path_step.py",
+     "now": "studies/04-round-2-overlap/runs/shared-relation-loop-torch/retired-programs.json"
+    }
+   },
+   "sources_changed_since_the_run": [
+    {
+     "file": "records/development/2026-11-12-path-forward/overlap_step.py",
+     "sha256_bound": "ae6115ebfb0b50198b25f246e34f6a9ea98febf6c584c67211af729dff82e195",
+     "held_by_commit": "74b0e04833c43f0cdc24493b6b2b066a40e3c19d",
+     "now": "e822f9912df6611dd9707e5c162da60bc642abbf80766860b84f1d1bf754eb44"
+    }
+   ]
+  }
+ ]
+}

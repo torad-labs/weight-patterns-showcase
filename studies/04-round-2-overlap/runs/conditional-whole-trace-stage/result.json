@@ -1,0 +1,189 @@
+{
+ "prediction_vs_result": {
+  "fixed_direction": {
+   "discovery": {
+    "cases": 25,
+    "matches": 2,
+    "missing": 23,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "held_family": {
+    "cases": 3,
+    "matches": 0,
+    "missing": 3,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "reordered": {
+    "cases": 1,
+    "matches": 0,
+    "missing": 1,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   }
+  },
+  "fixed_direction_log": {
+   "discovery": {
+    "cases": 25,
+    "matches": 0,
+    "missing": 25,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "held_family": {
+    "cases": 3,
+    "matches": 0,
+    "missing": 3,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "reordered": {
+    "cases": 1,
+    "matches": 0,
+    "missing": 1,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   }
+  },
+  "conditional_direction": {
+   "discovery": {
+    "cases": 25,
+    "matches": 0,
+    "missing": 25,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "held_family": {
+    "cases": 3,
+    "matches": 0,
+    "missing": 3,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "reordered": {
+    "cases": 1,
+    "matches": 0,
+    "missing": 1,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   }
+  },
+  "conditional_direction_log": {
+   "discovery": {
+    "cases": 25,
+    "matches": 4,
+    "missing": 21,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "held_family": {
+    "cases": 3,
+    "matches": 1,
+    "missing": 2,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   },
+   "reordered": {
+    "cases": 1,
+    "matches": 0,
+    "missing": 1,
+    "ambiguous": 0,
+    "exact_wrong_descent": 0,
+    "exact_correct_descent_alarms": 0,
+    "exact_friction_alarms": 0
+   }
+  }
+ },
+ "sites": [
+  {
+   "row": 314,
+   "merge": 23,
+   "success_max": 0.053506540568698316,
+   "failure_min": 0.05578913239417057,
+   "normalized_gap": 0.02088455803961901,
+   "separating_cells": 421,
+   "status": "separated",
+   "mode": "fixed_direction",
+   "stage_radius_squared": 9.469059007794974e-05,
+   "registration_calibration": {
+    "included": 2,
+    "total": 88,
+    "nearest_background": 9.469059007794974e-05
+   }
+  },
+  {
+   "row": 299,
+   "merge": 65,
+   "success_max": 0.15096111923153094,
+   "failure_min": 0.1512760756150343,
+   "normalized_gap": 0.0010420834658132162,
+   "separating_cells": 351,
+   "status": "separated",
+   "mode": "fixed_direction_log",
+   "stage_radius_squared": 0.0005192451266429672,
+   "registration_calibration": {
+    "included": 0,
+    "total": 77,
+    "nearest_background": 0.0005192451266429672
+   }
+  },
+  {
+   "row": 314,
+   "merge": 41,
+   "success_max": 0.058559935731130754,
+   "failure_min": 0.3238948850685141,
+   "normalized_gap": 0.6937680868621691,
+   "separating_cells": 1352,
+   "status": "separated",
+   "mode": "conditional_direction",
+   "stage_radius_squared": 0.001371472815610447,
+   "registration_calibration": {
+    "included": 0,
+    "total": 88,
+    "nearest_background": 0.001371472815610447
+   }
+  },
+  {
+   "row": 314,
+   "merge": 11,
+   "success_max": 0.006679365172789734,
+   "failure_min": 0.033819541280273195,
+   "normalized_gap": 0.670145899839003,
+   "separating_cells": 1195,
+   "status": "separated",
+   "mode": "conditional_direction_log",
+   "stage_radius_squared": 3.2837521996842856e-05,
+   "registration_calibration": {
+    "included": 4,
+    "total": 88,
+    "nearest_background": 3.2837521996842856e-05
+   }
+  }
+ ],
+ "native_reconstruction_max": 2.0451471195268444e-07,
+ "failures_only": "Single-domain, retrospectively inspected challenge and development family. Signs are audited only after frozen computation matching. Early unrelated matches do not certify a precursor.",
+ "what_this_changes": "Read the per-case observations against their actual pre-choice timing before interpreting any class separation as an early computational signal."
+}
