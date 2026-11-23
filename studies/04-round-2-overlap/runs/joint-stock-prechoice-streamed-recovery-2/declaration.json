@@ -1636,7 +1636,7 @@
   "retention": "Keep both full per-merge moment tables in proposal artifacts alongside existing sparse native-transition payloads and reached commit records. Existing verified consumed-trace archival and exact complete exit native/remainder checkpoint remain unchanged.",
   "stopping": "Checkpoint at the first freshly measured group training loss at or below the declared threshold.",
   "commands": [
-    "env PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib==3.11.2 python -m pipeline.weight_edit.group_contrast_experiment run ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/joint-stock-prechoice-streamed-recovery-2"
+    "env PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib==3.11.2 python -m pipeline.weight_edit.group_contrast_experiment run studies/04-round-2-overlap/runs/joint-stock-prechoice-streamed-recovery-2"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -1697,7 +1697,7 @@
       "joint-stock-prechoice-disk-recovery-2",
       "joint-stock-prechoice-streamed-recovery-2"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },
@@ -1936,7 +1936,7 @@
   "declaration_revision": 6,
   "revision_reason": "A further start of the revision-3 resume, declared from studies/04-round-2-overlap/runs/joint-stock-prechoice-streamed-recovery/declaration.json. The first streamed start (joint-stock-prechoice-streamed-recovery) reproduced the continuation's recorded baseline and update 1 in all 22 compared records, value for value and with no display, installed update 1, and at 5:39 AM CT on November 19 stopped itself at the consumed-trace archive step, which archives only for a run its declaration's list names: the declaration script had not added the run to that list. Its exit checkpoint and records are kept; its working files and raw capture streams, which this start makes again, were removed. This is an open revision of the bound sources, not a declaration the launcher's prepare made: prepare refuses because sources the evidence lineage studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/declaration.json binds have changed: code/signal-trace/pipeline/weight_edit/full_graph.py, code/signal-trace/pipeline/weight_edit/full_loss_maps.py, code/signal-trace/pipeline/weight_edit/full_parameters.py, code/signal-trace/pipeline/weight_edit/full_state.py, code/signal-trace/pipeline/weight_edit/native_graph.py, code/signal-trace/pipeline/weight_edit/trace_response.py, code/signal-trace/pipeline/weight_edit/turn_correction.py, code/signal-trace/pipeline/weight_edit/turn_pair.py, code/signal-trace/pipeline/weight_edit/vector_chance.py. Added to the bound implementation: code/signal-trace/pipeline/weight_edit/group_disk_state.py, code/signal-trace/pipeline/weight_edit/host_pages.py. Sources that differ from the declaration this one is made from: . What changed is where the trainer keeps its arrays: the working weights, optimizer remainder, direction and displacement are files whose pages are written and returned after each phase; each weight gradient is summed into the direction file on the host as it arrives; a fresh native trace is read from its capture's stream one merge at a time; and no display is opened. A trace's turns are a sequence that forms each merge's turn when it is read, kept beside the turn functions, and the measuring module has its `turns` name again, which commit 800cfd81 had removed while both observability hook inventories still name it; the turn arithmetic is the same function as before. The working files are counted in the disk requirement. The method, objective, matcher, step fraction and endpoint are unchanged. The independent whole-build review bound here read these sources against the four papers and states the conditions this start is held to.",
   "whole_build_review": {
-    "record": "records/retrospectives/2026-11-19-streamed-working-state-eli.md",
+    "record": "records/retrospectives/2026-11-19-streamed-working-state-review.md",
     "sha256": "061fb7011517a815eb11c383d41bd5727b7d142f56694a4040c796d861a547b4"
   },
   "native_inputs": {

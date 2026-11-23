@@ -20,8 +20,8 @@ generation0 exit checkpoint remain. V2 uses the actual pilot's one CPU thread,
 checks the baseline cell map and the tensors returned by the actual reverse/JVP
 calls exactly, and records scalar reduction differences. No epsilon, scientific
 tolerance, derivative, response or finite-update formula changed. Five focused
-CPU fixtures and independent Eli review qualify this narrow correction:
-`records/retrospectives/2026-11-16-empirical-eta-comparison-eli.json`.
+CPU fixtures and independent source-bound review qualify this narrow correction:
+`records/retrospectives/2026-11-16-empirical-eta-comparison-review.json`.
 
 The sole active controller `weight-patterns-eta-continuation-2.service` launched
 at11:09:10CT. Source `loop_v2.py` SHA256
@@ -92,12 +92,12 @@ measurement, not relabeling the earlier partial loss. No weight changed in that
 capture. The context remained2048; only its declared acquisition budget changed
 from768 to1875, derived as2048 minus the unchanged173-event input.
 
-Eli checked the exact retained11/capture handoff and unchanged loop interface.
+The independent reviewer checked the exact retained11/capture handoff and unchanged loop interface.
 The implementation peer launched `weight-patterns-eta-continuation-3.service` at11:32:43CT, using
 unchanged loop_v2.py and the same calibratedeta/reference/tolerance. Local0 means
 retained11, not original weights or a rollback to the earlier low. Actual launch
 binding: `runs/vector-chance-empirical-eta-continuation-3/execution.json`; review:
-`records/retrospectives/2026-11-16-empirical-eta-third-handoff-eli.json`.
+`records/retrospectives/2026-11-16-empirical-eta-third-handoff-review.json`.
 
 ## GPU residency correction
 
@@ -113,7 +113,7 @@ another step. All stored identities and the state-record hash remain unchanged;
 GPU0 returned to2MiB. Retirement records live in the old run. Prospective
 loop_v3 differs from v2 only by replacing the old live-frozen condition with an
 absent/empty predecessor cgroup and the same ready/model/original file checks.
-Three focused tests and independent Eli review pass. No shared helper or
+Three focused tests and independent source-bound review pass. No shared helper or
 numerical function changed, and no new recovery framework was introduced.
 
 Sole continuation4 launched11:40:09CT from the same retained11/full956-event

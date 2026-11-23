@@ -1557,7 +1557,7 @@
   "retention": "Keep both full per-merge moment tables in proposal artifacts alongside existing sparse native-transition payloads and reached commit records. Existing verified consumed-trace archival and exact complete exit native/remainder checkpoint remain unchanged.",
   "stopping": "Bound measured cohort interval or earlier native terminal condition.",
   "commands": [
-    "env PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib==3.11.2 python -m pipeline.weight_edit.group_contrast_experiment run ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/unbanded-group-training-27"
+    "env PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib==3.11.2 python -m pipeline.weight_edit.group_contrast_experiment run studies/04-round-2-overlap/runs/unbanded-group-training-27"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -1616,7 +1616,7 @@
       "vector-chance-final-experiment-installed-348-recovery",
       "unbanded-group-training-27"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },

@@ -19,7 +19,7 @@ round-two captures that are no longer used by the edit or analysis.
 | Two excluded supplied-answer captures, discovery 16 and discovery 20 | 15.694 GB | Compressed native captures and their accompanying response/identity records uploaded and verified before release. |
 
 The removed local paths total **164.262 GB**. This is not the same as
-immediately recovered filesystem space. At this report, Cowork's shared-filesystem
+immediately recovered filesystem space. At this report, the desktop VM's shared-filesystem
 process still holds cached handles to **145.642 GB** of their deleted
 inodes. Those blocks become available when the handles close. No VM, other
 session or other project's job was stopped. The two checkpoint releases had no

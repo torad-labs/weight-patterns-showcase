@@ -1,4 +1,4 @@
-# Independent Eli review: descent-sign family intervention
+# Independent source-bound review: descent-sign family intervention
 
 **GO for the four declared free native observations.** This is the final native intervention under the current brief. The source preserves the approved reciprocal-swap mechanism, adds fresh controls at both new endpoints and keeps the computational score separate from the arithmetic readback. Execution remains with `independent_recovery_review`.
 

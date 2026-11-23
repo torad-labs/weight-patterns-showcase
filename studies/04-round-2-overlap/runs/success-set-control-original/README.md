@@ -24,7 +24,7 @@ Run on physical card 0 under its existing lock, from the repository root:
 
 ```
 python3 code/signal-trace/pipeline/research_guard/verify_round2.py
-flock /run/user/1000/gpu0.lock env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 PYTHONPATH=code/signal-trace PYTHONDONTWRITEBYTECODE=1 uv run -q --with torch --with numpy python -u -m pipeline.weight_edit.success_set_control studies/04-round-2-overlap/runs/success-set-control-original
+flock $XDG_RUNTIME_DIR/gpu0.lock env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 PYTHONPATH=code/signal-trace PYTHONDONTWRITEBYTECODE=1 uv run -q --with torch --with numpy python -u -m pipeline.weight_edit.success_set_control studies/04-round-2-overlap/runs/success-set-control-original
 ```
 
 Current state: completed with exit code zero before the 3:46 AM CT stop relay. All

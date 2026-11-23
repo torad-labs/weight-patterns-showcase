@@ -739,7 +739,7 @@
     "sha256": "096035b3438dab3b270db35b4be1b2025c84064a2e9905b51981ae1bd2c27f5f"
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-factor-direction/native.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-factor-native-206"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-factor-direction/native.py studies/04-round-2-overlap/runs/vector-chance-factor-native-206"
   ],
   "factor_result": {
     "record": "studies/04-round-2-overlap/runs/vector-chance-event-gradient-206/result.json",
@@ -759,11 +759,11 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-factor-finite-eli.md",
+      "record": "records/retrospectives/2026-11-16-factor-finite-review.md",
       "sha256": "5297920d1153262ebdc18540883f2fe51638eb446b788587bf49632105f56140"
     },
     {
-      "record": "records/retrospectives/2026-11-16-factor-finite-eli.json",
+      "record": "records/retrospectives/2026-11-16-factor-finite-review.json",
       "sha256": "82b5b10551d90db7f1292480b6088daf8313f4fa19e1603e4cd1121eecb407a1"
     }
   ],
@@ -802,7 +802,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-factor-native-eli.json",
+    "record": "records/retrospectives/2026-11-16-factor-native-review.json",
     "sha256": "d630ab3b33a01c8a32d306d995d3144d266decdb2dbbccfa25f5c3e08faea595",
     "reviewed_declaration_sha256": "843b8278e7d90d71f981567d1c0b17ac3db7d545a62758aed0a0511c534cc1b9",
     "canonical_declaration_sha256_excluding_review": "717726c52d5a8c96b6ee699d700ee27b1c396dc302ddbc4ef72f9f6378c49020"

@@ -13,7 +13,7 @@ The joint runs' per-operation records (`loop/<n>/group-measurement.json`) left t
 | `joint-stock-climb-descent-training` (stock, before the pre-choice term) | `6972d351a0f14afcbe8406fa875680df` | 0 to 3 |
 | `unbanded-group-training-27` (from early checkpoint 27) | `3c4b24dbe08d4cada3b6d46d355238bb` | 0 to 2 |
 
-Artifact root: `~/Documents/dev/infra/observability/mlflow/artifacts/6/<run>/artifacts/steps`. The fifth start's revision 0 equals the stock run's revision 3 cell for cell, so the two are read as one lineage of ten updates.
+Artifact root: `<mlflow-store>/artifacts/6/<run>/artifacts/steps`. The fifth start's revision 0 equals the stock run's revision 3 cell for cell, so the two are read as one lineage of ten updates.
 
 ## What is counted
 

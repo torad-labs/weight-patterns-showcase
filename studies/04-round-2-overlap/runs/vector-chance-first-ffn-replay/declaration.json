@@ -324,7 +324,7 @@
     ]
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-first-ffn-native-replay/replay.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-first-ffn-native-replay/replay.py studies/04-round-2-overlap/runs/vector-chance-first-ffn-replay"
   ],
   "research_context": {
     "record": "records/development/2026-11-16-first-ffn-native-replay/parameters.json",
@@ -333,7 +333,7 @@
   "declaration_note": "The research-context record and independent review bind the four supplied papers. They are review context, not consumed numerical inputs; the run keeps the established input/source/review separation.",
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-first-ffn-replay-eli.json",
+    "record": "records/retrospectives/2026-11-16-first-ffn-replay-review.json",
     "sha256": "050fb4e6a889a33d921f53f827eb2a53be20b57e1f65968e5f69225f29c36f4a",
     "reviewed_declaration_sha256": "3f2bdcba740df4acadf130a0bb95a510ea580fc41d39eea894ca41c1ae60fa1b"
   },

@@ -842,7 +842,7 @@
   "retention": "Keep both full per-merge moment tables in proposal artifacts alongside existing sparse native-transition payloads and reached commit records. Existing verified consumed-trace archival and exact complete exit native/remainder checkpoint remain unchanged.",
   "stopping": "Unchanged ordinary loop; no observation threshold, additional rate rule or step cap. Signals finish an ordinary measurement boundary and save complete native+remainder state.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-continuous-merge-observation/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-continuous-observation-224"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-continuous-merge-observation/run.py studies/04-round-2-overlap/runs/vector-chance-continuous-observation-224"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -888,7 +888,7 @@
       "vector-chance-observed-continue-206",
       "vector-chance-continuous-observation-224"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },
@@ -939,7 +939,7 @@
         "sha256": "080ea66541cf4e9f99c19d159d90036c540a23a350d6337e225f7a5f21e7f120"
       },
       "source_review": {
-        "record": "records/retrospectives/2026-11-16-direct-native-encoding-eli.json",
+        "record": "records/retrospectives/2026-11-16-direct-native-encoding-review.json",
         "sha256": "0e445d2d82d859009be10fea0186e6e1283f89f7d7c1139f9fd5d4691f02bc41"
       }
     }
@@ -1043,7 +1043,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-continuous-resume-224-eli.json",
+    "record": "records/retrospectives/2026-11-16-continuous-resume-224-review.json",
     "sha256": "cc84e59968c763a6cc38c73e690fca68e87c6610df6b12ded9c83d2f1a3a51f6",
     "reviewed_declaration_sha256": "a85f3ad454a805fdf42f79caf2716915cecd8fa918646dcc229d312916c37d00",
     "canonical_declaration_sha256_excluding_review": "60d469235a40ab7afabd19568d06b05082a255c2b7977b5b3e3e1d773587a6e3",

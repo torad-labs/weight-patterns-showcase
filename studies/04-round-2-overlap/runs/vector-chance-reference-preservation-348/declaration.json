@@ -922,7 +922,7 @@
     "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/expanded-004-h1/case.json"
   ],
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-reference-preservation/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python records/development/2026-11-17-reference-preservation/run.py studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348"
   ],
   "whole_build_review": {
     "record": "records/retrospectives/2026-11-17-reference-preservation-independent-review.md",

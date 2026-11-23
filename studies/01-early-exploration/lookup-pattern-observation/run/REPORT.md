@@ -10,7 +10,7 @@ Original Gemma 4 E2B, the Q4_K_M GGUF, through the local llama.cpp fork. No trai
 
 Six families of three key/value assignments: colors, sports, animals, instruments, cities, and materials. The first four families supplied 40 discovery questions. Cities and materials supplied 20 confirmation questions. Each family varied table/prose wording, row order, and value/position instructions, plus one alternate-key question and one literal-copy question. The mappings were supplied in the prompt; this exercises an existing capability rather than testing facts installed in the checkpoint.
 
-Before confirmation ran, the three inspected heads and the descriptive predictions were fixed in selection.json (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/selection.json`) and PREDICTIONS.md (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/PREDICTIONS.md`). Confirmation did not change that selection or the comparison rules.
+Before confirmation ran, the three inspected heads and the descriptive predictions were fixed in selection.json and PREDICTIONS.md. Confirmation did not change that selection or the comparison rules.
 
 | Condition | Discovery correct / total | Confirmation correct / total | Three-way exact answer-token agreement, total |
 |---|---:|---:|---:|
@@ -63,7 +63,7 @@ The table shows confirmation mean cosine similarity between these product profil
 | Same assignments, table versus prose | 4 | 0.930 | 0.920 | 0.883 |
 | Same assignments, changed row order | 4 | 0.888 | 0.829 | 0.828 |
 
-All fixed descriptive predictions held on confirmation, including the predicted copy overlap and the input-only contrast. The detailed clause results, observed numbers, and denominators are in confirmation-evaluation.json (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation-evaluation.json`). Its 25 clauses are correlated bookkeeping for five prediction groups, not 25 independent validations.
+All fixed descriptive predictions held on confirmation, including the predicted copy overlap and the input-only contrast. The detailed clause results, observed numbers, and denominators are in confirmation-evaluation.json. Its 25 clauses are correlated bookkeeping for five prediction groups, not 25 independent validations.
 
 ## Why this is still short of identifying the intended path
 
@@ -104,15 +104,15 @@ Before treating a future signature as a candidate for that stronger goal, the an
 
 ## Provenance and saved evidence
 
-- Model: `~/Documents/dev/projects/qgre/qgre-main/models/gemma4/gemma4-e2b/gguf-q4_k_m-bartowski/google_gemma-4-E2B-it-Q4_K_M.gguf`.
+- Model: `<qgre-workspace>/models/gemma4/gemma4-e2b/gguf-q4_k_m-bartowski/google_gemma-4-E2B-it-Q4_K_M.gguf`.
 - Verified source SHA256: `923c4c86177d2ee173a7f5b4fa3d0ac65f5962ab15e6d6a5bc250aec4fd7bf7e`.
-- Local llama.cpp checkout: `f089c9cb4bc285a11e510e1c4336b95aca449b08`; engine directory `~/Documents/dev/infra/rig/repo/local/engine-builds/f089c9c-sm120/`.
+- Local llama.cpp checkout: `f089c9cb4bc285a11e510e1c4336b95aca449b08`; engine directory `<external-engine-workspace>/local/engine-builds/f089c9c-sm120/`.
 - Device 0: RTX 5080, UUID `GPU-b6d3869b-4794-4ff4-0398-47df517a8c82`, under `gpu_card_run 0`. No clock or power changes. The owned server exited; its port 17583 is no longer listening. Device 0 had no remaining compute process at cleanup.
-- Plan (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/PLAN.md`), all prepared cases (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/cases.json`), and input hashes (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/inputs.sha256`).
-- Discovery raw records and derived observations: `~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/discovery/`.
-- Confirmation raw records and derived observations: `~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation/`.
+- Plan, all prepared cases, and input hashes.
+- Discovery raw records and derived observations: `<qgre-workspace>/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/discovery/`.
+- Confirmation raw records and derived observations: `<qgre-workspace>/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/confirmation/`.
 - Both contain exact tokenized requests, server responses, plain and captured answers, first-token logits, internal capture metadata, `scan.json`, native product profiles with tensor provenance, and `product-comparisons.json`. Logs are alongside the phase folders. Total saved study size at completion: approximately 1.2 GiB.
-- Native diagnostic source: weight-products.cpp (`~/Documents/dev/infra/rig/repo/local/research/lookup-pattern-observation-2026-11-06/weight-products.cpp`). The study folder retains request, scan, comparison, evaluation, and run scripts.
+- Native diagnostic source: weight-products.cpp. The study folder retains request, scan, comparison, evaluation, and run scripts.
 - Both `run.sh` phases, both scans, both native weight-product runs, both profile comparisons, and the fixed-prediction evaluation exited 0. These are experiment completion results, not a claim about the QGRE production test suite or model performance.
 
 No checkpoint was modified, and no changes to the visualization were made in this experiment.

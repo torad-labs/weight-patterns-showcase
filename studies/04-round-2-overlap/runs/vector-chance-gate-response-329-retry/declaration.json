@@ -968,7 +968,7 @@
     }
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-gate-response/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-gate-response-329-retry"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-17-gate-response/run.py studies/04-round-2-overlap/runs/vector-chance-gate-response-329-retry"
   ],
   "prior_attempt": "studies/04-round-2-overlap/runs/vector-chance-gate-response-329/failure.json",
   "whole_build_review": {

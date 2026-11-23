@@ -207,7 +207,7 @@ checkpoint (9.26 + 7.78 GB), the cohort's captures (11.02 GB) and the machine's 
 the working files still to be written (8.05 GB). The launcher's `check` had found 124.41 GB free against the
 118.97 GB the declaration asks for. In the 77 minutes after it the run wrote 25.6 GB of its own (working files
 16.82 GB, capture streams 8.63 GB, records 0.16 GB), and the disk lost 48.36 GB, so about 22.8 GB went to other
-use of the same disk; `/tmp/claude-1000` held 42.6 GB of sessions' scratch at the stop, 0.4 GB of it this
+use of the same disk; `/tmp/agent-scratch` held 42.6 GB of sessions' scratch at the stop, 0.4 GB of it this
 project's. Two things were this seat's: it started the run 5.4 GB above the check's requirement, and it had
 left the first start's 16.8 GB exit checkpoint on the disk. A check at the start says nothing about disk that
 other work takes during the run.
@@ -322,11 +322,11 @@ acquisition: one more update would have stopped it on the disk (`third-start-dis
   `fdatasync`), and for the working model's through a descriptor opened for that, so a write the disk refused
   stops the run where the earlier build's `msync` did. The model copy ends with the same wait.
 
-**The review.** An independent Eli subagent (Opus) read the change against the four papers and the goal:
-`2026-11-19-page-cache-release-eli.md`, with an
+**The review.** An independent review subagent (Opus) read the change against the four papers and the goal:
+`2026-11-19-page-cache-release-review.md`, with an
 addendum on the final bytes. Its answer is yes to a fourth gated start. No value any reader sees can differ:
 a dirty page of a shared mapping stays dirty in the cache after `MADV_DONTNEED`, and every reader in the
-build goes through the page cache. The unit tests for the fifteen affected modules passed on the MacBook
+build goes through the page cache. The unit tests for the fifteen affected modules passed on the secondary test host
 (`tools/remote-tests.sh`, 94 tests, one skipped).
 
 **What the change does not remove: about 59 GB written per update.** The reviewer counted it from the code,
@@ -395,7 +395,7 @@ the trainer's own waiting is part of that figure. Dirty memory in the unit reach
 
 **Memory.** Anonymous memory reached 12.07 GB (12:34 PM CT). The unit's total reached 29.09 GB, because the
 cache pages it reads are now counted to it; that total is not comparable with the earlier starts' peaks, which
-counted almost no cache. It stayed far under Host Shield's 60 GB.
+counted almost no cache. It stayed far under the host resource governor's 60 GB.
 
 **Update 1 equals the recorded one** (measured 1:04:58 PM CT, archived 1:13:48 PM CT; every record the gate
 compares was the same). From the baseline to that archive, 43 minutes against the third start's 55, the unit
@@ -438,7 +438,7 @@ the 538 tensors (each update's `changed_values`). For those the install wrote th
 every span into the 7.5 GB weights file. Only the dense remainders really change everywhere each step. The
 direction and the displacement are made again by every step; in files, each pass over them is disk traffic,
 because the kernel takes the unit's cache back (the unit has no memory limit, and research units are never
-given Host Shield's 60 GB ceiling; the machine had 4 to 7 GB free and about 50 GB of cache shared by every
+given the host resource governor's 60 GB ceiling; the machine had 4 to 7 GB free and about 50 GB of cache shared by every
 project). Which working files stayed in memory, sampled every 30 seconds (`fourth-start-resident.log`, GB
 resident of GB in the file): the weights file is read back whole during a derivative and gone again after
 it, the remainder file is almost never resident, and 0.7 to 0.8 GB of the model file is.
@@ -474,8 +474,8 @@ removes the writes the method does not need.
 The working files are 24,329,444,544 bytes (model 9,311,304,896, weights 7,509,078,016, rounding remainder
 7,509,061,632), where they were 39,895,039,168.
 
-**The review.** An independent Eli subagent read the change against the four papers and the goal:
-`2026-11-19-changed-only-install-eli.md`,
+**The review.** An independent review subagent read the change against the four papers and the goal:
+`2026-11-19-changed-only-install-review.md`,
 YES with five conditions. No computed value changes: the model file's bytes after an install, the weights'
 bits, the direction and the displacement are the same. Its conditions and what was done with each:
 
@@ -483,7 +483,7 @@ bits, the direction and the displacement are the same. Its conditions and what w
    start's unit ended at 1:49:18 PM CT with exit 0, and this start's declaration was written at 2:04 PM CT.
 2. Hold the first start with the build to the recorded updates 1 and 2 with `gate.py`. This start is held to
    updates 0 to 4, and the gate stops it at the first record that differs.
-3. Run the test modules that import the changed sources through rig before committing. Done, below.
+3. Run the test modules that import the changed sources via the remote runner before committing. Done, below.
 4. Correct two texts before declaring: the derivation of `working_storage_bytes`, which cited the resume
    checkpoint, and `declare.py`'s wording (the model file is never mapped; the remainder is the BF16 rounding
    remainder, not an optimizer's). Done.
@@ -494,7 +494,7 @@ The review is bound to the patch with sha256 `add4b84f…`. The patch that was a
 and by one test of mine, corrected after its first run (below). No line of the trainer's computation differs
 from what was reviewed.
 
-**The tests** ran on the MacBook through `tools/remote-tests.sh`, not on this machine: the seven modules that
+**The tests** ran on the secondary test host through `tools/remote-tests.sh`, not on this machine: the seven modules that
 import the changed sources and `test_host_pages`, 69 tests. 68 passed and one failed, a test written with this
 change (`test_an_installed_span_that_keeps_its_bytes_is_not_written_again`). The failure was the test's: it
 asked the BF16 tensors for 2^-25 beside 1.0 and expected a remainder, and the remainder of a BF16 tensor is
@@ -521,7 +521,7 @@ count. The remainder file is still written whole each step: every remainder chan
 memory again, and they take that much from the memory the kernel can reclaim, so the weights file may be read
 back from the disk more often. At 2:00 PM CT, with no trainer running, the machine had 57.6 GB available and
 the other projects held 56.2 GB of anonymous memory, so 30 to 34 GB is expected to stay available in that
-window. Host Shield starts queueing other projects' new heavy work when memory is about three-quarters full,
+window. the host resource governor starts queueing other projects' new heavy work when memory is about three-quarters full,
 30.25 GiB (32.5 GB) available on this machine: the window is expected at that line, and the retrace measures
 which side of it. The declared rule: if the trainer's anonymous memory passes 28 GB by more than a tensor's
 worth, or available memory is under that line while the trainer's memory is what holds it there, the start is
@@ -534,7 +534,7 @@ If the machine lags, the read limit is lowered.
 
 **The disk between the two starts.** From 1:49 to 2:05 PM CT no trainer ran. At 1:59 to 2:03 PM CT the machine's
 I/O pressure was 46 to 67% (`/proc/pressure/io`, some, 10-second average) at a load of 35, and over 15 seconds
-one unit of another project (a file search in the rig seat's session) read 1,090 MB/s; it had ended two minutes
+one unit of another project (a file search in the remote runner seat's session) read 1,090 MB/s; it had ended two minutes
 later and the pressure was 19%. The desktop session's own stall counter read 0.00 throughout. This takes nothing
 from what the trainer did to the disk, which is measured above; it is recorded because a reading of this
 start's effect on the machine has to be taken beside what else is running.
@@ -566,7 +566,7 @@ so each use reads it from the disk, while the model file and the weights file st
 and 7.3 of 7.5 GB). Which file each phase's reads belong to was not measured. Update 2 from its start to its
 install read 31.6 GB and wrote 8.5 GB.
 
-The memory cost was smaller than stated: available memory stayed 9 GB above Host Shield's admission line at
+The memory cost was smaller than stated: available memory stayed 9 GB above the host resource governor's admission line at
 its lowest, so the declared stop rule did not apply. The desktop session's stall counters read 0.00
 throughout. The setup, unchanged, read 60.6 GB and wrote 39.1 GB before the baseline.
 
@@ -622,22 +622,22 @@ are noted and not changed:
 - The pre-commit hook's comment says the verifier runs in well under a second; it took 9.0 s. It is a
   safeguard other seats set, so its cost is theirs to weigh.
 - `tools/torad-research/README.md` still gives `bun test` as a command to run here. This build changed
-  nothing in that tool and did not run it; the next seat that changes it sends its tests through rig.
+  nothing in that tool and did not run it; the next seat that changes it sends its tests via the remote runner.
 - `weight-patterns-joint-disk-recovery.service` is listed as failed. It is a disk-backed restart of
   11:40 PM CT November 18 that was stopped after 27 seconds (6.5 GB at its most); a failed unit holds no
   memory.
 
 ## Where the tests ran
 
-Not on this machine. The affected unit modules ran in Linux in Docker on the MacBook through
-`rig remote run`. rig's credential scan first refused the tree for 4,707 lines that are array names, hashes
+Not on this machine. The affected unit modules ran in Linux in Docker on the secondary test host through
+`the remote runner remote run`. the remote runner's credential scan first refused the tree for 4,707 lines that are array names, hashes
 and measured numbers; they were checked by script and cleared on the President's decision
 (`records/maintenance-runs/2026-11-19-remote-run-scan/`, commits 2150bddf and ed88eea3).
 
 The 37 pipeline test modules ran there on this build before it was committed (Python 3.12, torch 2.15.0 for
 CPU, numpy 2.5.5): 236 tests, 234 passed, one skipped, and one could not find its input,
 `runs/sent-overlap/wrong-inputs/tensors.json`, a 113 KB record of the original model's tensor table that
-was on this disk untracked, so rig did not ship it. The record is tracked now and that module ran again
+was on this disk untracked, so the remote runner did not ship it. The record is tracked now and that module ran again
 there: 6 of 6. The trainer itself needs this machine's cards, so what the unit tests cannot show (the
 direction file and the remainders carried between updates) is held by the gate above.
 
@@ -673,6 +673,6 @@ named it. Marcos had pointed at the trainer each time.
 **What follows for a next start.** The disk-backed working state is not run on this machine again. Moving
 state from RAM to files lowered the trainer's anonymous memory and made the page cache and the disk pay
 for it, on a machine without swap that thirty projects share. A next start keeps its whole working state
-in RAM: on a rented GPU box through rig, or with a trainer whose state fits in RAM here (BF16 leaves, one
+in RAM: on a rented GPU box via the remote runner, or with a trainer whose state fits in RAM here (BF16 leaves, one
 tensor at a time on the card). Which one is the research seat's decision with Marcos; the rented box costs
 money, which is his.

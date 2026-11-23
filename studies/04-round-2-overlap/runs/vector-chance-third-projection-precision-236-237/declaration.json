@@ -123,15 +123,15 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-attention-third-precision-eli.md",
+      "record": "records/retrospectives/2026-11-16-attention-third-precision-review.md",
       "sha256": "7552313936a469358a3ae6f16ce06550d0ef6041a779ba25b8d44c70398e31c9"
     },
     {
-      "record": "records/retrospectives/2026-11-16-response-decomposition-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-response-decomposition-result-review.md",
       "sha256": "e1af143e75fa18ea5aaab0e39e1ba61915192b9ef45ae2d45c33e476d045dfb2"
     },
     {
-      "record": "records/retrospectives/2026-11-16-response-decomposition-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-response-decomposition-result-review.json",
       "sha256": "bbd28cebe027437c9787be4fe50b6d58b13c5a9060a5ab73c1728f48b94b83dc"
     },
     {
@@ -726,7 +726,7 @@
     }
   ],
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-third-projection-precision/evaluate.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-third-projection-precision-236-237"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-third-projection-precision/evaluate.py studies/04-round-2-overlap/runs/vector-chance-third-projection-precision-236-237"
   ],
   "parameters": {
     "cpu_threads": {
@@ -1133,7 +1133,7 @@
       ]
     },
     "projection_policy": {
-      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-eli.md",
+      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-review.md",
       "derivation": "Inspected dense BF16 native projection dispatch: single-column F32 activation, qualifying multicolumn BF16 operands/F32 output; exclude underfilled2\u20138-column fallback. Reproduce recorded calls without combining singles.",
       "scales_with": "Native matrix type/dimensions, call columns and backend policy.",
       "source_bindings": [
@@ -1170,7 +1170,7 @@
       "scales_with": "Original reference rows/merges and complete pair multiplicity."
     },
     "endpoint_evaluations": {
-      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-eli.md",
+      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-review.md",
       "derivation": "Two prescribed finite projection policies at both fixed endpoints, all third branches; existing auxiliary/GELU/RMS unchanged. No extra full forward beyond inherited reconstruction, gradient, JVP, candidate or capture.",
       "scales_with": "Declared endpoint pair and complete third-branch inventory."
     },
@@ -1641,7 +1641,7 @@
   ],
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-third-projection-precision-eli.json",
+    "record": "records/retrospectives/2026-11-16-third-projection-precision-review.json",
     "sha256": "bc6277dde07d41fb00456558f0d708f82ccd45a346957ace914bff562163699a",
     "reviewed_declaration_sha256": "7f0f313eb924c82d9b98a88ee194c28007b8f69a49cfbfb36bc92b02b16f38e1",
     "canonical_declaration_sha256_excluding_review": "94bc0b3f5552a21a0421f51aa7404f5ed66b6b397712b6d5bf91f8332df47ec4",

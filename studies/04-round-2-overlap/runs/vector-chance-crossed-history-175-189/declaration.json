@@ -902,10 +902,10 @@
     "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json"
   ],
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-crossed-history/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python records/development/2026-11-17-crossed-history/run.py studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189"
   ],
   "whole_build_review": {
-    "record": "records/retrospectives/2026-11-17-crossed-history-eli.json",
+    "record": "records/retrospectives/2026-11-17-crossed-history-review.json",
     "sha256": "564bff9d7e81be52d5e39119de0613d945aa08033b43263d4a53d1f1e57319e9"
   }
 }

@@ -12,7 +12,7 @@ existing controller starts at zero updates; after installing the first complete
 BF16 proposal it requires a fresh native acquisition. No closure or repair is
 claimed by recovery or by an inner objective decrease.
 
-Status: peer and source-bound Eli review YES; admitted for explicit recovery. Actual execution and progress are recorded separately.
+Status: peer and source-bound independent review YES; admitted for explicit recovery. Actual execution and progress are recorded separately.
 The first run's data, reference, tolerance and method are not changed.
 
 Independent checks: root eight recovery tests and three subtests pass; peer
@@ -20,7 +20,7 @@ verification covers 25 focused tests and three subtests. Focused Pyright is
 clean. The actual backend constructor passed with acquisition forbidden and
 zero updates, retaining the original 4,386 outside cells. Peer review reproduced
 and fixed a nested-source path bug before approval. Exact source identities
-and findings are in the peer and Eli review records under records/retrospectives/.
+and findings are in the peer and independent review records under records/retrospectives/.
 
 The declared user-service launcher has no automatic restart. Its bound
 ExecStopPost recorder writes launcher-exit.json independently of the Python

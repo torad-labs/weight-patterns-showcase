@@ -3,7 +3,7 @@
 Marcos's direct instruction, November 15, 2026, CT: the implementation peer takes over the work
 from `weight-research-astra`. The project team is the implementation peer and `weight-research`,
 working as peers: brainstorm together, review each other's code, and consult
-the independent Eli subagent periodically. Every Eli review continues to
+the independent review subagent periodically. Every independent review continues to
 receive the research goal and all four original documents.
 
 Marcos excludes Fable 5.2 from further project work. This is an assignment and
@@ -30,7 +30,7 @@ update is present.
 
 The existing run and its capture stay intact. Its driver refuses silent resume,
 and the inverse has no saved numerical state beyond progress; a continuation
-must account for this explicitly. Root is investigating recovery, with an Eli
+must account for this explicitly. Root is investigating recovery, with an independent review
 consultation grounded in the same papers and goal. This handoff does not launch
 a second controller or alter the loss, tolerance, reference or computational
 scope. The allowed disk survey found 113 GB available, above the existing
@@ -45,7 +45,7 @@ with native `read_thread`. Coordination uses native peer messaging. The executio
 is `01a1e25c-8821-7af1-a113-cda924500ebd`.
 
 The implementation peer is implementing the narrow recovery entrypoint and its tests;
-weight-research independently reviews it and consults Eli on that delta using
+weight-research independently reviews it and consults the independent reviewer on that delta using
 the four papers and goal. The previously reviewed implementation stays intact.
 The recovery will use a new declared run, retain the original acquisition
 identity, and restart only the lost inverse calculation from zero. Subsequent

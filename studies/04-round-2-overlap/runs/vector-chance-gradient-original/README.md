@@ -10,7 +10,7 @@ remeasurement. Original reference/tolerance, all 105 merges and 70 matrices are
 retained. No CGLS, candidate search, token comparison or output scoring.
 
 The revised method is recorded in `journal/2026-11-16-direct-computational-update.md`.
-Eli's source-bound YES and 21 tests plus 5 subtests are bound in the declaration.
+The independent reviewer's source-bound YES and 21 tests plus 5 subtests are bound in the declaration.
 `startup.json` records the actual command; `handoff.json` records the explicitly
 stopped unsaved predecessor with no installed updates. Its records are intact.
 

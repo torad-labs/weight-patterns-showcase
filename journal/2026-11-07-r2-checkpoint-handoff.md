@@ -4,7 +4,7 @@ Inventory checked November 7, 2026, CT. This handoff identifies existing researc
 
 The physical model directory is:
 
-`~/Documents/dev/projects/qgre/qgre-main/models/gemma4/gemma4-e2b/`
+`<qgre-workspace>/models/gemma4/gemma4-e2b/`
 
 The research directory `models/gemma4/gemma4-e2b/` resolves to these same files. Do not upload or count both paths as separate copies.
 

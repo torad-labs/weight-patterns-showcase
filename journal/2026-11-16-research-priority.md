@@ -4,7 +4,7 @@ Marcos directly instructed this session that nothing should stop work on the res
 
 The same hypothesis, papers, computational comparison and declared correction method continue. The first recovery service had already been killed while frozen (its exit record reports KILL); its lost inverse memory cannot be thawed. A new attempt uses the reviewed recovery entrypoint and the retained original native observation, preserving both earlier runs and restarting only the lost inverse calculation.
 
-The implementation peer owns the sole experiment controller. Weight-research owns subordinate storage work and peer review; Eli independently checks the new attempt bindings with the goal and all four papers. No duplicate controller or Fable project work is introduced.
+The implementation peer owns the sole experiment controller. Weight-research owns subordinate storage work and peer review; the independent reviewer checks the new attempt bindings with the goal and all four papers. No duplicate controller or Fable project work is introduced.
 
 ## Relay withdrawn and termination source established
 

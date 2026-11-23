@@ -586,19 +586,19 @@
   "cpu_threads": 1,
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-event-gradient-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-event-gradient-result-review.md",
       "sha256": "cabde225bc25be5f94808343c3490e15b3390f40f3ffac9e3981b6d9f5001b19"
     },
     {
-      "record": "records/retrospectives/2026-11-16-event-gradient-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-event-gradient-result-review.json",
       "sha256": "f26a0337c7f347e524d34ea0ed311b45eb7a14f5c9eb7f3f2dcf890e3b8ea89d"
     },
     {
-      "record": "records/retrospectives/2026-11-16-sphere-radial-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-sphere-radial-result-review.md",
       "sha256": "3e9edafa4fd874ca35d462dab86ef04e4d3a9fe538eb2fce57a2dc1bf1285ac4"
     },
     {
-      "record": "records/retrospectives/2026-11-16-sphere-radial-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-sphere-radial-result-review.json",
       "sha256": "89956ebb7f419522028bb312f20a536e7d4d1c055d01fb1e001b63b61382db88"
     }
   ],
@@ -623,7 +623,7 @@
     ]
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-factor-spectrum/measure.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-factor-spectrum-206"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with numpy==2.5.5 python records/development/2026-11-16-factor-spectrum/measure.py studies/04-round-2-overlap/runs/vector-chance-factor-spectrum-206"
   ],
   "source_declaration": {
     "record": "studies/04-round-2-overlap/runs/vector-chance-event-gradient-206/declaration.json",
@@ -671,7 +671,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-factor-spectrum-eli.json",
+    "record": "records/retrospectives/2026-11-16-factor-spectrum-review.json",
     "sha256": "4976e20564422fc51aeb7a5bf19c4bb1382075d72560cd563146dd083c1d543f",
     "reviewed_declaration_sha256": "62f63a677a8b5cac93c5c90e6eb3bcacda21810a679b64795b3ccf21acabc1ed",
     "canonical_declaration_sha256_excluding_review": "76fd7836313fda9965b364d34505119f079158ad68dd2f903ad8b6844cf1e23c"

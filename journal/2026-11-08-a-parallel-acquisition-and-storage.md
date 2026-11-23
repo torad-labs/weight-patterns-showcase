@@ -93,8 +93,8 @@ location and ownership findings, not approval to delete another project's work.
 | Research old TQ4 base | 4.82 GB | The two main tensors match the QGRE copies byte for byte, but are separate files. Preserve via archive before releasing our copy; do not make active research depend on QGRE again. |
 | Research historical D full checkpoint | 9.31 GB | Present in R2, retained locally by the earlier retention choice. Potential local offload, not removed. |
 | Research original Q4 GGUF | 3.46 GB | Present in R2; also retained earlier. Current A uses the original BF16 checkpoint. Not removed. |
-| Rig `local-nvme/prebuilt` | 9.48 GB | Multiple engine source/build generations belonging to Rig. A now resolves its own engine within research. Future Rig consumers were not established; not removed. |
-| Rig `local-nvme/engine-build-trees` | 1.07 GB | Another build location, not removed. |
+| External engine workspace `local-nvme/prebuilt` | 9.48 GB | Multiple engine source/build generations in the shared engine workspace. A now resolves its own engine within research. Future external consumers were not established; not removed. |
+| External engine workspace `local-nvme/engine-build-trees` | 1.07 GB | Another shared build location, not removed. |
 | torad-llama.cpp `build-cpu` | 1.65 GB | An active speculative-inference test was using these libraries. Keep. |
 | torad-llama.cpp `build-engine12` | 1.06 GB | No live user observed, but future consumers unchecked. Not established as disposable. |
 
@@ -105,7 +105,7 @@ The active original BF16 model is about 9.31 GB and stays local. The research
 engine source, source archive, and compiled dependencies together are about
 0.46 GB, so those are not a major storage issue.
 
-Other large directories include Rig's 16.12 GB research directory,
+Other large directories include the external workspace's 16.12 GB research directory,
 torad-llama.cpp's 20.46 GB `.agent-cache` directory, and QGRE's 82.02 GB model tree.
 They contain other projects' work. Some QGRE generation paths are hard links,
 so repeated filenames do not represent additional allocated model copies.
@@ -117,8 +117,8 @@ been archived, including the 40.4 GB physics trace run. That evidence is not a
 disposable build. A large additional archival job has not been started alongside
 A's active transfers.
 
-The inspection covered the research, Rig, QGRE, and torad-llama.cpp locations,
-with one unreadable Rig overlay work directory. It was not an exhaustive search
+The inspection covered the research, external engine workspace, QGRE, and torad-llama.cpp locations,
+with one unreadable overlay work directory. It was not an exhaustive search
 of the entire computer. No models or other projects' builds were deleted in
 this cleanup.
 

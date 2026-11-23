@@ -123,11 +123,11 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-full-request-finite-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-full-request-finite-result-review.md",
       "sha256": "f1ce3193682452a09c48bc39699ce3fbfe1d37973941a3786a72d36833166c7e"
     },
     {
-      "record": "records/retrospectives/2026-11-16-full-request-finite-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-full-request-finite-result-review.json",
       "sha256": "ade127e2a613d128dad4825fd983534f771374053aeeb23992073a8176f6b975"
     }
   ],
@@ -686,7 +686,7 @@
     }
   ],
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-full-request-response-decomposition/evaluate.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-response-decomposition-236-237"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-full-request-response-decomposition/evaluate.py studies/04-round-2-overlap/runs/vector-chance-response-decomposition-236-237"
   ],
   "parameters": {
     "cpu_threads": {
@@ -833,7 +833,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-response-decomposition-eli.json",
+    "record": "records/retrospectives/2026-11-16-response-decomposition-review.json",
     "sha256": "70db8bb304817ec4230c95c8131bd1e647bed8ebc4173f10c018e861da42d2b1",
     "reviewed_declaration_sha256": "2dbdb87e379da470d996bceada15b49224623d3826b5dc46154f6271d69d3a8b",
     "canonical_declaration_sha256_excluding_review": "6e76263fcd58b8431b97bd5e658d5662e9dad9407281938a36a55952d3dac75e",

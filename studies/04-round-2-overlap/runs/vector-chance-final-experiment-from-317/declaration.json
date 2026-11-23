@@ -1512,7 +1512,7 @@
   "retention": "Keep both full per-merge moment tables in proposal artifacts alongside existing sparse native-transition payloads and reached commit records. Existing verified consumed-trace archival and exact complete exit native/remainder checkpoint remain unchanged.",
   "stopping": "Manual research judgment from successive fresh native loss measurements, allowing step variation. Continue while learning improves; zero residual and outside==0 are not required. A nonzero plateau is a reportable endpoint, not evidence of repair. Signals finish the current transition/acquisition and retain complete state.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-final-experiment/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python records/development/2026-11-17-final-experiment/run.py studies/04-round-2-overlap/runs/vector-chance-final-experiment-from-317"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -1566,7 +1566,7 @@
       "vector-chance-full-weight-training",
       "vector-chance-final-experiment-from-317"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },
@@ -1719,7 +1719,7 @@
   "declaration_revision": 1,
   "revision_reason": "Complete graph and typed state implementation of the independently reviewed Final Experiment.",
   "whole_build_review": {
-    "record": "records/retrospectives/2026-11-17-final-experiment-build-eli.json",
+    "record": "records/retrospectives/2026-11-17-final-experiment-build-review.json",
     "sha256": "87b7cd2c3e27cf327eb8071015e935e1c2ff65653f5e9d7924f790030ee6e512"
   },
   "native_inputs": {

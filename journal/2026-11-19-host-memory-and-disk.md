@@ -35,7 +35,7 @@ directory and the no-fit answers are never read or archived. Nobody asks him a d
 
 ## Where builds, checks and tests run
 
-Not on this machine. They go to one of his Macs through rig, or to a rented box. The trainer itself stays
+Not on this machine. They go to a secondary test host via the remote runner, or to a rented box. The trainer itself stays
 here because it needs these cards.
 
 ## The model that did this work

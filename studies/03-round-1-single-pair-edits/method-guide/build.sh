@@ -10,6 +10,6 @@ uv run --quiet --with matplotlib --with numpy python make_figures.py
   printf '</head>\n'
   cat body-1.html body-2.html body-3.html body-4.html
 } > guide.html
-# Rendered with Playwright Chromium (page.pdf, Letter, preferCSSPageSize); host chromium runs behind Host Shield.
+# Rendered with Playwright Chromium (page.pdf, Letter, preferCSSPageSize); host chromium runs behind the host resource governor.
 uv run --quiet --with pypdf --with reportlab python stamp.py draft.pdf how-the-trace-derived-edit-works.pdf
 rm -f draft.pdf

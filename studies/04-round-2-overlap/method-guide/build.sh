@@ -10,9 +10,9 @@ uv run --quiet --with matplotlib --with numpy python make_figures.py > /dev/null
   printf '</head>\n'
   cat body-1.html body-2.html body-3.html body-4.html
 } > guide.html
-# Rendered with Playwright's headless Chromium (Letter, the page's own margins), bounded by Host Shield.
+# Rendered with Playwright's headless Chromium (Letter, the page's own margins), bounded by the host resource governor.
 # The body font is Liberation Serif, the face the two earlier PDFs were rendered in.
 shell=$(ls -d "$HOME"/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell | sort -V | tail -1)
-hostshield bound --timeout 120 --kill-after 10 -- "$shell" --headless --no-pdf-header-footer --print-to-pdf=draft.pdf "file://$PWD/guide.html"
+timeout --kill-after=10 120 "$shell" --headless --no-pdf-header-footer --print-to-pdf=draft.pdf "file://$PWD/guide.html"
 uv run --quiet --with pypdf --with reportlab python stamp.py draft.pdf how-the-path-edit-works.pdf
 rm -f draft.pdf

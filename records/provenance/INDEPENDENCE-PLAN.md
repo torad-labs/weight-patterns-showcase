@@ -2,11 +2,11 @@
 
 Marcos asked to consolidate the research, methods, papers, evidence, code and checkpoints here, finish the organization in Git, then resume the parallel A–D comparison. This change runs no inference and edits no model values.
 
-Success means the research has a readable home, two continuing strategy fronts, an accumulating diary, a planned comparison with no invented outcomes, and local model/replay/reference files independent of QGRE. Original evidence, failed candidates and historical commands remain attributable. Current launch paths use this repository. The initial move kept llama.cpp source/build dependencies in Rig; the November 8 correction below removes that remaining dependency.
+Success means the research has a readable home, two continuing strategy fronts, an accumulating diary, a planned comparison with no invented outcomes, and local model/replay/reference files independent of QGRE. Original evidence, failed candidates and historical commands remain attributable. Current launch paths use this repository. The initial move kept llama.cpp source/build dependencies in the external workspace; the November 8 correction below removes that remaining dependency.
 
 ## November 8: finish the engine/source move
 
-Marcos reasonably treated builds under Rig as Rig's files. Their removal exposed
+Marcos reasonably treated builds under the external workspace as the external workspace's files. Their removal exposed
 that the earlier research move was incomplete. The exact compiled `f089c9c`
 package was recovered before removal and retained inside research dependencies;
 its library hash matches historical A. The clean source revision was archived

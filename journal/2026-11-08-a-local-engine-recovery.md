@@ -2,15 +2,15 @@
 
 November 8, 2026, 02:05 CT.
 
-Marcos deleted Rig build/prebuilt directories because they were outside the
+Marcos deleted external engine build/prebuilt directories because they were outside the
 research folder. Our earlier relocation had left the engine dependencies linked
-into Rig. That incomplete relocation was ours; those folders did not make their
+into that external workspace. That incomplete relocation was ours; those folders did not make their
 research use apparent to him.
 
 The research project now contains the pinned engine source and exact recovered
 compiled package. Both dependency links resolve within this project. Ten older
 research launch scripts now resolve their libraries here too. All fourteen
-native research executables resolve their libraries without Rig. System CUDA
+native research executables resolve their libraries within this repository. System CUDA
 and driver libraries remain ordinary system dependencies. The first complete
 capture after recovery reproduced all 496 recorded token selections and full
 score hashes, including hashes of the captured vocabulary tensors.

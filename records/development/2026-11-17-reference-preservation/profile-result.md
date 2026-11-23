@@ -23,6 +23,6 @@ The temporal prediction is mixed: the development trace-distance increase at 348
 
 Coverage was checked from every pair/map: both earlier correct traces have609 events / 622 pairs, and both earlier development traces have605 events / 611 pairs. Every560 reference event, every current event and all 105 merges are represented; normalization mass remains one. Full560×105 map sums and per-merge totals reproduce each saved loss to floating summation error. No scalar or event was removed because its loss increased.
 
-Native result · Full coverage audit · Separate arithmetic readback · Source-bound receipt · Independent Eli review.
+Native result · Full coverage audit · Separate arithmetic readback · Source-bound receipt · Independent source-bound review.
 
 Both private models and GPU1were released on exit. The existing run-close inventory finds all115 active learner inputs and all38 profile inputs present. No archival/deletion was needed:86,091,001,856bytes were free against a conservative71,378,364,688-byte live-state/capture reserve. The active learner remained untouched.

@@ -649,7 +649,7 @@
     "scale": "S=-dL/dW; q=J_r S; alpha=-dot(r,q)/dot(q,q)",
     "native": "one engine-compatible BF16 rounding and complete installation; no candidate evaluation",
     "closure": "fresh complete native path only",
-    "attribution": "Implementation peer choice with independent Eli review; not a formula attributed to Marcos"
+    "attribution": "Implementation peer choice with independent source-bound review; not a formula attributed to Marcos"
   },
   "replaces": {
     "run": "studies/04-round-2-overlap/runs/vector-chance-loop-recovery-2-original",
@@ -664,11 +664,11 @@
   "whole_build_review": {
     "accepted": true,
     "source": {
-      "record": "records/retrospectives/2026-11-16-eli-direct-computational-update.md",
+      "record": "records/retrospectives/2026-11-16-review-direct-computational-update.md",
       "sha256": "9d561df50d73c7cb4f3efb1f1b94436052bc43a9f53454b628f5cd4f2eead9a3"
     },
     "evidence": {
-      "record": "records/retrospectives/2026-11-16-eli-direct-computational-update.json",
+      "record": "records/retrospectives/2026-11-16-review-direct-computational-update.json",
       "sha256": "abfe309da6425383a2ea7d5f187093f088b195474052cbf601f9427b7be5697e"
     },
     "admitted_at": "2026-11-16T03:56:00.859390-06:00",

@@ -164,7 +164,7 @@
     "sha256": "4a32deadf1ab529230254ab1d9c9e3b9dc9adcf25a3263dc48d305e6feda2c67"
   },
   "context_review": {
-    "record": "records/retrospectives/2026-11-16-native-first-ffn-result-eli.md",
+    "record": "records/retrospectives/2026-11-16-native-first-ffn-result-review.md",
     "sha256": "e4908ed0e2028d55a63618a43311ef722c8844b1d7d345cd6db73dee7027ba56"
   },
   "retention": "Read existing native/CPU/learning records without changes. Write only local result and small Recorder events inside this declared folder; no full model copy.",
@@ -354,7 +354,7 @@
   "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
   "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-native-operand-attribution/compare.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-native-operand-attribution"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-native-operand-attribution/compare.py studies/04-round-2-overlap/runs/vector-chance-native-operand-attribution"
   ],
   "active_precision_source": {
     "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_precision_accumulate_direct.py",
@@ -367,7 +367,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-native-operand-attribution-eli.json",
+    "record": "records/retrospectives/2026-11-16-native-operand-attribution-review.json",
     "sha256": "a5cf3a4e2eb799811d9860393c034f2da0d79f585697782464df589d7edaef03",
     "reviewed_declaration_sha256": "5cb7c293e695062d42d4321b665993834310eb923ec5362c988f1cae573a8041"
   },

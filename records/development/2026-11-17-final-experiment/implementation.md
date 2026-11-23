@@ -19,7 +19,7 @@ Native finite-precision STE derivatives remain estimators. In particular, the CP
 - Graph owner:14 focused CPU tests passed, including538/105 reverse and JVP agreement, shared/tied row behavior, existing precision wrappers and unconditional candidate-map cleanup.
 - State owner:22 focused CPU tests passed after the allocation-only optimization, including historical BF16 equality, F32 recurrence, failures, corruption refusal, sparse/dormant rows, complete recovery, all BF16 high words at five rounding boundaries and byte-equivalence with the prior arithmetic expressions.
 - Controller:5 CPU integration tests passed again after the allocation-only state change, exercising all538 derivatives, both JVP diagnostics, actual typed installation, exact next-model reads, scalar maps/plots, candidate mismatch rejection and real-versus-pseudo module source binding and numerical helper lookup under instrumentation.
-- Observability has its own source-bound checks/review beside this file. Independent whole-build review, the retained actual-size result assessment and the allocation-only delta review are recorded in records/retrospectives/2026-11-17-final-experiment-build-eli.md.
+- Observability has its own source-bound checks/review beside this file. Independent whole-build review, the retained actual-size result assessment and the allocation-only delta review are recorded in records/retrospectives/2026-11-17-final-experiment-build-review.md.
 - The read-only actual-size qualification passed within the scope below. No new native learning update or repair is claimed by these checks.
 
 ## Unresolved tolerance

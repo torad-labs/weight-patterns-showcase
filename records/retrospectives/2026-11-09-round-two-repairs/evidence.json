@@ -24081,8 +24081,8 @@
   },
   "checkpoints": {
     "F": {
-      "original": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
-      "checkpoint": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/step-01-scaled.gguf",
+      "original": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+      "checkpoint": "models/gemma4/gemma4-e2b/trace-derived-A-02/step-01-scaled.gguf",
       "checkpoint_sha256": "e90c411000f6b305f77c9201b4f01c10bf57a8d7e7f6c2ec77a38ac1d0e8ec2b",
       "checkpoint_bytes": 9311304896,
       "edits": [
@@ -24090,7 +24090,7 @@
           "layer": 11,
           "tensor": "blk.11.ffn_down.weight",
           "coefficient": 0.537603787730697,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-01.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-01.npz",
           "source_patch_sha256": "cae455bbe2680931b0b23b4adcb3bffc291b7a23ff9f2e706d5e6140611a9dc8",
           "changed_native_values": 8929954,
           "stored_rows_sha256": "5f8870af4044cf1928a84fe5078e9475ae38847516d62e8052b47f296cf61e28"
@@ -24099,8 +24099,8 @@
       "precision": "BF16; native round-to-nearest-even"
     },
     "K": {
-      "original": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
-      "checkpoint": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/kv-only.gguf",
+      "original": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+      "checkpoint": "models/gemma4/gemma4-e2b/trace-derived-A-02/kv-only.gguf",
       "checkpoint_sha256": "dd039cd8139d6f95c991e85e239478be713f5d8e8a20931c74a721c0d54e6f84",
       "checkpoint_bytes": 9311304896,
       "edits": [
@@ -24108,7 +24108,7 @@
           "layer": 14,
           "tensor": "blk.14.attn_k.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-k.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-k.npz",
           "source_patch_sha256": "9a293b00f59fd89310dee533db52d656aa38c96328d59bd2ad058a05e0539e18",
           "changed_native_values": 608630,
           "stored_rows_sha256": "0b509adcf79a9326e102bd727721c3e02759c910e46944c61647baf38c034bcb"
@@ -24117,7 +24117,7 @@
           "layer": 14,
           "tensor": "blk.14.attn_v.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-v.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-v.npz",
           "source_patch_sha256": "1925f67c0659b08e154c53e3691e58d85ab0fbec77ca9c546b6da20df4168bf5",
           "changed_native_values": 664072,
           "stored_rows_sha256": "81b81364884c293cc0be601ab42c4ecb82b41d040d8524f48e34f4c46c433268"
@@ -24126,8 +24126,8 @@
       "precision": "BF16; native round-to-nearest-even"
     },
     "FK": {
-      "original": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/step-01-scaled.gguf",
-      "checkpoint": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/step-02-unit.gguf",
+      "original": "models/gemma4/gemma4-e2b/trace-derived-A-02/step-01-scaled.gguf",
+      "checkpoint": "models/gemma4/gemma4-e2b/trace-derived-A-02/step-02-unit.gguf",
       "checkpoint_sha256": "30f8042e2fec8d2416a60ed152a6b85fcc6a45f47775473194206d732fb2fc25",
       "checkpoint_bytes": 9311304896,
       "edits": [
@@ -24135,7 +24135,7 @@
           "layer": 14,
           "tensor": "blk.14.attn_k.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-k.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-k.npz",
           "source_patch_sha256": "9a293b00f59fd89310dee533db52d656aa38c96328d59bd2ad058a05e0539e18",
           "changed_native_values": 608630,
           "stored_rows_sha256": "0b509adcf79a9326e102bd727721c3e02759c910e46944c61647baf38c034bcb"
@@ -24144,7 +24144,7 @@
           "layer": 14,
           "tensor": "blk.14.attn_v.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-v.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A-02/directions/step-02-v.npz",
           "source_patch_sha256": "1925f67c0659b08e154c53e3691e58d85ab0fbec77ca9c546b6da20df4168bf5",
           "changed_native_values": 664072,
           "stored_rows_sha256": "81b81364884c293cc0be601ab42c4ecb82b41d040d8524f48e34f4c46c433268"
@@ -24153,8 +24153,8 @@
       "precision": "BF16; native round-to-nearest-even"
     },
     "full": {
-      "original": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
-      "checkpoint": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded.gguf",
+      "original": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+      "checkpoint": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded.gguf",
       "checkpoint_sha256": "c02e7dd39fc79d4b00feb83f07b42a000d7d5d1b51f5114a3b709fd378c35b57",
       "checkpoint_bytes": 9311304896,
       "edits": [
@@ -24162,7 +24162,7 @@
           "layer": 0,
           "tensor": "blk.0.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.0.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.0.attn_output.weight.npz",
           "source_patch_sha256": "9bc65a67404b425a8560bded8337bff9226d7b08b96827decaee277860ff1f1a",
           "changed_native_values": 3019369,
           "stored_rows_sha256": "998995b10496e0249c3c9c2ebe088faf3e01feee2b9ab4a73ec9af39c09dc1d5"
@@ -24171,7 +24171,7 @@
           "layer": 0,
           "tensor": "blk.0.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.0.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.0.ffn_down.weight.npz",
           "source_patch_sha256": "48d81f29bf15f2206dd33005b38f4bc56736ea176400cd7e8cef39c078c04ca3",
           "changed_native_values": 8651795,
           "stored_rows_sha256": "53bbc9e8a3fa8f69fe81d253fb940d190678e0dadc45b51b5b93e43bd8f9102e"
@@ -24180,7 +24180,7 @@
           "layer": 2,
           "tensor": "blk.2.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.2.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.2.attn_output.weight.npz",
           "source_patch_sha256": "cab7befe199c99dfa2250a9cfb57769851a491942c88364e8775571091fdd740",
           "changed_native_values": 3020755,
           "stored_rows_sha256": "582737414f66a0884950001c3f68e451d63190002f283a945f2520a6cfba2637"
@@ -24189,7 +24189,7 @@
           "layer": 2,
           "tensor": "blk.2.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.2.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.2.ffn_down.weight.npz",
           "source_patch_sha256": "3411fb2a94a90fb50324eaade9085307aa3ce0b751c32748e33068ff8e7fab2d",
           "changed_native_values": 8601963,
           "stored_rows_sha256": "aa818630824808a1e3046b85ffe508f7b8769308825374ae30226f748477eee8"
@@ -24198,7 +24198,7 @@
           "layer": 3,
           "tensor": "blk.3.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.3.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.3.attn_output.weight.npz",
           "source_patch_sha256": "f23a1d06a4fd78530d21fa3d3e49b414802b53e32c32199a7a922330b693b115",
           "changed_native_values": 3039118,
           "stored_rows_sha256": "051c5cd6e70ae7f3d27b58c58cb82215a8e7762f649204e3b95465baf0139a83"
@@ -24207,7 +24207,7 @@
           "layer": 3,
           "tensor": "blk.3.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.3.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.3.ffn_down.weight.npz",
           "source_patch_sha256": "b6989959507d77076d9c299318a3a25373300e5f63ec13b0623085c7b6ec7e4e",
           "changed_native_values": 8565473,
           "stored_rows_sha256": "1ce3aa89311e314aa251541ea72e3183fc64aec360263232271eeea9e0808193"
@@ -24216,7 +24216,7 @@
           "layer": 4,
           "tensor": "blk.4.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.4.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.4.attn_output.weight.npz",
           "source_patch_sha256": "5a0a281003f1553285c93dddef9f4ee05478b9a7d05d6fa32338eb13ebcc5d96",
           "changed_native_values": 5986716,
           "stored_rows_sha256": "aeb958b1cb96bf135094fb14d45e36e480d40f3a5c8d91d4df8f4aaa26594d52"
@@ -24225,7 +24225,7 @@
           "layer": 4,
           "tensor": "blk.4.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.4.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.4.ffn_down.weight.npz",
           "source_patch_sha256": "3a086297cfcf22aa017d53b3380ddd234639a4a243c7886164d8a9bf06355370",
           "changed_native_values": 7579778,
           "stored_rows_sha256": "e778e702f58ec4d9a621261f1767df9a2dd9939dae84cc55a88183cb30256333"
@@ -24234,7 +24234,7 @@
           "layer": 6,
           "tensor": "blk.6.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.6.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.6.attn_output.weight.npz",
           "source_patch_sha256": "540fe82e95ac5e1de38097f96506640a7616d6f399b275c43197c042cd67368c",
           "changed_native_values": 3036711,
           "stored_rows_sha256": "9df36ab1346c1ba7f712f94da9aeb610a8aed83d46b6f61f061cc9eac1b49032"
@@ -24243,7 +24243,7 @@
           "layer": 6,
           "tensor": "blk.6.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.6.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.6.ffn_down.weight.npz",
           "source_patch_sha256": "5b07c81b6dac22ef52677d132c6b3447450ce0e4556809a9c8795c73e7e36ae2",
           "changed_native_values": 8727921,
           "stored_rows_sha256": "f5c5de9fa4b400da5742ac770cef3f43d07cf3089a2cff5d43df970b54b16591"
@@ -24252,7 +24252,7 @@
           "layer": 7,
           "tensor": "blk.7.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.7.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.7.attn_output.weight.npz",
           "source_patch_sha256": "eb542072f3e17b9d08061caa22a07feb5f49b518b75c10a26813d2b5e6579cd3",
           "changed_native_values": 3029634,
           "stored_rows_sha256": "988552c777e62da7be144eede6df0523e8d465b2aa409a48a38574a87682d62d"
@@ -24261,7 +24261,7 @@
           "layer": 7,
           "tensor": "blk.7.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.7.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.7.ffn_down.weight.npz",
           "source_patch_sha256": "f03fb0f9f7f56e5037e06c45d57e3ea34b97fa7231d7c32c5d5a4baaa26668a4",
           "changed_native_values": 8906670,
           "stored_rows_sha256": "62eba474856e6047d4f324a9752c2d23db856e4025f323c96a9e359cb0d8f701"
@@ -24270,7 +24270,7 @@
           "layer": 8,
           "tensor": "blk.8.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.8.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.8.attn_output.weight.npz",
           "source_patch_sha256": "fa19305dda2d27059db67c4d55858a550c45ad44d249b1bc7bbdb6372a50c4b7",
           "changed_native_values": 3048352,
           "stored_rows_sha256": "eceedf164d2a73c82b47146c6ef8d0574608d62f178f38507013180c9f96ba8c"
@@ -24279,7 +24279,7 @@
           "layer": 8,
           "tensor": "blk.8.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.8.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.8.ffn_down.weight.npz",
           "source_patch_sha256": "ba4fed6c01fe25180d45f36d346befbc52af28a44fbc67f1fe105422c201b0c7",
           "changed_native_values": 9073131,
           "stored_rows_sha256": "85e3c8f36faf8f7753b1de4b5002ff6222c22a25d2bc8673a6f98e8d7ebddf30"
@@ -24288,7 +24288,7 @@
           "layer": 9,
           "tensor": "blk.9.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.9.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.9.attn_output.weight.npz",
           "source_patch_sha256": "ab67e35764a6578267c5014e81fcda909e17bfdea2c5ff8af72e4a19473196cf",
           "changed_native_values": 6078428,
           "stored_rows_sha256": "c6cf229c74e8793f539c9d2c2914598e06e0042c7ad833dd3d076bf9f5459647"
@@ -24297,7 +24297,7 @@
           "layer": 9,
           "tensor": "blk.9.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.9.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.9.ffn_down.weight.npz",
           "source_patch_sha256": "856058c620bb0628806f3ff11e0a429ac7c9689d93bb88db7c94adb6497e2e03",
           "changed_native_values": 9092196,
           "stored_rows_sha256": "64fd62dcd8f68e502cf1c1b384ef7c44da181e6ba1749fc4c1b15543acaab07f"
@@ -24306,7 +24306,7 @@
           "layer": 10,
           "tensor": "blk.10.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.10.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.10.attn_output.weight.npz",
           "source_patch_sha256": "bc81636628c12d09bf3f2e1369f92d88f78759460ea556c0dabe4f0f80fe2f1d",
           "changed_native_values": 3038898,
           "stored_rows_sha256": "b0890dbe963758a8169be0f5f03e22419556b6ed7a5e6e834f6b95261ac27250"
@@ -24315,7 +24315,7 @@
           "layer": 10,
           "tensor": "blk.10.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.10.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.10.ffn_down.weight.npz",
           "source_patch_sha256": "5afc35f1e7e1f62a6d25de9c1c777fa8181f81a8d2747e613567570292ee7fd6",
           "changed_native_values": 9131187,
           "stored_rows_sha256": "b2590d9435d22848486b3e0fd508ccf2ea32fa2b33882953cad8a9a3d9a529eb"
@@ -24324,7 +24324,7 @@
           "layer": 11,
           "tensor": "blk.11.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.11.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.11.attn_output.weight.npz",
           "source_patch_sha256": "3e8a0265bc766d83e34372ad1b5e3fa2e2e97d893d953a15caff04001116d970",
           "changed_native_values": 3044001,
           "stored_rows_sha256": "26822ed7720d84bfa11cc65914a38ded609a317d737ebd94221563c117f412a7"
@@ -24333,7 +24333,7 @@
           "layer": 11,
           "tensor": "blk.11.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.11.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.11.ffn_down.weight.npz",
           "source_patch_sha256": "06c0ab9819c3b5ee8fc2bf0ba5690ffb30ea4371f8878d52f6c11a5bd62dc73d",
           "changed_native_values": 9128804,
           "stored_rows_sha256": "ea0defeb3369c564f48df78602f9c67ad2e7267ec7f39ea4173d3a2fa2172d48"
@@ -24342,7 +24342,7 @@
           "layer": 12,
           "tensor": "blk.12.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.12.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.12.attn_output.weight.npz",
           "source_patch_sha256": "c1a998b5a6cd87d3d013a0b125d65a56282b938160585f91e8a2bb60517a3cbd",
           "changed_native_values": 3033914,
           "stored_rows_sha256": "47093d3e471ca5c790ef30b6d5e97397d728465f6262b6aa0709c884f943f9de"
@@ -24351,7 +24351,7 @@
           "layer": 12,
           "tensor": "blk.12.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.12.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.12.ffn_down.weight.npz",
           "source_patch_sha256": "d86b34c1917d09f1aaabc993340873112189bfcfd00cedae05760b805a7321dc",
           "changed_native_values": 9064538,
           "stored_rows_sha256": "d1e9dc7f5ea8e9c54a6ba19614ff3d43dd81f6744050f8d8b811f208b1a17487"
@@ -24360,7 +24360,7 @@
           "layer": 13,
           "tensor": "blk.13.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.13.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.13.attn_output.weight.npz",
           "source_patch_sha256": "95c1c0419fc525a2a06df87cd655bd5a65d496964276d8d956307f0d73debbcf",
           "changed_native_values": 3040191,
           "stored_rows_sha256": "67e3cf55560c88a1d19e1ed1ff7a517d9cc5e5f4f132a8b635fddb1697db1293"
@@ -24369,7 +24369,7 @@
           "layer": 13,
           "tensor": "blk.13.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.13.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.13.ffn_down.weight.npz",
           "source_patch_sha256": "06b40cff280cae96f6741a755457fc55ea53fb49b18b2154ebd3c6251ff78da6",
           "changed_native_values": 9149082,
           "stored_rows_sha256": "96d122a6c8941cd3ed0b77b7113368ee2405b450fea37833c97c8c9a32167574"
@@ -24378,7 +24378,7 @@
           "layer": 14,
           "tensor": "blk.14.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.14.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.14.attn_output.weight.npz",
           "source_patch_sha256": "fc22eecf87bc254621ea09fb33c51d14d754015f8a8de29ecb433c79aa815ae6",
           "changed_native_values": 5989164,
           "stored_rows_sha256": "6aed09d6b70ca5e9d4ee6c87fd55747bce43a6d9f97613ada4f7f1df996b36ed"
@@ -24387,7 +24387,7 @@
           "layer": 14,
           "tensor": "blk.14.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.14.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.14.ffn_down.weight.npz",
           "source_patch_sha256": "4b0443042484ad0357737d13b155ac74bb3d2ad06a08bb5a10288e7fda2e6e19",
           "changed_native_values": 9092431,
           "stored_rows_sha256": "1e0ac8e1aa904d83500754efecd11fe8ddef0f686f15012b0dba52979ed0cfb9"
@@ -24396,7 +24396,7 @@
           "layer": 15,
           "tensor": "blk.15.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.15.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.15.attn_output.weight.npz",
           "source_patch_sha256": "a546df32a3c4c049487311ea4c8fe5d724d57f85901b5530fdc982e1e3eaa2fb",
           "changed_native_values": 3020439,
           "stored_rows_sha256": "832f613da6ae6a9fffdc444f9329832f3de239a0ef110fd4e95cdc4594ac9ed3"
@@ -24405,7 +24405,7 @@
           "layer": 15,
           "tensor": "blk.15.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.15.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.15.ffn_down.weight.npz",
           "source_patch_sha256": "4c56d92369f296862b3ef0ba51c89167b30cd285d1b9092f85a9dbafbea49cc4",
           "changed_native_values": 18207543,
           "stored_rows_sha256": "0bf824aa8a347f3c6b15affa4fb146b04283ffa18b230c734f983ca653475f8a"
@@ -24414,7 +24414,7 @@
           "layer": 16,
           "tensor": "blk.16.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.16.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.16.attn_output.weight.npz",
           "source_patch_sha256": "e5898579b897171413a271e52f497fa45e2a27945f1954a49eb07689fbc41d66",
           "changed_native_values": 3049908,
           "stored_rows_sha256": "d801c2c38c69b13f758598f54a0f258ef3174d2214f72628ce818a3408f0cb32"
@@ -24423,7 +24423,7 @@
           "layer": 16,
           "tensor": "blk.16.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.16.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.16.ffn_down.weight.npz",
           "source_patch_sha256": "1fb665456c635f067a64a783d6b54ad2af7870be8a457950ed6526f03adbe1cb",
           "changed_native_values": 17575485,
           "stored_rows_sha256": "f4b7ba4fbde14500dd42aeb127bd83e99f503b2a8694474d0d82eb7e06091067"
@@ -24432,7 +24432,7 @@
           "layer": 17,
           "tensor": "blk.17.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.17.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.17.attn_output.weight.npz",
           "source_patch_sha256": "6d7f9646ac62bd258f912cb2e466c6d681b1f790f21fccc48e0c6a1f36e5042b",
           "changed_native_values": 3058654,
           "stored_rows_sha256": "25ce2251b0f71becb3af42b7c1806c4e5f019c692519214c85c11b33432eb8d8"
@@ -24441,7 +24441,7 @@
           "layer": 17,
           "tensor": "blk.17.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.17.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.17.ffn_down.weight.npz",
           "source_patch_sha256": "c38e223455a0ab728ab1b4d14e6bfa71c1630216fe9613e91a37575cccd5aeb1",
           "changed_native_values": 18235894,
           "stored_rows_sha256": "8d59d79e9a422146233ce3a1e4fd768c4f5925802c23f2934643a5178715238e"
@@ -24450,7 +24450,7 @@
           "layer": 18,
           "tensor": "blk.18.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.18.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.18.attn_output.weight.npz",
           "source_patch_sha256": "8d32e9aa1bf70b0f86ae03037139f0ca5e7038af71d6cf1d0c29307a6955af91",
           "changed_native_values": 3053085,
           "stored_rows_sha256": "84b24408a546ee8dab3ef9207d3ee5ad44726a1b31328ef4b9224b26ce1b7511"
@@ -24459,7 +24459,7 @@
           "layer": 18,
           "tensor": "blk.18.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.18.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.18.ffn_down.weight.npz",
           "source_patch_sha256": "c557df6a323402e01b2bf9938a0e6dbac787b73fcaedc71db8f0fe236bea2a84",
           "changed_native_values": 18218167,
           "stored_rows_sha256": "0a9d925dc42fe11d7469f514230ce63193e1e0a330018ad58ba8456dadc07c89"
@@ -24468,7 +24468,7 @@
           "layer": 19,
           "tensor": "blk.19.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.19.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.19.attn_output.weight.npz",
           "source_patch_sha256": "3dbdbd36920cf22ac26b88aa1acfd0cbe7b53ecb74f458b307daad877c30e4cb",
           "changed_native_values": 6068598,
           "stored_rows_sha256": "d0050e3dc4b75ed4013a3cee333317f26e74e4f249ac93061367fd9d905bbf59"
@@ -24477,7 +24477,7 @@
           "layer": 19,
           "tensor": "blk.19.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.19.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.19.ffn_down.weight.npz",
           "source_patch_sha256": "0457760f83fa31c17be9928255a53e8b6e3d246ca9a910ad4c1e17af04bd600a",
           "changed_native_values": 17792516,
           "stored_rows_sha256": "b5b9f3946e30fe3155299a24d764f63fbe14d861a067d8e73f59cf9e7c8ee79c"
@@ -24486,7 +24486,7 @@
           "layer": 20,
           "tensor": "blk.20.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.20.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.20.attn_output.weight.npz",
           "source_patch_sha256": "b3f7ff0d487aa677c7fa11809b29497f0da9dfd40ce4783c58befd71f3017166",
           "changed_native_values": 2881712,
           "stored_rows_sha256": "dec43c86c4bf87fb186e523abf8c11871cde7e13c4af78735997473b88061bd0"
@@ -24495,7 +24495,7 @@
           "layer": 20,
           "tensor": "blk.20.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.20.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.20.ffn_down.weight.npz",
           "source_patch_sha256": "fc4b2b800b9674605b682da75858f83d833865f7590f4d4cc1cf304ca71ac6ef",
           "changed_native_values": 17704921,
           "stored_rows_sha256": "ecf07539b3f56e47ff33996e325ea3516f0248b755fe7643148d1125cff273b5"
@@ -24504,7 +24504,7 @@
           "layer": 21,
           "tensor": "blk.21.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.21.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.21.attn_output.weight.npz",
           "source_patch_sha256": "6b518668c7ea395f1847dd7ac3be165b9ecf94ae1c767af15ecee7111cb7d80b",
           "changed_native_values": 3041846,
           "stored_rows_sha256": "5865425043a7146aa7bc0aeb50ff722feae9b3a43505a4169c3e24cd7847bb4b"
@@ -24513,7 +24513,7 @@
           "layer": 21,
           "tensor": "blk.21.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.21.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.21.ffn_down.weight.npz",
           "source_patch_sha256": "737f7ca7d1b989787261f6ff387aeee7bc7c878d74a80e93d57719f95db135ab",
           "changed_native_values": 18116106,
           "stored_rows_sha256": "506385ff6da974a7f7fa4d1936ce28fe5744dddd4eea81d54fa3349b072b6b96"
@@ -24522,7 +24522,7 @@
           "layer": 22,
           "tensor": "blk.22.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.22.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.22.attn_output.weight.npz",
           "source_patch_sha256": "711b6390644f73c9060b43ba88ba789be9b69deeeb61dcc324d8300cd12061cb",
           "changed_native_values": 3023905,
           "stored_rows_sha256": "cd9439d783e58aa1aaf547aa3f1d0bebf70da0134fa35b66ba7f6d8e3e9d1d1d"
@@ -24531,7 +24531,7 @@
           "layer": 22,
           "tensor": "blk.22.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.22.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.22.ffn_down.weight.npz",
           "source_patch_sha256": "d7d116eab739e332922d9befa5910af9f7b790f8e550b4985033dd0e3cbd1267",
           "changed_native_values": 18264602,
           "stored_rows_sha256": "fefb3bd12d3c87ed98f4bed4ad8226eda5d4d9f2ad47062cd5d2d8ec38264c0b"
@@ -24540,7 +24540,7 @@
           "layer": 23,
           "tensor": "blk.23.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.23.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.23.attn_output.weight.npz",
           "source_patch_sha256": "dcf4a23c2ce87b876a09fd6a4e582cf09f38bfc5019c02c2298ecdc8178ec442",
           "changed_native_values": 3006877,
           "stored_rows_sha256": "bc6f3548a156a85aad32529f2f49f81a6ec452848d95f2af7dc1f0f3178b1020"
@@ -24549,7 +24549,7 @@
           "layer": 23,
           "tensor": "blk.23.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.23.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.23.ffn_down.weight.npz",
           "source_patch_sha256": "0f39477d77156004c5474af41852793ce44028dd6014a057286061e13c9ca98b",
           "changed_native_values": 17928530,
           "stored_rows_sha256": "3f634c463cd566d590174cd1e59b0f81f09a4c90fbe31ddeb191151790097ad8"
@@ -24558,7 +24558,7 @@
           "layer": 24,
           "tensor": "blk.24.attn_output.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.24.attn_output.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.24.attn_output.weight.npz",
           "source_patch_sha256": "df983f217fac607e6e1da7fe22a4bdd58b360f210656d4f022ed09178803fa30",
           "changed_native_values": 6117207,
           "stored_rows_sha256": "71372c3307a9dac87f83b7cad09bc3203ccb303b1b0097e0b9c81ce63690d648"
@@ -24567,7 +24567,7 @@
           "layer": 24,
           "tensor": "blk.24.ffn_down.weight",
           "coefficient": 1.0,
-          "source_patch": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.24.ffn_down.weight.npz",
+          "source_patch": "models/gemma4/gemma4-e2b/trace-derived-A2-full-path/step-01-bounded/blk.24.ffn_down.weight.npz",
           "source_patch_sha256": "d1a727676c64f3329c9906edfdf2b019ab6970f9e00d6d9274f9aa0f2893aa7c",
           "changed_native_values": 17819197,
           "stored_rows_sha256": "4f0e0e79c9244d26244b08e18e3756112cb8683890db05d28457134012ff8e1d"
@@ -24579,9 +24579,9 @@
   "construction_declaration": {
     "status": "Locations declared before native input assessment; no checkpoint constructed",
     "method": "A2 full-answer-path joint construction",
-    "original_model": "~/Documents/dev/research/weight-patterns/models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "original_model": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
     "original_model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
-    "source_map": "~/Documents/dev/research/weight-patterns/runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/analysis/response-map/index.json",
+    "source_map": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/analysis/response-map/index.json",
     "source_sha256": "cb0509a8b7a587c80fc2118cc023717a91c3e63d03ff4263649aa22d33ebce86",
     "selection": {
       "threshold": 0.01,

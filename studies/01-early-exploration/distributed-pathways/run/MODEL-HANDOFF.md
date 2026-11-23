@@ -1,8 +1,8 @@
 # Earlier handoff: superseded by the residual-trace clarification
 
 **Start with the current
-residual-trace handoff (`~/Documents/dev/projects/qgre/qgre-main/.dev/decode-machine/RESIDUAL-TRACE-HANDOFF.md`)
-and full reference (`~/Documents/dev/projects/qgre/qgre-main/.dev/decode-machine/RESIDUAL-TRACE-THEORY.md`).**
+residual-trace handoff
+and full reference.**
 
 The passage below preserves an earlier interpretation. Its instruction to exclude
 the inference trace from the target is no longer Marcos's intended meaning.
@@ -13,9 +13,9 @@ Capability-focused requests are part of making that influence observable.
 
 ## Historical handoff; do not paste as current context
 
-Read the full research reference (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md`) before proposing an experiment or debating the theory. It contains the five motivating examples, the intended vocabulary, local evidence, and the current editing results. This is research context, not a requirement to agree with every hypothesis.
+Read the full research reference before proposing an experiment or debating the theory. It contains the five motivating examples, the intended vocabulary, local evidence, and the current editing results. This is research context, not a requirement to agree with every hypothesis.
 
-The latest clarification from Marcos (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/sources/marcos-path-clarification-2026-11-06.md`) is the source note behind this summary; reread it if this summary loses a distinction.
+The latest clarification from Marcos is the source note behind this summary; reread it if this summary loses a distinction.
 
 ## Pasteable context
 
@@ -43,6 +43,6 @@ We use the local **llama.cpp fork**. The earlier QGRE position-versus-value fail
 
 The full reference links surviving FP4 CPT evaluations: 89/300 to 206/300, and 21/77 to 54/77, on their recorded forced-choice probes. These are empirical starting points. The proposed encoded paths have not yet been identified experimentally in our local work.
 
-The subsequent original-model observation study (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/lookup-pattern-observation-2026-11-06/REPORT.md`) completed 40 discovery and 20 withheld questions, all answered correctly with exact answer-token agreement across ordinary, plain-observer, and captured runs. Selected attention diagnostics and native-quantized weight/input product profiles showed repeatable task contrasts on the withheld questions. Copying overlapped, and the contrast also existed in the inputs alone. The capture changed numerical logits despite preserving answers. No frozen encoded path was identified and no edit or training was performed; do not describe the inspected heads or product profiles as the paths meant here.
+The subsequent original-model observation study completed 40 discovery and 20 withheld questions, all answered correctly with exact answer-token agreement across ordinary, plain-observer, and captured runs. Selected attention diagnostics and native-quantized weight/input product profiles showed repeatable task contrasts on the withheld questions. Copying overlapped, and the contrast also existed in the inputs alone. The capture changed numerical logits despite preserving answers. No frozen encoded path was identified and no edit or training was performed; do not describe the inspected heads or product profiles as the paths meant here.
 
 If you disagree, engage the proposition I actually made. Preserve the difference between my hypothesis, the analogies used to communicate it, and the evidence we have. Do not substitute a different claim and then correct that instead.

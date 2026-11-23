@@ -9,7 +9,7 @@ one measured directional scale, complete native BF16 installation, then a
 fresh computational path. The first attempt reproduced the exact original
 baseline but failed before differentiation at an uninitialized CUDA peak reset.
 Explicit CUDA initialization fixes that order; an actual cold-device smoke
-and Eli's separate source-bound addendum pass. All earlier records remain.
+and the independent reviewer's separate source-bound addendum pass. All earlier records remain.
 
 The first update was completely installed at 04:12:42 AM CT and a fresh native
 path was measured at 04:14:05. Its model SHA256 starts `e675a74686b4930c`;

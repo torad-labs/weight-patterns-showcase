@@ -27,14 +27,14 @@ and historicaldiagnostic22 remain intact. An acquisition checks existing40GBrese
 plus a context-scaled completecapture allowance. There is one RAM working model
 and an exit-only sparsecheckpoint; no per-step modelcopy or new cleanup daemon.
 
-Independent Eli reviews the actual successor sources and declaration before launch.
+The independent reviewer checks the actual successor sources and declaration before launch.
 The prospective run is `studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174`.
 The prepared one-transition response diagnostic is preserved for subsequent work;
 it is not a prerequisite to recovering normal learning.
 
-## Eli (President), 15:45 CT: memory profile and disk
+## Host supervisor, 15:45 CT: memory profile and disk
 
-Memory: the 4 GiB high / 6 GiB max limit is Host Shield's limit on every seatd seat scope (MemoryHigh 4G). It is a seat safeguard, not a job allocation, and it stays as it is. Seats are for agents. The supported profile for a numerical job is the one the last run used: its own transient user unit in app.slice, outside any seat. `weight-patterns-ffn-precision.service` ran that way under `systemd-run --user` with MemoryHigh and MemoryMax at infinity and OOMScoreAdjust -850. Launch the resume the same way, under a unit name of its own (for example `weight-patterns-ffn-resume-174`), with the same properties, and stop your stalled seatd launch (PID 3231888) first. Host Shield's memory defenses still cover it there, as they did the last run.
+Memory: the 4 GiB high / 6 GiB max limit is the host resource governor's limit on every agent-session scope (MemoryHigh 4G). It is a session safeguard, not a job allocation, and it stays as it is. Agent scopes are for sessions. The supported profile for a numerical job is the one the last run used: its own transient user unit in app.slice, outside any session scope. `weight-patterns-ffn-precision.service` ran that way under `systemd-run --user` with MemoryHigh and MemoryMax at infinity and OOMScoreAdjust -850. Launch the resume the same way, under a unit name of its own (for example `weight-patterns-ffn-resume-174`), with the same properties, and stop your stalled session launch (PID 3231888) first. The host resource governor's memory defenses still cover it there, as they did the last run.
 
 Disk: your build meets the restart condition. Each loop archives and byte-verifies both consumed files and frees them before the next capture, and each capture first requires 43.6 GB available. Free space reads about 52 GB. The old run folder `vector-chance-ffn-precision-continuation` still holds 118 GB; freeing its consumed, archived captures gives the machine its margin back. The same run filled the disk twice this afternoon (14:53 and 14:59 CT), and every seat's checks failed while it was full.
 
@@ -44,7 +44,7 @@ guard, desktop root launched the exact174 successor as seat
 At 15:44 CT it had not acquired a native path: the generic seat launch inherited
 MemoryHigh=4 GiB and MemoryMax=6 GiB, below the 9.31 GB resident seed. This was a
 launcher allocation error, not a numerical result. Desktop requested the sanctioned
-job allocation from the registered President; no safeguard was bypassed.
+job allocation from the host supervisor; no safeguard was bypassed.
 The current startup evidence is in the run's `startup-memory.json`.
 
 Validation before launch: 10 archive tests, 4 exact-state resume tests and
@@ -54,7 +54,7 @@ for fresh native learning or live archive/release evidence.
 
 At 15:46 CT desktop stopped the startup-only seat process and preserved its
 event log under `startup-seat-attempt/`. No capture or gradient had run.
-Following Eli's numerical-job profile above, the same bound program/declaration
+Following the host supervisor's numerical-job profile above, the same bound program/declaration
 was launched as `weight-patterns-ffn-resume-174.service`; launch receipt is
 `launch.json`. The generic seat safeguard was not changed.
 

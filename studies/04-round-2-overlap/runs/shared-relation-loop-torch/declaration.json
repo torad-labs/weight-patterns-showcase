@@ -77,9 +77,9 @@
    "loop": "bash studies/04-round-2-overlap/runs/shared-relation-loop-torch/run.sh loop   # studies/04-round-2-overlap/runs/shared-relation-loop-torch/loop.json rewritten at every step; studies/04-round-2-overlap/runs/shared-relation-loop-torch/loop/step-<n>.npz, state-<n>.npz and float32.npz beside it; studies/04-round-2-overlap/runs/shared-relation-loop-torch/logs/loop.log"
   },
   "before_each": "the research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before the command; the loop itself refuses to start unless this declaration names the program's bytes, the bytes of every repository file it loads and its options, and stops before any weight moves if what it loaded is not that list",
-  "card": "card 0 under its lock (/run/user/1000/gpu0.lock), held for the command: arithmetic only, no recorder and no engine",
+  "card": "card 0 under its lock ($XDG_RUNTIME_DIR/gpu0.lock), held for the command: arithmetic only, no recorder and no engine",
   "storage": "a state is at most 1.3 GB (its BF16 bits less the original's, packed) and the float32 copy 2.6 GB, the latest only; the states go to the bucket (torad-research traces upload, then verify) and stay on this disk while anything reads them",
-  "memory": "no command is started under a memory ceiling of its own: memory protection is hostshield's",
+  "memory": "no command is started under a memory ceiling of its own: memory protection is the host resource governor's",
   "processor_threads": "OMP_NUM_THREADS=4, the setting of this seat's earlier runs; it sets no size, cap or threshold"
  },
  "step": {

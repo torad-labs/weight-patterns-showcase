@@ -83,7 +83,7 @@
     "sha256": "4d4e9dd87d570040f9e727996598ac914d1ade1f37cd3d54280ed1e56ce3814f"
   },
   "precursor_validation": {
-    "record": "records/retrospectives/2026-11-17-pre-error-candidate-eli.json",
+    "record": "records/retrospectives/2026-11-17-pre-error-candidate-review.json",
     "sha256": "8cd43af82f51dde6e875f82a31b396d03a477b8d21702eaac162d4bf249d0b07"
   },
   "original_definition": {
@@ -989,7 +989,7 @@
     ]
   },
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-isolated-pre-error-device-continuation/resume.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib python records/development/2026-11-17-isolated-pre-error-device-continuation/resume.py studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation"
   ],
   "historical_declaration": {
     "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/declaration.json",
@@ -1059,7 +1059,7 @@
   ],
   "continuation_reason": "Parent standard update and all six unchanged/standard generations are bound. Treatment failed before deriving an update because CPU correspondence indices were used against CUDA operands; move indices to actual activation device before canonical CPU turn reduction. No other numerical, fit, transfer, hardware, step or comparison change.",
   "whole_build_review": {
-    "record": "records/retrospectives/2026-11-17-isolated-pre-error-device-continuation-eli.json",
+    "record": "records/retrospectives/2026-11-17-isolated-pre-error-device-continuation-review.json",
     "sha256": "c24e0d29d7c0244da2f6825affd38f15e785c9d57c88e08b74f45c99c4964c1a"
   }
 }

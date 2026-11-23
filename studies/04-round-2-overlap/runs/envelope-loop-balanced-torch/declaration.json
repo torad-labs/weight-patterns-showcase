@@ -81,9 +81,9 @@
    "loop": "bash studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/run.sh loop   # the loop: studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/loop.json rewritten at every step, studies/04-round-2-overlap/runs/envelope-loop-balanced-torch/loop/step-<n>.npz beside it"
   },
   "before_each": "the research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before each command",
-  "card": "card 0 under its lock (/run/user/1000/gpu0.lock), held for each command: arithmetic only, no recorder and no engine",
+  "card": "card 0 under its lock ($XDG_RUNTIME_DIR/gpu0.lock), held for each command: arithmetic only, no recorder and no engine",
   "spool": "the large constants of the texts held between steps are kept in files under /tmp/<run>-spool and removed when the run ends; nothing a record reads",
-  "memory": "no command is started under a memory ceiling of its own: memory protection is hostshield's",
+  "memory": "no command is started under a memory ceiling of its own: memory protection is the host resource governor's",
   "processor_threads": "OMP_NUM_THREADS=4, the setting of this seat's earlier runs; it sets no size, cap or threshold"
  },
  "implementation": [

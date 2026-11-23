@@ -44,8 +44,8 @@ Every quantitative claim in the manuscript (`reports/descent-trace-repair/paper.
   their committed results.
 - Code health: the guard and archive modules' focused tests pass with the November 21 `make-storage` patch
   (72 tests; the only failing guard test is the registry-whole check that the deletion's drift also trips).
-  The torch-dependent modules error on this host for lack of torch — they run on the MacBook through
-  `tools/remote-tests.sh`; the November 21 remote run was lost to the MacBook's load ("exec format error"
+  The torch-dependent modules error on this host for lack of torch — they run on the secondary test host through
+  `tools/remote-tests.sh`; the November 21 remote run was lost to the secondary test host's load ("exec format error"
   after a connection loss) and is to be retried before the release ships.
 
 ## What the census and the git check found (November 21, evening)
@@ -57,7 +57,7 @@ classified all 800 gate-missing paths without moving a byte: 7 are back on disk,
 (106.1 GB, restorable on demand), and **675 are in neither**. None of the 675 is under another bucket key.
 
 **Why so much is in neither: a local exclude.** `.git/info/exclude` line 22, `/studies/04-round-2-overlap/`,
-was added 2026-11-16 05:42 CT by the Eli agent so the desktop IDE diff would stop reading study data
+was added 2026-11-16 05:42 CT by the independent review agent so the desktop IDE diff would stop reading study data
 ("delete this line to undo"). It is local (`.git/info/exclude` is never committed) and it makes git treat
 every **new** file under the round-two tree as ignored. Files already tracked stayed tracked, and seats
 that committed with explicit paths kept adding records (2,026 on November 16, 197 on the 17th, 908 on the
@@ -76,7 +76,7 @@ uncommitted additions (`FILES.txt`) name them, so the release bundle, as edited,
 come back.
 
 **Where they can come back from.** The agent session logs of November 16–18
-(`~/.local/share/agent-sessions/2026/11/1{6,8}/rollout-*.jsonl`) contain the blinded readings' frozen SHA-256
+(`<session-transcripts>/2026/11/1{6,8}/rollout-*.jsonl`) contain the blinded readings' frozen SHA-256
 (`a37db3cb…`, the unified review's) and the file names, so the files' contents or the commands that wrote
 them may be recoverable from the transcripts. They were: all eight were recovered the same night without grading again, with `blinded-readings.json` equal to that frozen SHA-256 and `result.json` equal to the hash `records/development/2026-11-18-joint-fit-panel/inventory.json` recorded on November 18 (`journal/2026-11-21-consolidation-takeover.md`). The fallback that follows was not needed. Failing that, class B applies: the 44
 generations regenerate bit-for-bit from the four frozen weight states (the original, 175, 189 and 390,

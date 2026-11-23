@@ -623,7 +623,7 @@
   "whole_build_review": {
     "accepted": true,
     "source": {
-      "record": "records/retrospectives/2026-11-16-desktop-resume-175-eli.json",
+      "record": "records/retrospectives/2026-11-16-desktop-resume-175-review.json",
       "sha256": "57ce64f1402c4be9d95c6cac1d3661a6059c9c717c5b74853abdf8ddfe46e212"
     }
   },
@@ -678,7 +678,7 @@
   "retention": "One RAM model/resident state; one sparse exitcheckpoint. Keep latest complete raw/index, smallrecords andpublished overlap. After it consumespreviousstate, synchronously archive+readbackverify+release bothpreviousbulkstreams before producinganother. Originalinput/reference/retainedcheckpoint and historicaldiagnosticcaptures untouched.",
   "stopping": "Root manually judges fresh loss progression including ordinary variation and a nonzero plateau. Signals to the parent finish current fresh measurement and save final state; no guessed numeric schedule or automatic plateau detector.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_precision_resume_next.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_precision_resume_next.py studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -716,7 +716,7 @@
       "vector-chance-ffn-precision-continuation",
       "vector-chance-loss-rise-diagnosis"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },

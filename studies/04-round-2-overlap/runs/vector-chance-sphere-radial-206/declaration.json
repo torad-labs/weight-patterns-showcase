@@ -592,11 +592,11 @@
   "cpu_threads": 1,
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-event-gradient-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-event-gradient-result-review.md",
       "sha256": "cabde225bc25be5f94808343c3490e15b3390f40f3ffac9e3981b6d9f5001b19"
     },
     {
-      "record": "records/retrospectives/2026-11-16-event-gradient-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-event-gradient-result-review.json",
       "sha256": "f26a0337c7f347e524d34ea0ed311b45eb7a14f5c9eb7f3f2dcf890e3b8ea89d"
     }
   ],
@@ -621,11 +621,11 @@
     ]
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-sphere-radial-diagnosis/measure.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-sphere-radial-206"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-sphere-radial-diagnosis/measure.py studies/04-round-2-overlap/runs/vector-chance-sphere-radial-206"
   ],
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-sphere-radial-eli.json",
+    "record": "records/retrospectives/2026-11-16-sphere-radial-review.json",
     "sha256": "a1c18903b2c667b0c3d64a01218c719e26be4245c9c592a6122e0e9007ec43f6",
     "reviewed_declaration_sha256": "64dab59e13a8779dd621a933335194518963f0a8398235ccfb028aa1146301e8",
     "canonical_declaration_sha256_excluding_review": "0cf57d5fd5195b4a44b788a107e23d2631765acaf5f77b27549059cc55b044a5"

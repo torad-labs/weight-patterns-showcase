@@ -1,7 +1,7 @@
 {
   "method_step": 3,
   "operation": "single-reference-original-envelope",
-  "status": "withdrawn_incomplete; stopped after Eli audit c4882734; no restart, no complete reference and no model update",
+  "status": "withdrawn_incomplete; stopped after the independent reviewer audit c4882734; no restart, no complete reference and no model update",
   "source_retirement": "studies/04-round-2-overlap/runs/single-reference-original/retired-sources.json",
   "declared_at": "2026-11-15T18:26:13.470860-06:00",
   "why_this_direction": "Marcos's one-pair direction requires one fixed original reference and original tolerance before training; the 6:17 PM CT correction rejects the inherited turn/token-carrying correspondence. The original computational rule and exact joint inverse have CPU fixtures. This run compiles that one rule and its envelope using the same full relation to pair all events, rather than another target ensemble.",

@@ -9,9 +9,9 @@ transfer Astra's ownership of the loss and loop or authorize another method.
 not connected yet.** The remaining work is implementation, not another search
 for a definition of the trace. No repair or whole-build approval follows from
 the component tests. The independent subagent asked to perform the requested
-Eli whole-build review reached the same finding after reading all four sources
+The independent reviewer whole-build review reached the same finding after reading all four sources
 directly, including the DOCX's three equation images. This is a new independent
-review, not approval from the standing Eli session.
+review, not approval from the standing reviewer session.
 
 ## Sources and hypothesis
 
@@ -149,7 +149,7 @@ including, excluding, preserving or grading computation. Astra confirms no
 positional scope change was made. No radius floor or outcome-based row removal
 was introduced.
 
-Marcos also explicitly requires Eli to review the whole build, always given
+Marcos also explicitly requires the independent reviewer to review the whole build, always given
 the research papers and the goal. The existing independent reviewer has been
 resumed on the native backend, supplied again with the full goal and all four
 original documents. `AGENTS.md` now makes that requirement persistent for
@@ -169,14 +169,14 @@ or warnings. The actual writer, loader and controller run in these fixtures;
 acquisition and the research proposal are stand-ins, so this is no empirical
 repair or inverse-convergence result.
 
-Eli reproduced both storage defects independently. The fixed release path
+The independent reviewer reproduced both storage defects independently. The fixed release path
 checks the saved compact record's canonical path and SHA-256, reconstructs the
 previous whole-model hash from original bytes and saved tensors, and checks
 the full copy before removing it. Both corruption witnesses now preserve the
 full model. The earlier reconstruction-only fix was insufficient for damaged
 restore-critical metadata; the saved-record binding closes that defect.
 
-Eli also caught a concrete acquisition mismatch in the prospective declaration:
+The independent reviewer also caught a concrete acquisition mismatch in the prospective declaration:
 its cohort was `wide-overlap`, while copied protocols named a different cohort.
 Astra remade both protocols with the existing maker and rejects such mismatches
 before acquisition. This binds capture provenance; it adds no text-based
@@ -191,8 +191,8 @@ uv run --offline --with torch --with numpy --with pytest python -m pytest -q tes
 
 The continuing-review requirement is committed in `AGENTS.md` at `a9bcdb63`.
 The independent test file was released to Astra for the backend's atomic
-commit. Eli's final source-bound verdict is **YES: ready to start the declared
-one-pair experiment**, recorded in `2026-11-15-eli-whole-build-review.md` and
+commit. The independent reviewer's final source-bound verdict is **YES: ready to start the declared
+one-pair experiment**, recorded in `2026-11-15-whole-build-review.md` and
 its adjacent JSON. She independently checked all 82 implementation bindings
 and constructed the actual backend with acquisition forbidden. This review
 performed no native acquisition or model update and supplies no repair claim.

@@ -123,11 +123,11 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-full-request-first-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-full-request-first-result-review.md",
       "sha256": "5e410f4dac9450aa0e7a7b02b0dc9875031099b09848f752fe6eeab1cabc1691"
     },
     {
-      "record": "records/retrospectives/2026-11-16-full-request-first-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-full-request-first-result-review.json",
       "sha256": "4ebd53402e03228d9729f44d05dd813311fc5e51cfee11fe19087a6dc79bc360"
     }
   ],
@@ -658,7 +658,7 @@
     }
   ],
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-full-request-finite-endpoint/evaluate.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-full-request-finite-236-237"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-full-request-finite-endpoint/evaluate.py studies/04-round-2-overlap/runs/vector-chance-full-request-finite-236-237"
   ],
   "parameters": {
     "cpu_threads": {
@@ -783,7 +783,7 @@
   ],
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-full-request-finite-endpoint-eli.json",
+    "record": "records/retrospectives/2026-11-16-full-request-finite-endpoint-review.json",
     "sha256": "830a00b42c81717d6cd5129059224118c149999b9e145399e43f04d1b7e18998",
     "reviewed_declaration_sha256": "5cfacd6fa35533994dc7e7aa979fde24f273674108f51e2de2efe12363cfc98e",
     "canonical_declaration_sha256_excluding_review": "4247d2acf08f6bbe77b34b47d4d7e0fcb3bb08aa52a7bea696773c23fae666e9",

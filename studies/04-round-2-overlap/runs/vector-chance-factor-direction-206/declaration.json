@@ -631,7 +631,7 @@
   "method_step": 5,
   "status": "declared",
   "declared_at": "2026-11-16T18:31:33.880812-06:00",
-  "why_this_direction": "Retained206 factor spectrum shows the largest input mode carries 0.434% of the projection-request energy but 66.21% of weight-gradient energy and 98.76% of its isolated projection response. Independent Eli recommends a full-residual comparison of the all-mode input-conditioned direction. This tests that measured gain imbalance without changing loss, tolerance or normalization derivatives.",
+  "why_this_direction": "Retained206 factor spectrum shows the largest input mode carries 0.434% of the projection-request energy but 66.21% of weight-gradient energy and 98.76% of its isolated projection response. The independent reviewer recommends a full-residual comparison of the all-mode input-conditioned direction. This tests that measured gain imbalance without changing loss, tolerance or normalization derivatives.",
   "repeating_pattern_check": "Scalar loss improvement alone concealed per-merge mismatch, while scalar component amplification and a native mean-square matrix metric did not help enough. Retain every mode and all105 residuals, measure the actual F32 tangent and physical displacement, and compare with the ordinary component direction at the same native origin. No trial magnitude search and no native adoption from a surrogate result.",
   "hypothesis": "Removing the observed input-factor gain imbalance from the already differentiated component request can produce a more useful full computational-residual response than its ordinary weight gradient.",
   "would_weaken_it": "No valid all-mode direction, non-descent full response, or no larger full predicted reduction than the ordinary component direction weakens this particular coordinate hypothesis. A favorable result alone does not establish BF16/native improvement.",
@@ -759,7 +759,7 @@
     "sha256": "d258c4d62a54ce1adb353c7bd47c3327a1b97083ab79afaa11a5a18daa68bdc3"
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-factor-direction/probe.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-factor-direction-206"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-factor-direction/probe.py studies/04-round-2-overlap/runs/vector-chance-factor-direction-206"
   ],
   "factor_result": {
     "record": "studies/04-round-2-overlap/runs/vector-chance-event-gradient-206/result.json",
@@ -779,17 +779,17 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-factor-spectrum-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-factor-spectrum-result-review.md",
       "sha256": "74887584e3b42b7d648818f32f007764255c6e1bba7cfb023de56558832342e2"
     },
     {
-      "record": "records/retrospectives/2026-11-16-factor-spectrum-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-factor-spectrum-result-review.json",
       "sha256": "93a3b6d3e846f015f6d320d4757ffb8864575b7ee538637e7002d92bc1a27a91"
     }
   ],
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-factor-direction-eli.json",
+    "record": "records/retrospectives/2026-11-16-factor-direction-review.json",
     "sha256": "8e48f3e2b3ab119e354ae043726a6aed879df115cc9ef522de8aa7d75f98093f",
     "reviewed_declaration_sha256": "26078860619b40169cbd34c9d7dd70cbcec8ff0197648a4dfc755362a9390c9c",
     "canonical_declaration_sha256_excluding_review": "6a120e06fd4647ca1c4102a2377364eac478779be1a9c0b5dbdd9bd4dc95342f"

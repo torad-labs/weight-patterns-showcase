@@ -86,4 +86,4 @@ I also read the six symbolic descent/friction metrics in the three children of t
 
 The native pre-fork computation and shared-baseline reader have SHA-256 prefixes `db1ec6b996e3` and `b77f70e7b091`. The signed review includes their final measured outputs.
 
-Signed by Eli, independent reviewer, November 18, 2026.
+Signed by the independent reviewer, November 18, 2026.

@@ -1,6 +1,6 @@
 # Independent fixed-alignment bound review
 
-The bound in `correction.py:29–81` is correct for the declared relaxation. Pair mass already contains the factor `1/105`; **do not divide the result by105 again**. The exact source and input bindings, and the independent numerical reproduction, are in `eli-bound-review.json`.
+The bound in `correction.py:29–81` is correct for the declared relaxation. Pair mass already contains the factor `1/105`; **do not divide the result by105 again**. The exact source and input bindings, and the independent numerical reproduction, are in `bound-review.json`.
 
 For two reference balls with centers separated by distance `d`, radii `r1,r2`, and positive masses `a,b`, write `g=max(d-r1-r2,0)`. At any candidate turn, the two nonnegative outside distances must sum to at least `g` by the triangle inequality. The least possible weighted squared sum is `a*b/(a+b)*g²`, attained by dividing the gap in inverse proportion to the masses along the line joining the centers. If the balls overlap, the minimum is zero. The source's segment witness realizes both cases, including coincident centers and one ball containing the other center.
 

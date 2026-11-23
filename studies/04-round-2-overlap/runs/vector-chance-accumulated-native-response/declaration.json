@@ -655,7 +655,7 @@
   },
   "eta": 0.26989262219171917,
   "whole_build_review": {
-    "record": "records/retrospectives/2026-11-16-accumulated-native-response-eli.json",
+    "record": "records/retrospectives/2026-11-16-accumulated-native-response-review.json",
     "sha256": "c2db4b2cb863a6b980f3f1ff2e35e69cd3990f7f6e9f5fadb598b61c92148873"
   },
   "gradient_step": {
@@ -837,7 +837,7 @@
   "retention": "Keep baseline, held and fresh raw/index files plus sparse actual delta and all small records for response attribution. No archive/delete phase in this one-transition diagnostic.",
   "stopping": "After one prescribed accumulated update and fresh measurement, save complete native+remainder state and exit regardless of loss. Signals complete an in-flight transition where possible; operational failures retain explicit partial state.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-accumulated-native-response/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-accumulated-native-response/run.py studies/04-round-2-overlap/runs/vector-chance-accumulated-native-response"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -918,7 +918,7 @@
         "sha256": "080ea66541cf4e9f99c19d159d90036c540a23a350d6337e225f7a5f21e7f120"
       },
       "source_review": {
-        "record": "records/retrospectives/2026-11-16-direct-native-encoding-eli.json",
+        "record": "records/retrospectives/2026-11-16-direct-native-encoding-review.json",
         "sha256": "0e445d2d82d859009be10fea0186e6e1283f89f7d7c1139f9fd5d4691f02bc41"
       }
     }

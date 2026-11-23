@@ -1714,7 +1714,7 @@
   "retention": "Keep both full per-merge moment tables in proposal artifacts alongside existing sparse native-transition payloads and reached commit records. Existing verified consumed-trace archival and exact complete exit native/remainder checkpoint remain unchanged.",
   "stopping": "Exit after the measured evaluation interval or an earlier native terminal condition.",
   "commands": [
-    "env PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib==3.11.2 python -m pipeline.weight_edit.native_key_experiment run ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/prefix-direction-training-397-continuation"
+    "env PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 --with matplotlib==3.11.2 python -m pipeline.weight_edit.native_key_experiment run studies/04-round-2-overlap/runs/prefix-direction-training-397-continuation"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -1774,7 +1774,7 @@
       "prefix-direction-training-390-retry",
       "prefix-direction-training-397-continuation"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },

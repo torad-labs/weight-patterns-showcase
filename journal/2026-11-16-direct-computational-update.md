@@ -14,7 +14,7 @@ experiment records remain historical; its unsaved inverse is not resumed.
 ## Implementation decision
 
 This numerical rule is the implementation peer's choice, independently reviewed
-by Eli with the four original papers and the goal. It is not a formula supplied
+by the independent reviewer with the four original papers and the goal. It is not a formula supplied
 by Marcos. For the existing complete, weighted computational residual `r(W)`:
 
 - Differentiate `L = sum(r(W)^2)` once through the complete native-anchored
@@ -53,11 +53,11 @@ uses the existing native-anchored differentiable graph; it is not a derivative
 through discrete generation or BF16 rounding.
 
 The implementation peer owns the sole controller. Weight-research reviews instrumentation and
-the graph fixture; Eli independently reviews the mathematics and actual native
+the graph fixture; the independent reviewer reviews the mathematics and actual native
 write-to-fresh-generation route. A source review or fixture is not a native
 result. The prospective run's declaration, execution and reached-state records
 will name the actual implementation and installation status.
 
-Sources supplied to Eli: `reports/fixing-a-reasoning-mistake-by-editing-the-weights.pdf`,
+Sources supplied to the independent reviewer: `reports/fixing-a-reasoning-mistake-by-editing-the-weights.pdf`,
 `reports/how-the-trace-derived-edit-works.pdf`, `reports/how-the-path-edit-works.pdf`,
 and `reports/Iterative_Learning_from_Computational_Traces.docx`.

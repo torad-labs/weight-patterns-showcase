@@ -10,7 +10,7 @@ Nothing here was recomputed, graded again or typed in. A file was put back only 
 |---|---|---|---|
 | The November 18 publication archive (`records/maintenance-runs/2026-11-18-publication-archive/restore.py`), 37 packs | 1,544 | `restore.py` checks every file against the SHA-256 in the archive's catalog and overwrites nothing; no pack failed | `logs/restore-run.jsonl`, `restore-run-2.jsonl`, `restore-run-3.jsonl`, `wide-source-restore.jsonl` |
 | The bucket, under the path's own key (`torad-research traces download`) | 3 paths | the tool checks each file against its `.sha256` object | the same logs, `own-key` lines |
-| The local MLflow artifact store (`~/Documents/dev/infra/observability/mlflow/artifacts/6/<run>/artifacts/steps`) | 6 | each equals a SHA-256 a tracked record states for its path | `logs/placed-from-mlflow.json` |
+| The local MLflow artifact store (`<mlflow-store>/artifacts/6/<run>/artifacts/steps`) | 6 | each equals a SHA-256 a tracked record states for its path | `logs/placed-from-mlflow.json` |
 | Byte-identical files under another path of this tree | 5 | each equals a SHA-256 a tracked record states for the lost path | `logs/placed-twins.json` |
 | The original model | 2 | see "The stock-origin checkpoint" | |
 | The grader's session logs and the archive | 8 | see "The paper's panel records" | `logs/panel-rebuild-provenance.json`, `logs/grader-judgments-2026-11-18.json` |

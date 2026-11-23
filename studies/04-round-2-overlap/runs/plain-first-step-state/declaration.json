@@ -85,9 +85,9 @@
    "step": "bash studies/04-round-2-overlap/runs/plain-first-step-state/run.sh step   # the one step: studies/04-round-2-overlap/runs/plain-first-step-state/step.json, studies/04-round-2-overlap/runs/plain-first-step-state/state/working.gguf, studies/04-round-2-overlap/runs/plain-first-step-state/state/float32.npz, studies/04-round-2-overlap/runs/plain-first-step-state/state/swept.json"
   },
   "before_each": "the research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before each command",
-  "card": "card 1 under its lock (/run/user/1000/gpu1.lock), the card the loop ran on: arithmetic only, no recorder and no engine",
+  "card": "card 1 under its lock ($XDG_RUNTIME_DIR/gpu1.lock), the card the loop ran on: arithmetic only, no recorder and no engine",
   "spool": "the large constants of the texts held are kept in files under /tmp/<run>-spool and removed when the command ends; nothing a record reads",
-  "memory": "no command is started under a memory ceiling of its own: memory protection is hostshield's",
+  "memory": "no command is started under a memory ceiling of its own: memory protection is the host resource governor's",
   "processor_threads": "OMP_NUM_THREADS=4, the setting of this seat's earlier runs; it sets no size, cap or threshold",
   "storage": "the state and its float32 copy go to the bucket (torad-research traces upload, then verify) and stay on this disk while anything reads them"
  },

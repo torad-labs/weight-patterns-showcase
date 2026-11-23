@@ -1,5 +1,5 @@
 --- code/signal-trace/recorder/observe_stream.cpp	2026-11-11 08:26:43.287134759 -0600
-+++ /tmp/claude-1000/-home-marcos-Documents-dev-research-weight-patterns/fd0687fe-97c6-4325-999a-91a831f8d090/scratchpad/late/observe_stream.late.cpp	2026-11-14 10:16:47.883913960 -0600
++++ /tmp/scratchpad/late/observe_stream.late.cpp	2026-11-14 10:16:47.883913960 -0600
 @@ -68,6 +68,129 @@
   // outputs in order; every later compute of that shape must write the same labels in the same order, and stops after the last of them.
   bool stop_early=false,stopped=false,recording=false;size_t seen=0;uint64_t computes=0,stops=0,after_stop=0;

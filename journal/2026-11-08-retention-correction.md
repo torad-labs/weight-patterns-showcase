@@ -3,7 +3,7 @@
 Marcos clarified on November 8 that R2 should hold checkpoints and evidence we
 need, rather than every intermediate file. Invalid data and artifacts that add
 no useful evidence can be deleted. All durable research files belong under
-`~/Documents/dev/research/weight-patterns`.
+`<repo-root>`.
 
 ## Correction to the preceding cleanup
 

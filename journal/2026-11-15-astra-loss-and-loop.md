@@ -9,7 +9,7 @@ instrument work for the current loss and loop; it is not a new project law.
 
 ## Purpose and source
 
-The supplied source is `~/.cache/claude-notes/loss-document/Iterative_Learning_from_Computational_Traces.docx`,
+The supplied source is `reports/Iterative_Learning_from_Computational_Traces.docx`,
 with its Markdown copy and equation transcription beside it (DOCX SHA-256 `71cc3dfcfbf386898f706c571ad5539ef2f20629e510abc5710b003d2eb07149`). Marcos developed it
 with Astra outside this repository on November 14–15 and supplied it through the
 coordinator. Its useful core is an example-balanced mean of squared positive
@@ -119,12 +119,12 @@ Performance completes removal of `overlap_step.same_texts`, `beside=` and the
 comparison test in `05fcb782`; the remaining eleven tests and verifier pass as
 reported. Its acquisition qualification and -8/-9 identity checks are unchanged.
 
-At 1:56 PM CT, Marcos requests an Eli subagent review of the mathematics before
+At 1:56 PM CT, Marcos requests an independent review subagent review of the mathematics before
 any next loop. That specific direction supersedes the earlier no-subagent
-analysis arrangement for this review only. Astra starts a read-only Eli review
+analysis arrangement for this review only. Astra starts a read-only independent review
 of the supplied document, the guide's equations and the whole proposed chain;
 the unsettled observable is disclosed, not passed off as an implemented loss.
-Eli's review subsequently completes: the joint response is sound as a proposal,
+The independent reviewer's review subsequently completes: the joint response is sound as a proposal,
 not an established scientific experiment. Astra corrects its coverage,
 reference-cancellation and unchecked-hash findings with 17 focused tests and
 Pyright passing; the full assessment and remaining mathematical distinction are

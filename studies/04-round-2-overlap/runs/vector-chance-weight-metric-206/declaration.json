@@ -736,11 +736,11 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-component-response-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-component-response-result-review.md",
       "sha256": "162011f03ba5c8e4429c1b4b64007c70d104c43fac79c2b973176a68300e8f1a"
     },
     {
-      "record": "records/retrospectives/2026-11-16-component-response-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-component-response-result-review.json",
       "sha256": "40874d12329e49e2512ae3161f2e04f048a219ffe02f30c7b0e9f0972be9e91b"
     }
   ],
@@ -749,11 +749,11 @@
     "studies/04-round-2-overlap/runs/vector-chance-weight-metric-206"
   ],
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-weight-metric-comparison/compare.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-weight-metric-206"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-weight-metric-comparison/compare.py studies/04-round-2-overlap/runs/vector-chance-weight-metric-206"
   ],
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-weight-metric-eli.json",
+    "record": "records/retrospectives/2026-11-16-weight-metric-review.json",
     "sha256": "a9e6521324964690a7cdab7ef403ad35684f28250a867a2fe2e68c33c03c58cb",
     "reviewed_declaration_sha256": "95668d66358c53d944b7241552f178f1e7506a654dc0c8236edc89f7e9b70bf8",
     "canonical_declaration_sha256_excluding_review": "16d6db21bfd211d6fa8d794713e4dc67c9a29bc0f5ff439804f66a58e2ff75ef"

@@ -1077,7 +1077,7 @@
   "retention": "Keep both full per-merge moment tables in proposal artifacts alongside existing sparse native-transition payloads and reached commit records. Existing verified consumed-trace archival and exact complete exit native/remainder checkpoint remain unchanged.",
   "stopping": "Manual research judgment from successive fresh native loss measurements, allowing step variation. Continue while learning improves; zero residual and outside==0 are not required. A nonzero plateau is a reportable endpoint, not evidence of repair. Signals finish the current transition/acquisition and retain complete state.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-full-weight-training/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-full-weight-training"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-17-full-weight-training/run.py studies/04-round-2-overlap/runs/vector-chance-full-weight-training"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -1131,7 +1131,7 @@
       "vector-chance-instrumented-continuation",
       "vector-chance-full-weight-training"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },
@@ -1255,7 +1255,7 @@
         "sha256": "080ea66541cf4e9f99c19d159d90036c540a23a350d6337e225f7a5f21e7f120"
       },
       "source_review": {
-        "record": "records/retrospectives/2026-11-16-direct-native-encoding-eli.json",
+        "record": "records/retrospectives/2026-11-16-direct-native-encoding-review.json",
         "sha256": "0e445d2d82d859009be10fea0186e6e1283f89f7d7c1139f9fd5d4691f02bc41"
       }
     }
@@ -1377,7 +1377,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-17-full-weight-training-eli.json",
+    "record": "records/retrospectives/2026-11-17-full-weight-training-review.json",
     "sha256": "245d568d3c1488e13f8900d4c10a54031120b5e07a81871f40bf64d8fdf52dcb",
     "canonical_declaration_sha256_excluding_review": "4ff46d92cd8cabb0162190e03ff2fadce62839be75cb63954d1cebc07d8835d6"
   }

@@ -113,7 +113,7 @@
     "sha256": "22b45c797be8977e094b2bc7571b1e591f4993ece1a6087f28f99161ccc4c4cd"
   },
   "context_review": {
-    "record": "records/retrospectives/2026-11-16-first-ffn-replay-result-eli.md",
+    "record": "records/retrospectives/2026-11-16-first-ffn-replay-result-review.md",
     "sha256": "ea08b455d923f285f311f0e230c85d041d77bb1d1a5850939a63ffc22cb4319b"
   },
   "device_plan": {
@@ -335,11 +335,11 @@
     ]
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-native-first-ffn-replay/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-native-first-ffn-replay"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-native-first-ffn-replay/run.py studies/04-round-2-overlap/runs/vector-chance-native-first-ffn-replay"
   ],
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-native-first-ffn-replay-eli.json",
+    "record": "records/retrospectives/2026-11-16-native-first-ffn-replay-review.json",
     "sha256": "6e2d8ba2514a5d9687bc43a0b8917f952bd34f6e3626a8103038a744efe1b91f",
     "reviewed_declaration_sha256": "73f04681c21e8eb495bccf5c64639efea4b0639b305a5423fb7a675d7093b37b"
   },

@@ -32,8 +32,7 @@ optimization step. Existing historical checkpoints remain intact.
 The derivative through computation, one measured response-derived scale, BF16
 rounding, original reference/tolerance, whole path, and fresh native closure rule
 are unchanged. No generation scoring or token comparison is added. The implementation peer is sole
-controller; the peer handles compatible MLflow revision labels; Eli independently
-reviews the minimal route with the goal and all four original papers.
+controller; the peer handles compatible MLflow revision labels; the independent reviewer reviews the minimal route with the goal and all four original papers.
 
 Marcos narrowed the work again: finish the scientific experiment, not an automated
 platform. Further registry/exporter/dashboard/recovery development is stopped.

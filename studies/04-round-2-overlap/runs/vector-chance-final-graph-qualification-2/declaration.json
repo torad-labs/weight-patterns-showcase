@@ -1368,7 +1368,7 @@
     "policy": "One retained-state qualification, then exit; no training loop or automatic retry."
   },
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-final-experiment/qualify.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-17-final-experiment/qualify.py studies/04-round-2-overlap/runs/vector-chance-final-graph-qualification-2"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -1525,7 +1525,7 @@
     "sha256": "99879f85ebb08be97c754ad7bbc66f5e840e8dbec4f50edc132c28afc065d911"
   },
   "whole_build_review": {
-    "record": "records/retrospectives/2026-11-17-final-experiment-build-eli.json",
+    "record": "records/retrospectives/2026-11-17-final-experiment-build-review.json",
     "sha256": "f9fc12158f755925eb22c848c2e36560eda1ded99622d4bc3913d5963c929aeb"
   },
   "historical_tolerance_role": "historical-qualification-only-not-final-experiment-readiness",

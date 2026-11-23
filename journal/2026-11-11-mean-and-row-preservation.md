@@ -1,6 +1,6 @@
 # The next new sweep tests separate mean and row-displacement bounds
 
-November 11, 2026 (CT). Authorization received by Astra through dispatch, relaying Eli-93. Astra did not receive this answer directly from Marcos.
+November 11, 2026 (CT). Authorization received by Astra through dispatch, relaying dispatch-93. Astra did not receive this answer directly from Marcos.
 
 ## The answer
 

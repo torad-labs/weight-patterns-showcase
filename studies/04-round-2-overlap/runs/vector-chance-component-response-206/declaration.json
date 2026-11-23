@@ -705,11 +705,11 @@
     "sha256": "07d09071106103b1727542e822d1ed89db3f6575bd01a70b4276da81642d0836"
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-component-direction-response/probe.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-component-response-206"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-component-direction-response/probe.py studies/04-round-2-overlap/runs/vector-chance-component-response-206"
   ],
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-component-response-eli.json",
+    "record": "records/retrospectives/2026-11-16-component-response-review.json",
     "sha256": "bddfcb1922eb305ef707620a1147ea758b66a6a014b79e07b836761f278785e6",
     "reviewed_declaration_sha256": "dde04d3ba577311fb2b93e0ae8941a807e5a3295567d7f7ef9479ccf702eaf69",
     "canonical_declaration_sha256_excluding_review": "1fd84c000e2cfd254af0dba2e4d8cc27b30e70bd743ad8fac565e087f8567788"

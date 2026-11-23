@@ -650,7 +650,7 @@
     "scale": "S=-dL/dW; q=J_r S; alpha=-dot(r,q)/dot(q,q)",
     "native": "one engine-compatible BF16 rounding and complete installation; no candidate evaluation",
     "closure": "fresh complete native path only",
-    "attribution": "Implementation peer choice with independent Eli review; not a formula attributed to Marcos"
+    "attribution": "Implementation peer choice with independent source-bound review; not a formula attributed to Marcos"
   },
   "replaces": {
     "run": "studies/04-round-2-overlap/runs/vector-chance-gradient-original",
@@ -665,11 +665,11 @@
   "whole_build_review": {
     "accepted": true,
     "source": {
-      "record": "records/retrospectives/2026-11-16-eli-direct-gradient-cuda-context.md",
+      "record": "records/retrospectives/2026-11-16-review-direct-gradient-cuda-context.md",
       "sha256": "6af9edace10eb02df6e00b1679f14b1b19f168e54e5ee3b0c2a5084b0e055d44"
     },
     "full_route": {
-      "record": "records/retrospectives/2026-11-16-eli-direct-computational-update.md",
+      "record": "records/retrospectives/2026-11-16-review-direct-computational-update.md",
       "sha256": "9d561df50d73c7cb4f3efb1f1b94436052bc43a9f53454b628f5cd4f2eead9a3"
     },
     "admitted_at": "2026-11-16T04:02:48.639094-06:00",

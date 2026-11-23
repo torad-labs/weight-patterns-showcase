@@ -631,7 +631,7 @@
     }
   },
   "commands": {
-    "run": "python -m pipeline.observability run vector-working-loop ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-working-from-update-3"
+    "run": "python -m pipeline.observability run vector-working-loop studies/04-round-2-overlap/runs/vector-chance-working-from-update-3"
   },
   "source_artifacts": "Same fixed original reference/tolerance and one fitting training member. New protocols use current native acquisition revision labels. Starting file is retained gradient-2 update3 with its complete file SHA; revision0 in this new run is that state, not original weights.",
   "previous_attempt": {
@@ -658,7 +658,7 @@
     "scale": "S=-dL/dW; q=J_r S; alpha=-dot(r,q)/dot(q,q)",
     "native": "one engine-compatible BF16 rounding and complete installation; no candidate evaluation",
     "closure": "fresh complete native path only",
-    "attribution": "Implementation peer choice with independent Eli review; not a formula attributed to Marcos"
+    "attribution": "Implementation peer choice with independent source-bound review; not a formula attributed to Marcos"
   },
   "replaces": {
     "run": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original",
@@ -673,7 +673,7 @@
   "whole_build_review": {
     "accepted": true,
     "source": {
-      "record": "records/retrospectives/2026-11-16-eli-minimal-working-model.md",
+      "record": "records/retrospectives/2026-11-16-review-minimal-working-model.md",
       "sha256": "6c353e3ab5964da594747a218a70502614463dd015413f05b534c6a1e407b3e2"
     },
     "scope": "Minimal direct-gradient/native handoff plus exact retained-state3 seed addendum; independent11tests+2subtests. This is the authorized continuation, not a reset.",

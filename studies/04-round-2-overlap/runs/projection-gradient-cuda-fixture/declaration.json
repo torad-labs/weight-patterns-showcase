@@ -746,7 +746,7 @@
     "sha256": "45fe11889945ee054958057a54cdf0c36cb04b13f7efdc79180de1ea4bcf7ba3"
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-projection-gradient-adapter/cuda_fixture.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/projection-gradient-cuda-fixture"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-projection-gradient-adapter/cuda_fixture.py studies/04-round-2-overlap/runs/projection-gradient-cuda-fixture"
   ],
   "plan": {
     "record": "studies/04-round-2-overlap/runs/projection-gradient-cuda-fixture/plan.json",
@@ -754,7 +754,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-projection-gradient-cuda-eli.json",
+    "record": "records/retrospectives/2026-11-16-projection-gradient-cuda-review.json",
     "sha256": "cd5be6b7a5740da39c53490e22d0b24a81543e38e0a4837f1da7cd9d0b8dd272",
     "canonical_declaration_sha256_excluding_review": "66f878a0fb2b684cc39c54bbdee6e7f95416a28e3675b8811e2bd1ffa83b7ba4"
   }

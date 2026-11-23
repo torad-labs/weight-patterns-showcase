@@ -782,7 +782,7 @@
     "sha256": "e8b8098f5c5d6c32a9f6e028c55f51d6e528416fafe9483eeff95227a131ab30"
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-factor-direction/finite.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-factor-finite-206"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-factor-direction/finite.py studies/04-round-2-overlap/runs/vector-chance-factor-finite-206"
   ],
   "factor_result": {
     "record": "studies/04-round-2-overlap/runs/vector-chance-event-gradient-206/result.json",
@@ -802,11 +802,11 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-factor-direction-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-factor-direction-result-review.md",
       "sha256": "9142d5b35a2c63ab4fd73e4e55267efd82ea4acc74366f17590c7422233e4dc9"
     },
     {
-      "record": "records/retrospectives/2026-11-16-factor-direction-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-factor-direction-result-review.json",
       "sha256": "77afe444e6fc824423e3c48e3bc408d2cf3746e4470185327d7b23065a59a304"
     }
   ],
@@ -820,7 +820,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-factor-finite-eli.json",
+    "record": "records/retrospectives/2026-11-16-factor-finite-review.json",
     "sha256": "82b5b10551d90db7f1292480b6088daf8313f4fa19e1603e4cd1121eecb407a1",
     "reviewed_declaration_sha256": "13c920ae649d0b4e96b1a964232fab182b5332e89c100e19c7cb67aeacd49d90",
     "canonical_declaration_sha256_excluding_review": "2245de32e314c8857ab4483c2090689fa4d9b5895dba5f75970526f4d639551a"

@@ -72,12 +72,12 @@
    "reference"
   ],
   "commands": {
-   "arrays": "bash studies/04-round-2-overlap/runs/relation-reference-original/run.sh arrays   # records/development/2026-11-15-relation-reading/relation_mates.py studies/04-round-2-overlap/runs/relation-reference-original/arrays ; card 0 under its lock (/run/user/1000/gpu0.lock); writes studies/04-round-2-overlap/runs/relation-reference-original/arrays",
+   "arrays": "bash studies/04-round-2-overlap/runs/relation-reference-original/run.sh arrays   # records/development/2026-11-15-relation-reading/relation_mates.py studies/04-round-2-overlap/runs/relation-reference-original/arrays ; card 0 under its lock ($XDG_RUNTIME_DIR/gpu0.lock); writes studies/04-round-2-overlap/runs/relation-reference-original/arrays",
    "reference": "bash studies/04-round-2-overlap/runs/relation-reference-original/run.sh reference   # records/development/2026-11-15-relation-reading/relation_reference.py studies/04-round-2-overlap/runs/relation-reference-original/arrays studies/04-round-2-overlap/runs/relation-reference-original/reference members=<rule.members, in that order> ; the processor; writes studies/04-round-2-overlap/runs/relation-reference-original/reference"
   },
   "before_each": "the research verifier (python3 code/signal-trace/pipeline/research_guard/verify_round2.py) is run by run.sh before each of the two steps",
   "processor_threads": "OMP_NUM_THREADS=4, the setting of this seat's earlier runs (studies/04-round-2-overlap/runs/whole-gap-mates-original/declaration.json, execution.processor_threads); it sets no size, cap or threshold of the reference",
-  "memory": "no command is started under a memory ceiling of its own: memory protection is hostshield's",
+  "memory": "no command is started under a memory ceiling of its own: memory protection is the host resource governor's",
   "cards": "the arrays on card 0 (RTX 5080), the canonical card, as arithmetic under its lock; no recorder and no engine"
  },
  "implementation": [

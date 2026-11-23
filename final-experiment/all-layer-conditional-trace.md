@@ -45,7 +45,7 @@ $$
 z=\sum_k\alpha_k[\phi(Y_k)-\phi(H_k)].
 $$
 
-Here the pair $(H_k,Y_k)$ comes from the same witnessed merge of the same successful execution. Store donor identities, coefficients, incoming fit error and non-uniqueness alongside each comparison. A sequence assembled by switching to unrelated donors can manufacture a path no correct answer traversed. Show each donor-specific overlap as well as the mixture. Where a proposed connected divergence depends on a donor switch, check the same segment with the entrance weights carried through it. Flag a conclusion that disappears. The historical precursor was highly sensitive to removal of one successful witness. [Historical comparison and support-deletion evidence](../records/retrospectives/2026-11-17-pre-sign-localization-history-eli.md)
+Here the pair $(H_k,Y_k)$ comes from the same witnessed merge of the same successful execution. Store donor identities, coefficients, incoming fit error and non-uniqueness alongside each comparison. A sequence assembled by switching to unrelated donors can manufacture a path no correct answer traversed. Show each donor-specific overlap as well as the mixture. Where a proposed connected divergence depends on a donor switch, check the same segment with the entrance weights carried through it. Flag a conclusion that disappears. The historical precursor was highly sensitive to removal of one successful witness. [Historical comparison and support-deletion evidence](../records/retrospectives/2026-11-17-pre-sign-localization-history-review.md)
 
 ## 3. Locate divergence, its extent and its specificity
 

@@ -550,7 +550,7 @@
   },
   "eta": 0.26989262219171917,
   "whole_build_review": {
-    "record": "records/retrospectives/2026-11-16-empirical-eta-comparison-eli.json",
+    "record": "records/retrospectives/2026-11-16-empirical-eta-comparison-review.json",
     "sha256": "a3d1911039fad523566412c99a8ffc16c420651a606163ce4d33d097d1b88777"
   },
   "gradient_step": {
@@ -588,7 +588,7 @@
   "retention": "Current trainable state stays resident and in one anonymous RAM GGUF. Small numerical records and native traces per step; one sparse final state on explicit exit or failure. No per-step checkpoints.",
   "stopping": "Root manually judges fresh loss progression including ordinary variation and a nonzero plateau. Signals to the parent finish current fresh measurement and save final state; no guessed numeric schedule or automatic plateau detector.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace ~/.cache/uv/builds-v0/.tmpz35F8K/bin/python ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_v2.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-3"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=code/signal-trace <uv-cache>/builds-v0/.tmpz35F8K/bin/python studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_v2.py studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-3"
   ],
   "cpu_threads": 1,
   "previous_attempt": {
@@ -598,14 +598,14 @@
   "comparison_fix": {
     "rule": "Exact captured incoming/merged primal identity duringactualADforwards; exactstartweighted-cellmap/discreteinventory; recordscalarreductiondifferenceswithoutfloat-equalitygates. No epsilon orscientifictolerancechange.",
     "hypothesis": "Different parallel reductions can change a reporting scalar without changing actual residualcells orgradientinputs.",
-    "review_recommendation": "Independent Eli reviewed actual v2 source and the five focused regression fixtures; no blocking defect. The captured-origin checks leave the returned autodiff tensors and numerical objective unchanged.",
+    "review_recommendation": "Independent source-bound reviewed actual v2 source and the five focused regression fixtures; no blocking defect. The captured-origin checks leave the returned autodiff tensors and numerical objective unchanged.",
     "test_source": {
       "record": "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/test_loop_v2.py",
       "sha256": "23632c1dbefefa30caada53d5c8c7fd6e04df01d97240d8313119be6a49f0663"
     },
     "focused_tests_passed": 5,
     "independent_review": {
-      "record": "records/retrospectives/2026-11-16-empirical-eta-comparison-eli.json",
+      "record": "records/retrospectives/2026-11-16-empirical-eta-comparison-review.json",
       "sha256": "a3d1911039fad523566412c99a8ffc16c420651a606163ce4d33d097d1b88777"
     }
   },
@@ -626,7 +626,7 @@
     "reference_tolerance_unchanged": true
   },
   "continuation_review": {
-    "record": "records/retrospectives/2026-11-16-reached11-capacity-eli.json",
+    "record": "records/retrospectives/2026-11-16-reached11-capacity-review.json",
     "sha256": "4d0d04f708f44ad3b7e11ffe96214a454b10b607931fecd1a1a1f498457d9a8a"
   },
   "prelaunch_correction": "The first prelaunch verifier rejected a list-valued measured_from in the new acquisition parameter; corrected to the single prospective acquisition declaration required by its schema, before any native run."

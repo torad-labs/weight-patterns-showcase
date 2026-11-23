@@ -147,7 +147,7 @@
       "scales_with": "The bound original arrays' dtype and shape."
     }
   },
-  "independent_assessment": "Eli accepts signed support as the correct kind of statistic for an agreement boundary and accepts retaining all mapped events once declared; the empirical whole-trace coverage and adequacy remain unresolved. The exact review and choices are recorded in records/retrospectives/2026-11-15-turn-tolerance-revision-astra.md.",
+  "independent_assessment": "the independent reviewer accepts signed support as the correct kind of statistic for an agreement boundary and accepts retaining all mapped events once declared; the empirical whole-trace coverage and adequacy remain unresolved. The exact review and choices are recorded in records/retrospectives/2026-11-15-turn-tolerance-revision-astra.md.",
   "commands": {
     "compile": "uv run -q --directory code/signal-trace --with torch --with numpy python -m pipeline.weight_edit.turn_support_run ../../studies/04-round-2-overlap/runs/turn-support-original"
   }

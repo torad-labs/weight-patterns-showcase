@@ -1,6 +1,6 @@
 # Final Experiment whole-build review
 
-Independent Eli review, November 17, 2026 (CT). Root remains the sole controller. This review changes records only and launches no experiment.
+Independent source-bound review, November 17, 2026 (CT). Root remains the sole controller. This review changes records only and launches no experiment.
 
 The complete learned-parameter implementation follows the selected one-pair experiment: one fixed original reference, one freshly regenerated originally wrong response, every position and all 105 input-output turns, local excess loss, one joint same-state derivative and native update, then fresh generation. The controller/preparation sources reviewed at commit `21647e1a` are supported for this purpose. The broader hypothesis remains reliable capability repair from recurring computational differences; this first fit cannot establish transfer or general repair.
 

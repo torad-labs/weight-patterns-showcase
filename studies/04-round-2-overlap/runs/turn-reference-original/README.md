@@ -46,7 +46,7 @@ and fresh-trace closure in a separately declared one-prompt experiment.
 The final source check before execution passed 831 pipeline tests and 108 subtests,
 with one Torch deprecation warning, plus focused Pyright. Eighteen focused tests
 covered the turn definition, reference arithmetic and compiler/coverage connection.
-Eli's independent mathematical assessment and its corrected assumptions are
+The independent reviewer's independent mathematical assessment and its corrected assumptions are
 recorded in `records/retrospectives/2026-11-15-turn-pair-binding-astra.md`.
 
 The final `result.json` and complete `reference.json` are authoritative.

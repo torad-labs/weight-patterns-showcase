@@ -1058,7 +1058,7 @@
     "requirement": "Existing archive restoration verifies exact inventory before numerical admission."
   },
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-computation-landscape/evaluate.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/computational-loss-landscape-original-retry"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-computation-landscape/evaluate.py studies/04-round-2-overlap/runs/computational-loss-landscape-original-retry"
   ],
   "plan": {
     "record": "studies/04-round-2-overlap/runs/computational-loss-landscape-original-retry/plan.json",
@@ -1079,7 +1079,7 @@
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-computation-landscape-retry-eli.json",
+    "record": "records/retrospectives/2026-11-16-computation-landscape-retry-review.json",
     "sha256": "bb5751e6966ab59a326aee2f3ef5bfe695a9efc1aec94fe61175985f2b0b4984",
     "canonical_declaration_sha256_excluding_review": "cd797ac0c6f24fddacc6bdb0982e49bbe43b98e7ba10131f2dee22faaa67f772"
   }

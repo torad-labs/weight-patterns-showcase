@@ -135,23 +135,23 @@
   },
   "interpretation_sources": [
     {
-      "record": "records/retrospectives/2026-11-16-attention-third-precision-eli.md",
+      "record": "records/retrospectives/2026-11-16-attention-third-precision-review.md",
       "sha256": "7552313936a469358a3ae6f16ce06550d0ef6041a779ba25b8d44c70398e31c9"
     },
     {
-      "record": "records/retrospectives/2026-11-16-response-decomposition-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-response-decomposition-result-review.md",
       "sha256": "e1af143e75fa18ea5aaab0e39e1ba61915192b9ef45ae2d45c33e476d045dfb2"
     },
     {
-      "record": "records/retrospectives/2026-11-16-third-projection-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-third-projection-result-review.md",
       "sha256": "af77dbdf7b27502936a2bcac2147e126c01ad586e7d81f4bc54244d50fac2d73"
     },
     {
-      "record": "records/retrospectives/2026-11-16-attention-projection-result-eli.md",
+      "record": "records/retrospectives/2026-11-16-attention-projection-result-review.md",
       "sha256": "9316d8e12adb1310ccdd73563a5e9e562e99e997f832f57235d9ef13a90c751b"
     },
     {
-      "record": "records/retrospectives/2026-11-16-attention-projection-result-eli.json",
+      "record": "records/retrospectives/2026-11-16-attention-projection-result-review.json",
       "sha256": "57d010bcf12e0f9c602beae24fc6fe3b4cd39c552828e189a4752cd0d57408c1"
     },
     {
@@ -778,7 +778,7 @@
     }
   ],
   "commands": [
-    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-17-attention-query-policy/locality.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-attention-query-locality-236-237"
+    "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-17-attention-query-policy/locality.py studies/04-round-2-overlap/runs/vector-chance-attention-query-locality-236-237"
   ],
   "parameters": {
     "cpu_threads": {
@@ -828,7 +828,7 @@
       "scales_with": "All native merges, captured events and original complete correspondence."
     },
     "projection_policy": {
-      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-eli.md",
+      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-review.md",
       "derivation": "Apply the already reviewed call-dependent products to Q/K/V/output and inp_gate/proj in the connected graph. Other FFN/auxiliary/normalization/RoPE/cache/score operations delegate unchanged. Native single-column F32 versus qualifying multi-column BF16/F32 output, excluding the small-output fallback.",
       "scales_with": "Native matrix type/dimensions, call columns and backend policy.",
       "source_bindings": [
@@ -1595,7 +1595,7 @@
       "scales_with": "Original graph architecture/cache-sharing rule and the fixed236-to237 endpoint displacement."
     },
     "query_policy": {
-      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-eli.md",
+      "measured_from": "records/retrospectives/2026-11-16-attention-third-precision-review.md",
       "derivation": "Native SM120 F16-cache attention source selects MMA for multicolumn queries and512-wide heads, vector for256-wide one-query groups with single sequence and padded KV below8192. MMA usesF16 Q conversion at scale1; vector keepsF32. Dense KV padding is256. The retained612 positions/32,13,1 call groups and original architecture determine the mask; no fitted numerical constant.",
       "scales_with": "Native hardware, actual head width, call columns, cache type, sequence count and used/padded KV length. This finite comparison is restricted to the retained short-cache dispatch.",
       "source_bindings": [

@@ -104,7 +104,7 @@ loop; its generation qualification remains historical evidence.
 
 ## Astra's construction withdrawn after the independent audit
 
-Eli's audit (c4882734) establishes that both sides of Astra's rule used the current
+The independent reviewer's audit (c4882734) establishes that both sides of Astra's rule used the current
 context: at original weights its residual is a Taylor remainder between query
 states, plus reconstruction-offset differences. Its pairing and tolerance inherited
 that object. This was not the context-bearing computation comparison claimed here.

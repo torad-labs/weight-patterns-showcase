@@ -14,7 +14,7 @@ The next experiment remains the signal-trace plan. No new generation, capture, f
 
 ## Removal completed
 
-Removed 71 enumerated roots containing 423 files from active research. The 9,311,304,896-byte full E checkpoint was deleted after exact reconstruction verification from unchanged D plus the 6,291,456-byte replacement tensor. All 200 D evaluation response hashes still match their recorded judgments. The private undo directory is `~/Documents/dev/research/.withdrawn-weight-patterns-E-20261107-224847`; it is excluded from every research index. The native D checkpoint hash was verified unchanged.
+Removed 71 enumerated roots containing 423 files from active research. The 9,311,304,896-byte full E checkpoint was deleted after exact reconstruction verification from unchanged D plus the 6,291,456-byte replacement tensor. All 200 D evaluation response hashes still match their recorded judgments. The private undo directory is `<external-archive>/.withdrawn-weight-patterns-E-20261107-224847`; it is excluded from every research index. The native D checkpoint hash was verified unchanged.
 
 Outside-session coordination.
 

@@ -29,10 +29,10 @@ deletion.
   every round-two run folder's released bulk and the 154.1 GB of `inputs/observation`.
 - No running `virtiofsd` held the deleted blocks (`held_deleted.py look`, November 21: only the VM's own
   memfds), so nothing was recoverable from held-deleted handles.
-- The tree that reached the MacBook through rig holds tracked files and unignored untracked files only
+- The tree that reached the secondary test host holds tracked files and unignored untracked files only
   (`tools/remote-tests.sh`: "tracked files and untracked ones git does not ignore"); `runs/*/exported/` is
   gitignored, so no second copy of the exported turns ever left this machine. Marcos confirmed November 21
-  that nothing of it is on the MacBook.
+  that nothing of it is on the secondary test host.
 
 ## What is confirmed lost, and how it comes back
 
@@ -60,7 +60,7 @@ everything lost can be recomputed; he is not worried.
 
 ## Why the deletion took records as well as bulk
 
-`.git/info/exclude` line 22 (`/studies/04-round-2-overlap/`, added 2026-11-16 05:42 CT by the Eli agent to
+`.git/info/exclude` line 22 (`/studies/04-round-2-overlap/`, added 2026-11-16 05:42 CT by the independent review agent to
 keep the desktop IDE diff from reading study data) made every new file under the round-two tree
 ignored. Records seats committed by explicit path survived in git; every record created after that
 moment and never named explicitly had one copy. Of the 800 paths the gate misses, a read-only bucket
@@ -124,7 +124,7 @@ SHA-256. What the list does and does not do (`code/signal-trace/pipeline/researc
 
 The change was read four times by an independent reviewer before it was committed, and each reading found
 something that was then changed; what it found is in `journal/2026-11-21-consolidation-takeover.md`. The implementation peer
-and Eli have not reviewed it.
+and the independent reviewer have not reviewed it.
 
 The
 bucket inventory of November 19 (97,288 completed objects, 2,559.12 GB, about $38.40/month at R2 Standard)

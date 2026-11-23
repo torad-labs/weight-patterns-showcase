@@ -217,7 +217,7 @@
       "scales_with": "Both complete event inventories and the number of mapped current events per original event."
     }
   },
-  "authorization_scope": "Astra admits only this original-only compilation and diagnostic after Eli's corrected independent source assessment, recorded in records/retrospectives/2026-11-15-turn-pair-binding-astra.md. No native correction loop, wrong-trace evaluation or post-closure evaluation is admitted.",
+  "authorization_scope": "Astra admits only this original-only compilation and diagnostic after the independent reviewer's corrected independent source assessment, recorded in records/retrospectives/2026-11-15-turn-pair-binding-astra.md. No native correction loop, wrong-trace evaluation or post-closure evaluation is admitted.",
   "commands": {
     "compile": "uv run -q --directory code/signal-trace --with torch --with numpy python -m pipeline.weight_edit.turn_reference_run ../../studies/04-round-2-overlap/runs/turn-reference-original"
   }

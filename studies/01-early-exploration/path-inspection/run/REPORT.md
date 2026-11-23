@@ -2,7 +2,7 @@
 
 November 6, 2026. Offline inspection of existing llama.cpp recordings. No training, new generation, or new weight edit was performed.
 
-**Correction:** this report originally claimed to identify a segment of the capability's path. That interpretation was incorrect and is withdrawn. Marcos means a frozen pattern distributed through portions of the weights' numerical encoding. This analysis followed an existing intervention's effects through the architecture. Those measurements remain observations of perturbation propagation; they do not identify the encoded path, even partially. The distinction is documented in the revised research reference (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/distributed-pathways-reference-2026-11-06/REFERENCE.md`).
+**Correction:** this report originally claimed to identify a segment of the capability's path. That interpretation was incorrect and is withdrawn. Marcos means a frozen pattern distributed through portions of the weights' numerical encoding. This analysis followed an existing intervention's effects through the architecture. Those measurements remain observations of perturbation propagation; they do not identify the encoded path, even partially. The distinction is documented in the revised research reference.
 
 ## Question
 
@@ -142,11 +142,11 @@ These limits describe the available measurements, not a recipe guaranteed to dis
 
 ## Files and provenance
 
-- Detailed observations (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/path-inspection-2026-11-06/observations.json`): per-case, per-layer measurements, branch decomposition, recurring channels, and weight-aware contrast.
-- Recurrence controls (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/path-inspection-2026-11-06/recurrence-controls.json`): checks against instruction conditions and baseline activation ranks.
-- Offline analysis source (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/path-inspection-2026-11-06/inspect.mjs`).
-- Prior edit and behavioral results (`~/Documents/dev/projects/qgre/qgre-main/runs/legs/gemma4-e2b/llamacpp-preference-edit-2026-11-06/REPORT.md`).
-- Original capture implementation (`~/Documents/dev/infra/rig/repo/local/research/lookup-preference-2026-11-06/observe.cpp`).
-- Gemma computation graph (`~/Documents/dev/infra/rig/repo/engine/llama.cpp/src/models/gemma4.cpp:175`). The nested llama.cpp checkout is at the recorded run revision, `f089c9cb4bc285a11e510e1c4336b95aca449b08`; this graph file has no difference against it.
+- Detailed observations: per-case, per-layer measurements, branch decomposition, recurring channels, and weight-aware contrast.
+- Recurrence controls: checks against instruction conditions and baseline activation ranks.
+- Offline analysis source.
+- Prior edit and behavioral results.
+- Original capture implementation.
+- Gemma computation graph. The nested llama.cpp checkout is at the recorded run revision, `f089c9cb4bc285a11e510e1c4336b95aca449b08`; this graph file has no difference against it.
 
 The offline analysis completed with exit code 0. It reads existing recordings, an existing native-dequantized weight view, and the original model's scalar layer factors. It writes only analysis outputs, and does not modify a model or an inference implementation.

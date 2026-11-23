@@ -1409,7 +1409,7 @@ what a correction over all 70 matrices waits for is its rows and its readings.
   (one flush at the end, 2.8 s): the second reading had its rows in place 8 s after the recorder. The second recorder pass itself took
   489 s after 109 s of waiting for the card and its first answer, about 17 s an answer, at load 19 to 23. What slowed it is not
   separated: this seat's own fetches from the bucket ran beside it (sixty starts of the bucket tool, unpinned), and a load report 25 s
-  after the pass showed ten cores busy with other projects' checks and one of this repository's scripts (`hostshieldctl load`,
+  after the pass showed ten cores busy with other projects' checks and one of this repository's scripts (`host-governor load`,
   6:50 AM CT). The recorder waits for processors, the wall this page already names. Seventy single passes of the same answers are 53 minutes of decode (speed review, "What a sweep's passes cost, part by part").
 - **The rows are the bits a matrix's own pass gives, and the bits the original's recordings hold.** Both readings against the rows two
   single-matrix passes kept of the original (feed-forward 29 and 33; `rows_reading_check.py <reading> <rows.npz>`): 4 of 4 arrays, 19,751
@@ -3636,8 +3636,8 @@ in the tree, outside form 4's closure; whether they leave is this seat's next cl
 ## The programs that paired by turn vectors or by token identity leave the tree (7:19 PM CT November 15; files only)
 
 Written 7:19 PM CT November 15, 2026. Sources: `retired-pairing-programs.json` (each file's sha256 and lines as commit c4882734
-holds them, and why it left), the verifier's output, this folder's tests, and the Eli subagent's audit of that evening
-(`records/retrospectives/2026-11-15-token-audit-eli.md`).
+holds them, and why it left), the verifier's output, this folder's tests, and the independent review subagent's audit of that evening
+(`records/retrospectives/2026-11-15-token-audit-review.md`).
 
 **Why.** Marcos's direction relayed at 4:11 PM CT November 15 put the tree's cleanup with Fable and this seat, since what a
 withdrawn construction leaves in the tree ends up steering the work; his sweep relayed at 6:22 PM CT says a pairing is made by the
@@ -3705,7 +3705,7 @@ not established.
 The section above left one cut waiting: `torch_forward.registered`, the registration's rule copied into torch (each step's turns at
 all merges as one unit vector, the product of two answers' steps, `complete_overlap.distance_path` over it). It waited because
 seven declarations name `torch_forward.py` by sha256 and the loop's owner had to say when that binding could move. Astra said so in
-a message read at 7:26 PM CT: the one-reference construction and its compilation are withdrawn after Eli's finding on the Taylor
+a message read at 7:26 PM CT: the one-reference construction and its compilation are withdrawn after the independent reviewer's finding on the Taylor
 remainder, no compilation or fixture process of it ran at her check of 7:25:56 PM CT, the earlier declarations keep their hashes
 as historical provenance and nothing is requalified, and no replacement pair or native loop is admitted.
 
@@ -3736,7 +3736,7 @@ no drift.
 
 Marcos's word, relayed by claude-research at 7:37 PM CT: as this seat understands him, the right code was in this tree and today's
 removals broke it, and his three papers and the loss document are his statement of the method (they are on this machine,
-`~/.cache/claude-notes/papers/`). In the same message claude-research withdrew the premise its 6:22 PM sweep had given, that a
+`reports/`). In the same message claude-research withdrew the premise its 6:22 PM sweep had given, that a
 pairing by turn vectors is made of tokens (its reading, it says, not his), quoted the path-edit paper's Section 4 for the overlap
 (two steps are alike when their turns at all 105 merges point the same way, no token, number or word used), and asked that no
 program be removed until he says which code stays and that the overlap come back from history as it was.

@@ -51,7 +51,7 @@
   },
   "card": {
    "measured_from": "records/development/2026-11-12-path-forward/label-swap/label-swap.json",
-   "derivation": "Card 1, where the own answers were captured and every feed pass ran, so that a step's full scores can be compared with the source pass's to the bit. The runner takes /run/user/1000/gpu1.lock itself for each question and waits for 11,000 MiB free.",
+   "derivation": "Card 1, where the own answers were captured and every feed pass ran, so that a step's full scores can be compared with the source pass's to the bit. The runner takes $XDG_RUNTIME_DIR/gpu1.lock itself for each question and waits for 11,000 MiB free.",
    "scales_with": "The card and the recorder's build; a comparison across either needs its own reproduction reading."
   }
  },

@@ -35,7 +35,7 @@ every part of that answer is proven correct. Original successes calibrate
 the fixed tolerance; they are not additional training targets.
 
 The implementation peer read the active reference, discrepancy, inverse, installation and
-controller code. Eli independently checked the same question with all four
+controller code. The independent reviewer checked the same question with all four
 actual research papers and the goal, and checked seven relevant source
 bindings against the active declaration. The experiment matches the stated
 loop with these precise distinctions:
@@ -51,7 +51,7 @@ loop with these precise distinctions:
   fresh trace after each installed update.
 - The current inverse is approximate and uses the held-history graph and
   fixed linear response described in
-  `records/retrospectives/2026-11-16-eli-joint-inverse-fidelity.md`. Its predicted
+  `records/retrospectives/2026-11-16-review-joint-inverse-fidelity.md`. Its predicted
   decrease is not a guarantee of decrease on the next native trace.
 - `pair_loop.iterate` accepts closure only after an actual update, a complete
   fresh native trace, and zero outside cells. A zero parameter gradient or
@@ -64,7 +64,7 @@ on its boundary, and at zero-radius exact agreement; an outside point gave a
 nonzero correcting gradient. No training data, model, source code, reference,
 tolerance or active run was changed for this check.
 
-The four sources supplied to Eli are
+The four sources supplied to the independent reviewer are
 `reports/fixing-a-reasoning-mistake-by-editing-the-weights.pdf`,
 `reports/how-the-trace-derived-edit-works.pdf`,
 `reports/how-the-path-edit-works.pdf`, and

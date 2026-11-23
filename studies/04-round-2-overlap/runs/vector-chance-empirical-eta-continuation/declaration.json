@@ -552,7 +552,7 @@
   "whole_build_review": {
     "accepted": true,
     "source": {
-      "record": "records/retrospectives/2026-11-16-empirical-eta-continuation-eli.json",
+      "record": "records/retrospectives/2026-11-16-empirical-eta-continuation-review.json",
       "sha256": "b203c821915ae061387fc54382303b76330192545e8a8223a2343889542e4547"
     }
   },
@@ -585,6 +585,6 @@
   "retention": "Current trainable state stays resident and in one anonymous RAM GGUF. Small numerical records and native traces per step; one sparse final state on explicit exit or failure. No per-step checkpoints.",
   "stopping": "Root manually judges fresh loss progression including ordinary variation and a nonzero plateau. Signals to the parent finish current fresh measurement and save final state; no guessed numeric schedule or automatic plateau detector.",
   "commands": [
-    "CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 python studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation"
+    "CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 python studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop.py studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation"
   ]
 }

@@ -6,12 +6,12 @@ Organized November 7, 2026 (CT), at Marcos's request to keep the theory, evidenc
 
 ## Physical relocation
 
-The canonical home is `~/Documents/dev/research/weight-patterns`.
+The canonical home is `<repo-root>`.
 
 Twenty-six directories were moved by same-filesystem rename:
 
 - One complete Decode Machine application from QGRE's `.dev/decode-machine`.
-- Seven standalone tool directories from Rig's `local/research` area.
+- Seven standalone tool directories from the external workspace's `local/research` area.
 - Eighteen study directories from QGRE's `runs/legs/gemma4-e2b` area.
 
 Every original location now has a compatibility symlink to the new directory. The moves preserve the directories' filesystem identities; large evidence payloads were not copied or regenerated. [relocation.json](relocation.json) contains each old/new path and directory identity.

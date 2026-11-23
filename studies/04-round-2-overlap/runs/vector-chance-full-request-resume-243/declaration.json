@@ -883,7 +883,7 @@
   "retention": "Keep both full per-merge moment tables in proposal artifacts alongside existing sparse native-transition payloads and reached commit records. Existing verified consumed-trace archival and exact complete exit native/remainder checkpoint remain unchanged.",
   "stopping": "Manual research assessment of actual continued loss reduction; no guessed schedule, cap or automatic plateau. A zero conditioned direction or non-descent/zero full response stops this construction without claiming global closure. Incomplete native acquisition and existing errors stop with truthful complete/partial state. Owner signals finish current complete measurement boundary and save all native/remainder state.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/records/development/2026-11-16-full-request-continuation/run.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-full-request-resume-243"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python records/development/2026-11-16-full-request-continuation/run.py studies/04-round-2-overlap/runs/vector-chance-full-request-resume-243"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -934,7 +934,7 @@
       "vector-chance-full-request-resume-243",
       "vector-chance-full-request-finite-236-237"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },
@@ -993,7 +993,7 @@
         "sha256": "080ea66541cf4e9f99c19d159d90036c540a23a350d6337e225f7a5f21e7f120"
       },
       "source_review": {
-        "record": "records/retrospectives/2026-11-16-direct-native-encoding-eli.json",
+        "record": "records/retrospectives/2026-11-16-direct-native-encoding-review.json",
         "sha256": "0e445d2d82d859009be10fea0186e6e1283f89f7d7c1139f9fd5d4691f02bc41"
       }
     }
@@ -1112,12 +1112,12 @@
     "sha256": "f7661124d0d59c0b7fe636ab16062653bad155261f24498d44e923a8d84d2b8e"
   },
   "source_review": {
-    "record": "records/retrospectives/2026-11-16-full-request-continuation-eli.json",
+    "record": "records/retrospectives/2026-11-16-full-request-continuation-review.json",
     "sha256": "a2aaa2c0901c80feac402bd37ec093d198652cbb68a7cb2fbecf0c1cc788e04d"
   },
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-full-request-243-admission-eli.json",
+    "record": "records/retrospectives/2026-11-16-full-request-243-admission-review.json",
     "sha256": "7086a9f1b4139192d7c216d3cdde919f5eb98630e94e3a7ca9f2ef6975625b2a",
     "reviewed_declaration_sha256": "15311af72413da1d4d9c547b38455c733c1dc10ed39a65c51330f890ec6722f2",
     "canonical_declaration_sha256_excluding_review": "94ac046776ea061371eae700baa6a5e78a84f283eb7b5324a81269756f65d397",

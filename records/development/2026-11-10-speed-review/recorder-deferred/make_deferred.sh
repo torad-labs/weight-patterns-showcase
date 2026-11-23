@@ -8,7 +8,7 @@
 # Without that variable the patched library takes the installed library's own path through the scheduler.
 # Paths in the file's messages are written relative (-ffile-prefix-map), so the bytes do not depend on the scratch folder.
 set -eu
-ROOT=~/Documents/dev/research/weight-patterns
+ROOT="$(git rev-parse --show-toplevel)"
 HERE=$ROOT/records/development/2026-11-10-speed-review/recorder-deferred
 SOURCE=$ROOT/dependencies/llama.cpp-f089c9c/ggml
 INSTALL=$ROOT/dependencies/engine-f089c9c-sm120-deferred

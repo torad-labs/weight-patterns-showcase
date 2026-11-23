@@ -172,5 +172,5 @@ physical mistakes.
 
 No training, parameter edit, BF16 download, or production engine change was made.
 The external recorder and analysis sources are preserved with provenance in the
-evidence directory and in Rig's local research directory. The raw captures are
+evidence directory and in the external workspace's local research directory. The raw captures are
 research artifacts; they have not been imported into the factory's replay UI.

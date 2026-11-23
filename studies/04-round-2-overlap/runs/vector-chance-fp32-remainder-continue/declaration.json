@@ -639,7 +639,7 @@
   "eta": 0.26989262219171917,
   "whole_build_review": {
     "accepted": true,
-    "record": "records/retrospectives/2026-11-16-fp32-direct-start-eli.json",
+    "record": "records/retrospectives/2026-11-16-fp32-direct-start-review.json",
     "sha256": "a7d873ad785723afee468e4f079caf83755d05ab977cb8db8a1be577b3768775"
   },
   "gradient_step": {
@@ -703,7 +703,7 @@
   "retention": "One RAM model/resident state; one sparse exitcheckpoint. Keep latest complete raw/index, smallrecords andpublished overlap. After it consumespreviousstate, synchronously archive+readbackverify+release bothpreviousbulkstreams before producinganother. Originalinput/reference/retainedcheckpoint and historicaldiagnosticcaptures untouched. Complete FP32 remainder is saved once on exit beside the native checkpoint, with exact byte/hash/layout/model binding; no per-step optimizer checkpoint.",
   "stopping": "Root manually judges fresh loss progression including ordinary variation and a nonzero plateau. Signals to the parent finish current fresh measurement and save final state; no guessed numeric schedule or automatic plateau detector.",
   "commands": [
-    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=~/Documents/dev/research/weight-patterns/code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_precision_accumulate_direct.py ~/Documents/dev/research/weight-patterns/studies/04-round-2-overlap/runs/vector-chance-fp32-remainder-continue"
+    "env CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TORAD_RESEARCH_TRANSFERS=1 PYTHONPATH=code/signal-trace uv run --offline --python 3.12 --with torch==2.15.0 --with numpy==2.5.5 python studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/empirical-eta-continuation/loop_precision_accumulate_direct.py studies/04-round-2-overlap/runs/vector-chance-fp32-remainder-continue"
   ],
   "cpu_threads": 1,
   "ffn_precision": {
@@ -747,7 +747,7 @@
       "vector-chance-ffn-precision-continuation",
       "vector-chance-loss-rise-diagnosis"
     ],
-    "observer_state": "~/.local/state/weight-patterns/tracking/state.json",
+    "observer_state": "<local-tracking-state>/tracking/state.json",
     "observer_interval_seconds": 30,
     "retained_steps": []
   },
@@ -798,7 +798,7 @@
         "sha256": "080ea66541cf4e9f99c19d159d90036c540a23a350d6337e225f7a5f21e7f120"
       },
       "source_review": {
-        "record": "records/retrospectives/2026-11-16-direct-native-encoding-eli.json",
+        "record": "records/retrospectives/2026-11-16-direct-native-encoding-review.json",
         "sha256": "0e445d2d82d859009be10fea0186e6e1283f89f7d7c1139f9fd5d4691f02bc41"
       }
     }

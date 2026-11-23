@@ -104,6 +104,6 @@ It does not establish a unique geometric representation, a universally safe edit
 - `propagation.json`: paired captured affinities, layer output changes, and first-token logit margins.
 - `baseline/`, `discovery-alpha-1/`, `discovery-alpha-2/`, `baseline-validation/`, `confirmation-alpha-2/`: raw server requests and responses.
 - Selected model: `models/gemma4/gemma4-e2b/gguf-first-preference-2026-11-06/alpha-2.gguf` under the QGRE project root.
-- Native observation/editor source: `~/Documents/dev/infra/rig/repo/local/research/lookup-preference-2026-11-06/`.
+- Native observation/editor source: `<external-engine-workspace>/local/research/lookup-preference-2026-11-06/`.
 
 The native C++ helpers compiled successfully. The zero-edit identity, fixed-scale readback, model byte comparison, repeated baseline, and ordinary-server evaluations passed their stated checks. These are local experiment results, not a production-engine release or a broad model-quality qualification.
