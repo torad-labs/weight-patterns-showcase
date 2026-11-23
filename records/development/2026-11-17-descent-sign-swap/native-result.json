@@ -1,0 +1,219 @@
+{
+  "declaration": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/declaration.json",
+    "sha256": "dc8e3383678c32788e766dc8b6a2b353fba27c36de6f287cf68ba5f11de9835a"
+  },
+  "result": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/result.json",
+    "sha256": "c0a72c1e5586283b1eddaaaafa3e8f32b8e0180aa1866158c4f6c81f13e9af19"
+  },
+  "review": {
+    "record": "records/retrospectives/2026-11-17-descent-sign-swap-eli.json",
+    "sha256": "c596a5985122fd6ea6196c270f1fb39253f1714175a1b1df84946337d1edcf32"
+  },
+  "post_acquisition_readback": {
+    "early": {
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/result.json",
+        "sha256": "28876c344e3ce0afa08a359ec49f6fff011d2c36fe09001b0b451de7466cd33b"
+      },
+      "initial_K_J": 64,
+      "descent_energy_J": 40,
+      "applied_sign": "-",
+      "bottom_K_J": 24,
+      "dissipated_J": 13,
+      "after_friction_J": 11,
+      "required_J": 20,
+      "verdict": "NO",
+      "arithmetic_correct": false
+    },
+    "late": {
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late/raw/discovery-05-channel-h1/result.json",
+        "sha256": "e9c4a4451a34284aff0c9484cb402a200203b5eb15121d522938b23324ca9b2f"
+      },
+      "initial_K_J": 64,
+      "descent_energy_J": 40,
+      "applied_sign": "+",
+      "bottom_K_J": 104,
+      "dissipated_J": 13,
+      "after_friction_J": 91,
+      "required_J": 20,
+      "verdict": "YES",
+      "arithmetic_correct": true
+    },
+    "late_attention": {
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/raw/discovery-05-channel-h1/result.json",
+        "sha256": "9293d8be1d426bea30cac51fbbe81dfc83c5a7e2efe2c89e7b29808fbde19676"
+      },
+      "initial_K_J": 64,
+      "descent_energy_J": 40,
+      "applied_sign": "+",
+      "bottom_K_J": 104,
+      "dissipated_J": 13,
+      "after_friction_J": 91,
+      "required_J": 20,
+      "verdict": "YES",
+      "arithmetic_correct": true
+    },
+    "late_ffn": {
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/raw/discovery-05-channel-h1/result.json",
+        "sha256": "8581347168dbe8780bc2f81896d172670f412428c2081a43efd360b9790046d8"
+      },
+      "initial_K_J": 64,
+      "descent_energy_J": 40,
+      "applied_sign": "+",
+      "bottom_K_J": 104,
+      "dissipated_J": 13,
+      "after_friction_J": 91,
+      "required_J": 20,
+      "verdict": "YES",
+      "arithmetic_correct": true
+    }
+  },
+  "conditional_trace_measurements": {
+    "status": "complete",
+    "member": "discovery-05-channel-h1",
+    "observations": {
+      "early": {
+        "measurement": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/measurement.json",
+          "sha256": "9fce69ddc63af413c56ca588c10fed01b3fa0ac0b59f42506ae2cd30a0569e1f"
+        },
+        "raw_result": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/result.json",
+          "sha256": "28876c344e3ce0afa08a359ec49f6fff011d2c36fe09001b0b451de7466cd33b"
+        },
+        "events": 579
+      },
+      "late": {
+        "measurement": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late/measurement.json",
+          "sha256": "e11f68de3e36fe7ab553deea70e07c316662ef921853a94e4e9b561c3d377721"
+        },
+        "raw_result": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late/raw/discovery-05-channel-h1/result.json",
+          "sha256": "e9c4a4451a34284aff0c9484cb402a200203b5eb15121d522938b23324ca9b2f"
+        },
+        "events": 605
+      },
+      "late_attention": {
+        "measurement": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/measurement.json",
+          "sha256": "6f0a870cee3375043c892a417ede8ce80c07693cf25c00d81cc12bae8cbd2dff"
+        },
+        "raw_result": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/raw/discovery-05-channel-h1/result.json",
+          "sha256": "9293d8be1d426bea30cac51fbbe81dfc83c5a7e2efe2c89e7b29808fbde19676"
+        },
+        "events": 605
+      },
+      "late_ffn": {
+        "measurement": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/measurement.json",
+          "sha256": "e7b1c20fd54ced716ea46fd8f437d903c5fae24a2b6c95fcf493fa6303f4ba4c"
+        },
+        "raw_result": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/raw/discovery-05-channel-h1/result.json",
+          "sha256": "8581347168dbe8780bc2f81896d172670f412428c2081a43efd360b9790046d8"
+        },
+        "events": 605
+      }
+    },
+    "losses": {
+      "early": 0.00028457641744647337,
+      "late": 9.736578662532858e-05,
+      "late_attention": 9.76581176161419e-05,
+      "late_ffn": 9.884197292266216e-05
+    },
+    "effects": {
+      "attention_on_early_ffn": {
+        "objective_change": -0.00018691829983033146,
+        "merges_lower": 86,
+        "merges_higher": 19,
+        "merges_equal": 0
+      },
+      "attention_on_late_ffn": {
+        "objective_change": -1.476186297333582e-06,
+        "merges_lower": 71,
+        "merges_higher": 34,
+        "merges_equal": 0
+      },
+      "ffn_on_early_attention": {
+        "objective_change": -0.00018573444452381121,
+        "merges_lower": 85,
+        "merges_higher": 20,
+        "merges_equal": 0
+      },
+      "ffn_on_late_attention": {
+        "objective_change": -2.923309908133199e-07,
+        "merges_lower": 74,
+        "merges_higher": 30,
+        "merges_equal": 1
+      }
+    },
+    "interaction": 0.00018544211353299788,
+    "endpoint_change": -0.00018721063082114477,
+    "original_fork": {
+      "generated_history_equal": false,
+      "common_generated_choices": 72,
+      "first_differing_generated_choice": 72,
+      "first_differing_consumed_position": 245,
+      "earlier_termination_without_different_consumed_input": false
+    },
+    "controls_match_historical_histories": {
+      "early": false,
+      "late": true
+    },
+    "hybrid_comparisons": {
+      "late_attention": {
+        "early": {
+          "generated_history_equal": false,
+          "common_generated_choices": 72,
+          "first_differing_generated_choice": 72,
+          "first_differing_consumed_position": 245,
+          "earlier_termination_without_different_consumed_input": false
+        },
+        "late": {
+          "generated_history_equal": true,
+          "common_generated_choices": 433,
+          "first_differing_generated_choice": null,
+          "first_differing_consumed_position": null,
+          "earlier_termination_without_different_consumed_input": false
+        }
+      },
+      "late_ffn": {
+        "early": {
+          "generated_history_equal": false,
+          "common_generated_choices": 72,
+          "first_differing_generated_choice": 72,
+          "first_differing_consumed_position": 245,
+          "earlier_termination_without_different_consumed_input": false
+        },
+        "late": {
+          "generated_history_equal": false,
+          "common_generated_choices": 323,
+          "first_differing_generated_choice": 323,
+          "first_differing_consumed_position": 496,
+          "earlier_termination_without_different_consumed_input": false
+        }
+      }
+    },
+    "prediction_vs_result": {
+      "prediction": "The FFN-down-only transplant reproduces the correct addition of 40 J to 64 J and the resulting 104 J, 91 J available, 20 J required, and YES. The reciprocal attention-only transplant retains the subtractive descent. The full path and its loss are independently recomputed for every condition.",
+      "free_history_controls": {
+        "early": false,
+        "late": true
+      },
+      "arithmetic": "Read all four bound, freely generated responses for signed descent and independent intermediate arithmetic."
+    },
+    "failures_only": "All four natural endpoint/hybrid generations and all105merges are retained.",
+    "what_this_changes": "Distinguishes native family effects on this signed calculation from effects on single-reference trace loss."
+  },
+  "arithmetic_readback": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/arithmetic-readback.json",
+    "sha256": "6206d5ae05d3050e9847777a6edb8ce07d6a3182627f3250f9d564472c3de7a2"
+  }
+}

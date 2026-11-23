@@ -1,0 +1,160 @@
+
+<h2>5&nbsp;&nbsp;The path edit</h2>
+
+<p>The path edit changes two matrices in each layer: the attention output matrix and the feed-forward down projection.
+These are the matrices whose output is written into the stream. There are 70. An attention output matrix maps 2,048
+numbers to 1,536, and a feed-forward down projection maps 6,144 to 1,536.</p>
+
+<h3>5.1&nbsp;&nbsp;What a matrix controls</h3>
+
+<p>The output of each of these matrices is normalized, scaled and added to the stream (Figure&nbsp;2). For one
+position, let <i>x</i> be the input of the matrix, <i>W</i> the matrix, <i>h</i> the stream before the addition, and
+<i>g</i> the 1,536 learned scales that follow the normalization. Then</p>
+<div class="eq"><math display="block"><mi>y</mi><mo>=</mo><mi>W</mi><mi>x</mi><mo>,</mo><mspace width="1.6em"/><mi>m</mi><mo>=</mo><mi>h</mi><mo>+</mo><mi>g</mi><mo>⊙</mo><mfrac><mi>y</mi><mrow><mi>rms</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>,</mo><mspace width="1.6em"/><mi>d</mi><mo>=</mo><mfrac><mi>m</mi><mrow><mo>‖</mo><mi>m</mi><mo>‖</mo></mrow></mfrac></math><span class="eqn">(4)</span></div>
+<p>where rms(<i>y</i>) is the root mean square of <i>y</i>, ⊙ multiplies element by element, and <i>d</i> has length
+one. We call <i>d</i> the <em>state after the merge</em>. It is the direction of the stream, which is what the next
+operation reads, since every operation normalizes its input.</p>
+
+<figure>
+<svg viewBox="0 0 680 124" width="94%" xmlns="http://www.w3.org/2000/svg" font-family="DejaVu Sans" font-size="10.5">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+  <g fill="#fbfbf9" stroke="#52514e" stroke-width="0.9">
+    <rect x="4" y="30" width="84" height="44" rx="5"/>
+    <rect x="112" y="24" width="104" height="56" rx="5" fill="#e8f0fb" stroke="#2a78d6" stroke-width="1.6"/>
+    <rect x="240" y="30" width="92" height="44" rx="5"/>
+    <rect x="356" y="30" width="92" height="44" rx="5"/>
+    <circle cx="484" cy="52" r="13"/>
+    <rect x="532" y="30" width="144" height="44" rx="5"/>
+  </g>
+  <g fill="#111" text-anchor="middle">
+    <text x="46" y="49">input x</text><text x="46" y="63" font-size="9">2,048 or 6,144</text>
+    <text x="164" y="48" font-weight="bold">W</text><text x="164" y="64" fill="#2a78d6">edited</text>
+    <text x="286" y="49">normalize</text><text x="286" y="63">y ÷ rms(y)</text>
+    <text x="402" y="49">learned scale</text><text x="402" y="63">× g</text>
+    <text x="484" y="57" font-size="15">+</text>
+    <text x="604" y="49">state after the merge</text><text x="604" y="63">d = m ÷ ‖m‖</text>
+  </g>
+  <g stroke="#52514e" stroke-width="1.1" marker-end="url(#ar)">
+    <line x1="88" y1="52" x2="110" y2="52"/><line x1="216" y1="52" x2="238" y2="52"/>
+    <line x1="332" y1="52" x2="354" y2="52"/><line x1="448" y1="52" x2="469" y2="52"/>
+    <line x1="497" y1="52" x2="530" y2="52"/><line x1="484" y1="104" x2="484" y2="67"/>
+  </g>
+  <g fill="#52514e" font-size="9.5" text-anchor="middle">
+    <text x="228" y="16">y = W x</text><text x="514" y="44">m</text>
+    <text x="484" y="118">stream h</text>
+  </g>
+</svg>
+<figcaption><b>Figure 2.</b> From one matrix to the state it leaves behind (Equation&nbsp;4). Only <i>W</i> is
+changed.</figcaption>
+</figure>
+
+<p>We aim the edit at <i>d</i> and not at the turn of the merge, for two measured reasons. At the first merge the gap of
+the turns (0.253) is almost entirely the gap of the token embeddings (0.254), which no weight produces; the gap of the
+state after that merge is 0.043. And the gaps of the turns do not add up to the gap of the state. Delivered in full at
+every merge, they would leave the state further from the correct pattern than no edit at all at 21 of the 70 matrices,
+from the feed-forward of layer&nbsp;14 on. The difference is the one between steering and heading: copying another
+driver's steering movements does not give their heading when the crosswinds differ.</p>
+
+<h3>5.2&nbsp;&nbsp;Rows and targets</h3>
+
+<p>We call one position of one answer, seen at one matrix, a <em>row</em>. A row <i>r</i> has an input
+<i>x<sub>r</sub></i>, a stream <i>h<sub>r</sub></i> and a target <i>t<sub>r</sub></i> for its state. Let
+<i>d</i><sup>0</sup><sub><i>r</i></sub> be the row's state in the original model. For a generated step of a wrong answer
+aligned to place <i>p</i>, at a matrix <i>k</i> where the groups have diverged,</p>
+<div class="eq"><math display="block"><msub><mi>t</mi><mi>r</mi></msub><mo>=</mo><msubsup><mi>d</mi><mi>r</mi><mn>0</mn></msubsup><mo>+</mo><msub><mi>σ</mi><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo stretchy="false">(</mo><msub><mover><mi>c</mi><mo>¯</mo></mover><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo>−</mo><msub><mover><mi>w</mi><mo>¯</mo></mover><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></math><span class="eqn">(5)</span></div>
+<p>and for every other row, including every position of the question,
+<i>t<sub>r</sub></i>&nbsp;=&nbsp;<i>d</i><sup>0</sup><sub><i>r</i></sub>. A step aligned to several places takes the
+average over them.</p>
+
+<p>The fit of each matrix uses every position of the 30 wrong answers: 16,423 generated steps and 5,160 question
+positions, 21,583 rows in all. Between 8,829 and 10,354 of them, depending on the matrix, are asked to move. The move is
+small: 0.04 at the first matrix and 0.13 at layer&nbsp;8, where <i>d</i> has length one. The 30 correct answers (19,282
+rows) are read at every stage and are not fitted. This edit has no protection, as edit&nbsp;A had none in round
+one.</p>
+
+<p>We fit the rows that should stay because a matrix acts on every input it receives. Section&nbsp;8.2 describes four
+earlier attempts that fitted only the rows where a change was wanted. Those edits changed the model almost as much
+where nothing was asked.</p>
+
+<h3>5.3&nbsp;&nbsp;From a target to a change of weights</h3>
+
+<p>A small change Δ<i>W</i> of the matrix changes the state of row <i>r</i>, to first order, by</p>
+<div class="eq"><math display="block"><mi>Δ</mi><msub><mi>d</mi><mi>r</mi></msub><mo>≈</mo><msub><mi>A</mi><mi>r</mi></msub><mspace width="0.2em"/><mi>Δ</mi><mi>W</mi><mspace width="0.15em"/><msub><mi>x</mi><mi>r</mi></msub><mo>,</mo><mspace width="1.6em"/><msub><mi>A</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mi>m</mi></msub><mspace width="0.2em"/><mi>diag</mi><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo><mspace width="0.2em"/><msub><mi>P</mi><mi>y</mi></msub></mrow><mrow><mo>‖</mo><mi>m</mi><mo>‖</mo><mspace width="0.2em"/><mi>rms</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mfrac></math><span class="eqn">(6)</span></div>
+<p>where <i>P<sub>y</sub></i>&nbsp;=&nbsp;<i>I</i>&nbsp;−&nbsp;<i>ŷŷ</i><sup>⊤</sup>/1536 with
+<i>ŷ</i>&nbsp;=&nbsp;<i>y</i>/rms(<i>y</i>), and <i>P<sub>m</sub></i>&nbsp;=&nbsp;<i>I</i>&nbsp;−&nbsp;<i>dd</i><sup>⊤</sup>.
+Each factor has a plain meaning. <i>P<sub>y</sub></i> removes any change in the size of <i>y</i>, which the
+normalization undoes, as a limiter undoes a louder input. diag(<i>g</i>) weighs each of the 1,536 outputs by its
+learned scale. <i>P<sub>m</sub></i> removes any change along the stream itself, which lengthens the stream without
+turning it. The divisor says that the larger the stream is next to the matrix's contribution, the less a change of the
+matrix turns it. The operator is different for every row.</p>
+
+<p>The change we want is the one that minimizes</p>
+<div class="eq"><math display="block"><mi>L</mi><mo stretchy="false">(</mo><mi>Δ</mi><mi>W</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munder><mo>∑</mo><mi>r</mi></munder><msup><mrow><mo>‖</mo><msub><mi>t</mi><mi>r</mi></msub><mo>−</mo><msub><mi>d</mi><mi>r</mi></msub><mo stretchy="false">(</mo><mi>W</mi><mo>+</mo><mi>Δ</mi><mi>W</mi><mo stretchy="false">)</mo><mo>‖</mo></mrow><mn>2</mn></msup><mo>+</mo><mi>λ</mi><msup><mrow><mo>‖</mo><mi>Δ</mi><mi>W</mi><mo>‖</mo></mrow><mn>2</mn></msup></math><span class="eqn">(7)</span></div>
+<p>over the <i>N</i> fitted rows, where <i>d<sub>r</sub></i>(<i>W</i>&nbsp;+&nbsp;Δ<i>W</i>) is computed with
+Equation&nbsp;4 at the changed weights, and <i>λ</i> is a ridge penalty that pulls the change towards zero. The first
+term is evaluated on the model's own expression, not on its linear approximation.</p>
+
+<h3>5.4&nbsp;&nbsp;Solver</h3>
+
+<p>We minimize Equation&nbsp;7 by preconditioned conjugate gradients [12]. At each iteration we compute the exact
+gradient at the current weights, turn it into a search direction <i>S</i> that does not undo the earlier steps, and take
+a step of size</p>
+<div class="eq"><math display="block"><mi>α</mi><mo>=</mo><mfrac><mrow><mo>⟨</mo><mi>R</mi><mo>,</mo><mi>S</mi><mo>⟩</mo></mrow><mrow><mfrac><mn>1</mn><mi>N</mi></mfrac><munder><mo>∑</mo><mi>r</mi></munder><msup><mrow><mo>‖</mo><msub><mi>A</mi><mi>r</mi></msub><mspace width="0.15em"/><mi>S</mi><mspace width="0.15em"/><msub><mi>x</mi><mi>r</mi></msub><mo>‖</mo></mrow><mn>2</mn></msup><mo>+</mo><mi>λ</mi><msup><mrow><mo>‖</mo><mi>S</mi><mo>‖</mo></mrow><mn>2</mn></msup></mrow></mfrac></math><span class="eqn">(8)</span></div>
+<p>where <i>R</i> is minus half the gradient. This is the minimum of the local quadratic along <i>S</i>. The step is
+kept only if Equation&nbsp;7, evaluated at the new weights, decreased. Otherwise it is halved until it does. The
+preconditioner is a closed-form approximation of the system that factors into a part over the inputs and a part over
+the outputs. It shapes the search direction and is never used as the answer. When a search direction fails, the
+preconditioner is rebuilt at the current weights. The solve ends when no step lowers the objective in 32-bit
+arithmetic.</p>
+
+<p>There is therefore no learning rate to choose. In this run the final solve of each matrix took 25 to 92 iterations,
+with at most 4 shortened steps and at most 2 rebuilds.</p>
+
+<h3>5.5&nbsp;&nbsp;Choosing the ridge</h3>
+
+<p>The ridge <i>λ</i> is the one strength in the fit. We choose it by held-out error. The 30 wrong answers are split
+into two halves. For a candidate <i>λ</i> we fit the change on one half, round it to BF16, and measure the first term
+of Equation&nbsp;7 on the other half; then the reverse. The candidate's score is the sum, relative to making no
+change.</p>
+
+<p>The search starts at a <i>λ</i> equal to the largest eigenvalue of the preconditioner's system, where the change is
+negligible, and halves <i>λ</i> for as long as the score improves. It then narrows between the neighbours of the best
+candidate by golden-section search [13], which needs one new fit per step, and stops when its two inner candidates
+differ by less than BF16 rounding changes the score. Making no change is itself a candidate and wins when nothing beats
+it. Figure&nbsp;3 shows the search for the first matrix: 23 candidates, ending 17.8 halvings below the starting value,
+where the fit leaves 0.66 of the error on the held-out half.</p>
+
+<figure><img src="figures/fig3-ridge.svg" style="width:92%">
+<figcaption><b>Figure 3.</b> The ridge search for the first matrix on the path, the attention output of layer&nbsp;0.
+Left: error left on the held-out half of the answers. Right: size of the change. Twenty candidates come from halving
+and three from golden-section search.</figcaption></figure>
+
+<p>Across the 18 matrices of this run the search tried 17 to 26 candidates. The chosen changes leave 0.62 to 0.94 of
+the error on the held-out half, and the changes fitted on the two halves have a cosine of 0.41 to 0.66 with each other.
+The score need not have a single minimum, and the search follows one branch. The ridge is chosen on the wrong answers
+and their original text only.</p>
+
+<h3>5.6&nbsp;&nbsp;Path order</h3>
+
+<p>We solve the matrices in the order the signal meets them: attention then feed-forward of layer&nbsp;0, then
+layer&nbsp;1, and so on. Before each matrix we pass the text of all 60 answers through the model as it currently
+stands, and read that matrix's inputs and streams. The matrix is then fitted to the targets, starting from the states
+the rows have now. So a matrix is asked for what the earlier ones left undone, and to bring back rows they moved by
+mistake. We round the result to BF16 and write it into the model only if the rounded matrix lowers the first term of
+Equation&nbsp;7 on the fitted rows.</p>
+
+<p>The order follows from a measurement. Where the groups have diverged, the inputs that arrive at each matrix also
+differ between the groups, by 3.7 times chance. Changing one matrix therefore changes what the next one receives.
+MEMIT [2] handles the same dependence between layers.</p>
+
+<div class="tablewrap"><table>
+<caption><b>Table 2.</b> The path edit beside ordinary fine-tuning.</caption>
+<thead><tr><th></th><th>Fine-tuning</th><th>Path edit</th></tr></thead>
+<tbody>
+<tr><td>Examples</td><td>Text with the desired output</td><td>The model's own answers, 30 wrong and 30 correct. No desired output is given.</td></tr>
+<tr><td>Target</td><td>The next token, at the output</td><td>The state after each matrix, read from the overlap (Equation&nbsp;5)</td></tr>
+<tr><td>Gradient</td><td>Passed backwards through every layer</td><td>Through one matrix and its own merge (Equation&nbsp;6)</td></tr>
+<tr><td>Step size</td><td>A learning rate, chosen</td><td>Computed at every step and checked (Equation&nbsp;8)</td></tr>
+<tr><td>Regularization</td><td>Weight decay, chosen</td><td>A ridge towards the original weights, chosen per matrix on held-out answers</td></tr>
+<tr><td>Passes</td><td>Many</td><td>One along the path; each matrix is solved once</td></tr>
+</tbody></table></div>

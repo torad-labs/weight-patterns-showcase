@@ -1,0 +1,306 @@
+{
+  "declaration": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/declaration.json",
+    "sha256": "5f690cebf99b0ab411f54eba8fc2bc01878caf537985991cf5a8783c1e4b88b0"
+  },
+  "prefixes": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/prefixes.json",
+    "sha256": "91ed200b6401c8f7f31d9c1a64114da771519d10cfa2fc8b848555c82ce70737"
+  },
+  "result": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/result.json",
+    "sha256": "d1b0ababc627fce38035231b2e1c127eebcd8564d6104d8f8b18d34cf47e3019"
+  },
+  "arithmetic_receipt": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/arithmetic-readback.json",
+    "sha256": "c2922e80dea056d6eb63c3f44e304bb6a305f9b920288c4eaf8794ba2c56f532"
+  },
+  "arithmetic": {
+    "fit__fit": {
+      "sign": "+",
+      "initial_J": 64,
+      "descent_magnitude_J": 40,
+      "bottom_J": 104,
+      "friction_J": 13,
+      "available_J": 91,
+      "required_J": 20,
+      "verdict": "YES"
+    },
+    "fit__dev": {
+      "sign": "-",
+      "initial_J": 64,
+      "descent_magnitude_J": 40,
+      "bottom_J": 24,
+      "friction_J": 13,
+      "available_J": 11,
+      "required_J": 20,
+      "verdict": "NO"
+    },
+    "dev__fit": {
+      "sign": "+",
+      "initial_J": 96,
+      "descent_magnitude_J": 30,
+      "bottom_J": 126,
+      "friction_J": 11,
+      "available_J": 115,
+      "required_J": 30,
+      "verdict": "YES"
+    },
+    "dev__dev": {
+      "sign": "-",
+      "initial_J": 96,
+      "descent_magnitude_J": 30,
+      "bottom_J": 66,
+      "friction_J": 11,
+      "available_J": 55,
+      "required_J": 30,
+      "verdict": "YES"
+    }
+  },
+  "native": {
+    "status": "complete",
+    "observations": {
+      "fit__fit": {
+        "receiver": "fit",
+        "frame": "fit",
+        "decision_index": 141,
+        "input_position": 313,
+        "sign": {
+          "choice": " +",
+          "token": 900,
+          "plus": 22.77086639404297,
+          "minus": 16.739858627319336,
+          "margin": 6.031007766723633,
+          "logits_sha256": "ea8895bd901525615a307f818dc77c46186517c830eaca185a6ee65232b03b23"
+        },
+        "natural_sign": {
+          "choice": " +",
+          "token": 900,
+          "plus": 22.77086639404297,
+          "minus": 16.739858627319336,
+          "margin": 6.031007766723633,
+          "logits_sha256": "ea8895bd901525615a307f818dc77c46186517c830eaca185a6ee65232b03b23"
+        },
+        "diagonal": true,
+        "matches_natural_sign": true,
+        "matches_natural_decision_logits": true,
+        "matches_entire_natural_history": true,
+        "free_continuation_choices": 292,
+        "ended_naturally": true,
+        "source": "Total Energy before rough section ($E_1$): $KE_i",
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/fit__fit/raw/discovery-05-channel-h1/result.json",
+          "sha256": "bb818bf4558698760ac514daec9d35d9fab8b60f3f57961d0c841526eaf68dd7"
+        },
+        "capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/fit__fit/capture.json",
+          "sha256": "2c342a6d225fe7c18d3dae883f8409845585117f0e8a2d10d1c7a541966a5098"
+        }
+      },
+      "dev__fit": {
+        "receiver": "dev",
+        "frame": "fit",
+        "decision_index": 141,
+        "input_position": 313,
+        "sign": {
+          "choice": " +",
+          "token": 900,
+          "plus": 21.911239624023438,
+          "minus": 15.869558334350586,
+          "margin": 6.041681289672852,
+          "logits_sha256": "0bd3d7647569cf43c8791b7c0045a1a2546fb37918c87754323fd13ddb6a6463"
+        },
+        "natural_sign": {
+          "choice": " -",
+          "token": 753,
+          "plus": 13.06786060333252,
+          "minus": 17.74884796142578,
+          "margin": -4.680987358093262,
+          "logits_sha256": "da3f6b6f110f9e250fcf252cf56ee2c9092d0b622b28cd3bccb8c95762b826c4"
+        },
+        "diagonal": false,
+        "matches_natural_sign": false,
+        "matches_natural_decision_logits": false,
+        "matches_entire_natural_history": false,
+        "free_continuation_choices": 392,
+        "ended_naturally": true,
+        "source": "Total Energy before rough section ($E_1$): $KE_i",
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/dev__fit/raw/discovery-10-channel-h1/result.json",
+          "sha256": "3a05bc9ca3bd71cfb7368e4ebe7b28f61525e042195b6e775dd61a2ce0865ec0"
+        },
+        "capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/dev__fit/capture.json",
+          "sha256": "ebe427cedb1a3cc451e1b36f895c8293a4960ea3b31e7cf0782bbe404967db96"
+        }
+      },
+      "fit__dev": {
+        "receiver": "fit",
+        "frame": "dev",
+        "decision_index": 141,
+        "input_position": 313,
+        "sign": {
+          "choice": " -",
+          "token": 753,
+          "plus": 11.869349479675293,
+          "minus": 16.427753448486328,
+          "margin": -4.558403968811035,
+          "logits_sha256": "63dd7b5e0a9c7cb1bd13aae9c5bb621b7261eee622b0cccf5200cdff4add6c72"
+        },
+        "natural_sign": {
+          "choice": " +",
+          "token": 900,
+          "plus": 22.77086639404297,
+          "minus": 16.739858627319336,
+          "margin": 6.031007766723633,
+          "logits_sha256": "ea8895bd901525615a307f818dc77c46186517c830eaca185a6ee65232b03b23"
+        },
+        "diagonal": false,
+        "matches_natural_sign": false,
+        "matches_natural_decision_logits": false,
+        "matches_entire_natural_history": false,
+        "free_continuation_choices": 295,
+        "ended_naturally": true,
+        "source": "Kinetic Energy after descent ($KE_{descent}$): $KE_i",
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/fit__dev/raw/discovery-05-channel-h1/result.json",
+          "sha256": "4f98dab3353018da7ec7a99f7da2e66088d1253971c5ae2a0ea5202ec9610dd3"
+        },
+        "capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/fit__dev/capture.json",
+          "sha256": "ebf93b408777f4bdbe9a3391a23979933fb397f024a6a65d8610084fd146b7ca"
+        }
+      },
+      "dev__dev": {
+        "receiver": "dev",
+        "frame": "dev",
+        "decision_index": 141,
+        "input_position": 313,
+        "sign": {
+          "choice": " -",
+          "token": 753,
+          "plus": 13.06786060333252,
+          "minus": 17.74884796142578,
+          "margin": -4.680987358093262,
+          "logits_sha256": "da3f6b6f110f9e250fcf252cf56ee2c9092d0b622b28cd3bccb8c95762b826c4"
+        },
+        "natural_sign": {
+          "choice": " -",
+          "token": 753,
+          "plus": 13.06786060333252,
+          "minus": 17.74884796142578,
+          "margin": -4.680987358093262,
+          "logits_sha256": "da3f6b6f110f9e250fcf252cf56ee2c9092d0b622b28cd3bccb8c95762b826c4"
+        },
+        "diagonal": true,
+        "matches_natural_sign": true,
+        "matches_natural_decision_logits": true,
+        "matches_entire_natural_history": true,
+        "free_continuation_choices": 292,
+        "ended_naturally": true,
+        "source": "Kinetic Energy after descent ($KE_{descent}$): $KE_i",
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/dev__dev/raw/discovery-10-channel-h1/result.json",
+          "sha256": "ee824b5954828900143e2e1436574a0b2c397268e7c829ed503cb2b787bb2eeb"
+        },
+        "capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-descent-context-175/dev__dev/capture.json",
+          "sha256": "18cfc1575398d91790012e23ee12762fa84464128ab9a554781afa48ecb56a08"
+        }
+      }
+    },
+    "checkpoint": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/final-state.json",
+      "sha256": "406db82d079e06fea31f6738539f26d3e0c6a56094f87999d5b4c853101f3664"
+    },
+    "natural_controls": {
+      "fit": {
+        "member": "discovery-05-channel-h1",
+        "declaration": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/declaration.json",
+          "sha256": "8aa42882dc57b9f5397f8f461d519ab6697e10837413d138582326f343d29a42"
+        },
+        "measurement": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/measurement.json",
+          "sha256": "b7cdc2e7de5ec12f74880097295fe5b1c39bccda2b22219926cf136989f57a90"
+        },
+        "capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/capture.json",
+          "sha256": "a95239742b34ce4d4279d38355e9d22236c6e368b5f5418463c8f40e9ee8dd8d"
+        },
+        "prompt": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free-case.json",
+          "sha256": "6e4e5aea03e2cb8a572714c79cc00d5a477794c05909ee2debc402e1c947b754"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/raw/discovery-05-channel-h1/result.json",
+          "sha256": "5deca1e5b0e0ec9fd75c90525a35a34665accbdb4747e12fbee15ddb2ff30f2d"
+        }
+      },
+      "dev": {
+        "member": "discovery-10-channel-h1",
+        "declaration": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/declaration.json",
+          "sha256": "851f86d2c1a115a6f83d189f375519ad8195198c976fe23e96cc1f2960c15081"
+        },
+        "measurement": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/measurement.json",
+          "sha256": "d590b633f260e40b20683bd52e0255c50296832629506f8e7fafcf494390ca30"
+        },
+        "capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/capture.json",
+          "sha256": "ff45f544a6ddffc34e177d68a4d6c6f34f7bc14572984b3b9c0f7ce245872e45"
+        },
+        "prompt": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/cases.json",
+          "sha256": "4cf2d67b94d656bba4b551c604d0488c62679731ee6b8b76e656f7314f8b992b"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/checkpoint175-discovery-10-channel-h1/native/raw/discovery-10-channel-h1/result.json",
+          "sha256": "56a746f95fc97ac46dd912e24d201614b9599bd1b3b0b859abde747ea4e24060"
+        }
+      }
+    },
+    "both_diagonal_decision_hashes_equal": true,
+    "both_diagonal_complete_histories_equal": true,
+    "prediction_vs_result": {
+      "prediction": "If naturally preceding framing is sufficient in both directions on these two cases, each crossed frame reverses the receiving case\u2019s free sign. A one-way flip or a margin shift without reversal would show a background-dependent or weaker effect.",
+      "choices": {
+        "fit__fit": {
+          "choice": " +",
+          "token": 900,
+          "plus": 22.77086639404297,
+          "minus": 16.739858627319336,
+          "margin": 6.031007766723633,
+          "logits_sha256": "ea8895bd901525615a307f818dc77c46186517c830eaca185a6ee65232b03b23"
+        },
+        "dev__fit": {
+          "choice": " +",
+          "token": 900,
+          "plus": 21.911239624023438,
+          "minus": 15.869558334350586,
+          "margin": 6.041681289672852,
+          "logits_sha256": "0bd3d7647569cf43c8791b7c0045a1a2546fb37918c87754323fd13ddb6a6463"
+        },
+        "fit__dev": {
+          "choice": " -",
+          "token": 753,
+          "plus": 11.869349479675293,
+          "minus": 16.427753448486328,
+          "margin": -4.558403968811035,
+          "logits_sha256": "63dd7b5e0a9c7cb1bd13aae9c5bb621b7261eee622b0cccf5200cdff4add6c72"
+        },
+        "dev__dev": {
+          "choice": " -",
+          "token": 753,
+          "plus": 13.06786060333252,
+          "minus": 17.74884796142578,
+          "margin": -4.680987358093262,
+          "logits_sha256": "da3f6b6f110f9e250fcf252cf56ee2c9092d0b622b28cd3bccb8c95762b826c4"
+        }
+      }
+    },
+    "failures_only": "All four conditions and full unforced continuations retained.",
+    "what_this_changes": "Tests the two observed contexts as a bundle on two questions at frozen175; inspect signed computation separately in retained answers."
+  }
+}

@@ -1,0 +1,113 @@
+<body>
+
+<h1>How the Trace-Derived Edit Works:<br>An Internal Guide to the Method, Step by Step</h1>
+<div class="authors">Marcos Damasceno</div>
+<div class="affil">Torad Labs</div>
+<div class="draft">Internal guide · not for publication</div>
+
+<div class="box note"><p><b>What this is.</b> A guide for understanding exactly what the experiment does: how the
+data is captured, what a trace is as numbers, how the target is defined, how the place and size of each weight change
+are chosen, how each change is checked, and what the first round-two edits actually did. It explains the method; it is
+not the paper. Every number comes from the run records, and the record behind each one is named in Section&nbsp;11.
+Section&nbsp;10 is a set of questions you could be asked about this work, with short answers.</p></div>
+
+<h2>1&nbsp;&nbsp;The idea in one page</h2>
+
+<p>Your starting point is a theory about weights. A weight does not hold a fact or a skill by itself. Weights mostly act
+like the faders on a mixing desk: they decide how strongly each part of the incoming signal is passed on and where it
+goes. A capability is then a <em>pattern of routing</em>, a recognisable way information moves through many weights
+when the model does a certain kind of work. If that is true, you should be able to see the pattern by recording how the
+signal moves, compare it between answers where the model gets something right and answers where it gets it wrong, and
+compute the weight change that moves the wrong routing toward the right one.</p>
+
+<p>The experiment makes that concrete with one model and one mistake. Gemma&nbsp;4 E2B solves an energy problem: an
+object starts moving, goes down a slope, loses some energy on a rough patch, then climbs. It must report the
+<em>available energy</em>, the <em>required energy</em>, and whether it makes it. A common mistake is to add the earlier
+descent to the final climb: for a 3&nbsp;m climb after a 1&nbsp;m descent it computes the required energy for 4&nbsp;m.
+We call this error <code>final_climb_includes_descent</code>.</p>
+
+<p>The work has four parts, and the rest of this guide follows them in order:</p>
+<ol>
+<li><b>Record</b> what the model computes, token by token, without changing it (Section&nbsp;3).</li>
+<li><b>Describe</b> each computation as a trace: how the internal signal turns at every step (Section&nbsp;4).</li>
+<li><b>Aim</b>: define the gap between failing traces and successful ones, find which weights can close it, and solve
+for the change (Sections&nbsp;5 to 7).</li>
+<li><b>Check</b> the stored change, first on the trace and then on the answers the model actually writes
+(Sections&nbsp;8 and 9).</li>
+</ol>
+
+<h2>2&nbsp;&nbsp;The model as a pipe of small changes</h2>
+
+<p>Each token the model reads or writes becomes a list of 1,536 numbers, called the <em>residual stream</em> for that
+token. Think of it as a running summary that every layer reads and then adds to. Gemma&nbsp;4 E2B has 35 layers. Each
+layer adds three things to the stream, one after another (Figure&nbsp;1):</p>
+<ul>
+<li><b>Attention.</b> The layer looks back at earlier tokens and pulls in information from them. To make that cheap, it
+keeps a <em>cache</em>: for every earlier token it stores a key (what that token offers) and a value (what it carries).
+The current token's query is matched against the keys, and the matching values are blended. The result is added to the
+stream. This is <em>merge&nbsp;1</em>.</li>
+<li><b>Feed-forward.</b> A per-token calculation (gate, up and down projections, joined by a GeGLU activation) that
+transforms what the stream now contains. Its result is added: <em>merge&nbsp;2</em>.</li>
+<li><b>Per-layer embedding.</b> A smaller branch specific to Gemma that adds a token-dependent correction:
+<em>merge&nbsp;3</em>.</li>
+</ul>
+
+<p>So for each token there are 35&nbsp;×&nbsp;3&nbsp;=&nbsp;105 merge points. Before each branch, the stream is
+normalised (RMS norm: divided by its typical size), and after each branch the result is normalised again and scaled by
+learned weights. That normalisation matters later: what the network mostly reads is the stream's <em>direction</em>,
+not its raw size.</p>
+
+<p>One detail of this model became important. Layers 15 to 34 do not keep their own caches. They reuse the caches
+written by layers 13 and 14. Layer&nbsp;14's keys and values are read by five layers: 14, 19, 24, 29 and 34.</p>
+
+<figure><img src="figures/fig1-layer.png" style="width:96%">
+<figcaption><b>Figure 1.</b> One layer of Gemma&nbsp;4 E2B. The stream runs left to right; three branches are added at
+the '+' points, which the code calls <code>attn_out</code>, <code>pe_in</code> and an unnamed addition we label
+<code>pe_out</code>. The first round-two edits changed weights in two of these branches.</figcaption></figure>
+
+<h2>3&nbsp;&nbsp;How the data is captured</h2>
+
+<h3>3.1&nbsp;&nbsp;What the engine does</h3>
+
+<p>The model runs in llama.cpp, a C++ inference engine. For every token it builds a <em>graph</em>: a list of about
+1,500 small operations (matrix multiplications, normalisations, additions, attention) with each operation's inputs
+wired to earlier outputs. The engine then runs the graph on the GPU. llama.cpp lets a program register a
+<em>callback</em>: before any operation runs, the engine asks "do you want to see this one?", and if the answer is yes,
+it stops after that operation so the program can copy its result off the GPU.</p>
+
+<p>Our recorder is that callback. It never changes a value. To prove it, every recording is checked against an ordinary
+run of the same question: every generated token must be identical, and so must a fingerprint (a SHA-256 hash) of the
+full list of 262,144 vocabulary scores at every step. If a single score differed anywhere, the hash would differ.</p>
+
+<h3>3.2&nbsp;&nbsp;Three recorders, from complete to fast</h3>
+
+<p><b>The full recorder</b> says yes to every operation. For each one it copies every input before the operation and
+its output after, and links each input to the operation that produced it, including reads from the cache. This gives a
+complete wiring diagram of the computation: one 479-token answer produced 724,064 recorded operations and 9.3&nbsp;GB of
+values. It is also slow, about 375 seconds per answer, because it pauses the GPU around 1,500 times per token.</p>
+
+<p><b>The selected-position recorder</b> uses the full recorder only at a few chosen tokens and lets everything else run
+normally. That is how the construction probes work (Section&nbsp;8).</p>
+
+<p><b>The stream recorder</b> keeps only what the trace analysis uses, at every token: the incoming stream, each branch's
+contribution and the result at all 105 merges (247 tensors per token, outputs only, no pauses for inputs). A wider mode
+also keeps the inputs of every weight matrix plus the attention queries, keys and values, which is enough to solve for a
+weight change anywhere and to rebuild attention offline. It takes about 15 seconds per answer, close to ordinary
+generation (Figure&nbsp;3). Its values were checked bit for bit against the full recorder: 55,081 tensors in one mode and
+100,796 in the other on GPU0, and 97,632 on GPU1, with zero differences.</p>
+
+<figure><img src="figures/fig3-recorders.png" style="width:80%">
+<figcaption><b>Figure 3.</b> Time to record one answer. The stream recorder made recapturing all 45 answers take
+minutes instead of hours. (Figure&nbsp;2 is in Section&nbsp;4.)</figcaption></figure>
+
+<p>An analogy: the full recorder is a flight data recorder that logs every switch in the cockpit. The stream recorder
+is a dashcam pointed at the road. For most questions about where the plane went, the dashcam is enough, and when it is
+not, the flight recorder is still there for the few moments that matter.</p>
+
+<h3>3.3&nbsp;&nbsp;Which answers were recorded</h3>
+
+<p>Only answers the model wrote itself. An earlier attempt fed the model our corrected answer and recorded that; it was
+excluded, because a supplied answer changes the history you are trying to observe. Greedy decoding (always taking the top
+token) makes every answer exactly repeatable. From 283 screened questions, 45 were usable: 18 that made the target error
+and 27 that solved the problem correctly, each on its assigned GPU. The 40 reserved questions were fixed before any of
+this and have not been read.</p>

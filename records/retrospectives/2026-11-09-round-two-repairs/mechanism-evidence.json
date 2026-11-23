@@ -1,0 +1,4095 @@
+{
+  "scope": "First shared-history branch in all 40 saved natural evaluations; descriptive observation, not an internal causal attribution.",
+  "source_snapshot": "67559f4a2fc2b61eda99200b185d98e91d44f2ff",
+  "comparison_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-failure-scores.json",
+  "rows": [
+    {
+      "id": "fresh-00-h2",
+      "gpu": 0,
+      "outcome": "repair",
+      "first_token_difference": 18,
+      "context": "Here is the calculation to determine if the block reaches the destination.\n\n**Initial State (",
+      "original_next": "Point A):**\nInitial Kinetic Energy: $KE_A = \\frac{1}{2} m v_0",
+      "edited_next": "Start of Descent):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_",
+      "original_margin_new_vs_old": -0.14653968811035156,
+      "edited_margin_new_vs_old": 1.8884572982788086,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-00-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-00-h2/result.json"
+    },
+    {
+      "id": "fresh-01-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) =",
+      "edited_next": "**Available energy** = $2 \\times 10 = 20 \\, \\text{J}$\n**Required",
+      "original_margin_new_vs_old": -3.1398391723632812,
+      "edited_margin_new_vs_old": 0.049839019775390625,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-01-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-01-h2/result.json"
+    },
+    {
+      "id": "fresh-02-h2",
+      "gpu": 0,
+      "outcome": "repair",
+      "first_token_difference": 18,
+      "context": "Here is the calculation to determine if the block reaches the destination.\n\n**Initial State (",
+      "original_next": "Point A):**\nInitial Kinetic Energy: $KE_A = \\frac{1}{2} m v_0",
+      "edited_next": "Start of Descent):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_",
+      "original_margin_new_vs_old": -0.2969541549682617,
+      "edited_margin_new_vs_old": 1.8554706573486328,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-02-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-02-h2/result.json"
+    },
+    {
+      "id": "fresh-03-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) =",
+      "edited_next": "**Available energy** = $2 \\times 100 - 10 = 190$ J\n",
+      "original_margin_new_vs_old": -3.062215805053711,
+      "edited_margin_new_vs_old": 0.13854598999023438,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-03-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-03-h2/result.json"
+    },
+    {
+      "id": "fresh-04-h2",
+      "gpu": 0,
+      "outcome": "regression",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.08811759948730469,
+      "edited_margin_new_vs_old": 0.5441169738769531,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-04-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-04-h2/result.json"
+    },
+    {
+      "id": "fresh-05-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 13,
+      "context": "Here is the compact numerical calculation:\n\n**Initial State (Start",
+      "original_next": "):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_i^2",
+      "edited_next": " of Descent):**\n$E_{initial} = \\frac{1}{2}mv_0^2 = \\",
+      "original_margin_new_vs_old": -0.7060337066650391,
+      "edited_margin_new_vs_old": 0.9801025390625,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-05-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-05-h2/result.json"
+    },
+    {
+      "id": "fresh-06-h2",
+      "gpu": 0,
+      "outcome": "repair",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.10823631286621094,
+      "edited_margin_new_vs_old": 0.5856246948242188,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-06-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-06-h2/result.json"
+    },
+    {
+      "id": "fresh-07-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 9,
+      "context": "Here is the compact numerical calculation:\n\n**",
+      "original_next": "Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v",
+      "edited_next": "Available energy** = $3 \\times (7^2/2) - 13 = 73.5",
+      "original_margin_new_vs_old": -5.109806060791016,
+      "edited_margin_new_vs_old": 0.06038093566894531,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-07-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-07-h2/result.json"
+    },
+    {
+      "id": "fresh-08-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.05784416198730469,
+      "edited_margin_new_vs_old": 0.55499267578125,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-08-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-08-h2/result.json"
+    },
+    {
+      "id": "fresh-09-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 13,
+      "context": "Here is the compact numerical calculation:\n\n**Initial State (Start",
+      "original_next": "):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_i^2",
+      "edited_next": " of Descent):**\n$E_{initial} = \\frac{1}{2}mv_0^2 = \\",
+      "original_margin_new_vs_old": -0.7098598480224609,
+      "edited_margin_new_vs_old": 0.8349018096923828,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-09-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-09-h2/result.json"
+    },
+    {
+      "id": "fresh-10-h2",
+      "gpu": 0,
+      "outcome": "repair",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.03198814392089844,
+      "edited_margin_new_vs_old": 0.6031684875488281,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-10-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-10-h2/result.json"
+    },
+    {
+      "id": "fresh-11-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 9,
+      "context": "Here is the compact numerical calculation:\n\n**",
+      "original_next": "Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v",
+      "edited_next": "Available energy** = $0.5 \\times (4 \\text{ kg}) \\times (7 \\text{ m",
+      "original_margin_new_vs_old": -5.15750789642334,
+      "edited_margin_new_vs_old": 0.022918701171875,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-11-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-11-h2/result.json"
+    },
+    {
+      "id": "fresh-12-h2",
+      "gpu": 0,
+      "outcome": "regression",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.24004554748535156,
+      "edited_margin_new_vs_old": 0.4595527648925781,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-12-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-12-h2/result.json"
+    },
+    {
+      "id": "fresh-13-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 13,
+      "context": "Here is the compact numerical calculation:\n\n**Initial State (Start",
+      "original_next": "):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_i^2",
+      "edited_next": " of Descent):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_i",
+      "original_margin_new_vs_old": -0.6048145294189453,
+      "edited_margin_new_vs_old": 0.8588294982910156,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-13-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-13-h2/result.json"
+    },
+    {
+      "id": "fresh-14-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.22944068908691406,
+      "edited_margin_new_vs_old": 0.4523353576660156,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-14-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-14-h2/result.json"
+    },
+    {
+      "id": "fresh-15-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 9,
+      "context": "Here is the compact numerical calculation:\n\n**",
+      "original_next": "Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v",
+      "edited_next": "Available energy** = $0.5 \\times (7^2) - 0 - 19 = 2",
+      "original_margin_new_vs_old": -4.867330551147461,
+      "edited_margin_new_vs_old": 0.03467750549316406,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-15-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-15-h2/result.json"
+    },
+    {
+      "id": "fresh-16-h2",
+      "gpu": 0,
+      "outcome": "repair",
+      "first_token_difference": 31,
+      "context": "Here is the calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($KE_i",
+      "original_next": "$):\n$$KE_i = \\frac{1}{2} m v_i^2 = \\frac{",
+      "edited_next": "$) = $\\frac{1}{2} m v_i^2 = \\frac{1}{2} (6",
+      "original_margin_new_vs_old": -0.27410125732421875,
+      "edited_margin_new_vs_old": 0.24376869201660156,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-16-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-16-h2/result.json"
+    },
+    {
+      "id": "fresh-17-h2",
+      "gpu": 0,
+      "outcome": "repair",
+      "first_token_difference": 13,
+      "context": "Here is the compact numerical calculation:\n\n**Initial State (Start",
+      "original_next": "):**\nInitial Kinetic Energy ($KE_i$): $\\frac{1}{2}mv_i^2 =",
+      "edited_next": " of Descent):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_i",
+      "original_margin_new_vs_old": -0.4919261932373047,
+      "edited_margin_new_vs_old": 0.9318561553955078,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-17-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-17-h2/result.json"
+    },
+    {
+      "id": "fresh-18-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.0015430450439453125,
+      "edited_margin_new_vs_old": 0.4966926574707031,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-18-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-18-h2/result.json"
+    },
+    {
+      "id": "fresh-19-h2",
+      "gpu": 0,
+      "outcome": "stays_wrong",
+      "first_token_difference": 9,
+      "context": "Here is the compact numerical calculation:\n\n**",
+      "original_next": "Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v",
+      "edited_next": "Available energy** = $0.5 \\times (6 \\text{ kg}) \\times (7 \\text{ m",
+      "original_margin_new_vs_old": -5.11733341217041,
+      "edited_margin_new_vs_old": 0.0058040618896484375,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-19-h2/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-19-h2/result.json"
+    },
+    {
+      "id": "fresh-00-h4",
+      "gpu": 1,
+      "outcome": "repair",
+      "first_token_difference": 18,
+      "context": "Here is the calculation to determine if the block reaches the destination.\n\n**Initial State (",
+      "original_next": "Point A):**\nInitial Kinetic Energy ($KE_A$):\n$$KE_A = \\frac{1}{",
+      "edited_next": "Start of Descent):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_",
+      "original_margin_new_vs_old": -0.05698108673095703,
+      "edited_margin_new_vs_old": 1.8637304306030273,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-00-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-00-h4/result.json"
+    },
+    {
+      "id": "fresh-01-h4",
+      "gpu": 1,
+      "outcome": "regression",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) =",
+      "edited_next": "**Available energy** = $125$ J\n**Required energy** = $125$ J\n**",
+      "original_margin_new_vs_old": -2.936655044555664,
+      "edited_margin_new_vs_old": 0.10133934020996094,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-01-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-01-h4/result.json"
+    },
+    {
+      "id": "fresh-02-h4",
+      "gpu": 1,
+      "outcome": "repair",
+      "first_token_difference": 18,
+      "context": "Here is the calculation to determine if the block reaches the destination.\n\n**Initial State (",
+      "original_next": "Point A):**\nInitial Kinetic Energy: $KE_A = \\frac{1}{2} m v_0",
+      "edited_next": "Start of Descent):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_",
+      "original_margin_new_vs_old": -0.1836528778076172,
+      "edited_margin_new_vs_old": 1.8633441925048828,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-02-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-02-h4/result.json"
+    },
+    {
+      "id": "fresh-03-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Energy ($E_i$) = $\\",
+      "edited_next": "**Available energy** = $2 \\times 100 - 10 = 190$ J\n",
+      "original_margin_new_vs_old": -2.7937774658203125,
+      "edited_margin_new_vs_old": 0.19864463806152344,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-03-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-03-h4/result.json"
+    },
+    {
+      "id": "fresh-04-h4",
+      "gpu": 1,
+      "outcome": "repair",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.09889411926269531,
+      "edited_margin_new_vs_old": 0.6031951904296875,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-04-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-04-h4/result.json"
+    },
+    {
+      "id": "fresh-05-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) =",
+      "edited_next": "**Available energy** = $3 \\times 5^2 - 13 = 75 - 13",
+      "original_margin_new_vs_old": -3.036863327026367,
+      "edited_margin_new_vs_old": 0.028087615966796875,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-05-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-05-h4/result.json"
+    },
+    {
+      "id": "fresh-06-h4",
+      "gpu": 1,
+      "outcome": "stays_correct",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.10013008117675781,
+      "edited_margin_new_vs_old": 0.5935707092285156,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-06-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-06-h4/result.json"
+    },
+    {
+      "id": "fresh-07-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 9,
+      "context": "Here is the compact numerical calculation:\n\n**",
+      "original_next": "Initial State (Start):**\nInitial Energy ($E_i$) = $\\frac{1}{2}mv_i",
+      "edited_next": "Available energy** = $3 \\times (7^2/2) - 13 = 73.5",
+      "original_margin_new_vs_old": -4.454769134521484,
+      "edited_margin_new_vs_old": 0.28778839111328125,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-07-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-07-h4/result.json"
+    },
+    {
+      "id": "fresh-08-h4",
+      "gpu": 1,
+      "outcome": "regression",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.016500473022460938,
+      "edited_margin_new_vs_old": 0.6832866668701172,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-08-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-08-h4/result.json"
+    },
+    {
+      "id": "fresh-09-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Kinetic Energy ($KE_i$):",
+      "edited_next": "**Available energy** = $4.9 \\text{ J}$\n**Required energy** = $16.0",
+      "original_margin_new_vs_old": -3.1247100830078125,
+      "edited_margin_new_vs_old": 0.014272689819335938,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-09-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-09-h4/result.json"
+    },
+    {
+      "id": "fresh-10-h4",
+      "gpu": 1,
+      "outcome": "regression",
+      "first_token_difference": 18,
+      "context": "Here is the calculation to determine if the block reaches the destination.\n\n**Initial State (",
+      "original_next": "Point A):**\nInitial Kinetic Energy: $KE_A = \\frac{1}{2} m v_0",
+      "edited_next": "Start of Descent):**\nInitial Kinetic Energy ($KE_i$) = $\\frac{1}{2} m v_",
+      "original_margin_new_vs_old": -0.06506061553955078,
+      "edited_margin_new_vs_old": 1.6676406860351562,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-10-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-10-h4/result.json"
+    },
+    {
+      "id": "fresh-11-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Energy ($E_i$) = $\\",
+      "edited_next": "**Available energy** = $4 \\times 7^2 - 0 - 16 = 196",
+      "original_margin_new_vs_old": -3.0101852416992188,
+      "edited_margin_new_vs_old": 0.007053375244140625,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-11-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-11-h4/result.json"
+    },
+    {
+      "id": "fresh-12-h4",
+      "gpu": 1,
+      "outcome": "stays_correct",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.2219371795654297,
+      "edited_margin_new_vs_old": 0.5617637634277344,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-12-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-12-h4/result.json"
+    },
+    {
+      "id": "fresh-13-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) =",
+      "edited_next": "**Available energy** = $5 \\times 10^2 = 500 \\, \\text{J}$",
+      "original_margin_new_vs_old": -3.2416954040527344,
+      "edited_margin_new_vs_old": 0.059680938720703125,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-13-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-13-h4/result.json"
+    },
+    {
+      "id": "fresh-14-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.1824016571044922,
+      "edited_margin_new_vs_old": 0.5279426574707031,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-14-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-14-h4/result.json"
+    },
+    {
+      "id": "fresh-15-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 0,
+      "context": "",
+      "original_next": "Here is the compact numerical calculation:\n\n**Initial State (Start):**\nInitial Kinetic Energy ($KE_i$) =",
+      "edited_next": "**Available energy** = $5 \\times 10^2 = 500 \\, \\text{J}$",
+      "original_margin_new_vs_old": -3.079326629638672,
+      "edited_margin_new_vs_old": 0.09257125854492188,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-15-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-15-h4/result.json"
+    },
+    {
+      "id": "fresh-16-h4",
+      "gpu": 1,
+      "outcome": "stays_correct",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.02202606201171875,
+      "edited_margin_new_vs_old": 0.6604461669921875,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-16-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-16-h4/result.json"
+    },
+    {
+      "id": "fresh-17-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 9,
+      "context": "Here is the compact numerical calculation:\n\n**",
+      "original_next": "Initial State (Start):**\nInitial Energy ($E_i$) = $\\frac{1}{2}mv_i",
+      "edited_next": "Available energy** = $0.5 \\times (6 \\text{ kg}) \\times (5 \\text{ m",
+      "original_margin_new_vs_old": -4.714506149291992,
+      "edited_margin_new_vs_old": 0.031032562255859375,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-17-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-17-h4/result.json"
+    },
+    {
+      "id": "fresh-18-h4",
+      "gpu": 1,
+      "outcome": "regression",
+      "first_token_difference": 3,
+      "context": "Here is the",
+      "original_next": " compact numerical calculation:\n\n**Initial State (Bottom of descent):**\nInitial Kinetic Energy ($KE_i$) = $\\",
+      "edited_next": " calculation to determine if the block reaches the destination.\n\n**Initial State (Start of Descent):**\nInitial Kinetic Energy ($",
+      "original_margin_new_vs_old": -0.0248565673828125,
+      "edited_margin_new_vs_old": 0.5850410461425781,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-18-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-18-h4/result.json"
+    },
+    {
+      "id": "fresh-19-h4",
+      "gpu": 1,
+      "outcome": "stays_wrong",
+      "first_token_difference": 9,
+      "context": "Here is the compact numerical calculation:\n\n**",
+      "original_next": "Initial State (Start):**\nInitial Energy ($E_i$) = $\\frac{1}{2}mv_i",
+      "edited_next": "Available energy** = $0.5 \\times (6 \\text{ kg}) \\times (7 \\text{ m",
+      "original_margin_new_vs_old": -4.588650703430176,
+      "edited_margin_new_vs_old": 0.1911792755126953,
+      "edited_captures": 0,
+      "original_captures": 0,
+      "first_score_difference": 0,
+      "original_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-19-h4/result.json",
+      "edited_source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-19-h4/result.json"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-00-h2/result.json",
+      "sha256": "8fb57a8a707e9c4bfc7066d35171609f5edbf75770ae691a6e8ea87612f13fd3",
+      "bytes": 907803,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-00-h2/result.json",
+      "sha256": "d5ebc831c0951993c80aebff4933e249e1493a908baef575c832bdbd297e7bd6",
+      "bytes": 886120,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-01-h2/result.json",
+      "sha256": "13e08d83eaf89e841e2cf9be22fe2cda88e5d30779ed19767c3a3d6b49d822ac",
+      "bytes": 1201332,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-01-h2/result.json",
+      "sha256": "509aa71ed365cd75b5097ba62bcd9d290149ed617327608ca192e33759d49339",
+      "bytes": 81848,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-02-h2/result.json",
+      "sha256": "e1957e6ef8d50828ca1175c29544427d646450e2af98ff5680b25f53f9b46336",
+      "bytes": 922929,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-02-h2/result.json",
+      "sha256": "5814a290df6fe69cb5b9373c92f892bb2451ba6b520642cbeff5831d1e0bedcb",
+      "bytes": 1016224,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-03-h2/result.json",
+      "sha256": "15ccb2d2d538253e4671658729bab794ca1a2b2fb08579fb5db54f8b5ae1fef0",
+      "bytes": 1059979,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-03-h2/result.json",
+      "sha256": "6e7e80928e059f8b11b5d3a15e66b949183f809338505fbf6ba32911e7f93e47",
+      "bytes": 81472,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-04-h2/result.json",
+      "sha256": "9993b6a4c15dc2c5f0fdf47499d5969a5667b773eabef24a24c20dd1d6cf3214",
+      "bytes": 862539,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-04-h2/result.json",
+      "sha256": "aa158abf73208533f61a0187fb2b3eb5889b70320040c9e52f665b1317f3b87c",
+      "bytes": 1201550,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-05-h2/result.json",
+      "sha256": "e96c8011be8a4b4e37e1227bf98648fcd17022476abee9a567171e93f56f2d4b",
+      "bytes": 1200610,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-05-h2/result.json",
+      "sha256": "69246f75bde305939e9dc5ac85f1e6367f9bb88ce59c3fee8a2403697843f2e5",
+      "bytes": 861841,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-06-h2/result.json",
+      "sha256": "b4e34707083e23f21b4afd9de3c8707af45788dd2f67f8fc16fb6cb37f27d656",
+      "bytes": 1096516,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-06-h2/result.json",
+      "sha256": "667a772a72de5c3aa8bfc357811dfef6c14a93a819768628550a3e48e91a7663",
+      "bytes": 716968,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-07-h2/result.json",
+      "sha256": "23ac8aee77d868d2620b8202566ed714520503e2b4fbbc1bac4b2c2cf0ca9cdb",
+      "bytes": 803735,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-07-h2/result.json",
+      "sha256": "56f3cfd30d497e1b19145e5cfe0134509c033f952b14ed47f3bff5c0e02529c1",
+      "bytes": 133743,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-08-h2/result.json",
+      "sha256": "b06270572601bb5ce985796b89615da09d89371a9dfa759507396616a82c01a7",
+      "bytes": 646178,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-08-h2/result.json",
+      "sha256": "bf492e5f4bad83c10ea969cf5f837d9f2989617fd189e865b989b3ba777ca71e",
+      "bytes": 1117510,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-09-h2/result.json",
+      "sha256": "2a5d28cdd07cebf0b5ff66fe10ae775f205a6f4582c428bfac7739b115848452",
+      "bytes": 1200700,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-09-h2/result.json",
+      "sha256": "31d3586425e571d82d8e740cf1ebde3578a0fcef4e37a1345baeca61d55c65b4",
+      "bytes": 1203721,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-10-h2/result.json",
+      "sha256": "a0ae601dd17b7ae00f104de6f146e0ee36c4c5d10cf7ab56a62aeeefc565c022",
+      "bytes": 735790,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-10-h2/result.json",
+      "sha256": "d962c1c3536759ccccf73520a06333bae25f00e912eceafedf61fd8f4f7b0d28",
+      "bytes": 829185,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-11-h2/result.json",
+      "sha256": "a44bf9dced905cfdb8df2fb6a901b452ebcffde12a5e20f47cb8f5e152a45c23",
+      "bytes": 767844,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-11-h2/result.json",
+      "sha256": "da303c24951f25bd75c933eeae18ef622ff491d10bdf2bffe01db1a51d30f3a5",
+      "bytes": 1194148,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-12-h2/result.json",
+      "sha256": "d62143109617da7e5a03814963df9ba2303d0cdc93f70afbbae65beb375c695b",
+      "bytes": 801240,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-12-h2/result.json",
+      "sha256": "27a4777f7bf44d25bddfbfe1d6bf22afe74217d144d03850b13b58ba2519d6d7",
+      "bytes": 725061,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-13-h2/result.json",
+      "sha256": "53a11bcd2b6e0b3104a5aa247585862c471702b409ef36b7e1f4dea13a8d9afa",
+      "bytes": 1002201,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-13-h2/result.json",
+      "sha256": "0157e6839e84bb82c3856918d107f6235a605b983a4c3fbe2bae72a421f7a36c",
+      "bytes": 1134045,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-14-h2/result.json",
+      "sha256": "1ab5272af8556c4176d367bd9f09c35b7d3a39679edec3719dec78f5e7119cab",
+      "bytes": 777709,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-14-h2/result.json",
+      "sha256": "d58eb3a7ccf74c73c1906f95c0470ebf4421cbdc9c09738f9a9bb4bbd028c556",
+      "bytes": 1148693,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-15-h2/result.json",
+      "sha256": "d1099e4e7b0e09efd76bfdf55cdf6bdcb270179b305032ebdac7c73f03d29483",
+      "bytes": 982649,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-15-h2/result.json",
+      "sha256": "64d02b790fdd663f17cc0ce75b9af8302f43374680abb683deda44266723d296",
+      "bytes": 138227,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-16-h2/result.json",
+      "sha256": "2a0216f91f13438f2fab65e23dbbce0c5995c0df7d76f9af0dc19ec753357c1b",
+      "bytes": 898300,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-16-h2/result.json",
+      "sha256": "bd37ea2fe47c862a9cc478a3c2689825bacaae70a2f58669814cd010d2bce207",
+      "bytes": 810739,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-17-h2/result.json",
+      "sha256": "76cb653d06c7226a03a11c89c58f3c8cb598c09be974c1d06ec178d81d7fa7f7",
+      "bytes": 1022921,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-17-h2/result.json",
+      "sha256": "830b4e379317884db2b4c845d1b23cb2fe3e03a21e7fce37328cd033ee3e9939",
+      "bytes": 731284,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-18-h2/result.json",
+      "sha256": "6747f6fe77e3706cb56c85bc88d0bd8b4d40431471beec8a4c5a78ff211ad8f4",
+      "bytes": 687457,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-18-h2/result.json",
+      "sha256": "40adb11ffa8c46a3151d97fc051fcf22acfeb1ef0fd638a42bbe6644ec2f29c4",
+      "bytes": 890284,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu0/fresh-19-h2/result.json",
+      "sha256": "e5d0b03038f010839b5b8212bc1afb7b884a4744f672950acb50afe357eddafd",
+      "bytes": 955272,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu0/fresh-19-h2/result.json",
+      "sha256": "b3e3d36f34e3ca86872dd02e0354999515e558cb5b81b11b0be6e07cb1b234d4",
+      "bytes": 1193155,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-00-h4/result.json",
+      "sha256": "1da4df0e3a9492ee638eeb7b3a357167dbd7a79129b1d8b35592f2b5e8e5a4f9",
+      "bytes": 935842,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-00-h4/result.json",
+      "sha256": "9960788e4218ea20b9d07e6eb0f1b81ec9cef7871e65dfe61ebe671e58a5b2ce",
+      "bytes": 891517,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-01-h4/result.json",
+      "sha256": "68942aa914ade970dc0d650d143f0ecf065f57c605d06987104fd73bef2554e4",
+      "bytes": 1137191,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-01-h4/result.json",
+      "sha256": "e5b8b89951d69989cdcae01df38939402b469691dcf560898aa1b841938d8893",
+      "bytes": 48232,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-02-h4/result.json",
+      "sha256": "32bf6c81517bcbc9c48cecf6d73087fb598ad03fa2cc761412237ba38b2d0974",
+      "bytes": 977379,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-02-h4/result.json",
+      "sha256": "2adf92ada39288b0cf5392ce1076c025eeaeb344589b815a8b7dbb915433d9e9",
+      "bytes": 933445,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-03-h4/result.json",
+      "sha256": "19648a8cf779858d385bfab0c18d6db9ff374d69574316dbbe189dfd057c475d",
+      "bytes": 745220,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-03-h4/result.json",
+      "sha256": "b6924a68193fec6d858be00e6b34d3c87fe51c22c2585a608d3df5b12a09ee3c",
+      "bytes": 99621,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-04-h4/result.json",
+      "sha256": "a56512a113abc9a6612ac3c48e7b635b343479585ab800c152deab1c7c4f3664",
+      "bytes": 956360,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-04-h4/result.json",
+      "sha256": "b2fa66cd00dddafe37d26115a2e37f8e68036175a25b4fb289b1f44145fc600d",
+      "bytes": 993410,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-05-h4/result.json",
+      "sha256": "c8d686724c7b05cb19913d08c0ef59d11bc9d3d9adec775a9e9d11374b4979bd",
+      "bytes": 1200708,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-05-h4/result.json",
+      "sha256": "635959de944538ae8a00ccddadc2ccd99db7858ac630606bc77701c82a43abe8",
+      "bytes": 111840,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-06-h4/result.json",
+      "sha256": "92a9ef9955e2cbb31da830b921616106f8d33f8a9109cacafbe998cb9a8ad4d5",
+      "bytes": 1121713,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-06-h4/result.json",
+      "sha256": "ee44d3d87517f8fd4f0ff3a52715885e07fa10f07076fff525db151cde2042e6",
+      "bytes": 715030,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-07-h4/result.json",
+      "sha256": "86841a5e357e5fb513b25d13078a2dbac2f94443ba0a0317599094efcc38c6d4",
+      "bytes": 650726,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-07-h4/result.json",
+      "sha256": "eb5cb99396d975ce49e3896ed65c28312419a4096a86e590c781a3426f64cb70",
+      "bytes": 135195,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-08-h4/result.json",
+      "sha256": "51da8e35f42b719de190043a59514dff6c1feb038a37a31e4c8b2523398bf53a",
+      "bytes": 714062,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-08-h4/result.json",
+      "sha256": "d4864a342ad99296cfe2c49eb97a9c1109ee54fbba3c03f2fe03c9922e97e493",
+      "bytes": 1209010,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-09-h4/result.json",
+      "sha256": "eedef6d33998ffbd0e7c1570b865781eef2cdfc095f6dcdfad57566996b589cb",
+      "bytes": 1188498,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-09-h4/result.json",
+      "sha256": "0fbd3054a2ca515eaafd61009e5f1d2a6eb642036427c04b3be7a0f955bae868",
+      "bytes": 58883,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-10-h4/result.json",
+      "sha256": "88e1bdd7726d619fd0e0d6828b8291a38aad71e7f3bbaaa285fee4d322fa33ea",
+      "bytes": 1026784,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-10-h4/result.json",
+      "sha256": "7692fd8ee3c16c9b3beeaae90463baa9a87117da9db6445468bbd5bb9cf7462e",
+      "bytes": 727342,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-11-h4/result.json",
+      "sha256": "37bd69c2ec202f230bb3c188613b5674d3d0aa814488004cd965eba61dd060c6",
+      "bytes": 809467,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-11-h4/result.json",
+      "sha256": "d69a988545078b1ec0bae61ae470ee2a905f0bc9bff30f9b21bfc0137db62c45",
+      "bytes": 119337,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-12-h4/result.json",
+      "sha256": "2abe776b9af79c96261422778926219c7ffe853d7914badd88f7daacb91f97f2",
+      "bytes": 740662,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-12-h4/result.json",
+      "sha256": "2ab8e06c39d7c92268bb4858b4c0893355adcbb64b4c7a0aa8630d3499d1b1da",
+      "bytes": 843985,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-13-h4/result.json",
+      "sha256": "958956cff6ca68a7a387d982b5ebd83b0badf2c8f3878d0b852eb52182ac686a",
+      "bytes": 896915,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-13-h4/result.json",
+      "sha256": "ccbc335b6653a511d544d775bbb1a3495d6cd00328ba939e04964d6b11971d68",
+      "bytes": 86372,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-14-h4/result.json",
+      "sha256": "b2903b18c858c9089625d05d4a9519ce2da3b84085dba345f7eb92e9b0a59a3a",
+      "bytes": 789805,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-14-h4/result.json",
+      "sha256": "19c9711c9500e1f8a0c4dbc3d61ab7e49381c1e3089a48edca7c31f1acbf2e6e",
+      "bytes": 1198540,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-15-h4/result.json",
+      "sha256": "1f6acff873e4e874590c665686b17e8d5326469ab945604ec8de81afc60ae2c0",
+      "bytes": 913847,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-15-h4/result.json",
+      "sha256": "e3b2fe89002e4f0fd1e2e728ae78db1b9a6ed2e5c4253a5572f1a2a8169bd0a4",
+      "bytes": 130034,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-16-h4/result.json",
+      "sha256": "e07c565bc4b1ee922829827f2072b97e3a0bfa012164b12779c69402bd4f0329",
+      "bytes": 792099,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-16-h4/result.json",
+      "sha256": "f9a028cc1310a9e8304a31c1eb4e26d567131aeef1144780c300bdd0a6384f72",
+      "bytes": 797370,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-17-h4/result.json",
+      "sha256": "6f409697b814a1d90651a7d9535f2d0cbaf3c41a9413ae21e760d867311e5543",
+      "bytes": 1016211,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-17-h4/result.json",
+      "sha256": "1593c91c8a89ab2112770e5c5b45c3b3bbe5d7a4c766809921cd91d1a3ff0cf7",
+      "bytes": 1204187,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-18-h4/result.json",
+      "sha256": "67e5601ddbd3f8c7d79439577e6c8b0a8f02749085a403d00c28d89998631a93",
+      "bytes": 620914,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-18-h4/result.json",
+      "sha256": "57f1a07f3a125c9a411d9b186b49ff6dc5f0e3b99681ea091d878985165ff9b1",
+      "bytes": 1199159,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/coupled-construction/fresh-original-gpu1/fresh-19-h4/result.json",
+      "sha256": "61e380bc1c488a119d2f8675034667e5e8a6cb34ef4b7e093da429f9c9c4c4b2",
+      "bytes": 620111,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    },
+    {
+      "path": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-gpu1/fresh-19-h4/result.json",
+      "sha256": "6d00d419c331daa2d09bde81c8b622df57eba52595c19e0f21c5ae1fd3f688a3",
+      "bytes": 207337,
+      "mode": "plain",
+      "capture_events": 0,
+      "tensor_bytes": 0,
+      "teacher_token_count": 0,
+      "conditioned_continuation": false
+    }
+  ],
+  "measure_definition": {
+    "first_token_difference": "Zero-based generated-token index at which saved original and edited token IDs first differ. All earlier generated token IDs are identical; full prompts were already processed. This is not the first internal divergence or the first calculation.",
+    "first_score_difference": "First full-logit hash disagreement through the shared prefix. A hash mismatch does not quantify the effect or identify a cause.",
+    "margin": "Score of the edited chosen token minus score of the original chosen token at the first differing prediction, when both tokens are present in that run's saved top-eight scores.",
+    "outcome": "All three final requested fields correct, from evidence.json. Does not assert coherent explanation."
+  },
+  "first_branch_counts": [
+    {
+      "position": 0,
+      "questions": 9,
+      "outcomes": {
+        "stays_wrong": 8,
+        "regression": 1
+      }
+    },
+    {
+      "position": 3,
+      "questions": 14,
+      "outcomes": {
+        "regression": 4,
+        "repair": 3,
+        "stays_wrong": 4,
+        "stays_correct": 3
+      }
+    },
+    {
+      "position": 9,
+      "questions": 7,
+      "outcomes": {
+        "stays_wrong": 7
+      }
+    },
+    {
+      "position": 13,
+      "questions": 4,
+      "outcomes": {
+        "stays_wrong": 3,
+        "repair": 1
+      }
+    },
+    {
+      "position": 18,
+      "questions": 5,
+      "outcomes": {
+        "repair": 4,
+        "regression": 1
+      }
+    },
+    {
+      "position": 31,
+      "questions": 1,
+      "outcomes": {
+        "repair": 1
+      }
+    }
+  ],
+  "accounting_patterns": {
+    "definition": "Exact arithmetic matches on parsed final fields, not an automatic attribution of the model's procedure. Missing fields remain missing. Multiple expressions may coincide in principle; here descentGainJ is positive.",
+    "formulas": {
+      "climb_plus_descent": "original.required == expected.requiredJ + expected.descentGainJ",
+      "correct_available": "edited.available == expected.availableJ",
+      "subtract_descent": "edited.available == initialKineticJ - descentGainJ - lossJ",
+      "omit_descent": "edited.available == initialKineticJ - lossJ"
+    },
+    "arms": {
+      "F_existing": {
+        "source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/trace-construction-02/kv-only/failures-only-F.json",
+        "required_repairs": 19,
+        "counts": [
+          {
+            "original_required": "missing",
+            "edited_available": "correct_available",
+            "questions": 2
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "other_wrong_available",
+            "questions": 2
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "omit_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "correct_available",
+            "questions": 4
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "subtract_descent",
+            "questions": 4
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "omit_descent",
+            "questions": 3
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "other_wrong_available",
+            "questions": 2
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "correct_available",
+            "questions": 1
+          }
+        ],
+        "rows": [
+          {
+            "id": "bead-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 8,
+              "descentGainJ": 30,
+              "lossJ": 8,
+              "availableJ": 30,
+              "requiredJ": 40,
+              "marginJ": -10
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 30.0,
+              "required": 40.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "cart-base",
+            "expected": {
+              "answer": "YES",
+              "initialKineticJ": 36,
+              "descentGainJ": 40,
+              "lossJ": 16,
+              "availableJ": 60,
+              "requiredJ": 40,
+              "marginJ": 20
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 42.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "cart-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 36,
+              "descentGainJ": 40,
+              "lossJ": 16,
+              "availableJ": 60,
+              "requiredJ": 80,
+              "marginJ": -20
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 42.0,
+              "required": 80.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "coaster-paraphrase",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 150,
+              "marginJ": -25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 25.0,
+              "required": 150.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "coaster-paraphrase-changed",
+            "expected": {
+              "answer": "YES",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 100,
+              "marginJ": 25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 125.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "discovery-13-channel-h1",
+            "expected": {
+              "initialKineticJ": 32.0,
+              "descentGainJ": 80,
+              "lossJ": 17,
+              "availableJ": 95.0,
+              "requiredJ": 40,
+              "marginJ": 55.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 95.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 95.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "discovery-16-channel-h1",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 13,
+              "availableJ": 155.0,
+              "requiredJ": 40,
+              "marginJ": 115.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 155.0,
+              "required": 80.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 75.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "discovery-20-channel-h1",
+            "expected": {
+              "initialKineticJ": 90.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 125.0,
+              "requiredJ": 50,
+              "marginJ": 75.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 125.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 25.0,
+              "required": 50.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "discovery-22-channel-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 195.0,
+              "requiredJ": 50,
+              "marginJ": 145.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 195.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 145.0,
+              "required": 50.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "discovery-22-channel-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 195.0,
+              "requiredJ": 150,
+              "marginJ": 45.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 195.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 145.0,
+              "required": 150.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "expanded-027-h3",
+            "expected": {
+              "initialKineticJ": 24.0,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 30.0,
+              "requiredJ": 90,
+              "marginJ": -60.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 30.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 30.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-088-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 12,
+              "availableJ": 198.0,
+              "requiredJ": 150,
+              "marginJ": 48.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 198.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 198.0,
+              "required": 150.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-089-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 16,
+              "availableJ": 194.0,
+              "requiredJ": 50,
+              "marginJ": 144.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 194.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 44.0,
+              "required": 50.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "expanded-090-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 20,
+              "availableJ": 190.0,
+              "requiredJ": 150,
+              "marginJ": 40.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 190.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 140.0,
+              "required": 150.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "expanded-091-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 186.0,
+              "requiredJ": 50,
+              "marginJ": 136.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 186.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 36.0,
+              "required": 50.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "expanded-065-h3",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 16,
+              "availableJ": 152.0,
+              "requiredJ": 120,
+              "marginJ": 32.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 112.0,
+              "required": 80.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 152.0,
+              "required": 120.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-067-h3",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 24,
+              "availableJ": 144.0,
+              "requiredJ": 120,
+              "marginJ": 24.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 144.0,
+              "required": 160.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 144.0,
+              "required": 120.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-083-h3",
+            "expected": {
+              "initialKineticJ": 90.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 116.0,
+              "requiredJ": 150,
+              "marginJ": -34.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 116.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 16.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-088-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 12,
+              "availableJ": 198.0,
+              "requiredJ": 50,
+              "marginJ": 148.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 198.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 98.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          }
+        ]
+      },
+      "K_existing": {
+        "source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/trace-construction-02/kv-only/failures-only-K.json",
+        "required_repairs": 9,
+        "counts": [
+          {
+            "original_required": "missing",
+            "edited_available": "correct_available",
+            "questions": 2
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "missing",
+            "questions": 1
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "other_wrong_available",
+            "questions": 1
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "omit_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "correct_available",
+            "questions": 4
+          }
+        ],
+        "rows": [
+          {
+            "id": "bead-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 8,
+              "descentGainJ": 30,
+              "lossJ": 8,
+              "availableJ": 30,
+              "requiredJ": 40,
+              "marginJ": -10
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 30.0,
+              "required": 40.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "block-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 54,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 60,
+              "requiredJ": 90,
+              "marginJ": -30
+            },
+            "original": {
+              "available": 60.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": null,
+              "required": 90.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "missing"
+          },
+          {
+            "id": "cart-base",
+            "expected": {
+              "answer": "YES",
+              "initialKineticJ": 36,
+              "descentGainJ": 40,
+              "lossJ": 16,
+              "availableJ": 60,
+              "requiredJ": 40,
+              "marginJ": 20
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 60.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "coaster-base",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 150,
+              "marginJ": -25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 0.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "coaster-paraphrase-changed",
+            "expected": {
+              "answer": "YES",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 100,
+              "marginJ": 25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 25.0,
+              "required": 100.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "discovery-20-channel-h1",
+            "expected": {
+              "initialKineticJ": 90.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 125.0,
+              "requiredJ": 50,
+              "marginJ": 75.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 125.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 125.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "discovery-22-channel-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 195.0,
+              "requiredJ": 50,
+              "marginJ": 145.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 195.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 195.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-027-h3",
+            "expected": {
+              "initialKineticJ": 24.0,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 30.0,
+              "requiredJ": 90,
+              "marginJ": -60.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 30.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 30.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-091-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 186.0,
+              "requiredJ": 50,
+              "marginJ": 136.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 186.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 186.0,
+              "required": 50.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          }
+        ]
+      },
+      "FK_existing": {
+        "source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/trace-construction-02/kv-only/failures-only-FK.json",
+        "required_repairs": 14,
+        "counts": [
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "subtract_descent",
+            "questions": 5
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "correct_available",
+            "questions": 2
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "omit_descent",
+            "questions": 2
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "other_wrong_available",
+            "questions": 1
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "correct_available",
+            "questions": 2
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "subtract_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "subtract_descent",
+            "questions": 1
+          }
+        ],
+        "rows": [
+          {
+            "id": "block-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 54,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 60,
+              "requiredJ": 90,
+              "marginJ": -30
+            },
+            "original": {
+              "available": 60.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 0.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "coaster-paraphrase",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 150,
+              "marginJ": -25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 125.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "coaster-paraphrase-changed",
+            "expected": {
+              "answer": "YES",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 100,
+              "marginJ": 25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 125.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "discovery-13-channel-h1",
+            "expected": {
+              "initialKineticJ": 32.0,
+              "descentGainJ": 80,
+              "lossJ": 17,
+              "availableJ": 95.0,
+              "requiredJ": 40,
+              "marginJ": 55.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 95.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 15.0,
+              "required": 40.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "discovery-16-channel-h1",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 13,
+              "availableJ": 155.0,
+              "requiredJ": 40,
+              "marginJ": 115.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 155.0,
+              "required": 80.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 115.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "discovery-20-channel-h1",
+            "expected": {
+              "initialKineticJ": 90.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 125.0,
+              "requiredJ": 50,
+              "marginJ": 75.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 125.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 25.0,
+              "required": 50.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "discovery-22-channel-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 195.0,
+              "requiredJ": 50,
+              "marginJ": 145.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 195.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 45.0,
+              "required": 50.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "expanded-027-h3",
+            "expected": {
+              "initialKineticJ": 24.0,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 30.0,
+              "requiredJ": 90,
+              "marginJ": -60.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 30.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 30.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-089-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 16,
+              "availableJ": 194.0,
+              "requiredJ": 50,
+              "marginJ": 144.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 194.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 94.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-090-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 20,
+              "availableJ": 190.0,
+              "requiredJ": 150,
+              "marginJ": 40.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 190.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 90.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-091-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 186.0,
+              "requiredJ": 50,
+              "marginJ": 136.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 186.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 86.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-040-h3",
+            "expected": {
+              "initialKineticJ": 96.0,
+              "descentGainJ": 30,
+              "lossJ": 12,
+              "availableJ": 114.0,
+              "requiredJ": 90,
+              "marginJ": 24.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 12.0,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 54.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-065-h3",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 16,
+              "availableJ": 152.0,
+              "requiredJ": 120,
+              "marginJ": 32.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 112.0,
+              "required": 80.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 72.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-083-h3",
+            "expected": {
+              "initialKineticJ": 90.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 116.0,
+              "requiredJ": 150,
+              "marginJ": -34.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 116.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 116.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          }
+        ]
+      },
+      "full_existing": {
+        "source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/failure-scores.json",
+        "required_repairs": 24,
+        "counts": [
+          {
+            "original_required": "missing",
+            "edited_available": "correct_available",
+            "questions": 2
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "correct_available",
+            "questions": 14
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "other_wrong_available",
+            "questions": 2
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "missing",
+            "questions": 1
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "subtract_descent",
+            "questions": 2
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "subtract_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "subtract_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "omit_descent",
+            "questions": 1
+          }
+        ],
+        "rows": [
+          {
+            "id": "bead-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 8,
+              "descentGainJ": 30,
+              "lossJ": 8,
+              "availableJ": 30,
+              "requiredJ": 40,
+              "marginJ": -10
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 30.0,
+              "required": 40.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "block-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 54,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 60,
+              "requiredJ": 90,
+              "marginJ": -30
+            },
+            "original": {
+              "available": 60.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 60.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "cart-changed",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 36,
+              "descentGainJ": 40,
+              "lossJ": 16,
+              "availableJ": 60,
+              "requiredJ": 80,
+              "marginJ": -20
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 0.0,
+              "required": 80.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "coaster-base",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 150,
+              "marginJ": -25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 125.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "coaster-paraphrase",
+            "expected": {
+              "answer": "NO",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 150,
+              "marginJ": -25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 85.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "coaster-paraphrase-changed",
+            "expected": {
+              "answer": "YES",
+              "initialKineticJ": 40,
+              "descentGainJ": 100,
+              "lossJ": 15,
+              "availableJ": 125,
+              "requiredJ": 100,
+              "marginJ": 25
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": null,
+              "required": 100.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "missing"
+          },
+          {
+            "id": "discovery-16-channel-h1",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 13,
+              "availableJ": 155.0,
+              "requiredJ": 40,
+              "marginJ": 115.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 155.0,
+              "required": 80.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 75.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "discovery-20-channel-h1",
+            "expected": {
+              "initialKineticJ": 90.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 125.0,
+              "requiredJ": 50,
+              "marginJ": 75.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 125.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 125.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "discovery-22-channel-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 195.0,
+              "requiredJ": 50,
+              "marginJ": 145.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 195.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 195.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "discovery-22-channel-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 15,
+              "availableJ": 195.0,
+              "requiredJ": 150,
+              "marginJ": 45.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 195.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 195.0,
+              "required": 150.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-027-h3",
+            "expected": {
+              "initialKineticJ": 24.0,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 30.0,
+              "requiredJ": 90,
+              "marginJ": -60.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 30.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 30.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-088-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 12,
+              "availableJ": 198.0,
+              "requiredJ": 150,
+              "marginJ": 48.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 198.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 198.0,
+              "required": 150.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-089-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 16,
+              "availableJ": 194.0,
+              "requiredJ": 50,
+              "marginJ": 144.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 194.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 194.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-090-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 20,
+              "availableJ": 190.0,
+              "requiredJ": 150,
+              "marginJ": 40.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 190.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 190.0,
+              "required": 150.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-091-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 186.0,
+              "requiredJ": 50,
+              "marginJ": 136.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 186.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 186.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-091-h3",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 186.0,
+              "requiredJ": 150,
+              "marginJ": 36.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 186.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 186.0,
+              "required": 150.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-040-h3",
+            "expected": {
+              "initialKineticJ": 96.0,
+              "descentGainJ": 30,
+              "lossJ": 12,
+              "availableJ": 114.0,
+              "requiredJ": 90,
+              "marginJ": 24.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 12.0,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 54.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-043-h3",
+            "expected": {
+              "initialKineticJ": 96.0,
+              "descentGainJ": 30,
+              "lossJ": 24,
+              "availableJ": 102.0,
+              "requiredJ": 90,
+              "marginJ": 12.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 102.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 42.0,
+              "required": 90.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-064-h3",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 12,
+              "availableJ": 156.0,
+              "requiredJ": 120,
+              "marginJ": 36.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 156.0,
+              "required": 160.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 156.0,
+              "required": 120.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-065-h3",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 16,
+              "availableJ": 152.0,
+              "requiredJ": 120,
+              "marginJ": 32.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 112.0,
+              "required": 80.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 72.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "expanded-067-h3",
+            "expected": {
+              "initialKineticJ": 128.0,
+              "descentGainJ": 40,
+              "lossJ": 24,
+              "availableJ": 144.0,
+              "requiredJ": 120,
+              "marginJ": 24.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 144.0,
+              "required": 160.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 144.0,
+              "required": 120.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-074-h3",
+            "expected": {
+              "initialKineticJ": 40.0,
+              "descentGainJ": 50,
+              "lossJ": 20,
+              "availableJ": 70.0,
+              "requiredJ": 150,
+              "marginJ": -80.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 70.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 20.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "expanded-083-h3",
+            "expected": {
+              "initialKineticJ": 90.0,
+              "descentGainJ": 50,
+              "lossJ": 24,
+              "availableJ": 116.0,
+              "requiredJ": 150,
+              "marginJ": -34.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 116.0,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 116.0,
+              "required": 150.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "expanded-088-h1",
+            "expected": {
+              "initialKineticJ": 160.0,
+              "descentGainJ": 50,
+              "lossJ": 12,
+              "availableJ": 198.0,
+              "requiredJ": 50,
+              "marginJ": 148.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 198.0,
+              "required": 100.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 198.0,
+              "required": 50.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          }
+        ]
+      },
+      "FK_reserved40": {
+        "source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/trace-construction-02/frozen-a2/failures-only-reserved-40.json",
+        "required_repairs": 15,
+        "counts": [
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "subtract_descent",
+            "questions": 5
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "other_wrong_available",
+            "questions": 2
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "omit_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "subtract_descent",
+            "questions": 2
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "omit_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "other_wrong_available",
+            "questions": 2
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "correct_available",
+            "questions": 1
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "other_wrong_available",
+            "questions": 1
+          }
+        ],
+        "rows": [
+          {
+            "id": "fresh-00-h2",
+            "expected": {
+              "initialKineticJ": 25.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 37.0,
+              "requiredJ": 40,
+              "marginJ": -3.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 37.0,
+              "required": 60.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": -3.0,
+              "required": 40.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "fresh-02-h2",
+            "expected": {
+              "initialKineticJ": 49.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 61.0,
+              "requiredJ": 40,
+              "marginJ": 21.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 61.0,
+              "required": 60.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 21.0,
+              "required": 40.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "fresh-03-h2",
+            "expected": {
+              "initialKineticJ": 49.0,
+              "descentGainJ": 40,
+              "lossJ": 10,
+              "availableJ": 79.0,
+              "requiredJ": 40,
+              "marginJ": 39.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 0.0,
+              "required": 80.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 40.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "fresh-05-h2",
+            "expected": {
+              "initialKineticJ": 37.5,
+              "descentGainJ": 60,
+              "lossJ": 13,
+              "availableJ": 84.5,
+              "requiredJ": 60,
+              "marginJ": 24.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 24.5,
+              "required": 60.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "fresh-06-h2",
+            "expected": {
+              "initialKineticJ": 73.5,
+              "descentGainJ": 30,
+              "lossJ": 11,
+              "availableJ": 92.5,
+              "requiredJ": 60,
+              "marginJ": 32.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 32.5,
+              "required": 57.5,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 32.5,
+              "required": 60.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "fresh-07-h2",
+            "expected": {
+              "initialKineticJ": 73.5,
+              "descentGainJ": 60,
+              "lossJ": 13,
+              "availableJ": 120.5,
+              "requiredJ": 60,
+              "marginJ": 60.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 60.5,
+              "required": 0.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 60.5,
+              "required": 60.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "fresh-10-h2",
+            "expected": {
+              "initialKineticJ": 98.0,
+              "descentGainJ": 40,
+              "lossJ": 14,
+              "availableJ": 124.0,
+              "requiredJ": 80,
+              "marginJ": 44.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 289.0,
+              "required": 120.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 44.0,
+              "required": 80.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "fresh-14-h2",
+            "expected": {
+              "initialKineticJ": 122.5,
+              "descentGainJ": 50,
+              "lossJ": 17,
+              "availableJ": 155.5,
+              "requiredJ": 100,
+              "marginJ": 55.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 155.5,
+              "required": 150.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 55.5,
+              "required": 100.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "fresh-17-h2",
+            "expected": {
+              "initialKineticJ": 75.0,
+              "descentGainJ": 120,
+              "lossJ": 22,
+              "availableJ": 173.0,
+              "requiredJ": 120,
+              "marginJ": 53.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 173.0,
+              "required": 240.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 0.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "fresh-00-h4",
+            "expected": {
+              "initialKineticJ": 25.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 37.0,
+              "requiredJ": 80,
+              "marginJ": -43.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 25.0,
+              "required": 28.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 0.0,
+              "required": 80.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "fresh-02-h4",
+            "expected": {
+              "initialKineticJ": 49.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 61.0,
+              "requiredJ": 80,
+              "marginJ": -19.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 61.0,
+              "required": 100.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 21.0,
+              "required": 80.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "fresh-04-h4",
+            "expected": {
+              "initialKineticJ": 37.5,
+              "descentGainJ": 30,
+              "lossJ": 11,
+              "availableJ": 56.5,
+              "requiredJ": 120,
+              "marginJ": -63.5,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 56.5,
+              "required": 63.5,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 56.5,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-05-h4",
+            "expected": {
+              "initialKineticJ": 37.5,
+              "descentGainJ": 60,
+              "lossJ": 13,
+              "availableJ": 84.5,
+              "requiredJ": 120,
+              "marginJ": -35.5,
+              "answer": "NO"
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 47.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "fresh-11-h4",
+            "expected": {
+              "initialKineticJ": 98.0,
+              "descentGainJ": 80,
+              "lossJ": 16,
+              "availableJ": 162.0,
+              "requiredJ": 160,
+              "marginJ": 2.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 2.0,
+              "required": 238.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 100.0,
+              "required": 160.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "fresh-15-h4",
+            "expected": {
+              "initialKineticJ": 122.5,
+              "descentGainJ": 100,
+              "lossJ": 19,
+              "availableJ": 203.5,
+              "requiredJ": 200,
+              "marginJ": 3.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 3.5,
+              "required": 50.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 3.5,
+              "required": 200.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "subtract_descent"
+          }
+        ]
+      },
+      "full_reserved40": {
+        "source": "runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/joint-a2/step-01-bounded/fresh-failure-scores.json",
+        "required_repairs": 15,
+        "counts": [
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "correct_available",
+            "questions": 5
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "omit_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "correct_available",
+            "questions": 3
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "omit_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "missing",
+            "questions": 1
+          },
+          {
+            "original_required": "climb_plus_descent",
+            "edited_available": "subtract_descent",
+            "questions": 1
+          },
+          {
+            "original_required": "other_wrong_required",
+            "edited_available": "other_wrong_available",
+            "questions": 2
+          },
+          {
+            "original_required": "missing",
+            "edited_available": "other_wrong_available",
+            "questions": 1
+          }
+        ],
+        "rows": [
+          {
+            "id": "fresh-00-h2",
+            "expected": {
+              "initialKineticJ": 25.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 37.0,
+              "requiredJ": 40,
+              "marginJ": -3.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 37.0,
+              "required": 60.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 37.0,
+              "required": 40.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-02-h2",
+            "expected": {
+              "initialKineticJ": 49.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 61.0,
+              "requiredJ": 40,
+              "marginJ": 21.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 61.0,
+              "required": 60.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 61.0,
+              "required": 40.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-05-h2",
+            "expected": {
+              "initialKineticJ": 37.5,
+              "descentGainJ": 60,
+              "lossJ": 13,
+              "availableJ": 84.5,
+              "requiredJ": 60,
+              "marginJ": 24.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 24.5,
+              "required": 60.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "fresh-06-h2",
+            "expected": {
+              "initialKineticJ": 73.5,
+              "descentGainJ": 30,
+              "lossJ": 11,
+              "availableJ": 92.5,
+              "requiredJ": 60,
+              "marginJ": 32.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 32.5,
+              "required": 57.5,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 92.5,
+              "required": 60.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-07-h2",
+            "expected": {
+              "initialKineticJ": 73.5,
+              "descentGainJ": 60,
+              "lossJ": 13,
+              "availableJ": 120.5,
+              "requiredJ": 60,
+              "marginJ": 60.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 60.5,
+              "required": 0.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 60.5,
+              "required": 60.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "omit_descent"
+          },
+          {
+            "id": "fresh-09-h2",
+            "expected": {
+              "initialKineticJ": 50.0,
+              "descentGainJ": 80,
+              "lossJ": 16,
+              "availableJ": 114.0,
+              "requiredJ": 80,
+              "marginJ": 34.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": null,
+              "required": 80.0,
+              "verdict": null
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "missing"
+          },
+          {
+            "id": "fresh-10-h2",
+            "expected": {
+              "initialKineticJ": 98.0,
+              "descentGainJ": 40,
+              "lossJ": 14,
+              "availableJ": 124.0,
+              "requiredJ": 80,
+              "marginJ": 44.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 289.0,
+              "required": 120.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 124.0,
+              "required": 80.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-14-h2",
+            "expected": {
+              "initialKineticJ": 122.5,
+              "descentGainJ": 50,
+              "lossJ": 17,
+              "availableJ": 155.5,
+              "requiredJ": 100,
+              "marginJ": 55.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 155.5,
+              "required": 150.0,
+              "verdict": "YES"
+            },
+            "edited": {
+              "available": 55.5,
+              "required": 100.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "subtract_descent"
+          },
+          {
+            "id": "fresh-15-h2",
+            "expected": {
+              "initialKineticJ": 122.5,
+              "descentGainJ": 100,
+              "lossJ": 19,
+              "availableJ": 203.5,
+              "requiredJ": 100,
+              "marginJ": 103.5,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 3.5,
+              "required": 96.5,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 5.5,
+              "required": 100.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "fresh-17-h2",
+            "expected": {
+              "initialKineticJ": 75.0,
+              "descentGainJ": 120,
+              "lossJ": 22,
+              "availableJ": 173.0,
+              "requiredJ": 120,
+              "marginJ": 53.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 173.0,
+              "required": 240.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 173.0,
+              "required": 120.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-00-h4",
+            "expected": {
+              "initialKineticJ": 25.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 37.0,
+              "requiredJ": 80,
+              "marginJ": -43.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 25.0,
+              "required": 28.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 37.0,
+              "required": 80.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-02-h4",
+            "expected": {
+              "initialKineticJ": 49.0,
+              "descentGainJ": 20,
+              "lossJ": 8,
+              "availableJ": 61.0,
+              "requiredJ": 80,
+              "marginJ": -19.0,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 61.0,
+              "required": 100.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 61.0,
+              "required": 80.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "climb_plus_descent",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-04-h4",
+            "expected": {
+              "initialKineticJ": 37.5,
+              "descentGainJ": 30,
+              "lossJ": 11,
+              "availableJ": 56.5,
+              "requiredJ": 120,
+              "marginJ": -63.5,
+              "answer": "NO"
+            },
+            "original": {
+              "available": 56.5,
+              "required": 63.5,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 56.5,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "correct_available"
+          },
+          {
+            "id": "fresh-05-h4",
+            "expected": {
+              "initialKineticJ": 37.5,
+              "descentGainJ": 60,
+              "lossJ": 13,
+              "availableJ": 84.5,
+              "requiredJ": 120,
+              "marginJ": -35.5,
+              "answer": "NO"
+            },
+            "original": {
+              "available": null,
+              "required": null,
+              "verdict": null
+            },
+            "edited": {
+              "available": 62.0,
+              "required": 120.0,
+              "verdict": "NO"
+            },
+            "original_required_expression_match": "missing",
+            "edited_available_expression_match": "other_wrong_available"
+          },
+          {
+            "id": "fresh-11-h4",
+            "expected": {
+              "initialKineticJ": 98.0,
+              "descentGainJ": 80,
+              "lossJ": 16,
+              "availableJ": 162.0,
+              "requiredJ": 160,
+              "marginJ": 2.0,
+              "answer": "YES"
+            },
+            "original": {
+              "available": 2.0,
+              "required": 238.0,
+              "verdict": "NO"
+            },
+            "edited": {
+              "available": 180.0,
+              "required": 160.0,
+              "verdict": "YES"
+            },
+            "original_required_expression_match": "other_wrong_required",
+            "edited_available_expression_match": "other_wrong_available"
+          }
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Ex-post historical diagnostic, not a test of the intended overlap hypothesis.",
+    "No internal computation traces in these 80 generalization result records.",
+    "Same text change appears under different final outcomes; it cannot establish a useful causal mechanism.",
+    "The 40 were outside the fit but already seen before the later full-path construction.",
+    "New round-two population and target remain unselected by this study."
+  ]
+}

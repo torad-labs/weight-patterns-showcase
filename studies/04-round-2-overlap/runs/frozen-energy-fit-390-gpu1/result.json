@@ -1,0 +1,15 @@
+{
+  "prediction_vs_result": "Frozen 390 fitted loss on GPU1 was 6.40410393475e-05 compared with 6.40593601248e-05 on GPU0.",
+  "failures_only": "Single fitted prompt and a single acquisition on each device. This comparison supplies no held-case loss.",
+  "what_this_changes": "390 can be compared to recorded 175 and 189 fitted objectives on the same evaluation GPU.",
+  "gpu1_objective": 6.40410393474808e-05,
+  "gpu0_objective": 6.405936012480991e-05,
+  "gpu1_measurement": {
+    "record": "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/checkpoint390/measurement.json",
+    "sha256": "d6192c5f01084b83d6287e54184894c9b89c628c08632c55da4a7235c7668725"
+  },
+  "gpu0_measurement": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/measurement.json",
+    "sha256": "41ba3948bc2dca2e89cc206f76e3898d186376730d643f9b0a0010517f551971"
+  }
+}

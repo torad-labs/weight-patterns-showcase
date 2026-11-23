@@ -1,0 +1,940 @@
+{
+ "sources": [
+  "~/Documents/dev/infra/observability/mlflow/artifacts/6/e2c4836547314df3ac14e3296b16d521/artifacts/steps",
+  "~/Documents/dev/infra/observability/mlflow/artifacts/6/93e31dd758b94f189ad29b149cac9f64/artifacts/steps"
+ ],
+ "cells_ever_registered": 9012,
+ "cells_in_every_revision": 3845,
+ "revisions": [
+  {
+   "revision": "joint-stock-prechoice-training 0",
+   "as_logged": 0.02718721189952242,
+   "cells_found": 8899,
+   "cells_lost": 0,
+   "carried": 0.027187211899522418,
+   "carried_by_role": {
+    "preservation": 0.0003415516058225187,
+    "failing": 0.026845660293699936
+   },
+   "common": 0.00888731665105754,
+   "lost": []
+  },
+  {
+   "revision": "joint-stock-prechoice-training 1",
+   "as_logged": 0.01794182787485012,
+   "cells_found": 6842,
+   "cells_lost": 2059,
+   "carried": 0.019417035791022195,
+   "carried_by_role": {
+    "preservation": 0.006228499904221485,
+    "failing": 0.013188535886800704
+   },
+   "common": 0.00710918263172636,
+   "lost": [
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 27,
+     "charged": 0.0014356876248514635
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 840,
+     "charged": 3.7031485757240785e-05
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 3,
+     "charged": 6.159568993037562e-07
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 525,
+     "charged": 4.6180671327353475e-07
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 6.665221787895478e-09
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-training 2",
+   "as_logged": 0.020003330164536197,
+   "cells_found": 6707,
+   "cells_lost": 2305,
+   "carried": 0.029736394821263293,
+   "carried_by_role": {
+    "preservation": 0.012895319656696205,
+    "failing": 0.01684107516456712
+   },
+   "common": 0.010112701393511373,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 1260,
+     "charged": 0.0009691539471624894
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 35,
+     "charged": 2.114247345367471e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 210,
+     "charged": 2.1287561999484758e-07
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 5,
+     "charged": 2.6444278171811046e-08
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-training 3",
+   "as_logged": 0.01740122190370455,
+   "cells_found": 6182,
+   "cells_lost": 2830,
+   "carried": 0.0286671953827095,
+   "carried_by_role": {
+    "preservation": 0.013905920771166112,
+    "failing": 0.01476127461154341
+   },
+   "common": 0.010451784177642762,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 945,
+     "charged": 0.0011383786907114392
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 73,
+     "charged": 0.0006798113999825529
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 630,
+     "charged": 0.0006736060969194506
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 55,
+     "charged": 2.4177869047841876e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-streamed-recovery-5 1",
+   "as_logged": 0.020471407700659958,
+   "cells_found": 6834,
+   "cells_lost": 2178,
+   "carried": 0.03106140338932937,
+   "carried_by_role": {
+    "preservation": 0.016302749959318186,
+    "failing": 0.014758653430011197
+   },
+   "common": 0.011526851118981343,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 945,
+     "charged": 0.0011383786907114392
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 73,
+     "charged": 0.0006798113999825529
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 33,
+     "charged": 4.609348869242057e-08
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-streamed-recovery-5 2",
+   "as_logged": 0.02046245628921882,
+   "cells_found": 6834,
+   "cells_lost": 2178,
+   "carried": 0.03105245197788823,
+   "carried_by_role": {
+    "preservation": 0.016296965097086013,
+    "failing": 0.014755486880802185
+   },
+   "common": 0.011518055365456043,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 945,
+     "charged": 0.0011383786907114392
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 73,
+     "charged": 0.0006798113999825529
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 33,
+     "charged": 4.609348869242057e-08
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-streamed-recovery-5 3",
+   "as_logged": 0.01922273558939367,
+   "cells_found": 6359,
+   "cells_lost": 2653,
+   "carried": 0.03096328881384168,
+   "carried_by_role": {
+    "preservation": 0.015063297927207179,
+    "failing": 0.01589999088663451
+   },
+   "common": 0.011016428359545732,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 945,
+     "charged": 0.0011383786907114392
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 420,
+     "charged": 0.0010297726986007202
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 83,
+     "charged": 0.0006801176003860626
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 78,
+     "charged": 0.00012052473026306385
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-streamed-recovery-5 4",
+   "as_logged": 0.019211751985279146,
+   "cells_found": 6359,
+   "cells_lost": 2653,
+   "carried": 0.03095230520972716,
+   "carried_by_role": {
+    "preservation": 0.015054854716835289,
+    "failing": 0.015897450492891863
+   },
+   "common": 0.011005970390949173,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 945,
+     "charged": 0.0011383786907114392
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 420,
+     "charged": 0.0010297726986007202
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 83,
+     "charged": 0.0006801176003860626
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 78,
+     "charged": 0.00012052473026306385
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-streamed-recovery-5 5",
+   "as_logged": 0.019202022121970867,
+   "cells_found": 6359,
+   "cells_lost": 2653,
+   "carried": 0.03094257534641888,
+   "carried_by_role": {
+    "preservation": 0.015048093938538546,
+    "failing": 0.015894481407880356
+   },
+   "common": 0.010996835822061962,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 945,
+     "charged": 0.0011383786907114392
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 420,
+     "charged": 0.0010297726986007202
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 83,
+     "charged": 0.0006801176003860626
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 78,
+     "charged": 0.00012052473026306385
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-streamed-recovery-5 6",
+   "as_logged": 0.017037308012016774,
+   "cells_found": 6161,
+   "cells_lost": 2851,
+   "carried": 0.03131334661862334,
+   "carried_by_role": {
+    "preservation": 0.015521528014410646,
+    "failing": 0.01579181860421272
+   },
+   "common": 0.011070639825597826,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 386,
+     "charged": 0.0033295395955664974
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 420,
+     "charged": 0.0010297726986007202
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 840,
+     "charged": 0.001024442077689567
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 78,
+     "charged": 0.00012052473026306385
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-prechoice-streamed-recovery-5 7",
+   "as_logged": 0.020194497738933122,
+   "cells_found": 6638,
+   "cells_lost": 2374,
+   "carried": 0.03332073286842612,
+   "carried_by_role": {
+    "preservation": 0.017532911351606274,
+    "failing": 0.015787821516819837
+   },
+   "common": 0.012617027982129941,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "failing",
+     "cells": 1,
+     "charged": 0.007351093623972924
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "climb",
+     "role": "failing",
+     "cells": 386,
+     "charged": 0.0033295395955664974
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0014038746109095864
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 840,
+     "charged": 0.001024442077689567
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 6.770440644624031e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 105,
+     "charged": 3.637186507219925e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 3.431921521023506e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 26,
+     "charged": 1.5473442023393549e-06
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 1.4043767290060559e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 21,
+     "charged": 4.939517502150901e-07
+    },
+    {
+     "member": "discovery-13-channel-h1",
+     "operation": "downhill_prechoice",
+     "role": "preservation",
+     "cells": 1,
+     "charged": 0.0
+    }
+   ]
+  }
+ ]
+}

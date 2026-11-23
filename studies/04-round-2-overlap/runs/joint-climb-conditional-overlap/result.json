@@ -1,0 +1,56 @@
+{
+  "donor_cases": 13,
+  "supported": 712,
+  "donor_sources": [
+    "discovery-02",
+    "expanded-01",
+    "expanded-03",
+    "expanded-05",
+    "expanded-07"
+  ],
+  "source_events": 67,
+  "development": {
+    "shared_cells": 673,
+    "members": {
+      "discovery-05-channel-h1": {
+        "matched": 712,
+        "mean_squared_error": 0.0005762079368491391,
+        "correct_climb_side": 640,
+        "wrong_climb_side": 33
+      },
+      "discovery-10-channel-h1": {
+        "matched": 691,
+        "mean_squared_error": 0.06835562687202613,
+        "correct_climb_side": 30,
+        "wrong_climb_side": 643
+      },
+      "discovery-11-channel-h1": {
+        "matched": 694,
+        "mean_squared_error": 0.00038907373813999225,
+        "correct_climb_side": 673,
+        "wrong_climb_side": 0
+      }
+    }
+  },
+  "same_question_climb_only": {
+    "shared_cells": 670,
+    "members": {
+      "discovery-10-channel-h1": {
+        "matched": 691,
+        "mean_squared_error": 0.068626065908629,
+        "correct_climb_side": 30,
+        "wrong_climb_side": 640
+      },
+      "climb_repaired_descent_still_wrong": {
+        "matched": 670,
+        "mean_squared_error": 0.008989297019120157,
+        "correct_climb_side": 595,
+        "wrong_climb_side": 75
+      }
+    }
+  },
+  "lower_on_corrected_climb": 661,
+  "prediction_vs_result": "The same-prompt 115 J climb-only repair reduced mean squared error from 0.0686261 to 0.0089893 on 670 common cells, with 661 improving. On three other comparisons within two withheld source families, 643/673 cells identified the wrong climb and 640/673 and 673/673 identified the two correct climbs.",
+  "failures_only": "Nine of 670 common cells failed to improve on the selective repair. The question template and few incorrect donor families limit inference. No new weight repair or transfer is measured by this retrospective read.",
+  "what_this_changes": "The two distinct operation fields now both have an endpoint check against selective repairs. The new climb field can enter a single joint fit after binding an origin at which both fitted errors are present."
+}

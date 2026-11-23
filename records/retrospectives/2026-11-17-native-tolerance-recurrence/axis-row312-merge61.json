@@ -1,0 +1,531 @@
+{
+  "format": "measured-native-turn-directional-cap/1",
+  "reference_position": 312,
+  "merge": 61,
+  "layer": 20,
+  "branch": "feedforward",
+  "axis": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/axis-row312-merge61.npy",
+    "sha256": "4d4e9dd87d570040f9e727996598ac914d1ade1f37cd3d54280ed1e56ce3814f",
+    "bytes": 12416,
+    "shape": [
+      1536
+    ],
+    "dtype": "float64"
+  },
+  "axis_norm": 1.0,
+  "observable": "T=unit(merged)-unit(incoming), with both input and output derivatives retained",
+  "condition": "dot(axis,T-reference_turn) <= upper_relative_to_reference",
+  "upper_relative_to_reference": 0.38018045796900707,
+  "reference_projection": -0.24453221204519396,
+  "upper_absolute_turn_projection": 0.1356482459238131,
+  "lower_observed_relative_projection": 0.0,
+  "derivation": "axis=(mean original fitted05 mapped turns - fixed reference turn)/norm; upper=max(0, every individual mapped original positive departure projected onto axis)",
+  "original_reference": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4",
+    "bytes": 8682
+  },
+  "reference_trace": {
+    "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "sha256": "1b7ccbe9996af857f98d8a213fa3461e3cdd42f57906d4518f2b2f775184b2af",
+    "shape": [
+      560,
+      105,
+      1536
+    ],
+    "dtype": "float64"
+  },
+  "fitting_member": "discovery-05-channel-h1",
+  "fitting_current_positions": [
+    312
+  ],
+  "fitting_sources": [
+    {
+      "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-05-channel-h1/turns.npy",
+      "sha256": "dce73dd2863c6016b795ece01a6af8a27b05e530aa225293dca3b61d4499e30c",
+      "bytes": 261918848
+    }
+  ],
+  "fitting_pair_source": {
+    "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-05-channel-h1.npy",
+    "sha256": "3d1af7a43aca789609ac4c93076b3118fe51795c8e703b39ad0714d2e5a88d90",
+    "bytes": 4800
+  },
+  "positive_provider": {
+    "member": "expanded-029-h1",
+    "current_position": 312,
+    "source": {
+      "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy",
+      "sha256": "bd7dda38e26cfc9924a64ce655897f55fdf3e83af16452c1ee75650890fe1823",
+      "bytes": 267079808
+    }
+  },
+  "positive_witnesses": [
+    {
+      "member": "discovery-01-channel-h1",
+      "mapped_current_positions": [
+        312
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-01-channel-h1/question.npy",
+        "sha256": "51800ee377f13acf91c1ecf9eec5815c2189a511b21094f56ec9a4c764cbe605",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1/turns.npy",
+        "sha256": "80a62ad17161d3b9696a45576886f6f6d1fce11fc670fa6bd4d901ec6dcecd05",
+        "shape": [
+          388,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-01-channel-h1.npy",
+        "sha256": "4b653c92ed40b2be0dd871fbb461050a02b7fcf99992a90a2a5aa09729b2aded",
+        "bytes": 4608
+      }
+    },
+    {
+      "member": "discovery-06-channel-h1",
+      "mapped_current_positions": [
+        322
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-06-channel-h1/question.npy",
+        "sha256": "73782a16fc7a7416a96827b011cda0d62197d0a75af6825e422ed763ea1cd2fc",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1/turns.npy",
+        "sha256": "892f8ad8aca62ba76e3e4de52db069c5230ddbfdde7f78d9ed6e74f937c71701",
+        "shape": [
+          409,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-06-channel-h1.npy",
+        "sha256": "1eeb05223a98a96a2d9308a878607e88faa7fbd0c0dfc2ce595b94ffe2991f33",
+        "bytes": 4952
+      }
+    },
+    {
+      "member": "discovery-15-channel-h1",
+      "mapped_current_positions": [
+        364
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-15-channel-h1/question.npy",
+        "sha256": "6623a9603e39626029632d7ca0ed466506389b163174c98b90b6c7bcc161066b",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1/turns.npy",
+        "sha256": "3918511098b85aaf8cd4f1787ee1c38d4cf503f652846380629d33efe6537e73",
+        "shape": [
+          461,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-15-channel-h1.npy",
+        "sha256": "9b0870066dc7709c2a68389c8ae6026605966987dbd35a8af69c9800548b8a7b",
+        "bytes": 5368
+      }
+    },
+    {
+      "member": "discovery-00-channel-h3",
+      "mapped_current_positions": [
+        357
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-00-channel-h3/question.npy",
+        "sha256": "a1b0e7aa2650ec74b90bfd8c11325a8e42b5a38cf558aecd8bfa3589496e89d9",
+        "shape": [
+          171,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3/turns.npy",
+        "sha256": "1878e19d6cc26b70a97f48fdf628a7529905f5e9775930eba2e33b04e7b0d21f",
+        "shape": [
+          627,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-00-channel-h3.npy",
+        "sha256": "74c9307a0344e9d0a29d120c44111aa0b9c4f25dedfbdff622795ddf203890a0",
+        "bytes": 6616
+      }
+    },
+    {
+      "member": "discovery-08-channel-h3",
+      "mapped_current_positions": [
+        325
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-08-channel-h3/question.npy",
+        "sha256": "7221aba135b6b3c8f78a10b4fde9a08a649eaa9d3ae275d2d76aa607002e48da",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3/turns.npy",
+        "sha256": "bbe7512d3b48b5e6fc46caaf99212674b72550b400a79d5a124a0d24086ba151",
+        "shape": [
+          456,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-08-channel-h3.npy",
+        "sha256": "9aaa59ef8d6c8f7c350edfb1a8704e9ac61b43376271f979499e0584ad075b00",
+        "bytes": 5232
+      }
+    },
+    {
+      "member": "discovery-10-channel-h3",
+      "mapped_current_positions": [
+        325
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-10-channel-h3/question.npy",
+        "sha256": "c56bb6c7f0610fa07732180dbe4a69cffcda9cf95320a9cf2cf4babb1bc73499",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3/turns.npy",
+        "sha256": "6bb643730b4ee9e3fb94cfed13dda5b47bec9ac1e2486677ee43fcfe2cb671ce",
+        "shape": [
+          491,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-10-channel-h3.npy",
+        "sha256": "676ee2ed4cd50ec6278f0bb5a8d505827cd6cf6a9478cde94a9aed6f1dd83937",
+        "bytes": 5496
+      }
+    },
+    {
+      "member": "expanded-029-h1",
+      "mapped_current_positions": [
+        312
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-029-h1/question.npy",
+        "sha256": "c8ae450dfe4fe03ecdf4e179c8477e673a85f964950d507bbb895ea8dd827c16",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy",
+        "sha256": "bd7dda38e26cfc9924a64ce655897f55fdf3e83af16452c1ee75650890fe1823",
+        "shape": [
+          414,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-029-h1.npy",
+        "sha256": "f4f7e92350a84256d857c53166997035573bff42af93ff6d1a249cc6f84b9b85",
+        "bytes": 4856
+      }
+    },
+    {
+      "member": "discovery-11-channel-h3",
+      "mapped_current_positions": [
+        324
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/discovery-11-channel-h3/question.npy",
+        "sha256": "bd9c7c363a8f87b483403848905f901bf081ab18525c759edc0b5044b63841e3",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3/turns.npy",
+        "sha256": "6e4d7829c1d2446f22364d31b3284af857241d25ce72b5d40d514e37d4addb7b",
+        "shape": [
+          408,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/discovery-11-channel-h3.npy",
+        "sha256": "2291df4691369dbda8ef08b37df162a50a8c8fb3f49f73ea47e8c0238705b25a",
+        "bytes": 4832
+      }
+    },
+    {
+      "member": "expanded-064-h1",
+      "mapped_current_positions": [
+        323
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-064-h1/question.npy",
+        "sha256": "30f5f8590aad6cd16a88533f670c05ca0e688f1c69e8ca5ccb7301c965c93749",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1/turns.npy",
+        "sha256": "222685dbecc9fc5f906b120001d5af534a2cdddb5cc7558ec36a853bdf7a8ec2",
+        "shape": [
+          474,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-064-h1.npy",
+        "sha256": "5d70cc99d7bbe6141ae0dd0d1bdb52d6329af6e6467dbed3489ce387f7728e91",
+        "bytes": 5296
+      }
+    },
+    {
+      "member": "expanded-071-h1",
+      "mapped_current_positions": [
+        319
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-071-h1/question.npy",
+        "sha256": "9518e5792a7cc525b25c8d686c5f605a6101293c29b38c312124b57fcd917cd0",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1/turns.npy",
+        "sha256": "ce81f9093a38bf611bad9e8a227ff0965a5d3f8525f684e3429b471c2b1c748a",
+        "shape": [
+          495,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-071-h1.npy",
+        "sha256": "89ca931f87b0bad3b5487baf86adc14ff8020b22861a9d8f6931a97605800674",
+        "bytes": 5512
+      }
+    },
+    {
+      "member": "expanded-039-h3",
+      "mapped_current_positions": [
+        317
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-039-h3/question.npy",
+        "sha256": "e9834b06778af5a5e1e4b61416d9e3a1fe78a4b6fdda957f0aedfbf931fdb46f",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3/turns.npy",
+        "sha256": "fca12c31ed3934ffea62a0e1ac854c0589c88e2e4fa77fd4cf69c5f9161c085a",
+        "shape": [
+          414,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-039-h3.npy",
+        "sha256": "c3f7403955e9018a3c0df3fe7885f0bc5629ae94b0bcd074f6a6a03cd63a9af6",
+        "bytes": 4848
+      }
+    },
+    {
+      "member": "expanded-076-h1",
+      "mapped_current_positions": [
+        313
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-076-h1/question.npy",
+        "sha256": "6136209c42a85a7bfa55d9ae98c076d17959c8b0486bb2749b043c239af35bee",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1/turns.npy",
+        "sha256": "ba1422e3a24895b1adbb29b44a9e379582dc4e91818160b427f9cca00fb0be33",
+        "shape": [
+          412,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-076-h1.npy",
+        "sha256": "fdb72b1637f68cc273d59381f0fd178d6cb6dbf29c134aa21ae3fff8d3b6e0aa",
+        "bytes": 4984
+      }
+    },
+    {
+      "member": "expanded-078-h1",
+      "mapped_current_positions": [
+        313
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-078-h1/question.npy",
+        "sha256": "f9b117c1484cdd933a43f93469ec13cfd31395aae590a574121e9fec6ce15d37",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1/turns.npy",
+        "sha256": "147fa14437e15ff8f9b6cdcf7d22d8872b65b20b1192d5f8493ba0161153e673",
+        "shape": [
+          422,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-078-h1.npy",
+        "sha256": "15cdbce34184b9023ce7ddf2c933daa2752eb8a46d1c7bf00f7c99f85f1f5906",
+        "bytes": 4904
+      }
+    },
+    {
+      "member": "expanded-023-h1",
+      "mapped_current_positions": [
+        312
+      ],
+      "question": {
+        "record": "studies/04-round-2-overlap/runs/success-set-reference-original/turns/expanded-023-h1/question.npy",
+        "sha256": "e6325386c472e6cf686ce26dc8f8f5fffc79930dfd3b4122652d2525a94780bc",
+        "shape": [
+          172,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "answer": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy",
+        "sha256": "05f0bbf5fe0b2030f5db67ded3cb9c8f03f5c8ea7e71d13a4c2e58a05115497c",
+        "shape": [
+          417,
+          105,
+          1536
+        ],
+        "dtype": "<f4"
+      },
+      "correspondence": {
+        "record": "records/retrospectives/2026-11-17-one-pair-stopping-calibration/pairs/expanded-023-h1.npy",
+        "sha256": "81a708f880d21ca85e4036171b7ab28a8940dc95299847e6869c9e1a07dcae9d",
+        "bytes": 4856
+      }
+    }
+  ],
+  "native_fitting_projection": 0.39333145878850384,
+  "original_radius": 0.5060302460432016,
+  "original_pair_mass": 1.7006802721088435e-05,
+  "mass_note": "Preserve the reference event mass and its actual current multiplicity; this original event has one mate.",
+  "analysis": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/analysis.json",
+    "sha256": "1e7261846966a14627357b82cca4cbe39e99570c12458c6d652f1c10f7af0906",
+    "bytes": 12555137
+  },
+  "program": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/export_axis.py",
+    "sha256": "4162441e05492de457a3b781579c25ba5c7bb06757ed9bc931e2309b897117e6",
+    "bytes": 6599
+  },
+  "analysis_program": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/measure.py",
+    "sha256": "428b2b65ad92d8d2c84be5aa251967cf754a33f6efe5bfadbfd4fb398e34d52e",
+    "bytes": 15560
+  },
+  "excluded_from_construction": [
+    "discovery-10-channel-h1",
+    "discovery-17-channel-h1"
+  ],
+  "unseen_transfer_read": false,
+  "limits": [
+    "The original donor turns are retained F32 native exports; reference is canonical F64. This is the measured cap, not a newly recomputed native-F64 calibration.",
+    "Known-positive envelope is finite-sample observation, not a universal success boundary.",
+    "The axis is a computational fitting-pair residual, not a decoder-token or output-margin direction.",
+    "Selection of this event and merge followed this training-only diagnostic and the independent historical precursor evidence; no test outcome was used.",
+    "No native update, derivative qualification, repair, transfer, or preservation result is established by exporting this artifact."
+  ]
+}

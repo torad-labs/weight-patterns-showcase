@@ -1,0 +1,134 @@
+{
+  "run": "vector-chance-family-swap-175-189",
+  "declaration": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-family-swap-175-189/declaration.json",
+    "sha256": "445a3621f624c576c4ca00731c6aeab8cdbb02ff4974cdc51bbf3891b9a7fb91"
+  },
+  "result": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-family-swap-175-189/result.json",
+    "sha256": "e2db8e0679a5a7cb28da692dda63cbcbdec102086ddc9c4691bf38c130f8445a"
+  },
+  "whole_build_review": {
+    "record": "records/retrospectives/2026-11-17-family-swap-eli.json",
+    "sha256": "e733f38a5ab65893374f1fd0bef880afe5f8fd598eab4e299124eed7fad78a43"
+  },
+  "inventory": {
+    "record": "records/development/2026-11-17-family-swap/families.json",
+    "sha256": "420cdc36cc45efa1ce8839e19b262b6696e76b7de4e4bd6da6a1f5df9439d521"
+  },
+  "case": "discovery-05-channel-h1",
+  "losses": {
+    "175": 9.736442087775514e-05,
+    "189": 4.259005837627896e-05,
+    "attention189": 9.730705992470709e-05,
+    "ffn189": 4.280244955428765e-05
+  },
+  "original_fork_generated_index": 381,
+  "original_fork_consumed_position": 554,
+  "control_measurements": {
+    "175": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/measurement.json",
+      "sha256": "b7cdc2e7de5ec12f74880097295fe5b1c39bccda2b22219926cf136989f57a90"
+    },
+    "189": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/measurement.json",
+      "sha256": "0cddb3c3592d6ae5f8645dbad8abdcd74d8eacdceb43d8d6122a49acae6f3bda"
+    }
+  },
+  "outcomes": {
+    "attention189": {
+      "measurement": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-family-swap-175-189/attention189/measurement.json",
+        "sha256": "df3fce2dc862edc64f065ca3fc4d5903635e1a9484595fe1faab522b54aebb98"
+      },
+      "objective": 9.730705992470709e-05,
+      "events": 605,
+      "comparisons": {
+        "175": {
+          "generated_history_equal": true,
+          "common_generated_choices": 433,
+          "first_differing_generated_choice": null,
+          "first_differing_consumed_position": null,
+          "earlier_termination_without_different_consumed_input": false,
+          "same_computational_correspondence": true
+        },
+        "189": {
+          "generated_history_equal": false,
+          "common_generated_choices": 381,
+          "first_differing_generated_choice": 381,
+          "first_differing_consumed_position": 554,
+          "earlier_termination_without_different_consumed_input": false,
+          "same_computational_correspondence": false
+        }
+      },
+      "earlier_fork_prefix_preserved": true,
+      "matches_choice_at_original_fork": [
+        "175"
+      ]
+    },
+    "ffn189": {
+      "measurement": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-family-swap-175-189/ffn189/measurement.json",
+        "sha256": "db7f5014c0a97973c9a2c9f420f113acdb0c2ffa391ba9355ba09baf73977195"
+      },
+      "objective": 4.280244955428765e-05,
+      "events": 613,
+      "comparisons": {
+        "175": {
+          "generated_history_equal": false,
+          "common_generated_choices": 381,
+          "first_differing_generated_choice": 381,
+          "first_differing_consumed_position": 554,
+          "earlier_termination_without_different_consumed_input": false,
+          "same_computational_correspondence": false
+        },
+        "189": {
+          "generated_history_equal": true,
+          "common_generated_choices": 441,
+          "first_differing_generated_choice": null,
+          "first_differing_consumed_position": null,
+          "earlier_termination_without_different_consumed_input": false,
+          "same_computational_correspondence": true
+        }
+      },
+      "earlier_fork_prefix_preserved": true,
+      "matches_choice_at_original_fork": [
+        "189"
+      ]
+    }
+  },
+  "family_effects": {
+    "attention_on_early_ffn": -5.736095304805281e-08,
+    "attention_on_late_ffn": -2.123911780086904e-07,
+    "ffn_on_early_attention": -5.4561971323467494e-05,
+    "ffn_on_late_attention": -5.471700154842813e-05
+  },
+  "family_effects_by_merge": {
+    "attention_on_early_ffn": {
+      "lower": 64,
+      "equal": 0,
+      "higher": 41,
+      "fraction_of_endpoint_loss_decrease": 0.0010472226499488135
+    },
+    "attention_on_late_ffn": {
+      "lower": 85,
+      "equal": 0,
+      "higher": 20,
+      "fraction_of_endpoint_loss_decrease": 0.0038775654943125335
+    },
+    "ffn_on_early_attention": {
+      "lower": 105,
+      "equal": 0,
+      "higher": 0,
+      "fraction_of_endpoint_loss_decrease": 0.9961224345056875
+    },
+    "ffn_on_late_attention": {
+      "lower": 105,
+      "equal": 0,
+      "higher": 0,
+      "fraction_of_endpoint_loss_decrease": 0.9989527773500512
+    }
+  },
+  "two_family_interaction": -1.5503022496063759e-07,
+  "endpoint_change": -5.4774362501476185e-05
+}

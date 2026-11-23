@@ -1,0 +1,129 @@
+
+<h2>8&nbsp;&nbsp;Storing the change and checking it on the trace</h2>
+
+<h3>8.1&nbsp;&nbsp;Rounding to the model's format</h3>
+
+<p>The model stores each weight in BF16, a 16-bit format with about three significant digits. The computed change is
+added to each weight and the sum is rounded to the nearest BF16 value, exactly as the model would store it. Think of a
+ruler with coarse marks: a change smaller than half a mark disappears, and a change of one and a half marks becomes one
+or two. For step&nbsp;2, the realised change differed from the intended one by 14% to 16%, because the intended changes
+were about 1% of each weight, close to BF16's resolution of about 0.4%. This is recorded for every step, because as later
+changes get smaller, rounding becomes a larger share of them.</p>
+
+<p>The rounded matrix is written into a new copy of the model file. The original file is never touched, and every
+checkpoint is identified by its SHA-256 hash.</p>
+
+<h3>8.2&nbsp;&nbsp;The conditional probe</h3>
+
+<p>To measure what a stored change does to the trace, we run the edited model on each of the 37 answers, but feed it the
+<em>original</em> answer's tokens up to the anchor, recording the full computation at the five positions. Every earlier
+token still runs through the edited weights, so the cache it builds is the edited cache; only the text is held fixed.
+This isolates the edit's effect on the computation from the effect of the model writing different words. It is like
+re-running the same game footage with one player's skill changed: same plays, different internal decisions.</p>
+
+<p>From those recordings we measure the actual new trace, compare it with the target, and report: how much of the
+objective closed, how many of the 14 failures moved closer, how aligned each failure's change was with its target, and
+how far the successes moved.</p>
+
+<h3>8.3&nbsp;&nbsp;Choosing the strength</h3>
+
+<p>The computed change is a direction plus a natural size. Because the real model is not linear, the measured effect
+of the full-size change is used to pick the best multiple of it: the single coefficient that minimises the objective given
+the measured effect. Step&nbsp;1 at full size overshot (only 6 of 14 failures closer); at 0.54 of its size, 10 of 14
+moved closer and the objective dropped more. The scaled model is stored and measured again, because a prediction is not a
+measurement.</p>
+
+<h3>8.4&nbsp;&nbsp;What the steps did to the trace</h3>
+
+<figure><img src="figures/fig4-steps.png" style="width:96%">
+<figcaption><b>Figure 4.</b> Each stored checkpoint measured on the same fixed objective, on the original prefixes of all
+37 answers. Step&nbsp;2 is measured on top of the scaled step&nbsp;1. Step&nbsp;3 made the objective worse than
+step&nbsp;2 and was rejected.</figcaption></figure>
+
+<div class="tablewrap"><table>
+<caption><b>Table 1.</b> The construction steps. "Closed" is the share of the original trace gap removed by the stored
+checkpoint, measured natively.</caption>
+<thead><tr><th>Step</th><th>Edited matrices</th><th>Size of change</th><th class="n">Closed</th><th class="n">Failures closer</th></tr></thead>
+<tbody>
+<tr><td>1, full size</td><td>layer 11 down projection</td><td>7.2% of the matrix</td><td class="n">1.2%</td><td class="n">6 of 14</td></tr>
+<tr><td>1, scaled 0.54</td><td>same</td><td>0.54 of the above</td><td class="n">4.2%</td><td class="n">10 of 14</td></tr>
+<tr><td>2, on top of 1</td><td>layer 14 key and value</td><td>about 1% of each</td><td class="n">8.3%</td><td class="n">14 of 14</td></tr>
+<tr><td>3, on top of 2</td><td>layer 13 gate, up, down</td><td>scaled 0.097</td><td class="n">rejected</td><td class="n">6 of 14</td></tr>
+</tbody></table></div>
+
+<p>Two things in this table are genuinely good. The steps compounded: step&nbsp;2 added about as much again without
+undoing step&nbsp;1. And the method's own prediction for step&nbsp;2 (objective 1.8827) matched the measured value
+(1.8830) almost exactly, which means the linearised chain in Section&nbsp;7.2 really described what the model does with
+that change.</p>
+
+<h2>9&nbsp;&nbsp;What the edited model actually wrote</h2>
+
+<h3>9.1&nbsp;&nbsp;The answers got worse</h3>
+
+<p>A trace measurement on held-fixed text is not the same as behaviour. So the edited models were also run normally,
+writing their own answers, on 73 questions: the 47 construction questions and the 28 historical ones (two overlap), with
+the 40 reserved questions left untouched. The final available energy, required energy and verdict were parsed from each
+answer by one parser applied identically to the original and edited answers.</p>
+
+<figure><img src="figures/fig5-answers.png" style="width:82%">
+<figcaption><b>Figure 5.</b> Ordinary greedy answers on the same 73 questions. "Both energies right" needs the correct
+available and required energy; it is an automatic screen, not a reading of the explanation. The six arithmetic-only
+controls use different labels and are not covered by the parser.</figcaption></figure>
+
+<p>The frozen A2 model (steps 1 and 2) repaired five answers, including two clean instances of the target error
+(required energy 120&nbsp;→&nbsp;90&nbsp;J and 200&nbsp;→&nbsp;150&nbsp;J), and damaged seventeen. Step&nbsp;1 alone was
+worse: complete numbers fell from 31 to 12, and answers running into the token limit doubled.</p>
+
+<h3>9.2&nbsp;&nbsp;What broke: one procedure swapped for another</h3>
+
+<p>Reading the damaged answers shows one new error, repeated. The edited model computes the energy after the descent as
+"initial kinetic energy <em>minus</em> the descent", where it used to add it. A typical line:
+"KE after descent = 90&nbsp;J − 50&nbsp;J = 40&nbsp;J". Its available energy becomes
+<i>KE</i>&nbsp;−&nbsp;descent&nbsp;−&nbsp;loss, with no randomness about it (Figure&nbsp;6).</p>
+
+<figure><img src="figures/fig6-descent.png" style="width:52%">
+<figcaption><b>Figure 6.</b> Available energy in the step-1 model's answers against the correct value, physics questions
+only. Red points fall exactly on initial kinetic energy minus descent minus loss: the descent's sign flipped. Open points
+are other wrong values, including original failures whose answers changed in other ways.</figcaption></figure>
+
+<p>This is not noise. It is a coherent procedure, used consistently on questions the edit was never fitted to, and the
+original model already used it occasionally: two GPU1 baselines made exactly this error and were set aside as a different
+error type. The edit did not teach anything new. It shifted the model from one procedure it knew to another. It weakened
+the descent's positive role everywhere, which removes the descent from the climb, and also removes it from the available
+energy where it belongs.</p>
+
+<h3>9.3&nbsp;&nbsp;Why the trace numbers did not show it</h3>
+
+<p>The five measured positions sit at "climb", while the model is setting up the required energy. By that point the
+answer already contains the available-energy line. In the conditional probe, that earlier text is the original text,
+where the descent is still added correctly. So the objective never saw the passage that got damaged: it measured the
+right thing in the wrong place. This is not a code error. Every derivative, solve and measurement was correct for the
+objective it was given. The objective only covered the positions it was pointed at, and an edit to stored weights acts
+everywhere those weights are used.</p>
+
+<p>The general lesson for the method: a trace objective measured on held-fixed text can improve while behaviour gets
+worse, if the positions it covers do not include every passage the edited weights influence. Ordinary generation has to
+be part of every evaluation.</p>
+
+<h3>9.4&nbsp;&nbsp;Where this sits in the A–D comparison</h3>
+
+<p>Round one built each edit from a single pair of answers and showed the same pattern at small scale: edit A fixed its
+target and a second problem but broke a third (the 4&nbsp;kg block). B protected the damaged contexts and lost the
+repairs. C protected the damaged contexts while preserving A's repairs and kept both. D did the same with a change shaped
+to ignore ordinary text, with 85.5% less effect on it than A. None improved new questions.</p>
+
+<p>Round two keeps the same ladder so the comparison stays clean, each rung adding one thing:</p>
+<ul>
+<li><b>A2</b>: the construction above, frozen at step&nbsp;2, unprotected. Its result includes the descent-sign
+damage; answers are measured but never used to accept or reject a step.</li>
+<li><b>B2</b>: A2 plus protection of the passages A2 damaged, the descent and available-energy positions. Checking
+ordinary answers before accepting a step starts here, because rejecting steps on behaviour is itself a protection.</li>
+<li><b>C2</b>: B2 plus preserving A2's repairs.</li>
+<li><b>D2</b>: the version shaped to ignore ordinary text, as in round one.</li>
+<li><b>A2 without the success term</b>: one extra run, so the effect of the zero target for successes is
+measured rather than assumed.</li>
+</ul>
+
+<p>The interesting question for B2 is whether protecting the descent passages also removes the climb fix, as round
+one's B did, because both may run through the same weights. If B2 keeps the repairs and removes the damage, that is the
+first deliberate, controlled capability edit. If it trades one for the other, C2 is where it gets resolved.</p>

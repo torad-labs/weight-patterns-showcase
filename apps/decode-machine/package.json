@@ -1,0 +1,23 @@
+{
+  "name": "qgre-decode-machine",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "assets": "bun tools/build-assets.ts",
+    "test": "bun test src/timeline.test.ts src/replay-model.test.ts src/tile-flow.test.ts src/diagnostic-model.test.ts src/profiling-model.test.ts src/weight-study.test.ts src/weight-storage.test.ts src/trace-model.test.ts",
+    "weights:prepare": "bun tools/prepare-weight-study.ts",
+    "replay:prepare": "bun tools/prepare-replay.mjs"
+  },
+  "dependencies": {
+    "@babylonjs/core": "9.33.3",
+    "@babylonjs/loaders": "9.33.3"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

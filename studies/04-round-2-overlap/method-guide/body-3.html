@@ -1,0 +1,134 @@
+
+<h2>6&nbsp;&nbsp;Results</h2>
+
+<p>We ran the construction once. Its rule and its prediction were written down before any answer of the edited model
+existed. What is checked is the path of computation: the traces of the edited model's own answers, set against the two
+patterns. The answers are the evidence that the capability was restored. Measurements made on given text while building
+are part of the construction and are reported as such.</p>
+
+<h3>6.1&nbsp;&nbsp;The build</h3>
+
+<p>Each matrix reached part of what it was asked: between 14% and 56% of the requested move on the moving rows, with a
+median of 43% (Figure&nbsp;4). The rows asked to stay moved 0.43 times as far as the moving rows at each matrix, and
+that movement accumulated along the path. Before the 18th matrix, the wrong answers' staying rows were 0.067 from their
+original state and the correct answers' rows 0.10, against a requested move of 0.13.</p>
+
+<figure><img src="figures/fig4-build.svg" style="width:96%">
+<figcaption><b>Figure 4.</b> The 18 matrices that were built, in path order (layer number; a = attention output,
+f = feed-forward down). Left: share of the requested move that each matrix reached on the moving rows. Right: the size
+of the requested move, and how far the rows that should not move already were from their original state before each
+matrix was solved.</figcaption></figure>
+
+<p>We stopped the build after 18 matrices, layers 0 to 8. At the 19th, nearly every solver step had to be shortened and
+one candidate took minutes instead of seconds. A reading of the partly edited model on the original text put the moving
+rows at 0.55 of the move along its direction and one whole move away to the side, which is 1.39 times further from
+their targets, in squared distance, than before any edit. The 18 matrices changed by 5.3% to 12.2% of their norm and
+took 43 minutes in total, including the passes that read the model before each one. The other 52 matrices are the
+original model's. We tested this model as it stood.</p>
+
+<h3>6.2&nbsp;&nbsp;Answers</h3>
+
+<p>The edited model answered the 60 questions of the overlap and round one's 28 questions on its own
+(Figure&nbsp;5). For the block of Section&nbsp;3, the original and the edited model write (formatting marks
+removed):</p>
+<div class="prompt">Original model
+  Kinetic Energy at bottom of descent: KE_i - PE_gain = 64 J - 40 J = 24 J
+  Available energy = 11 J     Required energy = 20 J     Verdict = NO
+
+Edited model
+  E_descent = E_initial + m g h_1 = 64 J + 40 J = 104 J
+  Available energy = 91 J     Required energy = 20 J     Verdict = YES</div>
+
+<figure><img src="figures/fig5-answers.svg" style="width:80%">
+<figcaption><b>Figure 5.</b> Complete answers before and after the edit. Only the wrong answers of the overlap were
+fitted.</figcaption></figure>
+
+<p><b>The targeted calculation.</b> Before the edit, 30 of the 60 answers add the descent energy and 30 subtract it.
+After the edit, 55 add it. Of the 30 that subtracted it, 29 now add it.</p>
+
+<p><b>Complete answers.</b> 17 of those 30 are complete. The other 12 that now add the descent make a different error
+later in the answer.</p>
+
+<p><b>Damage.</b> 12 of the 30 correct answers are no longer complete. Four of them now subtract the descent.</p>
+
+<p><b>Outside the fit.</b> Round one's 28 questions were not in the overlap or the fit. 7 of its 21 wrong answers become
+complete, where none was, and 3 of its 7 correct answers stay complete.</p>
+
+<p><b>New errors.</b> The edited model makes errors the original did not, in both groups alike. It reports the energy
+left after the climb as the available energy, adds the cost of the climb to the remaining energy, or computes the
+kinetic energy as twice or half its value.</p>
+
+<p><b>Text.</b> No answer keeps its text. 49 of the 60 open with a different sentence, and the median length rises from
+529 to 578 steps for the answers that were wrong and from 438 to 544 for those that were correct.</p>
+
+<h3>6.3&nbsp;&nbsp;Traces</h3>
+
+<p>We recorded the 60 answers of the edited model, aligned them to the same places by their computation, and measured
+each against the original patterns, with 0 at the wrong pattern and 1 at the correct one (Figure&nbsp;6).</p>
+
+<figure><img src="figures/fig6-traces.svg" style="width:92%">
+<figcaption><b>Figure 6.</b> Where each answer's trace lies between the two patterns over places 142 to 313, measured
+on the state after each matrix. Grey: original model. Blue: edited model; filled points are complete answers. Bars mark
+the medians.</figcaption></figure>
+
+<p>Over places 142 to 313, the answers that were wrong moved 0.79 of the way to the correct pattern. All 30 moved, from
+between −0.24 and 0.30 to between 0.49 and 1.24. They also moved 1.04 gaps in directions that lie along neither
+pattern, so in full distance they end 1.15 times as far from the original correct pattern as they began. In the terms
+of a walk to a hut one kilometre north, they ended 790 metres north and a kilometre east.</p>
+
+<p>The correct answers moved 1.27 gaps. Both groups end at the same median, 0.76, and are 0.54 as far apart as before.
+After the edit the two groups compute alike, and they answer alike: 17 and 18 complete of 30.</p>
+
+<p>Position along the gap goes with the calculation. The five answers that still subtract the descent lie at 0.30 to
+0.62, and the 55 that add it at 0.49 to 1.26, with a median of 0.79. In 91% of pairs, the answer that adds the descent
+lies nearer the correct pattern. Position does not separate complete answers from incomplete ones (medians 0.75 and
+0.79): the new errors are of a different kind from the one the gap measures. We have not shown that the sideways
+movement causes them. The changed wording alone can move a trace sideways.</p>
+
+<h3>6.4&nbsp;&nbsp;The reading made during the build</h3>
+
+<p>The reading that stopped the build said the moving rows were further from their targets than before any edit. The
+model it described is the one that corrects the calculation in 29 of 30 answers. That reading measures the computation
+the edited model performs on the tokens of the original answers. When the edited model answers on its own it performs a
+different computation, already from the fourth step in 40 of the 60 answers. The rows of the build therefore describe a
+computation the edited model does not perform when it answers. The traces of its own answers (Section&nbsp;6.3) are the
+measurement that does.</p>
+
+<h2>7&nbsp;&nbsp;The rest of the ladder</h2>
+
+<p>Round one protected its first edit in three further steps. B shielded what A broke, C kept A's repairs while
+cancelling its damage, and D made the edit ignore ordinary text. We ran the same ladder on the path edit, changing one
+thing per rung, and each model was tested as in Section&nbsp;6 (Table&nbsp;3).</p>
+
+<div class="tablewrap"><table>
+<caption><b>Table 3.</b> The rungs on the 60 answers of the overlap. "Available right" counts answers with the correct
+available energy, wrong group and correct group. "Along" and "to the side" are the traces of the answers that were
+wrong over places 142 to 313, in gaps.</caption>
+<thead><tr><th>Rung</th><th>Change against A</th><th class="n">Wrong, now complete</th><th class="n">Correct, still complete</th><th class="n">Available right</th><th class="n">Along</th><th class="n">To the side</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>The path edit of Section&nbsp;5</td><td class="n">17 of 30</td><td class="n">18 of 30</td><td class="n">17, 18</td><td class="n">0.79</td><td class="n">1.04</td></tr>
+<tr><td>B</td><td>The 12 correct answers A broke are added to the fit, asked to keep their state</td><td class="n">4</td><td class="n">9</td><td class="n">5, 13</td><td class="n">0.63</td><td class="n">1.00</td></tr>
+<tr><td>C</td><td>Starts from A's model; asks for the original state on the answers A damaged and A's state on the answers A repaired</td><td class="n">12</td><td class="n">16</td><td class="n">13, 17</td><td class="n">0.87</td><td class="n">1.44</td></tr>
+<tr><td>C, damaged only</td><td>C with only the damaged answers in the fit</td><td class="n">11</td><td class="n">14</td><td class="n">16, 17</td><td class="n">0.95</td><td class="n">1.16</td></tr>
+<tr><td>D</td><td>A rebuilt, with the size of each change measured by its effect on eight ordinary requests</td><td class="n">7</td><td class="n">7</td><td class="n">23, 23</td><td class="n">1.05</td><td class="n">0.78</td></tr>
+</tbody></table></div>
+
+<p><b>B.</b> Of the 12 answers B holds, 4 are complete, and 13 of the 18 correct answers it does not hold broke. The
+held rows are rows of the original text, and 51 of the 60 answers of B's model leave that text at the fourth
+token.</p>
+
+<p><b>C.</b> At the start of an answer, the rows of the damaged answers and the rows of the repaired answers are almost
+the same inputs: between 0.0% and 0.8% of a damaged answer's input lies outside the span of the repaired answers'
+inputs. A matrix cannot map one input to two outputs, and the fit satisfied neither request.</p>
+
+<p><b>D.</b> Its traces are the best of the round. Its wrong answers lie 1.05 along the gap with 0.78 to the side, and 25
+of the 30 end nearer the original correct pattern than they began, against 11 for A. The available energy is right in
+23 of 30 answers in both groups. But 31 of the 60 answers now state the required energy as climb plus descent, and only
+7 of each 30 are complete.</p>
+
+<p><b>Fractions of A.</b> We also applied A's change at 0.27, 0.58 and 0.79 of its size. These models complete 7, 5 and
+8 of the wrong answers and 15, 8 and 9 of the correct ones, against 17 and 18 for the whole edit.</p>
+
+<p>On all five models of Table&nbsp;3 the targeted calculation is repaired in 27 to 30 of the 30 wrong answers. The
+number of complete answers among them ranges from 4 to 17. No rung meets the goal of the ladder: every wrong answer
+corrected, no correct answer broken, and little effect on other text.</p>

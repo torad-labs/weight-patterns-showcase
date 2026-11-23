@@ -1,0 +1,151 @@
+{
+  "method_step": 3,
+  "operation": "single-original-vector-chance",
+  "status": "admitted_original_only",
+  "declared_at": "2026-11-15T22:13:24.558495-06:00",
+  "why_this_direction": "The source paper compares whole-vector squared departure against chance. The fixed original trace now needs a predictive individual-execution chance field, not the rejected coordinate boxes or a group-mean standard error. The independent source reading accepted this explicit adaptation; compile its original data for the connected native loop.",
+  "repeating_pattern_check": "Prior forms substituted state targets, wording-conditioned support, Taylor remainders or unsupported coordinate boxes. This form retains the reviewed full input-output turn, unchanged original reference and correspondence, every computational observation, and one radial boundary for direct requests and closure. Nothing is selected or excluded because of prompt position or token agreement.",
+  "hypothesis": "Predictive whole-vector variation of nonself original successes around the fixed observed reference supplies a useful experimental chance scale for computational departure.",
+  "what_went_wrong_before": "Coordinate boxes changed the paper's geometry and did not support complete-path stopping. Shared prompt positions do not establish a computational obstruction, and no positional cut is applied.",
+  "rule": "C[i,k]=mean_b mean_j ||T_b[j,k]-R[i,k]||^2 over the existing original nonself complete chronological paths. Compile C and its within-witness, between-witness and reference-offset decomposition. Use G>2C for divergence, without dividing C by the witness count, adding a floor, changing the reference or retuning from wrong traces. Original full and leave-one-witness-out coverage are descriptive only.",
+  "prediction": "Finite nonnegative chance and its decomposition cover every reference event and merge, with exact source identities and complete descriptive original coverage.",
+  "would_weaken_it": "Invalid or incomplete source arrays prevent compilation. Scalar variance may mask stable-direction departures; alignment and original selection exposure limit any statistical claim. An initially inside wrong trace would supply no repair request; native stalls or incomplete generations would not close the loop.",
+  "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "basis": {
+    "record": "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+    "sha256": "1be12cf319a120c009917218f3567a2fbed1fa48b5fc7dc1f90b1dbc3c5cc80d"
+  },
+  "device": "cpu",
+  "implementation": [
+    {
+      "record": "code/signal-trace/pipeline/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/native_records/run_declaration.py",
+      "sha256": "2cd26fccef5c70efc21ef14764922a84f85f72a7ca169666d3b9e077f0ed7cbf"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/__init__.py",
+      "sha256": "ec6af29f4811d4baa90cf890178bcc2215c5c325fcb6beeb46f89a5b8a3f513e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/overlap/complete_overlap.py",
+      "sha256": "021ac3fc66dac29fd4915777eb410018a051f344a93686354a5d8182a3b88c15"
+    },
+    {
+      "record": "code/signal-trace/pipeline/paths.py",
+      "sha256": "abf20ca239dbbdddfc19cc01f71a41c3848ab60c6d5a4d48682b691e26aec80d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/forbidden_bytes.py",
+      "sha256": "82ca59564eb6c66d94743abca86f2c9306d501ff08e0bc84b06317d0754dbcbe"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/input_archives.py",
+      "sha256": "f630aef06724dae0ccc0280950cd49afce0549ebe7636b051cf7db90904e047d"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/parameter_sources.py",
+      "sha256": "dd8055a0c423efac536b475e72bf9d05a8be5b86071f7f237c426212cebbbeb8"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/storage_archives.py",
+      "sha256": "f9b02c87044e2eaf1abe7229629eb50b6208d12f11d0fdf9619231ce078ff513"
+    },
+    {
+      "record": "code/signal-trace/pipeline/research_guard/verify_round2.py",
+      "sha256": "f72f78297e96a21b0712c4c4f152c82a1ec3404409ef50ed8fadd54f87ededc1"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_layout.py",
+      "sha256": "f411405196a3be873be6fe63b755d6880e030c65f51688d0073ebebd887a9250"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reading.py",
+      "sha256": "d2a3a3c4840ef78c03dfd2ab3b8fe4f15855d87b226fd998c6ce1fd7a2446f8e"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/functional_reference.py",
+      "sha256": "ca4b2a5a2d61b355ef000668f92344cce7a3dfa8b081236aabfc3ac02d5602ed"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/turn_reference.py",
+      "sha256": "886ed110f646d966fb287afc1eb4f468161a7551ed8d12263db8ae1ed68b04a0"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance_reference.py",
+      "sha256": "783e307423127ed98a24a3d9dc191eea55b8ec638bc9192527b27f9e36d767d5"
+    },
+    {
+      "record": "code/signal-trace/pipeline/weight_edit/vector_chance_run.py",
+      "sha256": "cc1cfe60813e984e4768b040f90f75999e7b9069a5d62cd407acd9e568b04943"
+    }
+  ],
+  "inputs": [
+    "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/correspondence.json",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-00-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-01-channel-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-06-channel-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-08-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-10-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-11-channel-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-15-channel-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-023-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-029-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-039-h3.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-064-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-071-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-076-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-078-h1.npy",
+    "studies/04-round-2-overlap/runs/turn-reference-original/reference.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-original"
+  ],
+  "parameters": {
+    "chance": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Equal mass per nonself original witness, equal mass per mapped event within that witness; no extra divisor by the witness count.",
+      "scales_with": "Recorded paths and full original turn vectors."
+    },
+    "boundary": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "rho=sqrt(2C); G>2C is the supplied paper's signal-dominance distinction applied to predictive individual variation.",
+      "scales_with": "Original squared vector chance at each reference event/merge."
+    },
+    "reference": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Keep the observed medoid and existing complete chronological paths of the hash-bound original compilation unchanged.",
+      "scales_with": "The original fitting-success inventory, never wrong/current outcomes."
+    },
+    "precision": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Read canonical CPU float64 original turns; compute chance and decomposition in float64 with no numerical floor.",
+      "scales_with": "Original observation dtypes and runtime canonical normalization."
+    },
+    "coverage": {
+      "measured_from": "records/retrospectives/2026-11-15-vector-chance-astra.md",
+      "derivation": "Read all full and leave-one-witness-out original distances against the same vector boundary; no pass-fraction or complete-witness admission gate.",
+      "scales_with": "Every original mapped event and merge."
+    }
+  },
+  "authorization_scope": "Original-only step-3 compilation under the coherent explicit construction in records/retrospectives/2026-11-15-independent-source-review-peer.md; no native correction is admitted by compilation.",
+  "commands": {
+    "compile": "uv run -q --directory code/signal-trace --with torch --with numpy python -m pipeline.weight_edit.vector_chance_run ../../studies/04-round-2-overlap/runs/vector-chance-original"
+  }
+}

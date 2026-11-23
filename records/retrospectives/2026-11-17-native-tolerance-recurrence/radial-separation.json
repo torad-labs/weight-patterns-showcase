@@ -1,0 +1,272 @@
+{
+  "reference_position": 312,
+  "merge": 61,
+  "positive_distances": [
+    {
+      "member": "expanded-004-h1",
+      "current_position": 312,
+      "distance": 0.0,
+      "basis": "exact reference self"
+    },
+    {
+      "member": "discovery-01-channel-h1",
+      "current_position": 312,
+      "distance": 0.008323724398232035,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "discovery-06-channel-h1",
+      "current_position": 322,
+      "distance": 0.1095317248440127,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "discovery-15-channel-h1",
+      "current_position": 364,
+      "distance": 0.293308939316057,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "discovery-00-channel-h3",
+      "current_position": 357,
+      "distance": 0.4362454035120301,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "discovery-08-channel-h3",
+      "current_position": 325,
+      "distance": 0.14878345085744812,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "discovery-10-channel-h3",
+      "current_position": 325,
+      "distance": 0.14725604694302108,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "expanded-029-h1",
+      "current_position": 312,
+      "distance": 0.38419845757524385,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "discovery-11-channel-h3",
+      "current_position": 324,
+      "distance": 0.09812620942507522,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "expanded-064-h1",
+      "current_position": 323,
+      "distance": 0.11067639142714016,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "expanded-071-h1",
+      "current_position": 319,
+      "distance": 0.7022634760492419,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "expanded-039-h3",
+      "current_position": 317,
+      "distance": 0.7106109363226054,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "expanded-076-h1",
+      "current_position": 313,
+      "distance": 0.38015677692651206,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "expanded-078-h1",
+      "current_position": 313,
+      "distance": 0.38391862531933385,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    },
+    {
+      "member": "expanded-023-h1",
+      "current_position": 312,
+      "distance": 0.026413946887467135,
+      "basis": "retained native F32 turn versus fixed F64 reference"
+    }
+  ],
+  "wrong_distances": [
+    {
+      "member": "discovery-05-channel-h1",
+      "current_position": 312,
+      "distance": 0.3933314587885039
+    },
+    {
+      "member": "expanded-001-h3",
+      "current_position": 363,
+      "distance": 0.4868120487841708
+    },
+    {
+      "member": "expanded-020-h1",
+      "current_position": 325,
+      "distance": 0.4347156514646662
+    },
+    {
+      "member": "expanded-034-h3",
+      "current_position": 378,
+      "distance": 0.48324947410925967
+    },
+    {
+      "member": "expanded-042-h3",
+      "current_position": 378,
+      "distance": 0.4865647785434585
+    },
+    {
+      "member": "expanded-045-h1",
+      "current_position": 312,
+      "distance": 0.3931789091347285
+    },
+    {
+      "member": "expanded-046-h3",
+      "current_position": 312,
+      "distance": 0.3922677405305454
+    },
+    {
+      "member": "expanded-068-h1",
+      "current_position": 313,
+      "distance": 0.39555857012776785
+    },
+    {
+      "member": "expanded-070-h1",
+      "current_position": 313,
+      "distance": 0.3986272930548256
+    },
+    {
+      "member": "expanded-087-h3",
+      "current_position": 312,
+      "distance": 0.4300900398471689
+    },
+    {
+      "member": "expanded-092-h1",
+      "current_position": 312,
+      "distance": 0.4434888054807188
+    },
+    {
+      "member": "expanded-094-h1",
+      "current_position": 313,
+      "distance": 0.42502692058671304
+    },
+    {
+      "member": "expanded-095-h1",
+      "current_position": 313,
+      "distance": 0.42384003362729383
+    }
+  ],
+  "maximum_positive": {
+    "member": "expanded-039-h3",
+    "current_position": 317,
+    "distance": 0.7106109363226054,
+    "basis": "retained native F32 turn versus fixed F64 reference"
+  },
+  "minimum_wrong": {
+    "member": "expanded-046-h3",
+    "current_position": 312,
+    "distance": 0.3922677405305454
+  },
+  "fitted_wrong": {
+    "member": "discovery-05-channel-h1",
+    "current_position": 312,
+    "distance": 0.3933314587885039
+  },
+  "preserve_all_positive_and_flag_all_wrong_exists": false,
+  "preserve_all_positive_and_flag_fitted_wrong_exists": false,
+  "all_wrong_radius_interval": {
+    "lower_inclusive": 0.7106109363226054,
+    "upper_exclusive": 0.3922677405305454
+  },
+  "fitted_wrong_radius_interval": {
+    "lower_inclusive": 0.7106109363226054,
+    "upper_exclusive": 0.3933314587885039
+  },
+  "original_radius": 0.5060302460432016,
+  "original_positive_outside": 2,
+  "original_wrong_outside": 0,
+  "criterion": "For the fixed reference-centered ball, preserving every positive requires rho>=max positive distance; flagging every wrong requires rho<min wrong distance. The same criterion with the fitted distance tests fitted separation.",
+  "scope": "Conditional on these existing computational pairs, the fixed centre, these retained native-export vectors, and the training-only inventory. No new radius selected.",
+  "analysis": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/analysis.json",
+    "sha256": "1e7261846966a14627357b82cca4cbe39e99570c12458c6d652f1c10f7af0906"
+  },
+  "program": {
+    "record": "records/retrospectives/2026-11-17-native-tolerance-recurrence/radial.py",
+    "sha256": "4379d8a19664136b093baf9ee41f2296a0f513631d870a7272d88084914887f3"
+  },
+  "bindings": {
+    "studies/04-round-2-overlap/runs/success-set-reference-original/turns/turns.json": {
+      "sha256": "af21cb435e5fa6610e7e0c72199682226b0ce1e121b417e569f0fc71b2549923",
+      "bytes": 43055
+    },
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json": {
+      "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4",
+      "bytes": 8682
+    },
+    "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy": {
+      "sha256": "1b7ccbe9996af857f98d8a213fa3461e3cdd42f57906d4518f2b2f775184b2af",
+      "bytes": 722534528
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-01-channel-h1/turns.npy": {
+      "sha256": "80a62ad17161d3b9696a45576886f6f6d1fce11fc670fa6bd4d901ec6dcecd05",
+      "bytes": 250306688
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-06-channel-h1/turns.npy": {
+      "sha256": "892f8ad8aca62ba76e3e4de52db069c5230ddbfdde7f78d9ed6e74f937c71701",
+      "bytes": 263854208
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-15-channel-h1/turns.npy": {
+      "sha256": "3918511098b85aaf8cd4f1787ee1c38d4cf503f652846380629d33efe6537e73",
+      "bytes": 297400448
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-00-channel-h3/turns.npy": {
+      "sha256": "1878e19d6cc26b70a97f48fdf628a7529905f5e9775930eba2e33b04e7b0d21f",
+      "bytes": 404490368
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-08-channel-h3/turns.npy": {
+      "sha256": "bbe7512d3b48b5e6fc46caaf99212674b72550b400a79d5a124a0d24086ba151",
+      "bytes": 294174848
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-10-channel-h3/turns.npy": {
+      "sha256": "6bb643730b4ee9e3fb94cfed13dda5b47bec9ac1e2486677ee43fcfe2cb671ce",
+      "bytes": 316754048
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-029-h1/turns.npy": {
+      "sha256": "bd7dda38e26cfc9924a64ce655897f55fdf3e83af16452c1ee75650890fe1823",
+      "bytes": 267079808
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/discovery-11-channel-h3/turns.npy": {
+      "sha256": "6e4d7829c1d2446f22364d31b3284af857241d25ce72b5d40d514e37d4addb7b",
+      "bytes": 263209088
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-064-h1/turns.npy": {
+      "sha256": "222685dbecc9fc5f906b120001d5af534a2cdddb5cc7558ec36a853bdf7a8ec2",
+      "bytes": 305787008
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-071-h1/turns.npy": {
+      "sha256": "ce81f9093a38bf611bad9e8a227ff0965a5d3f8525f684e3429b471c2b1c748a",
+      "bytes": 319334528
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-039-h3/turns.npy": {
+      "sha256": "fca12c31ed3934ffea62a0e1ac854c0589c88e2e4fa77fd4cf69c5f9161c085a",
+      "bytes": 267079808
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-076-h1/turns.npy": {
+      "sha256": "ba1422e3a24895b1adbb29b44a9e379582dc4e91818160b427f9cca00fb0be33",
+      "bytes": 265789568
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-078-h1/turns.npy": {
+      "sha256": "147fa14437e15ff8f9b6cdcf7d22d8872b65b20b1192d5f8493ba0161153e673",
+      "bytes": 272240768
+    },
+    "studies/04-round-2-overlap/runs/wide-overlap/exported/expanded-023-h1/turns.npy": {
+      "sha256": "05f0bbf5fe0b2030f5db67ded3cb9c8f03f5c8ea7e71d13a4c2e58a05115497c",
+      "bytes": 269015168
+    }
+  }
+}

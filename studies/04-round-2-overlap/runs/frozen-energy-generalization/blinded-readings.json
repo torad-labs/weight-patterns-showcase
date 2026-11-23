@@ -1,0 +1,1493 @@
+{
+ "0b7509d905eb39": {
+  "available": {
+   "status": "wrong",
+   "value": 16
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 29
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Uses 49\u221220=29 and 29\u221213=16, then wrongly adds 1 and 3 m in the required climb to get 80 J. NO follows the comparison.",
+  "friction": {
+   "incoming": 29,
+   "outgoing": 16,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "status": "wrong",
+   "value": 80
+  },
+  "response_sha256": "e1c3c9d4dcf4d6b80d8dcda910aba3db179516c9896634a1b1c9a1cd4129a8df",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "233e5ad7744ca9": {
+  "available": {
+   "status": "right",
+   "value": 52
+  },
+  "bottom": {
+   "status": "right",
+   "value": 65
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "25+40=65 before rough and 65\u221213=52 after. Compares the carried 52 against mgh=60 at the requested 3 m climb.",
+  "friction": {
+   "incoming": 65,
+   "outgoing": 52,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "130492aa01b82267f66735865002a8e2523c840048ee9241316e949c15f4a107",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "3006badb097d78": {
+  "available": {
+   "status": "right",
+   "value": 91
+  },
+  "bottom": {
+   "status": "right",
+   "value": 104
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Carries 64+40=104 through 104\u221213=91. Compares 91 with a 20 J climb and reaches YES.",
+  "friction": {
+   "incoming": 104,
+   "outgoing": 91,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 64
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 20
+  },
+  "response_sha256": "390f15d78ff683a142bd2cbc6fe61a46207738d9e706395e643bde5f25a2c717",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "3421b95a14737c": {
+  "available": {
+   "status": "right",
+   "value": 76
+  },
+  "bottom": {
+   "asserted_kinetic_j": 49,
+   "carried_before_friction_j": 89,
+   "status": "wrong",
+   "value": 49
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit_effect_on_propagated_mechanical_energy",
+   "kinetic_effect_j": 0,
+   "kinetic_relation_status": "wrong",
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Calls bottom kinetic energy 49 but carries 49+40=89 as mechanical energy; uses 89\u221213=76, then assigns 40 potential and 36 kinetic at the rough section. Uses 2+3=5 m for 100 J and gives NO.",
+  "friction": {
+   "incoming": 89,
+   "outgoing": 76,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": "Physically false component/datum accounting despite positive gravitational contribution to the carried energy and correct available amount.",
+  "required": {
+   "status": "wrong",
+   "value": 100
+  },
+  "response_sha256": "8f128889c16ba21f633dde092908e99387942ea5c6d64bd16d397d6200b69e93",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "wrong",
+   "value": "NO"
+  }
+ },
+ "43211db488f5d9": {
+  "available": {
+   "status": "right",
+   "value": 91
+  },
+  "bottom": {
+   "status": "right",
+   "value": 104
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "The propagated energy is explicitly 64+40=104, then 104\u221213=91. The 1 m climb needs 20 J and the verdict is YES.",
+  "friction": {
+   "incoming": 104,
+   "outgoing": 91,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 64
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 20
+  },
+  "response_sha256": "5e746597b1496615fe45f9a9650f8ec6f0dfe797d19480be54286895b5e7a0e0",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "4893e766255df3": {
+  "available": {
+   "status": "wrong",
+   "value": 55
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 66
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -30,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Computes 96 \u2212 30 = 66 and 66 \u2212 11 = 55, then uses 1+1=2 m for 60 J required. 55<60 is locally consistent.",
+  "friction": {
+   "incoming": 66,
+   "outgoing": 55,
+   "signed_effect_j": -11,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 96
+  },
+  "qualification": null,
+  "required": {
+   "status": "wrong",
+   "value": 60
+  },
+  "response_sha256": "068f98fb5f31dbef244061541c231d37b413cefba6e7c605bab1771a89ea53cc",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "wrong",
+   "value": "NO"
+  }
+ },
+ "492e334bab2dfb": {
+  "available": {
+   "status": "wrong",
+   "value": 0
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 5
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Computes 25\u221220=5 for the descent, then 5\u221213=\u22128 and clamps available energy to zero. Correctly uses 60 J for the climb.",
+  "friction": {
+   "incoming": 5,
+   "outgoing": -8,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "de49f22bfc771ac36c8b8638aa32daf1d32e3a8e81e6386b34a1f7b14f35440e",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "593468b843bdf4": {
+  "available": {
+   "status": "wrong",
+   "value": 55
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 66
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": -30,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Uses 96\u221230=66 and 66\u221211=55; the 1 m climb needs 30 J. YES is physically correct but available energy should be 115.",
+  "friction": {
+   "incoming": 66,
+   "outgoing": 55,
+   "signed_effect_j": -11,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 96
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 30
+  },
+  "response_sha256": "03f78cd5af10398c95d0da3e14b319973da1f028e68621c7507357ea48a3931c",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "5c40756e72cf1d": {
+  "available": {
+   "status": "wrong",
+   "value": 0
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 5
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Explicitly computes 25\u221220=5 and 5\u221213=\u22128; clips final available to 0, uses 60 J climb. The downhill sign causes the shortage.",
+  "friction": {
+   "incoming": 5,
+   "outgoing": -8,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "48916716ef37173f10a80a04af1733aae7d5bab5e04ebae38d7af4c55eae90ce",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "5effeedf80529c": {
+  "available": {
+   "status": "wrong",
+   "value": 16
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 29
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Calculates 49\u221220=29 for the downhill, then 29\u221213=16 for friction; 3 m requires 60 J and the verdict happens to be NO.",
+  "friction": {
+   "incoming": 29,
+   "outgoing": 16,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "4d3207d2e5f78a3ee704870386917a98aa80189b82745047a607bd4f6491b906",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "6da9d98e575f03": {
+  "available": {
+   "status": "wrong",
+   "value": 55
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 66
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": -30,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Subtracts the 30 J descent in 96\u221230=66, then correctly subtracts 11 from 66. Uses the actual one-metre climb for 30 J and reaches the right verdict despite the wrong available energy.",
+  "friction": {
+   "incoming": 66,
+   "outgoing": 55,
+   "signed_effect_j": -11,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 96
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 30
+  },
+  "response_sha256": "e99077a8b0374d67d042ecebbe343b95988f305eb01222bc7cad100d1eaaf8c2",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "6e8232e69d6b40": {
+  "available": {
+   "status": "wrong",
+   "value": 0
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 5
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Uses 25\u221220=5; subtracts 13 to get \u22128 and clamps the available energy to 0. Calculates 60 J using the actual climb. NO is physically correct despite the wrong downhill route.",
+  "friction": {
+   "incoming": 5,
+   "outgoing": -8,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "ab9d438f6a79fae2fe284b57c65853f01a27353b5a3e8076d442fad8b4f7b28c",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "7195eeccc1c41e": {
+  "available": {
+   "status": "right",
+   "value": 44
+  },
+  "bottom": {
+   "status": "right",
+   "value": 56
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "The model adds 40 to 16, carries 56 into 56\u221212=44, and compares against 20 J.",
+  "friction": {
+   "incoming": 56,
+   "outgoing": 44,
+   "signed_effect_j": -12,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 16
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 20
+  },
+  "response_sha256": "d53056ea65c546f5152a0d87a1697bcf3b3c85badb985687f5094e8908576b83",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "798a1df6a44435": {
+  "available": {
+   "status": "right",
+   "value": 32
+  },
+  "bottom": {
+   "status": "right",
+   "value": 45
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 20,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Bottom KE is explicitly 25+20=45. Uses 45\u221213=32 for available energy and requires 60 J. Verdict NO.",
+  "friction": {
+   "incoming": 45,
+   "outgoing": 32,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "b8f6c56c9af3417022e984cb2d9bc85b1fe3c4db7ebe260c828b5fe0c80d6f38",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "88cad622a5ca02": {
+  "available": {
+   "status": "wrong",
+   "value": 12
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 5
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Uses 25\u221220=5, then 5\u221213=\u22128 and clamps to 0. Later ignores this result, reports 25\u221213=12 available and 80 required from 1+3 m. Local rough subtraction correct; final energy bookkeeping inconsistent.",
+  "friction": {
+   "incoming": 5,
+   "outgoing": -8,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "wrong",
+   "value": 80
+  },
+  "response_sha256": "81a5f3054da9db8d19081cddf442e603faf455026edfa5446cc34988d84a2fdf",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "9c304d0c587e7d": {
+  "available": {
+   "evidence_mode": "stated_post_friction_amount_without_final_summary",
+   "status": "wrong",
+   "value": -13
+  },
+  "bottom": {
+   "carried_before_friction_j": 0,
+   "raw_arithmetic_j": -15,
+   "status": "wrong",
+   "value": 0
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -40,
+   "status": "wrong"
+  },
+  "ended": false,
+  "evidence": "Repeatedly writes 25\u221240=\u221215, then posits a stop at 0 before carrying 0\u221213=\u221213. Starts the 3 m climb formula, truncates mid-equation. No final required amount or verdict.",
+  "friction": {
+   "incoming": 0,
+   "outgoing": -13,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "unobservable",
+   "symbolic_observation": "Identifies the correct 3 m rise, starts mgh, and never completes the amount.",
+   "value": null
+  },
+  "response_sha256": "cf06597d24059a5497378560914fe83921f62338700c78c9d503a04ecd49a67b",
+  "stopped_at_limit": true,
+  "verdict": {
+   "on_reported_inputs": "unobservable",
+   "status": "unobservable",
+   "value": null
+  }
+ },
+ "9f5c7867d54340": {
+  "available": {
+   "status": "wrong",
+   "value": 56
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 9
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -40,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Explicitly subtracts 40 on descent and 13 on rough stretch, then adds the required 60 to the \u22124 and calls that 56 available. Compares 56 with 60.",
+  "friction": {
+   "incoming": 9,
+   "outgoing": -4,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "51aabb815d3041aaf426ed50fd41792ec271d821cca1523d49e1603d7227fbae",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "wrong",
+   "value": "NO"
+  }
+ },
+ "a364a0001ff1d0": {
+  "available": {
+   "status": "wrong",
+   "value": -8
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 5
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Treats a positive 20 J descent release as a subtraction; 25\u221220=5; 5\u221213=\u22128 available. The 3 m climb requires 60 and NO happens to be correct.",
+  "friction": {
+   "incoming": 5,
+   "outgoing": -8,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "d810eab209a6965b24bbf035c1bd711ae9541930037825823175776682471afb",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "ab084d4814fb56": {
+  "available": {
+   "status": "right",
+   "value": 76
+  },
+  "bottom": {
+   "status": "right",
+   "value": 89
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Before the rough section uses 49+40=89, then explicitly 89\u221213=76 and compares 76>60.",
+  "friction": {
+   "incoming": 89,
+   "outgoing": 76,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "988bf71aa03543750ed1819a8aa2b73cad4fb7a9206a35689d85c41b85549a4f",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "b01bdc124b342b": {
+  "available": {
+   "status": "wrong",
+   "value": 16
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 29
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Uses 49\u221220=29 then 29\u221213=16. Adds downhill and uphill distances to infer required 80; prints 80 despite also deriving 64. NO follows its operands and happens to match the physical verdict.",
+  "friction": {
+   "incoming": 29,
+   "outgoing": 16,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "earlier_values": [
+    64
+   ],
+   "status": "wrong",
+   "value": 80
+  },
+  "response_sha256": "5ef10874dd8343e066e676b2df1a2981ecf6e93dd10da94ddc0741cde7ad764a",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "b25acadf0ceae7": {
+  "available": {
+   "status": "right",
+   "value": 44
+  },
+  "bottom": {
+   "status": "right",
+   "value": 56
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Uses 16+40=56 before rough, 56\u221212=44, 1 m for 20 required, and compares correctly.",
+  "friction": {
+   "incoming": 56,
+   "outgoing": 44,
+   "signed_effect_j": -12,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 16
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 20
+  },
+  "response_sha256": "7f087dd6610e1ec03cd6f510d48387de94f30c11f6db0e676a51cd4be9a72a96",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "c0fb1ae9bbc18c": {
+  "available": {
+   "status": "right",
+   "value": 32
+  },
+  "bottom": {
+   "carried_before_friction_j": 45,
+   "status": "wrong",
+   "value": 25
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "kinetic_effect_j": 0,
+   "kinetic_relation_status": "wrong",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 20,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Asserts bottom KE is unchanged at 25, then adds downhill 20 into the carried 45; 45\u221213=32 and compares 32<60.",
+  "friction": {
+   "incoming": 45,
+   "outgoing": 32,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "78a688df82813f6d2682ad8446432b5dce81405bffb828dca8d67335315e3d0d",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "c536f3dd5e6d57": {
+  "available": {
+   "status": "wrong",
+   "value": 16
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 29
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Uses 49\u221220=29 downhill, then 29\u221213=16. Correctly requires 60 J and answers NO for the wrong available amount.",
+  "friction": {
+   "incoming": 29,
+   "outgoing": 16,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "05a95fa5dac8833a5f9e37a8f3d9a081a18846584560064975acb95ef6a32a87",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "d04629de904657": {
+  "available": {
+   "status": "wrong",
+   "value": 0
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 9
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -40,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Writes 49\u221240=9 and 9\u221213=\u22124, then clamps to zero and compares against correctly computed 60 J. Correct answer for the actual case is YES.",
+  "friction": {
+   "incoming": 9,
+   "outgoing": -4,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "47aa58c9aa6e757836569b8ea9c80f9f2a586d55faf0b5e0d434f64e6fa623f5",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "wrong",
+   "value": "NO"
+  }
+ },
+ "d339cd95ef590a": {
+  "available": {
+   "all_branches_physically_wrong": true,
+   "alternative_expression": "25\u221253",
+   "printed_branch_values": [
+    -13
+   ],
+   "status": "ambiguous",
+   "value": null
+  },
+  "bottom": {
+   "carried_before_friction_j": 0,
+   "raw_arithmetic_j": -15,
+   "status": "wrong",
+   "value": 0
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -40,
+   "status": "wrong"
+  },
+  "ended": false,
+  "evidence": "Consistently counts gravity as a 40 J loss; derives \u221215, hypothesizes zero at bottom and calculates 0\u221213=\u221213, then restarts with an incompatible 25\u221253 expression when cut off.",
+  "friction": {
+   "incoming": 0,
+   "outgoing": -13,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": "No final adopted available energy, climb requirement or verdict; parenthetical \u201cthis path leads to failure\u201d refers to a branch.",
+  "required": {
+   "status": "unobservable",
+   "value": null
+  },
+  "response_sha256": "9142a015e5fa8a91eeaffefe149f7d47793d5ddd53848ac8ccffd1b3277bde2c",
+  "stopped_at_limit": true,
+  "verdict": {
+   "on_reported_inputs": "unobservable",
+   "status": "unobservable",
+   "value": null
+  }
+ },
+ "d58aba3856b8b7": {
+  "available": {
+   "status": "wrong",
+   "value": 11
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 24
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -40,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Writes KE_i \u2212 PE_gain = 64 \u2212 40 = 24; then 24 \u2212 13 = 11. The 20 J climb is correct, and 11 < 20 accounts for its physically wrong NO.",
+  "friction": {
+   "incoming": 24,
+   "outgoing": 11,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 64
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 20
+  },
+  "response_sha256": "ccb67f251456e63c8e68aebcde08c6696a155b0f3e2bfe8a882693f1ec0b86e4",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "wrong",
+   "value": "NO"
+  }
+ },
+ "d6dc76ce3d1169": {
+  "available": {
+   "status": "right",
+   "value": 91
+  },
+  "bottom": {
+   "status": "right",
+   "value": 104
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Computes 64+40=104 before friction, 104\u221213=91 and a 20 J climb. Calls the positive downhill allowance \u201cpotential energy gained.\u201d",
+  "friction": {
+   "incoming": 104,
+   "outgoing": 91,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 64
+  },
+  "qualification": "Arithmetic follows the correct downhill allowance. The wording mislabels the direction of the potential-energy change.",
+  "required": {
+   "status": "right",
+   "value": 20
+  },
+  "response_sha256": "a6833d34527a8c8d08b422c5f96a2b520c1fdc51a0e708ad1a3a801ca730b56e",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "df06e29798ab5d": {
+  "available": {
+   "status": "right",
+   "value": 52
+  },
+  "bottom": {
+   "status": "right",
+   "value": 65
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "25+40=65 before friction, 65\u221213=52 after, then 52<60 implies NO.",
+  "friction": {
+   "incoming": 65,
+   "outgoing": 52,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "b4c1ecbdcbcc3855ec643333a0314d3df7a2889f3582f4c8fb70acf9a4c9c68d",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "e0ec9cab943e56": {
+  "available": {
+   "status": "wrong",
+   "value": 36
+  },
+  "bottom": {
+   "status": "wrong",
+   "value": 29
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "signed_effect_j": -20,
+   "status": "wrong"
+  },
+  "ended": true,
+  "evidence": "Explicitly subtracts positive descent loss: 49\u221220=29. Performs 29\u221213=16 then adds back a 20 J potential term and reports 36 available. Uses the right 60 J requirement and physically correct NO for wrong energy.",
+  "friction": {
+   "incoming": 29,
+   "outgoing": 16,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "17a5fabed47c6ed796aa25e72471d2e84a5487ed99110154b8c8a7e218072aba",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "ea020d4fc37cb7": {
+  "available": {
+   "status": "right",
+   "value": 44
+  },
+  "bottom": {
+   "status": "right",
+   "value": 56
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Carries 16+40=56 through 56\u221212=44 and compares 44 to the required 20 J.",
+  "friction": {
+   "incoming": 56,
+   "outgoing": 44,
+   "signed_effect_j": -12,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 16
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 20
+  },
+  "response_sha256": "c237b6d470abe8993aa36e781a9b9c431042190ce55eb3fe67389408b024d5fa",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "f2f5b5073ec32d": {
+  "available": {
+   "status": "right",
+   "value": 76
+  },
+  "bottom": {
+   "status": "right",
+   "value": 89
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Computes 49+40=89 and 89\u221213=76. Calls 60\u221276=\u221216 a required energy and then a surplus, and explicitly adopts 60 for the required climb and comparison.",
+  "friction": {
+   "incoming": 89,
+   "outgoing": 76,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": "Labels the added downhill term as potential gained.",
+  "required": {
+   "earlier_values": [
+    -16
+   ],
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "d4592674771edae44fabf8d16e19505eb560ae831776ebc78794b7b50430e660",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "YES"
+  }
+ },
+ "f513518e6a94ef": {
+  "available": {
+   "status": "right",
+   "value": 52
+  },
+  "bottom": {
+   "status": "right",
+   "value": 65
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit_kinematics_equivalent",
+   "potential_change_mislabeled_as_gain": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": false,
+  "evidence": "Adds 2gh in v\u00b2 = 25+40 = 65; \u00bdmv\u00b2 therefore gives 65 J at bottom. Computes 65\u221213=52. Also argues for 100/88 J before stating 52 and 60 and truncating at a self-correction. No verdict.",
+  "friction": {
+   "incoming": 65,
+   "outgoing": 52,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "unresolved",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": "Last shown climb requirement is the correct 60 J, but earlier incompatible calculations and an interrupted self-correction leave final adoption unresolved.",
+  "required": {
+   "earlier_values": [
+    100,
+    88
+   ],
+   "status": "ambiguous",
+   "value": 60
+  },
+  "response_sha256": "5d03f0aa6f0c726d647b0a120fbbf2382204064dfc461e7915d31151d0d3300f",
+  "stopped_at_limit": true,
+  "verdict": {
+   "on_reported_inputs": "unobservable",
+   "status": "unobservable",
+   "value": null
+  }
+ },
+ "fb78bb5c5a90f8": {
+  "available": {
+   "status": "right",
+   "value": 52
+  },
+  "bottom": {
+   "status": "right",
+   "value": 65
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "first_signed_effect_j": -40,
+   "self_corrected": true,
+   "signed_effect_j": 40,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Initially subtracts 40 and gets \u221215 but explicitly corrects to 25+40=65, checks via velocity and carries 65 into friction. Then 52/60/NO.",
+  "friction": {
+   "incoming": 65,
+   "outgoing": 52,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "right",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "5eee5d4acc5cdf6a0080d548b4740d02db290bcdc98b7757ed7374a27c78f0ac",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ },
+ "fc9e26c4be871e": {
+  "available": {
+   "status": "wrong",
+   "value": 12
+  },
+  "bottom": {
+   "carried_before_friction_j": 25,
+   "status": "wrong",
+   "value": -15
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit",
+   "later_effect_delivered_to_friction_j": 0,
+   "signed_effect_j": -40,
+   "status": "wrong"
+  },
+  "ended": false,
+  "evidence": "Twice derives 25\u221240=\u221215 downhill. Later uses initial 25 instead of that bottom result, subtracts 13 to get 12 available, and cuts off before calculating required joules or verdict.",
+  "friction": {
+   "incoming": 25,
+   "outgoing": 12,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 25
+  },
+  "qualification": null,
+  "required": {
+   "status": "unobservable",
+   "symbolic_observation": "Distinguishes the 3 m climb from its 1 m end elevation measured from the original start.",
+   "value": null
+  },
+  "response_sha256": "93e2e58a2663766cc95c4d15f393769cecb377075080e1f80412cc90ecd4d68a",
+  "stopped_at_limit": true,
+  "verdict": {
+   "on_reported_inputs": "unobservable",
+   "status": "unobservable",
+   "value": null
+  }
+ },
+ "fe988b9318e419": {
+  "available": {
+   "status": "right",
+   "value": 56
+  },
+  "bottom": {
+   "asserted_kinetic_j": 49,
+   "carried_before_friction_j": 69,
+   "status": "wrong",
+   "value": 49
+  },
+  "downhill": {
+   "arithmetic_on_incoming": "right",
+   "evidence_mode": "explicit_effect_on_propagated_mechanical_energy",
+   "kinetic_effect_j": 0,
+   "kinetic_relation_status": "wrong",
+   "signed_effect_j": 20,
+   "status": "right"
+  },
+  "ended": true,
+  "evidence": "Says bottom kinetic energy stays 49, then explicitly carries 49+20=69 as mechanical energy into 69\u221213=56. The amount and sign used for friction, 3 m climb and NO are right. The assertion of unchanged bottom kinetic energy is physically wrong.",
+  "friction": {
+   "incoming": 69,
+   "outgoing": 56,
+   "signed_effect_j": -13,
+   "status": "right"
+  },
+  "full_numerical_chain": "wrong",
+  "initial": {
+   "status": "right",
+   "value": 49
+  },
+  "qualification": "The carried energy is correct with +20 J, but its explicit bottom kinetic energy contradicts that interpretation. Do not classify the complete reasoning as correct.",
+  "required": {
+   "status": "right",
+   "value": 60
+  },
+  "response_sha256": "db6df347e4e24b2813f8d001445fe3ddf269a10c9fc922e418f8afe2df15b25c",
+  "stopped_at_limit": false,
+  "verdict": {
+   "on_reported_inputs": "right",
+   "status": "right",
+   "value": "NO"
+  }
+ }
+}

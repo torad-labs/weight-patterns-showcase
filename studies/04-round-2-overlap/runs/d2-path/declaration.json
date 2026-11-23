@@ -1,0 +1,132 @@
+{
+ "method_step": [
+  6
+ ],
+ "run_by": "Claude (weight-research-fable), with Astra (weight-research-astra) as thinking partner. The formulation was sent to Astra for objection before this declaration was written.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "target_source": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+ "baseline": "studies/04-round-2-overlap/runs/a2-path/baseline",
+ "matrices_source": "studies/04-round-2-overlap/runs/a2-path/edit.json",
+ "ordinary": {
+  "cases": "studies/04-round-2-overlap/runs/d2-path/ordinary/cases.json",
+  "original": "studies/04-round-2-overlap/runs/d2-path/ordinary/original",
+  "weighed": "background-calibration",
+  "read": "background-heldout",
+  "beside": {
+   "a2-path": "studies/04-round-2-overlap/runs/a2-path/model/a2-path.gguf"
+  },
+  "origin": "The 24 requests are round one's, copied here unchanged with their groups, as full-overlap carries round one's 28 questions: the 12 ordinary requests of its background study (studies/03-round-1-single-pair-edits/D-background-sensitivity/run/background-cases.json, sha256 f3cb3268f55c9ddf680a5d1e53f2d517cc7447cf46a164a4a0522f6be9c52ed1; 8 calibration, 4 held out) and its 12 controls (control-cases.json there, sha256 eda210a536701d723d4545a283a4d167ddaa36a40e8bab326007bd223b700ae6; arithmetic and language). No answer, trace, weight or statistic of round one is read: the original model answers them again inside this run."
+ },
+ "hypothesis": "The capability leaves a recurring difference between the traces of correct and wrong answers, from where the two shared patterns part until they reconcile, and closing it in the weights repairs the capability. a2-path closes it and repairs the calculation (29 of the 30 answers that subtracted the descent no longer do, 17 complete), and it also acts where nothing was asked: on rows asked to keep their state, on the question's positions, on every answer's opening. D2 asks whether the same edit, with the size of each matrix's change measured by what it does to the inputs of ordinary requests instead of by its weights, still repairs the calculation while acting less on everything else.",
+ "what_went_wrong_before": "The two C2 runs (their answers.json and build.jsonl; results not yet written when this was declared). c2-path, which fitted the answers a2-path damaged and the ones it repaired on the contexts through each answer's first changed token, compromised by step and not by answer: the damaged answers' rows kept 0.38 to 0.54 of a2-path's action and the repaired answers' same opening steps 0.45 to 0.68, as the inputs said they would (at these layers the two sets of rows are the same inputs: at most 4.4% of a damaged row lies outside what the repaired rows span). On its own answers 3 of the 12 damaged are complete, 10 of the 17 repaired stay complete, 12 of 30 wrong and 16 of 30 correct in all (a2-path 17 and 18). c2-protected, which fitted the damaged answers alone, returned their rows to the original state at all 18 matrices on the given text (0.01 to 0.05 of a2-path's action left) with a correction of 2 to 9% of a2-path's change, and the model's own preference at the fourth token still moved 0.21 to 0.37 of a score (median 0.28) against a2-path's 0.24 to 0.45 (median 0.34): about four fifths of that shift does not pass through those rows' own states at the edited layers. 3 of the 12 damaged are complete, 7 of the 17 repaired, 11 and 14 in all. Asking rows for their state did not keep them in a2-path (rows asked to stay moved 0.43 times as far as rows asked to move), did not hold b2-path's answers, and could not separate answers in C2.",
+ "why_this_direction": "Step 6 of the method: D2 weighs the inputs by the background statistics of ordinary requests, as round one's D did with A. Round one's D kept A's design and replaced its read direction by (M + ridge)^-1 k, M the second moment of the matrix's inputs on eight ordinary requests, the ridge a chosen 5% of M's mean eigenvalue; it found that A acted on ordinary text mostly through what all inputs share, and that the weighed edit kept the repair with a far smaller action there. Round two's evidence points at the same thing. a2-path's first effect on an answer is the same in all 60: the preference between two tokens at the fourth step, where every answer still has the original's whole history, moves by 0.24 to 0.45 of a score in every one. An effect of the same size on every answer, at a row every answer shares, comes through what their inputs have in common, not through what separates a wrong answer from a correct one. c2-protected then showed that this effect survives when the opening rows' own states are returned at the edited layers, so it is carried by positions no run has kept quiet: the question's. Those positions were asked to keep their state in a2-path and b2-path and moved all the same. Three rungs have now tried to keep rows quiet by asking, and the fit has traded each ask against the others. D2 changes something else: not what is asked, but how the size of the change is counted. A change of a matrix reads its inputs along some directions; a change that reads along directions ordinary text also carries acts on ordinary text, on the question and on the opening. Counting the size of the change by its action on ordinary inputs makes such a change expensive and a change that reads only what the calculation's rows carry cheap, at every ridge, without adding a row to the fit. What this does not address, and is not expected to fix: at layers 0 to 8 the rows of a correct answer at the places where the patterns diverge are as alike to a wrong answer's as two wrong answers' are (a development reading on stored rows at layers 0, 2 and 8: whatever the hold, the move delivered to unseen wrong answers there is 0.82 to 1.12 times the movement of unseen correct answers at the same places), and ordinary text cannot tell those apart either.",
+ "repeating_pattern_check": "What has repeated, and what this run does about each. (a) An ask on rows that the fit does not keep: a2-path's rows asked to stay (0.43 times the movement of the moving rows), b2-path's held answers, c2-path's two asks on the same inputs. D2 adds no ask. Its rows and targets are a2-path's; only the measure of the change is new. (b) A reading on given text taken for a verdict. How far the ordinary requests' rows move at each matrix is a reading of the build; the test is the model's own answers, their traces, and its own answers to the ordinary requests and controls. (c) The count of complete answers moves a great deal between neighbouring models: a2-path at three fractions of its size, and now the two C2 corrections, which change a2-path's matrices by 1 to 9% of its change and flip the completeness of 20 and 29 of the 88 answers. So this run's count is read beside the calculation itself (how many answers still subtract the descent) and the traces, and a difference of a few complete answers from a2-path is not read as a difference between the two constructions. (d) Several things changed between runs. Against a2-path one thing changes: the measure of the change. The rows, the targets, the 18 matrices, the path order, the rule that chooses the ridge and the test are the same. (e) A number chosen by eye. Round one's D had one, the 5% ridge; here the floor is measured on the requests themselves (parameters). The ordinary requests and their split into eight and four are round one's design, taken whole. (f) A fit that slows down (Marcos, November 10). The weighing adds one eigen-decomposition per request and matrix, about half a minute at the widest matrix on a development reading, and the fits run in other coordinates, where their length is not known in advance; steps, shortened steps, restarts and seconds are recorded per matrix as before. (g) Work to keep moving instead of the method: this is the ladder's last rung, asked for by Marcos on November 10 (go on to C2 and D2, then assess everything and redo the round).",
+ "rule": {
+  "members": "The 30 wrong answers of the overlap (first incorrect calculation: the descent subtracted). Their rows are every generated step and every question position of their own computation, 21,583 rows per matrix. The 30 correct answers pass through the model in every pass and are read, but are not fitted: this rung has no protection. As in a2-path. The 12 ordinary requests are not rows of the fit: the eight calibration requests weigh the inputs, the four held out are read.",
+  "ask": "At each of the 18 matrices a2-path changed (layers 0 to 8), each row is asked for the direction the state had right after that matrix's merge in the original model, plus, at the generated steps of a wrong answer, the shared part of the gap between the correct and the wrong pattern of that state at the places that step is laid on, where the two patterns diverge at that matrix. A step laid on several places takes the average over them. What is asked of a matrix is that direction minus the one the row has now, with every earlier edit in the model: what the matrices before it left, and how the gated per-layer inputs answered them, is part of what it is asked. The ask is a2-path's, unchanged.",
+  "conversion": "As a2-path, with one change. a2-path's change of a matrix leaves the least of mean |wanted - state|^2 + ridge |dW|^2 over the fitted rows. Here it leaves the least of mean |wanted - state|^2 + ridge tr(dW' (Q + floor) dW): Q is the second moment of this matrix's inputs over the eight calibration requests, every position of a request (its question and its answer) counting the same, every request counting the same, each row taken with the gain the fit already gives its own rows (how much of an output change reaches the turn, 1 / (|merged state| rms(output))). tr(dW' Q dW) is the mean squared output the change adds on that text, so the change is the one that does the least there for what it leaves on the fitted rows. It is solved in the coordinates dW = S dV, S = (Q + floor)^-1/2, where the measure is |dV|^2 again and the same conjugate gradients apply; the matrix's own product is never rewritten, only the change passes through S. The ridge is chosen as before, on the other half of the wrong answers, on the matrix as rounded to BF16. The matrix is written only if, as rounded, it leaves less over the fitted rows than the matrix it replaces.",
+  "path": "As a2-path: built from the original model, the 18 matrices in path order. Before each one the 60 answers' own text goes through the model as it stands, and so does the original text of the 12 ordinary requests (the question and the answer the original model wrote); that matrix's input and incoming state are read at every position of both. So Q, like the fitted rows, is what the matrix receives with every earlier edit in the model.",
+  "readings": "Per matrix, as a2-path (what was asked and how far each set of rows moved), and for the ordinary requests: the floor, how many directions lie above it, how much of the moment is in its strongest direction, and how far the realized change moves the state after the merge on the calibration requests and on the held-out ones.",
+  "test": "As every rung: the edited model answers the 60 questions of the overlap and round one's 28 on its own, greedy, on GPU0, judged by the same judge; its 60 answers are recorded with the turns of their computation and laid on the axis by the computation alone, against the original patterns. And away from the questions: this model and a2-path's answer the 12 ordinary requests and the 12 controls on their own, each answer set beside the original model's (the same text, or the first step apart; the judge's fields for the arithmetic controls), and the 12 ordinary requests' original text goes through both models to read how far the state after each of the 18 matrices is from the original model's."
+ },
+ "parameters": {
+  "shared_part": {
+   "measured_from": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+   "derivation": "max(0, 1 - chance / gap) at each place and matrix, for the direction of the state after that matrix's merge: the squared gap between two group means is, on average, the squared shared gap plus what chance adds; chance is the sum over the two groups of the members' spread divided by their count.",
+   "scales_with": "the number of members in each group and their spread at that place and matrix"
+  },
+  "diverged": {
+   "measured_from": "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+   "derivation": "gap > 2 * chance at a place and matrix: two halves of one group of n differ, on average, by the spread over n/2 twice, which is twice chance. A place and matrix where the two groups are no further apart than that is one where they follow each other, and the row is asked to keep its state there.",
+   "scales_with": "the number of members in each group and their spread at that place and matrix"
+  },
+  "ridge": {
+   "measured_from": "studies/04-round-2-overlap/runs/input-overlap/inputs/index.json",
+   "derivation": "As a2-path, per matrix, in the weighed coordinates: each half of the wrong answers is fitted, the change brought back to the matrix and rounded to BF16, and what it leaves on the other half is read with the model's own expression. The search, the candidates kept and the rule that ends it are a2-path's; it starts at the strongest direction of the system in the weighed coordinates. Leaving the matrix as it is is one of the candidates.",
+   "scales_with": "the matrix, its inputs after the earlier edits, the ordinary requests' moment, the number of answers and how much of the ask recurs across them"
+  },
+  "ordinary_moment": {
+   "measured_from": "studies/04-round-2-overlap/runs/d2-path/ordinary/cases.json",
+   "derivation": "Q = the mean over the eight calibration requests of the mean over that request's positions of a_r^2 x_r' x_r, with x_r the matrix's input at the position and a_r = 1 / (|merged state| rms(output)) there, read on the request's original text (its question and the answer the original model wrote, from this run's own pass of the original model) through the model as it stands.",
+   "scales_with": "the matrix and its width, the model as it stands at that matrix, the requests and how many there are"
+  },
+  "floor": {
+   "measured_from": "studies/04-round-2-overlap/runs/d2-path/ordinary/cases.json",
+   "derivation": "Per matrix, the value f at which the moment of seven of the calibration requests best predicts the eighth, summed over the eight: the f that leaves the least of sum over requests i and directions j of log(v_ij + f) + e_ij / (v_ij + f), where v_ij are the eigenvalues of the other seven requests' moment and e_ij the left-out request's energy along the same eigenvectors (the Gaussian likelihood of the left-out moment). In the directions the other requests leave empty this is the left-out request's mean energy per direction. Found by walking by factors of two from Q's mean eigenvalue while the sum falls, then golden section between the neighbours of the best until float64 cannot tell the two inner candidates apart; the factor of two only spaces the candidates. It replaces round one's chosen 5%.",
+   "scales_with": "the matrix and its width, how many ordinary requests there are and how many positions they have, and how alike the requests' inputs are"
+  },
+  "matrices": {
+   "measured_from": "studies/04-round-2-overlap/runs/a2-path/edit.json",
+   "derivation": "matrices_edited: the matrices the A rung, as tested, changed. 18, layers 0 to 8.",
+   "scales_with": "the A rung this rung is compared with"
+  }
+ },
+ "prediction": {
+  "expected_observation": "Building: every matrix is written. On the given text the realized change moves the held-out ordinary requests' rows less than half as far as a2-path's model has moved them after the same matrix (the spill reading, both models on the same text), at most of the 18 matrices. The rows where a move is asked still receive it: at each matrix they move more than half as far as under a2-path (0.012 to 0.071 there), because the inputs of the calculation's rows differ from prose. The change may be larger in weight than a2-path's (5 to 12% of each matrix), since weight is no longer what is counted. Answering on its own: at the fourth token the preference for ' calculation' over ' compact' moves less than a2-path moved it (median 0.34), and fewer than a2-path's 40 answers leave their text there. The calculation is repaired: more than 25 of the 30 answers that subtracted the descent no longer subtract it (a2-path 29, by the judge's field). How many are complete is not predicted beyond more than b2-path's 4: that count has moved between 5 and 17 across models close to a2-path. The correct answers are not expected to be all kept: their rows at the places where the patterns diverge move as the wrong answers' do at these layers, so over places 142 to 313 they still travel most of a2-path's 1.27 gaps, and some break; fewer than a2-path's 12 would be the weighing helping more than expected, not a prediction. Their own traces: the answers that were wrong lie more than half of the way along the gap over places 142 to 313 (a2-path 0.79). Away from the questions: more of the 12 ordinary requests and 12 controls keep the original's text under this model than under a2-path's, and where they leave it they leave it later.",
+  "failures_only": "Per answer: its fields before and after, beside a2-path's; whether it still subtracts the descent; its first step apart from the original; where its own trace lies between the two patterns. Per ordinary request and control: the same text or the first step apart, under this model and under a2-path's."
+ },
+ "would_weaken_it": "The hypothesis: the wrong answers' own traces lie as far along the gap as a2-path's over places 142 to 313 and those answers subtract the descent. The reasoning of this rung, either way it can fail. If the held-out ordinary rows move about as far as under a2-path, the weighing did not bite: in a fit over 21,583 rows the ridge chosen for carrying to unseen wrong answers is small, the data decide the change and the measure of its size barely enters; the lever for the next round is then an ask with a rate, not a measure. If the ordinary rows are quiet and the rows where a move is asked receive less than half of what a2-path delivered, or the answers subtract the descent again, then what moves the calculation at layers 0 to 8 is carried by inputs ordinary text has too, and the repair cannot be separated from the spill at these layers. If the ordinary rows are quiet, the calculation is repaired, and the fourth token still moves as far as under a2-path, then the opening's shift is not carried by what ordinary text shares, and the reading of c2-protected above is wrong or incomplete.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/state-overlap/members.json",
+  "studies/04-round-2-overlap/runs/state-overlap/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/recurrence.npz",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/exported",
+  "studies/04-round-2-overlap/runs/full-overlap/questions.json",
+  "studies/04-round-2-overlap/runs/full-overlap/cases.json",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/a2-path/baseline",
+  "studies/04-round-2-overlap/runs/a2-path/answers.json",
+  "studies/04-round-2-overlap/runs/a2-path/edit.json",
+  "studies/04-round-2-overlap/runs/a2-path/build.jsonl",
+  "studies/04-round-2-overlap/runs/a2-path/model/a2-path.gguf",
+  "studies/04-round-2-overlap/runs/a2-path/answers",
+  "studies/04-round-2-overlap/runs/b2-path/result.json",
+  "studies/04-round-2-overlap/runs/c2-path/answers.json",
+  "studies/04-round-2-overlap/runs/c2-path/build.jsonl",
+  "studies/04-round-2-overlap/runs/c2-protected/answers.json",
+  "studies/04-round-2-overlap/runs/c2-protected/build.jsonl",
+  "studies/04-round-2-overlap/runs/d2-path/ordinary/cases.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/d2-path/ordinary/original",
+  "studies/04-round-2-overlap/runs/d2-path/passes",
+  "studies/04-round-2-overlap/runs/d2-path/build.jsonl",
+  "studies/04-round-2-overlap/runs/d2-path/edit.json",
+  "studies/04-round-2-overlap/runs/d2-path/model",
+  "studies/04-round-2-overlap/runs/d2-path/answers",
+  "studies/04-round-2-overlap/runs/d2-path/answers.json",
+  "studies/04-round-2-overlap/runs/d2-path/answers-text.json",
+  "studies/04-round-2-overlap/runs/d2-path/own",
+  "studies/04-round-2-overlap/runs/d2-path/own-traces",
+  "studies/04-round-2-overlap/runs/d2-path/overlay.npz",
+  "studies/04-round-2-overlap/runs/d2-path/overlay-states.npz",
+  "studies/04-round-2-overlap/runs/d2-path/travel.npz",
+  "studies/04-round-2-overlap/runs/d2-path/spill",
+  "studies/04-round-2-overlap/runs/d2-path/spill.json",
+  "studies/04-round-2-overlap/runs/d2-path/result.json"
+ ],
+ "revisions": [
+  {
+   "time_ct": "2026-11-10T06:43:27.598514-06:00",
+   "by": "Claude (weight-research-fable), on Astra's review of the declaration and the code",
+   "state_of_the_run": "The build had started at 6:31 AM CT and had written 3 of its 18 matrices when this was added. Nothing the run follows is changed: the rule, the parameters and the prediction stand as declared. What is withdrawn or made exact is reasoning and wording.",
+   "changes": [
+    "Withdrawn from what_went_wrong_before and why_this_direction: 'about four fifths of that shift does not pass through those rows' own states at the edited layers' and 'so it is carried by positions no run has kept quiet: the question's'. c2-protected's rows did not return entirely: 0.01 to 0.05 is only the part of the movement along a2-path's action; in distance they end 0.08 to 0.22 of a2-path's action away from the original state. The states compared are directions, so their sizes and the other inputs of the later layers are not matched, and a preference between two tokens is not proportional to an rms over rows. The question's positions remain a plausible route for the shift at the fourth token, not a shown one. This rung's place in the method does not rest on that claim.",
+    "Made exact in the conversion: tr(dW' Q dW) is the mean over requests and rows of a_r^2 |x_r dW|^2, an input-side proxy for what a change does on ordinary text. The model's own expression for the state also applies the learned scale and the two projections, which Q does not contain. Whether ordinary text is quiet is judged by the realized states of the held-out requests and by the model's own answers, not by Q. Taking every position (question and answer) and the gain a_r are extensions of round one's D, which used the inputs at generated decisions without a gain. Q, the floor and the gains are fixed while one matrix is fitted and taken again at the next.",
+    "Made exact about the floor: the sum is the score of an equal-request, zero-mean Gaussian model of the left-out moments. 'The left-out request's mean energy per empty direction' is what the empty directions alone would choose; the directions the other requests do measure also move the common value. The search returns the best candidate evaluated, not a proven global optimum. If the moment's mean eigenvalue is zero, a score is not finite, or the search runs to the edge of what float64 can state without finding an interior best, the build stops with that stated; no stand-in value is used.",
+    "Made exact about the coordinates: the code's S is sqrt(mean eigenvalue + floor) (Q + floor)^-1/2, a rescaling of the declared (Q + floor)^-1/2 that the ridge search absorbs. The coefficient of tr(dW' (Q + floor) dW) in what is minimised is therefore the recorded ridge divided by (mean eigenvalue + floor); the result reports that coefficient per matrix.",
+    "Narrowed in would_weaken_it: ordinary text moving as far as under a2-path does not by itself show that the ridge was too small for the measure to enter; the proxy, eight requests' coverage of the inputs, the change of the model's own history and the truncated solve can each matter, and the selected ridge, the realized movement and the residuals are read together. Quiet ordinary rows with the repair lost would show this construction's trade-off, not that the repair cannot be separated from the spill at these layers. a2-path and D2 are compared on the same reading of the finished models (spill), never one matrix's local movement against an accumulated one.",
+    "Kept apart, as in the earlier records: the judge's field for the available energy is a stated number, not the operation written in the answer. The prediction 'more than 25 of 30 no longer subtract' is on that field and is reported as such."
+   ]
+  }
+ ]
+}

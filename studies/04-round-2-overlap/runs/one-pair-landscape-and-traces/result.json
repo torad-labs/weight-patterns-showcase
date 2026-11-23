@@ -1,0 +1,72 @@
+{
+  "cases": [
+    "expanded-004-h1",
+    "discovery-05-channel-h1"
+  ],
+  "captured_decode_events": [
+    388,
+    406
+  ],
+  "pairs": 412,
+  "merges": 105,
+  "blocks": 35,
+  "landscape_vertices_per_case": 81,
+  "original_loss": {
+    "ref": 0.0,
+    "wrong": 0.0002923422335003975
+  },
+  "pca_explained_fraction": [
+    0.09271725515961177,
+    0.07148963152970934
+  ],
+  "historical_log_weight": 44.23381971299944,
+  "signed_operator": {
+    "pair": 143,
+    "native_decode": [
+      141,
+      141
+    ],
+    "source": "Prior annotated native decisions, evaluation only."
+  },
+  "display_event": {
+    "pair": 142,
+    "native_decode": [
+      140,
+      140
+    ]
+  },
+  "before_choice_ff20": {
+    "pair": 142,
+    "merge_id": 61,
+    "angle_degrees": 25.1785945892334,
+    "reference_log_gain": 0.41046470403671265,
+    "wrong_log_gain": 0.4535794258117676,
+    "reference_turn_length": 0.9115317463874817,
+    "wrong_turn_length": 0.8906375765800476,
+    "full_turn_distance": 0.39333146810531616,
+    "joint_feature_distance": 0.4867596924304962,
+    "old_turn_excess": 0.0
+  },
+  "largest_joint_cell": {
+    "pair": 270,
+    "decode": [
+      252,
+      266
+    ],
+    "block": 34,
+    "merge": "Feed-forward",
+    "distance": 6.4293532371521
+  },
+  "largest_mean_joint_pair": {
+    "pair": 291,
+    "decode": [
+      272,
+      287
+    ],
+    "mean_distance": 0.6269797086715698
+  },
+  "undefined_turn_angles": 0,
+  "prediction_vs_result": "All decode events on both histories represented; all common-grid vertices present.",
+  "failures_only": "One pair, global correspondence. A separation is descriptive; localization and population recurrence are untested.",
+  "what_this_changes": "Provides a paired visualization. No training configuration changed."
+}

@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>How the Trace-Derived Edit Works (internal guide)</title>
+<style>
+@page { size: Letter; margin: 0.9in 0.95in 0.95in 0.95in; }
+html { font-size: 10.4pt; }
+body { font-family: "Bitstream Charter", "Charter", "Noto Serif", serif; color: #111; line-height: 1.42;
+  text-align: justify; hyphens: auto; margin: 0; }
+math { font-family: "DejaVu Math TeX Gyre", math; font-size: 1.02em; }
+math[display="block"] { margin: 0.55em 0; }
+h1 { font-size: 17pt; line-height: 1.22; text-align: center; margin: 0 0 0.5em; font-weight: bold; }
+.authors { text-align: center; margin-bottom: 0.2em; font-size: 11pt; }
+.affil { text-align: center; font-size: 9.5pt; color: #333; }
+.draft { text-align: center; font-size: 8.5pt; color: #8a1c1c; letter-spacing: 0.04em; margin: 0.6em 0 1.2em;
+  text-transform: uppercase; }
+.abstract { margin: 0 0.45in 1.4em; font-size: 9.6pt; }
+.abstract h2 { text-align: center; font-size: 10pt; margin: 0 0 0.3em; }
+h2 { font-size: 12pt; margin: 1.35em 0 0.45em; break-after: avoid; }
+h3 { font-size: 10.4pt; margin: 1.0em 0 0.3em; break-after: avoid; }
+p { margin: 0 0 0.6em; orphans: 3; widows: 3; }
+figure { margin: 1.0em 0 1.1em; break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; }
+figcaption { font-size: 8.9pt; text-align: justify; margin-top: 0.45em; line-height: 1.35; }
+figcaption b, caption b { font-weight: bold; }
+table { border-collapse: collapse; margin: 0.4em auto 0.2em; font-size: 8.9pt; break-inside: avoid;
+  line-height: 1.3; }
+caption { caption-side: top; font-size: 8.9pt; text-align: justify; margin-bottom: 0.45em; }
+.tablewrap { break-inside: avoid; margin: 1.0em 0 1.1em; }
+th, td { padding: 2.5px 7px; text-align: left; vertical-align: top; }
+thead th { border-top: 1.2px solid #111; border-bottom: 0.7px solid #111; font-weight: bold; }
+tbody tr:last-child td { border-bottom: 1.2px solid #111; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.prompt { font-family: "DejaVu Sans Mono", monospace; font-size: 7.9pt; background: #f6f5f2; border: 0.6px solid #d9d7d0;
+  padding: 7px 9px; white-space: pre-wrap; text-align: left; line-height: 1.38; break-inside: avoid; margin: 0.6em 0 0.9em; }
+.box { border: 0.7px solid #bbb; padding: 8px 12px; margin: 0.9em 0; font-size: 9.6pt; background: #fbfbf9;
+  break-inside: avoid; }
+.box p:last-child { margin-bottom: 0; }
+.note { margin: 0 0.45in 1.2em; background: #f4f7fb; border-color: #9fb8d8; }
+ul, ol { margin: 0.2em 0 0.7em 1.3em; padding: 0; }
+li { margin-bottom: 0.3em; }
+.refs { font-size: 8.9pt; margin-left: 2.1em; }
+.refs li { margin-bottom: 0.35em; text-align: left; }
+code, .mono { font-family: "DejaVu Sans Mono", monospace; font-size: 0.86em; }
+a { color: #1a4f8a; text-decoration: none; }
+.small { font-size: 9pt; }
+.pb { break-before: page; }
+sup.c { font-size: 0.72em; }
+</style></head>
+<body>
+
+<h1>How the Trace-Derived Edit Works:<br>An Internal Guide to the Method, Step by Step</h1>
+<div class="authors">Marcos Damasceno</div>
+<div class="affil">Torad Labs</div>
+<div class="draft">Internal guide · not for publication</div>
+
+<div class="box note"><p><b>What this is.</b> A guide for understanding exactly what the experiment does: how the
+data is captured, what a trace is as numbers, how the target is defined, how the place and size of each weight change
+are chosen, how each change is checked, and what the first round-two edits actually did. It explains the method; it is
+not the paper. Every number comes from the run records, and the record behind each one is named in Section&nbsp;11.
+Section&nbsp;10 is a set of questions you could be asked about this work, with short answers.</p></div>
+
+<h2>1&nbsp;&nbsp;The idea in one page</h2>
+
+<p>Your starting point is a theory about weights. A weight does not hold a fact or a skill by itself. Weights mostly act
+like the faders on a mixing desk: they decide how strongly each part of the incoming signal is passed on and where it
+goes. A capability is then a <em>pattern of routing</em>, a recognisable way information moves through many weights
+when the model does a certain kind of work. If that is true, you should be able to see the pattern by recording how the
+signal moves, compare it between answers where the model gets something right and answers where it gets it wrong, and
+compute the weight change that moves the wrong routing toward the right one.</p>
+
+<p>The experiment makes that concrete with one model and one mistake. Gemma&nbsp;4 E2B solves an energy problem: an
+object starts moving, goes down a slope, loses some energy on a rough patch, then climbs. It must report the
+<em>available energy</em>, the <em>required energy</em>, and whether it makes it. A common mistake is to add the earlier
+descent to the final climb: for a 3&nbsp;m climb after a 1&nbsp;m descent it computes the required energy for 4&nbsp;m.
+We call this error <code>final_climb_includes_descent</code>.</p>
+
+<p>The work has four parts, and the rest of this guide follows them in order:</p>
+<ol>
+<li><b>Record</b> what the model computes, token by token, without changing it (Section&nbsp;3).</li>
+<li><b>Describe</b> each computation as a trace: how the internal signal turns at every step (Section&nbsp;4).</li>
+<li><b>Aim</b>: define the gap between failing traces and successful ones, find which weights can close it, and solve
+for the change (Sections&nbsp;5 to 7).</li>
+<li><b>Check</b> the stored change, first on the trace and then on the answers the model actually writes
+(Sections&nbsp;8 and 9).</li>
+</ol>
+
+<h2>2&nbsp;&nbsp;The model as a pipe of small changes</h2>
+
+<p>Each token the model reads or writes becomes a list of 1,536 numbers, called the <em>residual stream</em> for that
+token. Think of it as a running summary that every layer reads and then adds to. Gemma&nbsp;4 E2B has 35 layers. Each
+layer adds three things to the stream, one after another (Figure&nbsp;1):</p>
+<ul>
+<li><b>Attention.</b> The layer looks back at earlier tokens and pulls in information from them. To make that cheap, it
+keeps a <em>cache</em>: for every earlier token it stores a key (what that token offers) and a value (what it carries).
+The current token's query is matched against the keys, and the matching values are blended. The result is added to the
+stream. This is <em>merge&nbsp;1</em>.</li>
+<li><b>Feed-forward.</b> A per-token calculation (gate, up and down projections, joined by a GeGLU activation) that
+transforms what the stream now contains. Its result is added: <em>merge&nbsp;2</em>.</li>
+<li><b>Per-layer embedding.</b> A smaller branch specific to Gemma that adds a token-dependent correction:
+<em>merge&nbsp;3</em>.</li>
+</ul>
+
+<p>So for each token there are 35&nbsp;×&nbsp;3&nbsp;=&nbsp;105 merge points. Before each branch, the stream is
+normalised (RMS norm: divided by its typical size), and after each branch the result is normalised again and scaled by
+learned weights. That normalisation matters later: what the network mostly reads is the stream's <em>direction</em>,
+not its raw size.</p>
+
+<p>One detail of this model became important. Layers 15 to 34 do not keep their own caches. They reuse the caches
+written by layers 13 and 14. Layer&nbsp;14's keys and values are read by five layers: 14, 19, 24, 29 and 34.</p>
+
+<figure><img src="figures/fig1-layer.png" style="width:96%">
+<figcaption><b>Figure 1.</b> One layer of Gemma&nbsp;4 E2B. The stream runs left to right; three branches are added at
+the '+' points, which the code calls <code>attn_out</code>, <code>pe_in</code> and an unnamed addition we label
+<code>pe_out</code>. The first round-two edits changed weights in two of these branches.</figcaption></figure>
+
+<h2>3&nbsp;&nbsp;How the data is captured</h2>
+
+<h3>3.1&nbsp;&nbsp;What the engine does</h3>
+
+<p>The model runs in llama.cpp, a C++ inference engine. For every token it builds a <em>graph</em>: a list of about
+1,500 small operations (matrix multiplications, normalisations, additions, attention) with each operation's inputs
+wired to earlier outputs. The engine then runs the graph on the GPU. llama.cpp lets a program register a
+<em>callback</em>: before any operation runs, the engine asks "do you want to see this one?", and if the answer is yes,
+it stops after that operation so the program can copy its result off the GPU.</p>
+
+<p>Our recorder is that callback. It never changes a value. To prove it, every recording is checked against an ordinary
+run of the same question: every generated token must be identical, and so must a fingerprint (a SHA-256 hash) of the
+full list of 262,144 vocabulary scores at every step. If a single score differed anywhere, the hash would differ.</p>
+
+<h3>3.2&nbsp;&nbsp;Three recorders, from complete to fast</h3>
+
+<p><b>The full recorder</b> says yes to every operation. For each one it copies every input before the operation and
+its output after, and links each input to the operation that produced it, including reads from the cache. This gives a
+complete wiring diagram of the computation: one 479-token answer produced 724,064 recorded operations and 9.3&nbsp;GB of
+values. It is also slow, about 375 seconds per answer, because it pauses the GPU around 1,500 times per token.</p>
+
+<p><b>The selected-position recorder</b> uses the full recorder only at a few chosen tokens and lets everything else run
+normally. That is how the construction probes work (Section&nbsp;8).</p>
+
+<p><b>The stream recorder</b> keeps only what the trace analysis uses, at every token: the incoming stream, each branch's
+contribution and the result at all 105 merges (247 tensors per token, outputs only, no pauses for inputs). A wider mode
+also keeps the inputs of every weight matrix plus the attention queries, keys and values, which is enough to solve for a
+weight change anywhere and to rebuild attention offline. It takes about 15 seconds per answer, close to ordinary
+generation (Figure&nbsp;3). Its values were checked bit for bit against the full recorder: 55,081 tensors in one mode and
+100,796 in the other on GPU0, and 97,632 on GPU1, with zero differences.</p>
+
+<figure><img src="figures/fig3-recorders.png" style="width:80%">
+<figcaption><b>Figure 3.</b> Time to record one answer. The stream recorder made recapturing all 45 answers take
+minutes instead of hours. (Figure&nbsp;2 is in Section&nbsp;4.)</figcaption></figure>
+
+<p>An analogy: the full recorder is a flight data recorder that logs every switch in the cockpit. The stream recorder
+is a dashcam pointed at the road. For most questions about where the plane went, the dashcam is enough, and when it is
+not, the flight recorder is still there for the few moments that matter.</p>
+
+<h3>3.3&nbsp;&nbsp;Which answers were recorded</h3>
+
+<p>Only answers the model wrote itself. An earlier attempt fed the model our corrected answer and recorded that; it was
+excluded, because a supplied answer changes the history you are trying to observe. Greedy decoding (always taking the top
+token) makes every answer exactly repeatable. From 283 screened questions, 45 were usable: 18 that made the target error
+and 27 that solved the problem correctly, each on its assigned GPU. The 40 reserved questions were fixed before any of
+this and have not been read.</p>
+
+<h2>4&nbsp;&nbsp;What a trace is, as numbers</h2>
+
+<h3>4.1&nbsp;&nbsp;One merge</h3>
+
+<p>Take one merge for one token. Call the stream arriving there <i>h</i> (1,536 numbers), the branch being added
+<i>b</i>, and the result <i>h'</i>&nbsp;=&nbsp;<i>h</i>&nbsp;+&nbsp;<i>b</i>. Because the next layer normalises the
+stream, what matters most is how the merge changed the stream's <em>direction</em>. So we measure the turn:</p>
+
+<div class="box"><p style="text-align:center"><b>T</b> = <i>h'</i>&nbsp;/&nbsp;|<i>h'</i>| &nbsp;−&nbsp;
+<i>h</i>&nbsp;/&nbsp;|<i>h</i>|</p>
+<p>Divide each vector by its length so both have length 1, then subtract. <b>T</b> is itself a list of 1,536 numbers:
+it says in which of the 1,536 directions the stream was pushed by this merge, and by how much.</p></div>
+
+<figure><img src="figures/fig2-turn.png" style="width:44%">
+<figcaption><b>Figure 2.</b> The turn at one merge, drawn in two dimensions instead of 1,536. The stream arrives as
+<i>h</i>, a branch <i>b</i> is added, and <b>T</b> is the step between the two directions on the unit circle. A large
+branch that points the same way as <i>h</i> produces almost no turn; a small branch at a sharp angle can produce a big
+one.</figcaption></figure>
+
+<h3>4.2&nbsp;&nbsp;One token, one answer</h3>
+
+<p>Do this at all 105 merges of a token, in order, and you get the token's <em>turn field</em>: 105 vectors of 1,536
+numbers, 161,280 numbers in all. That ordered list is the trace for one token. It records how each layer bent the running
+summary, step by step, from the token's arrival to the prediction of the next token. A trace for a whole answer is the
+same thing for every token, and every number is tied to the exact operation, weight matrix and earlier token that
+produced it.</p>
+
+<p>This is where the theory becomes measurable. A weight never appears in the trace directly. What appears is the effect
+of the weights on this particular signal, in this particular context. Two answers that use the same skill should share
+recognisable stretches of turning even when their numbers and wording differ.</p>
+
+<h3>4.3&nbsp;&nbsp;Where in the answer to look</h3>
+
+<p>Comparing whole answers token by token does not work once two answers have different text: token 200 in one answer is
+not "the same moment" as token 200 in another. So the comparison needs an anchor, a point where both answers are doing
+the same thing. Round two uses the point where the model writes the phrase "above the bottom of the <b>climb</b>" while
+setting up the required energy, and the five predictions leading into that word. That is where the descent either gets
+pulled into the climb (failure) or does not (success). For each failing answer, a successful answer is only compared at
+a position where both have just written the same previous token, so the two signals arrive from the same immediate
+context.</p>
+
+<p>Of the 18 failures and 27 successes, 14 failures and 23 successes contain that anchor with a valid comparison. These
+37 answers, at 5 positions each, are the construction data: 185 token-traces of 161,280 numbers.</p>
+
+<h2>5&nbsp;&nbsp;The target: what "closer to success" means</h2>
+
+<p>For a failing answer <i>f</i> at one of the five positions, collect its matched successful answers
+<i>s</i><sub>1</sub>,&nbsp;…,&nbsp;<i>s</i><sub><i>k</i></sub> and average their turn fields. The target is the
+difference:</p>
+
+<div class="box"><p style="text-align:center"><b>D</b><sub><i>f</i></sub> = average of
+<b>T</b><sub><i>s</i></sub> &nbsp;−&nbsp; <b>T</b><sub><i>f</i></sub></p>
+<p>"Turn the way the successes turned, at every one of the 105 merges." For a successful answer the target is zero:
+"keep turning exactly as you already do." Note what this does <em>not</em> say. It does not copy any successful
+answer's numbers or tokens into the failing one, and it does not mention the final answer at all.</p></div>
+
+<p>The quantity every step tries to shrink, the <em>objective</em>, is the weighted sum over all 37 answers, 5 positions
+and 105 merges of the squared distance between where the trace is and where its target says it should be. Two weighting
+rules keep it fair: every question counts equally within its group, and the failure group and the success group count
+equally overall. Without them, a long answer or a larger group would dominate.</p>
+
+<p>After an edit, the trace moves. The goal stays fixed at its original definition, so the remaining target for the next
+step is:</p>
+
+<div class="box"><p style="text-align:center">remaining = (original trace + <b>D</b>) &nbsp;−&nbsp; current trace</p>
+<p>This prevents a quiet drift in which each step re-defines success relative to the last edit. It also means that if
+an edit disturbs a successful answer, the next step tries to undo that disturbance.</p></div>
+
+<p>One design choice to keep in mind for the paper: the zero target for successes is a mild form of protection. Round
+one's A had nothing like it. It stays in every round-two variant and is stated as part of the round-two objective, with a
+separate run without it so its effect can be measured (Section&nbsp;9.4).</p>
+
+<h2>6&nbsp;&nbsp;Choosing where to edit</h2>
+
+<p>There are 276 weight matrices in the model that act on the stream (queries, keys, values, attention outputs,
+feed-forward gate, up and down, and the per-layer branch). Each one feeds a particular merge. The question for each is:
+<em>if I could change only this matrix, how much of the target at the merge it feeds could I explain from the inputs it
+actually sees?</em></p>
+
+<p>That is answered with a prediction test. For every matrix we take its recorded input vectors from the 185
+token-traces and try to predict the target at its merge from them, using ridge regression: a least-squares fit with a
+penalty that keeps the fit small and stable. The fit is scored the strict way: one whole question is left out at a time,
+the fit is built from the others, and it is judged on the question it never saw. A matrix whose inputs only "explain"
+the target by memorising individual questions scores nothing. The strength of the penalty is chosen by the same
+leave-one-question-out score.</p>
+
+<p>The location chosen is the matrix with the largest held-out share of the target, weighted by how much target sits at
+its merge. For step&nbsp;1 that was layer&nbsp;11's feed-forward down projection: its inputs predicted 11.9% of the
+target at its merge on questions they had not seen, the best of the 276. An analogy: you have a leak somewhere
+downstream and 276 valves upstream. For each valve you ask whether its own readings, across many days, would have
+predicted the leak on a day it did not see. The valve whose readings predict best is where you act first.</p>
+
+<p>Note that this test says where an edit <em>can</em> act. It does not say the capability lives there. Construction 01
+learned that the hard way: it chose locations by a different signal (where the attention heads looked) and its
+directions turned out to be almost unrelated to the target.</p>
+
+<h2>7&nbsp;&nbsp;Solving for the change</h2>
+
+<p>Knowing where, the next question is what change to make. The answer comes from running the computation backwards
+from the target to the weights. The exact way depends on what lies between the matrix and the merge it feeds. Three
+cases came up.</p>
+
+<h3>7.1&nbsp;&nbsp;A simple branch (step 1, layer 11 down projection)</h3>
+
+<p>Between layer&nbsp;11's down projection and its merge there are only two operations: the output is normalised (RMS
+norm), multiplied by a learned scale, and added to the stream. Those can be inverted exactly. For each of the 185
+token-traces we ask: <em>what output from this matrix would have produced the target turn at this merge?</em> Because
+the normalisation fixes the output's size, the answer is a new output of the same size but a different direction; it is
+found by solving a small quadratic equation, and when the full target is out of reach, the largest reachable fraction is
+found by bisection.</p>
+
+<p>That gives, for each token-trace, an input <i>x</i> the matrix actually saw and the change <i>Δy</i> its output
+should have had. The weight change is then the matrix <i>ΔW</i> that best maps every <i>x</i> to its <i>Δy</i>, again
+with ridge regression and the leave-one-question-out choice of penalty. One matrix, fitted to all 37 answers at once, so
+it must find what the failures have in common rather than fix each one separately.</p>
+
+<h3>7.2&nbsp;&nbsp;A shared cache (step 2, layer 14 keys and values)</h3>
+
+<p>Layer&nbsp;14's key and value matrices are harder, because their output is not added to the stream directly. Each
+token's key and value are written into the cache, and five later layers read them. Changing these two matrices changes
+the cache entry of every earlier token in the answer, which changes what all five readers see at the five positions.
+There is no single quadratic to solve here.</p>
+
+<p>Instead we write down the chain of effects and linearise it: how a small change to the key and value matrices changes
+the normalised keys and values, how the rotation that encodes token position carries that change, how the attention
+weights shift (the softmax), how the blended values change, how the output projection and its normalisation pass that
+on, and how the turn at each of the five merges responds. Linearising means: for small changes, effects add up and scale
+in proportion, so the whole chain becomes one very large matrix that maps a weight change to a trace change. Here it
+maps 1.57&nbsp;million weight numbers to 1.42&nbsp;million trace numbers.</p>
+
+<p>A system that large is not solved directly. It is solved with LSMR, an iterative method that improves a guess step by
+step and, started from zero, returns the <em>smallest</em> weight change that fits the target as well as possible. It
+stops once further improvement would be smaller than the precision with which we can reconstruct the model's own
+arithmetic, because chasing detail below that precision would be fitting noise. The method only needs to apply the chain
+forwards and backwards; the backward version (the "adjoint") was checked to be the exact mirror of the forward one.</p>
+
+<p>Gemma's cache sharing made this step cleaner than it sounds. Because layers 15 to 34 reuse layer&nbsp;14's cache and
+write none of their own, changing layer&nbsp;14's keys and values changes no other cache. The only effect the
+linearised chain leaves out is what happens after the merge within the same token. That is why its prediction matched the
+measured result so closely (Section&nbsp;8).</p>
+
+<h3>7.3&nbsp;&nbsp;A gated feed-forward branch (step 3, layer 13, rejected)</h3>
+
+<p>The third step tried layer&nbsp;13's gate, up and down matrices together, linearised through the GeGLU activation the
+same way. The mathematics checked out, but the full solution was enormous (29% to 72% of each matrix's size), its linear
+prediction did not survive the real nonlinearity, and even a much smaller version made the measured trace worse. It was
+rejected on the trace objective itself, before any answers were looked at.</p>
+
+<h2>8&nbsp;&nbsp;Storing the change and checking it on the trace</h2>
+
+<h3>8.1&nbsp;&nbsp;Rounding to the model's format</h3>
+
+<p>The model stores each weight in BF16, a 16-bit format with about three significant digits. The computed change is
+added to each weight and the sum is rounded to the nearest BF16 value, exactly as the model would store it. Think of a
+ruler with coarse marks: a change smaller than half a mark disappears, and a change of one and a half marks becomes one
+or two. For step&nbsp;2, the realised change differed from the intended one by 14% to 16%, because the intended changes
+were about 1% of each weight, close to BF16's resolution of about 0.4%. This is recorded for every step, because as later
+changes get smaller, rounding becomes a larger share of them.</p>
+
+<p>The rounded matrix is written into a new copy of the model file. The original file is never touched, and every
+checkpoint is identified by its SHA-256 hash.</p>
+
+<h3>8.2&nbsp;&nbsp;The conditional probe</h3>
+
+<p>To measure what a stored change does to the trace, we run the edited model on each of the 37 answers, but feed it the
+<em>original</em> answer's tokens up to the anchor, recording the full computation at the five positions. Every earlier
+token still runs through the edited weights, so the cache it builds is the edited cache; only the text is held fixed.
+This isolates the edit's effect on the computation from the effect of the model writing different words. It is like
+re-running the same game footage with one player's skill changed: same plays, different internal decisions.</p>
+
+<p>From those recordings we measure the actual new trace, compare it with the target, and report: how much of the
+objective closed, how many of the 14 failures moved closer, how aligned each failure's change was with its target, and
+how far the successes moved.</p>
+
+<h3>8.3&nbsp;&nbsp;Choosing the strength</h3>
+
+<p>The computed change is a direction plus a natural size. Because the real model is not linear, the measured effect
+of the full-size change is used to pick the best multiple of it: the single coefficient that minimises the objective given
+the measured effect. Step&nbsp;1 at full size overshot (only 6 of 14 failures closer); at 0.54 of its size, 10 of 14
+moved closer and the objective dropped more. The scaled model is stored and measured again, because a prediction is not a
+measurement.</p>
+
+<h3>8.4&nbsp;&nbsp;What the steps did to the trace</h3>
+
+<figure><img src="figures/fig4-steps.png" style="width:96%">
+<figcaption><b>Figure 4.</b> Each stored checkpoint measured on the same fixed objective, on the original prefixes of all
+37 answers. Step&nbsp;2 is measured on top of the scaled step&nbsp;1. Step&nbsp;3 made the objective worse than
+step&nbsp;2 and was rejected.</figcaption></figure>
+
+<div class="tablewrap"><table>
+<caption><b>Table 1.</b> The construction steps. "Closed" is the share of the original trace gap removed by the stored
+checkpoint, measured natively.</caption>
+<thead><tr><th>Step</th><th>Edited matrices</th><th>Size of change</th><th class="n">Closed</th><th class="n">Failures closer</th></tr></thead>
+<tbody>
+<tr><td>1, full size</td><td>layer 11 down projection</td><td>7.2% of the matrix</td><td class="n">1.2%</td><td class="n">6 of 14</td></tr>
+<tr><td>1, scaled 0.54</td><td>same</td><td>0.54 of the above</td><td class="n">4.2%</td><td class="n">10 of 14</td></tr>
+<tr><td>2, on top of 1</td><td>layer 14 key and value</td><td>about 1% of each</td><td class="n">8.3%</td><td class="n">14 of 14</td></tr>
+<tr><td>3, on top of 2</td><td>layer 13 gate, up, down</td><td>scaled 0.097</td><td class="n">rejected</td><td class="n">6 of 14</td></tr>
+</tbody></table></div>
+
+<p>Two things in this table are genuinely good. The steps compounded: step&nbsp;2 added about as much again without
+undoing step&nbsp;1. And the method's own prediction for step&nbsp;2 (objective 1.8827) matched the measured value
+(1.8830) almost exactly, which means the linearised chain in Section&nbsp;7.2 really described what the model does with
+that change.</p>
+
+<h2>9&nbsp;&nbsp;What the edited model actually wrote</h2>
+
+<h3>9.1&nbsp;&nbsp;The answers got worse</h3>
+
+<p>A trace measurement on held-fixed text is not the same as behaviour. So the edited models were also run normally,
+writing their own answers, on 73 questions: the 47 construction questions and the 28 historical ones (two overlap), with
+the 40 reserved questions left untouched. The final available energy, required energy and verdict were parsed from each
+answer by one parser applied identically to the original and edited answers.</p>
+
+<figure><img src="figures/fig5-answers.png" style="width:82%">
+<figcaption><b>Figure 5.</b> Ordinary greedy answers on the same 73 questions. "Both energies right" needs the correct
+available and required energy; it is an automatic screen, not a reading of the explanation. The six arithmetic-only
+controls use different labels and are not covered by the parser.</figcaption></figure>
+
+<p>The frozen A2 model (steps 1 and 2) repaired five answers, including two clean instances of the target error
+(required energy 120&nbsp;→&nbsp;90&nbsp;J and 200&nbsp;→&nbsp;150&nbsp;J), and damaged seventeen. Step&nbsp;1 alone was
+worse: complete numbers fell from 31 to 12, and answers running into the token limit doubled.</p>
+
+<h3>9.2&nbsp;&nbsp;What broke: one procedure swapped for another</h3>
+
+<p>Reading the damaged answers shows one new error, repeated. The edited model computes the energy after the descent as
+"initial kinetic energy <em>minus</em> the descent", where it used to add it. A typical line:
+"KE after descent = 90&nbsp;J − 50&nbsp;J = 40&nbsp;J". Its available energy becomes
+<i>KE</i>&nbsp;−&nbsp;descent&nbsp;−&nbsp;loss, with no randomness about it (Figure&nbsp;6).</p>
+
+<figure><img src="figures/fig6-descent.png" style="width:52%">
+<figcaption><b>Figure 6.</b> Available energy in the step-1 model's answers against the correct value, physics questions
+only. Red points fall exactly on initial kinetic energy minus descent minus loss: the descent's sign flipped. Open points
+are other wrong values, including original failures whose answers changed in other ways.</figcaption></figure>
+
+<p>This is not noise. It is a coherent procedure, used consistently on questions the edit was never fitted to, and the
+original model already used it occasionally: two GPU1 baselines made exactly this error and were set aside as a different
+error type. The edit did not teach anything new. It shifted the model from one procedure it knew to another. It weakened
+the descent's positive role everywhere, which removes the descent from the climb, and also removes it from the available
+energy where it belongs.</p>
+
+<h3>9.3&nbsp;&nbsp;Why the trace numbers did not show it</h3>
+
+<p>The five measured positions sit at "climb", while the model is setting up the required energy. By that point the
+answer already contains the available-energy line. In the conditional probe, that earlier text is the original text,
+where the descent is still added correctly. So the objective never saw the passage that got damaged: it measured the
+right thing in the wrong place. This is not a code error. Every derivative, solve and measurement was correct for the
+objective it was given. The objective only covered the positions it was pointed at, and an edit to stored weights acts
+everywhere those weights are used.</p>
+
+<p>The general lesson for the method: a trace objective measured on held-fixed text can improve while behaviour gets
+worse, if the positions it covers do not include every passage the edited weights influence. Ordinary generation has to
+be part of every evaluation.</p>
+
+<h3>9.4&nbsp;&nbsp;Where this sits in the A–D comparison</h3>
+
+<p>Round one built each edit from a single pair of answers and showed the same pattern at small scale: edit A fixed its
+target and a second problem but broke a third (the 4&nbsp;kg block). B protected the damaged contexts and lost the
+repairs. C protected the damaged contexts while preserving A's repairs and kept both. D did the same with a change shaped
+to ignore ordinary text, with 85.5% less effect on it than A. None improved new questions.</p>
+
+<p>Round two keeps the same ladder so the comparison stays clean, each rung adding one thing:</p>
+<ul>
+<li><b>A2</b>: the construction above, frozen at step&nbsp;2, unprotected. Its result includes the descent-sign
+damage; answers are measured but never used to accept or reject a step.</li>
+<li><b>B2</b>: A2 plus protection of the passages A2 damaged, the descent and available-energy positions. Checking
+ordinary answers before accepting a step starts here, because rejecting steps on behaviour is itself a protection.</li>
+<li><b>C2</b>: B2 plus preserving A2's repairs.</li>
+<li><b>D2</b>: the version shaped to ignore ordinary text, as in round one.</li>
+<li><b>A2 without the success term</b>: one extra run, so the effect of the zero target for successes is
+measured rather than assumed.</li>
+</ul>
+
+<p>The interesting question for B2 is whether protecting the descent passages also removes the climb fix, as round
+one's B did, because both may run through the same weights. If B2 keeps the repairs and removes the damage, that is the
+first deliberate, controlled capability edit. If it trades one for the other, C2 is where it gets resolved.</p>
+
+<h2>10&nbsp;&nbsp;Questions you could be asked</h2>
+
+<p><b>In two minutes, what did you build?</b> A way to compute a persistent weight change for a reasoning error from
+the model's own successful and failing answers, without training. I record how each token's internal signal turns at
+every one of the model's 105 merge points, define the gap between failing and successful turns at matched positions, find
+the weight matrices whose inputs can predict that gap on held-out questions, and solve for the smallest change that closes
+it. Then I store the change in the model's native format and measure both the trace and the answers.</p>
+
+<p><b>How do you know the recorder does not change the model?</b> Every recording must reproduce every token and a
+SHA-256 hash of all 262,144 vocabulary scores at every step of an ordinary run. The fast recorder was also compared bit
+for bit with the complete one: over 250,000 tensors, zero differences.</p>
+
+<p><b>Why measure direction instead of the raw vectors?</b> The model normalises the stream before every branch, so
+the next layer mostly sees direction. Size still matters through the scale weights, and it is recorded beside every
+turn, but the turn is what the next computation responds to.</p>
+
+<p><b>Why ridge regression, and why leave out whole questions?</b> There are many more numbers in a weight matrix than
+there are examples, so an unpenalised fit can match the examples perfectly and mean nothing. The penalty keeps the change
+small and stable; leaving out whole questions ensures the fit generalises across questions rather than across tokens of
+the same answer, which are not independent.</p>
+
+<p><b>Why LSMR for the cache step?</b> The problem had 1.57 million unknowns and 1.42 million equations, too large to
+solve directly. LSMR only needs to run the effect chain forwards and backwards, and from a zero start it returns the
+smallest change that fits, which is the safest change consistent with the data.</p>
+
+<p><b>Why not just use gradient descent on the objective?</b> We could, and that would be a reasonable comparison.
+The point of the method is that each step is solved and explained: which matrix, why there, what share of the target it
+can carry, and what it is predicted to do. Gradient descent spreads a change across every weight at once and explains
+none of it.</p>
+
+<p><b>The edit made answers worse. Doesn't that kill the idea?</b> It shows two things. The method does change how the
+model computes, coherently and on questions it was never fitted to: one stored change switched the model to a different
+procedure across dozens of problems. And the objective only protects what it covers. The failure came from where the
+objective was pointed, not from the solving, and it is diagnosable down to the exact arithmetic. B2 and C2 test whether
+the same tools can steer it where we want.</p>
+
+<p><b>Does a capability live in layer 11?</b> No claim of that kind is made. The location test says where a change can
+act on the observed gap, not where a skill is stored. The descent-sign result suggests the procedure is distributed: one
+change at layer 11 altered behaviour in passages it was never aimed at.</p>
+
+<p><b>How is this different from steering vectors or ROME?</b> Steering adds a fixed direction to the stream while the
+model runs; it is not stored and acts the same everywhere. ROME and MEMIT edit stored facts with a calculated change.
+This method edits a reasoning procedure, derives the change from the connected trace of many answers rather than from one
+fact, and measures the change's effect on the whole computation before looking at answers.</p>
+
+<p><b>What limits it?</b> The objective covers only the positions it is pointed at; BF16 rounding becomes a larger share
+of each change as changes get smaller; it needs examples of the model succeeding; and it has been shown on one small model
+and one error type so far.</p>
+
+<h2>11&nbsp;&nbsp;Where each number comes from</h2>
+
+<p>Paths are under <code>runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/</code> unless stated.</p>
+<ul class="small">
+<li>Recorder fidelity and speed: <code>stream-qualification-2026-11-08/</code> (residual, projection, hybrid and GPU1
+qualification files, <code>timing.jsonl</code>); full-recorder figures from
+<code>cohort-original/expanded-043-h3/audit.json</code>.</li>
+<li>Populations and screening: <code>research/experiments/signal-trace-repair/A.md</code>.</li>
+<li>Location support: <code>trace-construction-02/input-support/index.json</code>.</li>
+<li>Step sizes and trace results: <code>trace-construction-02/step-*/direction.json</code>,
+<code>inverse-result.json</code>, <code>native-effect.json</code> and <code>absolute-comparison/index.json</code>; step
+3's rejection in <code>research/experiments/signal-trace-repair/A-CONSTRUCTION-02.md</code>.</li>
+<li>Natural answers: <code>trace-construction-02/step-01-scaled/exploratory-natural-comparison.json</code> and
+<code>trace-construction-02/step-02/exploratory-natural-comparison.json</code>, produced by
+<code>code/signal-trace/pipeline/evaluation/compare_natural_answers.py</code>.</li>
+<li>Round one: <code>reports/paper-a-d/</code>.</li>
+<li>Code for each stage: <code>code/signal-trace/README.md</code>.</li>
+</ul>
+
+<h2>12&nbsp;&nbsp;Glossary</h2>
+<ul class="small">
+<li><b>Residual stream</b>: the 1,536 numbers per token that every layer reads and adds to.</li>
+<li><b>Merge</b>: one of the 105 points per token where a branch is added to the stream.</li>
+<li><b>Turn (T)</b>: change in the stream's direction at a merge: <i>h'</i>/|<i>h'</i>| − <i>h</i>/|<i>h</i>|.</li>
+<li><b>Trace</b>: the ordered turns at all merges for each token, tied to the operations that produced them.</li>
+<li><b>Anchor</b>: the matched point in two answers where they are compared ("climb" in round two).</li>
+<li><b>Target (D)</b>: average successful turn minus failing turn at the matched positions; zero for successes.</li>
+<li><b>Objective</b>: weighted squared distance from every trace to its target; what each step tries to shrink.</li>
+<li><b>Support</b>: how much of the target at a merge one matrix's inputs predict on held-out questions.</li>
+<li><b>Ridge regression</b>: least squares with a penalty that keeps the solution small and stable.</li>
+<li><b>Linearise</b>: treat small changes as adding up in proportion, turning a chain of operations into one matrix.</li>
+<li><b>LSMR</b>: iterative least-squares solver that finds the smallest change fitting the target.</li>
+<li><b>Adjoint</b>: the backward version of a linear chain, used by the solver; checked to mirror the forward chain.</li>
+<li><b>BF16</b>: the model's 16-bit number format, about three significant digits.</li>
+<li><b>Conditional probe</b>: running the edited model on the original answer's text to measure its effect on the
+computation alone.</li>
+<li><b>Natural run</b>: the edited model writing its own answers; the behavioural test.</li>
+<li><b>Cache sharing</b>: layers 15 to 34 reuse the key/value caches written by layers 13 and 14.</li>
+</ul>
+
+</body>
+</html>

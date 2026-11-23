@@ -1,0 +1,92 @@
+{
+ "sources": [
+  "~/Documents/dev/infra/observability/mlflow/artifacts/6/3c4b24dbe08d4cada3b6d46d355238bb/artifacts/steps"
+ ],
+ "cells_ever_registered": 5750,
+ "cells_in_every_revision": 5208,
+ "revisions": [
+  {
+   "revision": "unbanded-group-training-27 0",
+   "as_logged": 0.00902006917919479,
+   "cells_found": 5750,
+   "cells_lost": 0,
+   "carried": 0.009020069179194788,
+   "carried_by_role": {
+    "preservation": 0.00020290378238569618,
+    "failing": 0.008817165396809087
+   },
+   "common": 0.00864352058712203,
+   "lost": []
+  },
+  {
+   "revision": "unbanded-group-training-27 1",
+   "as_logged": 0.01757075360312078,
+   "cells_found": 5208,
+   "cells_lost": 542,
+   "carried": 0.01794730219519354,
+   "carried_by_role": {
+    "preservation": 0.011166324627853693,
+    "failing": 0.006780977567339859
+   },
+   "common": 0.01757075360312078,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "descent-associated contrast",
+     "role": "failing",
+     "cells": 31,
+     "charged": 0.0003750722990755621
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "valid friction trace",
+     "role": "preservation",
+     "cells": 315,
+     "charged": 1.4612274411354334e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "descent-associated contrast",
+     "role": "preservation",
+     "cells": 196,
+     "charged": 1.506555606110435e-08
+    }
+   ]
+  },
+  {
+   "revision": "unbanded-group-training-27 2",
+   "as_logged": 0.017519089070527037,
+   "cells_found": 5208,
+   "cells_lost": 542,
+   "carried": 0.017895637662599797,
+   "carried_by_role": {
+    "preservation": 0.011123467397579103,
+    "failing": 0.006772170265020728
+   },
+   "common": 0.017519089070527037,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "descent-associated contrast",
+     "role": "failing",
+     "cells": 31,
+     "charged": 0.0003750722990755621
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "valid friction trace",
+     "role": "preservation",
+     "cells": 315,
+     "charged": 1.4612274411354334e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "descent-associated contrast",
+     "role": "preservation",
+     "cells": 196,
+     "charged": 1.506555606110435e-08
+    }
+   ]
+  }
+ ]
+}

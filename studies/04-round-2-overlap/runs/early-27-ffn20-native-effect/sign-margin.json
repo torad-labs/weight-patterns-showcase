@@ -1,0 +1,47 @@
+{
+  "event": 313,
+  "competing_native_tokens": {
+    "addition": [
+      900,
+      "202b"
+    ],
+    "subtraction": [
+      753,
+      "202d"
+    ]
+  },
+  "endpoints": {
+    "before": {
+      "logits": {
+        "addition": 12.3238525390625,
+        "subtraction": 14.848015785217285
+      },
+      "missing": [],
+      "addition_minus_subtraction": -2.524163246154785,
+      "logits_sha256": "106c2384154e5cdf46af3cc05ec578c44ed9547cdfc463dec90a3e4f6b87c675",
+      "forced_token": 753,
+      "native_greedy_token": 753,
+      "native_result": {
+        "record": "studies/04-round-2-overlap/runs/early-27-prechoice-pullback/ffn20/origin/raw/discovery-05-channel-h1/result.json",
+        "sha256": "b986f00a911af9c1d517eecdac1a70303a9773dcd6144c319c22578142508822"
+      }
+    },
+    "after": {
+      "logits": {
+        "addition": 18.30501365661621,
+        "subtraction": 18.351552963256836
+      },
+      "missing": [],
+      "addition_minus_subtraction": -0.046539306640625,
+      "logits_sha256": "9d69038effbebe5a687bc7e7408e185f2c6d41268d5c0b9a68dca9baf3f4b89a",
+      "forced_token": 753,
+      "native_greedy_token": 753,
+      "native_result": {
+        "record": "studies/04-round-2-overlap/runs/early-27-ffn20-native-effect/held/raw/discovery-05-channel-h1/result.json",
+        "sha256": "a501c6927ed386dcfc05eaea49bd26096fd6f112ebdf2a8cb9bed71f2f17be34"
+      }
+    }
+  },
+  "margin_change": 2.47762393951416,
+  "scope": "Native top-score behavioral diagnostic on forced historical input, outside training."
+}

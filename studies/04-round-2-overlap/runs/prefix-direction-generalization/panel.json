@@ -1,0 +1,130 @@
+[
+  {
+    "id": "m2-v5-d1-q6-h2-chronological",
+    "family": "m2-v5-d1-q6-h2",
+    "ordering": "chronological",
+    "prompt": "A block of mass 2 kg starts at 5 m/s and descends 1 m along a smooth track. It crosses a rough horizontal section that dissipates 6 J. The final smooth climb rises 2 m above the point where that climb begins.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 5,
+      "drop": 1,
+      "friction": 6,
+      "rise": 2,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  },
+  {
+    "id": "m2-v5-d1-q6-h2-endpoint-first",
+    "family": "m2-v5-d1-q6-h2",
+    "ordering": "endpoint-first",
+    "prompt": "The final smooth climb rises 2 m above the point where that climb begins. Just before that climb is a rough horizontal section that dissipates 6 J. Before the rough section, a block of mass 2 kg starts at 5 m/s and descends 1 m along a smooth track.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 5,
+      "drop": 1,
+      "friction": 6,
+      "rise": 2,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  },
+  {
+    "id": "m2-v5-d2-q24-h2-chronological",
+    "family": "m2-v5-d2-q24-h2",
+    "ordering": "chronological",
+    "prompt": "A block of mass 2 kg starts at 5 m/s and descends 2 m along a smooth track. It crosses a rough horizontal section that dissipates 24 J. The final smooth climb rises 2 m above the point where that climb begins.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 5,
+      "drop": 2,
+      "friction": 24,
+      "rise": 2,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  },
+  {
+    "id": "m2-v5-d2-q24-h2-endpoint-first",
+    "family": "m2-v5-d2-q24-h2",
+    "ordering": "endpoint-first",
+    "prompt": "The final smooth climb rises 2 m above the point where that climb begins. Just before that climb is a rough horizontal section that dissipates 24 J. Before the rough section, a block of mass 2 kg starts at 5 m/s and descends 2 m along a smooth track.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 5,
+      "drop": 2,
+      "friction": 24,
+      "rise": 2,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  },
+  {
+    "id": "m2-v7-d1-q8-h3-chronological",
+    "family": "m2-v7-d1-q8-h3",
+    "ordering": "chronological",
+    "prompt": "A block of mass 2 kg starts at 7 m/s and descends 1 m along a smooth track. It crosses a rough horizontal section that dissipates 8 J. The final smooth climb rises 3 m above the point where that climb begins.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 7,
+      "drop": 1,
+      "friction": 8,
+      "rise": 3,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  },
+  {
+    "id": "m2-v7-d1-q8-h3-endpoint-first",
+    "family": "m2-v7-d1-q8-h3",
+    "ordering": "endpoint-first",
+    "prompt": "The final smooth climb rises 3 m above the point where that climb begins. Just before that climb is a rough horizontal section that dissipates 8 J. Before the rough section, a block of mass 2 kg starts at 7 m/s and descends 1 m along a smooth track.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 7,
+      "drop": 1,
+      "friction": 8,
+      "rise": 3,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  },
+  {
+    "id": "m2-v7-d2-q30-h3-chronological",
+    "family": "m2-v7-d2-q30-h3",
+    "ordering": "chronological",
+    "prompt": "A block of mass 2 kg starts at 7 m/s and descends 2 m along a smooth track. It crosses a rough horizontal section that dissipates 30 J. The final smooth climb rises 3 m above the point where that climb begins.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 7,
+      "drop": 2,
+      "friction": 30,
+      "rise": 3,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  },
+  {
+    "id": "m2-v7-d2-q30-h3-endpoint-first",
+    "family": "m2-v7-d2-q30-h3",
+    "ordering": "endpoint-first",
+    "prompt": "The final smooth climb rises 3 m above the point where that climb begins. Just before that climb is a rough horizontal section that dissipates 30 J. Before the rough section, a block of mass 2 kg starts at 7 m/s and descends 2 m along a smooth track.\nUse g = 10 m/s^2. Treat the block as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.\nWill the block reach the top of the final climb? Show a compact numerical calculation using the stated values. Give the available energy, the required energy, and a YES or NO verdict.",
+    "physics": {
+      "m": 2,
+      "v": 7,
+      "drop": 2,
+      "friction": 30,
+      "rise": 3,
+      "g": 10
+    },
+    "max_tokens": 768,
+    "stream_labels": "^(attn_out-20|pe_in-20)$"
+  }
+]

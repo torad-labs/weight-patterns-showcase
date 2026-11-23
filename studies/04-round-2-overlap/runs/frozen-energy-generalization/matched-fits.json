@@ -1,0 +1,59 @@
+{
+ "175": {
+  "objective": 9.736442087775514e-05,
+  "matched_complete_tokens": true,
+  "matched_generation_text": true,
+  "emitted_tokens": 433,
+  "full_measurement": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/measurement.json",
+   "sha256": "b7cdc2e7de5ec12f74880097295fe5b1c39bccda2b22219926cf136989f57a90"
+  },
+  "full_result_sha256": "5deca1e5b0e0ec9fd75c90525a35a34665accbdb4747e12fbee15ddb2ff30f2d",
+  "panel_result_sha256": "85d625103bab124387d315491b5fe50c0f0343907b8dc156333f24d0fabfffc3",
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "model_identity": {
+   "kind": "native-working-revision/1",
+   "run": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174",
+   "generation": 1,
+   "original_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  }
+ },
+ "189": {
+  "objective": 4.259005837627896e-05,
+  "matched_complete_tokens": true,
+  "matched_generation_text": true,
+  "emitted_tokens": 441,
+  "full_measurement": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/measurement.json",
+   "sha256": "0cddb3c3592d6ae5f8645dbad8abdcd74d8eacdceb43d8d6122a49acae6f3bda"
+  },
+  "full_result_sha256": "3f404b3aca8cf843a45e885dd55dd1d6b6131cdfc55ae55791ccd162291d9a02",
+  "panel_result_sha256": "3bbe8231997305adb49bc2d0a572769377721c53d6d8668ba4fb9ff9fb1ce107",
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "model_identity": {
+   "kind": "native-working-revision/1",
+   "run": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175",
+   "generation": 14,
+   "original_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  }
+ },
+ "390": {
+  "objective": 6.40410393474808e-05,
+  "matched_complete_tokens": true,
+  "matched_generation_text": true,
+  "emitted_tokens": 440,
+  "full_measurement": {
+   "record": "studies/04-round-2-overlap/runs/frozen-energy-fit-390-gpu1/checkpoint390/measurement.json",
+   "sha256": "d6192c5f01084b83d6287e54184894c9b89c628c08632c55da4a7235c7668725"
+  },
+  "full_result_sha256": "2782a46f0bbba56f287bc17638724c8f4289cfdf746a3555d4ae5e972e778a21",
+  "panel_result_sha256": "75ced15d97a1ec8c97db1761c921718acf2ae230cb81370665ece8b592544171",
+  "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+  "model_identity": {
+   "kind": "native-working-revision/1",
+   "run": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery",
+   "generation": 42,
+   "original_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  }
+ }
+}

@@ -1,0 +1,301 @@
+{
+  "arms": {
+    "attention_repair": {
+      "measurements": {
+        "descent": {
+          "prechoice": {
+            "signed_direct_squared_distance": 1.8107328784421213e-06,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 0.0008673464771285122,
+            "inherited_turn_rms": 0.21888814785848856,
+            "total_turn_rms": 0.2188886562592443,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          },
+          "numeric_prechoice": {
+            "signed_direct_squared_distance": 1.5047453922292973e-07,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 0.00048681310744802173,
+            "inherited_turn_rms": 0.1393917802954708,
+            "total_turn_rms": 0.13939839001576132,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          }
+        },
+        "friction": {
+          "prechoice": {
+            "signed_direct_squared_distance": 5.601008289866607e-07,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 0.00037686809285651993,
+            "inherited_turn_rms": 0.4018236079848974,
+            "total_turn_rms": 0.40182676286753227,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          },
+          "numeric_prechoice": {
+            "signed_direct_squared_distance": 6.30236328591279e-07,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 0.0005333476285959391,
+            "inherited_turn_rms": 0.10406750064781654,
+            "total_turn_rms": 0.10406930821854371,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          }
+        }
+      },
+      "arithmetic": {
+        "descent": {
+          "operator": "+",
+          "lhs_J": 64,
+          "operand_J": 40,
+          "result_J": 104,
+          "correct": true
+        },
+        "friction": {
+          "operator": "-",
+          "lhs_J": 104,
+          "operand_J": 13,
+          "result_J": 91,
+          "correct": true
+        }
+      },
+      "historical_descent": {
+        "readings": {
+          "old": {
+            "projection_relative_to_reference": 0.39113807930900746,
+            "excess_above_upper": 0.01095762134000039
+          },
+          "old_on_edited": {
+            "projection_relative_to_reference": 0.02112100798816277,
+            "excess_above_upper": -0.35905944998084427
+          },
+          "edited": {
+            "projection_relative_to_reference": 0.02112100798816277,
+            "excess_above_upper": -0.35905944998084427
+          }
+        },
+        "direct": 0.0,
+        "inherited": -0.3700170713208446,
+        "total": -0.3700170713208446
+      }
+    },
+    "ffn_repair": {
+      "measurements": {
+        "descent": {
+          "prechoice": {
+            "signed_direct_squared_distance": -4.1641297739777335e-08,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 6.33529879135028e-05,
+            "inherited_turn_rms": 0.2203646343757148,
+            "total_turn_rms": 0.22036458163732595,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          },
+          "numeric_prechoice": {
+            "signed_direct_squared_distance": -5.7974822205370104e-08,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 6.339771010152545e-05,
+            "inherited_turn_rms": 0.13964256174721426,
+            "total_turn_rms": 0.13964234610825924,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          }
+        },
+        "friction": {
+          "prechoice": {
+            "signed_direct_squared_distance": -3.9673996760536345e-08,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 5.0916672456963165e-05,
+            "inherited_turn_rms": 0.4026056168454457,
+            "total_turn_rms": 0.4026042914844655,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          },
+          "numeric_prechoice": {
+            "signed_direct_squared_distance": -8.431161657660871e-09,
+            "signed_direct_squared_excess": 0.0,
+            "direct_turn_rms": 6.248118054647512e-05,
+            "inherited_turn_rms": 0.10468377528017672,
+            "total_turn_rms": 0.10468410952560225,
+            "edited_outside": 0,
+            "old_on_edited_outside": 0,
+            "prefix_timing_offsets": [
+              0
+            ]
+          }
+        }
+      },
+      "arithmetic": {
+        "descent": {
+          "operator": "+",
+          "lhs_J": 64,
+          "operand_J": 40,
+          "result_J": 104,
+          "correct": true
+        },
+        "friction": {
+          "operator": "-",
+          "lhs_J": 104,
+          "operand_J": 13,
+          "result_J": 91,
+          "correct": true
+        }
+      },
+      "historical_descent": {
+        "readings": {
+          "old": {
+            "projection_relative_to_reference": 0.39113807930900746,
+            "excess_above_upper": 0.01095762134000039
+          },
+          "old_on_edited": {
+            "projection_relative_to_reference": 0.015100778455768682,
+            "excess_above_upper": -0.3650796795132384
+          },
+          "edited": {
+            "projection_relative_to_reference": 0.01510147660858932,
+            "excess_above_upper": -0.3650789813604177
+          }
+        },
+        "direct": 6.981528206812997e-07,
+        "inherited": -0.3760373008532388,
+        "total": -0.37603660270041805
+      }
+    },
+    "failed_edit": {
+      "measurements": {
+        "descent": {
+          "prechoice": {
+            "signed_direct_squared_distance": 1.9439612967040033e-07,
+            "signed_direct_squared_excess": 5.036728940461162e-12,
+            "direct_turn_rms": 3.866184413861932e-05,
+            "inherited_turn_rms": 0.2286497889266355,
+            "total_turn_rms": 0.22864996083055655,
+            "edited_outside": 3,
+            "old_on_edited_outside": 3,
+            "prefix_timing_offsets": [
+              0
+            ]
+          },
+          "numeric_prechoice": {
+            "signed_direct_squared_distance": 1.44136647718108e-08,
+            "signed_direct_squared_excess": 2.4553289616806602e-12,
+            "direct_turn_rms": 7.816495191702222e-05,
+            "inherited_turn_rms": 0.04969978210509404,
+            "total_turn_rms": 0.04969981432941337,
+            "edited_outside": 8,
+            "old_on_edited_outside": 8,
+            "prefix_timing_offsets": [
+              0
+            ]
+          }
+        },
+        "friction": {
+          "prechoice": {
+            "signed_direct_squared_distance": 7.82180718553132e-09,
+            "signed_direct_squared_excess": -4.1807965184479424e-13,
+            "direct_turn_rms": 3.6544398041454365e-05,
+            "inherited_turn_rms": 0.3969506969780518,
+            "total_turn_rms": 0.3969504055158297,
+            "edited_outside": 8,
+            "old_on_edited_outside": 8,
+            "prefix_timing_offsets": [
+              0
+            ]
+          },
+          "numeric_prechoice": {
+            "signed_direct_squared_distance": 5.4085512012995726e-09,
+            "signed_direct_squared_excess": 1.0753150236648716e-09,
+            "direct_turn_rms": 7.846697260361527e-05,
+            "inherited_turn_rms": 0.10354847551751933,
+            "total_turn_rms": 0.10354853267731182,
+            "edited_outside": 88,
+            "old_on_edited_outside": 88,
+            "prefix_timing_offsets": [
+              0
+            ]
+          }
+        }
+      },
+      "arithmetic": {
+        "descent": {
+          "operator": "-",
+          "lhs_J": 64,
+          "operand_J": 40,
+          "result_J": 24,
+          "correct": false
+        },
+        "friction": {
+          "operator": "-",
+          "lhs_J": 24,
+          "operand_J": 13,
+          "result_J": 11,
+          "correct": true
+        }
+      },
+      "historical_descent": {
+        "readings": {
+          "old": {
+            "projection_relative_to_reference": 0.39329149748553405,
+            "excess_above_upper": 0.013111039516526979
+          },
+          "old_on_edited": {
+            "projection_relative_to_reference": 0.3953783020841153,
+            "excess_above_upper": 0.015197844115108217
+          },
+          "edited": {
+            "projection_relative_to_reference": 0.39537829185263096,
+            "excess_above_upper": 0.01519783388362389
+          }
+        },
+        "direct": -1.0231484383617949e-08,
+        "inherited": 0.0020868045985812794,
+        "total": 0.002086794367096896
+      }
+    }
+  },
+  "stage_merge_count": 105,
+  "historical_upper": 0.38018045796900707,
+  "tested_common_rule": {
+    "attention_repair": false,
+    "ffn_repair": true,
+    "failed_edit": false
+  },
+  "observed_descent_correct": {
+    "attention_repair": true,
+    "ffn_repair": true,
+    "failed_edit": false
+  },
+  "historical_in_envelope": {
+    "attention_repair": true,
+    "ffn_repair": true,
+    "failed_edit": false
+  },
+  "prediction_vs_result": {
+    "all_layer_direct_sign_separates": false,
+    "historical_downstream_side_agrees": true,
+    "all_friction_correct": true
+  },
+  "failures_only": "Both successful displacements have different signed all-merge responses on one fitted case. Friction works for all arms. The downstream readout and the frozen reference phases were identified on development data. The original and edited trajectories may have different incoming histories. Whole-history and prefix correspondence are separately reported.",
+  "what_this_changes": "Local counterfactuals can distinguish native weight response from received movement. The historical readout is a retrospective outcome marker. Its local derivative or the sign of the mean direct change has no demonstrated power to pick a useful corrective update."
+}

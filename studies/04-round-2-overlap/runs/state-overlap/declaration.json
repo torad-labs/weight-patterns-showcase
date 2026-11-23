@@ -1,0 +1,43 @@
+{
+ "method_step": [
+  1,
+  2,
+  3
+ ],
+ "run_by": "Claude (weight-research-fable), with Astra (weight-research-astra), who built the registered correspondence this run lays the states on and whose boundary argument is the reason for it.",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "hypothesis": "A capability leaves a recurring difference between the traces of correct and wrong answers. If that is so, the difference recurs not only in the turn each merge makes but in the state the computation is in right after each matrix has written, which is what the next matrix reads and what an edit of that matrix can move.",
+ "what_went_wrong_before": "Every overlap so far measured the turn of each merge (the direction of the state after it minus the direction before it), and a2-path was declared to ask each matrix for the shared part of the gap in its own turn. Three things measured on November 10, in development, on input-overlap's rows and the registered correspondence, show that this is not what an edit should be aimed at. (1) At the first merge the state before it is the token's own embedding, and the first attention replaces its direction (the state after the merge keeps 0.011 of the direction before it; at later merges 0.97). The gap in that turn is the gap of the state after the merge minus the gap of the embeddings; over the diverged places the embeddings are 1.017 of the squared ask and the state after the merge 0.023. No weight produces the gap of the embeddings, and 77% of that ask lies in the outputs holding 0.1% of the learned scale squared: fitted exactly, the first attention matrix changed by 30% in a regime where the solver's result depended on its path. (2) Along the path the turn gaps write and take back: over places 142 to 313 the 104 later turn gaps add up to 0.100 where unrelated merges would give 1.19; the matrix merges alone add up to 0.207 and the third merges of the layers, where an input is added that no matrix is asked about, to 0.179. (3) So the shared turn gaps of the 70 matrices, each delivered in full, do not add up to the gap of the states: at the seven matrices read (layer 0, 8, 16, 24 and 34) they close the state gap through layer 8 (0.096 to 0.030, 0.199 to 0.068) and from layer 16 on leave the state further from the correct pattern than no edit (layer 16: 0.109 to 0.136; the last matrix: 0.081 to 0.168). The state gap rebuilt from the turn patterns by summing agrees with the one read from the rows to four digits, so this is a property of the trace, not of the reading.",
+ "why_this_direction": "Step 5 of the method changes the weights so that the wrong answers' own inputs produce the correct side, and Marcos asked (November 9) that the change take into account the influence every layer has on the next. What a matrix controls, with everything before it fixed, is the direction of the state right after its merge; what the next matrix reads is that state. The inputs enter at 36 boundaries (the token embedding and one more per layer) and none of them can be moved by a weight, so a target stated as turns leaves their part unbalanced (Astra's boundary argument, checked in the readings above). The overlap of the states is therefore the discrepancy the edit needs: for each place and each of the 70 matrices, the gap between the correct and the wrong pattern of the state after that matrix's merge, with its chance, by the same formulas and the same correspondence as the overlap of the turns. This is a new reading of recorded data. It does not replace the overlap of the turns, which stays the record of where the computation diverges and what the test of an edit is read against.",
+ "repeating_pattern_check": "What has repeated: each edit was aimed at a quantity that looked like the discrepancy and was not what a weight change delivers along the whole path (the plain difference of means, the merged signal over the scale, what each matrix sends, the turn of each merge). Each time the miss was found only after the edit failed. This time the miss was found before any edit was built, by adding up what the declared asks imply and comparing it with the states. To avoid repeating it in the new quantity, this run records, beside the state gaps, what the shared turn gaps add up to and what they would leave, at every matrix and place, so the two can be compared by anyone. What it does not settle: whether moving the states on the wrong answers' own text carries to the model's own answers. That is the edit's test, not this run's.",
+ "rule": {
+  "members": "The 60 answers of the registered correspondence, 30 that subtract the descent and 30 correct, in its order. Their rows are input-overlap's: what arrived at each of the 70 matrices and the state it added to, at every generated step, while the original model generated each answer token by token.",
+  "state": "For each matrix and step, the direction of the state right after the merge: unit(h + g*y/rms(y)), with y the matrix output for the recorded input, g the learned scale after it and h the recorded state it is added to, computed with the original weights.",
+  "overlap": "As in the registered overlap of the turns, with its pairs: at a place, the mean of each answer's steps laid on that place, then the mean over the answers of each group. Per place and matrix: the squared gap of the two group means; its chance, the sum over the two groups of the answers' spread divided by their count; how alike the gaps of the two alternating halves are; the shared part, max(0, 1 - chance/gap).",
+  "beside_it": "Per place and matrix, what the shared turn gaps of the registered overlap (shared part where gap > 2 chance, at the 70 matrix merges) add up to along the path to that matrix, and what they would leave of the state gap if each were delivered in full: as a2-path first declared them, and with the first merge taken as the state after it. And the gap and chance of the direction of the token embeddings."
+ },
+ "prediction": {
+  "expected_observation": "The gap of the states is several times its chance over places 142 to 313 at every one of the 70 matrices (the seven read in development gave 4.8 to 8.0), with the halves' gaps alike, and close to chance outside the region. The shared turn gaps close the state gap in the first layers and leave more than no edit from the middle layers on.",
+  "failures_only": "Matrices where the gap of the states is not above twice its chance over places 142 to 313, and places inside the region that are not diverged at a matrix, are listed; they are where the edit will ask for nothing."
+ },
+ "would_weaken_it": "If the gap of the states were at chance at most matrices while the gap of the turns is not, the recurring difference would live in what the merges do and not in where the computation is, and aiming an edit at the states would be the wrong reading. If the state gap rebuilt from the turns did not agree with the one read from the rows, the turns would not be the increments of these states and the comparison beside it would mean nothing.",
+ "inputs": [
+  "studies/04-round-2-overlap/runs/input-overlap/inputs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/members.json",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/pairs",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/recurrence.npz",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/trace-overlap-complete-registered/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/wide-overlap/members.json",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/state-overlap/correct-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/wrong-pattern.npy",
+  "studies/04-round-2-overlap/runs/state-overlap/recurrence.npz",
+  "studies/04-round-2-overlap/runs/state-overlap/members.json",
+  "studies/04-round-2-overlap/runs/state-overlap/overlap.out",
+  "studies/04-round-2-overlap/runs/state-overlap/result.json"
+ ]
+}

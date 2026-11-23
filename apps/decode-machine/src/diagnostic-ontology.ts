@@ -1,0 +1,71 @@
+import type { RecordedStep } from "./replay-model";
+
+export const evidenceSources = [
+  { id: "source:tools", label: "NVIDIA pro · profiling tools", location: ".dev/research/nvidia-pro/07-profiling-toolchain.md", scope: "Historical local reference, sections 1–3" },
+  { id: "source:metrics", label: "NVIDIA pro · metric cookbook", location: ".dev/research/nvidia-pro/08-ncu-metric-cookbook.md", scope: "Historical metric names; query target support" },
+  { id: "source:playbook", label: "NVIDIA pro · optimization playbook", location: ".dev/research/nvidia-pro/16-optimization-playbook.md", scope: "Method and historical results; thresholds are heuristics" },
+  { id: "source:memory", label: "NVIDIA pro · memory hierarchy", location: ".dev/research/nvidia-pro/02-memory-hierarchy.md", scope: "Historical GB203 measurements, not this capture's device identity" },
+  { id: "source:tma", label: "NVIDIA pro · async movement", location: ".dev/research/nvidia-pro/04-async-movement-tma-clusters.md", scope: "Issue, completion, consumption and slot reuse" },
+  { id: "source:prefetch", label: "NVIDIA pro · L2 prefetch", location: ".dev/research/nvidia-pro/19-l2-prefetching-on-sm120.md", scope: "Conditional rig results; retain production regressions in chapter 16" },
+  { id: "source:profiling", label: "NVIDIA · profiling guide", location: "https://docs.nvidia.com/nsight-compute/ProfilingGuide/", scope: "Consulted 2026-11-05; measurement and scheduler semantics" },
+  { id: "source:triage", label: "NVIDIA · compute triage", location: "https://docs.nvidia.com/nsight-compute/ComputeTriage/", scope: "Consulted 2026-11-05; distinguish causes before changing code" },
+  { id: "source:architecture", label: "NVIDIA · Blackwell tuning", location: "https://docs.nvidia.com/cuda/blackwell-tuning-guide/index.html", scope: "Consulted 2026-11-05; capability-specific, not all Blackwell alike" },
+] as const;
+
+export const architectureAreas = [
+  { id: "area:coordination", label: "Coordination", physical: "Readiness latch", question: "What held the next operation?",
+    checkpoints: ["Producer", "Publish", "Readiness", "Consumer"],
+    alternatives: ["A required producer arrived late", "Workers were assigned unequal work", "Coordination itself added delay"],
+    need: "Producer IDs, readiness generations and arrivals for equivalent work", tool: "Dependency-aware device trace + policy assignment", sources: ["source:playbook", "source:triage"],
+    experiment: "If a late producer carries excess assigned work, rebalance that work in the schedule policy.",
+    prediction: "Required producer and dependent operation finish earlier.", companions: ["Other worker groups do not regress", "Same dependency and correctness semantics"],
+    refutes: "The dependent completion stays unchanged, or a different worker group becomes slower." },
+  { id: "area:memory", label: "Memory & reuse", physical: "Reservoir and cache", question: "Are bytes arriving efficiently?",
+    checkpoints: ["Demand", "L2 lookup", "Delivery", "Reuse"],
+    alternatives: ["Demand traffic saturates bandwidth", "Too few independent requests are in flight", "Rereads or wasted sectors amplify traffic"],
+    need: "Phase-local DRAM/L2 bytes, demand hit rate, sectors, clocks and known working set", tool: "Nsight Compute · MemoryWorkloadAnalysis + PM sampling", sources: ["source:memory", "source:metrics", "source:prefetch"],
+    experiment: "If redundant demand bytes are confirmed, change reuse or layout; if delivery is underfilled, test independent requests without competing traffic.",
+    prediction: "Fewer demand bytes or shorter exposed delivery time improves token latency.", companions: ["No increase in total DRAM traffic", "Same output and workload"],
+    refutes: "Cache hits improve but wall time does not, or rereads and demand latency increase." },
+  { id: "area:transfer", label: "TMA & staging", physical: "Crane and trays", question: "Did the consumer wait for a delivery?",
+    checkpoints: ["Issue", "Completion", "Acquire", "Release"],
+    alternatives: ["The transfer was issued too late", "A reusable slot was still occupied", "The consumer was delayed after data arrived"],
+    need: "Transfer ID, issue, completion, consumer acquire, release, bytes and slot generation", tool: "TMA lifecycle trace + resource accounting", sources: ["source:tma", "source:metrics"],
+    experiment: "If exposed transfer latency is confirmed, change staging depth or issue placement in policy.",
+    prediction: "Delivery completes before the dependent consumer needs it.", companions: ["No overwrite of a live slot", "No occupancy or spill regression"],
+    refutes: "More stages consume resources without advancing dependent completion." },
+  { id: "area:execution", label: "Warp execution", physical: "Crews and presses", question: "What prevented useful issue?",
+    checkpoints: ["Resident", "Eligible", "Issued", "Executed"],
+    alternatives: ["A dependent operand was unavailable", "An execution pipe was saturated", "Instruction or address work dominated"],
+    need: "Eligible and issued warps, pipe activity, stall samples and exact PC/source binding", tool: "Nsight Compute · SchedulerStats, SourceCounters, WarpStateStats", sources: ["source:profiling", "source:metrics", "source:triage"],
+    experiment: "If missed issue slots dominate, interleave proven independent work; if a pipe is saturated, reduce work on that pipe.",
+    prediction: "Useful issue improves and the same workload finishes earlier.", companions: ["Register pressure and spills do not worsen", "Same arithmetic and outputs"],
+    refutes: "Stall samples decrease while token latency stays unchanged or worsens." },
+  { id: "area:resources", label: "Local resources", physical: "Private drawers", question: "Does working space limit progress?",
+    checkpoints: ["Allocation", "Residency", "Issue", "Completion"],
+    alternatives: ["Register or shared-memory allocation limits residency", "Spills create extra memory traffic", "Shared accesses serialize on bank conflicts"],
+    need: "Compiled resources, launch limits, spill traffic, bank-conflict wavefronts and issue activity", tool: "ptxas / cuobjdump + Nsight Compute · Occupancy and memory analysis", sources: ["source:memory", "source:metrics", "source:architecture"],
+    experiment: "If resource pressure is confirmed, shorten live ranges or change staging and geometry through policy.",
+    prediction: "Less spill or serialized traffic reduces completion time.", companions: ["No extra register spills from caps", "Same useful work and correctness"],
+    refutes: "Occupancy rises but useful issue or wall time does not improve." },
+  { id: "area:host", label: "Host & submission", physical: "Dispatch desk", question: "Was the GPU waiting for the host?",
+    checkpoints: ["Prepare", "Submit", "Queue", "Execute"],
+    alternatives: ["Host preparation delayed submission", "A synchronization round trip delayed progress", "Queued GPU work caused the gap"],
+    need: "Request boundaries, CPU/CUDA timeline, API, queue and execution times", tool: "Nsight Systems · CUDA + NVTX + OS runtime", sources: ["source:tools", "source:playbook"],
+    experiment: "If host preparation or round trips dominate, change submission or graph preparation on the production path.",
+    prediction: "End-to-end token latency falls while kernel work stays equivalent.", companions: ["No deferred work hidden outside the measured range", "Same throughput and outputs"],
+    refutes: "The apparent gap is GPU queueing, or moved host work does not improve end-to-end time." },
+  { id: "area:correctness", label: "Numerical behavior", physical: "Output gauge", question: "Does faster still mean correct?",
+    checkpoints: ["Inputs", "Computation", "Output", "Checks"],
+    alternatives: ["The same computation is scheduled better", "A dependency or slot reuse changed the result", "A precision or arithmetic change altered output"],
+    need: "Exact cases, equation invariants, deterministic replay and production coherence result", tool: "Existing QGRE correctness checks", sources: ["source:playbook"],
+    experiment: "Validate every performance candidate on the same narrow-carrier production megakernel.",
+    prediction: "Required correctness remains satisfied at the improved latency.", companions: ["No wider reference recompute", "No fallback inference path"],
+    refutes: "Any required invariant or coherence check fails." },
+] as const;
+export type ArchitectureArea = typeof architectureAreas[number];
+export function candidateArea(step: RecordedStep): ArchitectureArea {
+  const id = step.kind === "wait" || step.kind === "mixed" ? "area:coordination"
+    : /projection|weight|gather/i.test(step.name) ? "area:memory" : "area:execution";
+  return architectureAreas.find(a => a.id === id)!;
+}

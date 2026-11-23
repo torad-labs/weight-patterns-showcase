@@ -1,0 +1,92 @@
+
+<h2>10&nbsp;&nbsp;Questions you could be asked</h2>
+
+<p><b>In two minutes, what did you build?</b> A way to compute a persistent weight change for a reasoning error from
+the model's own successful and failing answers, without training. I record how each token's internal signal turns at
+every one of the model's 105 merge points, define the gap between failing and successful turns at matched positions, find
+the weight matrices whose inputs can predict that gap on held-out questions, and solve for the smallest change that closes
+it. Then I store the change in the model's native format and measure both the trace and the answers.</p>
+
+<p><b>How do you know the recorder does not change the model?</b> Every recording must reproduce every token and a
+SHA-256 hash of all 262,144 vocabulary scores at every step of an ordinary run. The fast recorder was also compared bit
+for bit with the complete one: over 250,000 tensors, zero differences.</p>
+
+<p><b>Why measure direction instead of the raw vectors?</b> The model normalises the stream before every branch, so
+the next layer mostly sees direction. Size still matters through the scale weights, and it is recorded beside every
+turn, but the turn is what the next computation responds to.</p>
+
+<p><b>Why ridge regression, and why leave out whole questions?</b> There are many more numbers in a weight matrix than
+there are examples, so an unpenalised fit can match the examples perfectly and mean nothing. The penalty keeps the change
+small and stable; leaving out whole questions ensures the fit generalises across questions rather than across tokens of
+the same answer, which are not independent.</p>
+
+<p><b>Why LSMR for the cache step?</b> The problem had 1.57 million unknowns and 1.42 million equations, too large to
+solve directly. LSMR only needs to run the effect chain forwards and backwards, and from a zero start it returns the
+smallest change that fits, which is the safest change consistent with the data.</p>
+
+<p><b>Why not just use gradient descent on the objective?</b> We could, and that would be a reasonable comparison.
+The point of the method is that each step is solved and explained: which matrix, why there, what share of the target it
+can carry, and what it is predicted to do. Gradient descent spreads a change across every weight at once and explains
+none of it.</p>
+
+<p><b>The edit made answers worse. Doesn't that kill the idea?</b> It shows two things. The method does change how the
+model computes, coherently and on questions it was never fitted to: one stored change switched the model to a different
+procedure across dozens of problems. And the objective only protects what it covers. The failure came from where the
+objective was pointed, not from the solving, and it is diagnosable down to the exact arithmetic. B2 and C2 test whether
+the same tools can steer it where we want.</p>
+
+<p><b>Does a capability live in layer 11?</b> No claim of that kind is made. The location test says where a change can
+act on the observed gap, not where a skill is stored. The descent-sign result suggests the procedure is distributed: one
+change at layer 11 altered behaviour in passages it was never aimed at.</p>
+
+<p><b>How is this different from steering vectors or ROME?</b> Steering adds a fixed direction to the stream while the
+model runs; it is not stored and acts the same everywhere. ROME and MEMIT edit stored facts with a calculated change.
+This method edits a reasoning procedure, derives the change from the connected trace of many answers rather than from one
+fact, and measures the change's effect on the whole computation before looking at answers.</p>
+
+<p><b>What limits it?</b> The objective covers only the positions it is pointed at; BF16 rounding becomes a larger share
+of each change as changes get smaller; it needs examples of the model succeeding; and it has been shown on one small model
+and one error type so far.</p>
+
+<h2>11&nbsp;&nbsp;Where each number comes from</h2>
+
+<p>Paths are under <code>runs/legs/gemma4-e2b/signal-trace-A-2026-11-07/</code> unless stated.</p>
+<ul class="small">
+<li>Recorder fidelity and speed: <code>stream-qualification-2026-11-08/</code> (residual, projection, hybrid and GPU1
+qualification files, <code>timing.jsonl</code>); full-recorder figures from
+<code>cohort-original/expanded-043-h3/audit.json</code>.</li>
+<li>Populations and screening: <code>research/experiments/signal-trace-repair/A.md</code>.</li>
+<li>Location support: <code>trace-construction-02/input-support/index.json</code>.</li>
+<li>Step sizes and trace results: <code>trace-construction-02/step-*/direction.json</code>,
+<code>inverse-result.json</code>, <code>native-effect.json</code> and <code>absolute-comparison/index.json</code>; step
+3's rejection in <code>research/experiments/signal-trace-repair/A-CONSTRUCTION-02.md</code>.</li>
+<li>Natural answers: <code>trace-construction-02/step-01-scaled/exploratory-natural-comparison.json</code> and
+<code>trace-construction-02/step-02/exploratory-natural-comparison.json</code>, produced by
+<code>code/signal-trace/pipeline/evaluation/compare_natural_answers.py</code>.</li>
+<li>Round one: <code>reports/paper-a-d/</code>.</li>
+<li>Code for each stage: <code>code/signal-trace/README.md</code>.</li>
+</ul>
+
+<h2>12&nbsp;&nbsp;Glossary</h2>
+<ul class="small">
+<li><b>Residual stream</b>: the 1,536 numbers per token that every layer reads and adds to.</li>
+<li><b>Merge</b>: one of the 105 points per token where a branch is added to the stream.</li>
+<li><b>Turn (T)</b>: change in the stream's direction at a merge: <i>h'</i>/|<i>h'</i>| − <i>h</i>/|<i>h</i>|.</li>
+<li><b>Trace</b>: the ordered turns at all merges for each token, tied to the operations that produced them.</li>
+<li><b>Anchor</b>: the matched point in two answers where they are compared ("climb" in round two).</li>
+<li><b>Target (D)</b>: average successful turn minus failing turn at the matched positions; zero for successes.</li>
+<li><b>Objective</b>: weighted squared distance from every trace to its target; what each step tries to shrink.</li>
+<li><b>Support</b>: how much of the target at a merge one matrix's inputs predict on held-out questions.</li>
+<li><b>Ridge regression</b>: least squares with a penalty that keeps the solution small and stable.</li>
+<li><b>Linearise</b>: treat small changes as adding up in proportion, turning a chain of operations into one matrix.</li>
+<li><b>LSMR</b>: iterative least-squares solver that finds the smallest change fitting the target.</li>
+<li><b>Adjoint</b>: the backward version of a linear chain, used by the solver; checked to mirror the forward chain.</li>
+<li><b>BF16</b>: the model's 16-bit number format, about three significant digits.</li>
+<li><b>Conditional probe</b>: running the edited model on the original answer's text to measure its effect on the
+computation alone.</li>
+<li><b>Natural run</b>: the edited model writing its own answers; the behavioural test.</li>
+<li><b>Cache sharing</b>: layers 15 to 34 reuse the key/value caches written by layers 13 and 14.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "status": "stopped_after_downhill_correspondence_disappeared",
+  "exit_code": 0,
+  "installed_updates": 3,
+  "final_state": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/final-state.json",
+    "sha256": "e51ba13a45c24204cb4c49019de28618ff0c14a5847080671410f55658c407ef"
+  },
+  "measurement": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/3/group-measurement.json",
+    "sha256": "4c462e9de1785535c9ac56725f5e681b01d67a78a4cf547fcf8e42218fa8e9fa"
+  },
+  "fit_readback": {
+    "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/fresh-fit-readback.json",
+    "sha256": "706347fc66748f969bc56ef9868105bedac3b382b72207f6754f52594f9470b3"
+  },
+  "prediction_vs_result": "The 91 J pre-choice projection entered the common gradient from stock and after free regeneration moved its location. The first squared discrepancy fell 28.03%. The 95 J climb requirement repaired and stayed correct. No tested checkpoint retained both complete fits and the 44 J control.",
+  "failures_only": "Revision 2 lost direct downhill supervision on both failing fits. Revision 3 lost every downhill field on all three responses and the 44 J control regressed. The remaining measured contribution excludes every one of those downhill requests.",
+  "what_this_changes": "The stock loop can train on the signed precursor and use its new location on the subsequent step. Reliable phase recognition across regenerated computations is still required for the combined task. Endpoint selection for transfer was not reached."
+}

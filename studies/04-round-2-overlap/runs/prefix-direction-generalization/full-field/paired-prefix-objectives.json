@@ -1,0 +1,249 @@
+{
+  "endpoint_order": [
+    "baseline",
+    "edited"
+  ],
+  "comparison": "Restrict both independently registered native paths to the common frozen source cells. Normalize each by their shared cell count, preserving the frozen division over repeated visits. The endpoint paths may have different generated histories.",
+  "cases": [
+    {
+      "id": "m2-v5-d1-q6-h2-chronological",
+      "ordering": "chronological",
+      "family": "m2-v5-d1-q6-h2",
+      "native_prefix_objective": [
+        0.000276817816549068,
+        0.0002793988406017599
+      ],
+      "source_coverage": [
+        0.603370324702014,
+        0.603370324702014
+      ],
+      "common_source_cells": 4404,
+      "baseline_supported_cells": 4404,
+      "baseline_supported_cells_retained": 1.0,
+      "objective_on_common_source_cells": [
+        0.00045878593165114606,
+        0.00046306360979842085
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v5-d1-q6-h2-chronological/full-field-reduction.json",
+          "sha256": "3601178e5c51884596d731a8517edbbeb065a10e16cdcf8c8ed3790092fda025"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v5-d1-q6-h2-chronological/full-field-reduction.json",
+          "sha256": "5adbf017827a9cbfc73891982be9b0840bc12f8d3eef965b73c6afd5945419b4"
+        }
+      ]
+    },
+    {
+      "id": "m2-v5-d1-q6-h2-endpoint-first",
+      "ordering": "endpoint-first",
+      "family": "m2-v5-d1-q6-h2",
+      "native_prefix_objective": [
+        0.0003815425809588824,
+        0.0003869876797505167
+      ],
+      "source_coverage": [
+        0.972598986162488,
+        0.986299493081244
+      ],
+      "common_source_cells": 7099,
+      "baseline_supported_cells": 7099,
+      "baseline_supported_cells_retained": 1.0,
+      "objective_on_common_source_cells": [
+        0.0003922917732664999,
+        0.000391776097189469
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v5-d1-q6-h2-endpoint-first/full-field-reduction.json",
+          "sha256": "8412de933fbf878c52d6c1c2c185cf88729823d71efb9408365178fc851abd7c"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v5-d1-q6-h2-endpoint-first/full-field-reduction.json",
+          "sha256": "f21cf70d052b614bc938acef30ede4ad599c610198748c4e4a355c8b7015bc5c"
+        }
+      ]
+    },
+    {
+      "id": "m2-v5-d2-q24-h2-chronological",
+      "ordering": "chronological",
+      "family": "m2-v5-d2-q24-h2",
+      "native_prefix_objective": [
+        0.00037212702428751453,
+        0.00037371029248934543
+      ],
+      "source_coverage": [
+        0.8373749828743664,
+        0.8373749828743664
+      ],
+      "common_source_cells": 6112,
+      "baseline_supported_cells": 6112,
+      "baseline_supported_cells_retained": 1.0,
+      "objective_on_common_source_cells": [
+        0.0004443971122831427,
+        0.0004462878640182808
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v5-d2-q24-h2-chronological/full-field-reduction.json",
+          "sha256": "7d33a97383d810dbc355745fa50ce4fcd1e92adf52ac3e79f6dc967fac2a2805"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v5-d2-q24-h2-chronological/full-field-reduction.json",
+          "sha256": "7afd4cb8c80b518d3376da78d3e4805f5d7c8b8c5af62d6f6d67fe86840506e9"
+        }
+      ]
+    },
+    {
+      "id": "m2-v5-d2-q24-h2-endpoint-first",
+      "ordering": "endpoint-first",
+      "family": "m2-v5-d2-q24-h2",
+      "native_prefix_objective": [
+        0.0003156439418090837,
+        0.0003168398700353858
+      ],
+      "source_coverage": [
+        0.7955884367721606,
+        0.7955884367721606
+      ],
+      "common_source_cells": 5807,
+      "baseline_supported_cells": 5807,
+      "baseline_supported_cells_retained": 1.0,
+      "objective_on_common_source_cells": [
+        0.0003967427469027901,
+        0.0003982459465108112
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v5-d2-q24-h2-endpoint-first/full-field-reduction.json",
+          "sha256": "c0e2652eaa010ea7a4bd588e7fbff467015dab0b678872ed495ae6e664a6979c"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v5-d2-q24-h2-endpoint-first/full-field-reduction.json",
+          "sha256": "a9699cdacc0dad27b13add7348e561018d2ee0cca8fb4286a704f18b25106231"
+        }
+      ]
+    },
+    {
+      "id": "m2-v7-d1-q8-h3-chronological",
+      "ordering": "chronological",
+      "family": "m2-v7-d1-q8-h3",
+      "native_prefix_objective": [
+        0.0002765224324889462,
+        0.00039738660827213975
+      ],
+      "source_coverage": [
+        0.6174818468283326,
+        0.9738320317851761
+      ],
+      "common_source_cells": 4507,
+      "baseline_supported_cells": 4507,
+      "baseline_supported_cells_retained": 1.0,
+      "objective_on_common_source_cells": [
+        0.00044782277229572174,
+        0.00045648198513709967
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v7-d1-q8-h3-chronological/full-field-reduction.json",
+          "sha256": "13c276d8ff046faa739db6867324a0579865b355440134bb4bcbed0a6f48ff4c"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v7-d1-q8-h3-chronological/full-field-reduction.json",
+          "sha256": "e57bf8a85e87d9aaddca03f5ca9d8ead0daf0ea643fc343bcb1a7d54e7736740"
+        }
+      ]
+    },
+    {
+      "id": "m2-v7-d1-q8-h3-endpoint-first",
+      "ordering": "endpoint-first",
+      "family": "m2-v7-d1-q8-h3",
+      "native_prefix_objective": [
+        0.0004390093435352147,
+        0.0004418202156646636
+      ],
+      "source_coverage": [
+        0.9867105082888067,
+        0.9867105082888067
+      ],
+      "common_source_cells": 7202,
+      "baseline_supported_cells": 7202,
+      "baseline_supported_cells_retained": 1.0,
+      "objective_on_common_source_cells": [
+        0.00044492213252756617,
+        0.00044777086283482085
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v7-d1-q8-h3-endpoint-first/full-field-reduction.json",
+          "sha256": "82e9dc7d6d6dd3d1b2889ee4c6277b3406d502d67b21a7d14e41e9cea5882dd9"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v7-d1-q8-h3-endpoint-first/full-field-reduction.json",
+          "sha256": "8b37464dc299ed6e872ca43d9c866316754dc8614a69b00e639c892c65da58a6"
+        }
+      ]
+    },
+    {
+      "id": "m2-v7-d2-q30-h3-chronological",
+      "ordering": "chronological",
+      "family": "m2-v7-d2-q30-h3",
+      "native_prefix_objective": [
+        0.00033146044141262694,
+        0.0003994896248122459
+      ],
+      "source_coverage": [
+        0.8234004658172352,
+        0.9595835045896698
+      ],
+      "common_source_cells": 5808,
+      "baseline_supported_cells": 6010,
+      "baseline_supported_cells_retained": 0.9663893510815308,
+      "objective_on_common_source_cells": [
+        0.000399795498218777,
+        0.00046835898675284723
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v7-d2-q30-h3-chronological/full-field-reduction.json",
+          "sha256": "baffba77d29a1b225e63d8779df932651f7f3616421d985d9fe6b1badba245ba"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v7-d2-q30-h3-chronological/full-field-reduction.json",
+          "sha256": "caebd40284694219d464f2bce44f82ae06c29ed43b3ca5cf3e66bb6047ea3fd5"
+        }
+      ]
+    },
+    {
+      "id": "m2-v7-d2-q30-h3-endpoint-first",
+      "ordering": "endpoint-first",
+      "family": "m2-v7-d2-q30-h3",
+      "native_prefix_objective": [
+        0.0003167415030430389,
+        0.00030765570909467176
+      ],
+      "source_coverage": [
+        0.7955884367721606,
+        0.7955884367721606
+      ],
+      "common_source_cells": 5807,
+      "baseline_supported_cells": 5807,
+      "baseline_supported_cells_retained": 1.0,
+      "objective_on_common_source_cells": [
+        0.00039812230596024466,
+        0.00038670208725366095
+      ],
+      "reductions": [
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/baseline/m2-v7-d2-q30-h3-endpoint-first/full-field-reduction.json",
+          "sha256": "7b9e541655c7d5c6f699754d52d89ef5a7fb80cde141a56d3df41b9639936b26"
+        },
+        {
+          "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/edited/m2-v7-d2-q30-h3-endpoint-first/full-field-reduction.json",
+          "sha256": "4e3b5ffabe84a8c30a5347a6d2e507e2f60c854962881f84c9b16d1d54e331b4"
+        }
+      ]
+    }
+  ]
+}

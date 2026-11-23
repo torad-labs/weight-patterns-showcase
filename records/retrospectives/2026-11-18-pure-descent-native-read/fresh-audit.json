@@ -1,0 +1,154 @@
+{
+  "origin": {
+    "audited_symbolic_prediction": 313,
+    "audited_numeric_prediction": 327,
+    "diagnostic_add_minus_subtract_logit_margin": -2.524163246154785,
+    "generation": "b986f00a911af9c1d517eecdac1a70303a9773dcd6144c319c22578142508822",
+    "historical_FFN20": {
+      "event": 312,
+      "merge": 61,
+      "projection": 0.14660586726381347,
+      "target": -0.13706413096992426,
+      "signed_residual": 0.28366999823373773
+    },
+    "mean_squared": {
+      "historical_FFN20": 0.08046866789792877,
+      "symbolic": 0.0021174169166274814,
+      "numeric": 0.010611390010525254
+    },
+    "symbolic_cells": [
+      {
+        "event": 310,
+        "merge": 72,
+        "projection": -0.038288326631663275,
+        "target": 0.009568978105709844,
+        "signed_residual": -0.04785730473737312
+      },
+      {
+        "event": 310,
+        "merge": 78,
+        "projection": 0.04972438908198733,
+        "target": 0.05926828513639828,
+        "signed_residual": -0.009543896054410951
+      },
+      {
+        "event": 310,
+        "merge": 84,
+        "projection": 0.02459843537437211,
+        "target": 0.03184269702659409,
+        "signed_residual": -0.00724426165222198
+      },
+      {
+        "event": 313,
+        "merge": 94,
+        "projection": 0.012435535970417213,
+        "target": 0.0646784078628107,
+        "signed_residual": -0.05224287189239349
+      },
+      {
+        "event": 313,
+        "merge": 96,
+        "projection": -0.006293160158502156,
+        "target": 0.0005317792068669609,
+        "signed_residual": -0.006824939365369116
+      },
+      {
+        "event": 313,
+        "merge": 97,
+        "projection": -0.0030749391573701925,
+        "target": 0.05313464337747391,
+        "signed_residual": -0.0562095825348441
+      },
+      {
+        "event": 313,
+        "merge": 100,
+        "projection": -0.01571142521122157,
+        "target": 0.044526004802317026,
+        "signed_residual": -0.060237430013538595
+      },
+      {
+        "event": 313,
+        "merge": 103,
+        "projection": 4.9532456962786756e-05,
+        "target": 0.070345235264655,
+        "signed_residual": -0.0702957028076922
+      }
+    ]
+  },
+  "edited": {
+    "audited_symbolic_prediction": 391,
+    "audited_numeric_prediction": 402,
+    "diagnostic_add_minus_subtract_logit_margin": -8.851395606994629,
+    "generation": "2eb37fe211802232dd37fd31dd0d9adb783f991eb9bf293307910822fd31059b",
+    "historical_FFN20": {
+      "event": 390,
+      "merge": 61,
+      "projection": -0.0061909032042474915,
+      "target": -0.13706413096992426,
+      "signed_residual": 0.13087322776567678
+    },
+    "mean_squared": {
+      "historical_FFN20": 0.017127801745806713,
+      "symbolic": 0.0045537482138470805,
+      "numeric": 0.002922105797008432
+    },
+    "symbolic_cells": [
+      {
+        "event": 388,
+        "merge": 72,
+        "projection": -0.028071575972509297,
+        "target": 0.009568978105709844,
+        "signed_residual": -0.03764055407821914
+      },
+      {
+        "event": 388,
+        "merge": 78,
+        "projection": 0.043201042804809436,
+        "target": 0.05926828513639828,
+        "signed_residual": -0.016067242331588842
+      },
+      {
+        "event": 388,
+        "merge": 84,
+        "projection": 0.02261230359694344,
+        "target": 0.03184269702659409,
+        "signed_residual": -0.009230393429650652
+      },
+      {
+        "event": 391,
+        "merge": 94,
+        "projection": -0.03115362300301561,
+        "target": 0.0646784078628107,
+        "signed_residual": -0.09583203086582631
+      },
+      {
+        "event": 391,
+        "merge": 96,
+        "projection": -0.004738300717837731,
+        "target": 0.0005317792068669609,
+        "signed_residual": -0.005270079924704692
+      },
+      {
+        "event": 391,
+        "merge": 97,
+        "projection": -0.01782060987512913,
+        "target": 0.05313464337747391,
+        "signed_residual": -0.07095525325260305
+      },
+      {
+        "event": 391,
+        "merge": 100,
+        "projection": -0.04562202776767456,
+        "target": 0.044526004802317026,
+        "signed_residual": -0.09014803256999158
+      },
+      {
+        "event": 391,
+        "merge": 103,
+        "projection": -0.04054638000805356,
+        "target": 0.070345235264655,
+        "signed_residual": -0.11089161527270855
+      }
+    ]
+  }
+}

@@ -1,0 +1,1391 @@
+{
+ "declaration_sha256": "f12383767e85eb78026dbc179ecfdf8c0d9904aee5a39cc2b57a8e89891b77df",
+ "states": [
+  "original",
+  "175",
+  "189",
+  "390"
+ ],
+ "novel_cases": [
+  "novel-v5-d1-channel",
+  "novel-v5-d1-reordered",
+  "novel-v5-d2-channel",
+  "novel-v5-d2-reordered",
+  "novel-v7-d1-channel",
+  "novel-v7-d1-reordered",
+  "novel-v7-d2-channel",
+  "novel-v7-d2-reordered"
+ ],
+ "control_cases": [
+  "discovery-05-channel-h1",
+  "expanded-004-h1",
+  "discovery-10-channel-h1"
+ ],
+ "novel_operation_counts": {
+  "original": {
+   "initial": {
+    "right": 8
+   },
+   "downhill": {
+    "wrong": 4,
+    "right": 4
+   },
+   "bottom": {
+    "wrong": 6,
+    "right": 2
+   },
+   "friction": {
+    "right": 8
+   },
+   "available": {
+    "wrong": 4,
+    "right": 4
+   },
+   "required": {
+    "right": 5,
+    "wrong": 2,
+    "ambiguous": 1
+   },
+   "verdict": {
+    "right": 5,
+    "unobservable": 1,
+    "wrong": 2
+   },
+   "full_numerical_chain": {
+    "wrong": 6,
+    "unresolved": 1,
+    "right": 1
+   }
+  },
+  "175": {
+   "initial": {
+    "right": 8
+   },
+   "downhill": {
+    "wrong": 6,
+    "right": 2
+   },
+   "bottom": {
+    "wrong": 6,
+    "right": 2
+   },
+   "friction": {
+    "right": 8
+   },
+   "available": {
+    "wrong": 6,
+    "right": 2
+   },
+   "required": {
+    "right": 6,
+    "unobservable": 1,
+    "wrong": 1
+   },
+   "verdict": {
+    "right": 6,
+    "unobservable": 1,
+    "wrong": 1
+   },
+   "full_numerical_chain": {
+    "wrong": 6,
+    "right": 2
+   }
+  },
+  "189": {
+   "initial": {
+    "right": 8
+   },
+   "downhill": {
+    "right": 3,
+    "wrong": 5
+   },
+   "bottom": {
+    "wrong": 6,
+    "right": 2
+   },
+   "friction": {
+    "right": 8
+   },
+   "available": {
+    "right": 3,
+    "wrong": 4,
+    "ambiguous": 1
+   },
+   "required": {
+    "right": 6,
+    "unobservable": 1,
+    "wrong": 1
+   },
+   "verdict": {
+    "right": 6,
+    "unobservable": 1,
+    "wrong": 1
+   },
+   "full_numerical_chain": {
+    "wrong": 6,
+    "right": 2
+   }
+  },
+  "390": {
+   "initial": {
+    "right": 8
+   },
+   "downhill": {
+    "right": 3,
+    "wrong": 5
+   },
+   "bottom": {
+    "right": 3,
+    "wrong": 5
+   },
+   "friction": {
+    "right": 8
+   },
+   "available": {
+    "right": 3,
+    "wrong": 5
+   },
+   "required": {
+    "right": 6,
+    "unobservable": 1,
+    "wrong": 1
+   },
+   "verdict": {
+    "right": 6,
+    "unobservable": 1,
+    "wrong": 1
+   },
+   "full_numerical_chain": {
+    "right": 3,
+    "wrong": 5
+   }
+  }
+ },
+ "paired_novel_changes_from_original": {
+  "original": {
+   "initial": {
+    "right -> right": 8
+   },
+   "downhill": {
+    "wrong -> wrong": 4,
+    "right -> right": 4
+   },
+   "bottom": {
+    "wrong -> wrong": 6,
+    "right -> right": 2
+   },
+   "friction": {
+    "right -> right": 8
+   },
+   "available": {
+    "wrong -> wrong": 4,
+    "right -> right": 4
+   },
+   "required": {
+    "right -> right": 5,
+    "wrong -> wrong": 2,
+    "ambiguous -> ambiguous": 1
+   },
+   "verdict": {
+    "right -> right": 5,
+    "unobservable -> unobservable": 1,
+    "wrong -> wrong": 2
+   },
+   "full_numerical_chain": {
+    "wrong -> wrong": 6,
+    "unresolved -> unresolved": 1,
+    "right -> right": 1
+   }
+  },
+  "175": {
+   "initial": {
+    "right -> right": 8
+   },
+   "downhill": {
+    "wrong -> wrong": 4,
+    "right -> right": 2,
+    "right -> wrong": 2
+   },
+   "bottom": {
+    "wrong -> wrong": 5,
+    "right -> right": 1,
+    "right -> wrong": 1,
+    "wrong -> right": 1
+   },
+   "friction": {
+    "right -> right": 8
+   },
+   "available": {
+    "wrong -> wrong": 4,
+    "right -> right": 2,
+    "right -> wrong": 2
+   },
+   "required": {
+    "right -> right": 3,
+    "wrong -> right": 2,
+    "ambiguous -> right": 1,
+    "right -> unobservable": 1,
+    "right -> wrong": 1
+   },
+   "verdict": {
+    "right -> right": 4,
+    "unobservable -> right": 1,
+    "right -> unobservable": 1,
+    "wrong -> right": 1,
+    "wrong -> wrong": 1
+   },
+   "full_numerical_chain": {
+    "wrong -> wrong": 5,
+    "unresolved -> right": 1,
+    "right -> wrong": 1,
+    "wrong -> right": 1
+   }
+  },
+  "189": {
+   "initial": {
+    "right -> right": 8
+   },
+   "downhill": {
+    "wrong -> right": 1,
+    "wrong -> wrong": 3,
+    "right -> right": 2,
+    "right -> wrong": 2
+   },
+   "bottom": {
+    "wrong -> wrong": 5,
+    "right -> right": 1,
+    "right -> wrong": 1,
+    "wrong -> right": 1
+   },
+   "friction": {
+    "right -> right": 8
+   },
+   "available": {
+    "wrong -> right": 1,
+    "wrong -> wrong": 3,
+    "right -> right": 2,
+    "right -> ambiguous": 1,
+    "right -> wrong": 1
+   },
+   "required": {
+    "right -> right": 3,
+    "wrong -> right": 2,
+    "ambiguous -> right": 1,
+    "right -> unobservable": 1,
+    "right -> wrong": 1
+   },
+   "verdict": {
+    "right -> right": 4,
+    "unobservable -> right": 1,
+    "right -> unobservable": 1,
+    "wrong -> right": 1,
+    "wrong -> wrong": 1
+   },
+   "full_numerical_chain": {
+    "wrong -> wrong": 5,
+    "unresolved -> right": 1,
+    "right -> wrong": 1,
+    "wrong -> right": 1
+   }
+  },
+  "390": {
+   "initial": {
+    "right -> right": 8
+   },
+   "downhill": {
+    "wrong -> right": 1,
+    "wrong -> wrong": 3,
+    "right -> right": 2,
+    "right -> wrong": 2
+   },
+   "bottom": {
+    "wrong -> right": 2,
+    "wrong -> wrong": 4,
+    "right -> right": 1,
+    "right -> wrong": 1
+   },
+   "friction": {
+    "right -> right": 8
+   },
+   "available": {
+    "wrong -> right": 1,
+    "wrong -> wrong": 3,
+    "right -> right": 2,
+    "right -> wrong": 2
+   },
+   "required": {
+    "right -> right": 3,
+    "wrong -> right": 2,
+    "ambiguous -> right": 1,
+    "right -> unobservable": 1,
+    "right -> wrong": 1
+   },
+   "verdict": {
+    "right -> right": 4,
+    "unobservable -> right": 1,
+    "right -> unobservable": 1,
+    "wrong -> right": 1,
+    "wrong -> wrong": 1
+   },
+   "full_numerical_chain": {
+    "wrong -> right": 2,
+    "wrong -> wrong": 4,
+    "unresolved -> right": 1,
+    "right -> wrong": 1
+   }
+  }
+ },
+ "novel_chains_grouped_by_family": {
+  "original": {
+   "v5-d1": {
+    "novel-v5-d1-channel": "wrong",
+    "novel-v5-d1-reordered": "wrong"
+   },
+   "v5-d2": {
+    "novel-v5-d2-channel": "unresolved",
+    "novel-v5-d2-reordered": "right"
+   },
+   "v7-d1": {
+    "novel-v7-d1-channel": "wrong",
+    "novel-v7-d1-reordered": "wrong"
+   },
+   "v7-d2": {
+    "novel-v7-d2-channel": "wrong",
+    "novel-v7-d2-reordered": "wrong"
+   }
+  },
+  "175": {
+   "v5-d1": {
+    "novel-v5-d1-channel": "wrong",
+    "novel-v5-d1-reordered": "wrong"
+   },
+   "v5-d2": {
+    "novel-v5-d2-channel": "right",
+    "novel-v5-d2-reordered": "wrong"
+   },
+   "v7-d1": {
+    "novel-v7-d1-channel": "wrong",
+    "novel-v7-d1-reordered": "wrong"
+   },
+   "v7-d2": {
+    "novel-v7-d2-channel": "right",
+    "novel-v7-d2-reordered": "wrong"
+   }
+  },
+  "189": {
+   "v5-d1": {
+    "novel-v5-d1-channel": "wrong",
+    "novel-v5-d1-reordered": "wrong"
+   },
+   "v5-d2": {
+    "novel-v5-d2-channel": "right",
+    "novel-v5-d2-reordered": "wrong"
+   },
+   "v7-d1": {
+    "novel-v7-d1-channel": "wrong",
+    "novel-v7-d1-reordered": "wrong"
+   },
+   "v7-d2": {
+    "novel-v7-d2-channel": "right",
+    "novel-v7-d2-reordered": "wrong"
+   }
+  },
+  "390": {
+   "v5-d1": {
+    "novel-v5-d1-channel": "right",
+    "novel-v5-d1-reordered": "wrong"
+   },
+   "v5-d2": {
+    "novel-v5-d2-channel": "right",
+    "novel-v5-d2-reordered": "wrong"
+   },
+   "v7-d1": {
+    "novel-v7-d1-channel": "wrong",
+    "novel-v7-d1-reordered": "wrong"
+   },
+   "v7-d2": {
+    "novel-v7-d2-channel": "right",
+    "novel-v7-d2-reordered": "wrong"
+   }
+  }
+ },
+ "physical_configurations": 4,
+ "verified_native_record_count": 44,
+ "unique_blind_readings": 35,
+ "capped": [
+  "175/novel-v5-d2-reordered",
+  "189/novel-v5-d2-reordered",
+  "390/novel-v5-d2-reordered",
+  "original/novel-v5-d2-channel"
+ ],
+ "records": {
+  "175/discovery-05-channel-h1": {
+   "blind_id": "43211db488f5d9",
+   "verified_sha256": "beb3053dad2a9c6d4cadc3caf945466800d776fa49d90224583c30c0bd4033e1",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.f32",
+     "sha256": "78ace69d90e2fba0998daa1937e08854bbac3b3c24afc023c0d9ba12634946e0"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.jsonl",
+     "sha256": "f64b6d15099e4a284a29d6dbc319cd71f3344dfab11c5a4cc1208a9069b786c2"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-05-channel-h1/raw/discovery-05-channel-h1/result.json",
+     "sha256": "85d625103bab124387d315491b5fe50c0f0343907b8dc156333f24d0fabfffc3"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-05-channel-h1/raw/discovery-05-channel-h1/case.json",
+     "sha256": "8548b96c009c9ca41f75bd91923402fc22267e736a578c7cf1be1a304aba77ce"
+    }
+   }
+  },
+  "175/discovery-10-channel-h1": {
+   "blind_id": "593468b843bdf4",
+   "verified_sha256": "efae772457d35351392958ebf65436c9a5159ff58ec30cd6121cc59ddece74d5",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.f32",
+     "sha256": "633125f2ba4eb0a751050380fe1dfc81a64c061155bea54be55d66ebcfdc6289"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.jsonl",
+     "sha256": "f64b6d15099e4a284a29d6dbc319cd71f3344dfab11c5a4cc1208a9069b786c2"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-10-channel-h1/raw/discovery-10-channel-h1/result.json",
+     "sha256": "c3e237dec055b2ad2595eefdf801dd02f622dc8c68374f25622a0edae2f2c3bb"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/discovery-10-channel-h1/raw/discovery-10-channel-h1/case.json",
+     "sha256": "a2bc9589ac602bc65a1b8a38a89a8f4f6b1e0316a3fd038935af74ba6ab48bc4"
+    }
+   }
+  },
+  "175/expanded-004-h1": {
+   "blind_id": "7195eeccc1c41e",
+   "verified_sha256": "b6f10df5241c56f67bfef626f51ddc55b973f1403fc281ab94c0d8677ba48610",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/expanded-004-h1/raw/expanded-004-h1/stream.f32",
+     "sha256": "e502e0e2f81c22bc20358a639ddea34846ebabea87109557121ad7262b196674"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/expanded-004-h1/raw/expanded-004-h1/stream.jsonl",
+     "sha256": "90ff9afc159492e9f45b7c3ab7211bf4e89bd9fba202d515f7570a5a01c68de6"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/expanded-004-h1/raw/expanded-004-h1/result.json",
+     "sha256": "2cfac889b4500d7c6f4e631a170a74047d576df5850264d2fafee2c0b7451af2"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/expanded-004-h1/raw/expanded-004-h1/case.json",
+     "sha256": "b02d0e57340dc8ec11de8e9c7f1f3dca6b408a80a588ad1ff97f58d12ced913e"
+    }
+   }
+  },
+  "175/novel-v5-d1-channel": {
+   "blind_id": "5c40756e72cf1d",
+   "verified_sha256": "1f8c8cbfe09feba20915acabc8c0c491afa4883ed437fab1060a3eb4bc931cd3",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.f32",
+     "sha256": "b2696d7f778a9c5e870494069a2a8e0df05adcf003c8585fd03e6ac6b2e715ee"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.jsonl",
+     "sha256": "b0a9b97f048661ff17acc19e713e8f1ccf55b33ad4fa71fd5edb870b63e93b18"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-channel/raw/novel-v5-d1-channel/result.json",
+     "sha256": "fb3dd2b282b90cda51125882dfb4a7bae07ffb61690db9716825739c153c228d"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-channel/raw/novel-v5-d1-channel/case.json",
+     "sha256": "55c102803f30d43594e4b2c580d697aae0c579711e1fb9c32481a7dfb6757e11"
+    }
+   }
+  },
+  "175/novel-v5-d1-reordered": {
+   "blind_id": "a364a0001ff1d0",
+   "verified_sha256": "711c068c7ee477eb8472c4b034b20fb3a06397c9e723eaab9dcfcc2247f92c77",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.f32",
+     "sha256": "b6dbe3aac023010e3587c76d6b5536876fd9af7f5caed948a124df293dd67b09"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.jsonl",
+     "sha256": "8fae9d3f79563298f213e506ca2ff642c295e3b43faa856ba12a8a1e1002fa85"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/result.json",
+     "sha256": "8ced441e078d0ffde4616aab1cb9df39aded63dc8e312c0aa95f008a99bab9a0"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/case.json",
+     "sha256": "a8958512db22bbaeeeec22f4d0a7ac37058b7b56bd46c12b93037146c26f49fb"
+    }
+   }
+  },
+  "175/novel-v5-d2-channel": {
+   "blind_id": "233e5ad7744ca9",
+   "verified_sha256": "a154ea2cc6459df11fbcd42e12518e7b8af8c0fa48ccc4e3221c4ff267c834fc",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.f32",
+     "sha256": "4a8d1f09e2283e0cfded2dd3831ae783612ee1956e950096cfb2e8eb389ed55f"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.jsonl",
+     "sha256": "bbcc2ad3d4b303f1cf018b805d26b23b17c75979f443b00f0b430035695003a2"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-channel/raw/novel-v5-d2-channel/result.json",
+     "sha256": "7cde7288434f7b147650548d999533f36f5075148b409e798deda1560bbcc601"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-channel/raw/novel-v5-d2-channel/case.json",
+     "sha256": "0a31318f115049add58546cfdacd8ae9b7c586b5c6a241f1520f289e421ea317"
+    }
+   }
+  },
+  "175/novel-v5-d2-reordered": {
+   "blind_id": "9c304d0c587e7d",
+   "verified_sha256": "d3b45270e7f852a82a3ad93952f22fe7cbc51f9b769aa4bdf2e5572cf3bf1766",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.f32",
+     "sha256": "db3b4c988fc6cea3b7ee30d55afe01ed8e8d13ff11b39a050e38b15993f417b0"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.jsonl",
+     "sha256": "36175dc33d834a5d29ac2d643fb714103332e28935d1ebcc69e1719174a18f72"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/result.json",
+     "sha256": "fb6ffedd41ff1a351173f0a43ab4459d7ecc26c633b2232e1af697cdf7956622"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/case.json",
+     "sha256": "fe2d9d6e9592c4f94cde237a18e14c37c6929dcd5626469a04939689fdb06526"
+    }
+   }
+  },
+  "175/novel-v7-d1-channel": {
+   "blind_id": "5effeedf80529c",
+   "verified_sha256": "42e957b243a78ee759c9a8ac87674fdc483b3df076a56d081adf1c91d7de5615",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.f32",
+     "sha256": "b398fa95f014671a59a83db3fea5c00ed330226ffb975f71fdf9781b84db9dd8"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.jsonl",
+     "sha256": "564d44c4d060757da3ddc00febabf86416965e78db31561770565af790f45487"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-channel/raw/novel-v7-d1-channel/result.json",
+     "sha256": "fb06a44b52507eafd4f25fe5cb17c3fc06e566d0e33afed39f7ab07056491609"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-channel/raw/novel-v7-d1-channel/case.json",
+     "sha256": "482b271c16fe5dd4b3a428d01a4dea6999b2f408dbc1729d7b8b8660a23a6a4b"
+    }
+   }
+  },
+  "175/novel-v7-d1-reordered": {
+   "blind_id": "b01bdc124b342b",
+   "verified_sha256": "5777f90bd3f4ed8c6d84b3171ba92fb037c29555a7ea2d628041ababbee06951",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.f32",
+     "sha256": "043abd64229bb49db5d4bebe8c43172ccf79ce6ce6386aba597b834d3be2a432"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.jsonl",
+     "sha256": "302c52b5dfe737a9e72a91a1229b09ed5f448d174b83cbbdab9f348aeb979538"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/result.json",
+     "sha256": "8b74bac846203e8102a817d4a0a02fc41f2a682a58ae7066b3d817184a641ece"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/case.json",
+     "sha256": "dd8b7db5a13e6256ad6a5f376d21910a59d219564a2fbecd14334d1cf0c89f9d"
+    }
+   }
+  },
+  "175/novel-v7-d2-channel": {
+   "blind_id": "f2f5b5073ec32d",
+   "verified_sha256": "fd54af6efff9908e9e323f9628df098be0f88af1b93be12f41d0526ff31e7420",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.f32",
+     "sha256": "3442636c41c54d03c69dc7a718022fbb1aa37ded810ffcf7fd2bd6db7325aedd"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.jsonl",
+     "sha256": "300a3012024390e84e68629d2fe99bad995dc4b4e6f927588c6e14eb6a2e9668"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-channel/raw/novel-v7-d2-channel/result.json",
+     "sha256": "f1d35581d5e8a5cfc5a881791b77ea5f97ecb7f1d97a8d784b52d528324391e9"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-channel/raw/novel-v7-d2-channel/case.json",
+     "sha256": "a30cb67cb06eca05840362ff9f635c60b8168c913023cc0d0ea33f97f211806b"
+    }
+   }
+  },
+  "175/novel-v7-d2-reordered": {
+   "blind_id": "9f5c7867d54340",
+   "verified_sha256": "6f56a5332215a8694515cca5ab002e56af08924e46a3cc0fb825579037d8e4b8",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.f32",
+     "sha256": "1483d1ee74bf072b906eaad87d02d79debe21faae0502772863f6532b906fb02"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.jsonl",
+     "sha256": "0d4046088d8e740f7ac177550d58c6c60b963244dd522c7c893c59638b401997"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/result.json",
+     "sha256": "8541af4e125f50bb7a8ba608666ecebc57d70082d392a616c25981e0c86f072d"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/175/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/case.json",
+     "sha256": "acfbc228af77977e6a3773c2bb06c285306dc6ca02210ef4400d48592a694e40"
+    }
+   }
+  },
+  "189/discovery-05-channel-h1": {
+   "blind_id": "d6dc76ce3d1169",
+   "verified_sha256": "b51505f500d91841580e082db7288f7c50033fd9396c1f39e3afb43f76efee61",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.f32",
+     "sha256": "0caf56bac416f172b2a3f27208d2208259d328694c45d8667e03272aec0fe05a"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.jsonl",
+     "sha256": "a47ca81a685afc5083fb21aeaded1e069d49e8e9243fb0ecdb4965f8a1ebc0b5"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-05-channel-h1/raw/discovery-05-channel-h1/result.json",
+     "sha256": "3bbe8231997305adb49bc2d0a572769377721c53d6d8668ba4fb9ff9fb1ce107"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-05-channel-h1/raw/discovery-05-channel-h1/case.json",
+     "sha256": "8548b96c009c9ca41f75bd91923402fc22267e736a578c7cf1be1a304aba77ce"
+    }
+   }
+  },
+  "189/discovery-10-channel-h1": {
+   "blind_id": "593468b843bdf4",
+   "verified_sha256": "e1164542ae77e9fa2c18c192ef9349027c3ddb459550b396eba850658f6211bc",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.f32",
+     "sha256": "6803b87d113f7bf377fb3cf3c0bfe054be0c65a97428c6c263b5a57e7dbecc11"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.jsonl",
+     "sha256": "f64b6d15099e4a284a29d6dbc319cd71f3344dfab11c5a4cc1208a9069b786c2"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-10-channel-h1/raw/discovery-10-channel-h1/result.json",
+     "sha256": "efbe2dd1da69b2735fc905cf64969f3ad306a48794a40f1988a6ce3d3dbd641d"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/discovery-10-channel-h1/raw/discovery-10-channel-h1/case.json",
+     "sha256": "a2bc9589ac602bc65a1b8a38a89a8f4f6b1e0316a3fd038935af74ba6ab48bc4"
+    }
+   }
+  },
+  "189/expanded-004-h1": {
+   "blind_id": "7195eeccc1c41e",
+   "verified_sha256": "0ca3f495f62216472d6045c46b974f8bf90497fa6b30932f8b99b83e4b6f7a01",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/expanded-004-h1/raw/expanded-004-h1/stream.f32",
+     "sha256": "31792081ec1b6f87da4f09c7d0932ed9ae6edf71c964d6921adba3456ed1f4c6"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/expanded-004-h1/raw/expanded-004-h1/stream.jsonl",
+     "sha256": "90ff9afc159492e9f45b7c3ab7211bf4e89bd9fba202d515f7570a5a01c68de6"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/expanded-004-h1/raw/expanded-004-h1/result.json",
+     "sha256": "edd05c45819ed9c843333086894bf3cec69617458201e7284e86c1d03ce95b67"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/expanded-004-h1/raw/expanded-004-h1/case.json",
+     "sha256": "b02d0e57340dc8ec11de8e9c7f1f3dca6b408a80a588ad1ff97f58d12ced913e"
+    }
+   }
+  },
+  "189/novel-v5-d1-channel": {
+   "blind_id": "c0fb1ae9bbc18c",
+   "verified_sha256": "5aa0a1355b2565afeee71fc2e48e8a55a919311f19bfd3d5a34fda4531fca6f0",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.f32",
+     "sha256": "4340fbc56c0f706057686331507dab764271633ec8fd43df39bcef8f1579e03a"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.jsonl",
+     "sha256": "88668d2b34cdf209d10c79d56cb3f91a51d6bfe8cc04855dfc9ff40b98b420da"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-channel/raw/novel-v5-d1-channel/result.json",
+     "sha256": "cc02ea93a32866732ee33ee93d8e03d59b9bad27b76bb1d28455c0f357e0aace"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-channel/raw/novel-v5-d1-channel/case.json",
+     "sha256": "55c102803f30d43594e4b2c580d697aae0c579711e1fb9c32481a7dfb6757e11"
+    }
+   }
+  },
+  "189/novel-v5-d1-reordered": {
+   "blind_id": "a364a0001ff1d0",
+   "verified_sha256": "938c83a92e833c91aff727b40a1f52a76f46ed9b93e7940baebd6b2f141902e1",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.f32",
+     "sha256": "1ba0fed4efa093d8027e9aae1600f6a840fa4536ba3eb7712573ef6fa4d6c085"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.jsonl",
+     "sha256": "8fae9d3f79563298f213e506ca2ff642c295e3b43faa856ba12a8a1e1002fa85"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/result.json",
+     "sha256": "4553d41075f83739d8ac6c37eaf129b98398c7c95a87c9195b49fe177b0d413b"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/case.json",
+     "sha256": "a8958512db22bbaeeeec22f4d0a7ac37058b7b56bd46c12b93037146c26f49fb"
+    }
+   }
+  },
+  "189/novel-v5-d2-channel": {
+   "blind_id": "233e5ad7744ca9",
+   "verified_sha256": "9e7800fe3bc72fc02255cb94490d6f4a3a1219059d14a0ca379338abad21946e",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.f32",
+     "sha256": "f89701b017c97cf0e86d9d30656a86726670afa20d59c157f2aa6d20a98e9395"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.jsonl",
+     "sha256": "bbcc2ad3d4b303f1cf018b805d26b23b17c75979f443b00f0b430035695003a2"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-channel/raw/novel-v5-d2-channel/result.json",
+     "sha256": "9ca250767eb5146d284404665b91209ae56b8d3ed3b81daaff5dd2731e1e7552"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-channel/raw/novel-v5-d2-channel/case.json",
+     "sha256": "0a31318f115049add58546cfdacd8ae9b7c586b5c6a241f1520f289e421ea317"
+    }
+   }
+  },
+  "189/novel-v5-d2-reordered": {
+   "blind_id": "d339cd95ef590a",
+   "verified_sha256": "26edf1fd1a54cccb1a4070472c4a5c66d6c97dc2e06ae9daea790dac851ae64c",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.f32",
+     "sha256": "5efeb454480611ce8ec755d25956931cf19e26d5df167d83ff67e5a764b56a05"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.jsonl",
+     "sha256": "36175dc33d834a5d29ac2d643fb714103332e28935d1ebcc69e1719174a18f72"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/result.json",
+     "sha256": "15bbf5c5fe0bd065c1c010628abf31bccf78187320afa6e5f26658eb60e148b1"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/case.json",
+     "sha256": "fe2d9d6e9592c4f94cde237a18e14c37c6929dcd5626469a04939689fdb06526"
+    }
+   }
+  },
+  "189/novel-v7-d1-channel": {
+   "blind_id": "5effeedf80529c",
+   "verified_sha256": "e9fc90dfb39f7c4f6cc9f119a53bac0bb8a1a7d86ef617cb8c96262a5a7eaeeb",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.f32",
+     "sha256": "f394e7949083c1ff5a3c27107a60ed31ef71493ec62d594d6f1b62fed61dd621"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.jsonl",
+     "sha256": "564d44c4d060757da3ddc00febabf86416965e78db31561770565af790f45487"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-channel/raw/novel-v7-d1-channel/result.json",
+     "sha256": "d3c7ebfc5a0c02fed2d0320eeab6b4365ca16d6229219246501d6cebef601a50"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-channel/raw/novel-v7-d1-channel/case.json",
+     "sha256": "482b271c16fe5dd4b3a428d01a4dea6999b2f408dbc1729d7b8b8660a23a6a4b"
+    }
+   }
+  },
+  "189/novel-v7-d1-reordered": {
+   "blind_id": "b01bdc124b342b",
+   "verified_sha256": "cc9d793b7a02b9f20591c8216a1f4cc52e2e749aa463a2ca05764c02e2d245ab",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.f32",
+     "sha256": "a66b79d0438379b80dfa7b4e6900cda34058fd65385ea7c7e71e7f29adfa9661"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.jsonl",
+     "sha256": "302c52b5dfe737a9e72a91a1229b09ed5f448d174b83cbbdab9f348aeb979538"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/result.json",
+     "sha256": "de2a6359b3515f05a7f63cfebb4423ff18d4be7b4b20479d079bd35d8b59b2a4"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/case.json",
+     "sha256": "dd8b7db5a13e6256ad6a5f376d21910a59d219564a2fbecd14334d1cf0c89f9d"
+    }
+   }
+  },
+  "189/novel-v7-d2-channel": {
+   "blind_id": "f2f5b5073ec32d",
+   "verified_sha256": "0c39f0a71df2b1e0a25d0b8757db49856ae845c25abcc39253dc4bdabf34ee47",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.f32",
+     "sha256": "e46910ba1c806a1c7715479b3eb703577e9ed51dd08d3e45d62e4aae4d2f2b95"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.jsonl",
+     "sha256": "300a3012024390e84e68629d2fe99bad995dc4b4e6f927588c6e14eb6a2e9668"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-channel/raw/novel-v7-d2-channel/result.json",
+     "sha256": "a903e09695eddf0e4f15a42bac3bcfee7c469f29c1e6f17a3c30581116651490"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-channel/raw/novel-v7-d2-channel/case.json",
+     "sha256": "a30cb67cb06eca05840362ff9f635c60b8168c913023cc0d0ea33f97f211806b"
+    }
+   }
+  },
+  "189/novel-v7-d2-reordered": {
+   "blind_id": "9f5c7867d54340",
+   "verified_sha256": "803bc64b3fc9987beb324111603c78f8530e6be159b0c4d65835a37b1d8bf8c1",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.f32",
+     "sha256": "89e67b7d203976cb65a62ebe4c993c2625bbc6722492626c65defae52d4712c9"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.jsonl",
+     "sha256": "0d4046088d8e740f7ac177550d58c6c60b963244dd522c7c893c59638b401997"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/result.json",
+     "sha256": "a5a4402cbaa521287865046d82060ee7e34c7707eec3b5e5f9572e9293873e98"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/189/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/case.json",
+     "sha256": "acfbc228af77977e6a3773c2bb06c285306dc6ca02210ef4400d48592a694e40"
+    }
+   }
+  },
+  "390/discovery-05-channel-h1": {
+   "blind_id": "3006badb097d78",
+   "verified_sha256": "2b4c524465f8663fa48e3e6d90b93c6a149ba13366912fe4ec07beb553dc570b",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.f32",
+     "sha256": "ea90e615faf7f84aa8cc8079b21393bb4007e3345c2fe1970b6b7614ed5b2023"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.jsonl",
+     "sha256": "e860577752f7d8eb636e30e7019996e4b55b36997bd2a909d9b2103428d40b67"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-05-channel-h1/raw/discovery-05-channel-h1/result.json",
+     "sha256": "75ced15d97a1ec8c97db1761c921718acf2ae230cb81370665ece8b592544171"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-05-channel-h1/raw/discovery-05-channel-h1/case.json",
+     "sha256": "8548b96c009c9ca41f75bd91923402fc22267e736a578c7cf1be1a304aba77ce"
+    }
+   }
+  },
+  "390/discovery-10-channel-h1": {
+   "blind_id": "6da9d98e575f03",
+   "verified_sha256": "2633727595df9bf38058cbbb1588d959e41e438a5bbfb925e2524ca9a33d39bb",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.f32",
+     "sha256": "dbc717cb9f4f47f2096b08426cb3d4acafa98bea737d59ebbebfedff42d22547"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.jsonl",
+     "sha256": "38775ecc1ee0f3935a8d82bc613284045f986488cd8ee730a1c89e4b29e33ce8"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-10-channel-h1/raw/discovery-10-channel-h1/result.json",
+     "sha256": "73dda1aea5f1aa3c78e93815c0752986132a32d2d271dbaddc7bba50e4397d56"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/discovery-10-channel-h1/raw/discovery-10-channel-h1/case.json",
+     "sha256": "a2bc9589ac602bc65a1b8a38a89a8f4f6b1e0316a3fd038935af74ba6ab48bc4"
+    }
+   }
+  },
+  "390/expanded-004-h1": {
+   "blind_id": "ea020d4fc37cb7",
+   "verified_sha256": "2960a417db2244705e4e184a2394039cefd3ed830502ea2e70e4a735bcba1898",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/expanded-004-h1/raw/expanded-004-h1/stream.f32",
+     "sha256": "0fddcc0667631a36a5f2e23cd1ceac468c6b862b7ef290b1d302e1b43b9ccf62"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/expanded-004-h1/raw/expanded-004-h1/stream.jsonl",
+     "sha256": "65a6d66d52bde416d5d044588c11c3d9ca41c06d0f79be79f0180e6602d52285"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/expanded-004-h1/raw/expanded-004-h1/result.json",
+     "sha256": "13980b310e66e4d0726af17a60b3cc6b3d5a27aa5c041c1e1051280de1f98948"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/expanded-004-h1/raw/expanded-004-h1/case.json",
+     "sha256": "b02d0e57340dc8ec11de8e9c7f1f3dca6b408a80a588ad1ff97f58d12ced913e"
+    }
+   }
+  },
+  "390/novel-v5-d1-channel": {
+   "blind_id": "798a1df6a44435",
+   "verified_sha256": "00c743cf175ec6e49dc9856609a84ff72c5b024c66cf627aa6ff25208cd436f8",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.f32",
+     "sha256": "b1492eac4695b5031f3ebc3ff38b527246b0d9077caa7838708fcaf3818f6699"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.jsonl",
+     "sha256": "9b2489f774f3b26a260e09f4c4c13e58a1e14072d876a341461754f9356ead95"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/raw/novel-v5-d1-channel/result.json",
+     "sha256": "dc66a49ca6bb667bf1839e8a3cf2c95b34bf36d8145c6bb107c50057ebf98024"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-channel/raw/novel-v5-d1-channel/case.json",
+     "sha256": "55c102803f30d43594e4b2c580d697aae0c579711e1fb9c32481a7dfb6757e11"
+    }
+   }
+  },
+  "390/novel-v5-d1-reordered": {
+   "blind_id": "492e334bab2dfb",
+   "verified_sha256": "4801e637e1e3357ef28e81140cd5b358ff958829e65ccaafd89e64128b02d3fc",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.f32",
+     "sha256": "7a6c584fb53b4ec77328856ed1d13f52ce565e891ada28076ef28e83ef8067c6"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.jsonl",
+     "sha256": "bd364c46ca27ad25a2c03df8dd78c45b189d0f93dd431018b484b4adf9351277"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/result.json",
+     "sha256": "407d908cf7950b92f4390bac176c15ac9d1f7b53edf17591fe116ec78a7990e0"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/case.json",
+     "sha256": "a8958512db22bbaeeeec22f4d0a7ac37058b7b56bd46c12b93037146c26f49fb"
+    }
+   }
+  },
+  "390/novel-v5-d2-channel": {
+   "blind_id": "df06e29798ab5d",
+   "verified_sha256": "3ce82aab21bd2fe7b13d8fabe6e8c7c221a9cc3954e25f82cab4a2a1bc307a4d",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.f32",
+     "sha256": "8c47e64090ac3061f00525b3f9ae7016c89ff696c522b8289ac3d841cce1edf8"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.jsonl",
+     "sha256": "141535a391a929cce37bfd6710de48d0a9e8b3bb5aca79aefc75c1030475f02e"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-channel/raw/novel-v5-d2-channel/result.json",
+     "sha256": "8b8a93d66e439dbe5450f6fa192a5e4d01de52709811b76ed8c6d1233431c53f"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-channel/raw/novel-v5-d2-channel/case.json",
+     "sha256": "0a31318f115049add58546cfdacd8ae9b7c586b5c6a241f1520f289e421ea317"
+    }
+   }
+  },
+  "390/novel-v5-d2-reordered": {
+   "blind_id": "fc9e26c4be871e",
+   "verified_sha256": "8602f2b671e5f6c3de1383429a9a82cf6f78c227c759f802b10271d60f6f11bf",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.f32",
+     "sha256": "d1e0ed0d483ef6a557110252a33dd71b6a9a79819e1b2ee8d8a28320b27173af"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.jsonl",
+     "sha256": "36175dc33d834a5d29ac2d643fb714103332e28935d1ebcc69e1719174a18f72"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/result.json",
+     "sha256": "a74a7b5efca8690151e0c826eb6262fc52a6ec33b444b98f46e29c1f5f55db79"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/case.json",
+     "sha256": "fe2d9d6e9592c4f94cde237a18e14c37c6929dcd5626469a04939689fdb06526"
+    }
+   }
+  },
+  "390/novel-v7-d1-channel": {
+   "blind_id": "c536f3dd5e6d57",
+   "verified_sha256": "f868e08592c111b90a3f5cd585ca6627b049a33f941dd7185444eeba75c17a60",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.f32",
+     "sha256": "de57ab5d662fc52ba6a46e1331ed69f71330efaf2f5e4cf3e32cf8ab8aa61f7b"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.jsonl",
+     "sha256": "255e94f5e14c9eaaba2c348979047ddede0a0128313dae7a0acb5b3eae8f47ec"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-channel/raw/novel-v7-d1-channel/result.json",
+     "sha256": "1b57215a508ca7ec122cb9e9c0647ebbcdf9e4cd71af5ec270b30320d8d8bfc6"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-channel/raw/novel-v7-d1-channel/case.json",
+     "sha256": "482b271c16fe5dd4b3a428d01a4dea6999b2f408dbc1729d7b8b8660a23a6a4b"
+    }
+   }
+  },
+  "390/novel-v7-d1-reordered": {
+   "blind_id": "0b7509d905eb39",
+   "verified_sha256": "ef6746a68da8d6e257024e6c10e033f6204617506d03685a0d5efcde11198465",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.f32",
+     "sha256": "200e01aef895cd4eb0a0a90d998976a505d96b2029ae28b7bf22bb73e86c517c"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.jsonl",
+     "sha256": "4c58f3f6c9f780c50a152efbd575f59ab4177d061e599826d19eca1b737bd7c4"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/result.json",
+     "sha256": "d4ec12be49766d2f91332f4bd1a3ce2a845f6a9d81a3be77c2dc365b8b7137ee"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/case.json",
+     "sha256": "dd8b7db5a13e6256ad6a5f376d21910a59d219564a2fbecd14334d1cf0c89f9d"
+    }
+   }
+  },
+  "390/novel-v7-d2-channel": {
+   "blind_id": "ab084d4814fb56",
+   "verified_sha256": "e9a5edf557ca0175bdd025150c2b198635a6e906f34ba3203a69be18b2e72f54",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.f32",
+     "sha256": "a4e0223f96ddce279178c5c26804bfb1188d9c31b9ad8d2aee3c8edc0d879d8d"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.jsonl",
+     "sha256": "15ef749f7f0fe70ed772cbdd6762173ff75d311935a6a63b51b4f3de662dbee9"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-channel/raw/novel-v7-d2-channel/result.json",
+     "sha256": "491afa72fa8dc2b8dfdfb1bf7722bacc988433e2f55f6f60a8d09c1101f284f1"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-channel/raw/novel-v7-d2-channel/case.json",
+     "sha256": "a30cb67cb06eca05840362ff9f635c60b8168c913023cc0d0ea33f97f211806b"
+    }
+   }
+  },
+  "390/novel-v7-d2-reordered": {
+   "blind_id": "9f5c7867d54340",
+   "verified_sha256": "b5d674c348d11f57368d1b0df4c6bb4135111446f46906d5139390a80730bd40",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.f32",
+     "sha256": "d86ce4175192986594233f84bd4fcd59a2c1380d401907090d2825cba573bfba"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.jsonl",
+     "sha256": "0d4046088d8e740f7ac177550d58c6c60b963244dd522c7c893c59638b401997"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/result.json",
+     "sha256": "81eb42b4a9ac4cb1a9ade2be9767fb0df5bddd930e64b530fded8f22837ebc86"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/390/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/case.json",
+     "sha256": "acfbc228af77977e6a3773c2bb06c285306dc6ca02210ef4400d48592a694e40"
+    }
+   }
+  },
+  "original/discovery-05-channel-h1": {
+   "blind_id": "d58aba3856b8b7",
+   "verified_sha256": "2e88d0321dcba2740a8504792ba1fdf6deed49817c9df256ef8d4506ec39582a",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.f32",
+     "sha256": "065900c10b24edfaa271d94e91a5557518366fda05d24149a6951b3ffbcf5daa"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-05-channel-h1/raw/discovery-05-channel-h1/stream.jsonl",
+     "sha256": "af5333052b00b8d57c95aca36db5ebe51cb0c1e9ec8c1b8c2f77747b65db9947"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-05-channel-h1/raw/discovery-05-channel-h1/result.json",
+     "sha256": "8d80b389119f9111d56f5a7e92f79adc18f9ad64c206a3ef4fa71448ff2100e2"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-05-channel-h1/raw/discovery-05-channel-h1/case.json",
+     "sha256": "8548b96c009c9ca41f75bd91923402fc22267e736a578c7cf1be1a304aba77ce"
+    }
+   }
+  },
+  "original/discovery-10-channel-h1": {
+   "blind_id": "4893e766255df3",
+   "verified_sha256": "2fd16793b3d961d9618ddf2cf2d68f6631d14c4d08812d5a515fd59cc7ede293",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.f32",
+     "sha256": "89f37bbb05b6bf1d23206b204c4f2d7afafa676eb5cda4fd2af61ddf78ead159"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-10-channel-h1/raw/discovery-10-channel-h1/stream.jsonl",
+     "sha256": "3b1218c0b9510eaad243c72b088cef96acc8e09e25037291d816be74647fbc14"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-10-channel-h1/raw/discovery-10-channel-h1/result.json",
+     "sha256": "05011b4846d81ff8b756b772349ccb773ac41a52a0c414769b63636fd57b43cf"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/discovery-10-channel-h1/raw/discovery-10-channel-h1/case.json",
+     "sha256": "a2bc9589ac602bc65a1b8a38a89a8f4f6b1e0316a3fd038935af74ba6ab48bc4"
+    }
+   }
+  },
+  "original/expanded-004-h1": {
+   "blind_id": "b25acadf0ceae7",
+   "verified_sha256": "f8bfc8baadce3bec8aeb16c632758de2c0065043f9a137615ba9feadaaf5d700",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/expanded-004-h1/raw/expanded-004-h1/stream.f32",
+     "sha256": "554cf378c0b82145990dc5ff7210b63abf2c59a38a2cc0a515cf44b7256ab6f1"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/expanded-004-h1/raw/expanded-004-h1/stream.jsonl",
+     "sha256": "93a73abdbf61f1ebf7ac634bdf0d31e39b570050f80bf4937861f4d08a3fe8cb"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/expanded-004-h1/raw/expanded-004-h1/result.json",
+     "sha256": "8f420e420e82ceb971fb70f99fc56cd2e9806c0ae02f09ff32ee46c907b4c388"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/expanded-004-h1/raw/expanded-004-h1/case.json",
+     "sha256": "b02d0e57340dc8ec11de8e9c7f1f3dca6b408a80a588ad1ff97f58d12ced913e"
+    }
+   }
+  },
+  "original/novel-v5-d1-channel": {
+   "blind_id": "6e8232e69d6b40",
+   "verified_sha256": "1af4fbb9187f717fd1a61cb0ebd4020ff1d17dc6ed08fbab92dbb7296a699a15",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.f32",
+     "sha256": "52d1083cb0ac5799b24f97d96acb5b79f03b65f584bbfab6643db91ac3e70dc8"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-channel/raw/novel-v5-d1-channel/stream.jsonl",
+     "sha256": "170939e90c6521d8b5634abf0b85315757ffc5c2a6a422ae41698a40bc3663ac"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-channel/raw/novel-v5-d1-channel/result.json",
+     "sha256": "f53d38cc1613d694da69d1a2ab1a6af148d7dbb136aa5503a41a932a73f3f6c1"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-channel/raw/novel-v5-d1-channel/case.json",
+     "sha256": "55c102803f30d43594e4b2c580d697aae0c579711e1fb9c32481a7dfb6757e11"
+    }
+   }
+  },
+  "original/novel-v5-d1-reordered": {
+   "blind_id": "88cad622a5ca02",
+   "verified_sha256": "4c8106c88560b7e9508017a7bdadee25038772d73c6fc0c03f985bd984817613",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.f32",
+     "sha256": "57d3ab1ae8ceed17fc428f57a0250c952b6506db9db5215046a70a97f247ebd0"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/stream.jsonl",
+     "sha256": "b72e2a67ea20f6f57ba696c722cea42e8ae1a06cddaaa13e82ae3ef1a964d1ea"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/result.json",
+     "sha256": "44aa37c003e267a45f76a8b59d872a1bae64002206689ebfd9b0e32c1ad07a59"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d1-reordered/raw/novel-v5-d1-reordered/case.json",
+     "sha256": "a8958512db22bbaeeeec22f4d0a7ac37058b7b56bd46c12b93037146c26f49fb"
+    }
+   }
+  },
+  "original/novel-v5-d2-channel": {
+   "blind_id": "f513518e6a94ef",
+   "verified_sha256": "677df661ba911961b0288e4c8f1be231007b37b581bc99fbad8125df4dbc0313",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.f32",
+     "sha256": "fb42fe2d143ba0dbf019cffda42bdeaf12664d9192d3183dbb5df0b39e82aba2"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-channel/raw/novel-v5-d2-channel/stream.jsonl",
+     "sha256": "f830b3854aacfb9d1274279fa9c4b1de70dc10dc43afa3211be5fcb5115d3a0c"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-channel/raw/novel-v5-d2-channel/result.json",
+     "sha256": "dd0662a2594305a1dab71f7487c8d27d3c0b425202827165e1ef093d58255e91"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-channel/raw/novel-v5-d2-channel/case.json",
+     "sha256": "0a31318f115049add58546cfdacd8ae9b7c586b5c6a241f1520f289e421ea317"
+    }
+   }
+  },
+  "original/novel-v5-d2-reordered": {
+   "blind_id": "fb78bb5c5a90f8",
+   "verified_sha256": "578355b19d8886deb20dc95c416d04b6745c6c5790da07f73871b2477f574ff4",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.f32",
+     "sha256": "ab21a9906de235f25e4b898b595bbdedeb6ea6315434d1833ef6c62db9cf4011"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/stream.jsonl",
+     "sha256": "e5d7fec016f81150c1abf59cba05e182eb645c44af26b2c9ae3f04f0fecd5d62"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/result.json",
+     "sha256": "f3789cca6b2395c5bef383a7b1937d8548918ebc4f1f0b5cf4fbaf02f0bbfce9"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v5-d2-reordered/raw/novel-v5-d2-reordered/case.json",
+     "sha256": "fe2d9d6e9592c4f94cde237a18e14c37c6929dcd5626469a04939689fdb06526"
+    }
+   }
+  },
+  "original/novel-v7-d1-channel": {
+   "blind_id": "fe988b9318e419",
+   "verified_sha256": "718308e433dad9398a765e6cb5ab776f4dd44be09f6e0872509fcfe632512995",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.f32",
+     "sha256": "b7d45cf684e3e95cbb536e0c21e86764061cbe22f5da7ecc6b9d61da9d4c11c7"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-channel/raw/novel-v7-d1-channel/stream.jsonl",
+     "sha256": "101790b64cf60b90af59b4788facf2ee49c3f280bc853c65fa362e0ace308823"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-channel/raw/novel-v7-d1-channel/result.json",
+     "sha256": "1a77787b7b9a66146a36cac7af761ba3a1167d243fede5697467c9533571c340"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-channel/raw/novel-v7-d1-channel/case.json",
+     "sha256": "482b271c16fe5dd4b3a428d01a4dea6999b2f408dbc1729d7b8b8660a23a6a4b"
+    }
+   }
+  },
+  "original/novel-v7-d1-reordered": {
+   "blind_id": "e0ec9cab943e56",
+   "verified_sha256": "30f4635a4ba176c4f69b043d8bab7692e54ec7e95ed3acb178a1c5761e29d7c2",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.f32",
+     "sha256": "957cd21ccf13c7821c8adef7c854befee2a42e800f368289647839dbc56edded"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/stream.jsonl",
+     "sha256": "9767574c8617e6f12a6dfdc7bd1caa89e7e9a0a0c3964ed4e8111e583ea909f3"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/result.json",
+     "sha256": "b4a8228800c76f603659805e5ddf5d9dee219d824daec2ddc419193a7f88fefa"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d1-reordered/raw/novel-v7-d1-reordered/case.json",
+     "sha256": "dd8b7db5a13e6256ad6a5f376d21910a59d219564a2fbecd14334d1cf0c89f9d"
+    }
+   }
+  },
+  "original/novel-v7-d2-channel": {
+   "blind_id": "3421b95a14737c",
+   "verified_sha256": "0a077345de05159835ac75280be822e8315906fa632c75fa85c089d19402721c",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.f32",
+     "sha256": "8133200108b7860685f78d603e59cf71c6ef50a7236b90f6c37cfd06958c7800"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-channel/raw/novel-v7-d2-channel/stream.jsonl",
+     "sha256": "5e1dda188f16b8f7685964f4db26a1bee23648f858ec15d88bc019fb2f153715"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-channel/raw/novel-v7-d2-channel/result.json",
+     "sha256": "7432277bb2fddd95ec8cf58e300a73cb28badf73d881031ae2875f624760e369"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-channel/raw/novel-v7-d2-channel/case.json",
+     "sha256": "a30cb67cb06eca05840362ff9f635c60b8168c913023cc0d0ea33f97f211806b"
+    }
+   }
+  },
+  "original/novel-v7-d2-reordered": {
+   "blind_id": "d04629de904657",
+   "verified_sha256": "45824b754f4809bdd6e420cd2efeb1057219dbbfba467f7055a6faa7c98b5d76",
+   "records": {
+    "stream.f32": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.f32",
+     "sha256": "24c3cf73e1aef55ddc5d071b9b2089e105e6f9112cea25e1bf491842407f696d"
+    },
+    "stream.jsonl": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/stream.jsonl",
+     "sha256": "6d806858e2a7eb998ec78f56cf0d33efb4b04331f1cd8596eb391a164b682b8d"
+    },
+    "result.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/result.json",
+     "sha256": "0afc1b442828cb8b36909b0cad82fc62441036c59ba86bfbad8d487ea6acf71e"
+    },
+    "case.json": {
+     "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/original/novel-v7-d2-reordered/raw/novel-v7-d2-reordered/case.json",
+     "sha256": "acfbc228af77977e6a3773c2bb06c285306dc6ca02210ef4400d48592a694e40"
+    }
+   }
+  }
+ }
+}

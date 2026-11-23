@@ -1,0 +1,116 @@
+{
+  "purpose": "Machine-checked invariants for round two. pipeline/research_guard/verify_round2.py checks them on every commit and before every native run; it checks what a record holds and reads, not the order things were done in (November 10, commit 146e13f2). ROUND-2.md explains them in words.",
+  "runs_root": "studies/04-round-2-overlap/runs",
+  "status_page": "studies/04-round-2-overlap/ROUND-2.md",
+  "read_only_inputs": "studies/04-round-2-overlap/inputs",
+  "current_objective": {
+    "since": "2026-11-15",
+    "current_experiment_scope": {
+      "source": "Marcos, November 18, 2026. See journal/2026-11-18-trace-signal-in-the-loop.md. The historical single-reference radii hid small changes and did not isolate shared correct computation.",
+      "training": "Fit computational contrasts from the original correct and wrong operation groups. Use a fixed reference to register trajectories. Regenerate every declared failing and preservation case on the installed model at each update.",
+      "update": "Use a signed squared residual in the identified group field. Discount directions of observed correct variation. Pull the local errors back through each freshly executed graph and combine weight gradients before updating. No ordinary or directional tolerance band.",
+      "other_answers": "Keep discovery donors, active training prompts, development checks, and prospective unseen transfer questions identifiable. Missing correspondence is unresolved.",
+      "stopping": "Use fresh matched loss, coverage, and the repaired and preserved physical computations. Exact restoration is unnecessary. An interval of two updates is the minimum that observes a displacement from an installation and can use that displacement in the next gradient.",
+      "status": "New group learner under construction; historical outcomes retain their declared identities."
+    },
+    "authorization": "journal/2026-11-12-correction-not-protection.md, journal/2026-11-14-whole-gap-restart.md and journal/2026-11-15-computation-not-state-values.md: direct direction and authorized relays; the latest stops state-value constructions and distinguishes each merge's input-output relation from values in the residual stream",
+    "definition": "The correction objective must compare what each merge does to its own input: a context-bearing input-output relation along the computational path, not matching post-merge residual state values to other answers. Direction and size of the transformation may matter; no replacement relational observable or loss is admitted by this clarification. Agreement contributes no or minimal correction, divergence supplies correction, and there is no separate protection or bringing-back objective (Marcos, November 15; journal/2026-11-15-computation-not-state-values.md).",
+    "progress": "Actual fresh computational loss improvement against the fixed original reference/tolerance, as far as learning can take it. Exact closure is descriptive and is not required for progress or a useful nonzero plateau result. Matrix counts, output text and outside-cell counts alone do not establish progress or failure.",
+    "prospective_specification": "journal/2026-11-16-direct-computational-update.md supersedes the inner inverse requirement for new runs; the existing full-turn reference and predictive vector tolerance remain. Earlier construction records and admissions are historical.",
+    "execution_status": "The sole weight-patterns-ffn-precision.service resumed at 12:50:38 CT with 84.54 GB free after external disk freezing, keeping PID1766766 and already-installed23. Fresh native23 completed at 12:50:53 with loss0.00009931528475871919, after which the unchanged loop continued. No restart, model reset or selected-best rollback occurred; external-freeze.json and external-thaw.json retain the operational boundaries. Its reviewed loop_precision.py uses an explicitly experimental FFN operand-precision/straight-through derivative estimator; held/native fidelity limitations remain disclosed. This status correction changes no hypothesis, update formula, loss, reference, tolerance, declared source or running binding. Each update still installs the complete native BF16 state, regenerates and measures the full fresh computational path; no per-step model copy or checkpoint.",
+    "iteration_and_judgment": "For the current one-pair experiment, repeatedly measure the whole fresh computational path, differentiate its residual through the trace-producing graph into weights, apply the response-scaled native BF16 update and regenerate. No output-text judge, separate protection objective, inverse-completion search or per-step checkpoint copy. Manual judgment evaluates the fresh-loss curve, allows step variation, and reports the achieved residual when improvement genuinely stalls; historical experiments retain their actual rules.",
+    "outcome_instrument_removal": "Marcos's direction relayed at 9:34 PM CT November 14, recorded in journal/2026-11-14-iterative-gap-closure.md: remove words, selected-token scores, numerical answer values and answer verdicts as progress instruments, not merely add warnings around them. Keep only the token processing required to acquire, identify and correspond computation; numerical trace direction/size discrepancies remain the measurement. Source/guidance inventory and removal are work in progress, not claimed complete by this specification.",
+    "historical_scope": "Existing controlled sweeps, references and verdicts retain the construction they actually ran. The historical mean/row split below does not govern new correction-only work.",
+    "learning_goal": "Reduce actual fresh computational loss as far as learning can take it. Exact restoration, zero residual and outside==0 are not required endpoints. A nonzero plateau can be the achieved result; continuing fresh-loss improvement is progress.",
+    "learning_stop_judgment": "Manual research judgment from successive fresh native loss measurements, allowing step variation. When improvement genuinely stalls, report achieved residual and supporting evidence. No guessed epsilon, numeric plateau threshold, schedule or automatic detector.",
+    "one_pair_historical_scope": {
+      "source": "Marcos, November 15 one-pair scope; later November 16 direct correction supersedes the inverse-update requirement: journal/2026-11-16-direct-computational-update.md. Earlier declarations remain historical.",
+      "training": "One originally wrong fitting prompt against one fixed original correct reference, with the same prompt regenerated after each native update. This explicit first-experiment scope supersedes the older both-group training and monitoring clauses below.",
+      "update": "Differentiate the complete computational residual loss through the actual trace-producing functions into all declared weights, apply one response-scaled weight-gradient update in native BF16, regenerate from the edited model, and measure the complete computational path again. No inner inverse or candidate search to numerical completion. The implementation peer's declared numeric rule is S=-d||r||^2/dW, q=J_r S, alpha=-<r,q>/<q,q>; this is response-scaled weight-gradient descent, not a full inverse or a formula attributed to Marcos. Original reference/tolerance and zero direct loss gradient at agreement remain fixed. No separate protection objective; fresh native measurement alone supplies progress/closure. Supersedes the older gradient prohibition for new runs, preserving old experiment records.",
+      "stopping": "The unchanged original computational tolerance defines zero direct requests and the descriptive exact-closure flag on each complete fresh trace. Under Marcos's November 16 clarification, learning progress is decreasing fresh computational loss; a nonzero plateau can be the achieved outcome. Use manual judgment allowing step variation, without an automatic plateau rule or guessed schedule.",
+      "other_answers": "No generation or evaluation of other answers during training and no output-text judge. The post-closure fitting-cohort transfer/damage reading is prospectively declared; no-fit remains sealed from fitting, calibration and selection.",
+      "status": "The explicit FFN precision/straight-through-estimator continuation starts from exact continuation4 final27. Its fresh loss reaches 0.00009929594803402431 at update22, with the intervening step12 excursion and recovery retained. Original reference, tolerance, empirical eta and complete native measurement remain fixed. Learning continues; no plateau, closure, native-derivative fidelity or precision-only causal claim. Evidence: runs/vector-chance-ffn-precision-continuation/progress-through-22.json."
+    }
+  },
+  "steps": {
+    "1": "overlap the correct answers: their full traces, every token and every merge",
+    "2": "overlap the wrong answers the same way, each failure group (same first incorrect calculation) separately",
+    "3": "the discrepancy between the overlaps along the whole path, keeping what recurs across members; where it appears is reported, not chosen in advance",
+    "4": "no step: nothing stands between the discrepancy and the edit. The edit is tested through the edited model's complete own computational path, not word, answer-value or selected-token scores. A perfect-target proof is not an added pre-experiment gate",
+    "5": "train the edit on one full-computation correction objective, including direction and size (Marcos's direct correction, November 12; journal/2026-11-12-correction-not-protection.md): no or minimal correction where the current computation agrees, correction where it diverges, with both outcome groups in the same objective and no separate protection or bringing-back phase; measured by computation discrepancy over the whole original-registered trace at all 105 merges, refreshed on both groups' current own histories after each update until measured closure. No-fit computation remains outside fitting, calibration and selection and requires its own actual frozen evaluation protocol. Tokens are generated or supplied only to acquire the computation in the declared role; words, selected-token scores and parsed answer values supply no progress or closure verdict (Marcos, November 14 evening; journal/2026-11-14-iterative-gap-closure.md). Every pass reads an answer the way the model generates it, one token at a time, because the engine multiplies differently when it reads several tokens at once; the 70 matrices remain in the original BF16 format. Marcos rejected the float32 conversion on November 10: the solver must construct useful changes that survive native rounding, without changing the stored model's precision or absorbing edited-model effects into reference floors. At 1:48 PM CT on November 11, Marcos approved testing separate protected group-mean and average row-displacement bounds in the next new sweep (approved_mean_row_split below; journal/2026-11-11-mean-and-row-preservation.md). That run names its policy and freezes its original-only reference; controlled-bf16-3 and every earlier run retain their declared policy and results. Internal higher-precision solver calculations do not change the model's stored format; the actual BF16-written weights and their native computation are judged (journal/2026-11-10-controlled-training.md; acceptance in records/retrospectives/2026-11-10-stable-training-review-astra.md). Until November 10 this step was A2 at full strength with no protection, scored by its answers: a2, a2-pattern, a2-sent, a2-diverge, a2-path and a2-path-steps were run under that text",
+    "6": "continue correction from the model reached, against the same original-derived correct computation. An earlier sweep supplies a starting model, never a target made from its own drift. Progress is the same whole-trace correction objective, not historical preservation-bound feasibility. The interrupted narrow constructions remain evidence; the next construction must serve the whole contextual computation gap under the November 14 restart, not continue their withdrawn admissions. Until November 10 this step was the ladder on A2 (B2 protects what A2 broke; C2 keeps A2's action on what it repaired and cancels it on what it broke; D2 weighs the inputs by background statistics): b2-path, c2-path, c2-protected and d2-path were run under that text"
+  },
+  "approved_mean_row_split": {
+    "authorization": "Marcos chose to test the split (the recommended option) at 1:48 PM CT on November 11, 2026, as relayed by dispatch for Eli-93; Astra did not receive the answer directly",
+    "authorization_record": "journal/2026-11-11-mean-and-row-preservation.md",
+    "proposal": "records/retrospectives/2026-11-11-mean-and-row-preservation-astra.md at 7b37734e",
+    "scope": "Historical construction, superseded for new correction-only work by current_objective on November 12. At its approval, the next new sweep explicitly selects this policy in its declaration and frozen reference. No running or earlier run changes policy, no existing reference is overwritten and no past result is regraded. Later accepted continuations under this policy keep its original-only reference fixed.",
+    "cells": "Registered answer direction and log-size cells at all 105 merges, including layer-final merges; question-position bounds are unchanged",
+    "protected_movement": "delta_it is the existing original-relative protected movement with the existing registration weights a_it, which sum to one within each member and cell; the wrong group's shared movement along the gap is removed where a move is asked",
+    "statistics": {
+      "member_movement": "d_i = sum_t a_it delta_it",
+      "mean_movement": "M = ||(1/m) sum_i d_i||^2, where m is the member count of the group actually read",
+      "row_displacement": "Q = (1/m) sum_i sum_t a_it ||delta_it||^2",
+      "original_member_mean": "z_i = sum_t a_it z_it; mu = (1/N) sum_i z_i",
+      "original_between_member_variance": "V = (1/(N-1)) sum_i ||z_i-mu||^2",
+      "original_within_member_variation": "A = (1/N) sum_i sum_t a_it ||z_it-z_i||^2",
+      "original_row_spread": "T = (N-1)V/N + A"
+    },
+    "reference": "N is the original group count, currently 30 per outcome group, never the count in a fitting third or half. V and A use the same corrected original rows and registration for their statistic, including engine-recorded log sizes where those supply V.",
+    "limits": {
+      "mean": "M <= max(V/N, F_M)",
+      "rows": "Q <= max(T, F_Q)"
+    },
+    "floors": "F_M and F_Q are independently measured as M and Q on the existing original-only floor comparisons. The existing size-expression floor is measured in both statistics separately. The baseline rebuilt-versus-engine diagnostic that previously did not set a floor remains diagnostic. Neither floor is derived from the other, from multiplying an old floor-raised bound, or from an edited model.",
+    "readings": "Both bounds hold in each existing fitting-third feasibility reading and in their pooled reading, at the same original-reference limits, and in the existing unused-answer replay. Recompute pooled protected movements with their pooled shared-gap component; do not average squared third means to obtain the squared pooled mean.",
+    "data_roles": "All-fitting restoration and its pooled constraints keep their existing role without pull. A branch's pull differentiates its solved/held data; its audit and full-pool checks stay outside that differentiated step. The audit third remains construction/model-selection data, not independent validation.",
+    "unchanged": "Target, permitted shared-gap movement, question-position budgets, own-answer mean/spread budgets and own-start floors, BF16/native checks, candidate selection and every other acceptance check. No-fit answers do not become tuning inputs; reserved-40b remains sealed.",
+    "meaning": "An experimental average-displacement policy with separate mean protection, not per-answer preservation, distribution/spread preservation, or a new sampling-confidence claim"
+  },
+  "declaration_fields": [
+    "method_step",
+    "why_this_direction",
+    "repeating_pattern_check",
+    "hypothesis",
+    "what_went_wrong_before",
+    "rule",
+    "prediction",
+    "would_weaken_it",
+    "inputs",
+    "outputs"
+  ],
+  "field_meaning": {
+    "why_this_direction": "the reasoning that makes this the next step of the method, tied to evidence from earlier accepted runs",
+    "repeating_pattern_check": "what has happened more than once so far (failures, reversals, surprises), why we think it keeps happening, and how this run avoids or tests it",
+    "parameters": "every gate, cap, threshold, fraction, step or schedule: measured_from (the record it comes from), derivation (the formula from that record to the value) and scales_with (what it depends on, so it can be recomputed for another layer, model or dataset)"
+  },
+  "edit_steps_require": {
+    "target_source": "a file inside a step-3 run of runs_root"
+  },
+  "result_fields": [
+    "prediction_vs_result",
+    "failures_only",
+    "what_this_changes"
+  ],
+  "forbidden_references": [
+    "joint-a2",
+    "joint-b2",
+    "joint-c2",
+    "joint-d2",
+    "trace-construction-02",
+    "construction_full_path",
+    "construction_02_trace_inverse",
+    "construction_01_query_routing",
+    "pipeline.construction",
+    "contextual_contrast",
+    "trace-derived-"
+  ],
+  "read_only_model": {
+    "path": "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+    "sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+    "why": "Following the discrepancy into the weights and building edits (step 5) need the original native weights. A run may read this one file, never write it, and its declaration must state model_sha256 equal to this value."
+  },
+  "design_condition": "Whole answers and whole groups: every token and all 105 merges of every answer in the group. Correct answers are one group; wrong answers are grouped by their first incorrect calculation. One card (GPU0) for everything compared. No new questions for construction. No sample-size or population-statistics gates. Edit location, number of matrices and edit form are outcomes of the comparison. From November 10 (steps 5 and 6): the patterns and the bounds still come from whole answers and whole groups, all 30 and 30; a sweep fits on half of each group and reads the other half, which no fit uses (Marcos: enough sample of the capability trace to identify the divergence, not every answer); from November 12, correction follows the full computation discrepancy itself, including size, with no separate protection or bringing-back objective; original group variation remains evidence, not a preservation-bound training goal.",
+  "per_failure_evidence": "Report each wrong answer: its fields before and after the edit, and where its own trace carries the group's discrepancy.",
+  "parameter_checks": "Check directly how the observed structure changes with m, v and drop in the existing traces; do not buy new samples to settle a confound."
+}

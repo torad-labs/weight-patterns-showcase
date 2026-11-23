@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#e8e8e1" />
+    <meta
+      name="description"
+      content="Explore a recorded Gemma 4 E2B decode as a tangible mechanical world: 35 layers, shared memory and 63 megakernel worker blocks."
+    />
+    <title>Decode machine · Gemma 4 E2B</title>
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body>
+    <main id="replay-app">
+      <header class="masthead">
+        <a class="identity" href="/" aria-label="Decode machine home"
+          ><svg viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              d="m4 10 12-6 12 6-12 6-12-6Zm0 6 12 6 12-6M4 22l12 6 12-6"
+            /></svg
+          >Decode machine</a
+        >
+        <div class="legend">
+          <span><i class="weight-key"></i>Stored weights</span
+          ><span><i class="token-key"></i>Information</span
+          ><span><i class="wait-key"></i>Recorded wait</span>
+        </div>
+        <a class="trace-open-link" href="#weight-traces" data-open-traces>Weight edit traces</a>
+        <a class="teaching-link" href="/teaching.html"
+          >France teaching example
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M3 13 13 3M4 3h9v9" /></svg
+        ></a>
+      </header>
+      <section class="heading">
+        <div>
+          <h1 id="world-title">A question, through Gemma.</h1>
+          <p id="world-subtitle">
+            Follow the information. See the weights at work.
+          </p>
+        </div>
+        <div class="capture-options">
+          <label class="capture-label" for="capture"
+            >Replay<select id="capture" disabled></select></label
+          ><span id="story-kind" class="provenance-caption"
+            >Illustrated example · Gemma architecture</span
+          >
+        </div>
+      </section>
+      <section
+        class="story-thread"
+        aria-label="The connected question and answer"
+      >
+        <div class="question-thread">
+          <span class="thread-label">Input</span
+          ><strong id="story-question">What’s the capital of France?</strong>
+          <div
+            id="story-tokens"
+            aria-label="Illustrative question tokens"
+          ></div>
+        </div>
+        <div class="story-where">
+          <span class="thread-label" id="phase-boundary"
+            >Prefill · read the prompt</span
+          ><strong id="story-location">Question enters the machine</strong
+          ><button id="follow-story" class="text-button">
+            Open the moving layer
+          </button>
+          <span id="request-companion" class="footnote" hidden></span>
+        </div>
+        <div class="answer-thread">
+          <span class="thread-label">Output</span
+          ><output id="story-answer">Waiting for the question</output
+          ><button id="restart-story" class="text-button">
+            Start with the question
+          </button>
+        </div>
+      </section>
+      <nav class="view-tabs" aria-label="View the machine">
+        <button data-view="engine" aria-pressed="false">Megakernel floor</button
+        ><button data-view="stack" aria-pressed="true">Layer journey</button
+        ><button data-view="layer" aria-pressed="false">Inside a layer</button
+        ><button data-view="material" aria-pressed="false">
+          Cart &amp; supplies</button
+        ><span id="view-note"
+          >Four sliding readers, then one full reader · repeated seven
+          times</span
+        >
+      </nav>
+      <section id="viewport" aria-label="Mechanical replay">
+        <div class="scene">
+          <canvas
+            id="replay-canvas"
+            tabindex="0"
+            aria-label="3D mechanical replay. Drag to orbit, scroll to zoom. Use the adjacent controls to select layers and mechanisms."
+          ></canvas>
+          <div id="world-labels"></div>
+          <button
+            id="journey-camera"
+            class="follow-button"
+            aria-pressed="false"
+            title="Keep the active layer and machinery in view. Drag the canvas to stop following."
+          >
+            Follow playback
+          </button>
+          <nav class="journey-anchors" aria-label="Journey landmarks">
+            <button data-journey-anchor="input">Input</button
+            ><button data-journey-anchor="weights">Weights</button
+            ><button data-journey-anchor="output">Output</button>
+          </nav>
+          <button
+            id="fit"
+            class="fit-button"
+            aria-label="Fit the machine in view"
+            title="Fit view"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"
+              />
+            </svg>
+          </button>
+          <p id="worker-overview" hidden></p>
+          <div id="load-state" role="status">Loading the recorded machine…</div>
+        </div>
+        <p class="world-note" id="world-note">
+          Neutral carriers show movement. Tensor and weight values were not
+          recorded.
+        </p>
+      </section>
+      <aside id="replay-inspector" aria-label="Machine inspector">
+        <nav id="workshop-navigation" aria-label="Equipment location" hidden>
+          <button id="workshop-back" class="text-button">Back to layer</button
+          ><span id="workshop-location"></span>
+        </nav>
+        <div class="inspect-title">
+          <h2 id="inspector-title">The layer journey</h2>
+          <button id="back-stack" aria-label="Return to layer journey">
+            <svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" /></svg>
+          </button>
+        </div>
+        <p id="inspector-copy">
+          Open a numbered layer to see its readers, presses and memory
+          connections.
+        </p>
+        <div id="layer-controls">
+          <label for="inspect-layer"
+            >Layer<select id="inspect-layer"></select
+          ></label>
+          <div id="layer-facts" class="facts"></div>
+          <button id="seek-layer" class="outline-button">
+            Play from this layer</button
+          ><button id="show-owner" class="text-button" hidden>
+            Visit the K/V owner
+          </button>
+        </div>
+        <div id="block-controls" hidden>
+          <label for="inspect-block"
+            >Worker block<select id="inspect-block"></select
+          ></label>
+          <p class="small-copy">
+            These are logical CUDA blocks, not a physical map of GPU SMs. The
+            same workers serve the layer sequence.
+          </p>
+          <button id="focus-block" class="outline-button">
+            Look closer at this worker
+          </button>
+          <button id="open-hardware" class="solid-button">
+            Open SM &amp; warps
+          </button>
+          <section class="supply-controls" aria-label="Shared memory supply">
+            <h3>Supplying the workers</h3>
+            <p class="small-copy">
+              One L2 cache serves every SM. TMA cranes load each SM’s shared
+              trays.
+            </p>
+            <label for="floor-cache"
+              >Illustrate a cache<select id="floor-cache">
+                <option value="miss">Miss · fetch from VRAM</option>
+                <option value="hit">Hit · use L2 copy</option>
+              </select></label
+            >
+            <div class="equipment-actions">
+              <button id="floor-l2" class="outline-button">Open L2 cache</button
+              ><button id="floor-tma" class="outline-button">
+                Open TMA crane
+              </button>
+            </div>
+            <p class="footnote">
+              Cache outcomes and deliveries are illustrative. Physical SM
+              placement was not captured.
+            </p>
+          </section>
+          <p class="small-copy">
+            Source cutaway: a controller cam, a loader fork and six consumer
+            plungers beneath the press. Their individual timing is not recorded.
+          </p>
+          <div id="block-state" class="facts"></div>
+          <div id="block-intervals" class="step-buttons"></div>
+        </div>
+        <section id="mechanism-controls">
+          <label for="mechanism"
+            >Mechanism<select id="mechanism"></select
+          ></label>
+          <h3 id="mechanism-title">Sizing jaws</h3>
+          <p id="mechanism-copy"></p>
+          <p id="mechanism-evidence" class="evidence-tag"></p>
+          <button id="open-internals" class="solid-button">
+            Open the equipment</button
+          ><button id="open-tile" class="outline-button">
+            Follow a tile on the hardware</button
+          ><button id="focus-part" class="text-button">
+            Look closer at this mechanism
+          </button>
+        </section>
+        <section id="workshop-controls" hidden>
+          <label for="workshop-housing"
+            >Housing<select id="workshop-housing"></select
+          ></label>
+          <label for="workshop-equipment"
+            >Equipment<select id="workshop-equipment"></select
+          ></label>
+          <div class="equipment-navigation">
+            <button id="equipment-prev" aria-label="Previous equipment">
+              Previous</button
+            ><span id="equipment-count"></span
+            ><button id="equipment-next" aria-label="Next equipment">
+              Next
+            </button>
+          </div>
+          <h3 id="equipment-name"></h3>
+          <p id="equipment-action" class="small-copy"></p>
+          <dl class="material-flow">
+            <div>
+              <dt>Receives</dt>
+              <dd id="equipment-input"></dd>
+            </div>
+            <div>
+              <dt>Uses</dt>
+              <dd id="equipment-uses"></dd>
+            </div>
+            <div>
+              <dt>Produces</dt>
+              <dd id="equipment-output"></dd>
+            </div>
+          </dl>
+          <p id="equipment-timing" class="evidence-tag" aria-live="off"></p>
+          <button id="equipment-open" class="solid-button">
+            Open this assembly
+          </button>
+          <div class="equipment-actions">
+            <button id="equipment-seek" class="outline-button">
+              Seek recorded work</button
+            ><button id="equipment-focus" class="outline-button">
+              Look closer
+            </button>
+          </div>
+          <div class="hand-crank">
+            <label
+              ><input type="checkbox" id="crank-mode" />Use the hand
+              crank</label
+            >
+            <p class="footnote">
+              Explore how the parts move. This illustration pauses the recording
+              and does not calculate real tensor values.
+            </p>
+            <label id="crank-controls" hidden
+              >Turn the mechanism<input
+                type="range"
+                id="crank"
+                aria-label="Illustrative mechanism cycle"
+                min="0"
+                max="1"
+                step="0.001"
+                value="0"
+            /></label>
+          </div>
+          <button id="equipment-source" class="text-button">
+            Find these parts in the source anatomy
+          </button>
+          <button id="equipment-tile" class="outline-button">
+            Follow a tile on the hardware
+          </button>
+        </section>
+        <details id="record-details">
+          <summary>Recorded operations <span id="record-count"></span></summary>
+          <label for="record">Step<select id="record"></select></label>
+          <div id="record-metrics" class="facts"></div>
+          <p id="record-description" class="small-copy"></p>
+          <div class="step-navigation">
+            <button id="parent-step" class="text-button" hidden>
+              Parent interval</button
+            ><button id="seek-step" class="outline-button">
+              Seek to this operation
+            </button>
+          </div>
+          <div id="child-steps" class="step-buttons"></div>
+          <p class="footnote">
+            Nested intervals overlap. Their durations cannot be added.
+          </p>
+        </details>
+        <details id="source-details">
+          <summary>Open the source anatomy</summary>
+          <p class="small-copy">
+            A separate source snapshot explains the parts inside each mechanism.
+            It is not certified as the source that produced this recording.
+          </p>
+          <label for="source-search"
+            >Find a part<input
+              id="source-search"
+              type="search"
+              placeholder="e.g. norm, matvec, counter"
+          /></label>
+          <p id="source-status" class="footnote"></p>
+          <div id="source-node"></div>
+          <div id="source-results" class="step-buttons"></div>
+          <button id="source-more" class="text-button" hidden>
+            Show more parts
+          </button>
+        </details>
+        <details id="evidence-details">
+          <summary>What this recording contains</summary>
+          <p class="small-copy">
+            Two independent token positions, with measured layer work and waits.
+            Prompt text, token IDs, selected answer, tensor values, cache
+            contents and memory-transfer timings are absent. Intake and final
+            readout remain unrecorded.
+          </p>
+          <p class="small-copy">
+            Motion is a mechanical analogy driven by captured intervals. Head
+            and warp motion is not individually measured. Instrumentation
+            changes runtime; this is not a production latency benchmark.
+          </p>
+          <div id="evidence-content"></div>
+        </details>
+      </aside>
+      <section class="transport" aria-label="Replay controls">
+        <div class="play-buttons">
+          <button id="play" class="play" aria-label="Play" disabled>
+            <svg viewBox="0 0 24 24" id="play-icon">
+              <path d="m8 4 11 8-11 8V4Z" />
+            </svg></button
+          ><button
+            id="previous"
+            aria-label="Previous recorded operation"
+            title="Previous operation"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="m18 5-10 7 10 7V5ZM5 5v14" />
+            </svg></button
+          ><button
+            id="next"
+            aria-label="Next recorded operation"
+            title="Next operation"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="m6 5 10 7-10 7V5Zm13 0v14" />
+            </svg></button
+          ><button id="restart" aria-label="Replay recording" title="Replay">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 9a8 8 0 1 1 0 7M4 3v6h6" />
+            </svg>
+          </button>
+        </div>
+        <div class="phase-copy">
+          <strong id="phase-name">Preparing…</strong
+          ><span id="phase-detail">Recorded device intervals</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-labels">
+            <span id="recorded-time">Recorded layer window</span
+            ><output id="viewing-time">0 / 120 s</output>
+          </div>
+          <input
+            id="scrubber"
+            aria-label="Position in the recorded decode"
+            type="range"
+            min="0"
+            max="1"
+            step="0.000001"
+            value="0"
+            disabled
+          />
+          <div id="layer-ticks" aria-label="Seek to a layer"></div>
+        </div>
+        <label class="duration-label" for="duration"
+          ><span id="duration-scope">Whole animation</span
+          ><span
+            ><input
+              id="duration"
+              type="number"
+              min="1"
+              max="3600"
+              step="1"
+              value="120"
+              aria-label="Total animation duration in seconds"
+            />
+            seconds</span
+          ></label
+        >
+      </section>
+      <footer>
+        <span id="replay-status">Loading</span
+        ><span
+          >Drag to orbit · Scroll to zoom · Space to pause · ← → to step</span
+        ><span id="mode-note">Illustrated story · Gemma architecture</span>
+      </footer>
+    </main>
+    <script type="module" src="/src/replay-app.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<body>
+
+<h1>Editing the Weights from the Overlap of Many Answers:<br>How the Path Edit Is Built and What Its First Run Did</h1>
+<div class="authors">Marcos Damasceno</div>
+<div class="affil">Torad Labs</div>
+<div class="draft">Work in progress · November 2026</div>
+
+<div class="box note"><p><b>A quick note before you read.</b> This is work in progress, the third report in this
+series, and not a finished paper. It covers one construction and its first run. The round of experiments it belongs to
+is being redone with what this run taught us. The samples are small, so please read the numbers as early signals. Any
+comments, big or small, are welcome.</p></div>
+
+<div class="abstract">
+<h2>Abstract</h2>
+<p>Our first report fixed a reasoning mistake in Gemma&nbsp;4 E2B by editing one weight matrix, with a change computed
+from one correct answer and one wrong answer. Those edits held on the problems they were built from and did not carry
+to new ones. Here we build the edit from many answers. We record the model's internal computation for 30 answers that
+make one mistake, subtracting an energy that should be added, and for 30 answers that do not. We align the 60
+recordings by what they compute and measure where the two groups differ by more than chance. We then solve, one weight
+matrix at a time along the depth of the model, for the change that moves the wrong answers' own computation to the
+correct side over that stretch and holds it everywhere else. There is no training run and no answer key. The first run
+changed 18 matrices in 43 minutes on one GPU. Answering on its own, the edited model stops making the mistake in 29 of
+the 30 answers, and 17 of them become fully correct. It also corrects 7 of 21 wrong answers to questions outside the
+fit. It breaks 12 of the 30 correct answers, and three further edits built to protect them did not protect them. We
+describe the construction in full, report every result, and list the attempts that failed.</p>
+</div>
+
+<h2>1&nbsp;&nbsp;Introduction</h2>
+
+<p>When a language model reasons wrongly, the usual fix is more training. Our first report [9] tried something
+narrower: change the weights directly, with a change computed from the model's own behaviour. Four edits to one matrix
+of Gemma&nbsp;4 E2B fixed a specific mistake in an energy problem and, by the fourth, left the model's correct answers
+and ordinary text almost untouched. None of them improved new questions.</p>
+
+<p>We think the reason is where those edits came from. Each took its direction from a single pair of answers, one right
+and one wrong, at one step, in one matrix chosen beforehand. The idea behind the work asks for more than that. While a
+model runs, the signal for each token passes through the network one operation after another, and we call the record of
+how it changes a <em>trace</em>. Our hypothesis is that answers which use the same skill share part of their trace, that
+correct and wrong answers part over some stretch of it, and that closing the gap between them over that stretch repairs
+the skill and not just one answer.</p>
+
+<p>Testing that takes three things round one did not have. Answers have different lengths and different words, so there
+has to be a way to say which moment of one answer corresponds to which moment of another. Two groups of answers always
+differ somewhat, so there has to be a measure of which differences are real. And a difference in the trace has to be
+turned into a change of weights, across many matrices that feed each other.</p>
+
+<p>In this report we supply all three for one mistake and run the result once. We align 60 answers by their computation
+alone and find one connected stretch where the two groups differ by about six times what chance would give
+(Section&nbsp;4). We then build what we call the <em>path edit</em> (Section&nbsp;5). Every position of every wrong
+answer is given a target for the state the model should be in right after each matrix has acted: moved towards the
+correct group where the groups differ, and unchanged everywhere else. Each matrix's change is found with the model's own
+arithmetic, and the matrices are solved in the order the signal meets them, each on the inputs the earlier changes
+produce.</p>
+
+<p>The first run was stopped after 18 of 70 matrices. The model it produced, answering on its own, adds the energy it
+used to subtract in 29 of 30 answers. Seventeen of the 30 become fully correct, and so do 7 of 21 wrong answers from
+round one that the fit never saw. The edit has no protection and breaks 12 of the 30 correct answers. The rest of this
+round tried to protect them and did not succeed, and we report how (Section&nbsp;7).</p>
+
+<h3>1.1&nbsp;&nbsp;Contributions</h3>
+<ul>
+<li><b>An overlap of traces.</b> We compare groups of answers along their whole computation, aligned without using any
+token or word, and separate what recurs from chance. The correct and the wrong answers differ over one connected
+stretch, at every depth of the model.</li>
+<li><b>A construction.</b> We give a way to turn that difference into changes of many weight matrices. The target, the
+step sizes and the strength of each change are computed from measurements on the model. No value is tuned by hand, and
+no error is passed backwards through the network.</li>
+<li><b>A first result.</b> One run of the construction, 18 matrices in 43 minutes, changes the calculation it aims at in
+29 of 30 answers when the model writes on its own, and carries to questions outside the fit.</li>
+<li><b>What failed.</b> The edit breaks correct answers, three further edits do not prevent it, and a check made during
+the build pointed the wrong way. We report each.</li>
+</ul>
+
+<h2>2&nbsp;&nbsp;Background</h2>
+
+<p><b>Editing weights.</b> ROME [1] changes one matrix so that one input maps to a new output. MEMIT [2] spreads a
+change over several layers, because changing an early layer changes what later layers receive. Our path order answers
+the same problem. AlphaEdit [3] protects chosen inputs by allowing only changes that leave them untouched. We protect by
+fitting: positions that should not move are given their original state as a target.</p>
+
+<p><b>Differences between groups.</b> Steering methods [4, 5] subtract the average internal state of one set of prompts
+from that of another and add the result while the model runs. Our gap is also a difference of two averages. It is taken
+along an aligned path instead of at one position, it is reduced by what chance explains, and it is written into the
+weights.</p>
+
+<p><b>Alignment.</b> Speech recognition compares recordings spoken at different speeds by dynamic time warping [10],
+which matches two sequences in order and lets either one stretch. We use it to line up answers.</p>
+
+<p><b>Fitting.</b> The change of each matrix is a least-squares fit with a ridge penalty [11], solved by conjugate
+gradients [12]. The strength of the penalty is found with golden-section search [13].</p>
+
+<p><b>Side effects.</b> Edits often change more than intended [6, 7]. Round one measured this on one matrix. Here it is
+the main open problem.</p>
+
+<h2>3&nbsp;&nbsp;Setup</h2>
+
+<p><b>Model.</b> We use the instruction-tuned Gemma&nbsp;4 E2B [8] (35 layers) at 16-bit (BF16) precision, running in
+llama.cpp on one RTX&nbsp;5080, with a recorder that copies internal values without changing them. Decoding is greedy:
+the model always picks its top-scoring token, so every run is exactly repeatable.</p>
+
+<p><b>Task.</b> The questions are the family used in round one. An object starts moving, goes down a slope, loses some
+energy on a rough patch, then climbs. The model has to give the available energy, the required energy and a verdict.
+One example:</p>
+<div class="prompt">A block sliding along a channel has mass 2 kg and initially moves at 8 m/s. It descends 2 m along a smooth track, crosses a rough horizontal section that dissipates 13 J, and then starts a smooth climb to a destination 1 m above the bottom of that climb. [...] Will it reach the destination?</div>
+
+<p><b>The mistake.</b> The correct calculation adds the energy gained on the descent: 64&nbsp;+&nbsp;40&nbsp;−&nbsp;13
+=&nbsp;91&nbsp;J available, 20&nbsp;J required, YES. The mistake we study subtracts it: 64&nbsp;−&nbsp;40&nbsp;−&nbsp;13
+=&nbsp;11&nbsp;J, NO. This is a different mistake from the one in round one's source pair, where the descent was added
+to the climb. We group wrong answers by their first wrong calculation and keep the groups apart.</p>
+
+<p><b>Scoring.</b> A <em>complete</em> answer has the right available energy, the right required energy and the matching
+verdict. The same judge reads the original and the edited answer. Every answer that was not complete after an edit was
+also read in full for its first error.</p>
+
+<div class="tablewrap"><table>
+<caption><b>Table 1.</b> The question sets. Every answer was written by the original model on its own.</caption>
+<thead><tr><th>Set</th><th class="n">Size</th><th>What it is</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td>Overlap, wrong</td><td class="n">30</td><td>Answers that subtract the descent</td><td>Compared and fitted</td></tr>
+<tr><td>Overlap, correct</td><td class="n">30</td><td>Complete answers to the same kind of question, with the same spread of numbers</td><td>Compared, not fitted</td></tr>
+<tr><td>Round one</td><td class="n">28</td><td>Round one's main questions: 21 answered wrongly and 7 correctly</td><td>Not in the overlap or the fit</td></tr>
+</tbody></table></div>
+
+<h2>4&nbsp;&nbsp;The overlap</h2>
+
+<h3>4.1&nbsp;&nbsp;Traces and places</h3>
+
+<p>Each token is carried through the model as a list of 1,536 numbers, the residual stream. Each of the 35 layers adds
+to it three times (attention, feed-forward and a per-layer embedding branch), so a token passes 105 additions, which we
+call <em>merges</em>. At each merge we record how the direction of the stream turned. The trace of an answer is that
+record for every token the model generated.</p>
+
+<p>To compare answers we need to know which steps correspond. We take the answer of median length, 480 steps, as a
+reference and call its steps <em>places</em>. Every other answer is matched to it by dynamic time warping [10]: two
+steps are alike when their turns at all 105 merges point the same way, and the matching keeps the order of both
+answers. No token, number or word is used. It is the way one compares performances of the same piece played at
+different tempos, by what is played and not by the clock. All 30,546 generated steps of the 60 answers are placed.</p>
+
+<h3>4.2&nbsp;&nbsp;Gap and chance</h3>
+
+<p>At each place <i>p</i> and each point <i>k</i> of the model we average the correct answers and the wrong answers
+separately. We call the two averages the <em>correct pattern</em> <i>c̄</i> and the <em>wrong pattern</em> <i>w̄</i>,
+and their squared distance the <em>gap</em>:</p>
+<div class="eq"><math display="block"><msub><mi>G</mi><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo>=</mo><msup><mrow><mo>‖</mo><msub><mover><mi>c</mi><mo>¯</mo></mover><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo>−</mo><msub><mover><mi>w</mi><mo>¯</mo></mover><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo>‖</mo></mrow><mn>2</mn></msup></math><span class="eqn">(1)</span></div>
+<p>Two averages of 30 answers differ even when the groups do not, because answers vary. The expected size of that
+difference is</p>
+<div class="eq"><math display="block"><msub><mi>C</mi><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo>=</mo><mfrac><msubsup><mi>s</mi><mi>c</mi><mn>2</mn></msubsup><msub><mi>n</mi><mi>c</mi></msub></mfrac><mo>+</mo><mfrac><msubsup><mi>s</mi><mi>w</mi><mn>2</mn></msubsup><msub><mi>n</mi><mi>w</mi></msub></mfrac></math><span class="eqn">(2)</span></div>
+<p>where <i>s</i><sup>2</sup> is the variance of a group's answers around their average at that place and point, and
+<i>n</i>&nbsp;=&nbsp;30 is the size of the group. We call <i>C</i> <em>chance</em>. Two halves of one group differ, on
+average, by 2<i>C</i>, so we say the groups have <em>diverged</em> at (<i>p</i>,&nbsp;<i>k</i>) when
+<i>G</i>&nbsp;&gt;&nbsp;2<i>C</i>. Where they have, the part of the gap that chance does not explain is</p>
+<div class="eq"><math display="block"><msub><mi>σ</mi><mrow><mi>p</mi><mi>k</mi></mrow></msub><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><msub><mi>C</mi><mrow><mi>p</mi><mi>k</mi></mrow></msub><msub><mi>G</mi><mrow><mi>p</mi><mi>k</mi></mrow></msub></mfrac></math><span class="eqn">(3)</span></div>
+<p>which we call the <em>shared part</em>. A gap ten times chance keeps 0.9 of itself.</p>
+
+<p>As a second check, which needs no formula for chance, we split each group into two halves with no answer in common,
+compute the gap from each pair of halves, and compare the directions of the two gaps.</p>
+
+<h3>4.3&nbsp;&nbsp;Where the groups differ</h3>
+
+<figure><img src="figures/fig1-places.svg" style="width:88%">
+<figcaption><b>Figure 1.</b> Top: the gap divided by chance at each of the 480 places, measured on the state after each
+of the 70 matrices (Section&nbsp;5.1) and summed over them. The dashed line is twice chance. Bottom: the share of the 70
+matrices at which the groups have diverged at that place.</figcaption></figure>
+
+<p>The two patterns run together, part over one stretch, and come back (Figure&nbsp;1). Over places 142 to 313 the gap
+in the turns is 5.8 times chance, and the two halves agree on its direction with a cosine of 0.825. Measured on the
+state after each matrix, the gap over the same stretch is 4.8 to 9.3 times chance (median 5.7), and 96% of the
+place-and-matrix cells have diverged. Outside the stretch the gap is about twice chance and 44% of the cells have
+diverged. The gap is present at every depth, including layer&nbsp;0.</p>
+
+<p>Three cautions apply. The alignment is a proposal about which moments correspond. The 60 questions are variations of
+one problem, so the answers are less independent than the chance estimate assumes. And part of the gap is the words
+themselves: around the point where the answers handle the descent, the two groups begin to write different sentences,
+and from there the model reads different text in each group. We do not separate the two.</p>

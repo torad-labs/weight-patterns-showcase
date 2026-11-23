@@ -1,0 +1,181 @@
+{
+  "method_step": 4,
+  "operation": "same-input-operation-comparison",
+  "why_this_direction": "Separate the direct change of a local weight map from the change in its already edited input. Use two previously sufficient repairs and the failed projected displacement on the same question. Verify what the frozen correspondence actually measures before interpreting either term.",
+  "repeating_pattern_check": "Aggregate loss and large local distance have looked favorable on a changed route while valid friction and an incorrect descent could share the same trace movement. Keep direct and inherited changes, both operations and the separate input histories visible.",
+  "what_went_wrong_before": "A finite forecast on the same fitted history reversed the native ranking of two edits. The available prechoice detector could also report later friction. These limits preclude using the old forecast or the printed sign as a weight selector.",
+  "hypothesis": "A matched-state evaluation of each local map can separate the response to a changed incoming state from a change to the operation itself. A direction relative to the frozen successful computation might distinguish the two known repairs from the failed candidate.",
+  "prediction": "On computation-registered prechoices, the signed effect of local weight changes toward the frozen correct trace at descent should agree across both successful edits and separate them from the failed case, with native valid friction preserved. Report the local values both before and after applying the existing witness tolerance. All visits count. Keep per-merge results, including opposite contributions.",
+  "would_weaken_it": "If the registered query is at a different operation or time, the mixed replay fails its identity checks, the successful and failed edits have the same sign, or the same rule treats valid friction as erroneous, then this is insufficient as a normal training target. Fixed-reference distance can move even within multiple valid paths, and both successful arms share a fitted case and background.",
+  "rule": "Use stored full-trajectory reference-to-query pairs, then independently audit first symbolic and numerical use for both operations. The pairs may depend on future computations. Never identify a trainable site from these annotations. In native sibling replays evaluate each local map at the same full candidate input and disclose the cache boundary. Primary local contrast is squared distance of the candidate turn to the frozen correct reference minus that of the old map at the edited input, averaged across merges and all reference mates. A negative value means movement toward the reference. Preserve ordinary squared excess beyond sqrt(2*chance) and ties. Treat different starting checkpoints, change counts and one problem as limitations. Compare initial and edited actual generations, including arithmetic on the input friction received.",
+  "original_reference": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4"
+  },
+  "source_phases": {
+    "record": "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+    "sha256": "4172ea30ae1ccc77f11474735af07e3b8a316bc2f20a6a15c5aced613fe92361"
+  },
+  "audit_reader": {
+    "record": "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/build.py",
+    "sha256": "6b2d25707b0a13798383034fbba13531b327f4c73cf85bc19bf72616488a5563"
+  },
+  "cases": {
+    "early": {
+      "case": "discovery-05-channel-h1",
+      "generation": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/result.json",
+        "sha256": "28876c344e3ce0afa08a359ec49f6fff011d2c36fe09001b0b451de7466cd33b"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/pairs.npy",
+        "sha256": "66a2d62f5841b90364ad28e3495c6e143e21f7960ebc0e08be3b569d5beb6596"
+      },
+      "measurement": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/measurement.json",
+        "sha256": "9fce69ddc63af413c56ca588c10fed01b3fa0ac0b59f42506ae2cd30a0569e1f"
+      },
+      "arithmetic_audit_rows": [
+        313,
+        327,
+        373,
+        389
+      ]
+    },
+    "attention_repair": {
+      "case": "discovery-05-channel-h1",
+      "generation": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/raw/discovery-05-channel-h1/result.json",
+        "sha256": "9293d8be1d426bea30cac51fbbe81dfc83c5a7e2efe2c89e7b29808fbde19676"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/pairs.npy",
+        "sha256": "f155f0651ac67e03e9a0634aa0e0f8408aed223559e8bc8e9a928e27caa07ad8"
+      },
+      "measurement": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/measurement.json",
+        "sha256": "6f0a870cee3375043c892a417ede8ce80c07693cf25c00d81cc12bae8cbd2dff"
+      },
+      "arithmetic_audit_rows": [
+        313,
+        328,
+        368,
+        386
+      ]
+    },
+    "ffn_repair": {
+      "case": "discovery-05-channel-h1",
+      "generation": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/raw/discovery-05-channel-h1/result.json",
+        "sha256": "8581347168dbe8780bc2f81896d172670f412428c2081a43efd360b9790046d8"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/pairs.npy",
+        "sha256": "f155f0651ac67e03e9a0634aa0e0f8408aed223559e8bc8e9a928e27caa07ad8"
+      },
+      "measurement": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/measurement.json",
+        "sha256": "e7b1c20fd54ced716ea46fd8f437d903c5fae24a2b6c95fcf493fa6303f4ba4c"
+      },
+      "arithmetic_audit_rows": [
+        313,
+        328,
+        368,
+        386
+      ]
+    },
+    "original": {
+      "case": "discovery-05-channel-h1",
+      "generation": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/result.json",
+        "sha256": "7ffd2f90c6f844b87da323ae6266c6fee2376b302cc11ccccf0c0cb7604cbbd9"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/pairs.npy",
+        "sha256": "3d1af7a43aca789609ac4c93076b3118fe51795c8e703b39ad0714d2e5a88d90"
+      },
+      "measurement": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/measurement.json",
+        "sha256": "7ff3156dcd77fca7c47281f7ab71932a8d475ef10d0840d7e46e0ffaabfa1b20"
+      },
+      "arithmetic_audit_rows": [
+        313,
+        327,
+        373,
+        389
+      ]
+    },
+    "failed_edit": {
+      "case": "discovery-05-channel-h1",
+      "generation": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/result.json",
+        "sha256": "2549d89ad9b8a5cae4b9665a6de68e1b6ef12c37615097600a2759c3c6e31dc6"
+      },
+      "pairs": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/pairs.npy",
+        "sha256": "167810ebecf884e8cc91dd43272351c7f5e0b9ec9f0259948c488839f374f22d"
+      },
+      "measurement": {
+        "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/measurement.json",
+        "sha256": "55ec6a99f6b38b4570d0469036d28f55ca2dd424a6afce4480840e0a8a241c3b"
+      },
+      "arithmetic_audit_rows": [
+        326,
+        339,
+        398,
+        412
+      ]
+    }
+  },
+  "operands": {
+    "initial": 64,
+    "work": 40,
+    "friction": 13
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/pairs.npy",
+    "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/measurement.json",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/raw/discovery-05-channel-h1/result.json",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/pairs.npy",
+    "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/measurement.json",
+    "studies/04-round-2-overlap/runs/vector-chance-original/reference.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/build.py"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/same-input-operation-comparison/registration.json",
+    "studies/04-round-2-overlap/runs/same-input-operation-comparison/README.md"
+  ],
+  "program": {
+    "record": "studies/04-round-2-overlap/runs/same-input-operation-comparison/register.py",
+    "sha256": "c7a605963caf4a5a8000d6dd4f4ea9fd2b52391442e8637545eb430f08a5be22"
+  },
+  "observability": {
+    "format": "weight-patterns-observability/1",
+    "entrypoint": "studies/04-round-2-overlap/runs/same-input-operation-comparison/register.py",
+    "events": "studies/04-round-2-overlap/runs/same-input-operation-comparison/observability/events.jsonl",
+    "sources": [
+      {
+        "record": "studies/04-round-2-overlap/runs/same-input-operation-comparison/register.py",
+        "sha256": "c7a605963caf4a5a8000d6dd4f4ea9fd2b52391442e8637545eb430f08a5be22"
+      },
+      {
+        "record": "code/signal-trace/pipeline/observability/recorder.py",
+        "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+      }
+    ],
+    "operations": [
+      "trace.same_input_registration_audit"
+    ]
+  }
+}

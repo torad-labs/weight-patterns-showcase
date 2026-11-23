@@ -1,0 +1,29 @@
+{
+  "method_step": 3,
+  "declared_at": "2026-11-18T04:09:12.070316-06:00",
+  "why_this_direction": "Correct friction subtraction triggered the prior warning. Test whether the computational prefix can identify which energy term is being applied independently of whether the model adds or subtracts. Then ask whether the already frozen downstream error score marks just wrong downhill work.",
+  "repeating_pattern_check": "A marker for an operator or equation structure can mark a correct operation. Explicitly compare the two role events within a subtract/subtract response, scan all native predictions, test 387 with an intervening negligible-friction term, compare correct 388 and preservation at 175/189, and report active warnings elsewhere. Do not retune weights or thresholds on these cases.",
+  "hypothesis": "An aligned prefix of residual transformations carries a usable role distinction between application of downhill work and application of friction. Separate role identification from correctness of the local transformation and from the final answer.",
+  "prediction": "A role matcher should retrieve downhill before its application including on wrong-subtraction cases, retrieve or reject friction as a potential downhill update, and scope the frozen positive route discrepancy to the failing downhill computation at 387 while preserving the correctly executed friction subtraction at 388. Test natural one-quantity contrasts independently.",
+  "would_weaken_it": "Wrong and correct minus signs receive the same role; full responses generate extra downstream-positive alerts; valid descents remain marked; or the native 387 target is missed. A chosen-event binary probe alone cannot localize or train a correction.",
+  "rule": "Use only saved naturally generated computations. Freeze three previously named donor traces: the original correct reference (historical native reference profile), the early fitted failing weight-swap control and the native original unfitted failing profile. Both failing donors subtract at downhill and at friction. Each donor supplies two named single events one native prediction before the already annotated actual applications; everything else in its complete decode is background. These are supervised reference examples. Query annotations never enter scoring. Remove every donor sharing the query initial kinetic energy and downhill work. Query group information is used solely for disjoint evaluation. Distances use two consecutive FF20 turn vectors to preserve the prior geometry. Primary contextual matcher applies prefix dynamic programming from the beginning of each decode to all donor endpoints; diagonal edges carry weight two and horizontal and vertical edges one. Normalize by the fixed sum of prefix lengths. Comparator is the identical two-turn cost without the rest of the prefix. Nearest distance over all donor endpoints and donors yields downhill, friction or background. Also record forced two-class decisions, distances and nearest native endpoints. No scan stops early and no labeled query event/window enters the prediction. At every predicted downhill event use the prior consensus downstream score (43 merges), without its old FF20 gate. Positive score means a candidate correction. Compare errors, correct descents, friction, unannotated and alternative events separately. Source bank, exclusions and measures fixed before query results. Single row before the operator, not the displayed sign, is the primary evaluation unit; score the whole response and retain all alerts. Treat any causal or independent-capability deletion/edit claim as unmeasured.",
+  "inputs": [
+    "studies/04-round-2-overlap/runs/descent-landmark-route-comparison/declaration.json",
+    "studies/04-round-2-overlap/runs/descent-landmark-route-comparison/result.json",
+    "studies/04-round-2-overlap/runs/descent-landmark-route-comparison/registration-results.json",
+    "studies/04-round-2-overlap/runs/descent-landmark-route-comparison/profile-results.json",
+    "studies/04-round-2-overlap/runs/descent-log-gain-and-repair-controls/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/result.json",
+    "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/result.json"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/descent-operand-identity/result.json"
+  ],
+  "physical_contrasts": "Score all exact one-factor drop and friction variants within the 30 authorized originals, compare full-merge directional turn changes per joule at the two roles, preserve pair context and qualify identifiability where input factors or route differ. Recorded independently under contrast/.",
+  "documentary_sources": [
+    "records/retrospectives/2026-11-17-natural-descent-decisions/scores.json",
+    "final-experiment/landmark-route-comparison.md"
+  ],
+  "what_went_wrong_before": "The prior gate was alert during correct friction and missed the physical downhill decision at 387.",
+  "status": "Saved-data study. No training or new model outputs."
+}

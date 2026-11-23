@@ -1,0 +1,615 @@
+{
+  "source": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/result.json",
+    "sha256": "6053c06315d90d91c6a701a560cc76c9346e7621a1681e118187cc7668a9e283"
+  },
+  "declarations": [
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/declaration.json",
+      "sha256": "b432e8699e334929d00bf6036b60f38d61371c65bbad42f56d53677b79c084fa"
+    },
+    {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/declaration.json",
+      "sha256": "f5f4a2206cd30a6664ee7edcc7e14190f204fa1c9ae20b88e83d88bdc2abcf22"
+    }
+  ],
+  "arms": {
+    "original": {
+      "fit": {
+        "events": 578,
+        "ended": true,
+        "objective": 0.00029245703627089436,
+        "capped_objective": 0.00029245995972935026,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.393291497485534
+          ],
+          "excess": [
+            0.013111039516526923
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.39329286887467246
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 5761,
+        "pair_merge_cells": 61320,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+          "sha256": "6f258a0cdab83dd088848b647fca8e59277de6e1fcd87a2082cb9ff91299e6d5"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/raw/discovery-05-channel-h1/result.json",
+          "sha256": "7ffd2f90c6f844b87da323ae6266c6fee2376b302cc11ccccf0c0cb7604cbbd9"
+        },
+        "same_original_output_ids": true,
+        "first_different_output_position": null
+      },
+      "correct": {
+        "events": 560,
+        "ended": true,
+        "objective": 1.3002743385995776e-07,
+        "capped_objective": 1.3002743385995776e-07,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            5.0703394715779476e-05
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.0008289543151163127
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 1344,
+        "pair_merge_cells": 58800,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/correct/capture.json",
+          "sha256": "a8c2bf605763f2b2593c39df9baaa52d06a01649baf2edc731b5dfb7a5013a62"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/correct/raw/expanded-004-h1/result.json",
+          "sha256": "38ea4ef3014177871bce96631b2a42d1111b870f904f03428bf0d5f7f3b9239a"
+        },
+        "same_original_output_ids": true,
+        "first_different_output_position": null
+      },
+      "transfer": {
+        "events": 676,
+        "ended": true,
+        "objective": 0.011736433126376873,
+        "capped_objective": 0.011736433126376873,
+        "site": {
+          "current_rows": [
+            296
+          ],
+          "projections": [
+            0.14119560623027164
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.667465317275453
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 42021,
+        "pair_merge_cells": 78225,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/capture.json",
+          "sha256": "9d27a5258de6f34ce3e47752028d0d0b7a840aaa7b0abeb80eb5b850d6cbea02"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/raw/discovery-02-reordered-h3/result.json",
+          "sha256": "126ca6b06b2ad557ad5ba58bdf7b114573b474e0a3ad9b8ab28433a70fa2821a"
+        },
+        "same_original_output_ids": true,
+        "first_different_output_position": null
+      }
+    },
+    "standard": {
+      "fit": {
+        "events": 716,
+        "ended": true,
+        "objective": 0.0016223574862773086,
+        "capped_objective": 0.0016223614437756606,
+        "site": {
+          "current_rows": [
+            325
+          ],
+          "projections": [
+            0.39543499510046926
+          ],
+          "excess": [
+            0.015254537131462187
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.4344851297071961
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 20761,
+        "pair_merge_cells": 76860,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/fit/capture.json",
+          "sha256": "bf76b985f998c0bdf031b98d0add46c361f5bb1756598e959deb7dee77cb13d9"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/fit/raw/discovery-05-channel-h1/result.json",
+          "sha256": "344908fa0638e843d2deae146f89791a662d35660c4996c53245a4b880910f19"
+        },
+        "same_original_output_ids": false,
+        "first_different_output_position": 72
+      },
+      "correct": {
+        "events": 926,
+        "ended": true,
+        "objective": 0.002785690502368196,
+        "capped_objective": 0.002785690502368196,
+        "site": {
+          "current_rows": [
+            336
+          ],
+          "projections": [
+            0.08314874146640416
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.33075281684067975
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 28721,
+        "pair_merge_cells": 97965,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/correct/capture.json",
+          "sha256": "806fb4b81e79528491035f88418d0c0adf69349af4487c1b5ec803322ecd929f"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/correct/raw/expanded-004-h1/result.json",
+          "sha256": "b681504da06df5b3fd83ee5c6faa7702a17aecb2cefc70717ccb91c19a8eba21"
+        },
+        "same_original_output_ids": false,
+        "first_different_output_position": 72
+      },
+      "transfer": {
+        "events": 676,
+        "ended": true,
+        "objective": 0.011737470317075843,
+        "capped_objective": 0.011737470317075843,
+        "site": {
+          "current_rows": [
+            296
+          ],
+          "projections": [
+            0.1412073459622525
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.6674576885333119
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 42041,
+        "pair_merge_cells": 78225,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/transfer/capture.json",
+          "sha256": "8cb1e5e2166ea5c1156d2fec222375e40f73ecaedfea0ec40f32444bbf18527c"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/transfer/raw/discovery-02-reordered-h3/result.json",
+          "sha256": "9d9a23705d2f8907097a1a5bf94756c66157826ad3d8b234eb33edca0de3fe9b"
+        },
+        "same_original_output_ids": true,
+        "first_different_output_position": null
+      }
+    },
+    "treatment": {
+      "fit": {
+        "events": 578,
+        "ended": true,
+        "objective": 0.0002916099861255271,
+        "capped_objective": 0.00029161308231173607,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.39367326157267024
+          ],
+          "excess": [
+            0.013492803603663173
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.39367608336919524
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 5963,
+        "pair_merge_cells": 61320,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/capture.json",
+          "sha256": "5ff2635400486a7e159e99b8bdbf4ac164f63605a17e85d0c766f09e73856d95"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/fit/raw/discovery-05-channel-h1/result.json",
+          "sha256": "2e90ed4257687019c8cdffc643051aa2d0f2ea45921aa7db723da9f22a9685b2"
+        },
+        "same_original_output_ids": true,
+        "first_different_output_position": null
+      },
+      "correct": {
+        "events": 560,
+        "ended": true,
+        "objective": 1.5837864378813128e-07,
+        "capped_objective": 1.5837864378813128e-07,
+        "site": {
+          "current_rows": [
+            312
+          ],
+          "projections": [
+            0.0001842495156297179
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.001001601994528997
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 1545,
+        "pair_merge_cells": 58800,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/correct/capture.json",
+          "sha256": "6333b5479a0c33cd9808eeb571ae37b1374bf743e4a71be7e9534c6b857557ad"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/correct/raw/expanded-004-h1/result.json",
+          "sha256": "8b702b92c45d859ef95e3b07ff23a459cbaf5dbc8e0da0df86842ba4e16789d2"
+        },
+        "same_original_output_ids": true,
+        "first_different_output_position": null
+      },
+      "transfer": {
+        "events": 676,
+        "ended": true,
+        "objective": 0.011740479520948886,
+        "capped_objective": 0.011740479520948886,
+        "site": {
+          "current_rows": [
+            296
+          ],
+          "projections": [
+            0.1411776859942398
+          ],
+          "excess": [
+            0.0
+          ],
+          "radius": 0.5060302460432016,
+          "radial_distances": [
+            0.6675291094615181
+          ],
+          "limit": 0.38018045796900707
+        },
+        "outside": 42038,
+        "pair_merge_cells": 78225,
+        "native_capture": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/transfer/capture.json",
+          "sha256": "382f5f6ed797ac4590c01557f0d74e4b5dc1ec3af21ea0582a598b7c97d67a4a"
+        },
+        "raw": {
+          "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/transfer/raw/discovery-02-reordered-h3/result.json",
+          "sha256": "243a668a5b4e20f243e151cca5009f3d366afe6df52a7186c81ec5de40c54c2d"
+        },
+        "same_original_output_ids": true,
+        "first_different_output_position": null
+      }
+    }
+  },
+  "updates": {
+    "standard": {
+      "eligible": 538,
+      "changed": 31553,
+      "applied_length": 0.005062893882232516,
+      "gradient_norm_squared": 0.00020051665689745993,
+      "matching_held_history_prediction": 0.0002917424655153044,
+      "patch": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/update.xor.z",
+        "sha256": "baa596696b428e251af8ddb2bc6df6d2b102fcbf71e6c7875f25750f6d6aa491"
+      },
+      "proposal": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/standard/proposal.json",
+        "sha256": "5df5c9c6a937b73cb724b65720fa39cfcac98a18ba3ba43dcc4117f3ee307de1"
+      }
+    },
+    "treatment": {
+      "eligible": 538,
+      "changed": 31564,
+      "applied_length": 0.005062849257092959,
+      "gradient_norm_squared": 0.00020051015220028866,
+      "matching_held_history_prediction": 0.00029174538322644753,
+      "patch": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/update.xor.z",
+        "sha256": "c1955b62e81565f83cbb4ce045c529d5a831d9ce4c6c577e355add4fc5533fe0"
+      },
+      "proposal": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-device-continuation/treatment/proposal.json",
+        "sha256": "a98804e79ba9518b49d5f3f3be785a453aede600c0154703694dfc99d198f508"
+      }
+    }
+  },
+  "installed_difference": {
+    "different_native_values": 2056,
+    "different_tensors": 84,
+    "per_tensor": {
+      "blk.0.layer_output_scale.weight": 1,
+      "blk.0.inp_gate.weight": 17,
+      "blk.1.post_attention_norm.weight": 15,
+      "blk.1.post_ffw_norm.weight": 5,
+      "blk.1.post_norm.weight": 234,
+      "blk.1.attn_k_norm.weight": 1,
+      "blk.10.ffn_up.weight": 1,
+      "blk.10.post_attention_norm.weight": 21,
+      "blk.10.post_ffw_norm.weight": 6,
+      "blk.10.post_norm.weight": 21,
+      "blk.10.attn_output.weight": 1,
+      "blk.11.post_attention_norm.weight": 33,
+      "blk.11.post_ffw_norm.weight": 10,
+      "blk.11.post_norm.weight": 23,
+      "blk.11.attn_k_norm.weight": 2,
+      "blk.12.ffn_gate.weight": 2,
+      "blk.12.post_attention_norm.weight": 26,
+      "blk.12.post_ffw_norm.weight": 5,
+      "blk.12.post_norm.weight": 24,
+      "blk.13.ffn_down.weight": 1,
+      "blk.13.inp_gate.weight": 1,
+      "blk.13.post_attention_norm.weight": 25,
+      "blk.13.post_ffw_norm.weight": 2,
+      "blk.14.layer_output_scale.weight": 1,
+      "blk.14.inp_gate.weight": 10,
+      "blk.14.attn_k_norm.weight": 6,
+      "blk.15.ffn_down.weight": 1,
+      "blk.15.ffn_norm.weight": 1,
+      "blk.15.attn_output.weight": 1,
+      "blk.16.ffn_gate.weight": 1,
+      "blk.16.post_attention_norm.weight": 1,
+      "blk.16.post_norm.weight": 20,
+      "blk.16.attn_output.weight": 1,
+      "blk.17.post_attention_norm.weight": 5,
+      "blk.17.post_norm.weight": 20,
+      "blk.18.ffn_down.weight": 1,
+      "blk.18.ffn_up.weight": 1,
+      "blk.18.post_attention_norm.weight": 1,
+      "blk.18.post_norm.weight": 13,
+      "blk.18.attn_output.weight": 1,
+      "blk.19.post_attention_norm.weight": 1,
+      "blk.19.post_ffw_norm.weight": 1,
+      "blk.19.post_norm.weight": 3,
+      "blk.2.post_attention_norm.weight": 64,
+      "blk.2.post_ffw_norm.weight": 23,
+      "blk.2.post_norm.weight": 400,
+      "blk.20.ffn_up.weight": 1,
+      "blk.20.post_attention_norm.weight": 1,
+      "blk.3.ffn_gate.weight": 1,
+      "blk.3.inp_gate.weight": 1,
+      "blk.3.post_attention_norm.weight": 73,
+      "blk.3.post_ffw_norm.weight": 5,
+      "blk.3.post_norm.weight": 302,
+      "blk.4.ffn_down.weight": 1,
+      "blk.4.post_attention_norm.weight": 11,
+      "blk.4.post_ffw_norm.weight": 6,
+      "blk.4.post_norm.weight": 138,
+      "blk.4.ffn_norm.weight": 1,
+      "blk.4.attn_k_norm.weight": 2,
+      "blk.5.attn_norm.weight": 1,
+      "blk.5.post_attention_norm.weight": 37,
+      "blk.5.post_ffw_norm.weight": 18,
+      "blk.5.post_norm.weight": 111,
+      "blk.5.attn_k_norm.weight": 1,
+      "blk.6.post_attention_norm.weight": 20,
+      "blk.6.post_ffw_norm.weight": 14,
+      "blk.6.post_norm.weight": 57,
+      "blk.6.attn_k_norm.weight": 3,
+      "blk.7.ffn_gate.weight": 1,
+      "blk.7.post_attention_norm.weight": 19,
+      "blk.7.post_ffw_norm.weight": 14,
+      "blk.7.post_norm.weight": 54,
+      "blk.7.ffn_norm.weight": 1,
+      "blk.8.ffn_down.weight": 3,
+      "blk.8.post_attention_norm.weight": 14,
+      "blk.8.post_ffw_norm.weight": 15,
+      "blk.8.post_norm.weight": 19,
+      "blk.8.attn_q.weight": 1,
+      "blk.9.ffn_down.weight": 1,
+      "blk.9.post_attention_norm.weight": 17,
+      "blk.9.post_ffw_norm.weight": 12,
+      "blk.9.post_norm.weight": 18,
+      "blk.9.attn_k_norm.weight": 7,
+      "blk.9.attn_output.weight": 1
+    },
+    "standard_changes": 31553,
+    "treatment_changes": 31564
+  },
+  "per_native_itemsize": {
+    "2": {
+      "native_values": 51,
+      "tensors": 23
+    },
+    "4": {
+      "native_values": 2005,
+      "tensors": 61
+    }
+  },
+  "arithmetic": {
+    "record": "records/retrospectives/2026-11-17-natural-descent-decisions/updated-answers.json",
+    "sha256": "6e6db0760ec0c2549278262b0aaba43b7ac88bd4d79f0078b766e9b88ae28f49"
+  },
+  "operation_correspondence": {
+    "record": "records/retrospectives/2026-11-17-natural-descent-decisions/transfer-correspondence.json",
+    "sha256": "a308ed8da50e14a4d64b5083c6f0aefdd79ae64d9c3507dd8c1686fece87ad32"
+  },
+  "mlflow": {
+    "experiment_id": "6",
+    "parent_run": "f8b6950c472f42c7b61965fcdb499e67",
+    "members": {
+      "fit": "790a2ac2d2754cd29823055dd42bdef8",
+      "correct": "e3696ea0c3b141dab36ccdc4bc71d2af",
+      "transfer": "b620366fb0d242a1bf37a7ef10772988"
+    },
+    "verified_histories": {
+      "fit": {
+        "native.objective": [
+          [
+            0,
+            0.00029245703627089436
+          ],
+          [
+            3,
+            0.0016223574862773086
+          ],
+          [
+            6,
+            0.0002916099861255271
+          ]
+        ],
+        "native.capped_objective": [
+          [
+            0,
+            0.00029245995972935026
+          ],
+          [
+            3,
+            0.0016223614437756606
+          ],
+          [
+            6,
+            0.00029161308231173607
+          ]
+        ],
+        "native.maximum_projection_excess": [
+          [
+            0,
+            0.013111039516526923
+          ],
+          [
+            3,
+            0.015254537131462187
+          ],
+          [
+            6,
+            0.013492803603663173
+          ]
+        ]
+      },
+      "correct": {
+        "native.objective": [
+          [
+            1,
+            1.3002743385995776e-07
+          ],
+          [
+            4,
+            0.002785690502368196
+          ],
+          [
+            7,
+            1.5837864378813128e-07
+          ]
+        ],
+        "native.capped_objective": [
+          [
+            1,
+            1.3002743385995776e-07
+          ],
+          [
+            4,
+            0.002785690502368196
+          ],
+          [
+            7,
+            1.5837864378813128e-07
+          ]
+        ],
+        "native.maximum_projection_excess": [
+          [
+            1,
+            0.0
+          ],
+          [
+            4,
+            0.0
+          ],
+          [
+            7,
+            0.0
+          ]
+        ]
+      },
+      "transfer": {
+        "native.objective": [
+          [
+            2,
+            0.011736433126376873
+          ],
+          [
+            5,
+            0.011737470317075843
+          ],
+          [
+            8,
+            0.011740479520948886
+          ]
+        ],
+        "native.capped_objective": [
+          [
+            2,
+            0.011736433126376873
+          ],
+          [
+            5,
+            0.011737470317075843
+          ],
+          [
+            8,
+            0.011740479520948886
+          ]
+        ],
+        "native.maximum_projection_excess": [
+          [
+            2,
+            0.0
+          ],
+          [
+            5,
+            0.0
+          ],
+          [
+            8,
+            0.0
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "scope": "Post-generation arithmetic audit; never used by the learner to choose a position or a gradient.",
+  "revisions": [
+    {
+      "revision": 0,
+      "group_read": {
+        "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/0/group-measurement.json",
+        "sha256": "c256da3ef37a621c2dcbbf44b56a76a841c5b623bd25f02052b0d9fc78f0c3ce"
+      },
+      "complete_objective": null,
+      "measured_contribution": 0.02718721189952242,
+      "answers": [
+        {
+          "member": "discovery-05-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/0/capture/raw/discovery-05-channel-h1/result.json",
+            "sha256": "09ce9c2fc2193ed1545cc2ddb0dc84360acc5df1d39b31c8dd809f408cb78d05"
+          },
+          "available_J": 11,
+          "required_J": 20,
+          "expected_available_J": 91,
+          "expected_required_J": 20,
+          "correct_pair": false,
+          "measured_downhill_cells": 331,
+          "prechoice_measurements": [
+            {
+              "source_event": 312,
+              "event": 312,
+              "merge": 61,
+              "signed_error": 0.2858633748725631,
+              "orthogonal_turn_movement": 2.2639861884060273e-08,
+              "objective_residual_norm": 0.2858633748725631,
+              "weighted_loss": 0.010214733636691443
+            }
+          ],
+          "whole_trace_mates": [
+            312
+          ]
+        },
+        {
+          "member": "discovery-13-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/discovery-13-channel-h1/loop/0/capture/raw/discovery-13-channel-h1/result.json",
+            "sha256": "45f99250abb377db880a027ca0a90b53c6b65e87286597dd5997ed22ce82ad5d"
+          },
+          "available_J": 95,
+          "required_J": 120,
+          "expected_available_J": 95,
+          "expected_required_J": 40,
+          "correct_pair": false,
+          "measured_downhill_cells": 331,
+          "prechoice_measurements": [
+            {
+              "source_event": 312,
+              "event": 326,
+              "merge": 61,
+              "signed_error": 0.0,
+              "orthogonal_turn_movement": 0.10937728843066545,
+              "objective_residual_norm": 0.0,
+              "weighted_loss": 0.0
+            }
+          ],
+          "whole_trace_mates": [
+            326
+          ]
+        },
+        {
+          "member": "expanded-004-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/expanded-004-h1/loop/0/capture/raw/expanded-004-h1/result.json",
+            "sha256": "9e4d2441a255d0fd802189aed603d81dda85cf1bab6de09b1dec2275e6653c7b"
+          },
+          "available_J": 44,
+          "required_J": 20,
+          "expected_available_J": 44,
+          "expected_required_J": 20,
+          "correct_pair": true,
+          "measured_downhill_cells": 331,
+          "prechoice_measurements": [
+            {
+              "source_event": 312,
+              "event": 312,
+              "merge": 61,
+              "signed_error": 0.0,
+              "orthogonal_turn_movement": 2.1157388405167927e-08,
+              "objective_residual_norm": 0.0,
+              "weighted_loss": 0.0
+            }
+          ],
+          "whole_trace_mates": [
+            312
+          ]
+        }
+      ]
+    },
+    {
+      "revision": 1,
+      "group_read": {
+        "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/1/group-measurement.json",
+        "sha256": "27bcd56c09231d41dc9ae801d9f16a1c7f4cc0b3c6c65b7ef13d90bfc195a6c5"
+      },
+      "complete_objective": null,
+      "measured_contribution": 0.01794182787485012,
+      "answers": [
+        {
+          "member": "discovery-05-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/1/capture/raw/discovery-05-channel-h1/result.json",
+            "sha256": "3cb3ffbf50f11c4badf1b7f52dbd5b144afef23fef0f38641109fb2f5e69d751"
+          },
+          "available_J": 51,
+          "required_J": 60,
+          "expected_available_J": 91,
+          "expected_required_J": 20,
+          "correct_pair": false,
+          "measured_downhill_cells": 331,
+          "prechoice_measurements": [
+            {
+              "source_event": 312,
+              "event": 352,
+              "merge": 61,
+              "signed_error": 0.2425051525056393,
+              "orthogonal_turn_movement": 0.27105611728157475,
+              "objective_residual_norm": 0.2425051525056393,
+              "weighted_loss": 0.007351093623972924
+            }
+          ],
+          "whole_trace_mates": [
+            352
+          ]
+        },
+        {
+          "member": "discovery-13-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/discovery-13-channel-h1/loop/1/capture/raw/discovery-13-channel-h1/result.json",
+            "sha256": "c15b705322a6db6bfc3d42262f3daaa9ed6257c03a7e742b39dda076cbc93605"
+          },
+          "available_J": 15,
+          "required_J": 40,
+          "expected_available_J": 95,
+          "expected_required_J": 40,
+          "correct_pair": false,
+          "measured_downhill_cells": 0,
+          "prechoice_measurements": [],
+          "whole_trace_mates": [
+            477
+          ]
+        },
+        {
+          "member": "expanded-004-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/expanded-004-h1/loop/1/capture/raw/expanded-004-h1/result.json",
+            "sha256": "87cae1c7d6911b9c6672159028452c6ca0a796a94f5313141089fe23acceb207"
+          },
+          "available_J": 44,
+          "required_J": 20,
+          "expected_available_J": 44,
+          "expected_required_J": 20,
+          "correct_pair": true,
+          "measured_downhill_cells": 0,
+          "prechoice_measurements": [],
+          "whole_trace_mates": [
+            383
+          ]
+        }
+      ]
+    },
+    {
+      "revision": 2,
+      "group_read": {
+        "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/2/group-measurement.json",
+        "sha256": "822cdfb2f592c2fac42677001e9252712b0dc010512fa6f8a7ee900aa9f366b1"
+      },
+      "complete_objective": null,
+      "measured_contribution": 0.020003330164536197,
+      "answers": [
+        {
+          "member": "discovery-05-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/2/capture/raw/discovery-05-channel-h1/result.json",
+            "sha256": "8b334dad2f1a07bc6044a3c9017bcd7839bc872a5e48212ee76215c1e69592dd"
+          },
+          "available_J": 51,
+          "required_J": 60,
+          "expected_available_J": 91,
+          "expected_required_J": 20,
+          "correct_pair": false,
+          "measured_downhill_cells": 0,
+          "prechoice_measurements": [],
+          "whole_trace_mates": [
+            411
+          ]
+        },
+        {
+          "member": "discovery-13-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/discovery-13-channel-h1/loop/2/capture/raw/discovery-13-channel-h1/result.json",
+            "sha256": "d68da7acbe842bb5299cf8c8267b3b8a353e5555fdcd7f5ee8fb393fae5d571b"
+          },
+          "available_J": -65,
+          "required_J": 40,
+          "expected_available_J": 95,
+          "expected_required_J": 40,
+          "correct_pair": false,
+          "measured_downhill_cells": 0,
+          "prechoice_measurements": [],
+          "whole_trace_mates": [
+            555
+          ]
+        },
+        {
+          "member": "expanded-004-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/expanded-004-h1/loop/2/capture/raw/expanded-004-h1/result.json",
+            "sha256": "6e9f163377e019cd23a07fa1be1c51d421b78bbc0e151536684a8b46c3b41323"
+          },
+          "available_J": 44,
+          "required_J": 20,
+          "expected_available_J": 44,
+          "expected_required_J": 20,
+          "correct_pair": true,
+          "measured_downhill_cells": 331,
+          "prechoice_measurements": [
+            {
+              "source_event": 312,
+              "event": 311,
+              "merge": 61,
+              "signed_error": -0.01274717911818049,
+              "orthogonal_turn_movement": 0.14551834579424883,
+              "objective_residual_norm": 0.01274717911818049,
+              "weighted_loss": 6.770440644624031e-06
+            }
+          ],
+          "whole_trace_mates": [
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "revision": 3,
+      "group_read": {
+        "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/3/group-measurement.json",
+        "sha256": "4c462e9de1785535c9ac56725f5e681b01d67a78a4cf547fcf8e42218fa8e9fa"
+      },
+      "complete_objective": null,
+      "measured_contribution": 0.01740122190370455,
+      "answers": [
+        {
+          "member": "discovery-05-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/loop/3/capture/raw/discovery-05-channel-h1/result.json",
+            "sha256": "37807d1834310669d03e100c5f2c05ea12fb4f5184cff7ce41ef97f3301c134b"
+          },
+          "available_J": 51,
+          "required_J": 60,
+          "expected_available_J": 91,
+          "expected_required_J": 20,
+          "correct_pair": false,
+          "measured_downhill_cells": 0,
+          "prechoice_measurements": [],
+          "whole_trace_mates": [
+            411
+          ]
+        },
+        {
+          "member": "discovery-13-channel-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/discovery-13-channel-h1/loop/3/capture/raw/discovery-13-channel-h1/result.json",
+            "sha256": "2be6548a96fe9b7b65fe601a2d35ddba5d5a2ffb47f4394b8c601311bd0cad28"
+          },
+          "available_J": -65,
+          "required_J": 40,
+          "expected_available_J": 95,
+          "expected_required_J": 40,
+          "correct_pair": false,
+          "measured_downhill_cells": 0,
+          "prechoice_measurements": [],
+          "whole_trace_mates": [
+            568
+          ]
+        },
+        {
+          "member": "expanded-004-h1",
+          "acquisition": {
+            "record": "studies/04-round-2-overlap/runs/joint-stock-prechoice-training/group-members/expanded-004-h1/loop/3/capture/raw/expanded-004-h1/result.json",
+            "sha256": "04d701a5a1225ff8f5436bd8c15e0bd1b286bb46c3f46cba56154919d6833244"
+          },
+          "available_J": 4,
+          "required_J": 20,
+          "expected_available_J": 44,
+          "expected_required_J": 20,
+          "correct_pair": false,
+          "measured_downhill_cells": 0,
+          "prechoice_measurements": [],
+          "whole_trace_mates": [
+            555
+          ]
+        }
+      ]
+    }
+  ],
+  "precursor_audit": {
+    "revision_1_fitted_descent": {
+      "registered_event": 352,
+      "first_downhill_subtraction_prediction": 353
+    },
+    "revision_2_fitted_descent": {
+      "first_downhill_subtraction_prediction": 330,
+      "direct_reference_mate": 411,
+      "previous_confirmed_wrong_trace_mate": 421
+    }
+  },
+  "selection": "No checkpoint contains both fitted repairs with the control preserved. The 33-prompt evaluation remains unopened."
+}

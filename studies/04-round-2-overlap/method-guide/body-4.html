@@ -1,0 +1,159 @@
+
+<h2>8&nbsp;&nbsp;Discussion</h2>
+
+<h3>8.1&nbsp;&nbsp;What we learned</h3>
+
+<p><b>The overlap is enough to aim an edit.</b> The target came from the difference between two groups of the model's
+own answers. No label and no answer text was used. The edit changed the intended calculation in 29 of 30 answers, and
+in answers to questions outside the fit. Where an answer's trace lies along the gap goes with which calculation the
+answer writes.</p>
+
+<p><b>The edit changes one calculation and does not control the rest of the answer.</b> All five models of Section&nbsp;7 repair the calculation, and
+they differ fourfold in complete answers. Part of that difference is noise. C's model and A's differ by at most 3.4% of
+A's change in each matrix, and they disagree on whether 20 of 88 answers are complete. Differences of that size between
+rungs carry little information.</p>
+
+<p><b>Positions that should not change have to be in the fit, and that is not sufficient.</b> Fitting them is what let
+this edit reach the calculation at all (Section&nbsp;8.2). They still moved 0.43 times as far as the rows asked to
+move.</p>
+
+<p><b>Asking each matrix for the whole gap compounds.</b> Each matrix reached about half of its request and moved every
+other row a little, and the next matrix inherited both. Scaling the finished edit down afterwards did not reduce the
+damage (Section&nbsp;7). This suggests that the size of each step has to be limited inside the build, where each matrix
+is fitted on what the earlier ones actually left.</p>
+
+<p><b>Protection fitted on the original computation does not hold.</b> The edited models compute differently from the
+fourth step of an answer on, so rows recorded from the original answers no longer describe what they do. B held rows of
+a computation its model did not perform. C asked one input for two outputs. D reduced the effect on ordinary text and
+introduced a new error in the answers.</p>
+
+<h3>8.2&nbsp;&nbsp;Unsuccessful attempts</h3>
+
+<p>Four constructions preceded the one in Section&nbsp;5. None repaired an answer: in each, the edited model failed
+before it reached the calculation. We describe them because each failure fixed one part of the final construction. They
+do not show that these ideas cannot work in another form.</p>
+
+<p><b>The plain difference of the group averages.</b> The first attempt fitted every input to the difference of the two
+group averages, in all 70 matrices at once. The attention matrices changed by a median of 52% of their norm, and the
+edited model no longer read the question. The shared part (Equation&nbsp;3) comes from this failure.</p>
+
+<p><b>Dividing by the learned scale.</b> The second asked for the shared part of the gap of the turns and converted it
+to a matrix output by dividing by the learned scale. The request came to 64% of the attention output, where the move
+itself was 15% to 17% of the turn, and two thirds of it fell on the tenth of the outputs with the smallest scale. The
+exact operator (Equation&nbsp;6) comes from this failure.</p>
+
+<p><b>Fitting only where a change is wanted.</b> The third and fourth made smaller requests, 3% of each matrix, and
+fitted them only on the places where a change was wanted. Where nothing was asked, the edit still changed the output by
+a quarter to two thirds of what it did where it was asked, and the model abandoned the calculation at about the ninth
+token. The rows asked to stay (Section&nbsp;5.2) come from this failure.</p>
+
+<p><b>All matrices at once.</b> All four attempts sized every matrix on the original model's inputs and applied them
+together. In the one case we measured, the corrections added up to 1.5 times the gap in layers 15 to 19. The path order
+(Section&nbsp;5.6) comes from this failure.</p>
+
+<p><b>The turn as a target.</b> The construction of Section&nbsp;5 was first declared with the turn of each merge as
+its target. Adding those requests up along the path, before anything was built, showed that they would not close the
+gap of the state (Section&nbsp;5.1), and the target was changed.</p>
+
+<div class="box">
+<p><b>Where this leaves the hypothesis.</b> The hypothesis says that closing the gap between the shared traces of
+correct and wrong answers fixes the mistake, and that the fix carries to questions the edit was not built from. This
+run gives evidence for both, for one mistake: the traces moved along the gap, the calculation changed with them, and it
+changed in answers outside the fit. The run also shows what the hypothesis does not promise. The same edit moved the
+correct answers as far as the wrong ones and broke 12 of 30, and nothing we tried kept them in place. Whether an edit
+that closes the gap can leave correct computation alone is the question for the next round.</p>
+</div>
+
+<h2>9&nbsp;&nbsp;What this doesn't show</h2>
+<ul>
+<li>One model, one skill, one kind of mistake and one family of questions. The 60 answers of the overlap are variations
+of one problem.</li>
+<li>Only layers 0 to 8 were edited. What the other 52 matrices would add is unknown.</li>
+<li>The count of complete answers is noisy, as Section&nbsp;8.1 describes. One model's count is one draw.</li>
+<li>The sideways movement of the traces is measured. Its cause, and whether it causes the new errors, is not
+known.</li>
+<li>Part of the gap is the difference in the words the two groups write (Section&nbsp;4.3).</li>
+<li>A pass that reads an answer as given text is not computed exactly as the model computes its own answer. On the
+original model the two differ by 0.0002 to 0.0048 in the state, against moves of 0.04 to 0.13. How that difference
+behaves under an edit was not measured in this run.</li>
+<li>There is no comparison with fine-tuning on the same answers, and no random change of the same size.</li>
+<li>Greedy decoding only, on one GPU. Rounding to BF16 makes every fit approximate.</li>
+<li>A sealed set of 40 questions has not been opened, and two further question sets are not scored yet.</li>
+</ul>
+
+<h2>10&nbsp;&nbsp;What comes next</h2>
+<p>This round is being redone with these results as its starting point. Two problems are open. The build asks each
+matrix for the whole gap and has no limit on its step. And protection that is fitted on the original model's computation does
+not hold once the edited model computes differently. The sealed questions stay closed until an edit meets the goal of the
+ladder.</p>
+
+<p class="small"><b>Acknowledgements.</b> The experiments were built and run with help from AI coding agents, working
+under my direction. Every number here comes from a saved record (a declaration written before each run, build logs,
+full answers and recordings), and I'm happy to share any of it.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>K. Meng, D. Bau, A. Andonian, Y. Belinkov. Locating and Editing Factual Associations in GPT. <i>NeurIPS</i>, 2022. arXiv:2202.05262.</li>
+<li>K. Meng, A. Sen Sharma, A. Andonian, Y. Belinkov, D. Bau. Mass-Editing Memory in a Transformer. <i>ICLR</i>, 2023. arXiv:2210.07229.</li>
+<li>J. Fang, H. Jiang, K. Wang, Y. Ma, J. Shi, X. Wang, X. He, T.-S. Chua. AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models. <i>ICLR</i>, 2025. arXiv:2410.02355.</li>
+<li>A. Zou et al. Representation Engineering: A Top-Down Approach to AI Transparency. arXiv:2310.01405, 2023.</li>
+<li>N. Rimsky (Panickssery), N. Gabrieli, J. Schulz, M. Tong, E. Hubinger, A. M. Turner. Steering Llama 2 via Contrastive Activation Addition. <i>ACL</i>, 2024. arXiv:2312.06681.</li>
+<li>R. Cohen, E. Biran, O. Yoran, A. Globerson, M. Geva. Evaluating the Ripple Effects of Knowledge Editing in Language Models. <i>TACL</i>, 2024.</li>
+<li>J.-C. Gu, H.-X. Xu, J.-Y. Ma, P. Lu, Z.-H. Ling, et al. Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue. <i>EMNLP</i>, 2024.</li>
+<li>Google DeepMind. Gemma 4 model card (E2B). huggingface.co/google/gemma-4-E2B-it, 2026.</li>
+<li>M. Damasceno. Fixing a Reasoning Mistake by Editing the Weights: Four Edits to a Small Language Model and What They Taught Us. Work in progress, Torad Labs, November 2026.</li>
+<li>H. Sakoe, S. Chiba. Dynamic Programming Algorithm Optimization for Spoken Word Recognition. <i>IEEE Transactions on Acoustics, Speech, and Signal Processing</i>, 26(1), 1978.</li>
+<li>A. E. Hoerl, R. W. Kennard. Ridge Regression: Biased Estimation for Nonorthogonal Problems. <i>Technometrics</i>, 12(1), 1970.</li>
+<li>M. R. Hestenes, E. Stiefel. Methods of Conjugate Gradients for Solving Linear Systems. <i>Journal of Research of the National Bureau of Standards</i>, 49(6), 1952.</li>
+<li>J. Kiefer. Sequential Minimax Search for a Maximum. <i>Proceedings of the American Mathematical Society</i>, 4(3), 1953.</li>
+</ol>
+
+<h2>Appendix&nbsp;&nbsp;Run details</h2>
+
+<div class="tablewrap"><table>
+<caption><b>Table A1.</b> Settings of the run reported in Sections 5 and 6.</caption>
+<thead><tr><th>Item</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Model</td><td>Gemma 4 E2B-it, BF16 GGUF, 35 layers, stream width 1,536</td></tr>
+<tr><td>Engine</td><td>llama.cpp with a tensor recorder; the same program for the original and the edited model</td></tr>
+<tr><td>Hardware</td><td>One RTX 5080</td></tr>
+<tr><td>Decoding</td><td>Greedy; 768-token limit</td></tr>
+<tr><td>Overlap</td><td>30 wrong and 30 correct answers; 30,546 generated steps and 10,319 question positions; 480 places; 105 merges per step</td></tr>
+<tr><td>Matrices</td><td>70 declared: attention output (1,536 × 2,048) and feed-forward down (1,536 × 6,144) of each layer. 18 built, layers 0 to 8</td></tr>
+<tr><td>Fitted rows</td><td>21,583 per matrix: 16,423 generated steps and 5,160 question positions of the 30 wrong answers</td></tr>
+<tr><td>Rows read, not fitted</td><td>19,282 per matrix, the 30 correct answers</td></tr>
+<tr><td>Size of the change</td><td>5.3% to 12.2% of each matrix's norm, after rounding to BF16</td></tr>
+<tr><td>Build time</td><td>43 minutes for 18 matrices</td></tr>
+</tbody></table></div>
+
+<div class="tablewrap"><table>
+<caption><b>Table A2.</b> The quantities of the construction and where each comes from.</caption>
+<thead><tr><th>Symbol</th><th>What it is</th><th>Size</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td><i>x</i></td><td>Input of the matrix for one row</td><td>2,048 or 6,144</td><td>Read from the model as it stands</td></tr>
+<tr><td><i>W</i>, Δ<i>W</i></td><td>The matrix and its change</td><td>1,536 × 2,048 or 1,536 × 6,144</td><td>Model file; the solve, rounded to BF16</td></tr>
+<tr><td><i>y</i></td><td>Output of the matrix, <i>Wx</i></td><td>1,536</td><td>Computed</td></tr>
+<tr><td><i>g</i></td><td>Learned scale of each output</td><td>1,536</td><td>Model file</td></tr>
+<tr><td><i>h</i></td><td>Stream before the addition</td><td>1,536</td><td>Read from the model as it stands</td></tr>
+<tr><td><i>m</i>, <i>d</i></td><td>Stream after the addition, and its direction (the state)</td><td>1,536</td><td>Equation 4</td></tr>
+<tr><td><i>d</i><sup>0</sup></td><td>The state in the original model</td><td>1,536 per row</td><td>The same text through the original model</td></tr>
+<tr><td><i>c̄</i>, <i>w̄</i></td><td>Correct and wrong pattern</td><td>480 × 70 × 1,536</td><td>Group averages of the aligned states</td></tr>
+<tr><td><i>G</i>, <i>C</i></td><td>Gap and chance</td><td>One per place and matrix</td><td>Equations 1 and 2</td></tr>
+<tr><td><i>σ</i></td><td>Shared part of the gap, where <i>G</i> &gt; 2<i>C</i></td><td>0 to 1</td><td>Equation 3</td></tr>
+<tr><td><i>t</i></td><td>Target state of a row</td><td>1,536 per row</td><td>Equation 5</td></tr>
+<tr><td><i>A</i></td><td>First-order effect of an output change on the state</td><td>One per row</td><td>Equation 6</td></tr>
+<tr><td><i>λ</i></td><td>Ridge penalty</td><td>One per matrix</td><td>Held-out search, Section 5.5</td></tr>
+<tr><td><i>α</i></td><td>Step size of the solver</td><td>One per iteration</td><td>Equation 8, then checked</td></tr>
+</tbody></table></div>
+
+<p class="small" style="text-align:left"><b>Records.</b> Each run has a folder under
+<code>studies/04-round-2-overlap/runs/</code> with its declaration, logs and result: <code>state-overlap</code> and
+<code>trace-overlap-complete-registered</code> (Section&nbsp;4), <code>a2-path</code> (Sections 5 and 6),
+<code>b2-path</code>, <code>c2-path</code>, <code>c2-protected</code>, <code>d2-path</code> and
+<code>a2-path-steps</code> (Section&nbsp;7), and <code>a2</code>, <code>a2-pattern</code>, <code>a2-sent</code> and
+<code>a2-diverge</code> (Section&nbsp;8.2). The records of <code>c2-path</code>, <code>c2-protected</code> and
+<code>d2-path</code> were not yet committed when this was written. The figures and <code>numbers.json</code> are
+produced from these records by <code>make_figures.py</code> in this folder.</p>
+
+</body>
+</html>

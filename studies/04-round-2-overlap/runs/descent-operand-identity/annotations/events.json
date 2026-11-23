@@ -1,0 +1,1905 @@
+{
+  "scope": "Evaluation only. Rows identify native events that choose the binary arithmetic operator. The pre-choice event is row minus one. Match local arithmetic against positive released gravitational work and positive rough-section heat loss. A valid local subtraction can follow a wrong descent and yield the wrong available energy.",
+  "originals": {
+    "discovery-05-channel-h1": {
+      "member": "discovery-05-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-05-channel-h1/result.json",
+        "sha256": "0c7e74b0f597fee1120b74794ec616180b5baa0cb7bd2e12a08347bbc920eec5"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i - PE_{gain} = 64 \\text{ J} -",
+        "symbolic_row": 313,
+        "numeric_row": 327,
+        "prechoice_row": 312,
+        "correct": false,
+        "lhs_J": 64,
+        "operand_J": 40,
+        "result_J": 24,
+        "alternates": [
+          {
+            "row": 327,
+            "decode_index": 155,
+            "operator": "-",
+            "equation_excerpt": "_{gain} = 64 \\text{ J} - 40 \\text{ J} = 24 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 373,
+        "decode_index": 201,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipation} = 24 \\text{ J}",
+        "symbolic_row": 373,
+        "numeric_row": 389,
+        "prechoice_row": 372,
+        "correct": true,
+        "lhs_J": 24,
+        "operand_J": 13,
+        "result_J": 11,
+        "alternates": [
+          {
+            "row": 389,
+            "decode_index": 217,
+            "operator": "-",
+            "equation_excerpt": "Dissipation} = 24 \\text{ J} - 13 \\text{ J} = 11 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-10-channel-h1": {
+      "member": "discovery-10-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-10-channel-h1/result.json",
+        "sha256": "427efb34b029e86ada88fce1da682d2eb7cb98486e529a910aadcca52e4177c4"
+      },
+      "descent": {
+        "row": 324,
+        "decode_index": 152,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_{top}$) = $KE_i - PE_{gain} = 96 \\text{ J} -",
+        "symbolic_row": 324,
+        "numeric_row": 338,
+        "prechoice_row": 323,
+        "correct": false,
+        "lhs_J": 96,
+        "operand_J": 30,
+        "result_J": 66,
+        "alternates": [
+          {
+            "row": 338,
+            "decode_index": 166,
+            "operator": "-",
+            "equation_excerpt": "_{gain} = 96 \\text{ J} - 30 \\text{ J} = 66 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 380,
+        "decode_index": 208,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$) = $KE_{top} - \\text{Dissipated Energy} = 66 \\text{ J",
+        "symbolic_row": 380,
+        "numeric_row": 397,
+        "prechoice_row": 379,
+        "correct": true,
+        "lhs_J": 66,
+        "operand_J": 11,
+        "result_J": 55,
+        "alternates": [
+          {
+            "row": 397,
+            "decode_index": 225,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 66 \\text{ J} - 11 \\text{ J} = 55 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-17-channel-h1": {
+      "member": "discovery-17-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/discovery-17-channel-h1/result.json",
+        "sha256": "19cb2a976b7d65e07a0af0f8339f9e7ab4636884b23490337627294cc52d884b"
+      },
+      "descent": {
+        "row": 314,
+        "decode_index": 142,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i - PE_{descent} = 128 \\text{ J}",
+        "symbolic_row": 314,
+        "numeric_row": 330,
+        "prechoice_row": 313,
+        "correct": false,
+        "lhs_J": 128,
+        "operand_J": 80,
+        "result_J": 48,
+        "alternates": [
+          {
+            "row": 330,
+            "decode_index": 158,
+            "operator": "-",
+            "equation_excerpt": "cent} = 128 \\text{ J} - 80 \\text{ J} = 48 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 375,
+        "decode_index": 203,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipated Energy} = 48 \\text{ J",
+        "symbolic_row": 375,
+        "numeric_row": 392,
+        "prechoice_row": 374,
+        "correct": true,
+        "lhs_J": 48,
+        "operand_J": 17,
+        "result_J": 31,
+        "alternates": [
+          {
+            "row": 392,
+            "decode_index": 220,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 48 \\text{ J} - 17 \\text{ J} = 31 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-001-h3": {
+      "member": "expanded-001-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/expanded-001-h3/result.json",
+        "sha256": "5c67cb5ba90a617ae3a917c3fca15a98d97f667da9d49100b5968f23554949c6"
+      },
+      "descent": {
+        "row": 364,
+        "decode_index": 192,
+        "operator": "-",
+        "equation_excerpt": "}$):\n$$KE_{1} = KE_i - PE_1 = 16 \\text{ J} - 2",
+        "symbolic_row": 364,
+        "numeric_row": 377,
+        "prechoice_row": 363,
+        "correct": false,
+        "lhs_J": 16,
+        "operand_J": 20,
+        "result_J": -4,
+        "alternates": [
+          {
+            "row": 377,
+            "decode_index": 205,
+            "operator": "-",
+            "equation_excerpt": "PE_1 = 16 \\text{ J} - 20 \\text{ J} = -4 \\text{ J"
+          }
+        ]
+      },
+      "friction": {
+        "row": 756,
+        "decode_index": 584,
+        "operator": "-",
+        "equation_excerpt": "_{after\\_rough} = E_{before\\_rough} - \\text{Dissipation} = -4 \\text{ J} -",
+        "symbolic_row": 756,
+        "numeric_row": 771,
+        "prechoice_row": 755,
+        "correct": true,
+        "lhs_J": -4,
+        "operand_J": 16,
+        "result_J": -20,
+        "alternates": [
+          {
+            "row": 771,
+            "decode_index": 599,
+            "operator": "-",
+            "equation_excerpt": "{Dissipation} = -4 \\text{ J} - 16 \\text{ J} = -20 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [
+        {
+          "row": 555,
+          "decode_index": 383,
+          "operator": "+",
+          "equation_excerpt": "}$):\n$$E_{bottom} = KE_i + PE_{initial} = 16 \\text{ J} +",
+          "interpretation": "adds initial potential of zero"
+        },
+        {
+          "row": 569,
+          "decode_index": 397,
+          "operator": "+",
+          "equation_excerpt": "_{initial} = 16 \\text{ J} + 0 \\text{ J} = 16 \\text{ J",
+          "interpretation": "numerically adds zero"
+        },
+        {
+          "row": 613,
+          "decode_index": 441,
+          "operator": "-",
+          "equation_excerpt": "$$E_{before\\_rough} = E_{bottom} - m g h_1 = 16 \\text{ J} -",
+          "interpretation": "repeats wrong symbolic downhill application"
+        },
+        {
+          "row": 628,
+          "decode_index": 456,
+          "operator": "-",
+          "equation_excerpt": "h_1 = 16 \\text{ J} - 20 \\text{ J} = -4 \\text{ J",
+          "interpretation": "repeats wrong numeric downhill application"
+        }
+      ],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-020-h1": {
+      "member": "expanded-020-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-05-channel-h1/expanded-020-h1/result.json",
+        "sha256": "a9b0c94b3837a31ffe120f04add2579f2f464c7425061665a33bb11f1310ba1d"
+      },
+      "descent": {
+        "row": 326,
+        "decode_index": 154,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_1$): $KE_i - PE_1 = 64 \\text{ J} - 4",
+        "symbolic_row": 326,
+        "numeric_row": 339,
+        "prechoice_row": 325,
+        "correct": false,
+        "lhs_J": 64,
+        "operand_J": 40,
+        "result_J": 24,
+        "alternates": [
+          {
+            "row": 339,
+            "decode_index": 167,
+            "operator": "-",
+            "equation_excerpt": "PE_1 = 64 \\text{ J} - 40 \\text{ J} = 24 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 398,
+        "decode_index": 226,
+        "operator": "-",
+        "equation_excerpt": "after loss ($KE_2$): $KE_1 - E_{loss} = 24 \\text{ J} -",
+        "symbolic_row": 398,
+        "numeric_row": 412,
+        "prechoice_row": 397,
+        "correct": true,
+        "lhs_J": 24,
+        "operand_J": 12,
+        "result_J": 12,
+        "alternates": [
+          {
+            "row": 412,
+            "decode_index": 240,
+            "operator": "-",
+            "equation_excerpt": "_{loss} = 24 \\text{ J} - 12 \\text{ J} = 12 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-034-h3": {
+      "member": "expanded-034-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-034-h3/result.json",
+        "sha256": "8baf451d7e0c43d1577cbb16135ea7c0cd3b4b456805e7ed5afd1e460241ae0f"
+      },
+      "descent": {
+        "row": 379,
+        "decode_index": 207,
+        "operator": "-",
+        "equation_excerpt": "B$):\n$$KE_B = KE_A - PE_B = 54 \\text{ J} - 3",
+        "symbolic_row": 379,
+        "numeric_row": 392,
+        "prechoice_row": 378,
+        "correct": false,
+        "lhs_J": 54,
+        "operand_J": 30,
+        "result_J": 24,
+        "alternates": [
+          {
+            "row": 392,
+            "decode_index": 220,
+            "operator": "-",
+            "equation_excerpt": "PE_B = 54 \\text{ J} - 30 \\text{ J} = 24 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 460,
+        "decode_index": 288,
+        "operator": "-",
+        "equation_excerpt": "C$):\n$$KE_C = KE_B - W_{diss} = 24 \\text{ J} -",
+        "symbolic_row": 460,
+        "numeric_row": 474,
+        "prechoice_row": 459,
+        "correct": true,
+        "lhs_J": 24,
+        "operand_J": 20,
+        "result_J": 4,
+        "alternates": [
+          {
+            "row": 474,
+            "decode_index": 302,
+            "operator": "-",
+            "equation_excerpt": "_{diss} = 24 \\text{ J} - 20 \\text{ J} = 4 \\text{ J"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-042-h3": {
+      "member": "expanded-042-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-042-h3/result.json",
+        "sha256": "933e1f55af37c4d94de49b15dd1c6b710d578472b775aabda8053088919fef3f"
+      },
+      "descent": {
+        "row": 379,
+        "decode_index": 207,
+        "operator": "-",
+        "equation_excerpt": "B$):\n$$KE_B = KE_A - PE_B = 96 \\text{ J} - 3",
+        "symbolic_row": 379,
+        "numeric_row": 392,
+        "prechoice_row": 378,
+        "correct": false,
+        "lhs_J": 96,
+        "operand_J": 30,
+        "result_J": 66,
+        "alternates": [
+          {
+            "row": 392,
+            "decode_index": 220,
+            "operator": "-",
+            "equation_excerpt": "PE_B = 96 \\text{ J} - 30 \\text{ J} = 66 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 460,
+        "decode_index": 288,
+        "operator": "-",
+        "equation_excerpt": "C$):\n$$KE_C = KE_B - W_{diss} = 66 \\text{ J} -",
+        "symbolic_row": 460,
+        "numeric_row": 474,
+        "prechoice_row": 459,
+        "correct": true,
+        "lhs_J": 66,
+        "operand_J": 20,
+        "result_J": 46,
+        "alternates": [
+          {
+            "row": 474,
+            "decode_index": 302,
+            "operator": "-",
+            "equation_excerpt": "_{diss} = 66 \\text{ J} - 20 \\text{ J} = 46 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-045-h1": {
+      "member": "expanded-045-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-045-h1/result.json",
+        "sha256": "f489902d7fa9f5dde678896cb3e0937eaf8ae3b716ffbb6640b30fec6249c04d"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i - PE_{descent} = 96 \\text{ J} -",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": false,
+        "lhs_J": 96,
+        "operand_J": 60,
+        "result_J": 36,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "-",
+            "equation_excerpt": "descent} = 96 \\text{ J} - 60 \\text{ J} = 36 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 373,
+        "decode_index": 201,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipated Energy} = 36 \\text{ J",
+        "symbolic_row": 373,
+        "numeric_row": 390,
+        "prechoice_row": 372,
+        "correct": true,
+        "lhs_J": 36,
+        "operand_J": 16,
+        "result_J": 20,
+        "alternates": [
+          {
+            "row": 390,
+            "decode_index": 218,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 36 \\text{ J} - 16 \\text{ J} = 20 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-046-h3": {
+      "member": "expanded-046-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-046-h3/result.json",
+        "sha256": "6ae0386c39fec35796e3cce63363140091d36a517600e86a70cc3acfb9dc6207"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i - PE_{descent} = 96 \\text{ J} -",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": false,
+        "lhs_J": 96,
+        "operand_J": 60,
+        "result_J": 36,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "-",
+            "equation_excerpt": "descent} = 96 \\text{ J} - 60 \\text{ J} = 36 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 373,
+        "decode_index": 201,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipation} = 36 \\text{ J}",
+        "symbolic_row": 373,
+        "numeric_row": 389,
+        "prechoice_row": 372,
+        "correct": true,
+        "lhs_J": 36,
+        "operand_J": 20,
+        "result_J": 16,
+        "alternates": [
+          {
+            "row": 389,
+            "decode_index": 217,
+            "operator": "-",
+            "equation_excerpt": "Dissipation} = 36 \\text{ J} - 20 \\text{ J} = 16 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-068-h1": {
+      "member": "expanded-068-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-034-h3/expanded-068-h1/result.json",
+        "sha256": "9cdae7c6f38b57135c2c419b8b8323f8cd8f334371d620458b77d7ac967fb583"
+      },
+      "descent": {
+        "row": 314,
+        "decode_index": 142,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i - PE_{descent} = 128 \\text{ J}",
+        "symbolic_row": 314,
+        "numeric_row": 330,
+        "prechoice_row": 313,
+        "correct": false,
+        "lhs_J": 128,
+        "operand_J": 80,
+        "result_J": 48,
+        "alternates": [
+          {
+            "row": 330,
+            "decode_index": 158,
+            "operator": "-",
+            "equation_excerpt": "cent} = 128 \\text{ J} - 80 \\text{ J} = 48 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 375,
+        "decode_index": 203,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipated Energy} = 48 \\text{ J",
+        "symbolic_row": 375,
+        "numeric_row": 392,
+        "prechoice_row": 374,
+        "correct": true,
+        "lhs_J": 48,
+        "operand_J": 12,
+        "result_J": 36,
+        "alternates": [
+          {
+            "row": 392,
+            "decode_index": 220,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 48 \\text{ J} - 12 \\text{ J} = 36 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-070-h1": {
+      "member": "expanded-070-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-070-h1/result.json",
+        "sha256": "cee7d64a74e9875795b7f2054b10fc58cc6f99b2fc6797f921ed88ebb1d3abfc"
+      },
+      "descent": {
+        "row": 314,
+        "decode_index": 142,
+        "operator": "-",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i - PE_{descent} = 128 \\text{ J}",
+        "symbolic_row": 314,
+        "numeric_row": 330,
+        "prechoice_row": 313,
+        "correct": false,
+        "lhs_J": 128,
+        "operand_J": 80,
+        "result_J": 48,
+        "alternates": [
+          {
+            "row": 330,
+            "decode_index": 158,
+            "operator": "-",
+            "equation_excerpt": "cent} = 128 \\text{ J} - 80 \\text{ J} = 48 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 375,
+        "decode_index": 203,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipation} = 48 \\text{ J}",
+        "symbolic_row": 375,
+        "numeric_row": 391,
+        "prechoice_row": 374,
+        "correct": true,
+        "lhs_J": 48,
+        "operand_J": 20,
+        "result_J": 28,
+        "alternates": [
+          {
+            "row": 391,
+            "decode_index": 219,
+            "operator": "-",
+            "equation_excerpt": "Dissipation} = 48 \\text{ J} - 20 \\text{ J} = 28 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-087-h3": {
+      "member": "expanded-087-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-087-h3/result.json",
+        "sha256": "f6dfef9d9141574f5ef806d6916d0d349ddf26ebe171308c4599da0e6467c4d9"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "-",
+        "equation_excerpt": "Point A ($KE_A$): $KE_i - PE_{gain} = 90 \\text{ J} -",
+        "symbolic_row": 313,
+        "numeric_row": 327,
+        "prechoice_row": 312,
+        "correct": false,
+        "lhs_J": 90,
+        "operand_J": 100,
+        "result_J": -10,
+        "alternates": [
+          {
+            "row": 327,
+            "decode_index": 155,
+            "operator": "-",
+            "equation_excerpt": "_{gain} = 90 \\text{ J} - 100 \\text{ J} = -10 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 720,
+        "decode_index": 548,
+        "operator": "-",
+        "equation_excerpt": "E_B = -10 \\text{ J} - 24 \\text{ J} = -34 \\text{",
+        "symbolic_row": null,
+        "numeric_row": 720,
+        "prechoice_row": 719,
+        "correct": true,
+        "lhs_J": -10,
+        "operand_J": 24,
+        "result_J": -34,
+        "alternates": []
+      },
+      "other_reviewed_events": [
+        {
+          "row": 548,
+          "decode_index": 376,
+          "operator": "-",
+          "equation_excerpt": "of descent ($E_B$): $KE_i - PE_{descent} = 90 \\text{ J} -",
+          "interpretation": "repeats wrong symbolic downhill application"
+        },
+        {
+          "row": 563,
+          "decode_index": 391,
+          "operator": "-",
+          "equation_excerpt": "descent} = 90 \\text{ J} - 100 \\text{ J} = -10 \\text",
+          "interpretation": "repeats wrong numeric downhill application"
+        },
+        {
+          "row": 662,
+          "decode_index": 490,
+          "operator": "-",
+          "equation_excerpt": ": $E_{before\\_friction} = KE_i - PE_{descent} = 90 \\text{ J} -",
+          "interpretation": "repeats wrong symbolic downhill application"
+        },
+        {
+          "row": 677,
+          "decode_index": 505,
+          "operator": "-",
+          "equation_excerpt": "descent} = 90 \\text{ J} - 100 \\text{ J} = -10 \\text",
+          "interpretation": "repeats wrong numeric downhill application"
+        }
+      ],
+      "interpretation": "Rough friction appears only as numeric binary subtraction after a negative downhill state."
+    },
+    "expanded-092-h1": {
+      "member": "expanded-092-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-092-h1/result.json",
+        "sha256": "c2077a914d1e67dea40e3743870d5422ada75ac66db12e86f9382c0a6ea3ef06"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "-",
+        "equation_excerpt": "after descent ($KE_1$): $KE_i - PE_{gain} = 160 \\text{ J} -",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": false,
+        "lhs_J": 160,
+        "operand_J": 100,
+        "result_J": 60,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "-",
+            "equation_excerpt": "gain} = 160 \\text{ J} - 100 \\text{ J} = 60 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 372,
+        "decode_index": 200,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $KE_1 - \\text{Dissipation} = 60 \\text{ J}",
+        "symbolic_row": 372,
+        "numeric_row": 388,
+        "prechoice_row": 371,
+        "correct": true,
+        "lhs_J": 60,
+        "operand_J": 12,
+        "result_J": 48,
+        "alternates": [
+          {
+            "row": 388,
+            "decode_index": 216,
+            "operator": "-",
+            "equation_excerpt": "Dissipation} = 60 \\text{ J} - 12 \\text{ J} = 48 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-094-h1": {
+      "member": "expanded-094-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-094-h1/result.json",
+        "sha256": "0abad65231ef90a946629e8cbab807abf6130049cf23e12234af2fe2ef3c1b39"
+      },
+      "descent": {
+        "row": 314,
+        "decode_index": 142,
+        "operator": "-",
+        "equation_excerpt": "Point A ($KE_A$): $KE_i - PE_{gain} = 160 \\text{ J} -",
+        "symbolic_row": 314,
+        "numeric_row": 329,
+        "prechoice_row": 313,
+        "correct": false,
+        "lhs_J": 160,
+        "operand_J": 100,
+        "result_J": 60,
+        "alternates": [
+          {
+            "row": 329,
+            "decode_index": 157,
+            "operator": "-",
+            "equation_excerpt": "gain} = 160 \\text{ J} - 100 \\text{ J} = 60 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 395,
+        "decode_index": 223,
+        "operator": "-",
+        "equation_excerpt": "Point B ($KE_B$): $KE_A - W_{dissipated} = 60 \\text{ J} -",
+        "symbolic_row": 395,
+        "numeric_row": 410,
+        "prechoice_row": 394,
+        "correct": true,
+        "lhs_J": 60,
+        "operand_J": 20,
+        "result_J": 40,
+        "alternates": [
+          {
+            "row": 410,
+            "decode_index": 238,
+            "operator": "-",
+            "equation_excerpt": "dissipated} = 60 \\text{ J} - 20 \\text{ J} = 40 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-095-h1": {
+      "member": "expanded-095-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-070-h1/expanded-095-h1/result.json",
+        "sha256": "723010566bf10de9461295f3cbac260c0217d2fe4f415240d86535250892a9dc"
+      },
+      "descent": {
+        "row": 314,
+        "decode_index": 142,
+        "operator": "-",
+        "equation_excerpt": "Point A ($KE_A$): $KE_i - PE_{gain} = 160 \\text{ J} -",
+        "symbolic_row": 314,
+        "numeric_row": 329,
+        "prechoice_row": 313,
+        "correct": false,
+        "lhs_J": 160,
+        "operand_J": 100,
+        "result_J": 60,
+        "alternates": [
+          {
+            "row": 329,
+            "decode_index": 157,
+            "operator": "-",
+            "equation_excerpt": "gain} = 160 \\text{ J} - 100 \\text{ J} = 60 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 395,
+        "decode_index": 223,
+        "operator": "-",
+        "equation_excerpt": "Point B ($KE_B$): $KE_A - W_{dissipated} = 60 \\text{ J} -",
+        "symbolic_row": 395,
+        "numeric_row": 410,
+        "prechoice_row": 394,
+        "correct": true,
+        "lhs_J": 60,
+        "operand_J": 24,
+        "result_J": 36,
+        "alternates": [
+          {
+            "row": 410,
+            "decode_index": 238,
+            "operator": "-",
+            "equation_excerpt": "dissipated} = 60 \\text{ J} - 24 \\text{ J} = 36 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-01-channel-h1": {
+      "member": "discovery-01-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-01-channel-h1/result.json",
+        "sha256": "caa44c6e2774458f66de99ec6cfead4d216438ac1d3138944e61b9770c05a475"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$): $KE_i + PE_{descent} = 16 \\text{ J} +",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": true,
+        "lhs_J": 16,
+        "operand_J": 40,
+        "result_J": 56,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "+",
+            "equation_excerpt": "descent} = 16 \\text{ J} + 40 \\text{ J} = 56 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 367,
+        "decode_index": 195,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $E_1 - \\text{Dissipated Energy} = 56 \\text{ J",
+        "symbolic_row": 367,
+        "numeric_row": 384,
+        "prechoice_row": 366,
+        "correct": true,
+        "lhs_J": 56,
+        "operand_J": 13,
+        "result_J": 43,
+        "alternates": [
+          {
+            "row": 384,
+            "decode_index": 212,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 56 \\text{ J} - 13 \\text{ J} = 43 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-06-channel-h1": {
+      "member": "discovery-06-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-06-channel-h1/result.json",
+        "sha256": "7ee24af4055465bd7f4d903390d7e2bcb96f748b74ce1e9431edbe86a09798fe"
+      },
+      "descent": {
+        "row": 323,
+        "decode_index": 151,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$) = $KE_i + PE_{descent} = 24 \\text{ J} +",
+        "symbolic_row": 323,
+        "numeric_row": 338,
+        "prechoice_row": 322,
+        "correct": true,
+        "lhs_J": 24,
+        "operand_J": 30,
+        "result_J": 54,
+        "alternates": [
+          {
+            "row": 338,
+            "decode_index": 166,
+            "operator": "+",
+            "equation_excerpt": "descent} = 24 \\text{ J} + 30 \\text{ J} = 54 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 377,
+        "decode_index": 205,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$) = $E_1 - \\text{Dissipated Energy} = 54 \\text{ J",
+        "symbolic_row": 377,
+        "numeric_row": 394,
+        "prechoice_row": 376,
+        "correct": true,
+        "lhs_J": 54,
+        "operand_J": 11,
+        "result_J": 43,
+        "alternates": [
+          {
+            "row": 394,
+            "decode_index": 222,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 54 \\text{ J} - 11 \\text{ J} = 43 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-15-channel-h1": {
+      "member": "discovery-15-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-15-channel-h1/result.json",
+        "sha256": "51a2e4742cb15c893ab04e97603f6236b3afeb6e31b47a983db61163e324325d"
+      },
+      "descent": {
+        "row": 366,
+        "decode_index": 194,
+        "operator": "+",
+        "equation_excerpt": "$E_{before\\_rough} = KE_{bottom} + PE_{descent} = 72 \\text{ J} +",
+        "symbolic_row": 366,
+        "numeric_row": 381,
+        "prechoice_row": 365,
+        "correct": true,
+        "lhs_J": 72,
+        "operand_J": 80,
+        "result_J": 152,
+        "alternates": [
+          {
+            "row": 381,
+            "decode_index": 209,
+            "operator": "+",
+            "equation_excerpt": "descent} = 72 \\text{ J} + 80 \\text{ J} = 152 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 425,
+        "decode_index": 253,
+        "operator": "-",
+        "equation_excerpt": "after\\_rough}$): $E_{before\\_rough} - \\text{Dissipated Energy} = 152 \\text{",
+        "symbolic_row": 425,
+        "numeric_row": 443,
+        "prechoice_row": 424,
+        "correct": true,
+        "lhs_J": 152,
+        "operand_J": 17,
+        "result_J": 135,
+        "alternates": [
+          {
+            "row": 443,
+            "decode_index": 271,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 152 \\text{ J} - 17 \\text{ J} = 135 \\text"
+          }
+        ]
+      },
+      "other_reviewed_events": [
+        {
+          "row": 313,
+          "decode_index": 141,
+          "operator": "+",
+          "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i + \\text{Energy lost during descent (negligible as track is smooth",
+          "interpretation": "adds negligible loss on smooth descent before later adding gravitational work"
+        }
+      ],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-00-channel-h3": {
+      "member": "discovery-00-channel-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/discovery-00-channel-h3/result.json",
+        "sha256": "78d2aff8a56d9e305ed4b8fcb062f9ed80857a27d6532ec88a71667bba0385d5"
+      },
+      "descent": {
+        "row": 422,
+        "decode_index": 251,
+        "operator": "+",
+        "equation_excerpt": "_B = KE_{B, \\text{before}} + PE_B = 16 \\text{ J} + 2",
+        "symbolic_row": 422,
+        "numeric_row": 435,
+        "prechoice_row": 421,
+        "correct": true,
+        "lhs_J": 16,
+        "operand_J": 20,
+        "result_J": 36,
+        "alternates": [
+          {
+            "row": 435,
+            "decode_index": 264,
+            "operator": "+",
+            "equation_excerpt": "PE_B = 16 \\text{ J} + 20 \\text{ J} = 36 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 500,
+        "decode_index": 329,
+        "operator": "-",
+        "equation_excerpt": "at Point C: $E_C = E_B - W_{\\text{dissipated}} = 36 \\text{ J",
+        "symbolic_row": 500,
+        "numeric_row": 517,
+        "prechoice_row": 499,
+        "correct": true,
+        "lhs_J": 36,
+        "operand_J": 9,
+        "result_J": 27,
+        "alternates": [
+          {
+            "row": 517,
+            "decode_index": 346,
+            "operator": "-",
+            "equation_excerpt": "dissipated}} = 36 \\text{ J} - 9 \\text{ J} = 27 \\text{ J"
+          }
+        ]
+      },
+      "other_reviewed_events": [
+        {
+          "row": 358,
+          "decode_index": 187,
+          "operator": "+",
+          "equation_excerpt": "_{B, \\text{before}} = KE_A + (\\text{Energy lost during descent, which is 0 since the track",
+          "interpretation": "adds negligible loss on smooth descent before later adding gravitational work"
+        }
+      ],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-004-h1": {
+      "member": "expanded-004-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-01-channel-h1/expanded-004-h1/result.json",
+        "sha256": "06ff00c03e17db0d36692eed6142d0aa9349a4912a49d546c158080622ab1c8b"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$): $KE_i + PE_{descent} = 16 \\text{ J} +",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": true,
+        "lhs_J": 16,
+        "operand_J": 40,
+        "result_J": 56,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "+",
+            "equation_excerpt": "descent} = 16 \\text{ J} + 40 \\text{ J} = 56 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 367,
+        "decode_index": 195,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $E_1 - \\text{Dissipated Energy} = 56 \\text{ J",
+        "symbolic_row": 367,
+        "numeric_row": 384,
+        "prechoice_row": 366,
+        "correct": true,
+        "lhs_J": 56,
+        "operand_J": 12,
+        "result_J": 44,
+        "alternates": [
+          {
+            "row": 384,
+            "decode_index": 212,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 56 \\text{ J} - 12 \\text{ J} = 44 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-08-channel-h3": {
+      "member": "discovery-08-channel-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/discovery-08-channel-h3/result.json",
+        "sha256": "060ea1fa45ba3fdec00b259ecf7c814c9484d617b5959d7c1e14198f815f8c0b"
+      },
+      "descent": {
+        "row": 326,
+        "decode_index": 154,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$) = $KE_i + PE_1 = 54 \\text{ J} + 3",
+        "symbolic_row": 326,
+        "numeric_row": 339,
+        "prechoice_row": 325,
+        "correct": true,
+        "lhs_J": 54,
+        "operand_J": 30,
+        "result_J": 84,
+        "alternates": [
+          {
+            "row": 339,
+            "decode_index": 167,
+            "operator": "+",
+            "equation_excerpt": "PE_1 = 54 \\text{ J} + 30 \\text{ J} = 84 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 385,
+        "decode_index": 213,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$) = $E_1 - \\text{Dissipated Energy} = 84 \\text{ J",
+        "symbolic_row": 385,
+        "numeric_row": 402,
+        "prechoice_row": 384,
+        "correct": true,
+        "lhs_J": 84,
+        "operand_J": 11,
+        "result_J": 73,
+        "alternates": [
+          {
+            "row": 402,
+            "decode_index": 230,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 84 \\text{ J} - 11 \\text{ J} = 73 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-10-channel-h3": {
+      "member": "discovery-10-channel-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/discovery-10-channel-h3/result.json",
+        "sha256": "c3929e4b07b2e18d2f608336ca1f3acbfa90c8ae9f5e4829487510e27d981db6"
+      },
+      "descent": {
+        "row": 326,
+        "decode_index": 154,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$) = $KE_i + PE_1 = 96 \\text{ J} + 3",
+        "symbolic_row": 326,
+        "numeric_row": 339,
+        "prechoice_row": 325,
+        "correct": true,
+        "lhs_J": 96,
+        "operand_J": 30,
+        "result_J": 126,
+        "alternates": [
+          {
+            "row": 339,
+            "decode_index": 167,
+            "operator": "+",
+            "equation_excerpt": "PE_1 = 96 \\text{ J} + 30 \\text{ J} = 126 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 386,
+        "decode_index": 214,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$) = $E_1 - \\text{Dissipated Energy} = 126 \\text{",
+        "symbolic_row": 386,
+        "numeric_row": 404,
+        "prechoice_row": 385,
+        "correct": true,
+        "lhs_J": 126,
+        "operand_J": 11,
+        "result_J": 115,
+        "alternates": [
+          {
+            "row": 404,
+            "decode_index": 232,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 126 \\text{ J} - 11 \\text{ J} = 115 \\text"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-029-h1": {
+      "member": "expanded-029-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/expanded-029-h1/result.json",
+        "sha256": "f7d63ebb0a3b60d01737b62af1b57681db4b2c8cd39ccfc17eb942ded4032790"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "+",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i + \\text{Work done by gravity} = 24 \\text{",
+        "symbolic_row": 313,
+        "numeric_row": 331,
+        "prechoice_row": 312,
+        "correct": true,
+        "lhs_J": 24,
+        "operand_J": 60,
+        "result_J": 84,
+        "alternates": [
+          {
+            "row": 331,
+            "decode_index": 159,
+            "operator": "+",
+            "equation_excerpt": "by gravity} = 24 \\text{ J} + 60 \\text{ J} = 84 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 376,
+        "decode_index": 204,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipated Energy} = 84 \\text{ J",
+        "symbolic_row": 376,
+        "numeric_row": 393,
+        "prechoice_row": 375,
+        "correct": true,
+        "lhs_J": 84,
+        "operand_J": 16,
+        "result_J": 68,
+        "alternates": [
+          {
+            "row": 393,
+            "decode_index": 221,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 84 \\text{ J} - 16 \\text{ J} = 68 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "discovery-11-channel-h3": {
+      "member": "discovery-11-channel-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/discovery-11-channel-h3/result.json",
+        "sha256": "2e4fc8e360f9fa81e25af6e0744bc0b815a18a005ce36584e789391be1cec740"
+      },
+      "descent": {
+        "row": 325,
+        "decode_index": 153,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$): $KE_i + PE_{gain} = 96 \\text{ J} +",
+        "symbolic_row": 325,
+        "numeric_row": 339,
+        "prechoice_row": 324,
+        "correct": true,
+        "lhs_J": 96,
+        "operand_J": 60,
+        "result_J": 156,
+        "alternates": [
+          {
+            "row": 339,
+            "decode_index": 167,
+            "operator": "+",
+            "equation_excerpt": "_{gain} = 96 \\text{ J} + 60 \\text{ J} = 156 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 379,
+        "decode_index": 207,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $E_1 - \\text{Dissipated Energy} = 156 \\text{",
+        "symbolic_row": 379,
+        "numeric_row": 397,
+        "prechoice_row": 378,
+        "correct": true,
+        "lhs_J": 156,
+        "operand_J": 15,
+        "result_J": 141,
+        "alternates": [
+          {
+            "row": 397,
+            "decode_index": 225,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 156 \\text{ J} - 15 \\text{ J} = 141 \\text"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-064-h1": {
+      "member": "expanded-064-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-discovery-08-channel-h3/expanded-064-h1/result.json",
+        "sha256": "5fe37200030dfcab04267e494016b55f8fc156bc6f1d3edc3146dd683525f8a6"
+      },
+      "descent": {
+        "row": 324,
+        "decode_index": 152,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$) = $KE_i + PE_{descent} = 128 \\text{ J}",
+        "symbolic_row": 324,
+        "numeric_row": 340,
+        "prechoice_row": 323,
+        "correct": true,
+        "lhs_J": 128,
+        "operand_J": 40,
+        "result_J": 168,
+        "alternates": [
+          {
+            "row": 340,
+            "decode_index": 168,
+            "operator": "+",
+            "equation_excerpt": "cent} = 128 \\text{ J} + 40 \\text{ J} = 168 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 380,
+        "decode_index": 208,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$) = $E_1 - \\text{Dissipated Energy} = 168 \\text{",
+        "symbolic_row": 380,
+        "numeric_row": 398,
+        "prechoice_row": 379,
+        "correct": true,
+        "lhs_J": 168,
+        "operand_J": 12,
+        "result_J": 156,
+        "alternates": [
+          {
+            "row": 398,
+            "decode_index": 226,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 168 \\text{ J} - 12 \\text{ J} = 156 \\text"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-071-h1": {
+      "member": "expanded-071-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-071-h1/result.json",
+        "sha256": "67ee488e317d91fc4d0996bb6a620cdc7992bd48ab8915870e4181262c8496f4"
+      },
+      "descent": {
+        "row": 287,
+        "decode_index": 115,
+        "operator": "+",
+        "equation_excerpt": "of descent ($KE_1$): $KE_i + mgh_1 = 128 \\text{ J} +",
+        "symbolic_row": 287,
+        "numeric_row": 337,
+        "prechoice_row": 286,
+        "correct": true,
+        "lhs_J": 128,
+        "operand_J": 80,
+        "result_J": 208,
+        "alternates": [
+          {
+            "row": 337,
+            "decode_index": 165,
+            "operator": "+",
+            "equation_excerpt": "m}) = 128 \\text{ J} + 80 \\text{ J} = 208 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 381,
+        "decode_index": 209,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $KE_1 - \\text{Dissipated Energy} = 208 \\text{",
+        "symbolic_row": 381,
+        "numeric_row": 399,
+        "prechoice_row": 380,
+        "correct": true,
+        "lhs_J": 208,
+        "operand_J": 24,
+        "result_J": 184,
+        "alternates": [
+          {
+            "row": 399,
+            "decode_index": 227,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 208 \\text{ J} - 24 \\text{ J} = 184 \\text"
+          }
+        ]
+      },
+      "other_reviewed_events": [
+        {
+          "row": 302,
+          "decode_index": 130,
+          "operator": "+",
+          "equation_excerpt": "_1 = 128 \\text{ J} + (4 \\text{ kg})(10 \\text{ m/s",
+          "interpretation": "expands gravitational work as a product"
+        }
+      ],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-039-h3": {
+      "member": "expanded-039-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-039-h3/result.json",
+        "sha256": "7582816d1288ef58de077e350848991120dd4af212ec388cd9182b2aa72ba1ca"
+      },
+      "descent": {
+        "row": 286,
+        "decode_index": 114,
+        "operator": "+",
+        "equation_excerpt": "of descent ($KE_1$): $KE_i + mgh_1 = 54 \\text{ J} + (",
+        "symbolic_row": 286,
+        "numeric_row": 334,
+        "prechoice_row": 285,
+        "correct": true,
+        "lhs_J": 54,
+        "operand_J": 60,
+        "result_J": 114,
+        "alternates": [
+          {
+            "row": 334,
+            "decode_index": 162,
+            "operator": "+",
+            "equation_excerpt": "{ m}) = 54 \\text{ J} + 60 \\text{ J} = 114 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 378,
+        "decode_index": 206,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $KE_1 - \\text{Dissipated Energy} = 114 \\text{",
+        "symbolic_row": 378,
+        "numeric_row": 396,
+        "prechoice_row": 377,
+        "correct": true,
+        "lhs_J": 114,
+        "operand_J": 24,
+        "result_J": 90,
+        "alternates": [
+          {
+            "row": 396,
+            "decode_index": 224,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 114 \\text{ J} - 24 \\text{ J} = 90 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [
+        {
+          "row": 300,
+          "decode_index": 128,
+          "operator": "+",
+          "equation_excerpt": "gh_1 = 54 \\text{ J} + (3 \\text{ kg})(10 \\text{ m/s",
+          "interpretation": "expands gravitational work as a product"
+        }
+      ],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-076-h1": {
+      "member": "expanded-076-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-076-h1/result.json",
+        "sha256": "cc1b912a5baab2b494e019c4e634079440c803acff1ff8edeff9c463768f4dad"
+      },
+      "descent": {
+        "row": 314,
+        "decode_index": 142,
+        "operator": "+",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i + \\text{Work done by gravity} = 40 \\text{",
+        "symbolic_row": 314,
+        "numeric_row": 332,
+        "prechoice_row": 313,
+        "correct": true,
+        "lhs_J": 40,
+        "operand_J": 100,
+        "result_J": 140,
+        "alternates": [
+          {
+            "row": 332,
+            "decode_index": 160,
+            "operator": "+",
+            "equation_excerpt": "by gravity} = 40 \\text{ J} + 100 \\text{ J} = 140 \\"
+          }
+        ]
+      },
+      "friction": {
+        "row": 379,
+        "decode_index": 207,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipated Energy} = 140 \\text{",
+        "symbolic_row": 379,
+        "numeric_row": 397,
+        "prechoice_row": 378,
+        "correct": true,
+        "lhs_J": 140,
+        "operand_J": 12,
+        "result_J": 128,
+        "alternates": [
+          {
+            "row": 397,
+            "decode_index": 225,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 140 \\text{ J} - 12 \\text{ J} = 128 \\text"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-078-h1": {
+      "member": "expanded-078-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-078-h1/result.json",
+        "sha256": "5dbe045699382b4f8fc03278695f4c5cc3550d3897e6bf97a2c2745ed1fa4708"
+      },
+      "descent": {
+        "row": 314,
+        "decode_index": 142,
+        "operator": "+",
+        "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i + \\text{Work done by gravity} = 40 \\text{",
+        "symbolic_row": 314,
+        "numeric_row": 332,
+        "prechoice_row": 313,
+        "correct": true,
+        "lhs_J": 40,
+        "operand_J": 100,
+        "result_J": 140,
+        "alternates": [
+          {
+            "row": 332,
+            "decode_index": 160,
+            "operator": "+",
+            "equation_excerpt": "by gravity} = 40 \\text{ J} + 100 \\text{ J} = 140 \\"
+          }
+        ]
+      },
+      "friction": {
+        "row": 379,
+        "decode_index": 207,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipated Energy} = 140 \\text{",
+        "symbolic_row": 379,
+        "numeric_row": 397,
+        "prechoice_row": 378,
+        "correct": true,
+        "lhs_J": 140,
+        "operand_J": 20,
+        "result_J": 120,
+        "alternates": [
+          {
+            "row": 397,
+            "decode_index": 225,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 140 \\text{ J} - 20 \\text{ J} = 120 \\text"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "expanded-023-h1": {
+      "member": "expanded-023-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/wide-overlap/capture/batch-expanded-071-h1/expanded-023-h1/result.json",
+        "sha256": "1cb066c662789678b75d885680cb9bdb69b7e429a8c02426b9ee0e603fb14bb1"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$): $KE_i + PE_{descent} = 64 \\text{ J} +",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": true,
+        "lhs_J": 64,
+        "operand_J": 40,
+        "result_J": 104,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "+",
+            "equation_excerpt": "descent} = 64 \\text{ J} + 40 \\text{ J} = 104 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 387,
+        "decode_index": 215,
+        "operator": "-",
+        "equation_excerpt": "rough section ($E_2$): $E_1 - W_{dissipated} = 104 \\text{ J}",
+        "symbolic_row": 387,
+        "numeric_row": 403,
+        "prechoice_row": 386,
+        "correct": true,
+        "lhs_J": 104,
+        "operand_J": 24,
+        "result_J": 80,
+        "alternates": [
+          {
+            "row": 403,
+            "decode_index": 231,
+            "operator": "-",
+            "equation_excerpt": "ipated} = 104 \\text{ J} - 24 \\text{ J} = 80 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    }
+  },
+  "controls": {
+    "175": {
+      "member": "discovery-05-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-175-free/raw/discovery-05-channel-h1/result.json",
+        "sha256": "5deca1e5b0e0ec9fd75c90525a35a34665accbdb4747e12fbee15ddb2ff30f2d"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$): $KE_i + PE_{descent} = 64 \\text{ J} +",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": true,
+        "lhs_J": 64,
+        "operand_J": 40,
+        "result_J": 104,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "+",
+            "equation_excerpt": "descent} = 64 \\text{ J} + 40 \\text{ J} = 104 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 368,
+        "decode_index": 196,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $E_1 - \\text{Dissipated Energy} = 104 \\text{",
+        "symbolic_row": 368,
+        "numeric_row": 386,
+        "prechoice_row": 367,
+        "correct": true,
+        "lhs_J": 104,
+        "operand_J": 13,
+        "result_J": 91,
+        "alternates": [
+          {
+            "row": 386,
+            "decode_index": 214,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 104 \\text{ J} - 13 \\text{ J} = 91 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "189": {
+      "member": "discovery-05-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-crossed-history-175-189/weights-189-free/raw/discovery-05-channel-h1/result.json",
+        "sha256": "3f404b3aca8cf843a45e885dd55dd1d6b6131cdfc55ae55791ccd162291d9a02"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$): $KE_i + PE_{descent} = 64 \\text{ J} +",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": true,
+        "lhs_J": 64,
+        "operand_J": 40,
+        "result_J": 104,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "+",
+            "equation_excerpt": "descent} = 64 \\text{ J} + 40 \\text{ J} = 104 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 368,
+        "decode_index": 196,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $E_1 - \\text{Dissipated Energy} = 104 \\text{",
+        "symbolic_row": 368,
+        "numeric_row": 386,
+        "prechoice_row": 367,
+        "correct": true,
+        "lhs_J": 104,
+        "operand_J": 13,
+        "result_J": 91,
+        "alternates": [
+          {
+            "row": 386,
+            "decode_index": 214,
+            "operator": "-",
+            "equation_excerpt": "Energy} = 104 \\text{ J} - 13 \\text{ J} = 91 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "387": {
+      "member": "discovery-05-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/39/capture/raw/discovery-05-channel-h1/result.json",
+        "sha256": "e514fee402f021bd93f06b7ea20677cc040c48b3405bb5d11ae685563a297e6d"
+      },
+      "descent": {
+        "row": 337,
+        "decode_index": 165,
+        "operator": "-",
+        "equation_excerpt": "to friction during descent, assumed negligible as track is smooth}) - PE_{descent}$\n$KE_{bottom} = 64",
+        "symbolic_row": 337,
+        "numeric_row": 358,
+        "prechoice_row": 336,
+        "correct": false,
+        "lhs_J": 64,
+        "operand_J": 40,
+        "result_J": 24,
+        "alternates": [
+          {
+            "row": 358,
+            "decode_index": 186,
+            "operator": "-",
+            "equation_excerpt": "_{bottom} = 64 \\text{ J} - 40 \\text{ J} = 24 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 403,
+        "decode_index": 231,
+        "operator": "-",
+        "equation_excerpt": "E_{after\\_rough}$): $KE_{bottom} - \\text{Dissipated Energy} = 24 \\text{ J",
+        "symbolic_row": 403,
+        "numeric_row": 420,
+        "prechoice_row": 402,
+        "correct": true,
+        "lhs_J": 24,
+        "operand_J": 13,
+        "result_J": 11,
+        "alternates": [
+          {
+            "row": 420,
+            "decode_index": 248,
+            "operator": "-",
+            "equation_excerpt": "ipated Energy} = 24 \\text{ J} - 13 \\text{ J} = 11 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [
+        {
+          "row": 319,
+          "decode_index": 147,
+          "operator": "+",
+          "equation_excerpt": "of descent ($KE_{bottom}$): $KE_i + (\\text{Energy lost to friction during descent, assumed negligible as track is",
+          "interpretation": "adds negligible loss on smooth descent before subtracting gravitational work"
+        }
+      ],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "388": {
+      "member": "discovery-05-channel-h1",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/40/capture/raw/discovery-05-channel-h1/result.json",
+        "sha256": "efe50fd355c931a94454dd10bdc0b051d3d91e894592d351e38df7eba8059a0f"
+      },
+      "descent": {
+        "row": 313,
+        "decode_index": 141,
+        "operator": "+",
+        "equation_excerpt": "rough section ($E_1$): $KE_i + PE_{descent} = 64 \\text{ J} +",
+        "symbolic_row": 313,
+        "numeric_row": 328,
+        "prechoice_row": 312,
+        "correct": true,
+        "lhs_J": 64,
+        "operand_J": 40,
+        "result_J": 104,
+        "alternates": [
+          {
+            "row": 328,
+            "decode_index": 156,
+            "operator": "+",
+            "equation_excerpt": "descent} = 64 \\text{ J} + 40 \\text{ J} = 104 \\text"
+          }
+        ]
+      },
+      "friction": {
+        "row": 368,
+        "decode_index": 196,
+        "operator": "-",
+        "equation_excerpt": "after dissipation ($E_2$): $E_1 - \\text{Dissipation} = 104 \\text{ J",
+        "symbolic_row": 368,
+        "numeric_row": 385,
+        "prechoice_row": 367,
+        "correct": true,
+        "lhs_J": 104,
+        "operand_J": 13,
+        "result_J": 91,
+        "alternates": [
+          {
+            "row": 385,
+            "decode_index": 213,
+            "operator": "-",
+            "equation_excerpt": "ipation} = 104 \\text{ J} - 13 \\text{ J} = 91 \\text{"
+          }
+        ]
+      },
+      "other_reviewed_events": [],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    },
+    "reordered": {
+      "member": "discovery-02-reordered-h3",
+      "source": {
+        "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/transfer/raw/discovery-02-reordered-h3/result.json",
+        "sha256": "126ca6b06b2ad557ad5ba58bdf7b114573b474e0a3ad9b8ab28433a70fa2821a"
+      },
+      "descent": {
+        "row": 259,
+        "decode_index": 94,
+        "operator": "-",
+        "equation_excerpt": "descent ($E_{descent}$) = $E_i - mgh = 36 \\text{ J} - (2 \\",
+        "symbolic_row": 259,
+        "numeric_row": 305,
+        "prechoice_row": 258,
+        "correct": false,
+        "lhs_J": 36,
+        "operand_J": 20,
+        "result_J": 16,
+        "alternates": [
+          {
+            "row": 305,
+            "decode_index": 140,
+            "operator": "-",
+            "equation_excerpt": "{ m}) = 36 \\text{ J} - 20 \\text{ J} = 16 \\text{"
+          }
+        ]
+      },
+      "friction": {
+        "row": 349,
+        "decode_index": 184,
+        "operator": "-",
+        "equation_excerpt": "($E_{loss}$) = $E_{descent} - 9 \\text{ J} = 16 \\text{ J",
+        "symbolic_row": 349,
+        "numeric_row": 366,
+        "prechoice_row": 348,
+        "correct": true,
+        "lhs_J": 16,
+        "operand_J": 9,
+        "result_J": 7,
+        "alternates": [
+          {
+            "row": 366,
+            "decode_index": 201,
+            "operator": "-",
+            "equation_excerpt": "{ J} = 16 \\text{ J} - 9 \\text{ J} = 7 \\text{ J}$"
+          }
+        ]
+      },
+      "other_reviewed_events": [
+        {
+          "row": 271,
+          "decode_index": 106,
+          "operator": "-",
+          "equation_excerpt": "- mgh = 36 \\text{ J} - (2 \\text{ kg})(10 \\text{ m/s",
+          "interpretation": "expands gravitational work as a product"
+        },
+        {
+          "row": 471,
+          "decode_index": 306,
+          "operator": "+",
+          "equation_excerpt": "Available Energy:**\nAvailable energy = $E_{loss} + PE_f = 7 \\text{ J} + 60",
+          "interpretation": "wrongly adds final climb requirement to available energy"
+        },
+        {
+          "row": 483,
+          "decode_index": 318,
+          "operator": "+",
+          "equation_excerpt": "+ PE_f = 7 \\text{ J} + 60 \\text{ J} = 67 \\text{",
+          "interpretation": "repeats wrong numerical climb addition"
+        }
+      ],
+      "interpretation": "Friction correctness is the local physical sign with respect to positive heat loss, evaluated conditional on the model's incoming energy."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "objective": 6.411269943545026e-05,
+  "outside": 8502,
+  "pair_merge_cells": 64365,
+  "step": 2,
+  "generation": 2,
+  "events": 612,
+  "merges": 105,
+  "complete": true,
+  "ended": true,
+  "measured_at": "2026-11-17T19:05:17.504521-06:00",
+  "member": "discovery-05-channel-h1",
+  "model_identity": {
+    "kind": "native-working-revision/1",
+    "run": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery",
+    "generation": 2,
+    "original_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c"
+  },
+  "reference_sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4",
+  "loss_identity": {
+    "loss_version": "single-original-vector-chance/1",
+    "reference_sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4",
+    "tolerance_sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48",
+    "tolerance_policy": "retained-original-chance"
+  },
+  "correspondence": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/2/pairs.npy",
+    "sha256": "5af5a2f7163ffc54fce170d8304f9a2662798c4ddbbc277ac990bf9cecf83420"
+  },
+  "capture": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/2/capture/capture.json",
+    "sha256": "271dc7fabcab41c65db1fc8d4f94809db2f920163b8b034e5f847a398a35474d"
+  },
+  "acquisition": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/2/answer.json",
+    "sha256": "cf8916498765decaedbcfa81cffb1e178236937cdbfc3d40a7524e14d4f7c78c"
+  },
+  "previous_measurement": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/1/measurement.json",
+    "sha256": "e56ab96ae69b83dc7ce866cd11559efe2044f263b82180113d0bc11177a04dd2"
+  },
+  "measure": "fresh native input-output turns; no output-token judge"
+}

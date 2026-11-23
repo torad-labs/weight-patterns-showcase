@@ -1,0 +1,199 @@
+{
+  "native_prediction_events": [
+    172,
+    173,
+    174,
+    175
+  ],
+  "merges": 105,
+  "parents": {
+    "attention_repair": "early",
+    "ffn_repair": "early",
+    "failed_edit": "original",
+    "training_1": "training_0",
+    "training_2": "training_0"
+  },
+  "common_input": "The last prediction sees the same input but selects a different output. No later predictions enter.",
+  "method": "Cosine of changes in the concatenated layer turns. Each change is relative to its own execution baseline.",
+  "scope": "The historical repairs share a donor lineage. Training and historical runs used different GPU workers. Early movement alone does not identify the descent computation.",
+  "norms": {
+    "attention_repair": 0.14133933817500005,
+    "ffn_repair": 0.03985025799058481,
+    "failed_edit": 0.03135904069612318,
+    "training_1": 0.06820088868916153,
+    "training_2": 0.07003657846198012,
+    "second_update_only": 0.03277918243737582
+  },
+  "same_weight_cross_worker_origin_difference": 0.02888322119964589,
+  "pairs": {
+    "attention_repair__ffn_repair": {
+      "common_history": 0.5759058484916747,
+      "per_event": [
+        0.5945140155712997,
+        0.5651314390238483,
+        0.6052466271239464,
+        0.5840299138736657
+      ]
+    },
+    "attention_repair__failed_edit": {
+      "common_history": 0.03932657536480947,
+      "per_event": [
+        0.03561195440980748,
+        0.019947602368644568,
+        0.15110206792449069,
+        0.02679530856094658
+      ]
+    },
+    "attention_repair__training_1": {
+      "common_history": 0.12310702816980205,
+      "per_event": [
+        0.11014297345672454,
+        0.1644290801716775,
+        -0.015683773724783412,
+        0.15104654548433682
+      ]
+    },
+    "attention_repair__training_2": {
+      "common_history": 0.02842129932939508,
+      "per_event": [
+        -0.056711472389366586,
+        0.04782184667767155,
+        -0.07783130108954163,
+        0.11378553382303241
+      ]
+    },
+    "attention_repair__second_update_only": {
+      "common_history": -0.19541299350052777,
+      "per_event": [
+        -0.2208843677141949,
+        -0.22694446871124768,
+        -0.1632822606621294,
+        -0.11971127762286737
+      ]
+    },
+    "ffn_repair__failed_edit": {
+      "common_history": 0.12809216545582494,
+      "per_event": [
+        0.032403316463293357,
+        0.24332928611769747,
+        0.18284943520785524,
+        0.16475733029943454
+      ]
+    },
+    "ffn_repair__training_1": {
+      "common_history": 0.11781621633146139,
+      "per_event": [
+        0.018543513642462373,
+        0.15823157162014775,
+        -0.03316573506881188,
+        0.254998857845816
+      ]
+    },
+    "ffn_repair__training_2": {
+      "common_history": 0.07805804135352518,
+      "per_event": [
+        -0.030508488609509044,
+        0.1317363845101783,
+        -0.05481197176748236,
+        0.20115071219091607
+      ]
+    },
+    "ffn_repair__second_update_only": {
+      "common_history": -0.07835010903222285,
+      "per_event": [
+        -0.06524646874643002,
+        -0.04863121767120837,
+        -0.060236474646215406,
+        -0.16849010328207242
+      ]
+    },
+    "failed_edit__training_1": {
+      "common_history": 0.2575827795486,
+      "per_event": [
+        0.03544023359843262,
+        0.2197632748040991,
+        0.1386945984153744,
+        0.5180588968067349
+      ]
+    },
+    "failed_edit__training_2": {
+      "common_history": 0.2849211104542723,
+      "per_event": [
+        0.08856125552418916,
+        0.23176613494087114,
+        0.1442801153309679,
+        0.5417626454502161
+      ]
+    },
+    "failed_edit__second_update_only": {
+      "common_history": 0.07283663148486363,
+      "per_event": [
+        0.07190566042999366,
+        0.02910667342750786,
+        0.031348615489809675,
+        0.1516331017273987
+      ]
+    },
+    "training_1__training_2": {
+      "common_history": 0.8878789608737696,
+      "per_event": [
+        0.7163572198190966,
+        0.8710157692740977,
+        0.9233554024217705,
+        0.9630163267063166
+      ]
+    },
+    "training_1__second_update_only": {
+      "common_history": -0.18355809186759336,
+      "per_event": [
+        -0.35723924693151765,
+        -0.23117060076531623,
+        -0.07756927461732194,
+        -0.014346382111441203
+      ]
+    },
+    "training_2__second_update_only": {
+      "common_history": 0.289282513378601,
+      "per_event": [
+        0.3957813831566359,
+        0.2765953043203002,
+        0.3111654987664954,
+        0.25559951516139773
+      ]
+    }
+  },
+  "captures": {
+    "early": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/capture.json",
+      "sha256": "828f0b89c05ddacd1598fdec382f538f8c0b07f92502583e7b5b7f87f7b94c18"
+    },
+    "attention_repair": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/capture.json",
+      "sha256": "a5aba5609f30a5fdf147dedaf0494db54a6438763f831ddb286633f92872ea0a"
+    },
+    "ffn_repair": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/capture.json",
+      "sha256": "9faeb330c5ad471c0645d4a373081a6e3da9f691ceaec286d389cc8c9ec24526"
+    },
+    "original": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+      "sha256": "6f258a0cdab83dd088848b647fca8e59277de6e1fcd87a2082cb9ff91299e6d5"
+    },
+    "failed_edit": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/capture.json",
+      "sha256": "0a66c48d2d2773515e60a95424559645d5d5b6d092a1edd723ec6dc3d2cf3d85"
+    },
+    "training_0": {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-training-27/loop/0/capture/capture.json",
+      "sha256": "7c2be9bdd0830540a88483d6a43faa3638a5b11120da90462718b2997b3f997a"
+    },
+    "training_1": {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-training-27/loop/1/capture/capture.json",
+      "sha256": "b8c6449b2a64b037a30d372ee7befa2832e29e934c4f84d99d894dae8c36b771"
+    },
+    "training_2": {
+      "record": "studies/04-round-2-overlap/runs/unbanded-group-training-27/loop/2/capture/capture.json",
+      "sha256": "269df36f1ecc41d86acedd1dfc522bc6cc422b7caaef0c85bbe30df962b67a1a"
+    }
+  }
+}

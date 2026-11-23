@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fixing a Reasoning Mistake by Editing the Weights (work in progress)</title>
+<style>
+@page { size: Letter; margin: 0.9in 0.95in 0.95in 0.95in; }
+html { font-size: 10.4pt; }
+body { font-family: "Bitstream Charter", "Charter", "Noto Serif", serif; color: #111; line-height: 1.42;
+  text-align: justify; hyphens: auto; margin: 0; }
+math { font-family: "DejaVu Math TeX Gyre", math; font-size: 1.02em; }
+math[display="block"] { margin: 0.55em 0; }
+h1 { font-size: 17pt; line-height: 1.22; text-align: center; margin: 0 0 0.5em; font-weight: bold; }
+.authors { text-align: center; margin-bottom: 0.2em; font-size: 11pt; }
+.affil { text-align: center; font-size: 9.5pt; color: #333; }
+.draft { text-align: center; font-size: 8.5pt; color: #8a1c1c; letter-spacing: 0.04em; margin: 0.6em 0 1.2em;
+  text-transform: uppercase; }
+.abstract { margin: 0 0.45in 1.4em; font-size: 9.6pt; }
+.abstract h2 { text-align: center; font-size: 10pt; margin: 0 0 0.3em; }
+h2 { font-size: 12pt; margin: 1.35em 0 0.45em; break-after: avoid; }
+h3 { font-size: 10.4pt; margin: 1.0em 0 0.3em; break-after: avoid; }
+p { margin: 0 0 0.6em; orphans: 3; widows: 3; }
+figure { margin: 1.0em 0 1.1em; break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; }
+figcaption { font-size: 8.9pt; text-align: justify; margin-top: 0.45em; line-height: 1.35; }
+figcaption b, caption b { font-weight: bold; }
+table { border-collapse: collapse; margin: 0.4em auto 0.2em; font-size: 8.9pt; break-inside: avoid;
+  line-height: 1.3; }
+caption { caption-side: top; font-size: 8.9pt; text-align: justify; margin-bottom: 0.45em; }
+.tablewrap { break-inside: avoid; margin: 1.0em 0 1.1em; }
+th, td { padding: 2.5px 7px; text-align: left; vertical-align: top; }
+thead th { border-top: 1.2px solid #111; border-bottom: 0.7px solid #111; font-weight: bold; }
+tbody tr:last-child td { border-bottom: 1.2px solid #111; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.prompt { font-family: "DejaVu Sans Mono", monospace; font-size: 7.9pt; background: #f6f5f2; border: 0.6px solid #d9d7d0;
+  padding: 7px 9px; white-space: pre-wrap; text-align: left; line-height: 1.38; break-inside: avoid; margin: 0.6em 0 0.9em; }
+.box { border: 0.7px solid #bbb; padding: 8px 12px; margin: 0.9em 0; font-size: 9.6pt; background: #fbfbf9;
+  break-inside: avoid; }
+.box p:last-child { margin-bottom: 0; }
+.note { margin: 0 0.45in 1.2em; background: #f4f7fb; border-color: #9fb8d8; }
+ul, ol { margin: 0.2em 0 0.7em 1.3em; padding: 0; }
+li { margin-bottom: 0.3em; }
+.refs { font-size: 8.9pt; margin-left: 2.1em; }
+.refs li { margin-bottom: 0.35em; text-align: left; }
+code, .mono { font-family: "DejaVu Sans Mono", monospace; font-size: 0.86em; }
+a { color: #1a4f8a; text-decoration: none; }
+.small { font-size: 9pt; }
+.pb { break-before: page; }
+sup.c { font-size: 0.72em; }
+</style>
+</head>
+<body>
+
+<h1>Fixing a Reasoning Mistake by Editing the Weights:<br>Four Edits to a Small Language Model and What They Taught Us</h1>
+<div class="authors">Marcos Damasceno</div>
+<div class="affil">Torad Labs</div>
+<div class="draft">Work in progress · November 2026</div>
+
+<div class="box note"><p><b>A quick note before you read.</b> This is work in progress, not a finished paper. It covers the
+first four edits only. The bigger idea behind them (Section&nbsp;1) has not been properly tested yet, and we are running
+more experiments now to see how far it goes. The samples are small, so please read the numbers as early signals. Any
+comments, big or small, are welcome.</p></div>
+
+<div class="abstract">
+<h2>Abstract</h2>
+<p>Small language models make reasoning mistakes that are oddly specific. Gemma&nbsp;4 E2B solves an energy problem
+correctly when a block climbs 1&nbsp;m. When the climb is 3&nbsp;m, it adds an earlier 1&nbsp;m descent to the climb and
+concludes that it needs 120&nbsp;J instead of 90&nbsp;J. We asked whether we could fix that mistake by changing the
+model's weights directly, with no training, and whether watching the model's internal computation could tell us how. We
+made four edits, one at a time, to a single weight matrix. The first fixed the mistake and one other problem, and broke a
+third. The second removed the damage and also the fixes. The third kept both fixes and removed the damage. The fourth did
+the same with less than half the change, and with 85.5% less effect than the first on unrelated text. None of them
+improved new questions. The most useful lesson came from the failure: two edits that behaved almost identically at the
+point we designed them for behaved very differently 34 tokens later. This is an interim report, and the next round of
+experiments is running now.</p>
+</div>
+
+<h2>1&nbsp;&nbsp;Introduction</h2>
+
+<p>When a language model gets something wrong, the usual fix is more training. Training is slow, needs data, and changes
+the whole model at once. A growing line of work changes the weights directly instead. ROME and MEMIT rewrite single facts
+with a small, calculated change to one or a few weight matrices [1, 2]. Recently, Takehi et al. had a frontier model edit
+the weights of Qwen3.5-0.8B by reasoning about them, and its MATH-500 score went from 7.9% to 48.1% [10].</p>
+
+<p>Facts are the easy case: one question, one answer, one next word. Reasoning mistakes are harder. They happen in the
+middle of a long answer, they depend on what the model has already written, and the same mistake shows up with different
+numbers and wording every time.</p>
+
+<p>The idea behind our work is this. While a model runs, its weights stay fixed. What changes is the signal for each
+token as it passes through the network, one operation after another. Each operation takes what arrives, changes it, and
+passes the result on. We call the ordered record of those changes a <em>trace</em>. Our hypothesis is that when a model
+uses the same skill again and again in varied situations, the skill leaves recurring marks in that trace. The marks
+will not have the same numbers or positions every time, and we do not expect to recover the whole mechanism. But a
+recognisable piece of it may be enough to guide a repair. Think of footprints in a forest: many travellers leave by
+different routes, yet their tracks can show that something guided them, even if you never learn that it was the
+stars.</p>
+
+<p>That makes the questions we ask part of the instrument. A small network trained for one task is easy to read because
+it only does one thing. A large model does everything at once. Asking it many varied questions that all need the same
+skill is one way to get some of that focus back.</p>
+
+<p>This report is the first step, and a limited one. We used traces to choose where to edit and to check how each edit
+behaved. But each edit's direction came from comparing just one correct answer with one wrong answer. Testing the
+hypothesis properly means building the edit from many traces, and that experiment is running now (Section&nbsp;9). We
+report the four single-pair edits here because each one taught us something the next one used.</p>
+
+<h2>2&nbsp;&nbsp;Background</h2>
+
+<p><b>Editing facts.</b> ROME [1] finds the layers that matter for a fact and adds a <em>rank-one</em> change, the
+simplest possible change to a matrix: one input pattern mapped to one output pattern. It also uses statistics of typical
+inputs so that the change mostly ignores them. Our fourth edit borrows that idea. MEMIT [2] spreads a change across several
+layers. AlphaEdit [3] protects what should stay the same by allowing only changes that leave chosen inputs untouched.
+Our second and third edits work in a similar way.</p>
+
+<p><b>Finding versus fixing.</b> Hase et al. [4] found that knowing where a fact is stored says surprisingly little about
+where an edit will work. We ran into a related problem: an edit that is right at the point you designed it for can still
+go wrong a few dozen tokens later.</p>
+
+<p><b>Patching and steering.</b> Activation patching [5, 6] swaps internal values between two runs to see which parts
+matter. Steering methods [7, 8] add a fixed direction to the model's internal values while it runs. Our first edit is
+like writing a steering direction into the weights, except that it only switches on for inputs that resemble the one it
+was built from, and it is saved in the model file.</p>
+
+<p><b>Side effects.</b> Edits often change more than intended [9, 11]. We saw this too. Every edit we measured changed
+the model's output scores everywhere, even where the final text stayed the same.</p>
+
+<h2>3&nbsp;&nbsp;Setup</h2>
+
+<p><b>Model.</b> We use the instruction-tuned Gemma&nbsp;4 E2B [12] (35 layers) at 16-bit (BF16) precision, running in
+llama.cpp on one RTX&nbsp;5080. Decoding is greedy: the model always picks its top-scoring token, so a run is fully
+repeatable. We checked this. Replaying the original model reproduced all 14,578 token choices on our 28 main questions,
+down to a fingerprint of the full score list at every step. Every recording we analyse passed the same check.</p>
+
+<p><b>Edits.</b> Each edit changes one matrix. We compute the change, round it to BF16 exactly as the model stores its
+numbers, and save a new model file. We compared every byte of each new file with the original: nothing outside that
+matrix changed. No training is involved anywhere.</p>
+
+<p><b>Task.</b> Each question describes an object that starts moving, goes down a slope, loses some energy on a rough
+patch, then climbs. The model has to give the available energy, the required energy, and whether the object makes it.
+Questions come in pairs that differ in one number, usually the climb height, which flips the answer. All four edits came
+from the pair below. With a 1&nbsp;m climb the model is right: 60&nbsp;J available, 30&nbsp;J needed, YES. With a
+3&nbsp;m climb it adds the earlier 1&nbsp;m descent to the climb and needs 120&nbsp;J instead of 90&nbsp;J. Its final NO
+happens to be correct, but the calculation is wrong.</p>
+<div class="prompt">A block sliding along a channel has mass 3 kg and initially moves at 6 m/s. It descends 1 m along a smooth track, crosses a rough horizontal section that dissipates 24 J, and then starts a smooth climb to a destination [1 m | 3 m] above the bottom of that climb.
+Use g = 10 m/s^2. Treat the object as a point mass and ignore rotation. There are no other energy losses and no motor or external push after the start.
+Will it reach the destination? Show a compact numerical calculation, not just a verbal outline. Write three lines: Available energy = your calculation in joules; Required energy = your calculation in joules; Verdict = YES or NO. Use the stated initial speed, descent, dissipation, and final climb.</div>
+
+<p><b>Scoring.</b> We read every answer. A <em>complete correct calculation</em> needs the right available energy, the
+right required energy and the matching conclusion. We count the literal YES/NO line separately. Answers that hit the
+768-token limit count as they are. A correct final number does not mean the explanation is right: several fixed answers
+still mislabel heights.</p>
+
+<div class="tablewrap"><table>
+<caption><b>Table 1.</b> The question sets. Each set is reported on its own and never pooled with the others.</caption>
+<thead><tr><th>Set</th><th>Size</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td>Main questions</td><td class="n">28</td><td>6 physics pairs, 3 reworded pairs, 3 arithmetic-only pairs, 4 numerical variants. Seen before any edit.</td></tr>
+<tr><td>Extra questions</td><td class="n">8</td><td>Added with B; treated as already seen for C and D.</td></tr>
+<tr><td>New questions (A)</td><td class="n">24</td><td>Three wordings of eight new energy problems, fixed before testing.</td></tr>
+<tr><td>New questions (C, D)</td><td class="n">4 + 4</td><td>Four new physics questions and four arithmetic/language checks, fixed before C.</td></tr>
+<tr><td>Simple checks</td><td class="n">8 / 12</td><td>Short arithmetic and language prompts (8 with A, 12 with B–D).</td></tr>
+<tr><td>Ordinary requests</td><td class="n">8 + 4</td><td>Instructions, editing, reference text and stories. 8 are used to build D; 4 are held out.</td></tr>
+</tbody></table></div>
+
+<h2>4&nbsp;&nbsp;What we saw before editing</h2>
+
+<h3>4.1&nbsp;&nbsp;A repeating pattern, and why we don't over-read it</h3>
+<p>We ran both questions of each pair side by side and compared their internal states at every step where the two
+answers were still word-for-word identical. We measured how far apart the two states were, relative to their size,
+before and after each layer. One pattern repeated with almost no exceptions: the relative gap shrank at the layer-14
+feed-forward step and grew at layer 15. It held at 846 of 846 steps in a 4-bit version of the model, and at 1,707 of
+1,708 in BF16 (Figure&nbsp;2).</p>
+
+<figure>
+<img src="figures/fig2-recurrence.svg" style="width:86%">
+<figcaption><b>Figure 2.</b> How the relative gap between paired runs changes across the layer-14 and layer-15
+feed-forward steps, for each question pair (4-bit model; <i>n</i> is the number of steps compared). Steps within a pair
+are not independent.</figcaption>
+</figure>
+
+<p>We do not think this is a physics signature. It shows up just as strongly when the model is only doing arithmetic,
+and it is mostly about size. At layer 14 the states themselves grow about 3.3 times while the gap between them grows
+about 1.8 times, so the relative gap drops. The pattern was useful as a pointer to layers 12–16. Within those layers we
+picked the layer-16 attention block by looking through the recordings, where the stretch from the end of layer 15 into
+layer-16 attention showed the two runs pulling apart. So the edit site came from exploring the data, not from a fixed
+procedure.</p>
+
+<h3>4.2&nbsp;&nbsp;A one-step swap changes nothing</h3>
+<p>Our first intervention was a swap, not an edit. We copied one internal value at layer 16 from one run into the other,
+in both directions, at step 235 (just after both answers finish computing the 60&nbsp;J) and, as a control, at step 0.
+The model's scores changed at that one step, but across the four swaps not a single word of either answer changed. One
+nudge at one step was not enough to change where the answer went. That pointed us to editing the weights, which acts at
+every step.</p>
+
+<h2>5&nbsp;&nbsp;The four edits</h2>
+
+<figure>
+<svg viewBox="0 0 640 118" width="94%" xmlns="http://www.w3.org/2000/svg" font-family="DejaVu Sans" font-size="10.5">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+  <g fill="#fbfbf9" stroke="#52514e" stroke-width="0.9">
+    <rect x="4" y="34" width="96" height="44" rx="5"/>
+    <rect x="132" y="26" width="128" height="60" rx="5" fill="#e8f0fb" stroke="#2a78d6" stroke-width="1.6"/>
+    <rect x="292" y="34" width="96" height="44" rx="5"/>
+    <rect x="420" y="34" width="100" height="44" rx="5"/>
+    <rect x="552" y="34" width="84" height="44" rx="5"/>
+  </g>
+  <g fill="#111" text-anchor="middle">
+    <text x="52" y="53">attention</text><text x="52" y="67">output (2,048)</text>
+    <text x="196" y="48" font-weight="bold">W  (1536 × 2048)</text>
+    <text x="196" y="63">blk.16.attn_output</text><text x="196" y="77" fill="#2a78d6">edited (A–D)</text>
+    <text x="340" y="53">RMS norm ×</text><text x="340" y="67">learned scale</text>
+    <text x="470" y="53">attention residual</text><text x="470" y="67">add, FFN, exit</text>
+    <text x="594" y="53">layers</text><text x="594" y="67">17–34, logits</text>
+  </g>
+  <g stroke="#52514e" stroke-width="1.1" marker-end="url(#ar)">
+    <line x1="100" y1="56" x2="130" y2="56"/><line x1="260" y1="56" x2="290" y2="56"/>
+    <line x1="388" y1="56" x2="418" y2="56"/><line x1="520" y1="56" x2="550" y2="56"/>
+  </g>
+  <g fill="#52514e" font-size="9.5" text-anchor="middle">
+    <text x="116" y="20">x (input)</text><text x="275" y="20">y = W x</text>
+    <text x="116" y="108">unchanged by the edit</text><text x="275" y="108">changed at every use</text>
+  </g>
+</svg>
+
+<figcaption><b>Figure 1.</b> Where the edit sits. Only <i>W</i> changes. While the original and edited answers are still
+identical, the input <i>x</i> is exactly the same in both, so any difference starts at <i>W</i> and spreads from
+there.</figcaption>
+</figure>
+
+<p><i>W</i> is the layer-16 attention output matrix: 2,048 numbers in, 1,536 out (Figure&nbsp;1). At step 235 we record
+what goes into <i>W</i> in the wrong run, <math><msub><mi>x</mi><mi>f</mi></msub></math>, what comes out,
+<math><msub><mi>y</mi><mi>f</mi></msub></math>, and what comes out in the right run,
+<math><msub><mi>y</mi><mi>s</mi></msub></math>. The difference
+<math><mi>u</mi><mo>=</mo><msub><mi>y</mi><mi>s</mi></msub><mo>−</mo><msub><mi>y</mi><mi>f</mi></msub></math> is what the
+right run does that the wrong one doesn't, at that moment. It is not a pure "correct minus mistake" signal, because the
+two questions also differ in climb height. We built one candidate per round and did not tune anything after seeing
+results. B, C and D each came with a written prediction before we ran them.</p>
+
+<p><b>Edit A</b> is the smallest change that makes <i>W</i> turn
+<math><msub><mi>x</mi><mi>f</mi></msub></math> into the right run's output:</p>
+<math display="block"><mi>Δ</mi><msub><mi>W</mi><mi>A</mi></msub><mo>=</mo><mfrac><mrow><mi>u</mi><mspace width="0.15em"/><msubsup><mi>x</mi><mi>f</mi><mo>⊤</mo></msubsup></mrow><mrow><msubsup><mi>x</mi><mi>f</mi><mo>⊤</mo></msubsup><msub><mi>x</mi><mi>f</mi></msub></mrow></mfrac></math>
+<p>For any other input, it adds <math><mi>u</mi></math> in proportion to how much that input resembles
+<math><msub><mi>x</mi><mi>f</mi></msub></math>. So it acts strongly on inputs like the one it was built from and weakly on
+others.</p>
+
+<p><b>Edit B.</b> A fixed the target but broke a different problem, a 4&nbsp;kg block (Section&nbsp;6). B keeps the
+same correction but makes it ignore nine inputs <math><mi>Z</mi></math> from that problem: steps 430 to 438, ending where
+A first changed that answer. (We chose nine after looking at one, five and nine.)</p>
+<math display="block"><mi>q</mi><mo>=</mo><mo>(</mo><mi>I</mi><mo>−</mo><msub><mi>P</mi><mi>Z</mi></msub><mo>)</mo><msub><mi>x</mi><mi>f</mi></msub><mo>,</mo><mspace width="2em"/><mi>Δ</mi><msub><mi>W</mi><mi>B</mi></msub><mo>=</mo><mfrac><mrow><mi>u</mi><mspace width="0.15em"/><msup><mi>q</mi><mo>⊤</mo></msup></mrow><mrow><msup><mi>q</mi><mo>⊤</mo></msup><msub><mi>x</mi><mi>f</mi></msub></mrow></mfrac></math>
+<p>Here <math><msub><mi>P</mi><mi>Z</mi></msub></math> removes the part of <math><msub><mi>x</mi><mi>f</mi></msub></math>
+that looks like those nine inputs.</p>
+
+<p><b>Edit C.</b> B protected one spot. C protects whole passages. It starts from A's saved change
+<math><msub><mi>D</mi><mi>A</mi></msub></math> and subtracts the smallest correction <math><mi>E</mi></math> that leaves A's
+effect unchanged on 304 inputs <math><mi>X</mi></math> along the two answers A fixed (every step up to where each answer
+first changed) and cancels A's effect on the nine protected inputs:</p>
+<math display="block"><munder><mi>min</mi><mi>E</mi></munder><mspace width="0.3em"/><msub><mrow><mo>‖</mo><mi>E</mi><mo>‖</mo></mrow><mi>F</mi></msub><mspace width="1em"/><mtext>such that</mtext><mspace width="0.6em"/><mi>E</mi><mi>X</mi><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="0.6em"/><mi>E</mi><mi>Z</mi><mo>=</mo><msub><mi>D</mi><mi>A</mi></msub><mi>Z</mi><mo>,</mo><mspace width="2em"/><mi>C</mi><mo>=</mo><mi>A</mi><mo>−</mo><mi>E</mi></math>
+<p>Rounding to BF16 makes this approximate. On the 304 inputs, C's effect differs from A's by a median of 9.85%, and the
+nine protected inputs keep 24–27% of A's effect.</p>
+
+<p><b>Edit D.</b> When we measured what A and C did to ordinary text, most of their effect came from one component
+shared by almost every input (Section&nbsp;6.3). D handles this the way ROME does. It builds the edit using statistics
+<math><mi>M</mi><mo>=</mo><mi>𝔼</mi><mo>[</mo><mi>x</mi><msup><mi>x</mi><mo>⊤</mo></msup><mo>]</mo></math> from eight
+ordinary requests, so that the change responds to what is unusual about
+<math><msub><mi>x</mi><mi>f</mi></msub></math> rather than what it shares with everything:</p>
+<math display="block"><mi>q</mi><mo>∝</mo><msup><mrow><mo>(</mo><mi>M</mi><mo>+</mo><mi>λ</mi><mi>I</mi><mo>)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><msub><mi>x</mi><mi>f</mi></msub><mo>,</mo><mspace width="2em"/><mi>Δ</mi><msub><mi>W</mi><mi>D</mi></msub><mo>=</mo><mi>u</mi><mspace width="0.15em"/><msup><mi>q</mi><mo>⊤</mo></msup><mspace width="1em"/><mo>(</mo><mtext>scaled so</mtext><mspace width="0.3em"/><msup><mi>q</mi><mo>⊤</mo></msup><msub><mi>x</mi><mi>f</mi></msub><mo>=</mo><mn>1</mn><mo>)</mo></math>
+<p>Nothing from the test questions or the other physics problems was used to build it.</p>
+
+<div class="tablewrap"><table>
+<caption><b>Table 2.</b> Size of each saved change to the 3,145,728-number matrix, after rounding to BF16.</caption>
+<thead><tr><th>Edit</th><th class="n">Numbers changed</th><th class="n">Change size vs. matrix</th><th class="n">vs. A</th></tr></thead>
+<tbody>
+<tr><td>A</td><td class="n">200,965</td><td class="n">0.030%</td><td class="n">1.0×</td></tr>
+<tr><td>B</td><td class="n">312,037</td><td class="n">0.045%</td><td class="n">1.5×</td></tr>
+<tr><td>C</td><td class="n">523,778</td><td class="n">0.095%</td><td class="n">3.2×</td></tr>
+<tr><td>D</td><td class="n">331,670</td><td class="n">0.045%</td><td class="n">1.5×</td></tr>
+</tbody></table></div>
+
+<h2>6&nbsp;&nbsp;Results</h2>
+
+<h3>6.1&nbsp;&nbsp;What changed in the answers</h3>
+<p>Figure&nbsp;3 follows the four problems that shaped each round. Figure&nbsp;4 gives the totals.</p>
+
+<figure>
+<img src="figures/fig3-cases.svg" style="width:92%">
+<figcaption><b>Figure 3.</b> Final answers (available / required energy in joules, and the verdict) for the four
+problems that shaped each round. A thick border marks a change from the original model. The 4&nbsp;kg problem's original
+final answer is right, but its working already contains a mistake.</figcaption>
+</figure>
+
+<p><b>A</b> fixed the target. The edited model computes 54 + 30 − 24 = 60&nbsp;J available and 90&nbsp;J needed. It uses
+its own 3&nbsp;m climb rather than copying the other run's 30&nbsp;J, and the 1&nbsp;m version stays word-for-word the
+same for all 450 tokens. A also fixed a sled problem it was never built for (0 / 40 / NO became 80 / 40 / YES). And it
+broke the 4&nbsp;kg problem, which now subtracts the descent from the climb instead (60 / 80 / NO became 60 / 40 / YES).
+Overall, complete correct calculations went from 7 to 9 of 28; correct YES/NO lines stayed at 16. In the fixed answer,
+the first visible change is at step 269, where "The total height <i>reached</i>" becomes "The total height <i>gained</i>
+during the climb". The two words were within about 0.01 of each other in score (Figure&nbsp;7). We don't think the word
+is the cause: the edit acts at every step.</p>
+
+<p><b>B</b> failed its prediction. The 4&nbsp;kg answer came back, but the target and the sled went back to their
+original mistakes, word for word.</p>
+
+<p><b>C</b> passed. Both fixes survive, word-for-word identical to A's answers, and the 4&nbsp;kg answer is word-for-word
+the original. All seven calculations the model already got right stay identical. Correct calculations went from 7 to 9,
+and YES/NO lines from 16 to 17.</p>
+
+<p><b>D</b> passed too, with the same totals as C at less than half of C's change size. All twelve arithmetic and
+language checks stay correct and identical.</p>
+
+<figure>
+<img src="figures/fig4-aggregates.svg" style="width:92%">
+<figcaption><b>Figure 4.</b> Left: results on the 28 main questions. Right: size of each saved change relative to the
+matrix. C and D get the same results; D's change is less than half of C's.</figcaption>
+</figure>
+
+<h3>6.2&nbsp;&nbsp;Following the change inside the model</h3>
+<p>Because runs are repeatable, the original and edited models write identical text up to the first changed token. Up to
+that point the input to <i>W</i> is exactly the same in both, so any difference starts at <i>W</i>. At step 235, A
+changes <i>W</i>'s output by 0.92%. By the end of layer 16 that is down to 0.36%, by layer 34 it is 0.024%, and after the
+final normalization it is back up to 0.058% (Figure&nbsp;5).</p>
+
+<figure>
+<img src="figures/fig6-propagation.svg" style="width:78%">
+<figcaption><b>Figure 5.</b> How much A changes the model's internal state at step 235 of the target answer, at
+successive points through the network. Each value is relative to the size of the original state at that point.</figcaption>
+</figure>
+
+<p>The most useful result in this report is the comparison between A and B (Figure&nbsp;6). At step 235, the point both
+were designed for, they are nearly the same: they change <i>W</i>'s output by 0.92% and 0.95%. At step 269, where A's fix
+first shows up, A is still at 0.72% but B has dropped to 0.07%, and B gives back the original mistake. Getting the edit
+right at one point told us almost nothing about what it would do 34 tokens later.</p>
+
+<p>C, which protects the whole passage, keeps 0.66% at step 269 and cuts the protected 4&nbsp;kg step from 0.86% to
+0.21%. D keeps both outcomes with a different pattern (0.45% and 0.62%). At step 438, D's change is 72% of A's, yet the
+4&nbsp;kg answer stays exactly the original. The size of a change at one step does not map simply onto what the model
+writes.</p>
+
+<figure>
+<img src="figures/fig5-projection.svg" style="width:86%">
+<figcaption><b>Figure 6.</b> How much each edit changes <i>W</i>'s output at three steps where the original and edited
+answers are still identical so far. The input to <i>W</i> is the same in every run at these steps.</figcaption>
+</figure>
+
+<figure>
+<img src="figures/fig8-margins.svg" style="width:84%">
+<figcaption><b>Figure 7.</b> Score gap between the two competing tokens at the first step where each answer changes.
+Positive means the first token wins. For the target and the sled, positive is the fixed version; for the 4&nbsp;kg
+problem, positive is the original, correct version. Every gap is tiny, between about 0.0005 and 0.02. D was not recorded
+at these steps.</figcaption>
+</figure>
+
+<p>The same text does not mean the same computation. For A, the score fingerprint changed at every one of 11,053
+comparable steps across the 28 questions, including the 18 answers whose text did not change at all. B and C showed the
+same wherever we measured it.</p>
+
+<h3>6.3&nbsp;&nbsp;Effect on ordinary text</h3>
+<p>We split each edit's effect on ordinary text into two parts: the part caused by the average input, and the rest. For
+A, 93% of the effect came from the average (Table&nbsp;3). A change built from one input responds to whatever that input
+shares with every input. Here that was mostly a common component of the attention output, not anything about the
+mistake. All twelve arithmetic and language checks carried this hidden change under A, B and C, even though their
+answers did not change.</p>
+
+<div class="tablewrap"><table>
+<caption><b>Table 3.</b> How much of each edit's effect on ordinary text comes from the average input, measured on eight
+requests, and how much is left after removing it, measured on four held-out requests.</caption>
+<thead><tr><th></th><th class="n">A</th><th class="n">B</th><th class="n">C</th></tr></thead>
+<tbody>
+<tr><td>Share of effect from the average input</td><td class="n">93%</td><td class="n">78%</td><td class="n">92%</td></tr>
+<tr><td>Effect left after removing the average (held out)</td><td class="n">11%</td><td class="n">31%</td><td class="n">14%</td></tr>
+</tbody></table></div>
+
+<p>D's effect on the four held-out ordinary requests is 85.5% smaller than A's, and 69.7% smaller on the language
+checks. It drops less on arithmetic (34.5%) and least on the physics answers themselves (23.5%), which is the order you
+would hope for (Figure&nbsp;8). D still acts throughout the physics answers, including on plain prose. It is quieter on
+ordinary text, but it does not single out the steps where the physics happens.</p>
+
+<figure>
+<img src="figures/fig7-background.svg" style="width:82%">
+<figcaption><b>Figure 8.</b> Size of D's effect relative to A's, on the same recorded inputs. Smaller is
+quieter.</figcaption>
+</figure>
+
+<h3>6.4&nbsp;&nbsp;New questions</h3>
+<div class="tablewrap"><table>
+<caption><b>Table 4.</b> Questions the edits were not built from. A's set is three wordings of eight problems, and 17 of
+its 24 answers hit the length limit.</caption>
+<thead><tr><th>Edit</th><th>Questions</th><th class="n">Correct calculations</th><th class="n">Correct YES/NO</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>24 new physics questions</td><td class="n">1 → 1</td><td class="n">4 → 5</td></tr>
+<tr><td>A</td><td>8 arithmetic and language checks</td><td class="n">8 → 8, identical</td><td class="n">—</td></tr>
+<tr><td>C</td><td>4 new physics questions</td><td class="n">1 → 1</td><td class="n">3 → 3</td></tr>
+<tr><td>D</td><td>the same 4 (not used to build D)</td><td class="n">1 → 1</td><td class="n">3 → 3</td></tr>
+<tr><td>C, D</td><td>12 arithmetic and language checks</td><td class="n">12 → 12, identical</td><td class="n">—</td></tr>
+</tbody></table></div>
+<p>A's one extra YES/NO comes from an answer whose working is still wrong. The fixes hold on the problems they were built
+from. On these small sets of new questions, we saw no gain.</p>
+
+<h2>7&nbsp;&nbsp;What we learned</h2>
+
+<p><b>Checking an edit at one point is not enough.</b> Fact-editing work usually checks an edit at the word it targets,
+plus a few rewordings [1, 9]. In a long answer, the inputs an edit meets keep changing as the model writes. A and B pass
+the same single-point check and do opposite things. An edit has to be designed, and checked, along the whole stretch of
+answer it is meant to change.</p>
+
+<p><b>Protecting whole passages works, at least on known cases.</b> The inputs C protects are the model's own states along
+the answers we cared about, not random text. C kept both fixes and the protected answer word-for-word identical, with a
+change of under 0.1% of the matrix. We don't know yet whether this generalizes.</p>
+
+<p><b>Edits built from one example mostly respond to the background.</b> 93% of A's effect came from the average input
+(78% for B, 92% for C). Borrowing ROME's input statistics (D) removed most of that. What should count as "background" for
+a reasoning edit is still open. Ordinary text was the obvious first choice, but the physics answers themselves show the
+smallest drop.</p>
+
+<p><b>The outcomes are fragile.</b> Every fix and every break first shows up at a step where two tokens were nearly tied
+(Figure&nbsp;7). Everything here uses greedy decoding with fixed settings. We have not tested sampling or reworded
+questions.</p>
+
+<p><b>Why didn't the fixes carry over?</b> One untested guess: <math><mi>u</mi></math> comes from a single pair and also
+contains the climb-height difference, so it may encode a fix for this particular context rather than for the general step
+that goes wrong. That would fit what we saw: fixes on some wrong answers, damage on a right one, and nothing on new
+problems. We have not measured this directly.</p>
+
+<div class="box">
+<p><b>Where this leaves the hypothesis.</b> These edits used traces to pick a site and to check side effects. They did not
+test the main idea: that the fix itself can be read off differences that recur across many right and wrong answers,
+applied wherever those differences live in the model, all at once, and confirmed by watching the edited model's traces
+move toward the right ones. Every edit here came from one pair, in one matrix chosen beforehand. What A–D show is that
+targeted, saved edits to a reasoning step are possible and measurable. They do not yet tell us whether recurring traces
+are a good guide to fixing.</p>
+</div>
+
+<h2>8&nbsp;&nbsp;What this doesn't show</h2>
+<ul>
+<li>The 28 main questions and the 8 extra ones were seen before the edits were built. The new-question sets are small:
+24 for A, and 4 + 4 for C and D.</li>
+<li>There is no random edit of the same size for comparison, and no broad test of general ability. The checks are short
+arithmetic and language prompts.</li>
+<li>Everything comes from one matrix and one source pair, and that pair also differs in climb height.</li>
+<li>The layer-14/15 pattern is mostly a size effect and appears on arithmetic too. It told us where to look; we don't
+treat it as the cause of anything.</li>
+<li>The recorder used here kept only some points in layers 12–16, plus the end of each layer.</li>
+<li>Greedy decoding only, on one GPU. Rounding to BF16 makes every constraint approximate.</li>
+<li>Later rounds reused earlier test questions as known data. We report each set separately, but the rounds are not
+independent.</li>
+</ul>
+
+<h2>9&nbsp;&nbsp;What we are running now</h2>
+<p>This report stops partway. The next round keeps the same model, questions and settings, and changes how the edit is
+made. The goal is to see how far the hypothesis goes: whether an edit built from many traces does better than A–D, and
+where it stops working.</p>
+<ol>
+<li><b>Record everything.</b> A new recorder captures the inputs and outputs of every operation across all 35 layers. On
+an eight-step check it reproduced the original run exactly. That only shows the recorder works; it says nothing yet about
+the hypothesis.</li>
+<li><b>Compare groups, not pairs.</b> Sort wrong answers by the first step that goes wrong, then compare their full traces
+with many correct answers, matching steps by what they do rather than by layer number or matching words.</li>
+<li><b>Let the comparison choose the edit.</b> Change whatever operations the recurring difference points to, across as
+many matrices as it takes, fitted together, because changing an early layer changes what later layers see. MEMIT deals
+with the same issue [2].</li>
+<li><b>Check the traces, then the answers.</b> Record the edited model on the same questions and lay its traces over both
+groups to see whether the gap closed. Then test new questions, a random edit of the same size, and sampled answers.</li>
+</ol>
+
+<p class="small"><b>Acknowledgements.</b> The experiments were built and run with help from AI coding agents, working under
+my direction. Every number here comes from a saved report backed by the raw evidence (commands, model-file checksums,
+recordings and full answers), and I'm happy to share any of it.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>K. Meng, D. Bau, A. Andonian, Y. Belinkov. Locating and Editing Factual Associations in GPT. <i>NeurIPS</i>, 2022. arXiv:2202.05262.</li>
+<li>K. Meng, A. Sen Sharma, A. Andonian, Y. Belinkov, D. Bau. Mass-Editing Memory in a Transformer. <i>ICLR</i>, 2023. arXiv:2210.07229.</li>
+<li>J. Fang, H. Jiang, K. Wang, Y. Ma, J. Shi, X. Wang, X. He, T.-S. Chua. AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models. <i>ICLR</i>, 2025. arXiv:2410.02355.</li>
+<li>P. Hase, M. Bansal, B. Kim, A. Ghandeharioun. Does Localization Inform Editing? Surprising Differences in Causality-Based Localization vs. Knowledge Editing in Language Models. <i>NeurIPS</i>, 2023. arXiv:2301.04213.</li>
+<li>F. Zhang, N. Nanda. Towards Best Practices of Activation Patching in Language Models: Metrics and Methods. <i>ICLR</i>, 2024. arXiv:2309.16042.</li>
+<li>K. Wang, A. Variengien, A. Conmy, B. Shlegeris, J. Steinhardt. Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 Small. <i>ICLR</i>, 2023. arXiv:2211.00593.</li>
+<li>A. Zou et al. Representation Engineering: A Top-Down Approach to AI Transparency. arXiv:2310.01405, 2023.</li>
+<li>N. Rimsky (Panickssery), N. Gabrieli, J. Schulz, M. Tong, E. Hubinger, A. M. Turner. Steering Llama 2 via Contrastive Activation Addition. <i>ACL</i>, 2024. arXiv:2312.06681.</li>
+<li>R. Cohen, E. Biran, O. Yoran, A. Globerson, M. Geva. Evaluating the Ripple Effects of Knowledge Editing in Language Models. <i>TACL</i>, 2024.</li>
+<li>R. Takehi, J. Teoh, A. Zhang, O. Khattab. Sparks of Weight-Space Programming: LLMs Can Natively Read &amp; Write Neural Network Weights. Blog post and public logs, November 2, 2026. rikiyat.github.io/blog/weight-space-programming.</li>
+<li>J.-C. Gu, H.-X. Xu, J.-Y. Ma, P. Lu, Z.-H. Ling, et al. Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue. <i>EMNLP</i>, 2024.</li>
+<li>Google DeepMind. Gemma 4 model card (E2B). huggingface.co/google/gemma-4-E2B-it, 2026.</li>
+</ol>
+
+<h2 class="pb">Appendix&nbsp;&nbsp;Run details</h2>
+<div class="tablewrap"><table>
+<caption><b>Table A1.</b> Settings shared by every run in this report.</caption>
+<thead><tr><th>Item</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Model file</td><td>Gemma 4 E2B-it, BF16 GGUF, 9,311,304,896 bytes</td></tr>
+<tr><td>Engine</td><td>llama.cpp with a tensor recorder; same program for original and edited models</td></tr>
+<tr><td>Hardware</td><td>One RTX 5080. A second GPU failed the repeatability check and was not used.</td></tr>
+<tr><td>Decoding</td><td>Greedy; 768-token limit (512 for ordinary requests); context 2,048; batch 128; micro-batch 32</td></tr>
+<tr><td>Repeatability</td><td>Every recording reproduces its normal run's tokens and full-score fingerprints (14,578 steps for the original 28 questions; 3,396 for A; 2,061 for C; 3,807 for D)</td></tr>
+<tr><td>Edited matrix</td><td><span class="mono">blk.16.attn_output.weight</span>, 1,536 × 2,048 (layers counted from 0)</td></tr>
+<tr><td>Design step</td><td>Step 235 of the 3&nbsp;m answer, just after the shared 60&nbsp;J line</td></tr>
+<tr><td>D's statistics</td><td>Eight ordinary requests, equal weight each; λ = 0.05·trace(M)/2048</td></tr>
+</tbody></table></div>
+
+<p><b>Baseline.</b> On the 24 questions used for the observations in Section&nbsp;4, the BF16 model gave correct YES/NO
+lines on 13/24, correct arithmetic-only results on 4/6, complete correct physics calculations on 2/18, and hit the length
+limit on 8/24. None of its answers had a fully correct physics explanation. The 4-bit model was weaker (8/24, 1/6, 0/18,
+10/24).</p>
+
+</body>
+</html>

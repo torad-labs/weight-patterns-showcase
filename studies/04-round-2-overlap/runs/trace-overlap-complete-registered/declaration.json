@@ -1,0 +1,50 @@
+{
+  "method_step": [
+    1,
+    2,
+    3
+  ],
+  "run_by": "Astra, with Fable reviewing correspondence and interpretation",
+  "hypothesis": "A recurring discrepancy between the complete correct and wrong computational trajectories remains measurable when correspondence is based on computation-only distance and no native step is discarded. This is construction of the overlap, not a weight edit or a claim of capability repair.",
+  "what_went_wrong_before": "trace-overlap maximized summed cosine similarity, which rewards inserting positive-similarity matches, and kept only one winning native step per axis place. The recorded correspondence represented 22349 of the 30546 generated computation steps. Its overlap therefore did not retain every captured step, and its reported divergence boundaries may change when those defects are corrected.",
+  "why_this_direction": "The corrected correspondence was calculated once with its declaration written but not committed first. That nonconforming diagnostic is openly retired with every file preserved. This run repeats the calculation only after committing the declaration, with the earlier result explicitly known. It repairs provenance without altering the hypothesis, the method steps, the guard, the cohort or the measured quantity.",
+  "repeating_pattern_check": "The purpose is the full connected trace and a persistent weight repair judged on natural computation, not a convenient surrogate. Every native step remains represented, all 105 merges remain, and individual construction inputs are not replaced by axis means. A procedural failure also occurred: the first corrected-overlap declaration was not committed before its result. Here the declaration must be committed before align or overlap runs. The known diagnostic outcome is disclosed rather than presented as an unseen prediction.",
+  "rule": {
+    "members": "All members in trace-overlap/members.json, unchanged and in their recorded order; original turns are read from wide-overlap/exported/<id>/turns.npy.",
+    "axis": "The same recorded axis member as trace-overlap, selected there by median length; its trace supplies coordinates, never a required answer or output length.",
+    "alignment": "Minimize the sum of 1 minus cosine similarity of the flattened turns at all merges, using monotone diagonal, vertical, and horizontal moves. Diagonal wins equal-cost ties, then vertical, then horizontal. Save every (native_step, axis_place) pair; verify all source steps and all axis places are covered.",
+    "overlap": "At a place, average all matched native steps of each member, then average those member summaries within each group. Compute group difference, member spread, and the same alternating split-half agreement as the earlier run.",
+    "construction_interface": "For each native step, average the place targets over all its matched places. Each native step remains one fit row, even if matched to multiple places. Original state and input vectors are never replaced by a 480-row resampled response.",
+    "limitations": "A global monotone alignment is a correspondence proposal, not causal evidence. Complete coverage does not prove a short answer performed absent computations. Correlated prompts limit the independence interpretation of the sampling-variation estimate. No hand-picked divergence interval is fixed for the new result."
+  },
+  "prediction": {
+    "expected_observation": "With the diagnostic result already known, expect the same complete 30546-step coverage and the same corrected overlap, allowing numerical roundoff only if execution arithmetic differs. Compare the actual results without calling this an independent replication. The diagnostic had longest separation 142\u2013313 under the existing twice-variation yardstick, gap/variation 5.80 there and median split-half cosine 0.825.",
+    "failures_only": "No edited model in this run. Report changes to correspondence and overlap, including missing or invalid source records; do not count conditional trace similarity as a repaired answer."
+  },
+  "would_weaken_it": "A different correspondence or overlap in this rerun would reveal a reproducibility or implementation issue requiring explanation. The diagnostic already revealed recurrence after the alignment correction, so this rerun cannot supply a blind test of that expectation.",
+  "parameters": {
+    "cosine_distance": {
+      "measured_from": "studies/04-round-2-overlap/runs/wide-overlap/exported",
+      "derivation": "1 - dot(a,b)/(norm(a)*norm(b)) for full step-turn vectors; clamp numerical cosine roundoff to [-1,1]. No learned or hand-selected distance threshold is used.",
+      "scales_with": "The full recorded vector of turns and each member's native step count."
+    },
+    "member_weight": {
+      "measured_from": "studies/04-round-2-overlap/runs/trace-overlap/members.json",
+      "derivation": "At each axis place, each member contributes the mean of its matched native steps with weight 1/group member count. In construction, each native step is one row and averages its matched place targets.",
+      "scales_with": "Member counts and correspondence multiplicities, not response length as a statistical sample count."
+    }
+  },
+  "inputs": [
+    "studies/04-round-2-overlap/runs/trace-overlap",
+    "studies/04-round-2-overlap/runs/wide-overlap"
+  ],
+  "outputs": [
+    "studies/04-round-2-overlap/runs/trace-overlap-complete-registered"
+  ],
+  "registration_history": {
+    "retired_diagnostic": "records/retrospectives/2026-11-10-complete-overlap-registration",
+    "known_before_this_declaration": "The first calculation represented all 30546 native steps, retained a longest separation at 142\u2013313, and gave a whole-path gap/variation ratio 3.539681032093178. Fable reviewed its mapping and the single-axis stretching limitation. These observations are already known.",
+    "new_evidence_status": "This deterministic rerun is not independent confirmation and its expectation is not blind. New arrays are recomputed from the original traces; none are copied from the retired diagnostic.",
+    "guard": "Unchanged. A failed verifier stands."
+  }
+}

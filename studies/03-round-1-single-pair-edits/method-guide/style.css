@@ -1,0 +1,45 @@
+<style>
+@page { size: Letter; margin: 0.9in 0.95in 0.95in 0.95in; }
+html { font-size: 10.4pt; }
+body { font-family: "Bitstream Charter", "Charter", "Noto Serif", serif; color: #111; line-height: 1.42;
+  text-align: justify; hyphens: auto; margin: 0; }
+math { font-family: "DejaVu Math TeX Gyre", math; font-size: 1.02em; }
+math[display="block"] { margin: 0.55em 0; }
+h1 { font-size: 17pt; line-height: 1.22; text-align: center; margin: 0 0 0.5em; font-weight: bold; }
+.authors { text-align: center; margin-bottom: 0.2em; font-size: 11pt; }
+.affil { text-align: center; font-size: 9.5pt; color: #333; }
+.draft { text-align: center; font-size: 8.5pt; color: #8a1c1c; letter-spacing: 0.04em; margin: 0.6em 0 1.2em;
+  text-transform: uppercase; }
+.abstract { margin: 0 0.45in 1.4em; font-size: 9.6pt; }
+.abstract h2 { text-align: center; font-size: 10pt; margin: 0 0 0.3em; }
+h2 { font-size: 12pt; margin: 1.35em 0 0.45em; break-after: avoid; }
+h3 { font-size: 10.4pt; margin: 1.0em 0 0.3em; break-after: avoid; }
+p { margin: 0 0 0.6em; orphans: 3; widows: 3; }
+figure { margin: 1.0em 0 1.1em; break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; }
+figcaption { font-size: 8.9pt; text-align: justify; margin-top: 0.45em; line-height: 1.35; }
+figcaption b, caption b { font-weight: bold; }
+table { border-collapse: collapse; margin: 0.4em auto 0.2em; font-size: 8.9pt; break-inside: avoid;
+  line-height: 1.3; }
+caption { caption-side: top; font-size: 8.9pt; text-align: justify; margin-bottom: 0.45em; }
+.tablewrap { break-inside: avoid; margin: 1.0em 0 1.1em; }
+th, td { padding: 2.5px 7px; text-align: left; vertical-align: top; }
+thead th { border-top: 1.2px solid #111; border-bottom: 0.7px solid #111; font-weight: bold; }
+tbody tr:last-child td { border-bottom: 1.2px solid #111; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.prompt { font-family: "DejaVu Sans Mono", monospace; font-size: 7.9pt; background: #f6f5f2; border: 0.6px solid #d9d7d0;
+  padding: 7px 9px; white-space: pre-wrap; text-align: left; line-height: 1.38; break-inside: avoid; margin: 0.6em 0 0.9em; }
+.box { border: 0.7px solid #bbb; padding: 8px 12px; margin: 0.9em 0; font-size: 9.6pt; background: #fbfbf9;
+  break-inside: avoid; }
+.box p:last-child { margin-bottom: 0; }
+.note { margin: 0 0.45in 1.2em; background: #f4f7fb; border-color: #9fb8d8; }
+ul, ol { margin: 0.2em 0 0.7em 1.3em; padding: 0; }
+li { margin-bottom: 0.3em; }
+.refs { font-size: 8.9pt; margin-left: 2.1em; }
+.refs li { margin-bottom: 0.35em; text-align: left; }
+code, .mono { font-family: "DejaVu Sans Mono", monospace; font-size: 0.86em; }
+a { color: #1a4f8a; text-decoration: none; }
+.small { font-size: 9pt; }
+.pb { break-before: page; }
+sup.c { font-size: 0.72em; }
+</style>

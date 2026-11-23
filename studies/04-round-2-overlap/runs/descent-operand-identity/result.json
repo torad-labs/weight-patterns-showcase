@@ -1,0 +1,5520 @@
+{
+  "originals": {
+    "discovery-05-channel-h1": {
+      "group": [
+        64.0,
+        40
+      ],
+      "events": 406,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [
+        "swap_early"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.20242059800383938,
+                0.04979072039182375,
+                0.3013721100836484
+              ],
+              "downstream": 0.00430294617338633,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  322
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 372,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.1803068513214494,
+                0.4827791708109541,
+                0.02213749102348439
+              ],
+              "downstream": 0.15151748695775819,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.05294184188549305,
+                0.05415250592641152,
+                0.16892053189675507
+              ],
+              "downstream": 0.00430294617338633,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  310
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 372,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.06450098619356175,
+                0.1609764992891655,
+                0.06399158272727448
+              ],
+              "downstream": 0.15151748695775819,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  380
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-10-channel-h1": {
+      "group": [
+        96.0,
+        30
+      ],
+      "events": 489,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [
+        "origin_unfitted"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            323
+          ],
+          "friction_rows": [
+            379
+          ],
+          "alerts": [
+            323
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              323
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 323,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.20834712422737045,
+                0.05196731439853197,
+                0.32837475341932376
+              ],
+              "downstream": 0.10249216334454139,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 379,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.20362137827718962,
+                0.493327875253595,
+                0.02378231892695415
+              ],
+              "downstream": 0.190126350060029,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            323
+          ],
+          "friction_rows": [
+            379
+          ],
+          "alerts": [
+            323
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              323
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 323,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.06907076433371555,
+                0.06854513534522698,
+                0.1913232137978108
+              ],
+              "downstream": 0.10249216334454139,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  313
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 379,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.0641802798943484,
+                0.1827779443122806,
+                0.06365674814900937
+              ],
+              "downstream": 0.190126350060029,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-17-channel-h1": {
+      "group": [
+        128.0,
+        80
+      ],
+      "events": 530,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            374
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.16044974595788553,
+                0.004873850969711491,
+                0.28968423928860587
+              ],
+              "downstream": 0.011700377459718359,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 374,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.18450216380591744,
+                0.48900769888960505,
+                0.007381317168252188
+              ],
+              "downstream": 0.17948378231352344,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            374
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.012929526447168525,
+                0.012347207691063039,
+                0.14560109562078533
+              ],
+              "downstream": 0.011700377459718359,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 374,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.01518334312202962,
+                0.14791450239012707,
+                0.014554297411694875
+              ],
+              "downstream": 0.17948378231352344,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-001-h3": {
+      "group": [
+        16.0,
+        20
+      ],
+      "events": 768,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            363,
+            554
+          ],
+          "friction_rows": [
+            611,
+            755
+          ],
+          "alerts": [
+            363,
+            554
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              363
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 363,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.23023316573952513,
+                0.0776233390314629,
+                0.37039362635140405
+              ],
+              "downstream": 0.07965029910202778,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  324
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 755,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.4535168802597658,
+                0.5913844021757824,
+                0.35625877870946265
+              ],
+              "downstream": 0.17719810235206349,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            363
+          ],
+          "friction_rows": [
+            612
+          ],
+          "alerts": [
+            363
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              363
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 363,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.15478735833925444,
+                0.15456675656323027,
+                0.24648013599599855
+              ],
+              "downstream": 0.07965029910202778,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  324
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 755,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.3457790846415958,
+                0.41598195698441953,
+                0.3554614246566092
+              ],
+              "downstream": 0.17719810235206349,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  411
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-020-h1": {
+      "group": [
+        64.0,
+        40
+      ],
+      "events": 621,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [
+        "swap_early"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            325,
+            691
+          ],
+          "friction_rows": [
+            397
+          ],
+          "alerts": [
+            325
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              325
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 325,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.24188484626934859,
+                0.11197197184109231,
+                0.34234589878538757
+              ],
+              "downstream": 0.11320189329829682,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  322
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 397,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.18875087226340947,
+                0.3504540327883845,
+                0.13984677416287972
+              ],
+              "downstream": 0.26257485196136193,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [],
+          "friction_rows": [],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 325,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.09659112628307973,
+                0.09766208928802642,
+                0.2037417733533605
+              ],
+              "downstream": 0.11320189329829682,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  310
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 397,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.12794048872986796,
+                0.210302928412769,
+                0.12862913385769545
+              ],
+              "downstream": 0.26257485196136193,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  376
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-034-h3": {
+      "group": [
+        54.0,
+        30
+      ],
+      "events": 548,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            378
+          ],
+          "friction_rows": [
+            460
+          ],
+          "alerts": [
+            378
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              378
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 378,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.2318373535981988,
+                0.07367436511109693,
+                0.3476620665606087
+              ],
+              "downstream": 0.8532259650562023,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  324
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 459,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.16884152714867917,
+                0.36987648830216946,
+                0.22553094615141633
+              ],
+              "downstream": 0.5264323761701545,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            378
+          ],
+          "friction_rows": [
+            460
+          ],
+          "alerts": [
+            378
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              378
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 378,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.18500952846687055,
+                0.18482109156260781,
+                0.2724602193436308
+              ],
+              "downstream": 0.8532259650562023,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  313
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 459,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.18467361112080066,
+                0.29437077539962075,
+                0.18493164498931092
+              ],
+              "downstream": 0.5264323761701545,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-042-h3": {
+      "group": [
+        96.0,
+        30
+      ],
+      "events": 623,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [
+        "origin_unfitted"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            378
+          ],
+          "friction_rows": [
+            460
+          ],
+          "alerts": [
+            378
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              378
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 378,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.25233885465363226,
+                0.12324831103131517,
+                0.34269418352270065
+              ],
+              "downstream": 0.8655691368739178,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  313
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 459,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.173205393088798,
+                0.38911011760027425,
+                0.2279634912505979
+              ],
+              "downstream": 0.5150489325428523,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            378
+          ],
+          "friction_rows": [
+            460
+          ],
+          "alerts": [
+            378
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              378
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 378,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.18528329135687527,
+                0.18508948915081527,
+                0.27589883956598776
+              ],
+              "downstream": 0.8655691368739178,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  313
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 459,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.18711583684897887,
+                0.2951371884865996,
+                0.1873808214195408
+              ],
+              "downstream": 0.5150489325428523,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-045-h1": {
+      "group": [
+        96.0,
+        60
+      ],
+      "events": 412,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.15830744466191726,
+                0.004339190612538735,
+                0.2924135959805285
+              ],
+              "downstream": 0.008476679612998878,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 372,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.16803222020251773,
+                0.4956114664024409,
+                0.00546135120839053
+              ],
+              "downstream": 0.14513254351901084,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.012160277072321063,
+                0.011582457999074083,
+                0.1450012628419628
+              ],
+              "downstream": 0.008476679612998878,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 372,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.013941652893463968,
+                0.14605557731405175,
+                0.01333005267663566
+              ],
+              "downstream": 0.14513254351901084,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-046-h3": {
+      "group": [
+        96.0,
+        60
+      ],
+      "events": 411,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.15685891397039065,
+                0.004565019345495358,
+                0.2975086497613477
+              ],
+              "downstream": 0.006480701204256096,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 372,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.17011160630730382,
+                0.4930711614527856,
+                0.005666484543924932
+              ],
+              "downstream": 0.14071398758814255,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.012251510996563042,
+                0.011680152474148895,
+                0.14510733952441304
+              ],
+              "downstream": 0.006480701204256096,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 372,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.01403211512084063,
+                0.14599076334795646,
+                0.013418050297394188
+              ],
+              "downstream": 0.14071398758814255,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-068-h1": {
+      "group": [
+        128.0,
+        80
+      ],
+      "events": 442,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            374
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.15946347440707553,
+                0.00502937040148721,
+                0.28947503912196293
+              ],
+              "downstream": 0.010300579313490744,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 374,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.18646370179425298,
+                0.4913182833598728,
+                0.008568686058386898
+              ],
+              "downstream": 0.17505505522693518,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            374
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.013009397138424004,
+                0.012431410908023561,
+                0.14555061998146035
+              ],
+              "downstream": 0.010300579313490744,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 374,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.015517227790237087,
+                0.14792645191415235,
+                0.01488581213834451
+              ],
+              "downstream": 0.17505505522693518,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-070-h1": {
+      "group": [
+        128.0,
+        80
+      ],
+      "events": 410,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            374
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.15908203303748025,
+                0.004682632184239033,
+                0.29258459305167395
+              ],
+              "downstream": 0.011265149375532389,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 374,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.18631619967429236,
+                0.4883172759854373,
+                0.008562215336026524
+              ],
+              "downstream": 0.17431694045307358,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            374
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.013020580829465495,
+                0.012441444354382006,
+                0.146132888680969
+              ],
+              "downstream": 0.011265149375532389,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 374,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.015308624175619255,
+                0.14798817346542753,
+                0.014676716734648952
+              ],
+              "downstream": 0.17431694045307358,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-087-h3": {
+      "group": [
+        90.0,
+        100
+      ],
+      "events": 740,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312,
+            494,
+            547,
+            661
+          ],
+          "friction_rows": [
+            710
+          ],
+          "alerts": [
+            312,
+            494,
+            661
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.1705510053040109,
+                0.026998886967134483,
+                0.2936539087652783
+              ],
+              "downstream": 0.1392683162313077,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 719,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.37233705639986514,
+                0.6933093540532913,
+                0.48306985802731695
+              ],
+              "downstream": 0.18850483266228518,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  388
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            548
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.0320664422302713,
+                0.03153565768169985,
+                0.16313214534592693
+              ],
+              "downstream": 0.1392683162313077,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 719,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.30734881471333964,
+                0.3806080651770717,
+                0.31397232161576133
+              ],
+              "downstream": 0.18850483266228518,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  410
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-092-h1": {
+      "group": [
+        160.0,
+        100
+      ],
+      "events": 409,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.18218569273773477,
+                0.03559733764657991,
+                0.29498501038594793
+              ],
+              "downstream": 0.07992059454762952,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 371,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.029351902618490966,
+                0.3101504785977238,
+                0.225503187933918
+              ],
+              "downstream": 0.17386132025889992,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            372
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              312
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.021453253592623046,
+                0.020980238338918766,
+                0.15750897513542947
+              ],
+              "downstream": 0.07992059454762952,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 371,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.02445872799710017,
+                0.15240613453469865,
+                0.02504317527780601
+              ],
+              "downstream": 0.17386132025889992,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-094-h1": {
+      "group": [
+        160.0,
+        100
+      ],
+      "events": 513,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            394
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.1703925398410604,
+                0.027266217870432596,
+                0.2917361743014142
+              ],
+              "downstream": 0.14411657266119796,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 394,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.17448696553663745,
+                0.33627340741975886,
+                0.17357620096040183
+              ],
+              "downstream": 0.4064364573598581,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.03185551287432986,
+                0.03132983452210736,
+                0.16265272254627797
+              ],
+              "downstream": 0.14411657266119796,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 394,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.07440622816017234,
+                0.19496258550031903,
+                0.07513050865799517
+              ],
+              "downstream": 0.4064364573598581,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  370
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-095-h1": {
+      "group": [
+        160.0,
+        100
+      ],
+      "events": 594,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            394
+          ],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.17111580703923335,
+                0.02764565088206683,
+                0.2908077644706506
+              ],
+              "downstream": 0.1444528696243782,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 394,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.17114340984800958,
+                0.33313853470684185,
+                0.17005193133755991
+              ],
+              "downstream": 0.4078686471578801,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [],
+          "alerts": [
+            313
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              313
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.031816208163706,
+                0.031290796372108826,
+                0.16246373606211392
+              ],
+              "downstream": 0.1444528696243782,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 394,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.0746323441613272,
+                0.19503166033444444,
+                0.0753439847486219
+              ],
+              "downstream": 0.4078686471578801,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  370
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-01-channel-h1": {
+      "group": [
+        16.0,
+        40
+      ],
+      "events": 388,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [
+        "origin_reference"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.2866610212998313,
+                0.29209595702249436,
+                0.4799222806200165
+              ],
+              "downstream": -0.0065116227954974,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 366,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.2210408062042024,
+                0.2909036471717428,
+                0.3558061604970322
+              ],
+              "downstream": 0.2180399776895328,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  369
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            314
+          ],
+          "friction_rows": [],
+          "alerts": [
+            314
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              314
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.052292013387155244,
+                0.0527630337565558,
+                0.15925922469882298
+              ],
+              "downstream": -0.0065116227954974,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  310
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 366,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.08785116296143984,
+                0.16620223018463579,
+                0.0892521657885862
+              ],
+              "downstream": 0.2180399776895328,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  369
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-06-channel-h1": {
+      "group": [
+        24.0,
+        30
+      ],
+      "events": 409,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            322
+          ],
+          "friction_rows": [
+            376
+          ],
+          "alerts": [
+            322
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              322
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 322,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.2509761769386265,
+                0.024865138292677447,
+                0.4405251638479877
+              ],
+              "downstream": 0.0014359580049196647,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 376,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.16257167745224166,
+                0.32355225145341193,
+                0.05457928380744348
+              ],
+              "downstream": 0.38917747289285026,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [],
+          "friction_rows": [
+            376
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 322,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.0660060052695192,
+                0.07147081055005415,
+                0.1655171154882616
+              ],
+              "downstream": 0.0014359580049196647,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  308
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 376,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.07511781691094079,
+                0.17689366278103089,
+                0.07479487488393502
+              ],
+              "downstream": 0.38917747289285026,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-15-channel-h1": {
+      "group": [
+        72.0,
+        80
+      ],
+      "events": 461,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312,
+            364
+          ],
+          "friction_rows": [
+            421,
+            424
+          ],
+          "alerts": [
+            312,
+            364
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 365,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.18623851442046746,
+                0.3535805981564979,
+                0.3296966892473274
+              ],
+              "downstream": 0.07250007006077552,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  313
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 424,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.3406563685345114,
+                0.6287125928643387,
+                0.29317056004343267
+              ],
+              "downstream": 0.14293644360631563,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            424
+          ],
+          "alerts": [
+            312
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 365,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.10808710949091449,
+                0.11792775390796632,
+                0.13202863007456803
+              ],
+              "downstream": 0.07250007006077552,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  316
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 424,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.12655984834188688,
+                0.21533515669032435,
+                0.1263588838889236
+              ],
+              "downstream": 0.14293644360631563,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-00-channel-h3": {
+      "group": [
+        16.0,
+        20
+      ],
+      "events": 627,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            357,
+            415,
+            416,
+            417,
+            418,
+            419,
+            420
+          ],
+          "friction_rows": [
+            499
+          ],
+          "alerts": [
+            357,
+            415,
+            416,
+            417,
+            418,
+            420
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 421,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.21270764804833742,
+                0.41432094001244635,
+                0.37389053871042033
+              ],
+              "downstream": 0.12470334673795624,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  313
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 499,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.20654797823709514,
+                0.3062952328428086,
+                0.1578664826815681
+              ],
+              "downstream": 0.5497358857046877,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            357
+          ],
+          "friction_rows": [
+            498,
+            499
+          ],
+          "alerts": [
+            357
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 421,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.23040514491273814,
+                0.23883482754405622,
+                0.2394086060991139
+              ],
+              "downstream": 0.12470334673795624,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  327
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 499,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.23620014422949315,
+                0.3183374208977288,
+                0.23599310651220246
+              ],
+              "downstream": 0.5497358857046877,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-004-h1": {
+      "group": [
+        16.0,
+        40
+      ],
+      "events": 388,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [
+        "origin_reference"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.2870694630036539,
+                0.2933322177307369,
+                0.4812576206145043
+              ],
+              "downstream": -0.007144749093500693,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 366,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.22041035391397035,
+                0.29013615767390566,
+                0.3554366904032331
+              ],
+              "downstream": 0.21902452717267268,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  369
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            314
+          ],
+          "friction_rows": [],
+          "alerts": [
+            314
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              314
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.052372698147864494,
+                0.05284911074612896,
+                0.1594213221939112
+              ],
+              "downstream": -0.007144749093500693,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  310
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 366,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.08782801043653941,
+                0.1662027703936192,
+                0.08922858290014116
+              ],
+              "downstream": 0.21902452717267268,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  369
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-08-channel-h3": {
+      "group": [
+        54.0,
+        30
+      ],
+      "events": 456,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            325
+          ],
+          "friction_rows": [
+            384
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 325,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.2695734577044613,
+                0.042366776476646884,
+                0.4699200373276575
+              ],
+              "downstream": -0.010259498725306309,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 384,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.1645315838105652,
+                0.3042486629019423,
+                0.05870818996971816
+              ],
+              "downstream": 0.40011967507437857,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [],
+          "friction_rows": [
+            384
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 325,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.06384194880336659,
+                0.06903533475718737,
+                0.16394623502788808
+              ],
+              "downstream": -0.010259498725306309,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  308
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 384,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.08417159375477229,
+                0.18027931841371672,
+                0.08384822725815677
+              ],
+              "downstream": 0.40011967507437857,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-10-channel-h3": {
+      "group": [
+        96.0,
+        30
+      ],
+      "events": 491,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [
+        "origin_unfitted"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            325
+          ],
+          "friction_rows": [
+            385
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 325,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.26696633692077665,
+                0.04113844408516698,
+                0.4638332619445906
+              ],
+              "downstream": -0.009896607675172793,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 385,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.1716297007276233,
+                0.31916784705612655,
+                0.06020250151673734
+              ],
+              "downstream": 0.39808735189171357,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            325
+          ],
+          "friction_rows": [
+            385
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 325,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.0845938901349456,
+                0.08385907559601004,
+                0.1814646333821675
+              ],
+              "downstream": -0.009896607675172793,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  313
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 385,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.08556595935929859,
+                0.1890475659581939,
+                0.08522986437882335
+              ],
+              "downstream": 0.39808735189171357,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-029-h1": {
+      "group": [
+        24.0,
+        60
+      ],
+      "events": 414,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            375
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.15747615329253928,
+                0.005880944328842119,
+                0.30610479014432634
+              ],
+              "downstream": -0.005130154831822199,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 375,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.1726247892734154,
+                0.4701324592034095,
+                0.033616669364318286
+              ],
+              "downstream": 0.14677703886370713,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            375
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.013356475937606025,
+                0.012788366149847264,
+                0.14565280021366345
+              ],
+              "downstream": -0.005130154831822199,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 375,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.05403820584629319,
+                0.14343536665830822,
+                0.05343047121758739
+              ],
+              "downstream": 0.14677703886370713,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "discovery-11-channel-h3": {
+      "group": [
+        96.0,
+        60
+      ],
+      "events": 408,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            324
+          ],
+          "friction_rows": [
+            378
+          ],
+          "alerts": [
+            324
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              324
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 324,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.239544323101061,
+                0.018247035529690203,
+                0.4315225823597839
+              ],
+              "downstream": 0.005728073296841519,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 378,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.10203435347054657,
+                0.29884390803031313,
+                0.008943309581703085
+              ],
+              "downstream": 0.18383469137521657,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [],
+          "friction_rows": [
+            378
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 324,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.06446933307028896,
+                0.07082280133061059,
+                0.16264044957924942
+              ],
+              "downstream": 0.005728073296841519,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  308
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 378,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.06435045715793251,
+                0.1711311522947344,
+                0.06397921167926982
+              ],
+              "downstream": 0.18383469137521657,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-064-h1": {
+      "group": [
+        128.0,
+        40
+      ],
+      "events": 474,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            323
+          ],
+          "friction_rows": [
+            379
+          ],
+          "alerts": [
+            323
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              323
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 323,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.2469804019312818,
+                0.02437091617146092,
+                0.42531115514926743
+              ],
+              "downstream": 0.0005509939319289968,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 379,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.15380046386442925,
+                0.33043724045815215,
+                0.051617258191694715
+              ],
+              "downstream": 0.4028219345799729,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [],
+          "friction_rows": [
+            379
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 323,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.03240569098849876,
+                0.038988909897551,
+                0.13648928577167868
+              ],
+              "downstream": 0.0005509939319289968,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  308
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 379,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.06106318445692992,
+                0.1545679945343952,
+                0.06078480756930407
+              ],
+              "downstream": 0.4028219345799729,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-071-h1": {
+      "group": [
+        128.0,
+        80
+      ],
+      "events": 495,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            286
+          ],
+          "friction_rows": [
+            381
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 286,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.2541638868833589,
+                0.11876781064616493,
+                0.39186744514862504
+              ],
+              "downstream": -0.20084420421580024,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 380,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.07116559744626927,
+                0.3013627295181649,
+                0.24678738491485586
+              ],
+              "downstream": 0.13142592469039996,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            380,
+            381,
+            382
+          ],
+          "friction_rows": [],
+          "alerts": [
+            380,
+            381,
+            382
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": [
+              380,
+              381,
+              382
+            ]
+          },
+          "at": {
+            "descent": {
+              "row": 286,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.12612692886212262,
+                0.16616683081120842,
+                0.2912733385160543
+              ],
+              "downstream": -0.20084420421580024,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  251
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 380,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.23900247810682645,
+                0.23889218291735184,
+                0.24482503326397506
+              ],
+              "downstream": 0.13142592469039996,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-039-h3": {
+      "group": [
+        54.0,
+        60
+      ],
+      "events": 414,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            285
+          ],
+          "friction_rows": [
+            378
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 285,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.2543682872332862,
+                0.11596052056875417,
+                0.38944104790242773
+              ],
+              "downstream": -0.20655159596781517,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 377,
+              "called": "background",
+              "two_way": "friction",
+              "distances": [
+                0.0702097695300441,
+                0.3114487994599464,
+                0.23800709976484202
+              ],
+              "downstream": 0.15441651639539128,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  371
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            377,
+            378,
+            379,
+            380,
+            381
+          ],
+          "friction_rows": [],
+          "alerts": [
+            377,
+            378,
+            379,
+            380,
+            381
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": [
+              377,
+              378,
+              379,
+              380,
+              381
+            ]
+          },
+          "at": {
+            "descent": {
+              "row": 285,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.1256683785786902,
+                0.1662099157474228,
+                0.291927971012572
+              ],
+              "downstream": -0.20655159596781517,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  251
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 377,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.23471487765760238,
+                0.2346502551958332,
+                0.24544970709089547
+              ],
+              "downstream": 0.15441651639539128,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-076-h1": {
+      "group": [
+        40.0,
+        100
+      ],
+      "events": 412,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            378
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.1610865629447784,
+                0.006960661709561666,
+                0.3034173856746347
+              ],
+              "downstream": -0.007006949862173753,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 378,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.17193532302823633,
+                0.48028831298813124,
+                0.04113994073332883
+              ],
+              "downstream": 0.15998302138324508,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            378
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.014743208007618793,
+                0.014167021361592933,
+                0.14618113154284942
+              ],
+              "downstream": -0.007006949862173753,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 378,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.0583355166887585,
+                0.14885941626051608,
+                0.05773044493685358
+              ],
+              "downstream": 0.15998302138324508,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-078-h1": {
+      "group": [
+        40.0,
+        100
+      ],
+      "events": 422,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            378
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.16013401717762976,
+                0.006673401075805607,
+                0.30479078932474124
+              ],
+              "downstream": -0.004579854291305188,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 378,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.17334291410097968,
+                0.4779656581182916,
+                0.042315473785191626
+              ],
+              "downstream": 0.1589246716986839,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            313
+          ],
+          "friction_rows": [
+            378
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 313,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.014901272697577132,
+                0.014325868826674689,
+                0.1467056934541923
+              ],
+              "downstream": -0.004579854291305188,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 378,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.058294036033978015,
+                0.1488817243102747,
+                0.057684932998043476
+              ],
+              "downstream": 0.1589246716986839,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  373
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "expanded-023-h1": {
+      "group": [
+        64.0,
+        40
+      ],
+      "events": 417,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [
+        "swap_early"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            386
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.22683096388365276,
+                0.0013434846902788955,
+                0.43561223800780313
+              ],
+              "downstream": -0.02200334168697657,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 386,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.16249293547900434,
+                0.31755697125212445,
+                0.058688828271181714
+              ],
+              "downstream": 0.34490581270091536,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            386
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.0038373714312867333,
+                0.003023152267235371,
+                0.11436196821003712
+              ],
+              "downstream": -0.02200334168697657,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 386,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.037607209365026095,
+                0.14733292949521903,
+                0.037404458168208296
+              ],
+              "downstream": 0.34490581270091536,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "controls": {
+    "175": {
+      "group": [
+        64,
+        40
+      ],
+      "events": 433,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [
+        "swap_early"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.21307908513532725,
+                0.004193237418522067,
+                0.41902126567934506
+              ],
+              "downstream": -0.022658504183840588,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 367,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.10443071815313054,
+                0.3173497856867993,
+                0.002876438690120775
+              ],
+              "downstream": 0.20606648368468583,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.0048251040308608375,
+                0.004076826479685281,
+                0.1125820391993767
+              ],
+              "downstream": -0.022658504183840588,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 367,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.00968009894976313,
+                0.11743874182484637,
+                0.009401543834794862
+              ],
+              "downstream": 0.20606648368468583,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "189": {
+      "group": [
+        64,
+        40
+      ],
+      "events": 441,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [
+        "swap_early"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.212968312539642,
+                0.004202254844322795,
+                0.4189504758520253
+              ],
+              "downstream": -0.02268492123046318,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 367,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.10432478680382973,
+                0.31743463690213525,
+                0.002848527651902355
+              ],
+              "downstream": 0.2056676339904129,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.004817663709723088,
+                0.004069872757720512,
+                0.1125673025510663
+              ],
+              "downstream": -0.02268492123046318,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 367,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.00965635012721863,
+                0.11741481797715778,
+                0.009377984878819568
+              ],
+              "downstream": 0.2056676339904129,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "387": {
+      "group": [
+        64,
+        40
+      ],
+      "events": 462,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [
+        "swap_early"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            318
+          ],
+          "friction_rows": [
+            402
+          ],
+          "alerts": [
+            318
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 336,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.5251927689299059,
+                0.7163073033124367,
+                0.7677823673416697
+              ],
+              "downstream": 0.027259900995490527,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  451
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            },
+            "friction": {
+              "row": 402,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.19587780304326485,
+                0.4810580070070125,
+                0.04376875841918659
+              ],
+              "downstream": 0.10932567879122025,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [],
+          "friction_rows": [
+            402
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 336,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.10509807913470037,
+                0.10729247568031616,
+                0.19433128608593264
+              ],
+              "downstream": 0.027259900995490527,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  316
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 402,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.13324738644885809,
+                0.1943112777246363,
+                0.13288005874303022
+              ],
+              "downstream": 0.10932567879122025,
+              "nearest": {
+                "background": [
+                  "origin_unfitted",
+                  380
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_unfitted",
+                  379
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "388": {
+      "group": [
+        64,
+        40
+      ],
+      "events": 440,
+      "correct_descent": true,
+      "correct_friction": true,
+      "operators": [
+        "+",
+        "-"
+      ],
+      "excluded_donors": [
+        "swap_early"
+      ],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.2104579993731055,
+                0.005380521319331422,
+                0.4155094511558375
+              ],
+              "downstream": -0.02397175688151362,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 367,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.10322802644798856,
+                0.31376738671644167,
+                0.003510272423531635
+              ],
+              "downstream": 0.19978402871961704,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_unfitted",
+                  323
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            312
+          ],
+          "friction_rows": [
+            367
+          ],
+          "alerts": [],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 312,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.005769944545924358,
+                0.005036134184208762,
+                0.11247975599266066
+              ],
+              "downstream": -0.02397175688151362,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  311
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 367,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.010708948442684982,
+                0.11747930476124582,
+                0.01043409900812553
+              ],
+              "downstream": 0.19978402871961704,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  365
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "reordered": {
+      "group": [
+        36,
+        20
+      ],
+      "events": 511,
+      "correct_descent": false,
+      "correct_friction": true,
+      "operators": [
+        "-",
+        "-"
+      ],
+      "excluded_donors": [],
+      "methods": {
+        "local": {
+          "descent_rows": [
+            258
+          ],
+          "friction_rows": [
+            348
+          ],
+          "alerts": [
+            258
+          ],
+          "alerts_in_episode": {
+            "descent": [
+              258
+            ],
+            "friction": []
+          },
+          "at": {
+            "descent": {
+              "row": 258,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.3162333597135365,
+                0.21614976730995772,
+                0.3029043981317461
+              ],
+              "downstream": 0.07148286821576494,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "origin_reference",
+                  366
+                ]
+              }
+            },
+            "friction": {
+              "row": 348,
+              "called": "friction",
+              "two_way": "friction",
+              "distances": [
+                0.30737564364509384,
+                0.6019023520002265,
+                0.2124421714179796
+              ],
+              "downstream": 0.21965508039192352,
+              "nearest": {
+                "background": [
+                  "origin_reference",
+                  367
+                ],
+                "descent": [
+                  "origin_reference",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        },
+        "prefix": {
+          "descent_rows": [
+            348,
+            349
+          ],
+          "friction_rows": [],
+          "alerts": [
+            348,
+            349
+          ],
+          "alerts_in_episode": {
+            "descent": [],
+            "friction": [
+              348,
+              349
+            ]
+          },
+          "at": {
+            "descent": {
+              "row": 258,
+              "called": "background",
+              "two_way": "descent",
+              "distances": [
+                0.11885935934531626,
+                0.25398328068483045,
+                0.34843730965570197
+              ],
+              "downstream": 0.07148286821576494,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  249
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            },
+            "friction": {
+              "row": 348,
+              "called": "descent",
+              "two_way": "descent",
+              "distances": [
+                0.24101338876740822,
+                0.24094010654934958,
+                0.25241239597262466
+              ],
+              "downstream": 0.21965508039192352,
+              "nearest": {
+                "background": [
+                  "swap_early",
+                  311
+                ],
+                "descent": [
+                  "swap_early",
+                  312
+                ],
+                "friction": [
+                  "swap_early",
+                  372
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "local": {
+      "descent": {
+        "called": {
+          "descent": 26,
+          "background": 4
+        },
+        "two_way": {
+          "descent": 28,
+          "friction": 2
+        }
+      },
+      "friction": {
+        "called": {
+          "friction": 22,
+          "background": 8
+        },
+        "two_way": {
+          "friction": 28,
+          "descent": 2
+        }
+      },
+      "wrong": {
+        "count": 15,
+        "target_alert": 15,
+        "friction_alert": 0,
+        "both_roles_named": 11,
+        "elsewhere": 2
+      },
+      "valid": {
+        "count": 15,
+        "target_alert": 3,
+        "friction_alert": 0,
+        "both_roles_named": 9,
+        "elsewhere": 2
+      }
+    },
+    "prefix": {
+      "descent": {
+        "called": {
+          "background": 12,
+          "descent": 18
+        },
+        "two_way": {
+          "descent": 30
+        }
+      },
+      "friction": {
+        "called": {
+          "friction": 18,
+          "background": 10,
+          "descent": 2
+        },
+        "two_way": {
+          "friction": 28,
+          "descent": 2
+        }
+      },
+      "wrong": {
+        "count": 15,
+        "target_alert": 13,
+        "friction_alert": 0,
+        "both_roles_named": 6,
+        "elsewhere": 0
+      },
+      "valid": {
+        "count": 15,
+        "target_alert": 0,
+        "friction_alert": 2,
+        "both_roles_named": 5,
+        "elsewhere": 6
+      }
+    }
+  },
+  "role_order": [
+    "background",
+    "descent",
+    "friction"
+  ],
+  "reference_bindings": [
+    {
+      "id": "origin_reference",
+      "group": [
+        16.0,
+        40
+      ],
+      "descent": [
+        312,
+        312
+      ],
+      "friction": [
+        366,
+        366
+      ]
+    },
+    {
+      "id": "swap_early",
+      "group": [
+        64.0,
+        40
+      ],
+      "descent": [
+        312,
+        312
+      ],
+      "friction": [
+        372,
+        372
+      ]
+    },
+    {
+      "id": "origin_unfitted",
+      "group": [
+        96.0,
+        30
+      ],
+      "descent": [
+        323,
+        323
+      ],
+      "friction": [
+        379,
+        379
+      ]
+    }
+  ],
+  "sources": {
+    "studies/04-round-2-overlap/runs/descent-operand-identity/operand.py": "9453cecdd38fa7970c8c21cfa4adb5570394e34fde61bf5b3f5713e88fcbae94",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/declaration.json": "d43ba0e3dd07b9c18a81471713880d30e600ab32cfed10fc9d0163fda39215b3",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/events.json": "4172ea30ae1ccc77f11474735af07e3b8a316bc2f20a6a15c5aced613fe92361",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/annotations/donor-phases.json": "c4a20a8d7049f12ffef2cdd120d7a41506076c5a3c904a15637a0ad6123ddc40",
+    "studies/04-round-2-overlap/runs/descent-operand-identity/episode-declaration.json": "c49182a2070a4bf4cf4119c559876340cbaba6e1dd10de1059cf3803952c79c0",
+    "studies/04-round-2-overlap/runs/descent-landmark-route-comparison/measure.py": "21fcf64a19cfa5ebcb15e15986bfd88437b5e8ce36c6890a99da885e74c03fd0",
+    "studies/04-round-2-overlap/runs/descent-landmark-route-comparison/registration-results.json": "e09f89a8848d6721cf98bcdd6080ec88542777105d24901fbcc4683bb914be17"
+  },
+  "prediction_vs_result": {
+    "local": {
+      "descent": {
+        "called": {
+          "descent": 26,
+          "background": 4
+        },
+        "two_way": {
+          "descent": 28,
+          "friction": 2
+        }
+      },
+      "friction": {
+        "called": {
+          "friction": 22,
+          "background": 8
+        },
+        "two_way": {
+          "friction": 28,
+          "descent": 2
+        }
+      },
+      "wrong": {
+        "count": 15,
+        "target_alert": 15,
+        "friction_alert": 0,
+        "both_roles_named": 11,
+        "elsewhere": 2
+      },
+      "valid": {
+        "count": 15,
+        "target_alert": 3,
+        "friction_alert": 0,
+        "both_roles_named": 9,
+        "elsewhere": 2
+      }
+    },
+    "prefix": {
+      "descent": {
+        "called": {
+          "background": 12,
+          "descent": 18
+        },
+        "two_way": {
+          "descent": 30
+        }
+      },
+      "friction": {
+        "called": {
+          "friction": 18,
+          "background": 10,
+          "descent": 2
+        },
+        "two_way": {
+          "friction": 28,
+          "descent": 2
+        }
+      },
+      "wrong": {
+        "count": 15,
+        "target_alert": 13,
+        "friction_alert": 0,
+        "both_roles_named": 6,
+        "elsewhere": 0
+      },
+      "valid": {
+        "count": 15,
+        "target_alert": 0,
+        "friction_alert": 2,
+        "both_roles_named": 5,
+        "elsewhere": 6
+      }
+    }
+  },
+  "failures_only": "Retrospective development cases. Background includes unadjudicated operations. One first event per trace is unscorable when two successive turns are required.",
+  "what_this_changes": "Tests operation recognition separately from classifying the downstream transformation and independently executing a weight repair."
+}

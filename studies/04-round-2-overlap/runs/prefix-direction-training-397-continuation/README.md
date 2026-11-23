@@ -1,0 +1,3 @@
+# Continuation to the preselected checkpoint 401
+
+The first segment installed seven updates. The native checkpoint at 397 retained its model and optimizer remainders when an archive readback failed. This segment restored the same measured state and installed the four remaining updates. The clean endpoint receipt binds the actual checkpoint and the acquired measurement. [Full training record](../../../../records/development/2026-11-18-prefix-direction-training/README.md) · [Measurements across both segments](result.json) · [Endpoint](evaluation-boundary.json) · [Held-out comparison](../prefix-direction-generalization/).

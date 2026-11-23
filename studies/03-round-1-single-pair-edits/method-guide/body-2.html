@@ -1,0 +1,148 @@
+
+<h2>4&nbsp;&nbsp;What a trace is, as numbers</h2>
+
+<h3>4.1&nbsp;&nbsp;One merge</h3>
+
+<p>Take one merge for one token. Call the stream arriving there <i>h</i> (1,536 numbers), the branch being added
+<i>b</i>, and the result <i>h'</i>&nbsp;=&nbsp;<i>h</i>&nbsp;+&nbsp;<i>b</i>. Because the next layer normalises the
+stream, what matters most is how the merge changed the stream's <em>direction</em>. So we measure the turn:</p>
+
+<div class="box"><p style="text-align:center"><b>T</b> = <i>h'</i>&nbsp;/&nbsp;|<i>h'</i>| &nbsp;−&nbsp;
+<i>h</i>&nbsp;/&nbsp;|<i>h</i>|</p>
+<p>Divide each vector by its length so both have length 1, then subtract. <b>T</b> is itself a list of 1,536 numbers:
+it says in which of the 1,536 directions the stream was pushed by this merge, and by how much.</p></div>
+
+<figure><img src="figures/fig2-turn.png" style="width:44%">
+<figcaption><b>Figure 2.</b> The turn at one merge, drawn in two dimensions instead of 1,536. The stream arrives as
+<i>h</i>, a branch <i>b</i> is added, and <b>T</b> is the step between the two directions on the unit circle. A large
+branch that points the same way as <i>h</i> produces almost no turn; a small branch at a sharp angle can produce a big
+one.</figcaption></figure>
+
+<h3>4.2&nbsp;&nbsp;One token, one answer</h3>
+
+<p>Do this at all 105 merges of a token, in order, and you get the token's <em>turn field</em>: 105 vectors of 1,536
+numbers, 161,280 numbers in all. That ordered list is the trace for one token. It records how each layer bent the running
+summary, step by step, from the token's arrival to the prediction of the next token. A trace for a whole answer is the
+same thing for every token, and every number is tied to the exact operation, weight matrix and earlier token that
+produced it.</p>
+
+<p>This is where the theory becomes measurable. A weight never appears in the trace directly. What appears is the effect
+of the weights on this particular signal, in this particular context. Two answers that use the same skill should share
+recognisable stretches of turning even when their numbers and wording differ.</p>
+
+<h3>4.3&nbsp;&nbsp;Where in the answer to look</h3>
+
+<p>Comparing whole answers token by token does not work once two answers have different text: token 200 in one answer is
+not "the same moment" as token 200 in another. So the comparison needs an anchor, a point where both answers are doing
+the same thing. Round two uses the point where the model writes the phrase "above the bottom of the <b>climb</b>" while
+setting up the required energy, and the five predictions leading into that word. That is where the descent either gets
+pulled into the climb (failure) or does not (success). For each failing answer, a successful answer is only compared at
+a position where both have just written the same previous token, so the two signals arrive from the same immediate
+context.</p>
+
+<p>Of the 18 failures and 27 successes, 14 failures and 23 successes contain that anchor with a valid comparison. These
+37 answers, at 5 positions each, are the construction data: 185 token-traces of 161,280 numbers.</p>
+
+<h2>5&nbsp;&nbsp;The target: what "closer to success" means</h2>
+
+<p>For a failing answer <i>f</i> at one of the five positions, collect its matched successful answers
+<i>s</i><sub>1</sub>,&nbsp;…,&nbsp;<i>s</i><sub><i>k</i></sub> and average their turn fields. The target is the
+difference:</p>
+
+<div class="box"><p style="text-align:center"><b>D</b><sub><i>f</i></sub> = average of
+<b>T</b><sub><i>s</i></sub> &nbsp;−&nbsp; <b>T</b><sub><i>f</i></sub></p>
+<p>"Turn the way the successes turned, at every one of the 105 merges." For a successful answer the target is zero:
+"keep turning exactly as you already do." Note what this does <em>not</em> say. It does not copy any successful
+answer's numbers or tokens into the failing one, and it does not mention the final answer at all.</p></div>
+
+<p>The quantity every step tries to shrink, the <em>objective</em>, is the weighted sum over all 37 answers, 5 positions
+and 105 merges of the squared distance between where the trace is and where its target says it should be. Two weighting
+rules keep it fair: every question counts equally within its group, and the failure group and the success group count
+equally overall. Without them, a long answer or a larger group would dominate.</p>
+
+<p>After an edit, the trace moves. The goal stays fixed at its original definition, so the remaining target for the next
+step is:</p>
+
+<div class="box"><p style="text-align:center">remaining = (original trace + <b>D</b>) &nbsp;−&nbsp; current trace</p>
+<p>This prevents a quiet drift in which each step re-defines success relative to the last edit. It also means that if
+an edit disturbs a successful answer, the next step tries to undo that disturbance.</p></div>
+
+<p>One design choice to keep in mind for the paper: the zero target for successes is a mild form of protection. Round
+one's A had nothing like it. It stays in every round-two variant and is stated as part of the round-two objective, with a
+separate run without it so its effect can be measured (Section&nbsp;9.4).</p>
+
+<h2>6&nbsp;&nbsp;Choosing where to edit</h2>
+
+<p>There are 276 weight matrices in the model that act on the stream (queries, keys, values, attention outputs,
+feed-forward gate, up and down, and the per-layer branch). Each one feeds a particular merge. The question for each is:
+<em>if I could change only this matrix, how much of the target at the merge it feeds could I explain from the inputs it
+actually sees?</em></p>
+
+<p>That is answered with a prediction test. For every matrix we take its recorded input vectors from the 185
+token-traces and try to predict the target at its merge from them, using ridge regression: a least-squares fit with a
+penalty that keeps the fit small and stable. The fit is scored the strict way: one whole question is left out at a time,
+the fit is built from the others, and it is judged on the question it never saw. A matrix whose inputs only "explain"
+the target by memorising individual questions scores nothing. The strength of the penalty is chosen by the same
+leave-one-question-out score.</p>
+
+<p>The location chosen is the matrix with the largest held-out share of the target, weighted by how much target sits at
+its merge. For step&nbsp;1 that was layer&nbsp;11's feed-forward down projection: its inputs predicted 11.9% of the
+target at its merge on questions they had not seen, the best of the 276. An analogy: you have a leak somewhere
+downstream and 276 valves upstream. For each valve you ask whether its own readings, across many days, would have
+predicted the leak on a day it did not see. The valve whose readings predict best is where you act first.</p>
+
+<p>Note that this test says where an edit <em>can</em> act. It does not say the capability lives there. Construction 01
+learned that the hard way: it chose locations by a different signal (where the attention heads looked) and its
+directions turned out to be almost unrelated to the target.</p>
+
+<h2>7&nbsp;&nbsp;Solving for the change</h2>
+
+<p>Knowing where, the next question is what change to make. The answer comes from running the computation backwards
+from the target to the weights. The exact way depends on what lies between the matrix and the merge it feeds. Three
+cases came up.</p>
+
+<h3>7.1&nbsp;&nbsp;A simple branch (step 1, layer 11 down projection)</h3>
+
+<p>Between layer&nbsp;11's down projection and its merge there are only two operations: the output is normalised (RMS
+norm), multiplied by a learned scale, and added to the stream. Those can be inverted exactly. For each of the 185
+token-traces we ask: <em>what output from this matrix would have produced the target turn at this merge?</em> Because
+the normalisation fixes the output's size, the answer is a new output of the same size but a different direction; it is
+found by solving a small quadratic equation, and when the full target is out of reach, the largest reachable fraction is
+found by bisection.</p>
+
+<p>That gives, for each token-trace, an input <i>x</i> the matrix actually saw and the change <i>Δy</i> its output
+should have had. The weight change is then the matrix <i>ΔW</i> that best maps every <i>x</i> to its <i>Δy</i>, again
+with ridge regression and the leave-one-question-out choice of penalty. One matrix, fitted to all 37 answers at once, so
+it must find what the failures have in common rather than fix each one separately.</p>
+
+<h3>7.2&nbsp;&nbsp;A shared cache (step 2, layer 14 keys and values)</h3>
+
+<p>Layer&nbsp;14's key and value matrices are harder, because their output is not added to the stream directly. Each
+token's key and value are written into the cache, and five later layers read them. Changing these two matrices changes
+the cache entry of every earlier token in the answer, which changes what all five readers see at the five positions.
+There is no single quadratic to solve here.</p>
+
+<p>Instead we write down the chain of effects and linearise it: how a small change to the key and value matrices changes
+the normalised keys and values, how the rotation that encodes token position carries that change, how the attention
+weights shift (the softmax), how the blended values change, how the output projection and its normalisation pass that
+on, and how the turn at each of the five merges responds. Linearising means: for small changes, effects add up and scale
+in proportion, so the whole chain becomes one very large matrix that maps a weight change to a trace change. Here it
+maps 1.57&nbsp;million weight numbers to 1.42&nbsp;million trace numbers.</p>
+
+<p>A system that large is not solved directly. It is solved with LSMR, an iterative method that improves a guess step by
+step and, started from zero, returns the <em>smallest</em> weight change that fits the target as well as possible. It
+stops once further improvement would be smaller than the precision with which we can reconstruct the model's own
+arithmetic, because chasing detail below that precision would be fitting noise. The method only needs to apply the chain
+forwards and backwards; the backward version (the "adjoint") was checked to be the exact mirror of the forward one.</p>
+
+<p>Gemma's cache sharing made this step cleaner than it sounds. Because layers 15 to 34 reuse layer&nbsp;14's cache and
+write none of their own, changing layer&nbsp;14's keys and values changes no other cache. The only effect the
+linearised chain leaves out is what happens after the merge within the same token. That is why its prediction matched the
+measured result so closely (Section&nbsp;8).</p>
+
+<h3>7.3&nbsp;&nbsp;A gated feed-forward branch (step 3, layer 13, rejected)</h3>
+
+<p>The third step tried layer&nbsp;13's gate, up and down matrices together, linearised through the GeGLU activation the
+same way. The mathematics checked out, but the full solution was enormous (29% to 72% of each matrix's size), its linear
+prediction did not survive the real nonlinearity, and even a much smaller version made the measured trace worse. It was
+rejected on the trace objective itself, before any answers were looked at.</p>

@@ -1,0 +1,72 @@
+{
+  "run_by": "Astra, correspondence and interpretation reviewed with Fable",
+  "registration": {
+    "declaration_commit": "b3a792a5",
+    "prior_diagnostic": "records/retrospectives/2026-11-10-complete-overlap-registration",
+    "prior_outcome_known": true,
+    "new_arrays_recomputed": true,
+    "not_a_blind_prediction_or_independent_replication": true
+  },
+  "population": {
+    "correct": 30,
+    "wrong": 30,
+    "source_members": 60,
+    "pair_files": 60,
+    "captured_native_steps": 30546,
+    "represented_native_steps": 30546,
+    "previous_represented_native_steps": 22349,
+    "merges_per_step": 105,
+    "axis": "expanded-089-h3",
+    "axis_steps": 480
+  },
+  "prediction_vs_result": {
+    "predicted": "The disclosed diagnostic outcome is already known: expect the same complete correspondence and overlap when recomputed after the declaration commit.",
+    "observed": [
+      "All 30546 captured native steps from all 60 members are represented, at all 105 merges.",
+      "All 62 pair/pattern files have identical SHA-256 values to the retired diagnostic: True. Every stored recurrence array is identical: True.",
+      "The longest continuous interval above the existing twice-sampling-variation reporting baseline is 142\u2013313; its gap/variation ratio is 5.802, and median split-half cosine is 0.825.",
+      "Across the whole path, gap/variation is 3.540 and median split-half cosine is 0.665."
+    ],
+    "not_predicted": []
+  },
+  "failures_only": {
+    "scope": "Original-model observations only. No weight edit, new answer, capability repair or held-out generalization measured in this run.",
+    "coverage": "No captured native step or source member omitted; this does not assert that generation-limited source responses were complete answers."
+  },
+  "what_this_changes": [
+    "The correction target and native-step correspondence are available from a precommitted calculation without losing intermediate source steps or rewarding longer positive-similarity paths.",
+    "The recurring separation survives the correspondence correction, which does not itself establish a causal capability signature or a successful repair.",
+    "Construction must use native individual states/inputs and one averaged target per native step, not replace those states with the per-axis group summary."
+  ],
+  "reporting_yardstick": {
+    "measured_from": "recurrence.npz and the existing split-half baseline derivation",
+    "derivation": "Average expected squared distance between two halves of a group, 4*spread/n, over the two groups; this is twice the full-group sampling-variation estimate. This is a descriptive expectation, not a significance test.",
+    "scales_with": "Member counts, spread and correspondence."
+  },
+  "limitations": [
+    "Global DTW matches all steps but does not establish causal or semantic identity.",
+    "The reference axis is one wrong answer. A correct native step can be repeated over several axis places; original identities and multiplicities are retained in the pair files.",
+    "A shortened natural response must not be called repaired merely because it can be stretched over the reference axis.",
+    "Neighboring axis positions and related question variants are not independent samples.",
+    "Fable reviewed the numerically identical retired diagnostic and highlighted the single-axis stretching limitation; no places were excluded by hand."
+  ],
+  "solver_interface": {
+    "member_order": "members.json",
+    "pairs": "pairs/<id>.npy: int32[n_pairs,2], native_step then axis_place",
+    "patterns": "correct-pattern.npy, wrong-pattern.npy: [axis_places,105,1536]",
+    "recurrence": "recurrence.npz: gap, chance, halves, within, shared_part",
+    "native_targets": "pipeline.overlap.complete_overlap.native_targets(place_values,pairs,steps); mask place targets before averaging, then use each native input/state exactly once"
+  },
+  "records": [
+    "members.json",
+    "alignment.json",
+    "pairs/<id>.npy",
+    "correct-pattern.npy",
+    "wrong-pattern.npy",
+    "recurrence.npz",
+    "reproduction.json",
+    "align.out",
+    "overlap.out"
+  ],
+  "bulk_storage": "Arrays remain local under this run; not uploaded in this pass."
+}

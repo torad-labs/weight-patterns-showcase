@@ -1,0 +1,165 @@
+{
+ "method_step": 3,
+ "operation": "frozen-energy-generalization",
+ "model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+ "why_this_direction": "Independent of training and detector selection, test whether earlier climb repair and later downhill repair coexist in the same freely generated answers and survive numerical and wording changes.",
+ "repeating_pattern_check": "Older studies reported aggregate verdicts, reused screening families, and conflated a changed downstream value with an incorrect friction operation. Match all endpoints on the same crossed cases, report every operation and count physical families separately.",
+ "hypothesis": "On interpolated velocities, a frozen checkpoint can simultaneously add the released descent energy, remove the friction loss from its own available energy, and compute the final climb. A lower fitted trace loss may correspond to more such repairs.",
+ "prediction": "Relative to the original, an edited endpoint will produce more complete locally valid energy chains across the eight novel formulations, while retaining originally correct operations. Secondary: compare 175 vs 189 on every family at the large known fitted-loss drop and 390 against both. The result can differ by wording or show interference.",
+ "would_weaken_it": "An unchanged or lower number of correct novel energy chains, regressions or effects limited to one wording, and an unchanged or worse endpoint at the lower fitted loss weaken the transfer/ranking claims. If the original already gets every case correct, repair is unobservable here.",
+ "what_went_wrong_before": "Transferred behavior and verified training signals were conflated, including when target and reference both used subtraction for different physical roles.",
+ "rule": "Frozen original, 175, 189 and 390. Cross two speeds absent from the construction cohort but present in earlier historical work and both public drop heights at the fitted mass/friction and 3 m final climb with both existing templates. All eight cases and the three known anchors are generated on the identical GPU and native engine. No case supplies gradients or selects a checkpoint. Independent, checkpoint-blind arithmetic audit. Retain pairs and all raw outcomes. Family count is four. These are parameter-novel cases under two known prompt templates, on one model. The sealed cohort remains untouched. Measured block-20 incoming and outgoing states trace the registered feed-forward operation for the entire response; full held trace loss is not estimated from those two vectors.",
+ "scoring": "For every original/edited generation record applied signs with signed-operand convention, initial energy, bottom energy, locally conditional friction, post-friction available, required climb, verdict and complete numerical chain. Missing/unreadable operations are unresolved and retained. Count repairs, regressions, preservation and persistence on paired prompts by checkpoint and report by family/template. Show both the model-local friction relation and the absolute available energy. No optimization on this panel or reuse as final blind test for later transplants.",
+ "parameters": {
+  "panel": {
+   "measured_from": "studies/04-round-2-overlap/inputs/acquisition/expanded-cases.json",
+   "derivation": "Original public speeds 4,6,8 yield the two integer midpoints 5,7. Cross both original drop heights 1,2 with the two original wording families. The fitted m=2 and Q=13 and historical high required height h=3 are held fixed.",
+   "scales_with": "ordered public speeds and observed template and drop domains"
+  },
+  "decode": {
+   "measured_from": "studies/04-round-2-overlap/inputs/acquisition/discovery-00-cases.json",
+   "derivation": "Use the same registered 768-token public screen cap and retain capped rows as unresolved unless all scored operations are explicit.",
+   "scales_with": "native screen and model context"
+  }
+ },
+ "states": [
+  "original",
+  "175",
+  "189",
+  "390"
+ ],
+ "cpu_threads": 1,
+ "physical_gpu": 1,
+ "gpu_uuid": "GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb",
+ "hardware": "1, NVIDIA GeForce RTX 5070 Ti, GPU-b5795c82-5cf3-03e8-f92c-9289c133dedb, 12.0",
+ "program": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/evaluate.py",
+  "sha256": "919f2400823f2574d5840cef5ff0cbac9d852271f09dbe8e9ddd0daa4f32ba42"
+ },
+ "panel": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/panel.json",
+  "sha256": "a00b977894ad8c612030ecc59af8a65b96da7beb3d036d52c1018c3a3dd88f33"
+ },
+ "previous_profile": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/declaration.json",
+  "sha256": "851f86d2c1a115a6f83d189f375519ad8195198c976fe23e96cc1f2960c15081"
+ },
+ "latest": {
+  "checkpoint": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-state.json",
+   "sha256": "29187bb4943fea3bd17975a453ca41b4483438aafce9904ad1f5bf4c43a9721f"
+  },
+  "checkpoint_manifest": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/state.json",
+   "sha256": "d135eb8e8db9171599005afba851acdf2f74628520d51eb2b1dbceebf667ea49"
+  },
+  "seed": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+   "sha256": "0dfed0e7f5e0430e693def81549785baf863e4dd9a4f337f8d584d709a6d2a1a"
+  },
+  "loss_identity": {
+   "loss_version": "single-original-vector-chance/1",
+   "reference_sha256": "26b338685cad5fe5367c8bec91693f1e2374d6f5a836b62462924c5e44b7bee4",
+   "tolerance_sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48",
+   "tolerance_policy": "retained-original-chance"
+  },
+  "native_payload": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/native.bin",
+   "sha256": "f0b626e285d6bc4ee2d88bc5c5f891400b24aaf3ac118d8109807b46871acf68"
+  },
+  "remainder_payload": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/remainder.f32",
+   "sha256": "9d35643cd6d6192b8fd8c9e01d1cc370a2a6621392a97210f7808dbdb48784bb"
+  }
+ },
+ "storage": {
+  "free_floor_bytes": 40000000000,
+  "capture_reserve_bytes": 3606388736,
+  "sizing": {
+   "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/storage-sizing.json",
+   "sha256": "632e432ea92b1a9bac6576af676aa25bc4cfad2a6ab66b423b114faa1d719214"
+  }
+ },
+ "observability": {
+  "format": "weight-patterns-observability/1",
+  "entrypoint": "studies/04-round-2-overlap/runs/frozen-energy-generalization/evaluate.py",
+  "events": "observability/events.jsonl",
+  "mode": "direct Recorder API",
+  "operations": [
+   "state.restore",
+   "native.capture"
+  ],
+  "sources": [
+   {
+    "record": "code/signal-trace/pipeline/observability/recorder.py",
+    "sha256": "041ed8e208dd2362d3d3fd3b054e68913c4f23c41bd12c361c44ab8604e5a7c3"
+   },
+   {
+    "record": "records/development/2026-11-16-factor-direction/native.py",
+    "sha256": "d9a5fe418d3ec09a65c9de0a1e96b5064dea405a620ce845be8682c5ab9f1601"
+   },
+   {
+    "record": "records/development/2026-11-17-reference-preservation/profile.py",
+    "sha256": "161cb82a1c26e1bad408d1efd62390efe7c61d9cf6418e0c40b35da86f668a5c"
+   },
+   {
+    "record": "records/development/2026-11-17-reference-preservation/run.py",
+    "sha256": "f317ce28ba6a667f536c70948ccdef21ff8619129f280902133e6edc242b2a4b"
+   },
+   {
+    "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/evaluate.py",
+    "sha256": "919f2400823f2574d5840cef5ff0cbac9d852271f09dbe8e9ddd0daa4f32ba42"
+   }
+  ],
+  "context_fields": [
+   "member",
+   "candidate",
+   "candidate_evaluation_index",
+   "historical_update",
+   "checkpoint_sha256",
+   "reference_sha256",
+   "physical_gpu",
+   "gpu_uuid"
+  ]
+ },
+ "inputs": [
+  "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/declaration.json",
+  "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/declaration.json",
+  "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/loop/42/measurement.json",
+  "models/gemma4/gemma4-e2b/gguf-bf16-bartowski/google_gemma-4-E2B-it-bf16.gguf",
+  "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/loop/9/reading/reading.json",
+  "studies/04-round-2-overlap/runs/vector-chance-working-from-update-3/declaration.json",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/vector-chance-loss-rise-diagnosis/reached11-complete-acquisition/cases.json",
+  "studies/04-round-2-overlap/inputs/acquisition/discovery-00-cases.json",
+  "studies/04-round-2-overlap/inputs/acquisition/discovery-01-cases.json",
+  "studies/04-round-2-overlap/inputs/acquisition/discovery-02-cases.json",
+  "studies/04-round-2-overlap/inputs/acquisition/discovery-03-cases.json",
+  "studies/04-round-2-overlap/inputs/acquisition/expanded-cases.json",
+  "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+  "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/native.bin",
+  "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/remainder.f32",
+  "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-state.json",
+  "studies/04-round-2-overlap/runs/vector-chance-final-experiment-installed-348-recovery/final-checkpoint/state.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/final-state.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/loop/1/measurement.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/final-overrides.npz",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-state.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/loop/14/measurement.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-overrides.npz",
+  "studies/04-round-2-overlap/runs/vector-chance-reference-preservation-348/cases.json",
+  "studies/04-round-2-overlap/runs/vector-chance-development-transfer-348/cases.json",
+  "studies/04-round-2-overlap/runs/frozen-energy-generalization/panel.json",
+  "studies/04-round-2-overlap/inputs/acquisition/fresh-cases.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/frozen-energy-generalization"
+ ],
+ "design_review": {
+  "record": "records/retrospectives/2026-11-18-generalization-design-review.md",
+  "sha256": "113be1e343e476590d0bb5e574e50bfc3076a75d5c75d5abe3e1d333c0a6ae1e"
+ },
+ "previous_use": "Both velocities occurred in the historical 40-case suite. All four full (mass, speed, drop, friction, rise) tuples here differ from that suite and the current development cohort. These are new parameter combinations with familiar templates. No new model or domain is claimed.",
+ "loss_provenance": "175 and 189 fitted losses are the historical observations. Check the free fitted anchor at each checkpoint. 390 fitted loss came from GPU0; all paired behavioral endpoints here use GPU1. The sparse FF20 capture cannot provide the full held loss.",
+ "panel_comparison_file": "studies/04-round-2-overlap/inputs/acquisition/fresh-cases.json"
+}

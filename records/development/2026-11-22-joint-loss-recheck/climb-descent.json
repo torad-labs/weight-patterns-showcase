@@ -1,0 +1,112 @@
+{
+ "sources": [
+  "~/Documents/dev/infra/observability/mlflow/artifacts/6/6972d351a0f14afcbe8406fa875680df/artifacts/steps"
+ ],
+ "cells_ever_registered": 8896,
+ "cells_in_every_revision": 5325,
+ "revisions": [
+  {
+   "revision": "joint-stock-climb-descent-training 0",
+   "as_logged": 0.018396207051632342,
+   "cells_found": 8896,
+   "cells_lost": 0,
+   "carried": 0.018396207051632342,
+   "carried_by_role": {
+    "preservation": 0.00042806501587396386,
+    "failing": 0.017968142035758392
+   },
+   "common": 0.01562841236838424,
+   "lost": []
+  },
+  {
+   "revision": "joint-stock-climb-descent-training 1",
+   "as_logged": 0.018378707898148404,
+   "cells_found": 8896,
+   "cells_lost": 0,
+   "carried": 0.0183787078981484,
+   "carried_by_role": {
+    "preservation": 0.0004256543517291556,
+    "failing": 0.017953053546419243
+   },
+   "common": 0.015613838485079978,
+   "lost": []
+  },
+  {
+   "revision": "joint-stock-climb-descent-training 2",
+   "as_logged": 0.022417853522885774,
+   "cells_found": 7473,
+   "cells_lost": 1423,
+   "carried": 0.022421556880229277,
+   "carried_by_role": {
+    "preservation": 0.0045001118753104094,
+    "failing": 0.01792144500491885
+   },
+   "common": 0.01966513556849837,
+   "lost": [
+    {
+     "member": "expanded-004-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 37,
+     "charged": 2.24837456267783e-06
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 1050,
+     "charged": 1.1129178791707054e-06
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 5,
+     "charged": 3.3302535726185256e-07
+    },
+    {
+     "member": "expanded-004-h1",
+     "operation": "downhill",
+     "role": "preservation",
+     "cells": 331,
+     "charged": 9.039544394086964e-09
+    }
+   ]
+  },
+  {
+   "revision": "joint-stock-climb-descent-training 3",
+   "as_logged": 0.016528738970559908,
+   "cells_found": 6743,
+   "cells_lost": 2153,
+   "carried": 0.019281789950304575,
+   "carried_by_role": {
+    "preservation": 0.001395046312306669,
+    "failing": 0.01788674363799792
+   },
+   "common": 0.016525334676598835,
+   "lost": [
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "downhill",
+     "role": "failing",
+     "cells": 331,
+     "charged": 0.0026661210829288457
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "friction",
+     "role": "preservation",
+     "cells": 1785,
+     "charged": 8.61061859554757e-05
+    },
+    {
+     "member": "discovery-05-channel-h1",
+     "operation": "climb",
+     "role": "preservation",
+     "cells": 37,
+     "charged": 8.237108603465031e-07
+    }
+   ]
+  }
+ ]
+}

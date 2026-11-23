@@ -1,0 +1,259 @@
+{
+  "reference": "expanded-004-h1",
+  "source_definition": {
+    "record": "studies/04-round-2-overlap/runs/functional-layout-original/definition.json",
+    "sha256": "efd390a5fafeff948940bcf541ed43fef1821f9530279898cbe24d7ba449731b"
+  },
+  "source_model_sha256": "6a737131362433969a148503c92ef28cf7cf80648ac8ec74af19413a331b575c",
+  "original_successes": [
+    "discovery-01-channel-h1",
+    "discovery-06-channel-h1",
+    "discovery-15-channel-h1",
+    "discovery-00-channel-h3",
+    "expanded-004-h1",
+    "discovery-08-channel-h3",
+    "discovery-10-channel-h3",
+    "expanded-029-h1",
+    "discovery-11-channel-h3",
+    "expanded-064-h1",
+    "expanded-071-h1",
+    "expanded-039-h3",
+    "expanded-076-h1",
+    "expanded-078-h1",
+    "expanded-023-h1"
+  ],
+  "original_turns": {
+    "discovery-01-channel-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-01-channel-h1.npy",
+      "sha256": "c10113a7345a2dea9efea69fed8eaa647ac4e92fd332d0f2b118ef074bfaa37a",
+      "shape": [
+        560,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "discovery-06-channel-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-06-channel-h1.npy",
+      "sha256": "8b333898c6ba4fc4b23af2a1a245bb71a187b00dbef9b530211df1add957d67c",
+      "shape": [
+        581,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "discovery-15-channel-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-15-channel-h1.npy",
+      "sha256": "f455c14adfde4eee8db01cb225b1093e31009255856c9c4817e397bd8159a824",
+      "shape": [
+        633,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "discovery-00-channel-h3": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-00-channel-h3.npy",
+      "sha256": "54ab69d512a05b9a3867ce01c9d6507e0c48da90b51035f544acbfd760c10426",
+      "shape": [
+        798,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-004-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+      "sha256": "1b7ccbe9996af857f98d8a213fa3461e3cdd42f57906d4518f2b2f775184b2af",
+      "shape": [
+        560,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "discovery-08-channel-h3": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-08-channel-h3.npy",
+      "sha256": "daaee4ebd02b7cd15381a3d4eb4d785d283dc61493c1fb54fefe4f565d1ffc6b",
+      "shape": [
+        628,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "discovery-10-channel-h3": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-10-channel-h3.npy",
+      "sha256": "8a59000a98ea9b6e269713e261050e71cdea8e15a3900bcef702e411a49cd1d8",
+      "shape": [
+        663,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-029-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-029-h1.npy",
+      "sha256": "b61cd349f1420432075f141f6d0d0b9a502ed09768d3f34812bdd20065e7524f",
+      "shape": [
+        586,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "discovery-11-channel-h3": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/discovery-11-channel-h3.npy",
+      "sha256": "0f98bcf280b0f15c85074335e7dc2e541a828532ef522f9f22685784f62a2565",
+      "shape": [
+        580,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-064-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-064-h1.npy",
+      "sha256": "a687c3b38c7417244e0551530bf88e0da35977ef5bfb0825a10677cd7e565d91",
+      "shape": [
+        646,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-071-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-071-h1.npy",
+      "sha256": "450371368a53b62fd46e759de8114377f98970d5c9ad153fa53ded621ae82bcb",
+      "shape": [
+        667,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-039-h3": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-039-h3.npy",
+      "sha256": "ac5b1f7865fbb6da411746b5a445aabe67e750502edfa0d73050f7b4dbdfe2ae",
+      "shape": [
+        586,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-076-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-076-h1.npy",
+      "sha256": "79250fdbe9494b740764999a509338f86ac7ec5459c38cbab6b42e76783cdd55",
+      "shape": [
+        584,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-078-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-078-h1.npy",
+      "sha256": "485fd86f6728ad6ef2a03fbe4a74bdb4f14a188d93a517e17bbc434766f9eaa5",
+      "shape": [
+        594,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    },
+    "expanded-023-h1": {
+      "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-023-h1.npy",
+      "sha256": "fbdfd1dc3ca504f372b8777bbe8786fb49506623a95b34f09cfdd80268f168e5",
+      "shape": [
+        589,
+        105,
+        1536
+      ],
+      "dtype": "float64"
+    }
+  },
+  "trace": {
+    "record": "studies/04-round-2-overlap/runs/turn-reference-original/original-turns/expanded-004-h1.npy",
+    "sha256": "1b7ccbe9996af857f98d8a213fa3461e3cdd42f57906d4518f2b2f775184b2af",
+    "shape": [
+      560,
+      105,
+      1536
+    ],
+    "dtype": "float64"
+  },
+  "correspondence": {
+    "record": "studies/04-round-2-overlap/runs/turn-reference-original/correspondence.json",
+    "sha256": "1984f939d7a969a5d69cdb602de61c18bd21fe3035275a81fe1a0e28fff5c120"
+  },
+  "scores": {
+    "discovery-01-channel-h1": 0.03100610155278395,
+    "discovery-06-channel-h1": 0.04502176501994862,
+    "discovery-15-channel-h1": 0.04803960179217414,
+    "discovery-00-channel-h3": 0.07555509138624937,
+    "expanded-004-h1": 0.03100051941122387,
+    "discovery-08-channel-h3": 0.04792759518271519,
+    "discovery-10-channel-h3": 0.051817305990139104,
+    "expanded-029-h1": 0.03949057786159315,
+    "discovery-11-channel-h3": 0.035548176536241594,
+    "expanded-064-h1": 0.0456305768829257,
+    "expanded-071-h1": 0.06454795212134681,
+    "expanded-039-h3": 0.05148450418889721,
+    "expanded-076-h1": 0.03887950997716135,
+    "expanded-078-h1": 0.04207716803629802,
+    "expanded-023-h1": 0.0387893359193299
+  },
+  "format": "single-original-vector-chance/1",
+  "complete": true,
+  "compiled_at": "2026-11-15T22:16:08.883524-06:00",
+  "basis": {
+    "record": "studies/04-round-2-overlap/runs/turn-reference-original/reference.json",
+    "sha256": "1be12cf319a120c009917218f3567a2fbed1fa48b5fc7dc1f90b1dbc3c5cc80d"
+  },
+  "chance": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/chance.npy",
+    "sha256": "0e5975708d8e1c8c6409aa8000180c847af52ea27a3cd30b0b9fbe89baf73d48",
+    "shape": [
+      560,
+      105
+    ],
+    "dtype": "float64"
+  },
+  "within": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/within.npy",
+    "sha256": "e2c048cab4e426b2b742f3abd54057de8c2085ab1492d3c4cfade3b7954e61a4",
+    "shape": [
+      560,
+      105
+    ],
+    "dtype": "float64"
+  },
+  "between": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/between.npy",
+    "sha256": "d2591358c8b4e572beb84975544d0aedd09403fa04192e496e59e237a81d4526",
+    "shape": [
+      560,
+      105
+    ],
+    "dtype": "float64"
+  },
+  "offset": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/offset.npy",
+    "sha256": "87e83fda9b5df699e72c194cf9fe1de119c2c4e43450c7523d06d1faac53acf3",
+    "shape": [
+      560,
+      105
+    ],
+    "dtype": "float64"
+  },
+  "coverage": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-original/original-coverage.json",
+    "sha256": "d00983ecf45d7645897bf96287efbd781b1ebac0b1aa719ef91ee42b7bae7956"
+  },
+  "normalization": "canonical-cpu-float64",
+  "chance_definition": "mean nonself witness mean mapped-event squared whole-turn distance to the fixed reference; not a population-mean standard error",
+  "boundary": "norm(current_turn - reference_turn) <= sqrt(2 * original_chance)",
+  "native_loop_admitted": false
+}

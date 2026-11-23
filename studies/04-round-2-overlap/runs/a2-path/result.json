@@ -1,0 +1,4273 @@
+{
+ "run": "a2-path",
+ "model": "model/a2-path.gguf",
+ "model_sha256": "b46dcd1049d74115b3fa9a0b9626cdabb9147e439f1b3ca6a92417b1c0f0b4b0",
+ "what_was_built": "18 of the 70 declared matrices: attention output and feed-forward down of layers 0 to 8, in path order, each fitted on the wrong answers' rows as they arrive in the model with the earlier edits. All 18 were written; each changes 5% to 12% of its matrix. The build was stopped there before any answer of the edited model existed (declaration, third revision): on the 19th matrix the fit left the regime the solver was built for, and the rows read on the given text had drifted by about the whole move. The 52 later matrices are the original model's.",
+ "answers_on_its_own": {
+  "how": "The edited model answers the 60 questions of the overlap and round one's 28 on its own, greedy, on GPU0. The same judge reads the original and the edited answer. Every answer that is not complete after the edit was read in full by Astra for its first actual error (answer-error-review.md and .json); that reading explains, it does not change the score.",
+  "groups": {
+   "overlap, were wrong": {
+    "answers": 30,
+    "complete_before": 0,
+    "complete_after": 17,
+    "add_the_descent_after": 29,
+    "stopped_at_limit_after": 1,
+    "first_error_of_those_not_complete": {
+     "post_climb_energy_reported_as_available": 5,
+     "climb_added_to_remaining_energy": 3,
+     "initial_kinetic_arithmetic": 2,
+     "post_climb_energy_reused_for_reachability": 1,
+     "descent_subtracted": 1,
+     "descent_formula_numeric_disagreement": 1
+    }
+   },
+   "overlap, were correct": {
+    "answers": 30,
+    "complete_before": 30,
+    "complete_after": 18,
+    "add_the_descent_after": 26,
+    "stopped_at_limit_after": 3,
+    "first_error_of_those_not_complete": {
+     "descent_subtracted": 4,
+     "climb_added_to_remaining_energy": 1,
+     "initial_kinetic_arithmetic": 4,
+     "climb_plus_descent_height": 1,
+     "post_climb_energy_reported_as_available": 2
+    }
+   },
+   "round one, were wrong": {
+    "answers": 21,
+    "complete_before": 0,
+    "complete_after": 7,
+    "add_the_descent_after": 11,
+    "stopped_at_limit_after": 4,
+    "first_error_of_those_not_complete": {
+     "initial_kinetic_arithmetic": 7,
+     "descent_subtracted": 2,
+     "absolute_energy_compared_with_relative_climb": 1,
+     "descent_removed_from_total_mechanical_energy": 2,
+     "self_corrected_descent_double_count": 1,
+     "descent_omitted": 1
+    }
+   },
+   "round one, were correct": {
+    "answers": 7,
+    "complete_before": 7,
+    "complete_after": 3,
+    "add_the_descent_after": 6,
+    "stopped_at_limit_after": 1,
+    "first_error_of_those_not_complete": {
+     "post_climb_energy_reported_as_available": 2,
+     "initial_kinetic_arithmetic": 1,
+     "descent_subtracted": 1
+    }
+   }
+  },
+  "the_calculation_the_edit_aimed_at": "Before the edit 30 of the 60 answers of the overlap add the descent and 30 subtract it. After it, 55 add it and 5 subtract it: 29 of the 30 that subtracted now add it (17 are complete; 12 add it and fail on something else), and 4 of the 30 that added it now subtract it.",
+  "new_errors": "The edited model makes errors the original did not, in both groups alike: the after-climb remainder reported as the available energy, the climb cost added to the remaining energy, the kinetic energy computed as twice or half its value. 17 of the 30 that were wrong and 18 of the 30 that were correct are complete: after the edit the two groups answer alike.",
+  "how_it_writes": "No answer keeps its text. 49 of the 60 answers of the overlap open with another sentence than the original's, and the answers are longer (median 529 to 578 steps for those that were wrong, 438 to 544 for those that were correct). Four answers of the overlap and five of round one stop at the limit."
+ },
+ "own_traces": {
+  "how": "Each of the 60 answers of the edited model is recorded with the turns of its own computation, laid on the same axis by the computation alone, and read against the original correct and wrong patterns two ways: the turns of the 104 merges after the first (the registered overlap of the turns) and the state after each of the 70 matrices (state-overlap, what the edit aims at). Each place and merge counts by its shared gap where the patterns diverge. 0 is the wrong pattern, 1 the correct one; sideways and travelled are in gaps.",
+  "sections": {
+   "turns": {
+    "whole path": {
+     "wrong_towards_the_correct_pattern": 0.73,
+     "wrong_sideways_in_gaps": 1.28,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.44,
+     "correct_travelled_in_gaps": 1.54,
+     "gap_between_the_groups_after_over_before": 0.65
+    },
+    "before 142": {
+     "wrong_towards_the_correct_pattern": 0.69,
+     "wrong_sideways_in_gaps": 2.57,
+     "wrong_left_to_the_original_correct_pattern_over_before": 2.89,
+     "correct_travelled_in_gaps": 3.15,
+     "gap_between_the_groups_after_over_before": 0.87
+    },
+    "places 142-313": {
+     "wrong_towards_the_correct_pattern": 0.77,
+     "wrong_sideways_in_gaps": 1.03,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.16,
+     "correct_travelled_in_gaps": 1.26,
+     "gap_between_the_groups_after_over_before": 0.53
+    },
+    "places 314-456": {
+     "wrong_towards_the_correct_pattern": 0.52,
+     "wrong_sideways_in_gaps": 1.17,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.32,
+     "correct_travelled_in_gaps": 1.29,
+     "gap_between_the_groups_after_over_before": 0.81
+    },
+    "places 457-479": {
+     "wrong_towards_the_correct_pattern": 0.65,
+     "wrong_sideways_in_gaps": 0.99,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.13,
+     "correct_travelled_in_gaps": 1.17,
+     "gap_between_the_groups_after_over_before": 0.52
+    }
+   },
+   "states": {
+    "whole path": {
+     "wrong_towards_the_correct_pattern": 0.75,
+     "wrong_sideways_in_gaps": 1.29,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.44,
+     "correct_travelled_in_gaps": 1.55,
+     "gap_between_the_groups_after_over_before": 0.65
+    },
+    "before 142": {
+     "wrong_towards_the_correct_pattern": 0.69,
+     "wrong_sideways_in_gaps": 2.7,
+     "wrong_left_to_the_original_correct_pattern_over_before": 3.02,
+     "correct_travelled_in_gaps": 3.32,
+     "gap_between_the_groups_after_over_before": 0.9
+    },
+    "places 142-313": {
+     "wrong_towards_the_correct_pattern": 0.79,
+     "wrong_sideways_in_gaps": 1.04,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.15,
+     "correct_travelled_in_gaps": 1.27,
+     "gap_between_the_groups_after_over_before": 0.54
+    },
+    "places 314-456": {
+     "wrong_towards_the_correct_pattern": 0.55,
+     "wrong_sideways_in_gaps": 1.18,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.32,
+     "correct_travelled_in_gaps": 1.29,
+     "gap_between_the_groups_after_over_before": 0.81
+    },
+    "places 457-479": {
+     "wrong_towards_the_correct_pattern": 0.68,
+     "wrong_sideways_in_gaps": 0.97,
+     "wrong_left_to_the_original_correct_pattern_over_before": 1.1,
+     "correct_travelled_in_gaps": 1.15,
+     "gap_between_the_groups_after_over_before": 0.51
+    }
+   }
+  },
+  "first_merge_alone_places_142_313_towards_the_correct_pattern": 0.56,
+  "likeness_of_each_step_to_the_axis": {
+   "were_wrong": {
+    "original": 0.83,
+    "edited": 0.78
+   },
+   "were_correct": {
+    "original": 0.85,
+    "edited": 0.78
+   }
+  },
+  "size_of_the_state_edited_over_original": {
+   "were_wrong": {
+    "median": 0.995,
+    "least": 0.672,
+    "most": 1.498,
+    "after_the_last_merge": 0.998
+   },
+   "were_correct": {
+    "median": 1.001,
+    "least": 0.668,
+    "most": 1.558,
+    "after_the_last_merge": 0.996
+   }
+  },
+  "each_answer_places_142_313_states": {
+   "were_wrong": {
+    "original": {
+     "median": -0.026,
+     "least": -0.243,
+     "most": 0.299
+    },
+    "edited": {
+     "median": 0.757,
+     "least": 0.489,
+     "most": 1.239
+    }
+   },
+   "were_correct": {
+    "original": {
+     "median": 1.027,
+     "least": 0.381,
+     "most": 1.348
+    },
+    "edited": {
+     "median": 0.756,
+     "least": 0.297,
+     "most": 1.257
+    }
+   }
+  },
+  "trace_and_calculation": {
+   "what": "Whether the written calculation adds the descent, against where the answer's own trace lies between the two patterns over places 142 to 313 (states), for the 60 answers of the edited model.",
+   "add_the_descent": {
+    "answers": 55,
+    "median": 0.794,
+    "least": 0.489,
+    "most": 1.257
+   },
+   "subtract_it": {
+    "answers": 5,
+    "values": [
+     0.297,
+     0.472,
+     0.473,
+     0.586,
+     0.618
+    ]
+   },
+   "share_of_pairs_where_the_answer_that_adds_it_lies_nearer_the_correct_pattern": 0.911,
+   "limit": "Five answers on one side, and the two ranges overlap (0.49 is the least of those that add it; 0.59 and 0.62 subtract it). The movement to the side occurs together with the new errors; that it causes them is not shown, and the changed wording of the answers can itself move the traces to the side. Complete or not is not told apart by this position (median 0.75 complete, 0.79 not): the new errors are of other kinds than the one the gap is about."
+  }
+ },
+ "construction_readings": {
+  "note": "Readings of the build on the given text. They are not a test, and they did not predict the answers: read before the 19th matrix, the wrong answers' moving steps had 0.55 of the move along it and 0.128 rms beside it (move 0.125), further from the target in squared distance than before any edit, and the model that reading described repairs 17 of 30 on its own.",
+  "matrices": [
+   {
+    "layer": 0,
+    "kind": "attention",
+    "tensor": "blk.0.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 4.4928675969328285e-06,
+    "other_half_left_over_asked": 0.662,
+    "halves_agree": 0.645,
+    "change_over_matrix": 0.0636,
+    "state_apart_from_original_before_this_edit_rms": 0.0,
+    "move_rms": 0.0398,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0048,
+    "moving_rows": {
+     "asked_rms": 0.0398,
+     "moved_rms": 0.0222,
+     "share_of_ask_reached": 0.521
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0,
+     "moved_rms": 0.0085
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0,
+     "moved_rms": 0.0137
+    },
+    "fit": {
+     "steps": 44,
+     "shortened": 2,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 7.351441569546485e-05
+    },
+    "seconds": 57.1
+   },
+   {
+    "layer": 0,
+    "kind": "feedforward",
+    "tensor": "blk.0.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 9.593892784410651e-05,
+    "other_half_left_over_asked": 0.7543,
+    "halves_agree": 0.612,
+    "change_over_matrix": 0.098,
+    "state_apart_from_original_before_this_edit_rms": 0.0172,
+    "move_rms": 0.0671,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0123,
+    "moving_rows": {
+     "asked_rms": 0.0596,
+     "moved_rms": 0.03,
+     "share_of_ask_reached": 0.438
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.01,
+     "moved_rms": 0.011
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0159,
+     "moved_rms": 0.0187
+    },
+    "fit": {
+     "steps": 88,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.0006720009793685862
+    },
+    "seconds": 195.6
+   },
+   {
+    "layer": 1,
+    "kind": "attention",
+    "tensor": "blk.1.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 7.62939453125e-06,
+    "other_half_left_over_asked": 0.6213,
+    "halves_agree": 0.657,
+    "change_over_matrix": 0.0531,
+    "state_apart_from_original_before_this_edit_rms": 0.0153,
+    "move_rms": 0.051,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0059,
+    "moving_rows": {
+     "asked_rms": 0.0459,
+     "moved_rms": 0.0281,
+     "share_of_ask_reached": 0.564
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0096,
+     "moved_rms": 0.0107
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0141,
+     "moved_rms": 0.018
+    },
+    "fit": {
+     "steps": 48,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.00025787049191937177
+    },
+    "seconds": 51.4
+   },
+   {
+    "layer": 1,
+    "kind": "feedforward",
+    "tensor": "blk.1.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 9.593892784410651e-05,
+    "other_half_left_over_asked": 0.7523,
+    "halves_agree": 0.583,
+    "change_over_matrix": 0.0855,
+    "state_apart_from_original_before_this_edit_rms": 0.028,
+    "move_rms": 0.0733,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0118,
+    "moving_rows": {
+     "asked_rms": 0.0572,
+     "moved_rms": 0.0286,
+     "share_of_ask_reached": 0.454
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0149,
+     "moved_rms": 0.0123
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0258,
+     "moved_rms": 0.0193
+    },
+    "fit": {
+     "steps": 83,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.0004669057321821429
+    },
+    "seconds": 171.6
+   },
+   {
+    "layer": 2,
+    "kind": "attention",
+    "tensor": "blk.2.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00011196909487317561,
+    "other_half_left_over_asked": 0.7976,
+    "halves_agree": 0.544,
+    "change_over_matrix": 0.1178,
+    "state_apart_from_original_before_this_edit_rms": 0.0376,
+    "move_rms": 0.0941,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0146,
+    "moving_rows": {
+     "asked_rms": 0.0692,
+     "moved_rms": 0.032,
+     "share_of_ask_reached": 0.382
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0176,
+     "moved_rms": 0.0138
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0349,
+     "moved_rms": 0.0215
+    },
+    "fit": {
+     "steps": 48,
+     "shortened": 1,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.0002888569387933463
+    },
+    "seconds": 51.2
+   },
+   {
+    "layer": 2,
+    "kind": "feedforward",
+    "tensor": "blk.2.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00046977967271900407,
+    "other_half_left_over_asked": 0.7439,
+    "halves_agree": 0.531,
+    "change_over_matrix": 0.0827,
+    "state_apart_from_original_before_this_edit_rms": 0.0675,
+    "move_rms": 0.1657,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0534,
+    "moving_rows": {
+     "asked_rms": 0.1395,
+     "moved_rms": 0.0712,
+     "share_of_ask_reached": 0.45
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0306,
+     "moved_rms": 0.0279
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0618,
+     "moved_rms": 0.0467
+    },
+    "fit": {
+     "steps": 67,
+     "shortened": 2,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.0003435790530144616
+    },
+    "seconds": 144.2
+   },
+   {
+    "layer": 3,
+    "kind": "attention",
+    "tensor": "blk.3.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 7.765961913844251e-05,
+    "other_half_left_over_asked": 0.7556,
+    "halves_agree": 0.546,
+    "change_over_matrix": 0.0862,
+    "state_apart_from_original_before_this_edit_rms": 0.0351,
+    "move_rms": 0.0821,
+    "length_part_of_the_move_no_direction_can_deliver": 0.011,
+    "moving_rows": {
+     "asked_rms": 0.0644,
+     "moved_rms": 0.0322,
+     "share_of_ask_reached": 0.428
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0168,
+     "moved_rms": 0.0141
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0322,
+     "moved_rms": 0.0225
+    },
+    "fit": {
+     "steps": 41,
+     "shortened": 4,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.00014325826498028343
+    },
+    "seconds": 50.2
+   },
+   {
+    "layer": 3,
+    "kind": "feedforward",
+    "tensor": "blk.3.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00032583018111973877,
+    "other_half_left_over_asked": 0.7226,
+    "halves_agree": 0.54,
+    "change_over_matrix": 0.1035,
+    "state_apart_from_original_before_this_edit_rms": 0.0427,
+    "move_rms": 0.1176,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0347,
+    "moving_rows": {
+     "asked_rms": 0.0995,
+     "moved_rms": 0.0524,
+     "share_of_ask_reached": 0.507
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0212,
+     "moved_rms": 0.0202
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0391,
+     "moved_rms": 0.0353
+    },
+    "fit": {
+     "steps": 72,
+     "shortened": 2,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.00020492580722400228
+    },
+    "seconds": 182.8
+   },
+   {
+    "layer": 4,
+    "kind": "attention",
+    "tensor": "blk.4.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 2.2866453228241085e-05,
+    "other_half_left_over_asked": 0.7959,
+    "halves_agree": 0.53,
+    "change_over_matrix": 0.1022,
+    "state_apart_from_original_before_this_edit_rms": 0.0282,
+    "move_rms": 0.0649,
+    "length_part_of_the_move_no_direction_can_deliver": 0.008,
+    "moving_rows": {
+     "asked_rms": 0.0475,
+     "moved_rms": 0.0208,
+     "share_of_ask_reached": 0.373
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0138,
+     "moved_rms": 0.0098
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0264,
+     "moved_rms": 0.0138
+    },
+    "fit": {
+     "steps": 32,
+     "shortened": 3,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 9.240601988718625e-05
+    },
+    "seconds": 76.9
+   },
+   {
+    "layer": 4,
+    "kind": "feedforward",
+    "tensor": "blk.4.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00020728912092830642,
+    "other_half_left_over_asked": 0.7211,
+    "halves_agree": 0.584,
+    "change_over_matrix": 0.1152,
+    "state_apart_from_original_before_this_edit_rms": 0.035,
+    "move_rms": 0.093,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0172,
+    "moving_rows": {
+     "asked_rms": 0.0754,
+     "moved_rms": 0.0397,
+     "share_of_ask_reached": 0.463
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0183,
+     "moved_rms": 0.0167
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0327,
+     "moved_rms": 0.0255
+    },
+    "fit": {
+     "steps": 92,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.000572300493861521
+    },
+    "seconds": 199.0
+   },
+   {
+    "layer": 5,
+    "kind": "attention",
+    "tensor": "blk.5.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.000287543526203701,
+    "other_half_left_over_asked": 0.937,
+    "halves_agree": 0.408,
+    "change_over_matrix": 0.0695,
+    "state_apart_from_original_before_this_edit_rms": 0.0377,
+    "move_rms": 0.0804,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0125,
+    "moving_rows": {
+     "asked_rms": 0.051,
+     "moved_rms": 0.0122,
+     "share_of_ask_reached": 0.143
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.017,
+     "moved_rms": 0.0078
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0348,
+     "moved_rms": 0.0095
+    },
+    "fit": {
+     "steps": 26,
+     "shortened": 0,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.0005967839675131856
+    },
+    "seconds": 55.3
+   },
+   {
+    "layer": 5,
+    "kind": "feedforward",
+    "tensor": "blk.5.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.0001220703125,
+    "other_half_left_over_asked": 0.777,
+    "halves_agree": 0.498,
+    "change_over_matrix": 0.0974,
+    "state_apart_from_original_before_this_edit_rms": 0.0446,
+    "move_rms": 0.0987,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0204,
+    "moving_rows": {
+     "asked_rms": 0.073,
+     "moved_rms": 0.0332,
+     "share_of_ask_reached": 0.393
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.022,
+     "moved_rms": 0.0168
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0408,
+     "moved_rms": 0.0233
+    },
+    "fit": {
+     "steps": 64,
+     "shortened": 3,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.00017830128193104913
+    },
+    "seconds": 135.8
+   },
+   {
+    "layer": 6,
+    "kind": "attention",
+    "tensor": "blk.6.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 5.872245908987551e-05,
+    "other_half_left_over_asked": 0.8999,
+    "halves_agree": 0.451,
+    "change_over_matrix": 0.0726,
+    "state_apart_from_original_before_this_edit_rms": 0.0366,
+    "move_rms": 0.0771,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0097,
+    "moving_rows": {
+     "asked_rms": 0.0512,
+     "moved_rms": 0.0166,
+     "share_of_ask_reached": 0.229
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.015,
+     "moved_rms": 0.0079
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0328,
+     "moved_rms": 0.0117
+    },
+    "fit": {
+     "steps": 25,
+     "shortened": 4,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.00015846429916253782
+    },
+    "seconds": 43.0
+   },
+   {
+    "layer": 6,
+    "kind": "feedforward",
+    "tensor": "blk.6.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.0001693312603374766,
+    "other_half_left_over_asked": 0.761,
+    "halves_agree": 0.501,
+    "change_over_matrix": 0.1031,
+    "state_apart_from_original_before_this_edit_rms": 0.0532,
+    "move_rms": 0.1096,
+    "length_part_of_the_move_no_direction_can_deliver": 0.021,
+    "moving_rows": {
+     "asked_rms": 0.0838,
+     "moved_rms": 0.0414,
+     "share_of_ask_reached": 0.451
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0253,
+     "moved_rms": 0.0178
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0478,
+     "moved_rms": 0.0282
+    },
+    "fit": {
+     "steps": 59,
+     "shortened": 1,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.00028384170772656806
+    },
+    "seconds": 138.9
+   },
+   {
+    "layer": 7,
+    "kind": "attention",
+    "tensor": "blk.7.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 7.765961913844251e-05,
+    "other_half_left_over_asked": 0.8913,
+    "halves_agree": 0.494,
+    "change_over_matrix": 0.0958,
+    "state_apart_from_original_before_this_edit_rms": 0.058,
+    "move_rms": 0.1072,
+    "length_part_of_the_move_no_direction_can_deliver": 0.017,
+    "moving_rows": {
+     "asked_rms": 0.0751,
+     "moved_rms": 0.0255,
+     "share_of_ask_reached": 0.242
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.029,
+     "moved_rms": 0.0141
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0518,
+     "moved_rms": 0.0188
+    },
+    "fit": {
+     "steps": 46,
+     "shortened": 3,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.00019900668822879546
+    },
+    "seconds": 57.3
+   },
+   {
+    "layer": 7,
+    "kind": "feedforward",
+    "tensor": "blk.7.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.00020728912092830642,
+    "other_half_left_over_asked": 0.7995,
+    "halves_agree": 0.497,
+    "change_over_matrix": 0.0962,
+    "state_apart_from_original_before_this_edit_rms": 0.0769,
+    "move_rms": 0.1281,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0262,
+    "moving_rows": {
+     "asked_rms": 0.1042,
+     "moved_rms": 0.0468,
+     "share_of_ask_reached": 0.39
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0392,
+     "moved_rms": 0.0225
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0712,
+     "moved_rms": 0.0339
+    },
+    "fit": {
+     "steps": 53,
+     "shortened": 4,
+     "restarts": 1,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.000187502703636382
+    },
+    "seconds": 381.4
+   },
+   {
+    "layer": 8,
+    "kind": "attention",
+    "tensor": "blk.8.attn_output.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 7.765961913844251e-05,
+    "other_half_left_over_asked": 0.8647,
+    "halves_agree": 0.512,
+    "change_over_matrix": 0.1218,
+    "state_apart_from_original_before_this_edit_rms": 0.0857,
+    "move_rms": 0.1295,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0219,
+    "moving_rows": {
+     "asked_rms": 0.1073,
+     "moved_rms": 0.041,
+     "share_of_ask_reached": 0.27
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0432,
+     "moved_rms": 0.0217
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.0809,
+     "moved_rms": 0.0312
+    },
+    "fit": {
+     "steps": 38,
+     "shortened": 2,
+     "restarts": 0,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 0.000386016708510734
+    },
+    "seconds": 160.6
+   },
+   {
+    "layer": 8,
+    "kind": "feedforward",
+    "tensor": "blk.8.ffn_down.weight",
+    "written": true,
+    "ridge_over_strongest_direction": 0.0007675114227528521,
+    "other_half_left_over_asked": 0.6305,
+    "halves_agree": 0.566,
+    "change_over_matrix": 0.0621,
+    "state_apart_from_original_before_this_edit_rms": 0.1054,
+    "move_rms": 0.1346,
+    "length_part_of_the_move_no_direction_can_deliver": 0.0223,
+    "moving_rows": {
+     "asked_rms": 0.1295,
+     "moved_rms": 0.0698,
+     "share_of_ask_reached": 0.43
+    },
+    "rest_of_wrong_path": {
+     "asked_rms": 0.0666,
+     "moved_rms": 0.048
+    },
+    "correct_answers": {
+     "apart_before_rms": 0.1017,
+     "moved_rms": 0.0596
+    },
+    "fit": {
+     "steps": 62,
+     "shortened": 0,
+     "restarts": 2,
+     "ended": "no step along the gradient lowers what float32 can state",
+     "gradient_left": 8.000965351475913e-05
+    },
+    "seconds": 438.5
+   }
+  ]
+ },
+ "prediction_vs_result": {
+  "building": "Not as predicted. The matrices built reach 14% to 56% of what they are asked on the fitted rows, not most of it. On the moving rows every matrix after the first is asked for less than the original gap of its state (0.63 to 0.96 of it: the earlier edits carried part), but the rows asked to keep their state do not drift by a small part of the move: by layer 9 they are about one move away. The middle layers were never built.",
+  "on_the_path": "Partly. The edited model reads the question and writes the whole calculation, unlike a2-sent and a2-diverge, which left at the ninth token. It does not stay on the original path where the groups follow each other: it opens with another sentence and, before place 142, its traces lie 2.6 to 2.7 gaps to the side (the gaps there are small).",
+  "traces": "Along the gap, as predicted: over places 142 to 313 the answers that were wrong moved 0.77 (turns) and 0.79 (states) of the way to the correct pattern, and every one of the 30 moved (from between -0.24 and 0.30 to between 0.49 and 1.24). In full distance, not as predicted: they are 1.16 (turns) and 1.15 (states) times as far from the original correct pattern as before, because they also moved about one gap to the side, and so did the correct answers (1.26 gaps travelled). Elsewhere they did not stay with their own pattern. The two groups are 0.53 as far apart as before over places 142 to 313.",
+  "answers": "As predicted: 17 of the 30 wrong answers have the available energy right, more than not, and 29 of the 30 add the descent. Some correct answers broke, as predicted for a rung with no protection: 12 of 30.",
+  "would_weaken_it": "The result that would have weakened the hypothesis (the traces follow the correct pattern and the answers still subtract the descent) did not occur: the traces moved along the gap and 29 of 30 stopped subtracting, and the five answers that subtract after the edit tend to lie less far towards the correct pattern than the 55 that add it (0.30 to 0.62 against 0.49 to 1.26; ordered in 91% of pairs, so the two overlap). The result that would have faulted the construction occurred in part: the model left the original path sideways, in both groups."
+ },
+ "failures_only": {
+  "note": "Every answer with its fields before and after, whether its written calculation adds the descent, its first error when it is not complete (Astra's reading), and for the 60 of the overlap where its own trace lies between the two patterns. Correct answers that broke and round one's 28 are in the same list, marked by set and group.",
+  "answers": [
+   {
+    "id": "discovery-05-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 91.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.033,
+      "edited": 0.749
+     },
+     "turns": {
+      "original": 0.021,
+      "edited": 0.726
+     }
+    }
+   },
+   {
+    "id": "discovery-05-channel-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 91.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 11.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 91.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.177,
+      "edited": 0.74
+     },
+     "turns": {
+      "original": 0.2,
+      "edited": 0.715
+     }
+    }
+   },
+   {
+    "id": "discovery-10-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 55.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 85.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "The numerical chain reaches 115 J before the climb, then reports the 85 J remaining after the climb as available energy.",
+    "first_error_kind": "post_climb_energy_reported_as_available",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.299,
+      "edited": 1.017
+     },
+     "turns": {
+      "original": 0.307,
+      "edited": 0.971
+     }
+    }
+   },
+   {
+    "id": "discovery-11-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 21.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.052,
+      "edited": 0.529
+     },
+     "turns": {
+      "original": -0.066,
+      "edited": 0.525
+     }
+    }
+   },
+   {
+    "id": "discovery-17-channel-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 31.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.008,
+      "edited": 1.094
+     },
+     "turns": {
+      "original": -0.014,
+      "edited": 1.091
+     }
+    }
+   },
+   {
+    "id": "expanded-001-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Correctly reaches 20 J before the climb and zero after it, but reports the zero as available energy.",
+    "first_error_kind": "post_climb_energy_reported_as_available",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.13,
+      "edited": 0.874
+     },
+     "turns": {
+      "original": -0.091,
+      "edited": 0.832
+     }
+    }
+   },
+   {
+    "id": "expanded-001-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 20.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -20.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 80.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Adds the uphill potential-energy requirement to the kinetic energy remaining instead of subtracting it, then infers reachability from that sum.",
+    "first_error_kind": "climb_added_to_remaining_energy",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.111,
+      "edited": 0.867
+     },
+     "turns": {
+      "original": -0.077,
+      "edited": 0.821
+     }
+    }
+   },
+   {
+    "id": "expanded-014-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 56.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -24.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 38.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Evaluates one-half times 2 times 6 squared as 18 J rather than 36 J.",
+    "first_error_kind": "initial_kinetic_arithmetic",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.243,
+      "edited": 0.744
+     },
+     "turns": {
+      "original": -0.212,
+      "edited": 0.715
+     }
+    }
+   },
+   {
+    "id": "expanded-020-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 136.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Evaluates one-half times 2 times 8 squared as 128 J rather than 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.032,
+      "edited": 0.918
+     },
+     "turns": {
+      "original": -0.031,
+      "edited": 0.883
+     }
+    }
+   },
+   {
+    "id": "expanded-022-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "After correctly calculating 24 J remaining at the destination, divides that remainder by mg and treats 1.2 m as the maximum height from the climb's bottom.",
+    "first_error_kind": "post_climb_energy_reused_for_reachability",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.087,
+      "edited": 0.748
+     },
+     "turns": {
+      "original": -0.094,
+      "edited": 0.719
+     }
+    }
+   },
+   {
+    "id": "expanded-034-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 4.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.156,
+      "edited": 0.49
+     },
+     "turns": {
+      "original": -0.16,
+      "edited": 0.465
+     }
+    }
+   },
+   {
+    "id": "expanded-040-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 114.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 54.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Correctly computes 114 J before the climb and 84 J after it, then reports 84 as available.",
+    "first_error_kind": "post_climb_energy_reported_as_available",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.293,
+      "edited": 0.995
+     },
+     "turns": {
+      "original": 0.3,
+      "edited": 0.947
+     }
+    }
+   },
+   {
+    "id": "expanded-042-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 106.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 46.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 106.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.104,
+      "edited": 1.001
+     },
+     "turns": {
+      "original": -0.106,
+      "edited": 0.952
+     }
+    }
+   },
+   {
+    "id": "expanded-044-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 24.0,
+      "required": 90.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 144.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.164,
+      "edited": 0.524
+     },
+     "turns": {
+      "original": 0.171,
+      "edited": 0.517
+     }
+    }
+   },
+   {
+    "id": "expanded-045-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 140.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 110.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Reports the 110 J remaining after the climb rather than the correctly computed 140 J at its start.",
+    "first_error_kind": "post_climb_energy_reported_as_available",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.02,
+      "edited": 1.014
+     },
+     "turns": {
+      "original": -0.028,
+      "edited": 0.966
+     }
+    }
+   },
+   {
+    "id": "expanded-046-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 30.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 136.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.049,
+      "edited": 0.518
+     },
+     "turns": {
+      "original": -0.066,
+      "edited": 0.511
+     }
+    }
+   },
+   {
+    "id": "expanded-046-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 136.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 16.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Adds the negative potential-energy change to kinetic energy, reducing it during descent.",
+    "first_error_kind": "descent_subtracted",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.066,
+      "edited": 0.586
+     },
+     "turns": {
+      "original": -0.082,
+      "edited": 0.577
+     }
+    }
+   },
+   {
+    "id": "expanded-058-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 92.0,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 12.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 132.0,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "The descent equation says KE_i minus PE_1 but substitutes plus 40 and obtains the correct 112; the symbolic rule and arithmetic disagree.",
+    "first_error_kind": "descent_formula_numeric_disagreement",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.149,
+      "edited": 0.53
+     },
+     "turns": {
+      "original": -0.154,
+      "edited": 0.518
+     }
+    }
+   },
+   {
+    "id": "expanded-068-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 196.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 196.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.072,
+      "edited": 0.586
+     },
+     "turns": {
+      "original": 0.067,
+      "edited": 0.575
+     }
+    }
+   },
+   {
+    "id": "expanded-069-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 192.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 32.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 192.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.011,
+      "edited": 1.016
+     },
+     "turns": {
+      "original": -0.017,
+      "edited": 0.972
+     }
+    }
+   },
+   {
+    "id": "expanded-070-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 188.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.032,
+      "edited": 0.516
+     },
+     "turns": {
+      "original": 0.008,
+      "edited": 0.513
+     }
+    }
+   },
+   {
+    "id": "expanded-070-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 188.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 28.0,
+      "required": 92.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Reports 68 J remaining after the climb rather than the correctly computed 188 J before it.",
+    "first_error_kind": "post_climb_energy_reported_as_available",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.049,
+      "edited": 1.017
+     },
+     "turns": {
+      "original": -0.056,
+      "edited": 0.974
+     }
+    }
+   },
+   {
+    "id": "expanded-087-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 166.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": -34.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 166.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.214,
+      "edited": 0.82
+     },
+     "turns": {
+      "original": -0.185,
+      "edited": 0.794
+     }
+    }
+   },
+   {
+    "id": "expanded-089-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 194.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 94.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 344.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Adds the uphill potential-energy requirement to the remaining energy.",
+    "first_error_kind": "climb_added_to_remaining_energy",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.269,
+      "edited": 0.763
+     },
+     "turns": {
+      "original": 0.277,
+      "edited": 0.734
+     }
+    }
+   },
+   {
+    "id": "expanded-092-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 248.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 48.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 248.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.128,
+      "edited": 1.165
+     },
+     "turns": {
+      "original": 0.11,
+      "edited": 1.159
+     }
+    }
+   },
+   {
+    "id": "expanded-093-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 244.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 44.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 294.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Adds the uphill requirement to remaining energy instead of subtracting it.",
+    "first_error_kind": "climb_added_to_remaining_energy",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.11,
+      "edited": 0.751
+     },
+     "turns": {
+      "original": 0.099,
+      "edited": 0.725
+     }
+    }
+   },
+   {
+    "id": "expanded-094-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.073,
+      "edited": 0.489
+     },
+     "turns": {
+      "original": -0.089,
+      "edited": 0.48
+     }
+    }
+   },
+   {
+    "id": "expanded-094-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 240.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 240.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.163,
+      "edited": 0.52
+     },
+     "turns": {
+      "original": -0.168,
+      "edited": 0.503
+     }
+    }
+   },
+   {
+    "id": "expanded-095-h1",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 50.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 236.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": -0.011,
+      "edited": 0.974
+     },
+     "turns": {
+      "original": -0.027,
+      "edited": 0.95
+     }
+    }
+   },
+   {
+    "id": "expanded-095-h3",
+    "set": "overlap",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 236.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 36.0,
+      "required": 150.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 236.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.164,
+      "edited": 1.239
+     },
+     "turns": {
+      "original": 0.162,
+      "edited": 1.226
+     }
+    }
+   },
+   {
+    "id": "discovery-01-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.214,
+      "edited": 0.744
+     },
+     "turns": {
+      "original": 1.222,
+      "edited": 0.714
+     }
+    }
+   },
+   {
+    "id": "expanded-021-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 88.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 88.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.974,
+      "edited": 0.757
+     },
+     "turns": {
+      "original": 0.932,
+      "edited": 0.727
+     }
+    }
+   },
+   {
+    "id": "discovery-06-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 43.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 43.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Newly subtracts the descent contribution from kinetic energy, yielding -6 J instead of 54 J.",
+    "first_error_kind": "descent_subtracted",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.342,
+      "edited": 0.473
+     },
+     "turns": {
+      "original": 1.337,
+      "edited": 0.452
+     }
+    }
+   },
+   {
+    "id": "discovery-07-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 69.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 69.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 69.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.381,
+      "edited": 0.512
+     },
+     "turns": {
+      "original": 0.385,
+      "edited": 0.502
+     }
+    }
+   },
+   {
+    "id": "discovery-15-channel-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 135.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 135.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.801,
+      "edited": 0.54
+     },
+     "turns": {
+      "original": 0.802,
+      "edited": 0.545
+     }
+    }
+   },
+   {
+    "id": "expanded-003-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 12.0,
+     "requiredJ": 20,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 12.0,
+      "required": 20.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.304,
+      "edited": 0.865
+     },
+     "turns": {
+      "original": 1.294,
+      "edited": 0.826
+     }
+    }
+   },
+   {
+    "id": "discovery-00-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 27.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 27.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 87.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly adds the climb requirement to the correctly computed 27 J before the climb and treats the sum as proof of reachability.",
+    "first_error_kind": "climb_added_to_remaining_energy",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.975,
+      "edited": 0.878
+     },
+     "turns": {
+      "original": 0.968,
+      "edited": 0.832
+     }
+    }
+   },
+   {
+    "id": "expanded-006-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.985,
+      "edited": 0.754
+     },
+     "turns": {
+      "original": 0.962,
+      "edited": 0.728
+     }
+    }
+   },
+   {
+    "id": "expanded-004-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 44.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 44.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.211,
+      "edited": 0.737
+     },
+     "turns": {
+      "original": 1.219,
+      "edited": 0.704
+     }
+    }
+   },
+   {
+    "id": "expanded-018-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 64.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 64.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 68.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly evaluates one-half times 2 times 8 squared as 128 rather than 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.033,
+      "edited": 0.794
+     },
+     "turns": {
+      "original": 1.031,
+      "edited": 0.761
+     }
+    }
+   },
+   {
+    "id": "discovery-08-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 73.0,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 73.0,
+      "required": 90.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 73.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.253,
+      "edited": 0.988
+     },
+     "turns": {
+      "original": 1.267,
+      "edited": 0.949
+     }
+    }
+   },
+   {
+    "id": "expanded-024-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 42.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 42.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 30.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Newly subtracts the descent contribution, obtaining -6 J instead of 54 J.",
+    "first_error_kind": "descent_subtracted",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.336,
+      "edited": 0.472
+     },
+     "turns": {
+      "original": 1.329,
+      "edited": 0.451
+     }
+    }
+   },
+   {
+    "id": "discovery-10-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 115.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 115.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.255,
+      "edited": 1.001
+     },
+     "turns": {
+      "original": 1.27,
+      "edited": 0.952
+     }
+    }
+   },
+   {
+    "id": "expanded-028-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 72.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 72.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": 18.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly adds the 2 m descent to the 1 m climb and computes a 90 J requirement rather than 30 J.",
+    "first_error_kind": "climb_plus_descent_height",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.463,
+      "edited": 1.257
+     },
+     "turns": {
+      "original": 0.468,
+      "edited": 1.256
+     }
+    }
+   },
+   {
+    "id": "expanded-029-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Newly subtracts the 60 J downhill gain from 24 J, producing -36 J instead of 84 J.",
+    "first_error_kind": "descent_subtracted",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.383,
+      "edited": 0.618
+     },
+     "turns": {
+      "original": 0.387,
+      "edited": 0.592
+     }
+    }
+   },
+   {
+    "id": "expanded-022-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 84.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 84.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 148.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly computes one-half times 2 times 8 squared as 128 J instead of 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.105,
+      "edited": 0.903
+     },
+     "turns": {
+      "original": 1.108,
+      "edited": 0.868
+     }
+    }
+   },
+   {
+    "id": "discovery-11-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 141.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 141.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.17,
+      "edited": 0.565
+     },
+     "turns": {
+      "original": 1.162,
+      "edited": 0.552
+     }
+    }
+   },
+   {
+    "id": "expanded-010-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 36.0,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 36.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 18.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly computes one-half times 2 times 6 squared as 18 J instead of 36 J.",
+    "first_error_kind": "initial_kinetic_arithmetic",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.02,
+      "edited": 0.612
+     },
+     "turns": {
+      "original": 1.018,
+      "edited": 0.583
+     }
+    }
+   },
+   {
+    "id": "expanded-064-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 156.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 156.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 156.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.348,
+      "edited": 0.994
+     },
+     "turns": {
+      "original": 1.343,
+      "edited": 0.953
+     }
+    }
+   },
+   {
+    "id": "expanded-065-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 152.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 152.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.083,
+      "edited": 0.99
+     },
+     "turns": {
+      "original": 1.089,
+      "edited": 0.947
+     }
+    }
+   },
+   {
+    "id": "expanded-071-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 184.0,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 184.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 144.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly reports the after-climb remainder of 144 J as available instead of the correctly computed 184 J before the climb.",
+    "first_error_kind": "post_climb_energy_reported_as_available",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.984,
+      "edited": 1.016
+     },
+     "turns": {
+      "original": 0.979,
+      "edited": 0.973
+     }
+    }
+   },
+   {
+    "id": "discovery-17-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 191.0,
+     "requiredJ": 120,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 191.0,
+      "required": 120.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 71.0,
+      "required": 120.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly labels the after-climb remainder of 71 J as available instead of 191 J before the climb.",
+    "first_error_kind": "post_climb_energy_reported_as_available",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.288,
+      "edited": 0.742
+     },
+     "turns": {
+      "original": 1.311,
+      "edited": 0.711
+     }
+    }
+   },
+   {
+    "id": "expanded-039-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 90.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 90.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.92,
+      "edited": 0.98
+     },
+     "turns": {
+      "original": 0.9,
+      "edited": 0.955
+     }
+    }
+   },
+   {
+    "id": "expanded-017-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 68.0,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 68.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 72.0,
+      "required": 0.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly evaluates one-half times 2 times 8 squared as 128 rather than 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.022,
+      "edited": 0.841
+     },
+     "turns": {
+      "original": 1.015,
+      "edited": 0.811
+     }
+    }
+   },
+   {
+    "id": "expanded-076-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 128.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 128.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.658,
+      "edited": 1.201
+     },
+     "turns": {
+      "original": 0.67,
+      "edited": 1.197
+     }
+    }
+   },
+   {
+    "id": "expanded-077-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 124.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 124.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 100.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Newly subtracts the 100 J descent gain from the 40 J kinetic energy, then treats descent as an energy barrier.",
+    "first_error_kind": "descent_subtracted",
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.658,
+      "edited": 0.297
+     },
+     "turns": {
+      "original": 0.67,
+      "edited": 0.333
+     }
+    }
+   },
+   {
+    "id": "expanded-078-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 120.0,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 120.0,
+      "required": 50.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.519,
+      "edited": 0.701
+     },
+     "turns": {
+      "original": 0.536,
+      "edited": 0.689
+     }
+    }
+   },
+   {
+    "id": "discovery-23-channel-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 241.0,
+     "requiredJ": 150,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 241.0,
+      "required": 150.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.272,
+      "edited": 1.24
+     },
+     "turns": {
+      "original": 1.292,
+      "edited": 1.226
+     }
+    }
+   },
+   {
+    "id": "expanded-023-h1",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 80.0,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 1.109,
+      "edited": 0.745
+     },
+     "turns": {
+      "original": 1.111,
+      "edited": 0.715
+     }
+    }
+   },
+   {
+    "id": "expanded-047-h3",
+    "set": "overlap",
+    "group": "correct",
+    "expected": {
+     "availableJ": 132.0,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 132.0,
+      "required": 90.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null,
+    "own_trace_between_the_patterns_places_142_313": {
+     "states": {
+      "original": 0.934,
+      "edited": 0.735
+     },
+     "turns": {
+      "original": 0.926,
+      "edited": 0.708
+     }
+    }
+   },
+   {
+    "id": "cart-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": -38.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Evaluates one-half times 2 times 6 squared as 18 rather than 36 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "cart-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": -38.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Evaluates one-half times 2 times 6 squared as 18 rather than 36 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "sled-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 120,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 120.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "sled-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 80,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent subtracted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 80.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "bead-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": 20.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "bead-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Subtracts the 30 J downhill contribution from 8 J instead of adding it.",
+    "first_error_kind": "descent_subtracted"
+   },
+   {
+    "id": "coaster-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 125.0,
+      "required": 150.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "coaster-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 125,
+     "requiredJ": 100,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 125.0,
+      "required": 100.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "block-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 30,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 30.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 30.0,
+      "required": 30.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly labels the correctly calculated 30 J after-climb remainder as available rather than 60 J before the climb.",
+    "first_error_kind": "post_climb_energy_reported_as_available"
+   },
+   {
+    "id": "block-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 90,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 90.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "trolley-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Computes one-half times 2 times 8 squared as 128 rather than 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "trolley-changed",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 124.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Computes one-half times 2 times 8 squared as 128 rather than 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "block-m2-base",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 20,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 2.0,
+      "required": 20.0
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 20.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Computes one-half times 2 times 6 squared as 18 rather than 36 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "block-m2-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 40,
+     "requiredJ": 60,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 40.0,
+      "required": 60.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 22.0,
+      "required": 60.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly evaluates one-half times 2 times 6 squared as 18 rather than 36 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "block-m4-base",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 40.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Newly reports 20 J after the climb as available rather than the correctly computed 60 J at its start.",
+    "first_error_kind": "post_climb_energy_reported_as_available"
+   },
+   {
+    "id": "block-m4-changed",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 60.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "confirm-parcel-1",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 10,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 10.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Newly subtracts 20 J from the initial 18 J during descent instead of obtaining 38 J.",
+    "first_error_kind": "descent_subtracted"
+   },
+   {
+    "id": "confirm-parcel-4",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 30,
+     "requiredJ": 40,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 30.0,
+      "required": 40.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "confirm-carriage-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 60.0
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Treats 1,344 J of mechanical energy measured from sea-level zero as energy available above the 20 m climb foot, rather than subtracting its 1,200 J baseline potential.",
+    "first_error_kind": "absolute_energy_compared_with_relative_climb"
+   },
+   {
+    "id": "confirm-carriage-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 144,
+     "requiredJ": 180,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 1344.0,
+      "required": 180.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 744.0,
+      "required": 180.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Subtracts the downhill potential-energy change from total mechanical energy despite a smooth conservative descent.",
+    "first_error_kind": "descent_removed_from_total_mechanical_energy"
+   },
+   {
+    "id": "confirm-disc-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 40,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 60.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 40.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Evaluates one-half times 2 times 8 squared as 128 instead of 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "confirm-disc-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 60,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 0.0,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 84.0,
+      "required": 80.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Evaluates one-half times 2 times 8 squared as 128 instead of 64 J.",
+    "first_error_kind": "initial_kinetic_arithmetic"
+   },
+   {
+    "id": "confirm-runner-3",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 90,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 660.0,
+      "required": 90.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": "Initially subtracts gravity's work in an equation between total mechanical energies, then explicitly corrects this to conservation.",
+    "first_error_kind": "self_corrected_descent_double_count"
+   },
+   {
+    "id": "confirm-runner-5",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 120,
+     "requiredJ": 150,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Subtracts the 60 J descent potential change from total mechanical energy instead of conserving that total.",
+    "first_error_kind": "descent_removed_from_total_mechanical_energy"
+   },
+   {
+    "id": "new-trolley-3",
+    "set": "round one",
+    "group": "correct",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 60,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 60.0
+     },
+     "verdict": "YES"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 60.0
+     },
+     "verdict": "YES",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "new-trolley-4",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 80,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "correct",
+     "complete": false,
+     "stated": {
+      "available": 70.0,
+      "required": 10.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "correct",
+     "complete": true,
+     "stated": {
+      "available": 70.0,
+      "required": 80.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": true,
+    "first_error_after": null,
+    "first_error_kind": null
+   },
+   {
+    "id": "new-sledge-1",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 50,
+     "answer": "YES"
+    },
+    "original": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null
+    },
+    "edited": {
+     "available": "missing",
+     "complete": false,
+     "stated": {
+      "available": null,
+      "required": null
+     },
+     "verdict": null,
+     "stopped_at_limit": true
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Assigns gravity negative work during the descent and subtracts 50 J from the initial kinetic energy.",
+    "first_error_kind": "descent_subtracted"
+   },
+   {
+    "id": "new-sledge-2",
+    "set": "round one",
+    "group": "wrong",
+    "expected": {
+     "availableJ": 70,
+     "requiredJ": 100,
+     "answer": "NO"
+    },
+    "original": {
+     "available": "other",
+     "complete": false,
+     "stated": {
+      "available": 40.0,
+      "required": 120.0
+     },
+     "verdict": "NO"
+    },
+    "edited": {
+     "available": "descent omitted",
+     "complete": false,
+     "stated": {
+      "available": 20.0,
+      "required": 100.0
+     },
+     "verdict": "NO",
+     "stopped_at_limit": false
+    },
+    "adds_the_descent_after": false,
+    "first_error_after": "Sets the initial potential energy to zero while taking the lower climb foot as zero, omitting the 50 J descent gain from available energy.",
+    "first_error_kind": "descent_omitted"
+   }
+  ]
+ },
+ "what_this_changes": [
+  "The A rung exists under the ladder's construction: an unprotected edit of 18 matrices, built on the state after each matrix, makes the model's own computation move along the gap and add the descent where it subtracted it (29 of 30), and carries to questions outside the fit (round one: 7 of 21 failures complete, where none was).",
+  "Its damage is what the ladder expects of A and is the same in both groups: about one gap of movement to the side, new errors of other kinds, 12 of 30 correct answers broken (4 of 7 in round one). B2 adds the 12 broken correct answers of the overlap as rows that keep their state, with nothing else changed: the same 18 matrices, the same construction.",
+  "A reading on the given text is not a judge, in either direction. The build was stopped on such a reading; the model it described was the first edit of round two to repair on its own answers. Marcos said so before the test (November 10: 'I dont think the text we feed it should be a goal at all').",
+  "The judge's label of a final number does not always name the written operation (three 'descent omitted' are the after-climb remainder reported as available). The first error is read from the answer.",
+  "Whether the later 52 matrices are needed, and what they add, is not known. It is a separate question from the ladder and is not mixed into B2."
+ ]
+}

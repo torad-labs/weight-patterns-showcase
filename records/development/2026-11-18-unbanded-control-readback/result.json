@@ -1,0 +1,493 @@
+{
+  "question": "discovery-05-channel-h1",
+  "first_different_selected_event": 244,
+  "metric": "Per operation, average squared residual over visits, then equally over source-event/merge cells represented in every compared arm and phase. Missing cells have no value.",
+  "target": "studies/04-round-2-overlap/runs/unbanded-group-orthonormal-target/training-group.json",
+  "target_sha256": "f13671d3d8383e271a6d57c1bbab7c2f818026fbc7e51b7461091d194f873c71",
+  "captures": {
+    "early": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/early/capture.json",
+      "sha256": "828f0b89c05ddacd1598fdec382f538f8c0b07f92502583e7b5b7f87f7b94c18"
+    },
+    "attention_repair": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_attention/capture.json",
+      "sha256": "a5aba5609f30a5fdf147dedaf0494db54a6438763f831ddb286633f92872ea0a"
+    },
+    "ffn_repair": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/late_ffn/capture.json",
+      "sha256": "9faeb330c5ad471c0645d4a373081a6e3da9f691ceaec286d389cc8c9ec24526"
+    },
+    "original": {
+      "record": "studies/04-round-2-overlap/runs/vector-chance-isolated-pre-error-update/original/fit/capture.json",
+      "sha256": "6f258a0cdab83dd088848b647fca8e59277de6e1fcd87a2082cb9ff91299e6d5"
+    },
+    "failed_edit": {
+      "record": "studies/04-round-2-overlap/runs/directional-intervention-projected-native/fresh-fit/capture.json",
+      "sha256": "0a66c48d2d2773515e60a95424559645d5d5b6d092a1edd723ec6dc3d2cf3d85"
+    }
+  },
+  "observations": {
+    "early": {
+      "descent-associated contrast": {
+        "earliest_native_event": 310,
+        "physically_audited_sign_event": 313,
+        "supported": 1434,
+        "represented": 1399
+      },
+      "valid friction trace": {
+        "earliest_native_event": 372,
+        "physically_audited_sign_event": 313,
+        "supported": 1995,
+        "represented": 1785
+      }
+    },
+    "attention_repair": {
+      "descent-associated contrast": {
+        "earliest_native_event": 306,
+        "physically_audited_sign_event": 313,
+        "supported": 1434,
+        "represented": 1434
+      },
+      "valid friction trace": {
+        "earliest_native_event": 367,
+        "physically_audited_sign_event": 313,
+        "supported": 1995,
+        "represented": 1995
+      }
+    },
+    "ffn_repair": {
+      "descent-associated contrast": {
+        "earliest_native_event": 306,
+        "physically_audited_sign_event": 313,
+        "supported": 1434,
+        "represented": 1434
+      },
+      "valid friction trace": {
+        "earliest_native_event": 367,
+        "physically_audited_sign_event": 313,
+        "supported": 1995,
+        "represented": 1995
+      }
+    },
+    "original": {
+      "descent-associated contrast": {
+        "earliest_native_event": 310,
+        "physically_audited_sign_event": 313,
+        "supported": 1434,
+        "represented": 1399
+      },
+      "valid friction trace": {
+        "earliest_native_event": 372,
+        "physically_audited_sign_event": 313,
+        "supported": 1995,
+        "represented": 1785
+      }
+    },
+    "failed_edit": {
+      "descent-associated contrast": {
+        "earliest_native_event": 319,
+        "physically_audited_sign_event": 326,
+        "supported": 1434,
+        "represented": 1166
+      },
+      "valid friction trace": {
+        "earliest_native_event": 397,
+        "physically_audited_sign_event": 326,
+        "supported": 1995,
+        "represented": 1155
+      }
+    }
+  },
+  "all_five": {
+    "descent-associated contrast": {
+      "entire_generation": {
+        "common_cells": 1132,
+        "cells_by_arm": {
+          "early": 1399,
+          "attention_repair": 1434,
+          "ffn_repair": 1434,
+          "original": 1399,
+          "failed_edit": 1166
+        },
+        "mean_squared_residual": {
+          "early": 0.017037396168169575,
+          "attention_repair": 3.120238203649161e-06,
+          "ffn_repair": 1.3988469289556245e-06,
+          "original": 0.01745256314481284,
+          "failed_edit": 0.017824078090944825
+        }
+      },
+      "identical_input_history": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "early": 0,
+          "attention_repair": 0,
+          "ffn_repair": 0,
+          "original": 0,
+          "failed_edit": 0
+        },
+        "mean_squared_residual": {
+          "early": null,
+          "attention_repair": null,
+          "ffn_repair": null,
+          "original": null,
+          "failed_edit": null
+        }
+      },
+      "before_first_downhill_sign": {
+        "common_cells": 2,
+        "cells_by_arm": {
+          "early": 2,
+          "attention_repair": 31,
+          "ffn_repair": 31,
+          "original": 2,
+          "failed_edit": 31
+        },
+        "mean_squared_residual": {
+          "early": 9.313769355372277e-05,
+          "attention_repair": 8.845593372627265e-08,
+          "ffn_repair": 2.70922124795217e-09,
+          "original": 9.790000050600146e-05,
+          "failed_edit": 0.0003347920491850485
+        }
+      },
+      "first_downhill_sign_onward": {
+        "common_cells": 1130,
+        "cells_by_arm": {
+          "early": 1397,
+          "attention_repair": 1403,
+          "ffn_repair": 1403,
+          "original": 1397,
+          "failed_edit": 1135
+        },
+        "mean_squared_residual": {
+          "early": 0.017067386006177743,
+          "attention_repair": 3.1256041899676085e-06,
+          "ffn_repair": 1.4013179691462575e-06,
+          "original": 0.017483279362767366,
+          "failed_edit": 0.01785503257951431
+        }
+      }
+    },
+    "valid friction trace": {
+      "entire_generation": {
+        "common_cells": 1050,
+        "cells_by_arm": {
+          "early": 1785,
+          "attention_repair": 1995,
+          "ffn_repair": 1995,
+          "original": 1785,
+          "failed_edit": 1155
+        },
+        "mean_squared_residual": {
+          "early": 0.001176656282214435,
+          "attention_repair": 0.0026002556649160724,
+          "ffn_repair": 0.0033049311189712834,
+          "original": 0.0012613493687842546,
+          "failed_edit": 0.0004406804381799285
+        }
+      },
+      "identical_input_history": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "early": 0,
+          "attention_repair": 0,
+          "ffn_repair": 0,
+          "original": 0,
+          "failed_edit": 0
+        },
+        "mean_squared_residual": {
+          "early": null,
+          "attention_repair": null,
+          "ffn_repair": null,
+          "original": null,
+          "failed_edit": null
+        }
+      },
+      "before_first_downhill_sign": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "early": 0,
+          "attention_repair": 0,
+          "ffn_repair": 0,
+          "original": 0,
+          "failed_edit": 0
+        },
+        "mean_squared_residual": {
+          "early": null,
+          "attention_repair": null,
+          "ffn_repair": null,
+          "original": null,
+          "failed_edit": null
+        }
+      },
+      "first_downhill_sign_onward": {
+        "common_cells": 1050,
+        "cells_by_arm": {
+          "early": 1785,
+          "attention_repair": 1995,
+          "ffn_repair": 1995,
+          "original": 1785,
+          "failed_edit": 1155
+        },
+        "mean_squared_residual": {
+          "early": 0.001176656282214435,
+          "attention_repair": 0.0026002556649160724,
+          "ffn_repair": 0.0033049311189712834,
+          "original": 0.0012613493687842546,
+          "failed_edit": 0.0004406804381799285
+        }
+      }
+    }
+  },
+  "exact_repair_parent": {
+    "descent-associated contrast": {
+      "entire_generation": {
+        "common_cells": 1399,
+        "cells_by_arm": {
+          "early": 1399,
+          "attention_repair": 1434,
+          "ffn_repair": 1434
+        },
+        "mean_squared_residual": {
+          "early": 0.015870543551128206,
+          "attention_repair": 3.013981035672705e-06,
+          "ffn_repair": 1.521939146558694e-06
+        }
+      },
+      "identical_input_history": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "early": 0,
+          "attention_repair": 0,
+          "ffn_repair": 0
+        },
+        "mean_squared_residual": {
+          "early": null,
+          "attention_repair": null,
+          "ffn_repair": null
+        }
+      },
+      "before_first_downhill_sign": {
+        "common_cells": 2,
+        "cells_by_arm": {
+          "early": 2,
+          "attention_repair": 31,
+          "ffn_repair": 31
+        },
+        "mean_squared_residual": {
+          "early": 9.313769355372277e-05,
+          "attention_repair": 8.845593372627265e-08,
+          "ffn_repair": 2.70922124795217e-09
+        }
+      },
+      "first_downhill_sign_onward": {
+        "common_cells": 1397,
+        "cells_by_arm": {
+          "early": 1397,
+          "attention_repair": 1403,
+          "ffn_repair": 1403
+        },
+        "mean_squared_residual": {
+          "early": 0.015893131104252865,
+          "attention_repair": 3.018169332167975e-06,
+          "ffn_repair": 1.5241141357144717e-06
+        }
+      }
+    },
+    "valid friction trace": {
+      "entire_generation": {
+        "common_cells": 1785,
+        "cells_by_arm": {
+          "early": 1785,
+          "attention_repair": 1995,
+          "ffn_repair": 1995
+        },
+        "mean_squared_residual": {
+          "early": 0.0011697010722278697,
+          "attention_repair": 0.0016818636305085352,
+          "ffn_repair": 0.00207290022998928
+        }
+      },
+      "identical_input_history": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "early": 0,
+          "attention_repair": 0,
+          "ffn_repair": 0
+        },
+        "mean_squared_residual": {
+          "early": null,
+          "attention_repair": null,
+          "ffn_repair": null
+        }
+      },
+      "before_first_downhill_sign": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "early": 0,
+          "attention_repair": 0,
+          "ffn_repair": 0
+        },
+        "mean_squared_residual": {
+          "early": null,
+          "attention_repair": null,
+          "ffn_repair": null
+        }
+      },
+      "first_downhill_sign_onward": {
+        "common_cells": 1785,
+        "cells_by_arm": {
+          "early": 1785,
+          "attention_repair": 1995,
+          "ffn_repair": 1995
+        },
+        "mean_squared_residual": {
+          "early": 0.0011697010722278697,
+          "attention_repair": 0.0016818636305085352,
+          "ffn_repair": 0.00207290022998928
+        }
+      }
+    }
+  },
+  "exact_failed_parent": {
+    "descent-associated contrast": {
+      "entire_generation": {
+        "common_cells": 1132,
+        "cells_by_arm": {
+          "original": 1399,
+          "failed_edit": 1166
+        },
+        "mean_squared_residual": {
+          "original": 0.01745256314481284,
+          "failed_edit": 0.017824078090944825
+        }
+      },
+      "identical_input_history": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "original": 0,
+          "failed_edit": 0
+        },
+        "mean_squared_residual": {
+          "original": null,
+          "failed_edit": null
+        }
+      },
+      "before_first_downhill_sign": {
+        "common_cells": 2,
+        "cells_by_arm": {
+          "original": 2,
+          "failed_edit": 31
+        },
+        "mean_squared_residual": {
+          "original": 9.790000050600146e-05,
+          "failed_edit": 0.0003347920491850485
+        }
+      },
+      "first_downhill_sign_onward": {
+        "common_cells": 1130,
+        "cells_by_arm": {
+          "original": 1397,
+          "failed_edit": 1135
+        },
+        "mean_squared_residual": {
+          "original": 0.017483279362767366,
+          "failed_edit": 0.01785503257951431
+        }
+      }
+    },
+    "valid friction trace": {
+      "entire_generation": {
+        "common_cells": 1050,
+        "cells_by_arm": {
+          "original": 1785,
+          "failed_edit": 1155
+        },
+        "mean_squared_residual": {
+          "original": 0.0012613493687842546,
+          "failed_edit": 0.0004406804381799285
+        }
+      },
+      "identical_input_history": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "original": 0,
+          "failed_edit": 0
+        },
+        "mean_squared_residual": {
+          "original": null,
+          "failed_edit": null
+        }
+      },
+      "before_first_downhill_sign": {
+        "common_cells": 0,
+        "cells_by_arm": {
+          "original": 0,
+          "failed_edit": 0
+        },
+        "mean_squared_residual": {
+          "original": null,
+          "failed_edit": null
+        }
+      },
+      "first_downhill_sign_onward": {
+        "common_cells": 1050,
+        "cells_by_arm": {
+          "original": 1785,
+          "failed_edit": 1155
+        },
+        "mean_squared_residual": {
+          "original": 0.0012613493687842546,
+          "failed_edit": 0.0004406804381799285
+        }
+      }
+    }
+  },
+  "shared_pre_sign_cells_on_training": [
+    {
+      "source_event": 310,
+      "merge": 85,
+      "historical_pre_sign": {
+        "early": 0.00018582640580317575,
+        "attention_repair": 1.7658084446614568e-07,
+        "ffn_repair": 5.334608680198564e-09,
+        "original": 0.00019543040594791422,
+        "failed_edit": 0.0006685934424078854
+      },
+      "training_visits": {
+        "0": [
+          {
+            "event": 323,
+            "signed_error": -0.02687797315952309,
+            "squared_residual": 0.0007224254411640435
+          }
+        ],
+        "1": [],
+        "2": []
+      }
+    },
+    {
+      "source_event": 310,
+      "merge": 86,
+      "historical_pre_sign": {
+        "early": 4.48981304269779e-07,
+        "attention_repair": 3.310229863996351e-10,
+        "ffn_repair": 8.383381570577598e-11,
+        "original": 3.695950640887034e-07,
+        "failed_edit": 9.906559622115603e-07
+      },
+      "training_visits": {
+        "0": [
+          {
+            "event": 323,
+            "signed_error": -0.0011110664614097394,
+            "squared_residual": 1.2344686816695598e-06
+          }
+        ],
+        "1": [],
+        "2": []
+      }
+    }
+  ]
+}

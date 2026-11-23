@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#e8e8e1"><meta name="description" content="Observe a token crossing a mechanical layer stack. Set the total animation duration and explore the parallel work inside each layer.">
+ <title>Decode machine · A question becomes an answer</title><link rel="icon" href="/favicon.svg">
+</head>
+<body>
+<main id="workbench">
+ <canvas id="scene" tabindex="0" aria-label="Interactive 3D layer stack. Drag to orbit and scroll to zoom; select a numbered layer to inspect its parallel channels."></canvas>
+ <header class="masthead">
+  <a class="identity" href="/" aria-label="Decode machine home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m4 10 12-6 12 6-12 6-12-6Zm0 6 12 6 12-6M4 22l12 6 12-6"/></svg><span>Decode machine</span></a>
+  <div class="legend"><span><i class="weight-key"></i> Weight</span><span><i class="token-key"></i> Token information</span></div>
+  <button id="help-toggle" class="quiet" aria-expanded="false">How it works <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.5"/></svg></button>
+ </header>
+ <div class="scene-caption"><h1>What’s the capital of France?</h1><div id="prompt-tokens" class="prompt-strip" aria-label="Illustrative prompt tokens"></div><div class="answer-line"><span>Answer</span><output id="answer-text" aria-live="polite">…</output></div><p class="story-note">Scripted example · illustrative tokens, scores & timing</p></div>
+ <div id="loading" role="status"><span class="loading-ring"></span><p>Assembling the layers…</p></div>
+ <div id="error" role="alert" hidden><h2>The machine couldn’t load.</h2><p id="error-message"></p><button onclick="location.reload()">Try again</button></div>
+ <div id="part-labels"></div>
+ <aside id="inspector" aria-label="Selected mechanism">
+  <button id="reset-view" title="Return to layer stack" aria-label="Return to layer stack"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg></button>
+  <h2 id="part-title">Cut the question.</h2><p id="part-description">Follow a question through the machine, then watch it print an answer.</p>
+  <label class="layer-select-label" for="layer-select">Inspect<select id="layer-select"></select></label>
+  <div id="concurrency" hidden>
+   <p id="cache-status" class="cache-status">0 positions stored in this layer’s K/V rack</p><p class="lane-caption">Operations within this layer</p>
+   <div class="lanes"><div id="lane-cursor"></div>
+    <div class="lane-row"><span>Normalize</span><div><i class="lane-bar" data-start="0" data-end=".18" style="left:0;width:18%"></i></div></div>
+    <div class="lane-row"><span>Head 1</span><div><i class="lane-bar" data-start=".18" data-end=".52" style="left:18%;width:34%"></i></div></div>
+    <div class="lane-row"><span>Head 2</span><div><i class="lane-bar" data-start=".18" data-end=".52" style="left:18%;width:34%"></i></div></div>
+    <div class="lane-row"><span>Head 3</span><div><i class="lane-bar" data-start=".18" data-end=".52" style="left:18%;width:34%"></i></div></div>
+    <div class="lane-row residual-row"><span>Residual</span><div><i class="lane-bar" data-start="0" data-end="1" style="left:0;width:100%"></i></div></div>
+    <div class="lane-row"><span>Join</span><div><i class="lane-bar" data-start=".52" data-end=".62" style="left:52%;width:10%"></i></div></div>
+    <div class="lane-row"><span>Rescale</span><div><i class="lane-bar" data-start=".62" data-end=".70" style="left:62%;width:8%"></i></div></div>
+    <div class="lane-row"><span>Feed-fwd</span><div><i class="lane-bar" data-start=".70" data-end=".90" style="left:70%;width:20%"></i></div></div>
+   </div>
+  </div>
+  <button id="case-toggle" class="case-button" aria-pressed="false" hidden><svg viewBox="0 0 24 24"><path d="m3 14 9 5 9-5M3 10l9 5 9-5-9-5-9 5Zm0-4 9-4 9 4"/></svg><span>Lift layer cover</span></button>
+  <button id="follow-toggle" class="text-button" aria-pressed="false"><span class="follow-dot"></span>Follow the story</button>
+  <details id="weight-details" class="inspection-details" hidden><summary id="weight-title">Layer 01 weight drawer</summary><p>Stored weights stay fixed. Small read copies travel to the heads and press.</p><div id="weight-values" class="weight-values" aria-label="Illustrative stored weight values"></div></details>
+  <details id="carrier-details" class="inspection-details"><summary>Inspect a token carrier</summary>
+   <label class="layer-select-label" for="carrier-select">Token<select id="carrier-select"></select></label>
+   <p id="carrier-identity" class="carrier-identity">“France” stays token 6</p><p id="carrier-state">Waiting for pin assembly</p>
+   <div id="carrier-values"><div class="pin-reading-heading"><span>Pin</span><span>Layer input</span><span>Now</span></div>
+    <div class="pin-reading"><span>1</span><span class="pin-before"></span><strong class="pin-now"></strong><div class="pin-bars"><i></i><b></b></div></div>
+    <div class="pin-reading"><span>2</span><span class="pin-before"></span><strong class="pin-now"></strong><div class="pin-bars"><i></i><b></b></div></div>
+    <div class="pin-reading"><span>3</span><span class="pin-before"></span><strong class="pin-now"></strong><div class="pin-bars"><i></i><b></b></div></div>
+    <div class="pin-reading"><span>4</span><span class="pin-before"></span><strong class="pin-now"></strong><div class="pin-bars"><i></i><b></b></div></div>
+   </div><button id="find-carrier" class="case-button">Show this carrier in a layer</button><p class="illustration-note">Four example values, not a real model vector. Taller pins mean larger values.</p>
+  </details>
+ </aside>
+ <section id="help" hidden aria-label="Exploration guide"><h2>Follow one token.</h2>
+  <p>Drag to turn the stack. Scroll or pinch to zoom. Choose any numbered layer, or use the layer menu, to pause and inspect its parallel paths.</p>
+  <p>Amber balls represent individual sample weights. Each layer owns a numbered drawer of twelve examples. Open it to see the values: stored balls stay put while read copies travel to the devices. A layer reuses its own weights on every token pass.</p>
+  <p>Click a word above the machine or a teal carrier to inspect it. Its label stays fixed while its four pins change. “Layer input” holds the entering values; “Now” shows the current values. Selecting a token keeps the clock where it is; “Show this carrier in a layer” can seek to its pass. Finished carriers keep their final values while later tokens travel.</p>
+  <p>The cutter makes tokens; the pin assembly gives them numerical carriers. Prefill processes the question through the 32 illustrated layers. Each layer keeps K/V information on its paired storage shelves.</p>
+  <p>A layer’s sizing jaws represent normalization. Three representative attention heads use stored context in parallel. Their outputs join; a feed-forward press expands and reshapes the carrier. Bypasses preserve inputs for residual additions.</p>
+  <p>Prefill produces the scores for “Paris”. That token is selected and fed back to predict “.”. The period makes one more pass to predict the end signal. The gate closes and the answer remains. No weight ball is a stored word or a lookup for Paris.</p>
+  <p>Set <strong>Total animation</strong> to the number of seconds you want the whole stack to take. Every layer and operation scales together, preserving overlaps.</p>
+  <p>This fixed example is scripted, not a running language model. Tokens, pin heights, candidate scores, 32 layers, three heads and timing proportions are illustrative. The cache shelves summarize stored K/V vectors; individual projection matrices, tensor arithmetic, positional encoding and sampling probabilities are not simulated.</p>
+  <dl><dt>Space</dt><dd>Play / pause</dd><dt>← →</dt><dd>Step 0.5 viewing seconds</dd><dt>Home</dt><dd>Whole layer stack</dd><dt>C</dt><dd>Lift selected layer cover</dd></dl><button id="help-close">Back to the machine</button>
+ </section>
+ <div id="lower-interface" class="lower-interface">
+  <nav class="parts" aria-label="Inspect the machine"><button data-part="assembly" aria-pressed="true">Whole machine</button><button data-part="input" aria-pressed="false">Question intake</button><button data-part="supply" aria-pressed="false">Weights</button><button data-part="layer" aria-pressed="false">Inside a layer</button><button data-part="output" aria-pressed="false">Selector & answer</button><span class="active-readout">Active layer <strong id="active-layer">Preparing</strong></span></nav>
+  <section class="transport" aria-label="Playback controls">
+   <button id="play" class="play" aria-label="Pause" disabled><svg viewBox="0 0 24 24" id="play-icon"><path d="M8 5v14M16 5v14"/></svg></button>
+   <button id="next" class="next" aria-label="Next operation" title="Next operation" disabled><svg viewBox="0 0 24 24"><path d="m6 5 10 7L6 19V5Zm12 0v14"/></svg></button>
+   <button id="replay" class="next" aria-label="Replay question" title="Replay question"><svg viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1 0 7M4 3v6h6"/></svg></button>
+   <div class="phase-copy"><strong id="phase-name">Layer 01 · Prepare</strong><span id="phase-brief">Read weights and prepare input</span></div>
+   <div class="timeline"><div class="timeline-labels chapters"><button data-stage="0" data-end=".11">Question</button><button data-stage=".11" data-end=".43">Prefill</button><button data-stage=".43" data-end=".70">Paris</button><button data-stage=".70" data-end=".94">Period</button><button data-stage=".94" data-end="1.01">End</button></div><input id="scrubber" aria-label="Position through the question and answer" type="range" min="0" max="1" step="0.00001" value="0" disabled></div>
+   <output id="clock" for="scrubber">0.0 / 120 s</output>
+   <label class="duration-label" for="duration"><span>Total animation</span><span class="duration-input"><input id="duration" type="number" min="1" max="3600" step="1" value="120" aria-label="Total animation duration in seconds"><span>seconds</span></span></label>
+  </section>
+  <footer><span><i class="status-dot"></i><span id="status">Preparing layers</span></span><span class="gesture-hint">Drag to orbit · Scroll to zoom · Select a mechanism</span><span>Scripted teaching model</span></footer>
+ </div>
+</main>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

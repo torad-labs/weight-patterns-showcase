@@ -1,0 +1,657 @@
+{
+  "original/fit": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " -",
+      "chosen_score": 13.944657325744629,
+      "candidate_scores": {
+        " +": 12.362167358398438,
+        " -": 13.944657325744629
+      },
+      "generated_index": 141,
+      "input_position": 313,
+      "equation": "KE_i - PE_{gain}",
+      "addition_minus_subtraction": -1.5824899673461914
+    },
+    "one_before_operator": {
+      "current_row": 312,
+      "chosen": "i",
+      "projection": 0.39329149748553405,
+      "radial_distance": 0.3932928688746725,
+      "reference_mates": [
+        312
+      ],
+      "preceding_text": "text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_"
+    },
+    "operator": {
+      "current_row": 313,
+      "chosen": " -",
+      "projection": 0.34941101048447837,
+      "radial_distance": 0.5451662434344411,
+      "reference_mates": [
+        313
+      ],
+      "preceding_text": "ext{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 312,
+        "chosen": "i",
+        "projection": 0.39329149748553405,
+        "radial_distance": 0.3932928688746725,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": "text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_"
+      }
+    ],
+    "prior_decoded_row_count": 140,
+    "prior_decoded_rows_above_fixed_axis_limit": [
+      {
+        "current_row": 311,
+        "chosen": "_",
+        "projection": 0.40574885472326105,
+        "radial_distance": 0.4305042730208044,
+        "reference_mates": [
+          311
+        ],
+        "preceding_text": "\\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE"
+      },
+      {
+        "current_row": 312,
+        "chosen": "i",
+        "projection": 0.39329149748553405,
+        "radial_distance": 0.3932928688746725,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": "text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_"
+      }
+    ],
+    "largest_prior_decoded_projection": {
+      "current_row": 311,
+      "chosen": "_",
+      "projection": 0.40574885472326105,
+      "radial_distance": 0.4305042730208044,
+      "reference_mates": [
+        311
+      ],
+      "preceding_text": "\\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE"
+    }
+  },
+  "original/correct": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " +",
+      "chosen_score": 22.697219848632812,
+      "candidate_scores": {
+        " +": 22.697219848632812,
+        " -": 15.795310974121094
+      },
+      "generated_index": 141,
+      "input_position": 313,
+      "equation": "KE_i + PE_{descent}",
+      "addition_minus_subtraction": 6.901908874511719
+    },
+    "one_before_operator": {
+      "current_row": 312,
+      "chosen": "i",
+      "projection": 5.070339471581333e-05,
+      "radial_distance": 0.0008289543151162912,
+      "reference_mates": [
+        312
+      ],
+      "preceding_text": " kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$): $KE_"
+    },
+    "operator": {
+      "current_row": 313,
+      "chosen": " +",
+      "projection": 0.19304544734126333,
+      "radial_distance": 0.5112899375685608,
+      "reference_mates": [
+        313
+      ],
+      "preceding_text": "kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$): $KE_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 312,
+        "chosen": "i",
+        "projection": 5.070339471581333e-05,
+        "radial_distance": 0.0008289543151162912,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": " kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$): $KE_"
+      }
+    ],
+    "prior_decoded_row_count": 140,
+    "prior_decoded_rows_above_fixed_axis_limit": [],
+    "largest_prior_decoded_projection": {
+      "current_row": 309,
+      "chosen": " $",
+      "projection": 0.24300036522750013,
+      "radial_distance": 0.5056698221826973,
+      "reference_mates": [
+        309
+      ],
+      "preceding_text": "text{ kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$):"
+    }
+  },
+  "original/transfer": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " -",
+      "chosen_score": 14.457541465759277,
+      "candidate_scores": {
+        " +": 3.5613725185394287,
+        " -": 14.457541465759277
+      },
+      "generated_index": 94,
+      "input_position": 259,
+      "equation": "E_i - mgh",
+      "addition_minus_subtraction": -10.896168947219849
+    },
+    "one_before_operator": {
+      "current_row": 258,
+      "chosen": "i",
+      "projection": 0.27370130988078634,
+      "radial_distance": 0.40918499875385667,
+      "reference_mates": [
+        261
+      ],
+      "preceding_text": " m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E_"
+    },
+    "operator": {
+      "current_row": 259,
+      "chosen": " -",
+      "projection": 0.25499455714685515,
+      "radial_distance": 0.576735031666494,
+      "reference_mates": [
+        262
+      ],
+      "preceding_text": "m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 296,
+        "chosen": " =",
+        "projection": 0.14119560623027166,
+        "radial_distance": 0.6674653172754529,
+        "reference_mates": [
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319
+        ],
+        "preceding_text": " descent ($E_{descent}$) = $E_i - mgh = 36 \\text{ J} - (2 \\text{ kg})(10 \\text{ m/s}^2)(1 \\text{ m})"
+      }
+    ],
+    "prior_decoded_row_count": 93,
+    "prior_decoded_rows_above_fixed_axis_limit": [],
+    "largest_prior_decoded_projection": {
+      "current_row": 257,
+      "chosen": "_",
+      "projection": 0.29949836073866787,
+      "radial_distance": 0.43339115483794594,
+      "reference_mates": [
+        261
+      ],
+      "preceding_text": "{ m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E"
+    }
+  },
+  "standard/fit": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " -",
+      "chosen_score": 15.782979965209961,
+      "candidate_scores": {
+        " +": 11.492032051086426,
+        " -": 15.782979965209961
+      },
+      "generated_index": 154,
+      "input_position": 326,
+      "equation": "KE_i - PE_1",
+      "addition_minus_subtraction": -4.290947914123535
+    },
+    "one_before_operator": {
+      "current_row": 325,
+      "chosen": "i",
+      "projection": 0.3954349951004692,
+      "radial_distance": 0.4344851297071961,
+      "reference_mates": [
+        312
+      ],
+      "preceding_text": "})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_1$): $KE_"
+    },
+    "operator": {
+      "current_row": 326,
+      "chosen": " -",
+      "projection": 0.3472070210629753,
+      "radial_distance": 0.539499142269978,
+      "reference_mates": [
+        313
+      ],
+      "preceding_text": ")(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_1$): $KE_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 325,
+        "chosen": "i",
+        "projection": 0.3954349951004692,
+        "radial_distance": 0.4344851297071961,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": "})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_1$): $KE_"
+      }
+    ],
+    "prior_decoded_row_count": 153,
+    "prior_decoded_rows_above_fixed_axis_limit": [
+      {
+        "current_row": 324,
+        "chosen": "_",
+        "projection": 0.3906573442189417,
+        "radial_distance": 0.43476901049193056,
+        "reference_mates": [
+          311
+        ],
+        "preceding_text": "g})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_1$): $KE"
+      },
+      {
+        "current_row": 325,
+        "chosen": "i",
+        "projection": 0.3954349951004692,
+        "radial_distance": 0.4344851297071961,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": "})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_1$): $KE_"
+      }
+    ],
+    "largest_prior_decoded_projection": {
+      "current_row": 325,
+      "chosen": "i",
+      "projection": 0.3954349951004692,
+      "radial_distance": 0.4344851297071961,
+      "reference_mates": [
+        312
+      ],
+      "preceding_text": "})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_1$): $KE_"
+    }
+  },
+  "standard/correct": {
+    "matched_symbolic_expression": false,
+    "actual_training_cell": {
+      "current_rows": [
+        336
+      ],
+      "projections": [
+        0.08314874146640416
+      ],
+      "excess": [
+        0.0
+      ],
+      "radius": 0.5060302460432016,
+      "radial_distances": [
+        0.33075281684067975
+      ],
+      "limit": 0.38018045796900707
+    }
+  },
+  "standard/transfer": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " -",
+      "chosen_score": 14.442535400390625,
+      "candidate_scores": {
+        " +": 3.5874335765838623,
+        " -": 14.442535400390625
+      },
+      "generated_index": 94,
+      "input_position": 259,
+      "equation": "E_i - mgh",
+      "addition_minus_subtraction": -10.855101823806763
+    },
+    "one_before_operator": {
+      "current_row": 258,
+      "chosen": "i",
+      "projection": 0.273602819837495,
+      "radial_distance": 0.40917210900021816,
+      "reference_mates": [
+        261
+      ],
+      "preceding_text": " m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E_"
+    },
+    "operator": {
+      "current_row": 259,
+      "chosen": " -",
+      "projection": 0.2549660294062986,
+      "radial_distance": 0.5768111622759768,
+      "reference_mates": [
+        262
+      ],
+      "preceding_text": "m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 296,
+        "chosen": " =",
+        "projection": 0.1412073459622525,
+        "radial_distance": 0.6674576885333118,
+        "reference_mates": [
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319
+        ],
+        "preceding_text": " descent ($E_{descent}$) = $E_i - mgh = 36 \\text{ J} - (2 \\text{ kg})(10 \\text{ m/s}^2)(1 \\text{ m})"
+      }
+    ],
+    "prior_decoded_row_count": 93,
+    "prior_decoded_rows_above_fixed_axis_limit": [],
+    "largest_prior_decoded_projection": {
+      "current_row": 257,
+      "chosen": "_",
+      "projection": 0.29938160721320933,
+      "radial_distance": 0.4333792836716317,
+      "reference_mates": [
+        261
+      ],
+      "preceding_text": "{ m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E"
+    }
+  },
+  "treatment/fit": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " -",
+      "chosen_score": 13.894248962402344,
+      "candidate_scores": {
+        " +": 12.322223663330078,
+        " -": 13.894248962402344
+      },
+      "generated_index": 141,
+      "input_position": 313,
+      "equation": "KE_i - PE_{gain}",
+      "addition_minus_subtraction": -1.5720252990722656
+    },
+    "one_before_operator": {
+      "current_row": 312,
+      "chosen": "i",
+      "projection": 0.39367326157267024,
+      "radial_distance": 0.39367608336919524,
+      "reference_mates": [
+        312
+      ],
+      "preceding_text": "text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_"
+    },
+    "operator": {
+      "current_row": 313,
+      "chosen": " -",
+      "projection": 0.349490502685936,
+      "radial_distance": 0.5453197460812182,
+      "reference_mates": [
+        313
+      ],
+      "preceding_text": "ext{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 312,
+        "chosen": "i",
+        "projection": 0.39367326157267024,
+        "radial_distance": 0.39367608336919524,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": "text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_"
+      }
+    ],
+    "prior_decoded_row_count": 140,
+    "prior_decoded_rows_above_fixed_axis_limit": [
+      {
+        "current_row": 311,
+        "chosen": "_",
+        "projection": 0.4059514753546256,
+        "radial_distance": 0.43077356808691075,
+        "reference_mates": [
+          311
+        ],
+        "preceding_text": "\\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE"
+      },
+      {
+        "current_row": 312,
+        "chosen": "i",
+        "projection": 0.39367326157267024,
+        "radial_distance": 0.39367608336919524,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": "text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE_"
+      }
+    ],
+    "largest_prior_decoded_projection": {
+      "current_row": 311,
+      "chosen": "_",
+      "projection": 0.4059514753546256,
+      "radial_distance": 0.43077356808691075,
+      "reference_mates": [
+        311
+      ],
+      "preceding_text": "\\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nKinetic Energy at bottom of descent ($KE_{bottom}$): $KE"
+    }
+  },
+  "treatment/correct": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " +",
+      "chosen_score": 22.721147537231445,
+      "candidate_scores": {
+        " +": 22.721147537231445,
+        " -": 15.812477111816406
+      },
+      "generated_index": 141,
+      "input_position": 313,
+      "equation": "KE_i + PE_{descent}",
+      "addition_minus_subtraction": 6.908670425415039
+    },
+    "one_before_operator": {
+      "current_row": 312,
+      "chosen": "i",
+      "projection": 0.00018424951562963842,
+      "radial_distance": 0.0010016019945289906,
+      "reference_mates": [
+        312
+      ],
+      "preceding_text": " kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$): $KE_"
+    },
+    "operator": {
+      "current_row": 313,
+      "chosen": " +",
+      "projection": 0.19287406059821552,
+      "radial_distance": 0.5112299373643704,
+      "reference_mates": [
+        313
+      ],
+      "preceding_text": "kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$): $KE_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 312,
+        "chosen": "i",
+        "projection": 0.00018424951562963842,
+        "radial_distance": 0.0010016019945289906,
+        "reference_mates": [
+          312
+        ],
+        "preceding_text": " kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$): $KE_"
+      }
+    ],
+    "prior_decoded_row_count": 140,
+    "prior_decoded_rows_above_fixed_axis_limit": [],
+    "largest_prior_decoded_projection": {
+      "current_row": 309,
+      "chosen": " $",
+      "projection": 0.2429829453789104,
+      "radial_distance": 0.5057097864979595,
+      "reference_mates": [
+        309
+      ],
+      "preceding_text": "text{ kg})(10 \\text{ m/s}^2)(2 \\text{ m}) = 40 \\text{ J}$\nTotal Energy before rough section ($E_1$):"
+    }
+  },
+  "treatment/transfer": {
+    "matched_symbolic_expression": true,
+    "limit": 0.38018045796900707,
+    "model_chose_operator": {
+      "chosen": " -",
+      "chosen_score": 14.579416275024414,
+      "candidate_scores": {
+        " +": 3.6934244632720947,
+        " -": 14.579416275024414
+      },
+      "generated_index": 94,
+      "input_position": 259,
+      "equation": "E_i - mgh",
+      "addition_minus_subtraction": -10.88599181175232
+    },
+    "one_before_operator": {
+      "current_row": 258,
+      "chosen": "i",
+      "projection": 0.2735682517661344,
+      "radial_distance": 0.40909335011658304,
+      "reference_mates": [
+        261
+      ],
+      "preceding_text": " m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E_"
+    },
+    "operator": {
+      "current_row": 259,
+      "chosen": " -",
+      "projection": 0.2548983045448992,
+      "radial_distance": 0.5764948904579124,
+      "reference_mates": [
+        262
+      ],
+      "preceding_text": "m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E_i"
+    },
+    "actual_training_cell": [
+      {
+        "current_row": 296,
+        "chosen": " =",
+        "projection": 0.1411776859942398,
+        "radial_distance": 0.6675291094615181,
+        "reference_mates": [
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319
+        ],
+        "preceding_text": " descent ($E_{descent}$) = $E_i - mgh = 36 \\text{ J} - (2 \\text{ kg})(10 \\text{ m/s}^2)(1 \\text{ m})"
+      }
+    ],
+    "prior_decoded_row_count": 93,
+    "prior_decoded_rows_above_fixed_axis_limit": [],
+    "largest_prior_decoded_projection": {
+      "current_row": 257,
+      "chosen": "_",
+      "projection": 0.29940252746099366,
+      "radial_distance": 0.43326324513181075,
+      "reference_mates": [
+        261
+      ],
+      "preceding_text": "{ m/s})^2 = 36 \\text{ J}$\n\n**After Descent (1 m):**\nEnergy at bottom of descent ($E_{descent}$) = $E"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+ "method_step": 3,
+ "why_this_direction": "Evaluate whether the previously sufficient BF16 family displacement is actually a new intervention on 175/189.",
+ "repeating_pattern_check": "A transplant sufficient on an early background can already have been inherited by a later recipient. Check coefficients against both donors over their union and distinguish a replacement from an additive re-dose.",
+ "hypothesis": "The 174 donor is ancestral to 175 and 189; many donor coefficients will match already in the repaired recipient.",
+ "prediction": "Full-family overwrite changes fewer weights than adding the donor displacement again, especially in attention-output, where the subsequent phase focused elsewhere.",
+ "would_weaken_it": "Little recipient agreement with the late donor or a disjoint native edit would weaken the ancestry explanation.",
+ "what_went_wrong_before": "Treating sufficient endpoint substitutions as independent edits without comparing the recipient to their source.",
+ "rule": "Read immutable BF16 on the union of indices differing from the common seed. Count recipient==late, ==early or neither only at donor-changed coefficients; also count changes outside donor support under whole-family replacement and full-strength additive re-dose after round-to-nearest-even. No parameters installed or text scored.",
+ "states": {
+  "early": {
+   "overrides": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-overrides.npz",
+    "sha256": "1024b3ed034ae53e1af265ca3c02e7eb887a2de54efdfc35f0607d9491db6aaf"
+   },
+   "checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-state.json",
+    "sha256": "58bcabb5b2c78423aae268068676cda29da6d2c8452f4030c54e6c3e01f9955f"
+   }
+  },
+  "late": {
+   "overrides": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-precision-continuation/final-overrides.npz",
+    "sha256": "028010f8a28a17c6687c240886774ec0c76b8ad7dcd22c7d78e5c8cb0523d9fb"
+   },
+   "checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-precision-continuation/final-state.json",
+    "sha256": "7c17a2b3e139f44b7dbed4fd703581f7ebece9ef6ca9cd8dc6b0c8e87703ee02"
+   }
+  },
+  "175": {
+   "overrides": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/final-overrides.npz",
+    "sha256": "ba258a64c8e7c3eed6bb1d8a608968d1dda20935f2ab19ac0e60c8557e225a48"
+   },
+   "checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/final-state.json",
+    "sha256": "406db82d079e06fea31f6738539f26d3e0c6a56094f87999d5b4c853101f3664"
+   }
+  },
+  "189": {
+   "overrides": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-overrides.npz",
+    "sha256": "e18a31ffc26f19eb3c56a4a23f1574a781b7ede16d141fc4f579598fa1488c99"
+   },
+   "checkpoint": {
+    "record": "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-state.json",
+    "sha256": "ddc44ef1d612c7f3662d81f9ddef1086e4d6f44708179e6dd78b8a1ad951d376"
+   }
+  }
+ },
+ "seed": {
+  "record": "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+  "sha256": "0dfed0e7f5e0430e693def81549785baf863e4dd9a4f337f8d584d709a6d2a1a"
+ },
+ "tensor_inventory": {
+  "record": "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "sha256": "e3f6750ce74ba78508c7f58cc9cde0e4fc0af1513fd40bdedaf5a36fb277d355"
+ },
+ "inputs": [
+  "studies/04-round-2-overlap/runs/vector-chance-descent-sign-swap/declaration.json",
+  "studies/04-round-2-overlap/runs/vector-chance-development-profile-175-189/declaration.json",
+  "studies/04-round-2-overlap/runs/vector-chance-gradient-2-original/loop/3/model.gguf",
+  "studies/04-round-2-overlap/runs/sent-overlap/wrong-inputs/tensors.json",
+  "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-overrides.npz",
+  "studies/04-round-2-overlap/runs/vector-chance-empirical-eta-continuation-4/final-state.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-precision-continuation/final-overrides.npz",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-precision-continuation/final-state.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/final-overrides.npz",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-174/final-state.json",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-overrides.npz",
+  "studies/04-round-2-overlap/runs/vector-chance-ffn-resume-175/final-state.json"
+ ],
+ "outputs": [
+  "studies/04-round-2-overlap/runs/descent-donor-on-descendants/result.json"
+ ],
+ "program": {
+  "record": "studies/04-round-2-overlap/runs/descent-donor-on-descendants/measure.py",
+  "sha256": "50b9bf544c630b0377d2077ef6bbaa286000e9daebc2c782866011075261e3c8"
+ },
+ "parameters": {}
+}

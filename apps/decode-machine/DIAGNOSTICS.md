@@ -1,0 +1,15 @@
+# Recorded decode inspection
+
+Goal: Marcos and an AI inspect the same recorded operation, worker and moment, follow the recorded order of work, and find intervals worth investigating without mistaking illustrative motion for telemetry.
+
+The diagnostic workspace extends the existing mechanical world. A chronological worker strip shows how recorded time is occupied; connected operation nodes show before/inside/after relationships; an arrival plot exposes worker exit clusters and outliers. Matching-operation ranges compare median-to-last exit spreads on a common duration scale, without claiming a controlled A/B. Selecting evidence selects the same worker and layer in the machine. Scrubbing and seeking use the existing clock; selecting a worker, operation or architecture area preserves time. Opening the other recording explicitly seeks to the selected worker's entry; clicking the active recording does nothing.
+
+Inputs: the admitted mechanical replay, its original record IDs and tap names, tape/table hashes, coverage/semantics, and the existing resolved worker intervals. Outputs: synchronized 2D/3D selection, calculated interval summaries and a JSON inspection snapshot readable by the user and AI.
+
+The recording stamps thread 0 reaching a point. An exit is not proof that every thread completed. Predecessors encode program order, not a complete producer/consumer graph. The UI therefore says “observed exit” and “recorded order”; it does not infer a critical path, recoverable time, hardware utilization, or a wait's causal producer. Gaps stay unassigned. Nested intervals are displayed through the existing resolver and never added on top of their parent. Invalid intervals remain visible in evidence but do not contribute duration.
+
+The investigation path branches across coordination, memory, TMA, execution, local resources, host submission and correctness. Each area connects an observation to competing explanations, missing distinguishing evidence and a conditional experiment. [EVIDENCE-ONTOLOGY.md](EVIDENCE-ONTOLOGY.md) records the relational vocabulary, NVIDIA sources, scope limits and action method.
+
+Success: both recordings can be explored through the same view; selecting a bar, a worker or a relation keeps the machine and inspector consistent; all workers are reachable by keyboard; reverse seeking reconstructs the same evidence; changing viewing duration does not alter recorded numbers. A copied link restores selection, architecture area and time. A downloaded v2 report contains normalized entity tables, typed relationships with their basis, provenance, raw observations, derived measurements and a question-led reading order. Its measurements reference their input evidence and every relationship resolves within the document. Illustration mode cannot export purported recorded evidence.
+
+Next evidence work remains separate: measured transfer/TMA lifecycles, causal producer links, physical SM placement, issue sampling, exact source/build correlation, host submission and consecutive-token history. No inference engine or capture instrumentation changes in this slice.

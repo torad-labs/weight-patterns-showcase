@@ -1,0 +1,153 @@
+{
+  "status": "finished",
+  "prediction_vs_result": "At checkpoint 401 both frozen blind audits found 0/8 correct downhill computations and 0/8 correct chains, as at the 390 parent. Raw held prefix objective increased on seven of eight prompts; it increased on six with support matched to common frozen source cells.",
+  "failures_only": "Both strict audits marked friction regressions despite numerically applying the specified magnitude on all sixteen responses. Six responses per checkpoint capped. No incorrect physical verdict became correct. Both audits count two resolved correct verdicts and one correct-to-unresolved pair; they differ on a further correct-to-unresolved pair.",
+  "what_this_changes": "The selected 11-update endpoint provides no downhill or full-chain repair on these four unused configurations in either order. Improvement on a selected frozen source subset or a newly resolved final verdict remains distinct from a correct energy chain and valid friction preservation.",
+  "model_endpoints": [
+    390,
+    401
+  ],
+  "physical_configurations": 4,
+  "prompt_count": 8,
+  "native_free_generations": 16,
+  "primary_correct_counts": {
+    "initial": [
+      8,
+      8
+    ],
+    "descent": [
+      0,
+      0
+    ],
+    "bottom": [
+      1,
+      0
+    ],
+    "friction": [
+      7,
+      4
+    ],
+    "available": [
+      0,
+      0
+    ],
+    "climb": [
+      4,
+      4
+    ],
+    "comparison": [
+      3,
+      4
+    ],
+    "verdict": [
+      2,
+      2
+    ],
+    "full_chain": [
+      0,
+      0
+    ]
+  },
+  "independent_correct_counts": {
+    "initial": [
+      8,
+      8
+    ],
+    "descent": [
+      0,
+      0
+    ],
+    "bottom": [
+      1,
+      0
+    ],
+    "friction": [
+      8,
+      6
+    ],
+    "available": [
+      0,
+      0
+    ],
+    "climb": [
+      4,
+      4
+    ],
+    "comparison": [
+      3,
+      3
+    ],
+    "verdict": [
+      1,
+      2
+    ],
+    "full_chain": [
+      0,
+      0
+    ]
+  },
+  "numeric_friction_correct_counts": [
+    8,
+    8
+  ],
+  "decode_cap_counts": [
+    6,
+    6
+  ],
+  "exact_unchanged_sequences": [
+    "m2-v5-d1-q6-h2-chronological",
+    "m2-v5-d2-q24-h2-chronological",
+    "m2-v5-d2-q24-h2-endpoint-first"
+  ],
+  "full_field": {
+    "replay_count": 16,
+    "native_merges": 105,
+    "source_coverage_increased_count": 3,
+    "native_prefix_objective_change_counts": {
+      "increased": 7,
+      "decreased": 1
+    },
+    "common_source_objective_change_counts": {
+      "increased": 6,
+      "decreased": 2
+    }
+  },
+  "records": {
+    "README.md": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/README.md",
+      "sha256": "f0aafcb9b2fd8a9eb3d6502b585b6e042e6a17900b27f08973d3ddcf66d9ce21"
+    },
+    "declaration.json": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/declaration.json",
+      "sha256": "49be7beb9fdec66ffa6d58699b494e6524e5b29f91decc198e1e02cef2204f01"
+    },
+    "edited-endpoint.json": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/edited-endpoint.json",
+      "sha256": "85ff21617bad268041e59d27cb8da7702a417b97de2f29376ebc4d6c06d9790b"
+    },
+    "behavioral-readout.md": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/behavioral-readout.md",
+      "sha256": "da3cc1ae9183dbbffa2857678709c3599d51420818cdad75ef0761890b426b39"
+    },
+    "initial-audit.json": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/initial-audit.json",
+      "sha256": "69cf2a0c4593c3d37d10bc49ff181682f9e9486ace0cf873cdc988b35990e293"
+    },
+    "paired-outcomes.json": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/paired-outcomes.json",
+      "sha256": "a02b17c106a3f3980b13396d2e0ba4f80db6e45e5626cc5e53401e9a5e6ef30f"
+    },
+    "paired-independent-audit.json": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/paired-independent-audit.json",
+      "sha256": "c5683a26e4fd9040dec817cf56084651b456e85375eb556fde407dc726332e85"
+    },
+    "full-field/paired-prefix-objectives.json": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/full-field/paired-prefix-objectives.json",
+      "sha256": "92dd0a4e42bfb195ea521cdb75ce986ee814098e56412d3153bd3a926fcc4998"
+    },
+    "observability/readback.json": {
+      "record": "studies/04-round-2-overlap/runs/prefix-direction-generalization/observability/readback.json",
+      "sha256": "ae098ad753afb4a1d33b573f46729ac0b7a796c93697d477c37bc245bb9a0c05"
+    }
+  }
+}

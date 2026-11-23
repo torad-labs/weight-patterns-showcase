@@ -1,0 +1,25 @@
+{
+ "prediction_vs_result": "Correct numerical chains on eight formulations: original 1, 175 2, 189 2, 390 3. Relative to the original, 390 repaired two explicitly wrong chains, completed one previously unresolved, and regressed the only originally correct chain. All three successes came from the channel template. Every response retained locally correct friction subtraction. A 56.26% fitted loss reduction from 175 to 189 left the complete-chain counts unchanged.",
+ "failures_only": "No edited model completed both formulations of any configuration correctly. The 115 J control remained 55/30/YES at every edited state. Three edited generations and one original reached the cap. The original capped generation had unresolved full-chain status; the other three already contained clear numerical errors. The FF20 capture only measured two residual states, so these acquisitions do not establish full-path agreement.",
+ "what_this_changes": "Compare original and edited computations on the same physical problems using the pre-existing whole-trace objective. Predictions about which local changes transfer need a fresh panel after any method selection. Classifying operation-level outcomes here does not select an update.",
+ "acquisitions": 44,
+ "physical_configurations": 4,
+ "novel_formulations": 8,
+ "unique_blind_readings": 35,
+ "paired_outcomes": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/paired-outcomes.json",
+  "sha256": "20dc0984b5beec5623690e7e6b1f8fd09623544edfe0fd5392b2f4cb940249d6"
+ },
+ "blind_audit": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/blinded-readings.json",
+  "sha256": "a37db3cbdfd7f0ff1c57c19734ba5cf20ee13f9ee2ebed65e875e4300d919f07"
+ },
+ "blind_responses": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/blinded-responses.json",
+  "sha256": "a2e50af5b761167592f49f1ab982c7dd389a6085a512d0ae1e755dd3f5e1d816"
+ },
+ "fitted_on_evaluation_device": {
+  "record": "studies/04-round-2-overlap/runs/frozen-energy-generalization/matched-fits.json",
+  "sha256": "ad9a5fecff6d7377cbd7f5d346ec154e89b6e60525567e7f4c5910bab93eaee2"
+ }
+}

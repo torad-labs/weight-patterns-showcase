@@ -1,0 +1,301 @@
+{
+  "method": "Use the original prefix-DTW costs in each direction. The full freely generated query is available to the reverse read. A reverse-only assignment is a candidate and has no implied training weight.",
+  "cases": {
+    "early": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.013631815939308144
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.0006700606720811027
+          }
+        ]
+      }
+    ],
+    "attention_repair": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": 0.00042021523588055276
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -1.8194037111087663e-05
+          }
+        ]
+      }
+    ],
+    "ffn_repair": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": 7.303840551516755e-05
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -9.156080804897243e-06
+          }
+        ]
+      }
+    ],
+    "original": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.013979642554368628
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [
+          310
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 310,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.0006079433066402701
+          }
+        ]
+      }
+    ],
+    "failed_edit": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [
+          323
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 323,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.025857173906053334
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [
+          323
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 323,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.0009953170159359061
+          }
+        ]
+      }
+    ],
+    "training_0": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [
+          323
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 323,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.02687797315952309
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [
+          323
+        ],
+        "reverse_visits": [
+          {
+            "query_event": 323,
+            "events_before_downhill_sign": 3,
+            "mutual": true,
+            "forward_sources": [
+              310
+            ],
+            "signed_error": -0.001111066461409741
+          }
+        ]
+      }
+    ],
+    "training_1": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [],
+        "reverse_visits": [
+          {
+            "query_event": 355,
+            "events_before_downhill_sign": 10,
+            "mutual": false,
+            "forward_sources": [
+              309
+            ],
+            "signed_error": 0.007874371482580012
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [],
+        "reverse_visits": [
+          {
+            "query_event": 355,
+            "events_before_downhill_sign": 10,
+            "mutual": false,
+            "forward_sources": [
+              309
+            ],
+            "signed_error": -0.0015689146606812782
+          }
+        ]
+      }
+    ],
+    "training_2": [
+      {
+        "source_event": 310,
+        "merge": 85,
+        "forward_visits": [],
+        "reverse_visits": [
+          {
+            "query_event": 355,
+            "events_before_downhill_sign": 10,
+            "mutual": false,
+            "forward_sources": [
+              309
+            ],
+            "signed_error": 0.007794924203694738
+          }
+        ]
+      },
+      {
+        "source_event": 310,
+        "merge": 86,
+        "forward_visits": [],
+        "reverse_visits": [
+          {
+            "query_event": 355,
+            "events_before_downhill_sign": 10,
+            "mutual": false,
+            "forward_sources": [
+              309
+            ],
+            "signed_error": -0.0015769033556461073
+          }
+        ]
+      }
+    ]
+  }
+}
