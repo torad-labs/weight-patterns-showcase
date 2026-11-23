@@ -91,7 +91,10 @@ export class InternalWorkshop {
   focus() {
     const rig = this.rigs.find((r) => r.part.id === this.selected);
     if (!rig) return;
+    this.world.userMovedCamera = false;
+    this.world.resizeFraming = () => this.focus();
     this.world.camera.setTarget(rig.root.position);
+    this.world.camera.alpha = Math.PI / 2 + 0.07;
     this.world.camera.radius = 9;
     this.world.camera.beta = 0.7;
   }

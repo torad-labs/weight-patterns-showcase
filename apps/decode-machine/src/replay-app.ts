@@ -94,11 +94,11 @@ function followPlayback() {
     }
   }
   if (world.view === "internals") {
-    if (changedLayer || part !== focus.part) {
+    const rebuilt = changedLayer || part !== focus.part;
+    if (rebuilt) {
       part = focus.part;
       world.selectedPart = part;
       world.workshop.open();
-      renderWorkshop();
     }
     const bench = world.workshop;
     const stages = Math.max(...bench.parts.map((p) => p.stage)) + 1,
@@ -119,8 +119,9 @@ function followPlayback() {
           )[0]?.p;
     if (current && current.id !== bench.selected) {
       bench.selected = current.id;
-      renderEquipment();
+      if (!rebuilt) renderEquipment();
     }
+    if (rebuilt) renderWorkshop();
   }
 }
 
@@ -352,7 +353,8 @@ function selectLayer(index: number) {
   setFollowing(false);
   selectedLayer = index;
   playback.inspect(index);
-  world.setLayer(index);
+  world.selectedLayer = index;
+  world.buildLayer();
   setView("layer");
 }
 function selectPart(id: MechanismId, open = true) {
@@ -427,8 +429,7 @@ function openWorkshop(id: MechanismId = part) {
   world.selectedPart = id;
   playback.inspect(selectedLayer, id);
   world.workshop.crank = null;
-  world.openInternals();
-  if (diagnostics?.active) world.workshop.open(diagnostics.model.step.role);
+  world.workshop.open(diagnostics?.active ? diagnostics.model.step.role : undefined);
   setView("internals");
 }
 function renderWorkshop() {
@@ -1029,13 +1030,20 @@ async function start() {
     if (value >= 1 && value <= 3600) playback.setDuration(value);
   });
   $("follow-story").addEventListener("click", () => {
-    if (playback.illustrated && journey.scope) setView("stack");
-    else
-      selectLayer(
-        playback.illustrated
-          ? journey.timeline.layerIndex
-          : world.recorded.layerAt(clock.time),
-      );
+    if (playback.illustrated && journey.scope) {
+      world.followTray = true;
+      setView("stack");
+    } else {
+      const targetLayer = playback.illustrated
+        ? journey.timeline.layerIndex
+        : world.recorded.layerAt(clock.time);
+      selectedLayer = targetLayer;
+      playback.inspect(targetLayer);
+      world.selectedLayer = targetLayer;
+      world.buildLayer();
+      world.followTray = true;
+      setView("layer");
+    }
     setFollowing(true);
   });
   $("journey-camera").addEventListener("click", () =>
@@ -1056,12 +1064,17 @@ async function start() {
             : b.dataset.journeyAnchor === "weights"
               ? [-26, 1]
               : [15, -18.5];
-        world.camera.setTarget(
-          world.camera.target.clone().set(-p[0], 1, -p[1]),
-        );
-        world.camera.radius = 13;
-        world.camera.beta = 0.6;
-        world.camera.alpha = Math.PI / 2 + 0.07;
+        const frameAnchor = () => {
+          world.camera.setTarget(
+            world.camera.target.clone().set(-p[0], 1, -p[1]),
+          );
+          world.camera.radius = 13;
+          world.camera.beta = 0.6;
+          world.camera.alpha = Math.PI / 2 + 0.07;
+        };
+        world.userMovedCamera = false;
+        world.resizeFraming = frameAnchor;
+        frameAnchor();
       }),
     );
   const startQuestion = () => {

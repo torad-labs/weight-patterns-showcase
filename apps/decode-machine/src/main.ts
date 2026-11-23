@@ -16,7 +16,7 @@ import '@babylonjs/core/Shaders/ShadersInclude/instancesDeclaration';
 import '@babylonjs/core/Shaders/ShadersInclude/instancesVertex';
 import '@babylonjs/loaders/glTF';
 import {Timeline,LAYER_COUNT,PROMPT_TOKENS,operationProgress,samplePath,type PartId} from './timeline';
-import {createStory,storyCopy,inputPoint,outputPoint,supplyPoint} from './story';
+import {createStory,storyCopy,inputPoint,outputPoint,supplyPoint,returnPath} from './story';
 import {CARRIER_LABELS,carrierState,carrierPassPosition,weightBank} from './representation';
 import {createWeights} from './weights';
 
@@ -30,7 +30,7 @@ for(const [j,text]of CARRIER_LABELS.entries()){const option=document.createEleme
 $<HTMLSelectElement>('carrier-select').value='5';
 $('inspector').append($('concurrency'));
 let engine:Engine,scene:Scene,camera:ArcRotateCamera;
-let selection:PartId='assembly',selectedLayer=0,following=false,casing=0,casingTarget=0;
+let selection:PartId='assembly',selectedLayer=0,following=false,userMovedCamera=false,casing=0,casingTarget=0;
 let selectedCarrier=5,drawerOpen=0;
 function revealCarrierReadout(){if(innerWidth<=650)return;const details=$('carrier-details'),inspector=$('inspector');if(details.getBoundingClientRect().bottom>inspector.getBoundingClientRect().bottom)inspector.scrollTop=details.offsetTop-16;}
 function inspectCarrier(index:number){selectedCarrier=index;$<HTMLSelectElement>('carrier-select').value=String(index);$<HTMLDetailsElement>('carrier-details').open=true;requestAnimationFrame(revealCarrierReadout);}
@@ -71,9 +71,12 @@ function residualPath(i:number){return [point(i,-.92,0),point(i,-1.08,-1.48),poi
 function overviewRadius(){return innerWidth<=650?36:Math.max(27,44/(innerWidth/innerHeight));}
 function fitOverview(){
  const previous={target:camera.target.clone(),radius:camera.radius,alpha:camera.alpha,beta:camera.beta};
+ const workbench=$('workbench'),prevDetail=workbench.dataset.detail;
+ workbench.dataset.detail='false';
  camera.setTarget(B(-4,0,.6));camera.radius=overviewRadius();camera.alpha=1.48;camera.beta=.56;
  const rect=canvas.getBoundingClientRect();
  const top=innerWidth<=650?14:210,bottom=innerWidth<=650?rect.height-14:$('lower-interface').getBoundingClientRect().top-rect.top-28;
+ if(prevDetail===undefined)delete workbench.dataset.detail;else workbench.dataset.detail=prevDetail;
  const left=innerWidth<=650?16:50,right=rect.width-left;
  const corners:number[][]=[];for(const x of [-25,17.5])for(const y of [-8.2,8.2])for(const z of [.1,2.5])corners.push([x,y,z]);
  for(let iteration=0;iteration<4;iteration++){
@@ -82,8 +85,9 @@ function fitOverview(){
   const minX=Math.min(...projected.map(p=>p.x)),maxX=Math.max(...projected.map(p=>p.x)),minY=Math.min(...projected.map(p=>p.y)),maxY=Math.max(...projected.map(p=>p.y));
   const worldPerPixel=2*camera.radius*Math.tan(camera.fov/2)/rect.height;
   const dx=(minX+maxX-left-right)/2,dy=(minY+maxY-top-bottom)/2;
+  const {alpha,beta,radius}=camera;
   camera.setTarget(camera.target.add(camera.getDirection(Vector3.Right()).scale(dx*worldPerPixel)).add(camera.getDirection(Vector3.Up()).scale(-dy*worldPerPixel)));
-  camera.radius*=Math.max((maxX-minX)/(right-left),(maxY-minY)/(bottom-top));
+  camera.alpha=alpha;camera.beta=beta;camera.radius=radius*Math.max((maxX-minX)/(right-left),(maxY-minY)/(bottom-top));
  }
  const fitted={target:camera.target.clone(),radius:camera.radius};
  camera.setTarget(previous.target);camera.radius=previous.radius;camera.alpha=previous.alpha;camera.beta=previous.beta;return fitted;
@@ -111,7 +115,7 @@ function updateInspector(){
  document.querySelectorAll<HTMLElement>('[data-part]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.part===selection)));
 }
 function selectPart(id:PartId,index=clock.layerIndex,seek=false){
- selection=id;selectedLayer=index;following=false;$('follow-toggle').setAttribute('aria-pressed','false');
+ selection=id;selectedLayer=index;following=false;userMovedCamera=false;$('follow-toggle').setAttribute('aria-pressed','false');
  if(id==='layer'&&seek){clock.seekLayer(index);updatePlayback();}
  $<HTMLSelectElement>('layer-select').value=String(index);
  updateInspector();
@@ -202,13 +206,13 @@ async function start(){
  }
  for(let i=0;i<LAYER_COUNT;i++){const option=document.createElement('option');option.value=String(i);option.textContent=`Layer ${String(i+1).padStart(2,'0')}`;$('layer-select').append(option);}
  scene.onPointerObservable.add(info=>{
-  if(info.type===PointerEventTypes.POINTERDOWN){transition=false;following=false;$('follow-toggle').setAttribute('aria-pressed','false');}
+  if(info.type===PointerEventTypes.POINTERDOWN){transition=false;following=false;userMovedCamera=true;$('follow-toggle').setAttribute('aria-pressed','false');}
   if(info.type===PointerEventTypes.POINTERPICK&&info.pickInfo?.hit){const meta=info.pickInfo.pickedMesh?.metadata;if(meta?.carrier!==undefined){inspectCarrier(meta.carrier);clock.playing=false;updatePlayback();}else if(meta?.part){selectPart(meta.part,meta.layer??clock.layerIndex,meta.part==='layer');if(meta.weight)$<HTMLDetailsElement>('weight-details').open=true;}}
  });
- canvas.addEventListener('wheel',()=>{transition=false;following=false;$('follow-toggle').setAttribute('aria-pressed','false');},{passive:true});
+ canvas.addEventListener('wheel',()=>{transition=false;following=false;userMovedCamera=true;$('follow-toggle').setAttribute('aria-pressed','false');},{passive:true});
  engine.resize();selectPart('assembly');if(reduced){camera.setTarget(desiredTarget);camera.radius=desiredRadius;camera.alpha=desiredAlpha;camera.beta=desiredBeta;transition=false;}
  $('loading').hidden=true;for(const id of ['play','next','scrubber'])($(id) as HTMLButtonElement).disabled=false;updatePlayback();
- let previous=performance.now(),uiTime=0,lastLayer='',followStage='';
+ let previous=performance.now(),uiTime=0,lastLayer='';
  engine.runRenderLoop(()=>{
   const now=performance.now(),dt=Math.max(0,(now-previous)/1000);previous=now;if(document.hidden)return;
   const wasPlaying=clock.playing;clock.step(dt);if(wasPlaying!==clock.playing)updatePlayback();const i=clock.layerIndex,p=clock.layerProgress,running=clock.layerActive;
@@ -235,16 +239,18 @@ async function start(){
   }
   residual.setEnabled(running&&p>=.18&&p<.98);residual.position.copyFrom(p<.62?along(residualPath(i),Math.min(1,Math.max(0,(p-.18)/.24))):along([point(i,.92,0),point(i,1.05,-1.3),point(i,2.22,-1.3),point(i,2.22,0)],Math.min(1,(p-.62)/.34)));
   if(following){
-   const nextPart:PartId=running?'layer':clock.progress<.11?'input':clock.stage.id.startsWith('return-')?'assembly':'output';
-   if(selection!==nextPart||selectedLayer!==i||followStage!==clock.stage.id){selectPart(nextPart,i);following=true;$('follow-toggle').setAttribute('aria-pressed','true');followStage=clock.stage.id;}
+   if(selection!=='assembly'){selection='assembly';updateInspector();}
+   if(selectedLayer!==i){selectedLayer=i;$<HTMLSelectElement>('layer-select').value=String(i);}
+   desiredTarget=running?(p<.18?along(incoming[i],p/.18):p<.52?along([point(i,-.92,0),point(i,.55,0)],(p-.18)/.34):p<.62?along([point(i,.55,0),point(i,.92,0)],(p-.52)/.1):p<.9?along([point(i,.92,0),point(i,2.05,0)],(p-.62)/.28):along([point(i,2.05,0),i===31?outputPoint:point(i,2.22,0)],(p-.9)/.1)):clock.progress<.11?inputPoint:clock.stage.id.startsWith('return-')?along(returnPath,clock.stageProgress):outputPoint.add(B(-.8,0,0));
+   desiredRadius=innerWidth<=650?11:15;desiredAlpha=1.48;desiredBeta=.62;transition=true;
   }
   routes.forEach(({mesh,layer})=>mesh.setEnabled(selection==='assembly'||(selection==='layer'&&layer===selectedLayer)));
   contextMeshes.forEach(mesh=>mesh.setEnabled(selection==='assembly'||(selection==='supply'&&mesh===hopper)));
   if(selection!=='assembly'&&(selection!=='layer'||selectedLayer!==i)){residual.setEnabled(false);marks.forEach(m=>m.setEnabled(false));}
   weights.update(selection,selectedLayer,drawerOpen);
   story.update(selection,selectedLayer,selectedCarrier,$<HTMLDetailsElement>('carrier-details').open);
-  if(transition){const f=reduced?1:1-Math.exp(-dt*5);camera.setTarget(Vector3.Lerp(camera.target,desiredTarget,f));camera.radius+=(desiredRadius-camera.radius)*f;camera.alpha+=(desiredAlpha-camera.alpha)*f;camera.beta+=(desiredBeta-camera.beta)*f;if(!following&&Math.abs(camera.radius-desiredRadius)<.005&&Vector3.Distance(camera.target,desiredTarget)<.005)transition=false;}
-  const detail=selection!=='assembly'||camera.radius<overviewRadius()*.65;
+  if(transition){const f=reduced?1:1-Math.exp(-Math.min(dt,.1)*5);const prevAlpha=camera.alpha,prevBeta=camera.beta,prevRadius=camera.radius;const da=Math.atan2(Math.sin(desiredAlpha-prevAlpha),Math.cos(desiredAlpha-prevAlpha));camera.setTarget(Vector3.Lerp(camera.target,desiredTarget,f));camera.radius=prevRadius+(desiredRadius-prevRadius)*f;camera.alpha=prevAlpha+da*f;camera.beta=prevBeta+(desiredBeta-prevBeta)*f;camera.inertialAlphaOffset=0;camera.inertialBetaOffset=0;camera.inertialRadiusOffset=0;if(!following&&Math.abs(camera.radius-desiredRadius)<.005&&Vector3.Distance(camera.target,desiredTarget)<.005)transition=false;}
+  const detail=following||selection!=='assembly'||camera.radius<overviewRadius()*.65;
   $('workbench').dataset.detail=String(detail);scene.render();
   const rect=canvas.getBoundingClientRect(),inspector=$('inspector').getBoundingClientRect();
   function project(v:Vector3){const p=Vector3.Project(v,Matrix.Identity(),scene.getTransformMatrix(),camera.viewport.toGlobal(engine.getRenderWidth(),engine.getRenderHeight()));return {x:p.x/engine.getRenderWidth()*rect.width,y:p.y/engine.getRenderHeight()*rect.height,z:p.z};}
@@ -289,7 +295,8 @@ async function start(){
   }
  });
  document.addEventListener('visibilitychange',()=>{previous=performance.now();});
- new ResizeObserver(()=>{engine.resize();if(selection==='assembly'&&!following)selectPart('assembly');}).observe(canvas);
+ let fittedW=0,fittedH=0;
+ new ResizeObserver(()=>{const {width,height}=canvas.getBoundingClientRect();if(Math.abs(width-fittedW)<1&&Math.abs(height-fittedH)<1)return;fittedW=width;fittedH=height;engine.resize();if(selection==='assembly'&&!following&&!userMovedCamera)selectPart('assembly');}).observe(canvas);
  if(import.meta.env.DEV)Object.assign(window,{decodeMachine:{clock,scene,camera,layers,weights,weightBalls:weights.copies,marks,story,selectPart,get selection(){return selection;},get selectedCarrier(){return selectedCarrier;},get selectedLayer(){return selectedLayer;},get following(){return following;},get casing(){return casing;}}});
 }
 function togglePlay(){if(clock.progress===1)clock.restart();else clock.playing=!clock.playing;updatePlayback();}
@@ -304,7 +311,7 @@ $('case-toggle').addEventListener('click',toggleCase);
 $('carrier-select').addEventListener('change',e=>inspectCarrier(Number((e.target as HTMLSelectElement).value)));
 $('carrier-details').addEventListener('toggle',()=>{if($<HTMLDetailsElement>('carrier-details').open)requestAnimationFrame(revealCarrierReadout);});
 $('find-carrier').addEventListener('click',()=>{const state=carrierState(clock,selectedCarrier);if(state.waiting||state.finished){clock.seek(carrierPassPosition(selectedCarrier,selection==='layer'?selectedLayer:0));}clock.playing=false;selectPart('layer',clock.layerIndex);updatePlayback();});
-$('follow-toggle').addEventListener('click',()=>{following=!following;$('follow-toggle').setAttribute('aria-pressed',String(following));if(!following)transition=false;});
+$('follow-toggle').addEventListener('click',()=>{following=!following;userMovedCamera=false;$('follow-toggle').setAttribute('aria-pressed',String(following));if(following){selection='assembly';updateInspector();transition=true;}else transition=false;});
 $('reset-view').addEventListener('click',()=>selectPart('assembly'));
 document.querySelectorAll<HTMLElement>('[data-part]').forEach(el=>el.addEventListener('click',()=>selectPart(el.dataset.part as PartId,clock.layerIndex,el.dataset.part==='layer')));
 function help(show:boolean){$('help').hidden=!show;$('help-toggle').setAttribute('aria-expanded',String(show));if(show)$('help-close').focus();else $('help-toggle').focus();}

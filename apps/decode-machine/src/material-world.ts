@@ -453,6 +453,8 @@ export class MaterialWorld {
     }
   }
   focus(topic = this.model.topic) {
+    this.host.userMovedCamera = false;
+    this.host.resizeFraming = () => this.focus(this.model.topic);
     this.host.camera.setTarget(position(anchors[topic]));
     this.host.camera.radius =
       innerWidth <= 650

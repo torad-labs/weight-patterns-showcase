@@ -60,7 +60,8 @@ export class MechanicalWorld {
   nextInspectionOrigin?: Vector3;
   supplies: SupplyWorld;
   onSupply: (station: TileStation, origin?: Vector3) => void = () => {};
-  private resizeFraming?: () => void;
+  resizeFraming?: () => void;
+  userMovedCamera = false;
   view: View = "stack";
   selectedLayer = 0;
   selectedBlock = 0;
@@ -145,6 +146,7 @@ export class MechanicalWorld {
         event,
         () => {
           this.resizeFraming = undefined;
+          this.userMovedCamera = true;
         },
         { passive: true },
       );
@@ -236,13 +238,14 @@ export class MechanicalWorld {
     new ResizeObserver(() => {
       const { width, height } = canvas.getBoundingClientRect();
       if (
-        Math.abs(width - fittedWidth) < 0.5 &&
-        Math.abs(height - fittedHeight) < 0.5
+        Math.abs(width - fittedWidth) < 1 &&
+        Math.abs(height - fittedHeight) < 1
       )
         return;
       fittedWidth = width;
       fittedHeight = height;
       this.engine.resize();
+      if (this.followTray || this.userMovedCamera) return;
       const frame = () =>
         this.resizeFraming ? this.resizeFraming() : this.fit();
       if (this.inspection.active) this.inspection.reframe(frame);
@@ -961,6 +964,12 @@ export class MechanicalWorld {
       l.leader.style.display = "none";
     }
     this.fit();
+    if (
+      this.followTray &&
+      view !== "material" &&
+      view !== "hardware"
+    )
+      this.applyFollowPose(1);
     if (changed) this.inspection.finish();
   }
   beginInspection(direction: "in" | "out", target?: Vector3) {
@@ -994,12 +1003,14 @@ export class MechanicalWorld {
   }
   frameDetail(frame: () => void, begin = true) {
     if (begin) this.beginInspection("in");
+    this.userMovedCamera = false;
     this.resizeFraming = frame;
     frame();
     this.inspection.finish(frame);
   }
   fit() {
     this.resizeFraming = undefined;
+    this.userMovedCamera = false;
     const rect = this.canvas.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
     this.camera.setTarget(B(0, this.view === "layer" ? -0.4 : 0, 0.2));
@@ -1097,22 +1108,64 @@ export class MechanicalWorld {
       innerWidth <= 650
     )
       this.hardware.tile.focus();
+    this.resizeFraming = undefined;
+  }
+  followRadius() {
+    return this.view === "stack"
+      ? innerWidth <= 650
+        ? 13
+        : 24
+      : this.view === "engine"
+        ? 12
+        : innerWidth <= 650
+          ? 10
+          : 19;
+  }
+  applyFollowPose(ease: number) {
+    const prevAlpha = this.camera.alpha,
+      prevBeta = this.camera.beta,
+      prevRadius = this.camera.radius;
+    const desiredAlpha = Math.PI / 2 + 0.07,
+      desiredBeta = 0.65,
+      desiredRadius = this.followRadius();
+    const alphaDelta = Math.atan2(
+      Math.sin(desiredAlpha - prevAlpha),
+      Math.cos(desiredAlpha - prevAlpha),
+    );
+    const target = Vector3.Lerp(
+      this.camera.target,
+      this.journey.followPoint(),
+      ease,
+    );
+    this.camera.setTarget(target);
+    this.camera.alpha = prevAlpha + alphaDelta * ease;
+    this.camera.beta = prevBeta + (desiredBeta - prevBeta) * ease;
+    this.camera.radius = prevRadius + (desiredRadius - prevRadius) * ease;
+    this.camera.inertialAlphaOffset = 0;
+    this.camera.inertialBetaOffset = 0;
+    this.camera.inertialRadiusOffset = 0;
   }
   focusWorker() {
+    this.userMovedCamera = false;
+    this.resizeFraming = () => this.focusWorker();
     this.focusedBlock = this.selectedBlock;
     const i = this.selectedBlock;
     this.camera.setTarget(
       B(((i % 9) - 4) * 4.8, (3 - Math.floor(i / 9)) * 4, 0.5),
     );
+    this.camera.alpha = Math.PI / 2 + 0.07;
     this.camera.radius = innerWidth <= 650 ? 7 : 6;
     this.camera.beta = 0.85;
   }
   focusPart() {
+    this.userMovedCamera = false;
+    this.resizeFraming = () => this.focusPart();
     const node = this.detail
       .getChildTransformNodes()
       .find((n) => n.name === this.selectedPart);
     if (node) {
       this.camera.setTarget(node.getAbsolutePosition());
+      this.camera.alpha = Math.PI / 2 + 0.07;
       this.camera.radius = innerWidth <= 650 ? 7 : 8;
       this.camera.beta = 0.75;
     }
@@ -1133,28 +1186,7 @@ export class MechanicalWorld {
       const ease = matchMedia("(prefers-reduced-motion: reduce)").matches
         ? 1
         : 1 - Math.exp(-Math.min(dt, 0.1) * 7);
-      const target = Vector3.Lerp(
-          this.camera.target,
-          this.journey.followPoint(),
-          ease,
-        ),
-        radius = this.camera.radius;
-      this.camera.setTarget(target);
-      this.camera.alpha = Math.PI / 2 + 0.07;
-      this.camera.beta = 0.65;
-      this.camera.radius =
-        radius +
-        ((this.view === "stack"
-          ? innerWidth <= 650
-            ? 13
-            : 24
-          : this.view === "engine"
-            ? 12
-            : innerWidth <= 650
-              ? 10
-              : 19) -
-          radius) *
-          ease;
+      this.applyFollowPose(ease);
     }
     this.inspection.tick();
     this.scene.render();

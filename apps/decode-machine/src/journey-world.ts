@@ -7,7 +7,7 @@ import {
   journeyOperations,
   clamp,
 } from "./connected-journey";
-import { stackCarrierProgress, stackCarrierAt } from "./stack-route";
+import { stackCarrierProgress, stackCarrierAt, stackPath } from "./stack-route";
 import type { MechanismId } from "./replay-model";
 import { weightedParts } from "./recorded-motion";
 import { packetFlight } from "./flow-motion";
@@ -485,7 +485,11 @@ export class JourneyWorld {
       this.cutter.position.y = 1.7;
       const point = stackCarrierAt(w.capture, time);
       this.stackTrays[0].root.setEnabled(!!point);
-      if (point) this.place(this.stackTrays[0], [point, point], 0);
+      const fallback =
+        time <= w.capture.layers[0].journeyStart
+          ? stackPath(0)[0]
+          : stackPath(w.capture.layers.length - 1).at(-1)!;
+      this.place(this.stackTrays[0], [point ?? fallback, point ?? fallback], 0);
       this.stackReads.forEach((r) => {
         const state = motion.state(r.layer, r.part, time, true),
           flight = packetFlight(state.progress, r.copy, 3);
@@ -556,7 +560,9 @@ export class JourneyWorld {
     if (w.view === "internals")
       return (
         w.workshop.rigs.find((r) => r.part.id === w.workshop.selected)?.root
-          .position ?? Vector3.Zero()
+          .position ??
+        w.workshop.rigs[0]?.root.position ??
+        w.camera.target
       );
     const i = w.selectedBlock;
     return B([((i % 9) - 4) * 4.8, (3 - Math.floor(i / 9)) * 4, 0.5]);

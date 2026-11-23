@@ -611,8 +611,11 @@ export class TileWorld {
     this.host.pipe(name, points, color, this.root, 0.095);
   }
   focus() {
+    this.host.userMovedCamera = false;
+    this.host.resizeFraming = () => this.focus();
     const p = at(...tileLocations[this.model.station]);
     this.host.camera.setTarget(p);
+    this.host.camera.alpha = Math.PI / 2 + 0.07;
     this.host.camera.radius = 15;
     this.host.camera.beta = 0.6;
   }
