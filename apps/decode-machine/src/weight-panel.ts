@@ -1,4 +1,5 @@
 import { capturesInSpan, exportWeightCase, initialCase, readWeightStudy, validateCase, validateSpan, type ActivationSummary, type WeightCase, type WeightStudy } from "./weight-study";
+import { appUrl } from "./replay-model";
 import { mark } from "./profiling-drawings";
 import "./weight-study.css";
 
@@ -187,7 +188,7 @@ export class WeightPanel {
   private async readWeight(target: HTMLElement, read: HTMLButtonElement) {
     const serial = ++this.readSerial, c = this.state!; read.disabled = true; target.textContent = "Checking the checkpoint hash, then reading this block…";
     try {
-      const u = new URL("/__weight-block", location.href); for (const [k, v] of Object.entries({ study: this.url!.pathname, matrix: c.matrixId, row: c.row, block: c.block })) u.searchParams.set(k, String(v));
+      const u = new URL(appUrl("__weight-block"), location.href); for (const [k, v] of Object.entries({ study: this.url!.pathname, matrix: c.matrixId, row: c.row, block: c.block })) u.searchParams.set(k, String(v));
       const r = await fetch(u), data = await r.json(); if (!r.ok) throw Error(data.error ?? "Local weight reader unavailable. Open the Vite workbench to read checkpoint blocks."); if (serial !== this.readSerial) return;
       target.replaceChildren(); for (const chunk of data.chunks) { target.append(el("p", `${chunk.name.split(".").at(-1)} · file byte ${chunk.fileOffset.toLocaleString()}`, "ws-caption"), this.bytes(chunk.bytes, true)); }
       target.append(el("p", `Verified checkpoint ${data.checkpointSha256.slice(0, 16)}… · 16 code bytes encode 32 weights. Hexadecimal bytes; no value conversion.`, "ws-caption"));

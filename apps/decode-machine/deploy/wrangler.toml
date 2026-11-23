@@ -1,0 +1,24 @@
+# Cloudflare Worker serving decode-machine at torad.ai/decode-machine and torad.ai/decode-machine/learning.
+# Build and deploy from apps/decode-machine:
+#   bun run build:torad && npx wrangler deploy --config deploy/wrangler.toml
+name = "torad-decode-machine"
+main = "worker.mjs"
+compatibility_date = "2026-04-22"
+workers_dev = false
+
+routes = [
+  { pattern = "torad.ai/decode-machine", zone_name = "torad.ai" },
+  { pattern = "torad.ai/decode-machine/*", zone_name = "torad.ai" },
+  { pattern = "www.torad.ai/decode-machine", zone_name = "torad.ai" },
+  { pattern = "www.torad.ai/decode-machine/*", zone_name = "torad.ai" },
+]
+
+[assets]
+directory = "../dist"
+binding = "ASSETS"
+html_handling = "none"
+not_found_handling = "none"
+run_worker_first = true
+
+[observability]
+enabled = true

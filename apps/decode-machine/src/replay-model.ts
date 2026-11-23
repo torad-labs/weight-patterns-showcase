@@ -63,10 +63,15 @@ export type ReplayData = {
   captures: Capture[];
 };
 
+export function appUrl(rel: string) {
+  const base = (import.meta.env?.BASE_URL ?? "/").replace(/\/?$/, "/");
+  return `${base}${rel.replace(/^\//, "")}`;
+}
+
 /** Keep a recording and its source anatomy together, including in shared links. */
 export function recordingUrls(href: string) {
   const page = new URL(href);
-  const recording = new URL(page.searchParams.get("recording") ?? "/replay/gemma4-e2b.json", page);
+  const recording = new URL(page.searchParams.get("recording") ?? appUrl("replay/gemma4-e2b.json"), page);
   if (recording.origin !== page.origin || !recording.pathname.endsWith(".json")) throw Error("Choose a local JSON recording.");
   return { recording: recording.href, anatomy: new URL("anatomy.json", recording).href };
 }

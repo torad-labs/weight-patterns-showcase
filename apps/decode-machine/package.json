@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
+    "build:torad": "VITE_BASE=/decode-machine/ bun run build",
+    "deploy:torad": "bun run build:torad && CI=1 wrangler deploy --config deploy/wrangler.toml",
     "preview": "vite preview --host 127.0.0.1",
     "assets": "bun tools/build-assets.ts",
     "test": "bun test src/timeline.test.ts src/replay-model.test.ts src/tile-flow.test.ts src/diagnostic-model.test.ts src/profiling-model.test.ts src/weight-study.test.ts src/weight-storage.test.ts src/trace-model.test.ts",

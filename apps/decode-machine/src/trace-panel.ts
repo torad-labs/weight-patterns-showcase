@@ -1,4 +1,5 @@
 import {readTraceStudy,tracePercent,traceScale,decisionAlternatives,type TraceStudy,type TraceCase} from './trace-model';
+import {appUrl} from './replay-model';
 import './trace-panel.css';
 const el=<K extends keyof HTMLElementTagNameMap>(tag:K,text='',cls='')=>{const n=document.createElement(tag);n.textContent=text;n.className=cls;return n;};
 const button=(text:string,action:()=>void)=>{const b=el('button',text);b.type='button';b.onclick=action;return b;};
@@ -23,7 +24,7 @@ class TracePanel {
   this.host.id='weight-traces';this.host.setAttribute('aria-label','Connected weight edit experiment');
   this.host.addEventListener('keydown',event=>event.stopPropagation());
   const head=el('div','','trace-heading'),title=el('div');title.append(el('h2','Follow the weight edit'),el('p','One stored change. Watch its effect travel through four different responses.'));
-  const download=el('a','Download connected evidence');download.href='/evidence/weight-traces/connected-traces.json';download.download='connected-weight-traces.json';head.append(title,download);this.host.append(head,el('p','Loading saved native recordings…','trace-status'),this.content);document.querySelector('main')!.after(this.host);
+  const download=el('a','Download connected evidence');download.href=appUrl('evidence/weight-traces/connected-traces.json');download.download='connected-weight-traces.json';head.append(title,download);this.host.append(head,el('p','Loading saved native recordings…','trace-status'),this.content);document.querySelector('main')!.after(this.host);
   const jump=document.querySelector<HTMLAnchorElement>('[data-open-traces]');if(jump)jump.onclick=e=>{e.preventDefault();this.host.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});};
   void fetch(download.href).then(r=>{if(!r.ok)throw Error('Saved traces are not available.');return r.json();}).then(readTraceStudy).then(s=>{this.study=s;this.host.querySelector('.trace-status')!.textContent=s.engine+' · saved executions';this.mount();const query=new URLSearchParams(location.search),id=query.get('trace');if(id){const i=s.cases.findIndex(c=>c.id===id);this.select(i<0?0:i);requestAnimationFrame(()=>this.host.scrollIntoView());}}).catch(e=>{this.host.querySelector('.trace-status')!.textContent=String(e);this.content.append(button('Retry loading',()=>location.reload()));});
  }

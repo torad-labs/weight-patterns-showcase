@@ -155,8 +155,9 @@ async function start(){
  const glass=new StandardMaterial('clear hopper',scene);glass.diffuseColor=Color3.FromHexString('#bdd3d0');glass.emissiveColor=Color3.FromHexString('#bdd3d0');glass.alpha=.09;glass.disableLighting=true;glass.backFaceCulling=false;materials.glass=glass;
  const active=cel('Active layer','#94b6ae'),complete=cel('Complete layer','#acbcb5');
  const pipe=cel('Carrier rails','#8da29d'),weightPipe=cel('Weight feed','#bca779'),teal=cel('Token information','#378b82'),preserved=cel('Preserved information','#6c9e95');
+ const assetBase=(import.meta.env?.BASE_URL??'/').replace(/\/?$/,'/');
  async function load(group:string){
-  const result=await ImportMeshAsync(`/assets/${group}.glb`,scene);
+  const result=await ImportMeshAsync(`${assetBase}assets/${group}.glb`,scene);
   for(const m of result.meshes)if(m instanceof Mesh&&m.getTotalVertices()){
    const old=m.material?.name??'steel';m.material=materials[old]??materials.steel;
    if(old!=='glass')outline(m);
@@ -315,6 +316,7 @@ $('follow-toggle').addEventListener('click',()=>{following=!following;userMovedC
 $('reset-view').addEventListener('click',()=>selectPart('assembly'));
 document.querySelectorAll<HTMLElement>('[data-part]').forEach(el=>el.addEventListener('click',()=>selectPart(el.dataset.part as PartId,clock.layerIndex,el.dataset.part==='layer')));
 function help(show:boolean){$('help').hidden=!show;$('help-toggle').setAttribute('aria-expanded',String(show));if(show)$('help-close').focus();else $('help-toggle').focus();}
+$('error-retry').addEventListener('click',()=>location.reload());
 $('help-toggle').addEventListener('click',()=>help($('help').hidden===true));$('help-close').addEventListener('click',()=>help(false));
 window.addEventListener('keydown',e=>{
  if(e.key==='Escape'&&!$('help').hidden){help(false);return;}
